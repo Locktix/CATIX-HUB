@@ -659,6 +659,57 @@ game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
     end
 end)
 
+eggs4:CreateToggle("Auto Buy Grassy Lands Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+local args = {
+    [1] = game:GetService("Players")["quentin453"],
+    [2] = "GLands",
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+eggs4:CreateToggle("Auto Buy Mystery Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+local args = {
+    [1] = game:GetService("Players")["quentin453"],
+    [2] = "Grassy2",
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+eggs4:CreateToggle("Auto Buy Sinister Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+local args = {
+    [1] = game:GetService("Players")["quentin453"],
+    [2] = "Grassy3",
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
 eggs1:CreateToggle("Auto Buy Starter Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
@@ -1016,6 +1067,57 @@ game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
     end
 end)
 
+eggs2:CreateToggle("Auto Buy Grassy Lands Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+local args = {
+    [1] = game:GetService("Players")["quentin453"],
+    [2] = "GLands",
+    [3] = true,
+}
+
+game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+eggs2:CreateToggle("Auto Buy Mystery Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+local args = {
+    [1] = game:GetService("Players")["quentin453"],
+    [2] = "Grassy2",
+    [3] = true,
+}
+
+game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+eggs2:CreateToggle("Auto Buy Sinister Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+local args = {
+    [1] = game:GetService("Players")["quentin453"],
+    [2] = "Grassy3",
+    [3] = true,
+}
+
+game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
 AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:Destroy()
 end)
@@ -1071,6 +1173,11 @@ end)
 teleports:CreateButton("Zone 10", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(650.067505, 3.00754046, -742.919189)
 end)
+
+teleports:CreateButton("Zone 11", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1071, 3, -12)
+end)
+
 
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
