@@ -1,0 +1,189 @@
+--https://www.roblox.com/games/5087932411/MONEY-Dummy-Simulator
+
+
+
+
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
+
+local AutoTab = Library:CreateTab("Dummy Simulator GUI","things", true)
+local Boosts = Library:CreateTab("Auto Buy Boosts","things", true)
+local teleports = Library:CreateTab("Teleports","things", true)
+local credits = Library:CreateTab("Credits","things", true)
+
+
+Boosts:CreateToggle("Auto Buy Strenghts Boosts", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+    local A_1 = "Strength"
+local Event = game:GetService("ReplicatedStorage").Remotes.RebirthStore
+Event:FireServer(A_1)
+
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Boosts:CreateToggle("Auto Buy Dummy Boosts", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+      local A_1 = "Dummy"
+local Event = game:GetService("ReplicatedStorage").Remotes.RebirthStore
+Event:FireServer(A_1)
+
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Boosts:CreateToggle("Auto Buy Boss Boosts", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+         local A_1 = "Boss"
+local Event = game:GetService("ReplicatedStorage").Remotes.RebirthStore
+Event:FireServer(A_1)
+
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+AutoTab:CreateToggle("Speed Hack 100", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+AutoTab:CreateToggle("Auto Pushups", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local Event = game:GetService("Workspace").quentin453.Pushups.Event
+Event:FireServer()
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+AutoTab:CreateToggle("Auto Fists", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local Event = game:GetService("Workspace").quentin453.Fists.Event
+Event:FireServer()
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+AutoTab:CreateToggle("Auto Squats", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            local Event = game:GetService("Workspace").quentin453.Squats.Event
+Event:FireServer()
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+AutoTab:CreateToggle("Auto Rebirths", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           
+local Event = game:GetService("ReplicatedStorage").Remotes.Rebirth
+Event:FireServer()
+
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+credits:CreateButton("Our Discords", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("masterkyllian#1723", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("bsoleil31FR[inchala ptn]#9001", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("https://discord.gg/PdUTrVG", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("Big C#5347", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:Destroy()
+end)
+
+teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-730.885132, 3.2782228, -51.035202)
+end)
+
+teleports:CreateButton("Island 1", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-754.027283, 876.15686, -69.751358)
+end)
+
+teleports:CreateButton("Island 2", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-787.304932, 1979.15247, -49.3521614)
+end)
+
+
+teleports:CreateButton("Island 3", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-984.026062, 3592.08862, 42.9996567)
+end)
+
+
+teleports:CreateButton("Island 4", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-828.455261, 6661.90332, -164.874573)
+end)
+
+teleports:CreateButton("Island 5", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1164.57617, 9349.49707, -172.996323)
+end)
+
+teleports:CreateButton("Island 6", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1176.50037, 16670.1621, -175.047363)
+end)
+
+--| Anti AFK | By Altix#3395
+    local Virtual = game:service'VirtualUser'
+    game:service'Players'.LocalPlayer.Idled:connect(function()
+        Virtual:CaptureController()
+        Virtual:ClickButton2(Vector2.new())
+        wait(2)
+    end)
