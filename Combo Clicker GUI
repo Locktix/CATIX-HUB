@@ -1,0 +1,1671 @@
+
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
+
+local AutoTab = Library:CreateTab("Combo Clickers GUI","things", true)
+local potions = Library:CreateTab("Auto Buy Potions","things", true)
+local Upgrades = Library:CreateTab("Auto Buy Upgrades","things", true)
+local teleports = Library:CreateTab("Teleports","things", true)
+local rebirths = Library:CreateTab("Auto Rebirths","things", true)
+local rebirths2 = Library:CreateTab("Auto Rebirths 2","things", true)
+local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
+local eggs2 = Library:CreateTab("Auto Buy Eggs 2","things", true)
+local crates = Library:CreateTab("Auto Buy Crates","things", true)
+local credits = Library:CreateTab("Credits","things", true)
+
+
+credits:CreateButton("Our Discords", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("masterkyllian#1723", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("bsoleil31FR[inchala ptn]#9001", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("https://discord.gg/PdUTrVG", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("Big C#5347", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+AutoTab:CreateButton("Attention Dysplay issues", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+Upgrades:CreateToggle("Increase Walk Speed", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+      local args = {
+    [1] = {
+        ["Upgrade"] = "WalkSpeed",
+        ["RequestType"] = "UpgradeMax"
+    }
+}
+
+game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Upgrades:CreateToggle("Faster Combo", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            local args = {
+    [1] = {
+        ["Upgrade"] = "FasterCombo",
+        ["RequestType"] = "UpgradeMax",
+    },
+}
+
+game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Upgrades:CreateToggle("Pet Luck", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = {
+        ["Upgrade"] = "PetLuck",
+        ["RequestType"] = "UpgradeMax",
+    },
+}
+
+game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Upgrades:CreateToggle("x1 Hat Equip", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            
+local args = {
+    [1] = {
+        ["Upgrade"] = "HatSlot",
+        ["RequestType"] = "UpgradeMax",
+    },
+}
+
+game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Upgrades:CreateToggle("FREE auto Clicker", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           
+local args = {
+    [1] = {
+        ["Upgrade"] = "FreeAutoClicker",
+        ["RequestType"] = "UpgradeMax",
+    },
+}
+
+game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Upgrades:CreateToggle("Gem Increase", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = {
+        ["Upgrade"] = "GemIncrease",
+        ["RequestType"] = "UpgradeMax",
+    },
+}
+
+game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Upgrades:CreateToggle("Rebirths Buttons", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+          local args = {
+    [1] = {
+        ["Upgrade"] = "RebirthOptions",
+        ["RequestType"] = "UpgradeMax",
+    },
+}
+
+game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Upgrades:CreateToggle("Pet Slots", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = {
+        ["Upgrade"] = "PetSlot",
+        ["RequestType"] = "UpgradeMax",
+    },
+}
+
+game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Upgrades:CreateToggle("Inventory", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = {
+        ["Upgrade"] = "Inventory",
+        ["RequestType"] = "UpgradeMax",
+    },
+}
+
+game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Upgrades:CreateToggle("Oppen Speed", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+         local args = {
+    [1] = {
+        ["Upgrade"] = "OpeningSpeed",
+        ["RequestType"] = "UpgradeMax",
+    },
+}
+
+game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Upgrades:CreateToggle("Max Combo", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            
+local args = {
+    [1] = {
+        ["Upgrade"] = "MaxCombo",
+        ["RequestType"] = "UpgradeMax",
+    },
+}
+
+game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Upgrades:CreateToggle("Rocket Jump", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            local args = {
+    [1] = {
+        ["Upgrade"] = "RocketJump",
+        ["RequestType"] = "UpgradeMax",
+    },
+}
+
+game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+AutoTab:CreateToggle("Speed Hack 100", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+
+game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+eggs:CreateToggle("Auto Evolve Pets", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            local A_1 = 
+{
+	["UpdateType"] = "UpgradeAllPets"
+}
+local Event = game:GetService("ReplicatedStorage").Events.InventoryEvent
+Event:FireServer(A_1)
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+rebirths2:CreateToggle("Rebirth X1Q", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 1000000000000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths2:CreateToggle("Rebirth X100T", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 100000000000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths2:CreateToggle("Rebirth X25T", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 25000000000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths2:CreateToggle("Rebirth X10T", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 10000000000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths2:CreateToggle("Rebirth X5T", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 5000000000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths2:CreateToggle("Rebirth X2,5T", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 2500000000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+
+rebirths2:CreateToggle("Rebirth X1T", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 1000000000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths2:CreateToggle("Rebirth X500B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 500000000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths2:CreateToggle("Rebirth X250B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 250000000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths2:CreateToggle("Rebirth X100B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 100000000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths2:CreateToggle("Rebirth X50B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 50000000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths2:CreateToggle("Rebirth X25B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 25000000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths2:CreateToggle("Rebirth X10B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 10000000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths2:CreateToggle("Rebirth X2,5B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 2500000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths:CreateToggle("Rebirth X1B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 1000000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths:CreateToggle("Rebirth X500M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 500000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths:CreateToggle("Rebirth X100M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 100000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths:CreateToggle("Rebirth X50M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 50000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths:CreateToggle("Rebirth X15M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 15000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths:CreateToggle("Rebirth X10M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 10000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths:CreateToggle("Rebirth X5M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 5000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths:CreateToggle("Rebirth X2M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 2000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths:CreateToggle("Rebirth X1M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 1000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths:CreateToggle("Rebirth X500K", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 500000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths:CreateToggle("Rebirth X250K", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 250000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths:CreateToggle("Rebirth X100K", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 100000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths:CreateToggle("Rebirth X50K", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 50000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths:CreateToggle("Rebirth X25K", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 25000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths:CreateToggle("Rebirth X10K", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 10000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths:CreateToggle("Rebirth X2,5K", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 2500,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths:CreateToggle("Rebirth X1K", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 1000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths:CreateToggle("Rebirth X500", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 500,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths:CreateToggle("Rebirth X100", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 100,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths:CreateToggle("Rebirth X50", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 50,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths:CreateToggle("Rebirth X10", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 10,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+rebirths:CreateToggle("Rebirth X1", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Magic = true 
+        while wait(0) and _G.Magic do
+            local args = {
+                [1] = {
+                    ["Option"] = 1,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Magic = false
+    end
+end)
+
+eggs2:CreateToggle("Auto Buy villian Egg (9)3", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg9",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 40,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+eggs2:CreateToggle("Auto Buy villian Egg (9)2", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg9",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+eggs2:CreateToggle("Auto Buy villian Egg (9)1", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg9",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+eggs2:CreateToggle("Auto Buy villian Egg (9)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg9",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+eggs2:CreateToggle("Auto Buy Alien Egg (8)3", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg8",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+eggs2:CreateToggle("Auto Buy Alien Egg (8)2", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg8",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+eggs2:CreateToggle("Auto Buy Alien Egg (8)1", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg8",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+eggs2:CreateToggle("Auto Buy Alien Egg (8)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg8",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy Ocean Egg (7)3", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg7",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+
+              
+              },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy Ocean Egg (7)2", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg7",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+
+              
+              },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy Ocean Egg (7)1", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg7",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+
+              
+              },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy Ocean Egg (7)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg7",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+
+              
+              },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy 1M Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg1M",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy 500K Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg500k",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy 250K Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg250k",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy 100K Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg100k",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy Ancient Egg (6)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg6",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy Carnival Egg (5)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg5",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy Emojis Egg (4)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg4",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy Tropical Egg (3)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg3",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy Spotted Egg (2)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg2",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy Basic Egg (1)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg1",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+crates:CreateToggle("Auto Buy Carnival Crate (3)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.food = true 
+        while wait(0) and _G.food do
+            local args = {
+                [1] = {
+                    ["CrateType"] = "Crate3",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.CrateFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.food = false
+    end
+end)
+
+crates:CreateToggle("Auto Buy Blossom Crate (2)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.food = true 
+        while wait(0) and _G.food do
+            local args = {
+                [1] = {
+                    ["CrateType"] = "Crate2",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.CrateFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.food = false
+    end
+end)
+
+crates:CreateToggle("Auto Buy Grasy Crate (1)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.food = true 
+        while wait(0) and _G.food do
+            local args = {
+                [1] = {
+                    ["CrateType"] = "Crate1",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.CrateFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.food = false
+    end
+end)
+
+crates:CreateToggle("Auto Buy Hero Crate (4)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.food = true 
+        while wait(0) and _G.food do
+            local args = {
+                [1] = {
+                    ["CrateType"] = "Crate4",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.CrateFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.food = false
+    end
+end)
+
+potions:CreateButton("Attention Dysplay issues", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+potions:CreateToggle("Potion x2 CLICKS", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.as = true 
+        while wait(0) and _G.as do
+            local args = {
+            [1] = "Purchase",
+            [2] = {
+        ["Type"] = "ClickBooster2",
+    },
+}
+game:GetService("ReplicatedStorage").Functions.Potions:InvokeServer(unpack(args))
+end
+    else
+        _G.as = false
+    end
+end)
+
+potions:CreateToggle("Potion x25 CLICKS", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.as = true 
+        while wait(0) and _G.as do
+            local args = {
+            [1] = "Purchase",
+            [2] = {
+        ["Type"] = "ClickBooster25",
+    },
+}
+game:GetService("ReplicatedStorage").Functions.Potions:InvokeServer(unpack(args))
+end
+    else
+        _G.as = false
+    end
+end)
+
+potions:CreateToggle("Potion x10 CLICKS", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.as = true 
+        while wait(0) and _G.as do
+            local args = {
+            [1] = "Purchase",
+            [2] = {
+        ["Type"] = "ClickBooster10",
+    },
+}
+game:GetService("ReplicatedStorage").Functions.Potions:InvokeServer(unpack(args))
+end
+    else
+        _G.as = false
+    end
+end)
+
+potions:CreateToggle("Potion x5 CLICKS", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.as = true 
+        while wait(0) and _G.as do
+            local args = {
+            [1] = "Purchase",
+            [2] = {
+        ["Type"] = "ClickBooster5",
+    },
+}
+game:GetService("ReplicatedStorage").Functions.Potions:InvokeServer(unpack(args))
+end
+    else
+        _G.as = false
+    end
+end)
+
+potions:CreateToggle("Potion x5 Gems", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.as = true 
+        while wait(0) and _G.as do
+            local args = {
+            [1] = "Purchase",
+            [2] = {
+        ["Type"] = "GemBooster5",
+    },
+}
+game:GetService("ReplicatedStorage").Functions.Potions:InvokeServer(unpack(args))
+end
+    else
+        _G.as = false
+    end
+end)
+
+potions:CreateToggle("Potion x2 Gems", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.as = true 
+        while wait(0) and _G.as do
+            local args = {
+            [1] = "Purchase",
+            [2] = {
+        ["Type"] = "GemBooster2",
+    },
+}
+game:GetService("ReplicatedStorage").Functions.Potions:InvokeServer(unpack(args))
+end
+    else
+        _G.as = false
+    end
+end)
+
+teleports:CreateDropDown("Islands", {"Spawn", "Islands 1", "Islands 2", "Islands 3", "Islands 4", "Islands 5", "Islands 6", "Islands 7" , "Islands 8" , "Islands 9"}, function(arg) --the (arg) is the option you choose 
+    if arg == "Spawn" then
+        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(53.6871033, 64.9600143, -916.602051)
+    elseif arg == "Islands 1" then
+        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(121.647934, 457.010315, -821.140198)
+    elseif arg == "Islands 2" then
+        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(15.2872801, 904.083008, -917.881653)
+    elseif arg == "Islands 3" then
+        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(80.4999313, 1717.63647, -1058.14905)
+    elseif arg == "Islands 4" then
+        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(239.828644, 2434.19946, -940.05658)
+    elseif arg == "Islands 5" then
+        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(280.046295, 3603.84424, -858.549377)  
+    elseif arg == "Islands 6" then
+        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(401.155701, 4312.67871, -765.344055) 
+    elseif arg == "Islands 7" then
+        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(581.19635, 5097.88477, -692.195923) 
+    elseif arg == "Islands 8" then
+        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(502.571442, 5894.22168, -702.051147) 
+    elseif arg == "Islands 9" then
+        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(652.303833, 6874.55908, -886.94928) 
+    end
+end)
+
+teleports:CreateButton("Shop 1", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(13.023798, 65.5558624, -891.703064)
+end)
+
+teleports:CreateButton("Shop 2", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(5.66315413, 65.0842514, -993.249878)
+end)
+
+teleports:CreateButton("Spin Wheel", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(54.8322182, 64.9600067, -970.927917)
+end)
+
+teleports:CreateButton("LeaderBoards", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-18.0845356, 65.6652069, -941.966614)
+end)
+AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:Destroy()
+end)
+
+--anti afk
+
+--[[
+IronBrew:tm: obfuscation; Version 2.7.2
+]]
+return(function(IIlllIlIlIIIIllllIlllllII,IIIllIIlIIllIlIIII,IlllIllIIlIIlIlIlIlIIlll)local lIllIlllIlIIlIIlI=string.char;local IIIIIIIII=string.sub;local lllIlIIIIlIlIlIlllIIIlIll=table.concat;local lllIlIIllIllllllllIll=math.ldexp;local llIlllIIIlIIIl=getfenv or function()return _ENV end;local IIllIIIlIl=select;local IlllIIIIIllIIllIIIIIll=unpack or table.unpack;local llIIllIIIIlIlIIIIlllIIIl=tonumber;local function lllIIIIIIIllIllllIlllI(IlllIIIIIllIIllIIIIIll)local llIlIIlIIllIll,lIIIllllIllIIlll,IIllIllIllIllIlIlI="","",{}local lllIlIlllIIIIl=256;local IllIllIlIlIlllIlIIll={}for IIIllIIlIIllIlIIII=0,lllIlIlllIIIIl-1 do IllIllIlIlIlllIlIIll[IIIllIIlIIllIlIIII]=lIllIlllIlIIlIIlI(IIIllIIlIIllIlIIII)end;local IIIllIIlIIllIlIIII=1;local function IIlllIlIlIIIIllllIlllllII()local llIlIIlIIllIll=llIIllIIIIlIlIIIIlllIIIl(IIIIIIIII(IlllIIIIIllIIllIIIIIll,IIIllIIlIIllIlIIII,IIIllIIlIIllIlIIII),36)IIIllIIlIIllIlIIII=IIIllIIlIIllIlIIII+1;local lIIIllllIllIIlll=llIIllIIIIlIlIIIIlllIIIl(IIIIIIIII(IlllIIIIIllIIllIIIIIll,IIIllIIlIIllIlIIII,IIIllIIlIIllIlIIII+llIlIIlIIllIll-1),36)IIIllIIlIIllIlIIII=IIIllIIlIIllIlIIII+llIlIIlIIllIll;return lIIIllllIllIIlll end;llIlIIlIIllIll=lIllIlllIlIIlIIlI(IIlllIlIlIIIIllllIlllllII())IIllIllIllIllIlIlI[1]=llIlIIlIIllIll;while IIIllIIlIIllIlIIII<#IlllIIIIIllIIllIIIIIll do local IIIllIIlIIllIlIIII=IIlllIlIlIIIIllllIlllllII()if IllIllIlIlIlllIlIIll[IIIllIIlIIllIlIIII]then lIIIllllIllIIlll=IllIllIlIlIlllIlIIll[IIIllIIlIIllIlIIII]else lIIIllllIllIIlll=llIlIIlIIllIll..IIIIIIIII(llIlIIlIIllIll,1,1)end;IllIllIlIlIlllIlIIll[lllIlIlllIIIIl]=llIlIIlIIllIll..IIIIIIIII(lIIIllllIllIIlll,1,1)IIllIllIllIllIlIlI[#IIllIllIllIllIlIlI+1],llIlIIlIIllIll,lllIlIlllIIIIl=lIIIllllIllIIlll,lIIIllllIllIIlll,lllIlIlllIIIIl+1 end;return table.concat(IIllIllIllIllIlIlI)end;local llIIllIIIIlIlIIIIlllIIIl=lllIIIIIIIllIllllIlllI('26L26I27526I26M27623X23V23R23Z26I26827624T23Z24E25523Z24824C23N23T27D26927625823N24824E24F23V23Q25B24927L26I27427525623Q23V24327L24926I27R27524M23P23T27Y28628828226N27624J23Y23Q23Z23Y28327623T23P23O23O23Z23T24E26D27626W28426I26J27625M27627626G26I26W27529C26H29A29A29C29C29E29629N27529929N29729L27529H27829I29729H29C29Q29729728M2A129N26K26I25M27329R28T26K26C26I29H2752A229U29I27626A29N29H29729X2762AP27E29A28D26I24O24F24E24E28W26024U23P24D23O28T27525828Z2B02482602AF27628Y24D2AS2AK26B27624D23P24823L24924A23V27P26I26F27624P24F24824823Z23O24E24P27B27L23V26I2A727524P24S2482C52772BL23V23N24E2BI2751Q25X26I2BK2752AX2AZ2B125B24A26O29A2922AK29Q29A29729M29K29829F26I29G29D2AJ29W2D92CF2DB29B2CF29T2BE28M29P2AJ29H2A729Q29H29H2952762AO2DC2752AM27529M2972CP2AK29C2CK29I2D027627F2D32D72D52E92D829M29V2932752782DE2D62782DH29H2DJ2A82DL2C82EO2BE2DQ2AK2DT2AQ2AK275');local IIIllIIlIIllIlIIII=(bit or bit32);local lllIlIlllIIIIl=IIIllIIlIIllIlIIII and IIIllIIlIIllIlIIII.bxor or function(IIIllIIlIIllIlIIII,lIIIllllIllIIlll)local llIlIIlIIllIll,lllIlIlllIIIIl,IIIIIIIII=1,0,10 while IIIllIIlIIllIlIIII>0 and lIIIllllIllIIlll>0 do local IIllIllIllIllIlIlI,IIIIIIIII=IIIllIIlIIllIlIIII%2,lIIIllllIllIIlll%2 if IIllIllIllIllIlIlI~=IIIIIIIII then lllIlIlllIIIIl=lllIlIlllIIIIl+llIlIIlIIllIll end IIIllIIlIIllIlIIII,lIIIllllIllIIlll,llIlIIlIIllIll=(IIIllIIlIIllIlIIII-IIllIllIllIllIlIlI)/2,(lIIIllllIllIIlll-IIIIIIIII)/2,llIlIIlIIllIll*2 end if IIIllIIlIIllIlIIII<lIIIllllIllIIlll then IIIllIIlIIllIlIIII=lIIIllllIllIIlll end while IIIllIIlIIllIlIIII>0 do local lIIIllllIllIIlll=IIIllIIlIIllIlIIII%2 if lIIIllllIllIIlll>0 then lllIlIlllIIIIl=lllIlIlllIIIIl+llIlIIlIIllIll end IIIllIIlIIllIlIIII,llIlIIlIIllIll=(IIIllIIlIIllIlIIII-lIIIllllIllIIlll)/2,llIlIIlIIllIll*2 end return lllIlIlllIIIIl end local function lIIIllllIllIIlll(llIlIIlIIllIll,IIIllIIlIIllIlIIII,lIIIllllIllIIlll)if lIIIllllIllIIlll then local IIIllIIlIIllIlIIII=(llIlIIlIIllIll/2^(IIIllIIlIIllIlIIII-1))%2^((lIIIllllIllIIlll-1)-(IIIllIIlIIllIlIIII-1)+1);return IIIllIIlIIllIlIIII-IIIllIIlIIllIlIIII%1;else local IIIllIIlIIllIlIIII=2^(IIIllIIlIIllIlIIII-1);return(llIlIIlIIllIll%(IIIllIIlIIllIlIIII+IIIllIIlIIllIlIIII)>=IIIllIIlIIllIlIIII)and 1 or 0;end;end;local IIIllIIlIIllIlIIII=1;local function llIlIIlIIllIll()local IIllIllIllIllIlIlI,llIlIIlIIllIll,IIIIIIIII,lIIIllllIllIIlll=IIlllIlIlIIIIllllIlllllII(llIIllIIIIlIlIIIIlllIIIl,IIIllIIlIIllIlIIII,IIIllIIlIIllIlIIII+3);IIllIllIllIllIlIlI=lllIlIlllIIIIl(IIllIllIllIllIlIlI,234)llIlIIlIIllIll=lllIlIlllIIIIl(llIlIIlIIllIll,234)IIIIIIIII=lllIlIlllIIIIl(IIIIIIIII,234)lIIIllllIllIIlll=lllIlIlllIIIIl(lIIIllllIllIIlll,234)IIIllIIlIIllIlIIII=IIIllIIlIIllIlIIII+4;return(lIIIllllIllIIlll*16777216)+(IIIIIIIII*65536)+(llIlIIlIIllIll*256)+IIllIllIllIllIlIlI;end;local function IllIllIlIlIlllIlIIll()local llIlIIlIIllIll=lllIlIlllIIIIl(IIlllIlIlIIIIllllIlllllII(llIIllIIIIlIlIIIIlllIIIl,IIIllIIlIIllIlIIII,IIIllIIlIIllIlIIII),234);IIIllIIlIIllIlIIII=IIIllIIlIIllIlIIII+1;return llIlIIlIIllIll;end;local function IIllIllIllIllIlIlI()local lIIIllllIllIIlll,llIlIIlIIllIll=IIlllIlIlIIIIllllIlllllII(llIIllIIIIlIlIIIIlllIIIl,IIIllIIlIIllIlIIII,IIIllIIlIIllIlIIII+2);lIIIllllIllIIlll=lllIlIlllIIIIl(lIIIllllIllIIlll,234)llIlIIlIIllIll=lllIlIlllIIIIl(llIlIIlIIllIll,234)IIIllIIlIIllIlIIII=IIIllIIlIIllIlIIII+2;return(llIlIIlIIllIll*256)+lIIIllllIllIIlll;end;local function llllIlII()local IIIllIIlIIllIlIIII=llIlIIlIIllIll();local llIlIIlIIllIll=llIlIIlIIllIll();local IIIIIIIII=1;local lllIlIlllIIIIl=(lIIIllllIllIIlll(llIlIIlIIllIll,1,20)*(2^32))+IIIllIIlIIllIlIIII;local IIIllIIlIIllIlIIII=lIIIllllIllIIlll(llIlIIlIIllIll,21,31);local llIlIIlIIllIll=((-1)^lIIIllllIllIIlll(llIlIIlIIllIll,32));if(IIIllIIlIIllIlIIII==0)then if(lllIlIlllIIIIl==0)then return llIlIIlIIllIll*0;else IIIllIIlIIllIlIIII=1;IIIIIIIII=0;end;elseif(IIIllIIlIIllIlIIII==2047)then return(lllIlIlllIIIIl==0)and(llIlIIlIIllIll*(1/0))or(llIlIIlIIllIll*(0/0));end;return lllIlIIllIllllllllIll(llIlIIlIIllIll,IIIllIIlIIllIlIIII-1023)*(IIIIIIIII+(lllIlIlllIIIIl/(2^52)));end;local lllIIIIIIIllIllllIlllI=llIlIIlIIllIll;local function lllIlIIllIllllllllIll(llIlIIlIIllIll)local lIIIllllIllIIlll;if(not llIlIIlIIllIll)then llIlIIlIIllIll=lllIIIIIIIllIllllIlllI();if(llIlIIlIIllIll==0)then return'';end;end;lIIIllllIllIIlll=IIIIIIIII(llIIllIIIIlIlIIIIlllIIIl,IIIllIIlIIllIlIIII,IIIllIIlIIllIlIIII+llIlIIlIIllIll-1);IIIllIIlIIllIlIIII=IIIllIIlIIllIlIIII+llIlIIlIIllIll;local llIlIIlIIllIll={}for IIIllIIlIIllIlIIII=1,#lIIIllllIllIIlll do llIlIIlIIllIll[IIIllIIlIIllIlIIII]=lIllIlllIlIIlIIlI(lllIlIlllIIIIl(IIlllIlIlIIIIllllIlllllII(IIIIIIIII(lIIIllllIllIIlll,IIIllIIlIIllIlIIII,IIIllIIlIIllIlIIII)),234))end return lllIlIIIIlIlIlIlllIIIlIll(llIlIIlIIllIll);end;local IIIllIIlIIllIlIIII=llIlIIlIIllIll;local function lllIlIIIIlIlIlIlllIIIlIll(...)return{...},IIllIIIlIl('#',...)end local function llIIllIIIIlIlIIIIlllIIIl()local lIllIlllIlIIlIIlI={};local IlllIIIIIllIIllIIIIIll={};local IIIllIIlIIllIlIIII={};local IIlllIlIlIIIIllllIlllllII={[#{"1 + 1 = 111";"1 + 1 = 111";}]=IlllIIIIIllIIllIIIIIll,[#{"1 + 1 = 111";{655;628;284;532};{877;815;162;895};}]=nil,[#{{117;136;67;543};{811;572;708;884};{327;505;367;125};{376;56;931;660};}]=IIIllIIlIIllIlIIII,[#{"1 + 1 = 111";}]=lIllIlllIlIIlIIlI,};local IIIllIIlIIllIlIIII=llIlIIlIIllIll()local lllIlIlllIIIIl={}for lIIIllllIllIIlll=1,IIIllIIlIIllIlIIII do local llIlIIlIIllIll=IllIllIlIlIlllIlIIll();local IIIllIIlIIllIlIIII;if(llIlIIlIIllIll==3)then IIIllIIlIIllIlIIII=(IllIllIlIlIlllIlIIll()~=0);elseif(llIlIIlIIllIll==1)then IIIllIIlIIllIlIIII=llllIlII();elseif(llIlIIlIIllIll==0)then IIIllIIlIIllIlIIII=lllIlIIllIllllllllIll();end;lllIlIlllIIIIl[lIIIllllIllIIlll]=IIIllIIlIIllIlIIII;end;for IlllIIIIIllIIllIIIIIll=1,llIlIIlIIllIll()do local IIIllIIlIIllIlIIII=IllIllIlIlIlllIlIIll();if(lIIIllllIllIIlll(IIIllIIlIIllIlIIII,1,1)==0)then local IIIIIIIII=lIIIllllIllIIlll(IIIllIIlIIllIlIIII,2,3);local IllIllIlIlIlllIlIIll=lIIIllllIllIIlll(IIIllIIlIIllIlIIII,4,6);local IIIllIIlIIllIlIIII={IIllIllIllIllIlIlI(),IIllIllIllIllIlIlI(),nil,nil};if(IIIIIIIII==0)then IIIllIIlIIllIlIIII[#{"1 + 1 = 111";"1 + 1 = 111";"1 + 1 = 111";}]=IIllIllIllIllIlIlI();IIIllIIlIIllIlIIII[#("ZFrQ")]=IIllIllIllIllIlIlI();elseif(IIIIIIIII==1)then IIIllIIlIIllIlIIII[#("sYb")]=llIlIIlIIllIll();elseif(IIIIIIIII==2)then IIIllIIlIIllIlIIII[#("nz5")]=llIlIIlIIllIll()-(2^16)elseif(IIIIIIIII==3)then IIIllIIlIIllIlIIII[#("Ch2")]=llIlIIlIIllIll()-(2^16)IIIllIIlIIllIlIIII[#("6lut")]=IIllIllIllIllIlIlI();end;if(lIIIllllIllIIlll(IllIllIlIlIlllIlIIll,1,1)==1)then IIIllIIlIIllIlIIII[#{{422;163;297;851};"1 + 1 = 111";}]=lllIlIlllIIIIl[IIIllIIlIIllIlIIII[#("Tp")]]end if(lIIIllllIllIIlll(IllIllIlIlIlllIlIIll,2,2)==1)then IIIllIIlIIllIlIIII[#("r9n")]=lllIlIlllIIIIl[IIIllIIlIIllIlIIII[#("AK8")]]end if(lIIIllllIllIIlll(IllIllIlIlIlllIlIIll,3,3)==1)then IIIllIIlIIllIlIIII[#("1tfI")]=lllIlIlllIIIIl[IIIllIIlIIllIlIIII[#("P0iK")]]end lIllIlllIlIIlIIlI[IlllIIIIIllIIllIIIIIll]=IIIllIIlIIllIlIIII;end end;for IIIllIIlIIllIlIIII=1,llIlIIlIIllIll()do IlllIIIIIllIIllIIIIIll[IIIllIIlIIllIlIIII-1]=llIIllIIIIlIlIIIIlllIIIl();end;IIlllIlIlIIIIllllIlllllII[3]=IllIllIlIlIlllIlIIll();return IIlllIlIlIIIIllllIlllllII;end;local function lIllIlllIlIIlIIlI(IIIllIIlIIllIlIIII,IIlllIlIlIIIIllllIlllllII,IllIllIlIlIlllIlIIll)IIIllIIlIIllIlIIII=(IIIllIIlIIllIlIIII==true and llIIllIIIIlIlIIIIlllIIIl())or IIIllIIlIIllIlIIII;return(function(...)local lllIlIlllIIIIl=IIIllIIlIIllIlIIII[1];local IIIIIIIII=IIIllIIlIIllIlIIII[3];local lllIIIIIIIllIllllIlllI=IIIllIIlIIllIlIIII[2];local IIIllIIlIIllIlIIII=lllIlIIIIlIlIlIlllIIIlIll local llIlIIlIIllIll=1;local IIIllIIlIIllIlIIII=-1;local lllIlIIIIlIlIlIlllIIIlIll={};local IIllIllIllIllIlIlI={...};local IIllIIIlIl=IIllIIIlIl('#',...)-1;local llIIllIIIIlIlIIIIlllIIIl={};local lIIIllllIllIIlll={};for IIIllIIlIIllIlIIII=0,IIllIIIlIl do if(IIIllIIlIIllIlIIII>=IIIIIIIII)then lllIlIIIIlIlIlIlllIIIlIll[IIIllIIlIIllIlIIII-IIIIIIIII]=IIllIllIllIllIlIlI[IIIllIIlIIllIlIIII+1];else lIIIllllIllIIlll[IIIllIIlIIllIlIIII]=IIllIllIllIllIlIlI[IIIllIIlIIllIlIIII+#{"1 + 1 = 111";}];end;end;local IIIllIIlIIllIlIIII=IIllIIIlIl-IIIIIIIII+1 local IIIllIIlIIllIlIIII;local IIllIllIllIllIlIlI;while true do IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];IIllIllIllIllIlIlI=IIIllIIlIIllIlIIII[#("6")];if IIllIllIllIllIlIlI<=#("AGaFy1DcFd")then if IIllIllIllIllIlIlI<=#("8lZ2")then if IIllIllIllIllIlIlI<=#("g")then if IIllIllIllIllIlIlI==#("")then do return end;else lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("1x")]]=IIIllIIlIIllIlIIII[#("bEb")];end;elseif IIllIllIllIllIlIlI<=#("Tj")then lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("dL")]]=IllIllIlIlIlllIlIIll[IIIllIIlIIllIlIIII[#{{750;60;114;713};"1 + 1 = 111";{238;795;364;371};}]];elseif IIllIllIllIllIlIlI>#("xzr")then local IIIllIIlIIllIlIIII=IIIllIIlIIllIlIIII[#("5f")]lIIIllllIllIIlll[IIIllIIlIIllIlIIII](lIIIllllIllIIlll[IIIllIIlIIllIlIIII+1])else lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("lm")]]=lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("6Zv")]];end;elseif IIllIllIllIllIlIlI<=#("RSbXcoW")then if IIllIllIllIllIlIlI<=#("ROxIi")then local llIlIIlIIllIll=IIIllIIlIIllIlIIII[#("1G")]lIIIllllIllIIlll[llIlIIlIIllIll](IlllIIIIIllIIllIIIIIll(lIIIllllIllIIlll,llIlIIlIIllIll+1,IIIllIIlIIllIlIIII[#("1B4")]))elseif IIllIllIllIllIlIlI>#("YSiULv")then local IIllIllIllIllIlIlI;local IIIIIIIII;lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("Aa")]]=IllIllIlIlIlllIlIIll[IIIllIIlIIllIlIIII[#("SmZ")]];llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];IIIIIIIII=IIIllIIlIIllIlIIII[#{"1 + 1 = 111";"1 + 1 = 111";}];IIllIllIllIllIlIlI=lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("epv")]];lIIIllllIllIIlll[IIIIIIIII+1]=IIllIllIllIllIlIlI;lIIIllllIllIIlll[IIIIIIIII]=IIllIllIllIllIlIlI[IIIllIIlIIllIlIIII[#("1yjy")]];llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("1p")]]=IIIllIIlIIllIlIIII[#("qJX")];llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];IIIIIIIII=IIIllIIlIIllIlIIII[#("BI")]lIIIllllIllIIlll[IIIIIIIII]=lIIIllllIllIIlll[IIIIIIIII](IlllIIIIIllIIllIIIIIll(lIIIllllIllIIlll,IIIIIIIII+1,IIIllIIlIIllIlIIII[#("6TO")]))llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("5A")]]=IllIllIlIlIlllIlIIll[IIIllIIlIIllIlIIII[#("p5z")]];llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];IIIIIIIII=IIIllIIlIIllIlIIII[#("MC")];IIllIllIllIllIlIlI=lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("X64")]];lIIIllllIllIIlll[IIIIIIIII+1]=IIllIllIllIllIlIlI;lIIIllllIllIIlll[IIIIIIIII]=IIllIllIllIllIlIlI[IIIllIIlIIllIlIIII[#("2nWg")]];llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#{{316;219;323;762};"1 + 1 = 111";}]]=IIIllIIlIIllIlIIII[#("GGP")];llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];IIIIIIIII=IIIllIIlIIllIlIIII[#("TK")]lIIIllllIllIIlll[IIIIIIIII]=lIIIllllIllIIlll[IIIIIIIII](IlllIIIIIllIIllIIIIIll(lIIIllllIllIIlll,IIIIIIIII+1,IIIllIIlIIllIlIIII[#("W8z")]))llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("MW")]]=lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("e0b")]][IIIllIIlIIllIlIIII[#{"1 + 1 = 111";{664;879;341;275};"1 + 1 = 111";"1 + 1 = 111";}]];llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("iV")]]=lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("VWH")]][IIIllIIlIIllIlIIII[#("QDBa")]];else lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("eL")]]=IllIllIlIlIlllIlIIll[IIIllIIlIIllIlIIII[#("h5X")]];end;elseif IIllIllIllIllIlIlI<=#{"1 + 1 = 111";"1 + 1 = 111";{231;844;946;567};"1 + 1 = 111";"1 + 1 = 111";"1 + 1 = 111";{692;301;660;557};"1 + 1 = 111";}then local llIlIIlIIllIll=IIIllIIlIIllIlIIII[#("fq")]lIIIllllIllIIlll[llIlIIlIIllIll](IlllIIIIIllIIllIIIIIll(lIIIllllIllIIlll,llIlIIlIIllIll+1,IIIllIIlIIllIlIIII[#("UbE")]))elseif IIllIllIllIllIlIlI>#("jLmPjUaSb")then local llIlIIlIIllIll=IIIllIIlIIllIlIIII[#("zL")];local lllIlIlllIIIIl=lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("lGO")]];lIIIllllIllIIlll[llIlIIlIIllIll+1]=lllIlIlllIIIIl;lIIIllllIllIIlll[llIlIIlIIllIll]=lllIlIlllIIIIl[IIIllIIlIIllIlIIII[#("NSGr")]];else local llIlIIlIIllIll=IIIllIIlIIllIlIIII[#("na")]lIIIllllIllIIlll[llIlIIlIIllIll]=lIIIllllIllIIlll[llIlIIlIIllIll](IlllIIIIIllIIllIIIIIll(lIIIllllIllIIlll,llIlIIlIIllIll+1,IIIllIIlIIllIlIIII[#("bfK")]))end;elseif IIllIllIllIllIlIlI<=#("mrhnsJqZ4BkMX6Of")then if IIllIllIllIllIlIlI<=#("amX19CLFWuEhe")then if IIllIllIllIllIlIlI<=#("BTAiXFbSa9I")then lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("DM")]]=IIIllIIlIIllIlIIII[#("rjQ")];elseif IIllIllIllIllIlIlI>#("a5IXpaeqaFnt")then local llIlIIlIIllIll=IIIllIIlIIllIlIIII[#{{706;322;362;992};{439;359;376;794};}]lIIIllllIllIIlll[llIlIIlIIllIll]=lIIIllllIllIIlll[llIlIIlIIllIll](IlllIIIIIllIIllIIIIIll(lIIIllllIllIIlll,llIlIIlIIllIll+1,IIIllIIlIIllIlIIII[#("KTt")]))else local IIIllIIlIIllIlIIII=IIIllIIlIIllIlIIII[#("sK")]lIIIllllIllIIlll[IIIllIIlIIllIlIIII](lIIIllllIllIIlll[IIIllIIlIIllIlIIII+1])end;elseif IIllIllIllIllIlIlI<=#("ZGTHnWS0UU3yY1")then local IlllIIIIIllIIllIIIIIll=lllIIIIIIIllIllllIlllI[IIIllIIlIIllIlIIII[#("j7X")]];local IIllIllIllIllIlIlI;local IIIIIIIII={};IIllIllIllIllIlIlI=IlllIllIIlIIlIlIlIlIIlll({},{__index=function(llIlIIlIIllIll,IIIllIIlIIllIlIIII)local IIIllIIlIIllIlIIII=IIIIIIIII[IIIllIIlIIllIlIIII];return IIIllIIlIIllIlIIII[1][IIIllIIlIIllIlIIII[2]];end,__newindex=function(lIIIllllIllIIlll,IIIllIIlIIllIlIIII,llIlIIlIIllIll)local IIIllIIlIIllIlIIII=IIIIIIIII[IIIllIIlIIllIlIIII]IIIllIIlIIllIlIIII[1][IIIllIIlIIllIlIIII[2]]=llIlIIlIIllIll;end;});for IIllIllIllIllIlIlI=1,IIIllIIlIIllIlIIII[#{{214;183;345;307};{327;586;613;719};{486;733;174;590};"1 + 1 = 111";}]do llIlIIlIIllIll=llIlIIlIIllIll+1;local IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];if IIIllIIlIIllIlIIII[#{{279;698;801;211};}]==3 then IIIIIIIII[IIllIllIllIllIlIlI-1]={lIIIllllIllIIlll,IIIllIIlIIllIlIIII[#{{811;712;467;911};"1 + 1 = 111";{221;68;10;442};}]};else IIIIIIIII[IIllIllIllIllIlIlI-1]={IIlllIlIlIIIIllllIlllllII,IIIllIIlIIllIlIIII[#("zNQ")]};end;llIIllIIIIlIlIIIIlllIIIl[#llIIllIIIIlIlIIIIlllIIIl+1]=IIIIIIIII;end;lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("4i")]]=lIllIlllIlIIlIIlI(IlllIIIIIllIIllIIIIIll,IIllIllIllIllIlIlI,IllIllIlIlIlllIlIIll);elseif IIllIllIllIllIlIlI>#("CsmYsiCP78fEcYR")then lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("bQ")]]=IIlllIlIlIIIIllllIlllllII[IIIllIIlIIllIlIIII[#("jW6")]];else local IIllIllIllIllIlIlI;local IIIIIIIII;lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("gH")]]=IIlllIlIlIIIIllllIlllllII[IIIllIIlIIllIlIIII[#("bCC")]];llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];IIIIIIIII=IIIllIIlIIllIlIIII[#("gS")];IIllIllIllIllIlIlI=lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("tDZ")]];lIIIllllIllIIlll[IIIIIIIII+1]=IIllIllIllIllIlIlI;lIIIllllIllIIlll[IIIIIIIII]=IIllIllIllIllIlIlI[IIIllIIlIIllIlIIII[#("0LTX")]];llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("yx")]]=IllIllIlIlIlllIlIIll[IIIllIIlIIllIlIIII[#("qq5")]];llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("1Z")]]=lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("f7l")]][IIIllIIlIIllIlIIII[#("Cv4k")]];llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("tm")]]=IIIllIIlIIllIlIIII[#("LF7")];llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("4F")]]=IIIllIIlIIllIlIIII[#("ozG")];llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];IIIIIIIII=IIIllIIlIIllIlIIII[#("Zq")]lIIIllllIllIIlll[IIIIIIIII]=lIIIllllIllIIlll[IIIIIIIII](IlllIIIIIllIIllIIIIIll(lIIIllllIllIIlll,IIIIIIIII+1,IIIllIIlIIllIlIIII[#("BlH")]))llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("23")]]=IllIllIlIlIlllIlIIll[IIIllIIlIIllIlIIII[#("ASM")]];llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("G0")]]=lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("nmH")]][IIIllIIlIIllIlIIII[#("Szno")]];llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("ij")]]=lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("re8")]][IIIllIIlIIllIlIIII[#("dWL8")]];llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];IIIIIIIII=IIIllIIlIIllIlIIII[#("od")]lIIIllllIllIIlll[IIIIIIIII](IlllIIIIIllIIllIIIIIll(lIIIllllIllIIlll,IIIIIIIII+1,IIIllIIlIIllIlIIII[#("iYY")]))llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("5s")]]=IllIllIlIlIlllIlIIll[IIIllIIlIIllIlIIII[#("FEx")]];llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#{{161;946;575;206};"1 + 1 = 111";}]]=IIIllIIlIIllIlIIII[#("Crr")];llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];IIIIIIIII=IIIllIIlIIllIlIIII[#("Me")]lIIIllllIllIIlll[IIIIIIIII](lIIIllllIllIIlll[IIIIIIIII+1])llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("f0")]]=IIlllIlIlIIIIllllIlllllII[IIIllIIlIIllIlIIII[#("Zjp")]];llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];IIIIIIIII=IIIllIIlIIllIlIIII[#("G9")];IIllIllIllIllIlIlI=lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("5RZ")]];lIIIllllIllIIlll[IIIIIIIII+1]=IIllIllIllIllIlIlI;lIIIllllIllIIlll[IIIIIIIII]=IIllIllIllIllIlIlI[IIIllIIlIIllIlIIII[#("mAhb")]];llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("4a")]]=IllIllIlIlIlllIlIIll[IIIllIIlIIllIlIIII[#("6BJ")]];llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("jm")]]=lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("PAy")]][IIIllIIlIIllIlIIII[#("i12x")]];llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("Dn")]]=IIIllIIlIIllIlIIII[#("Bcg")];llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("JL")]]=IIIllIIlIIllIlIIII[#("HqO")];llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];IIIIIIIII=IIIllIIlIIllIlIIII[#("sp")]lIIIllllIllIIlll[IIIIIIIII]=lIIIllllIllIIlll[IIIIIIIII](IlllIIIIIllIIllIIIIIll(lIIIllllIllIIlll,IIIIIIIII+1,IIIllIIlIIllIlIIII[#("Kfp")]))llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("FN")]]=IllIllIlIlIlllIlIIll[IIIllIIlIIllIlIIII[#("Yf6")]];llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("Kz")]]=lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("A7Q")]][IIIllIIlIIllIlIIII[#("grqO")]];llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("Wh")]]=lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#{{812;189;307;402};{436;352;391;246};"1 + 1 = 111";}]][IIIllIIlIIllIlIIII[#("UeUY")]];llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];IIIIIIIII=IIIllIIlIIllIlIIII[#("2n")]lIIIllllIllIIlll[IIIIIIIII](IlllIIIIIllIIllIIIIIll(lIIIllllIllIIlll,IIIIIIIII+1,IIIllIIlIIllIlIIII[#("o0T")]))llIlIIlIIllIll=llIlIIlIIllIll+1;IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];do return end;end;elseif IIllIllIllIllIlIlI<=#("Ff578skXm0bqlOACjEY")then if IIllIllIllIllIlIlI<=#("sAbey1WJisPbcYys3")then do return end;elseif IIllIllIllIllIlIlI>#("LjizLDgkDsJNtJaaNe")then lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("TX")]]=IIlllIlIlIIIIllllIlllllII[IIIllIIlIIllIlIIII[#("opW")]];else lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#{"1 + 1 = 111";{268;706;42;38};}]]=lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#{{610;653;975;113};"1 + 1 = 111";{153;833;945;509};}]][IIIllIIlIIllIlIIII[#("uJpu")]];end;elseif IIllIllIllIllIlIlI<=#{{77;260;236;495};"1 + 1 = 111";"1 + 1 = 111";"1 + 1 = 111";"1 + 1 = 111";"1 + 1 = 111";{180;805;75;789};"1 + 1 = 111";{437;300;887;249};"1 + 1 = 111";"1 + 1 = 111";"1 + 1 = 111";{394;38;279;517};"1 + 1 = 111";"1 + 1 = 111";{774;131;143;410};"1 + 1 = 111";"1 + 1 = 111";{246;545;4;667};{545;812;868;713};}then local IlllIIIIIllIIllIIIIIll=lllIIIIIIIllIllllIlllI[IIIllIIlIIllIlIIII[#("lUh")]];local IIllIllIllIllIlIlI;local IIIIIIIII={};IIllIllIllIllIlIlI=IlllIllIIlIIlIlIlIlIIlll({},{__index=function(llIlIIlIIllIll,IIIllIIlIIllIlIIII)local IIIllIIlIIllIlIIII=IIIIIIIII[IIIllIIlIIllIlIIII];return IIIllIIlIIllIlIIII[1][IIIllIIlIIllIlIIII[2]];end,__newindex=function(lIIIllllIllIIlll,IIIllIIlIIllIlIIII,llIlIIlIIllIll)local IIIllIIlIIllIlIIII=IIIIIIIII[IIIllIIlIIllIlIIII]IIIllIIlIIllIlIIII[1][IIIllIIlIIllIlIIII[2]]=llIlIIlIIllIll;end;});for IIllIllIllIllIlIlI=1,IIIllIIlIIllIlIIII[#("nFrD")]do llIlIIlIIllIll=llIlIIlIIllIll+1;local IIIllIIlIIllIlIIII=lllIlIlllIIIIl[llIlIIlIIllIll];if IIIllIIlIIllIlIIII[#("e")]==3 then IIIIIIIII[IIllIllIllIllIlIlI-1]={lIIIllllIllIIlll,IIIllIIlIIllIlIIII[#("FZc")]};else IIIIIIIII[IIllIllIllIllIlIlI-1]={IIlllIlIlIIIIllllIlllllII,IIIllIIlIIllIlIIII[#("C1t")]};end;llIIllIIIIlIlIIIIlllIIIl[#llIIllIIIIlIlIIIIlllIIIl+1]=IIIIIIIII;end;lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("Yo")]]=lIllIlllIlIIlIIlI(IlllIIIIIllIIllIIIIIll,IIllIllIllIllIlIlI,IllIllIlIlIlllIlIIll);elseif IIllIllIllIllIlIlI>#("8myDaF8fbclsodsDNHURq")then lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("Yf")]]=lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("ECi")]][IIIllIIlIIllIlIIII[#("nk7q")]];else local lllIlIlllIIIIl=IIIllIIlIIllIlIIII[#("jC")];local llIlIIlIIllIll=lIIIllllIllIIlll[IIIllIIlIIllIlIIII[#("Ts6")]];lIIIllllIllIIlll[lllIlIlllIIIIl+1]=llIlIIlIIllIll;lIIIllllIllIIlll[lllIlIlllIIIIl]=llIlIIlIIllIll[IIIllIIlIIllIlIIII[#("BDSr")]];end;llIlIIlIIllIll=llIlIIlIIllIll+1;end;end);end;return lIllIlllIlIIlIIlI(true,{},llIlllIIIlIIIl())();end)(string.byte,table.insert,setmetatable);
+
+
