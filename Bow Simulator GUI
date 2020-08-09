@@ -401,6 +401,20 @@ AutoTab:CreateToggle("Speed Hack 100", function(arg) --the (arg) is if the check
     end
 end)
 
+AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.LULU = true 
+        while wait(0) and _G.LULU do
+            if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
+            game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool"):Activate()
+    end
+end
+
+    else
+        _G.LULU = false
+    end
+end)
+
 AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:Destroy()
 end)
