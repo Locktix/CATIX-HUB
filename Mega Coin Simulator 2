@@ -1178,6 +1178,18 @@ teleports:CreateButton("Zone 11", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1071, 3, -12)
 end)
 
+AutoTab:CreateButton("Tp gems AND Coins", function() --you dont need "arg" for a button
+local children = game.Workspace:GetChildren()
+    for _, child in pairs(children) do
+        for _, child in pairs(child:GetChildren()) do
+            table.insert(children, child)
+         end
+         if child:IsA("BasePart") and child.Name == "Head" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        end
+    end
+end)
+
 
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
