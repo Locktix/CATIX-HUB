@@ -666,7 +666,7 @@ eggs4:CreateToggle("Auto Buy Grassy Lands Eggs", function(arg) --the (arg) is if
 local args = {
     [1] = game:GetService("Players")["quentin453"],
     [2] = "GLands",
-    [3] = false,
+    [3] = true,
 }
 
 game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
@@ -700,7 +700,7 @@ eggs4:CreateToggle("Auto Buy Sinister Eggs", function(arg) --the (arg) is if the
 local args = {
     [1] = game:GetService("Players")["quentin453"],
     [2] = "Grassy3",
-    [3] = false,
+    [3] = true,
 }
 
 game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
@@ -1074,7 +1074,7 @@ eggs2:CreateToggle("Auto Buy Grassy Lands Eggs", function(arg) --the (arg) is if
 local args = {
     [1] = game:GetService("Players")["quentin453"],
     [2] = "GLands",
-    [3] = true,
+    [3] = false,
 }
 
 game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
@@ -1091,7 +1091,7 @@ eggs2:CreateToggle("Auto Buy Mystery Eggs", function(arg) --the (arg) is if the 
 local args = {
     [1] = game:GetService("Players")["quentin453"],
     [2] = "Grassy2",
-    [3] = true,
+    [3] = false,
 }
 
 game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
@@ -1108,7 +1108,7 @@ eggs2:CreateToggle("Auto Buy Sinister Eggs", function(arg) --the (arg) is if the
 local args = {
     [1] = game:GetService("Players")["quentin453"],
     [2] = "Grassy3",
-    [3] = true,
+    [3] = false,
 }
 
 game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
