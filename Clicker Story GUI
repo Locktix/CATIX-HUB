@@ -544,6 +544,21 @@ game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
     end
 end)
 
+Rebirth:CreateToggle("Auto Rebirth x1Qn", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+       local args = {
+    [1] = 1000000000000000000,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
 Upgrades:CreateToggle("AutoBuy Speed", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
