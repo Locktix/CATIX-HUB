@@ -67,6 +67,164 @@ AutoTab:CreateToggle("Speed Hack 100", function(arg) --the (arg) is if the check
     end
 end)
 
+AutoTab:CreateButton("World 1", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+          
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+AutoTab:CreateToggle("Auto Buy Bronze Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Starter World Bronze",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage").Events.BuyEggPromptEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+AutoTab:CreateToggle("Auto Buy Silver Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Starter World Silver",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage").Events.BuyEggPromptEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+AutoTab:CreateToggle("Auto Buy Gold Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Starter World Gold",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage").Events.BuyEggPromptEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+AutoTab:CreateToggle("Auto Buy Diamond Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Starter World Diamond",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage").Events.BuyEggPromptEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+AutoTab:CreateButton("World 2", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+AutoTab:CreateToggle("Auto Buy Bronze Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Sugar Beach Bronze",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage").Events.BuyEggPromptEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+AutoTab:CreateToggle("Auto Buy Silver Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Sugar Beach Silver",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage").Events.BuyEggPromptEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+AutoTab:CreateToggle("Auto Buy Gold Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Sugar Beach Gold",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage").Events.BuyEggPromptEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+AutoTab:CreateToggle("Auto Buy Diamond Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Sugar Beach Diamond",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage").Events.BuyEggPromptEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
 teleportsgems:CreateToggle("Auto Collect Gems", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
@@ -126,4 +284,3 @@ end)
         Virtual:ClickButton2(Vector2.new())
         wait(2)
     end)
-
