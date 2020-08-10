@@ -11,6 +11,7 @@ local AutoTab = Library:CreateTab("Cotton Candy Simulator GUI","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
 local boosts = Library:CreateTab("Auto Buy Boosts,Stuffs","things", true)
 local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
+local Delete = Library:CreateTab("Auto Delete pets","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
 
@@ -841,6 +842,61 @@ end)
 
 AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:Destroy()
+end)
+
+Delete:CreateButton("Diamond Eggs World 2", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+Delete:CreateToggle("Auto Delete Sweet Dogs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            local args = {
+    [1] = "Sweet Dog",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete:CreateToggle("Auto Delete Sweet Cats", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            local args = {
+    [1] = "Sweet Cat",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete:CreateToggle("Auto Delete Sweet Shark", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Sweet Shark",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
 end)
 
 --| Anti AFK | By Altix#3395
