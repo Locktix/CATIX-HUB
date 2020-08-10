@@ -1,4 +1,6 @@
-  
+
+
+
 --https://www.roblox.com/games/3290249490/NEW-WORLD-Cotton-Candy-Simulator
 
 
@@ -39,6 +41,10 @@ game:GetService("CoreGui").uiui:nothing()
 end)
 
 credits:CreateButton("Bebo Mods#1110", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("https://discord.gg/whNftx9", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
