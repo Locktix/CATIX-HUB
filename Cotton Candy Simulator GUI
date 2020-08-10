@@ -18,6 +18,7 @@ local buy = Library:CreateTab("Auto Buy World 1","things", true)
 local buy2 = Library:CreateTab("Auto Buy World 2","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
 local credits = Library:CreateTab("Credits","things", true)
+local nothing = Library:CreateTab("Nothing","things", true)
 
 
 credits:CreateButton("Our Discords", function() --you dont need "arg" for a button
