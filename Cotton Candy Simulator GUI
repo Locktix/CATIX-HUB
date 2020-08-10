@@ -119,6 +119,10 @@ Autotab:CreateToggle("Auto Sell", function(arg) --the (arg) is if the checkbox i
     end
 end)
 
+AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:Destroy()
+end)
+
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
     game:service'Players'.LocalPlayer.Idled:connect(function()
