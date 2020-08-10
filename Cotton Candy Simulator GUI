@@ -70,7 +70,7 @@ end)
 teleportsgems:CreateToggle("Auto Collect Gems", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
-        while wait(0) and _G.Basic do
+        while wait(0.5) and _G.Basic do
 local children = game.Workspace:GetChildren()
     for _, child in pairs(children) do
         for _, child in pairs(child:GetChildren()) do
@@ -89,7 +89,7 @@ end)
 teleportssugars:CreateToggle("Auto Collect Sugar", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
-        while wait(0) and _G.Basic do
+        while wait(0.5) and _G.Basic do
 local children = game.Workspace:GetChildren()
     for _, child in pairs(children) do
         for _, child in pairs(child:GetChildren()) do
@@ -117,10 +117,6 @@ Autotab:CreateToggle("Auto Sell", function(arg) --the (arg) is if the checkbox i
     else
         _G.Basic = false
     end
-end)
-
-AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:Destroy()
 end)
 
 --| Anti AFK | By Altix#3395
