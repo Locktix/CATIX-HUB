@@ -873,3 +873,11 @@ end)
         Virtual:ClickButton2(Vector2.new())
         wait(2)
     end)
+    
+    --| Anti AFK | By Altix#3395
+    local Virtual = game:service'VirtualUser'
+    game:service'Players'.LocalPlayer.Idled:connect(function()
+        Virtual:CaptureController()
+        Virtual:ClickButton2(Vector2.new())
+        wait(2)
+    end)
