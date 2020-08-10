@@ -632,7 +632,6 @@ teleports:CreateButton("Zone 2", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(605.503296, 4.00753164, -142.980774)
 end)
 
-
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
     game:service'Players'.LocalPlayer.Idled:connect(function()
