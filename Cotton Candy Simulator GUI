@@ -899,6 +899,40 @@ game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(arg
     end
 end)
 
+Delete:CreateToggle("Auto Delete Gummy Bear", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Gummy Bear",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete:CreateToggle("Auto Delete Gummy Panda", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Gummy Panda",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
     game:service'Players'.LocalPlayer.Idled:connect(function()
