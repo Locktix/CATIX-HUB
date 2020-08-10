@@ -866,15 +866,11 @@ teleports:CreateButton("Safe Zone", function() --you dont need "arg" for a butto
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1156.63147, 71.4762573, -283.506531)
 end)
 
+teleports:CreateButton("Safe Zone", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1156.63147, 71.4762573, -283.506531)
+end)
+
 --| Anti AFK | By Altix#3395
-    local Virtual = game:service'VirtualUser'
-    game:service'Players'.LocalPlayer.Idled:connect(function()
-        Virtual:CaptureController()
-        Virtual:ClickButton2(Vector2.new())
-        wait(2)
-    end)
-    
-    --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
     game:service'Players'.LocalPlayer.Idled:connect(function()
         Virtual:CaptureController()
