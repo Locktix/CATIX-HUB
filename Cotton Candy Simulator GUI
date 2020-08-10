@@ -1,3 +1,4 @@
+  
 --https://www.roblox.com/games/3290249490/NEW-WORLD-Cotton-Candy-Simulator
 
 
@@ -9,6 +10,11 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/prezt
 local AutoTab = Library:CreateTab("Cotton Candy Simulator GUI","things", true)
 local teleportsgems = Library:CreateTab("Teleportsgems","things", true)
 local teleportssugars = Library:CreateTab("Teleportssugars","things", true)
+local boosts = Library:CreateTab("Auto Buy Boosts","things", true)
+local Quests = Library:CreateTab("Auto Claim Quest","things", true)
+local buy = Library:CreateTab("Auto Buy World 1","things", true)
+local buy2 = Library:CreateTab("Auto Buy World 2","things", true)
+local teleports = Library:CreateTab("Teleports","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
 
@@ -31,6 +37,11 @@ end)
 credits:CreateButton("https://discord.gg/PdUTrVG", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
+
+credits:CreateButton("Bebo Mods#1110", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
 teleportsgems:CreateButton("JUST WAIT FOR IT ", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
@@ -280,18 +291,575 @@ local children = game.Workspace:GetChildren()
     end
 end)
 
-Autotab:CreateToggle("Auto Sell", function(arg) --the (arg) is if the checkbox is toggled or not
+boosts:CreateToggle("AutoCoinGather", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
-            game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(947.94281, -163.19249, 32833.4961)
-            
-      
-            
+            local args = {
+    [1] = "AutoCoinGather"
+}
+
+game:GetService("ReplicatedStorage").Events.UpdateSkillsEvent:FireServer(unpack(args))
+
         end
     else
         _G.Basic = false
     end
+end)
+
+boosts:CreateToggle("AutoGemMine", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            local args = {
+    [1] = "AutoGemMine"
+}
+
+game:GetService("ReplicatedStorage").Events.UpdateSkillsEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+boosts:CreateToggle("Speedster", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            local args = {
+    [1] = "Speedster"
+}
+
+game:GetService("ReplicatedStorage").Events.UpdateSkillsEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+boosts:CreateToggle("MonsterSlayer", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            local args = {
+    [1] = "MonsterSlayer"
+}
+
+game:GetService("ReplicatedStorage").Events.UpdateSkillsEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+boosts:CreateToggle("PetHandler", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            local args = {
+    [1] = "PetHandler"
+}
+
+game:GetService("ReplicatedStorage").Events.UpdateSkillsEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Quests:CreateToggle("Auto Claim Quests", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            local args = {
+    [1] = "BuyWands"
+}
+
+game:GetService("ReplicatedStorage").Events.ClaimAchievementEvent:FireServer(unpack(args))
+
+      local args = {
+    [1] = "BuyFlavors"
+}
+
+game:GetService("ReplicatedStorage").Events.ClaimAchievementEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "BuySilverEggs"
+}
+
+game:GetService("ReplicatedStorage").Events.ClaimAchievementEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "BuyBronzeEggs"
+}
+
+game:GetService("ReplicatedStorage").Events.ClaimAchievementEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "BuyGoldEggs"
+}
+
+game:GetService("ReplicatedStorage").Events.ClaimAchievementEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "BuyDiamondEggs"
+}
+
+game:GetService("ReplicatedStorage").Events.ClaimAchievementEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "BuyPlatinumEggs"
+}
+
+game:GetService("ReplicatedStorage").Events.ClaimAchievementEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "KillCoco Snakes"
+}
+
+game:GetService("ReplicatedStorage").Events.ClaimAchievementEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "KillGummy Bears"
+}
+
+game:GetService("ReplicatedStorage").Events.ClaimAchievementEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "KillJawbreakers"
+}
+
+game:GetService("ReplicatedStorage").Events.ClaimAchievementEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+buy:CreateToggle("Auto Buy Flavors", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+  local args = {
+    [1] = "Bubble Gum"
+}
+
+game:GetService("ReplicatedStorage").Events.AddFlavorEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Berry Blast"
+}
+
+game:GetService("ReplicatedStorage").Events.AddFlavorEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Rainbow"
+}
+
+game:GetService("ReplicatedStorage").Events.AddFlavorEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "MCherry Cola"
+}
+
+game:GetService("ReplicatedStorage").Events.AddFlavorEvent:FireServer(unpack(args))
+
+
+local args = {
+    [1] = "Magical Unicorn"
+}
+
+game:GetService("ReplicatedStorage").Events.AddFlavorEvent:FireServer(unpack(args))
+
+
+local args = {
+    [1] = "Banana Split"
+}
+
+game:GetService("ReplicatedStorage").Events.AddFlavorEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Sour Power"
+}
+
+game:GetService("ReplicatedStorage").Events.AddFlavorEvent:FireServer(unpack(args))
+
+
+local args = {
+    [1] = "Gold Floss"
+}
+
+game:GetService("ReplicatedStorage").Events.AddFlavorEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Peachy"
+}
+
+game:GetService("ReplicatedStorage").Events.AddFlavorEvent:FireServer(unpack(args))
+
+
+local args = {
+    [1] = "Tie Dye"
+}
+
+game:GetService("ReplicatedStorage").Events.AddFlavorEvent:FireServer(unpack(args))
+
+
+
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+buy:CreateToggle("Auto Buy Wands", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+ local args = {
+    [1] = "Hot Fudge Sundae Wand"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWandEvent:FireServer(unpack(args))
+
+ local args = {
+    [1] = "Fairy Floss Wand"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWandEvent:FireServer(unpack(args))
+
+ local args = {
+    [1] = "Candy Land Wand"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWandEvent:FireServer(unpack(args))
+
+ local args = {
+    [1] = "Sugar Overload Wand"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWandEvent:FireServer(unpack(args))
+
+ local args = {
+    [1] = "Sugar Rush Wand"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWandEvent:FireServer(unpack(args))
+
+ local args = {
+    [1] = "Fairy Sugar Wand"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWandEvent:FireServer(unpack(args))
+
+ local args = {
+    [1] = "Sweet And Sour Wand"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWandEvent:FireServer(unpack(args))
+
+ local args = {
+    [1] = "Pretty In Pink Wand"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWandEvent:FireServer(unpack(args))
+
+ local args = {
+    [1] = "Lucky Charm Wand"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWandEvent:FireServer(unpack(args))
+
+   local args = {
+    [1] = "Sugar Free Wand"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWandEvent:FireServer(unpack(args))
+
+                  local args = {
+    [1] = "Sweet Tooth Wand"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWandEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+buy:CreateToggle("Auto Buy Weapons", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            local args = {
+    [1] = "Unicorn Lollipop"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWeaponEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Gummy Lollipop"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWeaponEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Sour Lollipop"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWeaponEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Coco Lollipop"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWeaponEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Sugar Free Lollipop"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWeaponEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+buy2:CreateToggle("Auto Buy Flavors", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Passion Fruit"
+}
+
+game:GetService("ReplicatedStorage").Events.AddFlavorEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Cherry Blast"
+}
+
+game:GetService("ReplicatedStorage").Events.AddFlavorEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Tart Apple"
+}
+
+game:GetService("ReplicatedStorage").Events.AddFlavorEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Strawberry Kiwi"
+}
+
+game:GetService("ReplicatedStorage").Events.AddFlavorEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Fruitsplosion"
+}
+
+game:GetService("ReplicatedStorage").Events.AddFlavorEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Raspberry Pie"
+}
+
+game:GetService("ReplicatedStorage").Events.AddFlavorEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Mango Sauce"
+}
+
+game:GetService("ReplicatedStorage").Events.AddFlavorEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Peachy Keen"
+}
+
+game:GetService("ReplicatedStorage").Events.AddFlavorEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Rainbow Sherbert"
+}
+
+game:GetService("ReplicatedStorage").Events.AddFlavorEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Lemon Fairy"
+}
+
+game:GetService("ReplicatedStorage").Events.AddFlavorEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Super Fruit"
+}
+
+game:GetService("ReplicatedStorage").Events.AddFlavorEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Lava Sauce"
+}
+
+game:GetService("ReplicatedStorage").Events.AddFlavorEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Frozen Sauce"
+}
+
+game:GetService("ReplicatedStorage").Events.AddFlavorEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Magical Sauce"
+}
+
+game:GetService("ReplicatedStorage").Events.AddFlavorEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+buy2:CreateToggle("Auto Buy Wands", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            local args = {
+    [1] = "Hot and Spicy Wand"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWandEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Warhead Sour Wand"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWandEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Fire And Ice Wand"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWandEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Unicorn Super Cola Wand"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWandEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Rainbow Slushy Wand"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWandEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Chocolate Milkshake Wand"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWandEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Strawberry Smoothie Wand"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWandEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Tropical Punch Wand"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWandEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Mango Tango Wand"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWandEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Dragon Fruit Wand"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWandEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Banana Wand"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWandEvent:FireServer(unpack(args))
+
+
+local args = {
+    [1] = "Coconut Wand"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWandEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+buy2:CreateToggle("Auto Buy Weapons", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Radioactive Gummy Gun"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWeaponEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Zombie Gummy Gun"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWeaponEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Nuclear Gummy Gun"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWeaponEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Atomic Gummy Gun"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWeaponEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Toxic Gummy Gun"
+}
+
+game:GetService("ReplicatedStorage").Events.AddWeaponEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+teleports:CreateButton("World 1", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1086.05542, 49.8905716, 58.4696999)
+end)
+
+teleports:CreateButton("World 2", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(820.643616, -174.992462, 32881.1953)
+end)
+
+teleports:CreateButton("Shop 1", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1051.25146, 64.6854553, 3.71782184)
+end)
+
+teleports:CreateButton("Shop 2", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1162.84863, -105.658844, 33436.1289)
 end)
 
 --| Anti AFK | By Altix#3395
