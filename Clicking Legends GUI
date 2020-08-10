@@ -625,7 +625,7 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-167.757
 end)
 
 teleports:CreateButton("Zone 1", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(13.3288307, -508.89502, -891.136414)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(102.91275, 4.00753164, -108.856956)
 end)
 
 teleports:CreateButton("Zone 2", function() --you dont need "arg" for a button
