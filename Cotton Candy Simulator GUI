@@ -73,6 +73,19 @@ end
     end
 end)
 
+AutoTab:CreateToggle("Auto Sell", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.LULU = true 
+        while wait(0) and _G.LULU do
+           game:GetService("ReplicatedStorage").Events.TeleportToSellEvent:FireServer()
+    end
+end
+
+    else
+        _G.LULU = false
+    end
+end)
+
 AutoTab:CreateToggle("Speed Hack 100", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
