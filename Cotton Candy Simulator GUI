@@ -8,12 +8,9 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
 local AutoTab = Library:CreateTab("Cotton Candy Simulator GUI","things", true)
-local teleportsgems = Library:CreateTab("Teleportsgems","things", true)
-local teleportssugars = Library:CreateTab("Teleportssugars","things", true)
-local boosts = Library:CreateTab("Auto Buy Boosts","things", true)
-local Quests = Library:CreateTab("Auto Claim Quest","things", true)
-local buy = Library:CreateTab("Auto Buy","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
+local boosts = Library:CreateTab("Auto Buy Boosts,Stuffs","things", true)
+local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
 
@@ -38,13 +35,6 @@ game:GetService("CoreGui").uiui:nothing()
 end)
 
 credits:CreateButton("Bebo Mods#1110", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
-end)
-
-teleportsgems:CreateButton("JUST WAIT FOR IT ", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
-end)
-teleportssugars:CreateButton("JUST WAIT FOR IT", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
@@ -77,7 +67,7 @@ AutoTab:CreateToggle("Speed Hack 100", function(arg) --the (arg) is if the check
     end
 end)
 
-AutoTab:CreateButton("World 1", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateButton("World 1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
@@ -88,7 +78,7 @@ AutoTab:CreateButton("World 1", function(arg) --the (arg) is if the checkbox is 
     end
 end)
 
-AutoTab:CreateToggle("Auto Buy Bronze Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Auto Buy Bronze Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
@@ -105,7 +95,7 @@ game:GetService("ReplicatedStorage").Events.BuyEggPromptEvent:FireServer(unpack(
     end
 end)
 
-AutoTab:CreateToggle("Auto Buy Silver Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Auto Buy Silver Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
@@ -122,7 +112,7 @@ game:GetService("ReplicatedStorage").Events.BuyEggPromptEvent:FireServer(unpack(
     end
 end)
 
-AutoTab:CreateToggle("Auto Buy Gold Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Auto Buy Gold Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
@@ -139,7 +129,7 @@ game:GetService("ReplicatedStorage").Events.BuyEggPromptEvent:FireServer(unpack(
     end
 end)
 
-AutoTab:CreateToggle("Auto Buy Diamond Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Auto Buy Diamond Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
@@ -156,7 +146,7 @@ game:GetService("ReplicatedStorage").Events.BuyEggPromptEvent:FireServer(unpack(
     end
 end)
 
-AutoTab:CreateToggle("Auto Buy Super Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Auto Buy Super Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
@@ -173,7 +163,7 @@ game:GetService("ReplicatedStorage").Events.BuyEggPromptEvent:FireServer(unpack(
     end
 end)
 
-AutoTab:CreateButton("World 2", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateButton("World 2", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
@@ -184,7 +174,7 @@ AutoTab:CreateButton("World 2", function(arg) --the (arg) is if the checkbox is 
     end
 end)
 
-AutoTab:CreateToggle("Auto Buy Bronze Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Auto Buy Bronze Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
@@ -201,7 +191,7 @@ game:GetService("ReplicatedStorage").Events.BuyEggPromptEvent:FireServer(unpack(
     end
 end)
 
-AutoTab:CreateToggle("Auto Buy Silver Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Auto Buy Silver Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
@@ -218,7 +208,7 @@ game:GetService("ReplicatedStorage").Events.BuyEggPromptEvent:FireServer(unpack(
     end
 end)
 
-AutoTab:CreateToggle("Auto Buy Gold Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Auto Buy Gold Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
@@ -235,7 +225,7 @@ game:GetService("ReplicatedStorage").Events.BuyEggPromptEvent:FireServer(unpack(
     end
 end)
 
-AutoTab:CreateToggle("Auto Buy Diamond Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Auto Buy Diamond Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
@@ -252,7 +242,19 @@ game:GetService("ReplicatedStorage").Events.BuyEggPromptEvent:FireServer(unpack(
     end
 end)
 
-teleportsgems:CreateToggle("Auto Collect Gems", function(arg) --the (arg) is if the checkbox is toggled or not
+teleports:CreateButton("JUST WAIT FOR IT", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+teleports:CreateButton("do not use both", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+teleports:CreateButton("at the same time", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+teleports:CreateToggle("Auto Collect Gems", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0.5) and _G.Basic do
@@ -271,7 +273,7 @@ local children = game.Workspace:GetChildren()
     end
 end)
 
-teleportssugars:CreateToggle("Auto Collect Sugar", function(arg) --the (arg) is if the checkbox is toggled or not
+teleports:CreateToggle("Auto Collect Sugar", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0.5) and _G.Basic do
@@ -370,7 +372,7 @@ game:GetService("ReplicatedStorage").Events.UpdateSkillsEvent:FireServer(unpack(
     end
 end)
 
-Quests:CreateToggle("Auto Claim Quests", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateToggle("Auto Claim Quests", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
@@ -439,7 +441,7 @@ game:GetService("ReplicatedStorage").Events.ClaimAchievementEvent:FireServer(unp
     end
 end)
 
-buy:CreateToggle("Auto Buy Flavors", function(arg) --the (arg) is if the checkbox is toggled or not
+boosts:CreateToggle("Auto Buy Flavors", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
@@ -600,7 +602,7 @@ game:GetService("ReplicatedStorage").Events.AddFlavorEvent:FireServer(unpack(arg
     end
 end)
 
-buy:CreateToggle("Auto Buy Wands", function(arg) --the (arg) is if the checkbox is toggled or not
+boosts:CreateToggle("Auto Buy Wands", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
@@ -748,7 +750,7 @@ game:GetService("ReplicatedStorage").Events.AddWandEvent:FireServer(unpack(args)
     end
 end)
 
-buy:CreateToggle("Auto Buy Weapons", function(arg) --the (arg) is if the checkbox is toggled or not
+boosts:CreateToggle("Auto Buy Weapons", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
@@ -835,6 +837,10 @@ end)
 
 teleports:CreateButton("Safe Zone", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1156.63147, 71.4762573, -283.506531)
+end)
+
+AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:Destroy()
 end)
 
 --| Anti AFK | By Altix#3395
