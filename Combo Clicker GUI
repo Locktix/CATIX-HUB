@@ -1377,6 +1377,25 @@ eggs:CreateToggle("Auto Buy Ocean Egg (7)", function(arg) --the (arg) is if the 
     end
 end)
 
+eggs:CreateToggle("Auto Buy 2M Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg2M",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Water = false
+    end
+end)
+
 eggs:CreateToggle("Auto Buy 1M Egg", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Water = true 
@@ -1742,6 +1761,25 @@ potions:CreateToggle("Potion x2 Gems", function(arg) --the (arg) is if the check
         ["Type"] = "GemBooster2",
     },
 }
+game:GetService("ReplicatedStorage").Functions.Potions:InvokeServer(unpack(args))
+end
+    else
+        _G.as = false
+    end
+end)
+
+potions:CreateToggle("Potion x2 Luck", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.as = true 
+        while wait(0) and _G.as do
+  local args = {
+    [1] = "Purchase",
+    [2] = {
+        ["Amount"] = 1,
+        ["Type"] = "LuckBooster2",
+    },
+}
+
 game:GetService("ReplicatedStorage").Functions.Potions:InvokeServer(unpack(args))
 end
     else
