@@ -32,11 +32,11 @@ credits:CreateButton("Big C#5347", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-AutoTab:CreateToggle("Speed Hack 100", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateToggle("Speed Hack 33", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
-            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 33
         end
     else
         _G.Basic = false
