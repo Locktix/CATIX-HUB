@@ -10,6 +10,7 @@ local teleports = Library:CreateTab("Teleports","things", true)
 local rebirth = Library:CreateTab("Auto Rebirth","things", true)
 local rebirth2 = Library:CreateTab("Auto Rebirth 2","things", true)
 local rebirth3 = Library:CreateTab("Auto Rebirth 3","things", true)
+local potions = Library:CreateTab("Auto Buy Potions","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
 
@@ -1059,6 +1060,66 @@ local A_1 = 500000000000000000000
 local Event = game:GetService("ReplicatedStorage").Events.Server.RequestRebirth
 Event:InvokeServer(A_1)		
 
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+potions:CreateToggle("Auto Buy X2 Clicks", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            local args = {
+    [1] = "Click Boost",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.PotionBuy:InvokeServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+potions:CreateToggle("Auto Buy X5 Clicks", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+local args = {
+    [1] = "Mega Click",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.PotionBuy:InvokeServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+potions:CreateToggle("Auto Buy X10 Clicks", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+local args = {
+    [1] = "Insane Click",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.PotionBuy:InvokeServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+potions:CreateToggle("Auto Buy X3 Brillants", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+local args = {
+    [1] = "Shiny Boost",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.PotionBuy:InvokeServer(unpack(args))
         end
     else
         _G.Basic = false
