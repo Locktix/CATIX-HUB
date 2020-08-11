@@ -4,8 +4,6 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
 local AutoTab = Library:CreateTab("Farm Simulator GUI","things", true)
-local buy = Library:CreateTab("Auto Upgrades","things", true)
-
 local credits = Library:CreateTab("Credits","things", true)
 
 credits:CreateButton("Our Discords", function() --you dont need "arg" for a button
@@ -54,28 +52,10 @@ AutoTab:CreateToggle("Auto Sell", function(arg) --the (arg) is if the checkbox i
     end
 end)
 
-buy:CreateToggle("Auto Upgrade Backpack", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.Basic = true 
-        while wait(0) and _G.Basic do
-          game:GetService("ReplicatedStorage").Events.UpgradeBackpack:InvokeServer()
-
-game:GetService("ReplicatedStorage").Events.GetPetSlots:InvokeServer()
-
-game:GetService("ReplicatedStorage").Events.GetPetInventory:InvokeServer()
-        end
-    else
-        _G.Basic = false
-    end
-end)
-
-buy:CreateToggle("Auto Upgrade Tools", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.Basic = true 
-        while wait(0) and _G.Basic do
-           game:GetService("ReplicatedStorage").Events.UpgradeTool:InvokeServer()
-        end
-    else
-        _G.Basic = false
-    end
-end)
+--| Anti AFK | By Altix#3395
+    local Virtual = game:service'VirtualUser'
+    game:service'Players'.LocalPlayer.Idled:connect(function()
+        Virtual:CaptureController()
+        Virtual:ClickButton2(Vector2.new())
+        wait(2)
+    end)
