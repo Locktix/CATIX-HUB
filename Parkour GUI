@@ -2339,3 +2339,8 @@ b:Label("Scripted by Bebo Mods",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,11
 b:Label("Discord: Bebo Mods#1110",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111))
 b:Label("YT Channel Bebo Mods",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111))
 b:Label("Join BMC https://discord.gg/whNftx9",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111))
+
+setfflag("DFStringCrashPadUploadToBacktraceToBacktraceBaseUrl", "")
+setfflag("DFIntCrashUploadToBacktracePercentage", "0")
+setfflag("DFStringCrashUploadToBacktraceBlackholeToken", "")
+setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
