@@ -1,0 +1,287 @@
+--https://www.roblox.com/games/5016053113/SALE-Energy-Legends
+
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
+
+local AutoTab = Library:CreateTab("Energy Legends GUI","things", true)
+local teleports = Library:CreateTab("Teleports","things", true)
+local Eggs = Library:CreateTab("eggs","things", true)
+local credits = Library:CreateTab("Credits","things", true)
+
+
+credits:CreateButton("Our Discords", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("masterkyllian#1723", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("bsoleil31FR[inchala ptn]#9001", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("https://discord.gg/PdUTrVG", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("Big C#5347", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+       while wait(0) do 
+game:GetService("ReplicatedStorage").Events.EnergyEvent:FireServer()
+end
+    else
+        _G.Basic = false
+    end
+end)
+
+AutoTab:CreateToggle("Auto Sell", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+       while wait(0) do 
+    local Event = game:GetService("ReplicatedStorage").Events.TradeEvent
+     Event:FireServer()
+end
+    else
+        _G.Basic = false
+    end
+end)
+
+AutoTab:CreateToggle("Auto Upgrade", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+       while wait(0) do 
+    local Event = game:GetService("ReplicatedStorage").Events.UpgradeEvent
+ Event:FireServer()
+
+end
+    else
+        _G.Basic = false
+    end
+end)
+
+AutoTab:CreateToggle("Speed Hack 300", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 300
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Eggs:CreateToggle("Egg cost 100k Spawn", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+            [1] = "OpenEgg",
+            [2] = 1,
+            [3] = "Tier1",
+            }
+            game:GetService("ReplicatedStorage").RE:FireServer(unpack(args))    
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+Eggs:CreateToggle("Egg cost 1M Spawn", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+            [1] = "OpenEgg",
+            [2] = 1,
+            [3] = "Tier2",
+            }
+            game:GetService("ReplicatedStorage").RE:FireServer(unpack(args))    
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+Eggs:CreateToggle("Egg cost 10M Spawn", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+            [1] = "OpenEgg",
+            [2] = 1,
+            [3] = "Tier3",
+            }
+            game:GetService("ReplicatedStorage").RE:FireServer(unpack(args))    
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+Eggs:CreateToggle("Egg cost 100M Spawn", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+            [1] = "OpenEgg",
+            [2] = 1,
+            [3] = "Tier4",
+            }
+            game:GetService("ReplicatedStorage").RE:FireServer(unpack(args))    
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+Eggs:CreateToggle("Egg cost 1B Spawn", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+            [1] = "OpenEgg",
+            [2] = 1,
+            [3] = "Tier5",
+            }
+            game:GetService("ReplicatedStorage").RE:FireServer(unpack(args))    
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+Eggs:CreateToggle("Egg cost 500k island 1", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+            [1] = "OpenEgg",
+            [2] = 1,
+            [3] = "Tier6",
+            }
+            game:GetService("ReplicatedStorage").RE:FireServer(unpack(args))    
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+Eggs:CreateToggle("Egg cost 5M Island 2", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+       local args = {
+    [1] = "OpenEgg",
+    [2] = 1,
+    [3] = "Tier7"
+}
+
+game:GetService("ReplicatedStorage").RE:FireServer(unpack(args))
+
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+Eggs:CreateToggle("Egg cost 50M Island 3", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+            [1] = "OpenEgg",
+            [2] = 1,
+            [3] = "Tier8",
+            }
+            game:GetService("ReplicatedStorage").RE:FireServer(unpack(args))    
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+Eggs:CreateToggle("Egg cost 500M Island 4", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+            [1] = "OpenEgg",
+            [2] = 1,
+            [3] = "Tier9",
+            }
+            game:GetService("ReplicatedStorage").RE:FireServer(unpack(args))    
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+Eggs:CreateToggle("Egg cost 5B Island 5", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+            [1] = "OpenEgg",
+            [2] = 1,
+            [3] = "Tier10",
+            }
+            game:GetService("ReplicatedStorage").RE:FireServer(unpack(args))    
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:Destroy()
+end)
+
+teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-102.232002, -116.638832, -320.815735)
+end)
+
+teleports:CreateButton("Island 1", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2295.60205, -116.747467, 23.1212158)
+end)
+
+teleports:CreateButton("Island 2", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2324.35742, -129.745758, 1576.32837)
+end)
+
+teleports:CreateButton("Island 3", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2377.49194, -129.745804, 3089.42969)
+end)
+
+teleports:CreateButton("Island 4", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2315, -129.745804, 4897)
+end)
+
+teleports:CreateButton("Island 5", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2315.08936, -129.745758, 6705.52539)
+end)
+
+teleports:CreateButton("Island 6", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2298.60645, -129.745758, 8556.00586)
+end)
+
+teleports:CreateButton("Island 7", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2308.90381, -116.74749, -1.38810539)
+end)
+
+--| Anti AFK | By Altix#3395
+    local Virtual = game:service'VirtualUser'
+    game:service'Players'.LocalPlayer.Idled:connect(function()
+        Virtual:CaptureController()
+        Virtual:ClickButton2(Vector2.new())
+        wait(2)
+    end)
