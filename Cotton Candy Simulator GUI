@@ -254,6 +254,10 @@ game:GetService("ReplicatedStorage").Events.BuyEggPromptEvent:FireServer(unpack(
     end
 end)
 
+AutoTab:CreateButton("Wait let the games defrize", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
 AutoTab:CreateToggle("Auto Collect Gems", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
