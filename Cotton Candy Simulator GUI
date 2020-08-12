@@ -420,13 +420,13 @@ local args = {
 game:GetService("ReplicatedStorage").Events.ClaimAchievementEvent:FireServer(unpack(args))
 
 local args = {
-    [1] = "KillCoco Snakes"
+    [1] = "KillCocoSnakes"
 }
 
 game:GetService("ReplicatedStorage").Events.ClaimAchievementEvent:FireServer(unpack(args))
 
 local args = {
-    [1] = "KillGummy Bears"
+    [1] = "KillGummyBears"
 }
 
 game:GetService("ReplicatedStorage").Events.ClaimAchievementEvent:FireServer(unpack(args))
