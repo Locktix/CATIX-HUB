@@ -1065,6 +1065,82 @@ rebirths:CreateToggle("Rebirth X1", function(arg) --the (arg) is if the checkbox
     end
 end)
 
+eggs2:CreateToggle("Auto Buy Arcade Egg (11)3", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg11",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 40,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+eggs2:CreateToggle("Auto Buy Arcade Egg (11)2", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg11",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+eggs2:CreateToggle("Auto Buy Arcade Egg (11)1", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg11",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+eggs2:CreateToggle("Auto Buy Arcade Egg (11)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg11",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Water = false
+    end
+end)
+
 eggs2:CreateToggle("Auto Buy Dragons Egg (10)3", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Water = true 
@@ -1787,7 +1863,7 @@ end
     end
 end)
 
-teleports:CreateDropDown("Islands", {"Spawn", "Islands 1", "Islands 2", "Islands 3", "Islands 4", "Islands 5", "Islands 6", "Islands 7" , "Islands 8" , "Islands 9", "Islands 10"}, function(arg) --the (arg) is the option you choose 
+teleports:CreateDropDown("Islands", {"Spawn", "Islands 1", "Islands 2", "Islands 3", "Islands 4", "Islands 5", "Islands 6", "Islands 7" , "Islands 8" , "Islands 9", "Islands 10", "Islands 11"}, function(arg) --the (arg) is the option you choose 
     if arg == "Spawn" then
         game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(53.6871033, 64.9600143, -916.602051)
     elseif arg == "Islands 1" then
@@ -1810,6 +1886,8 @@ teleports:CreateDropDown("Islands", {"Spawn", "Islands 1", "Islands 2", "Islands
         game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(652.303833, 6874.55908, -886.94928) 
     elseif arg == "Islands 10" then
         game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(639.837158, 7832.3584, -972.805908)
+    elseif arg == "Islands 11" then
+        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(505.438507, 8859.80859, -916.89563)
     end
 end)
 
