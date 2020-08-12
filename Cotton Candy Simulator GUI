@@ -1,17 +1,13 @@
-  
 --https://www.roblox.com/games/3290249490/NEW-WORLD-Cotton-Candy-Simulator
-
-
-
-
-
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
 local AutoTab = Library:CreateTab("Cotton Candy Simulator GUI","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
-local boosts = Library:CreateTab("Auto Buy Boosts","things", true)
-local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
-local Delete = Library:CreateTab("Auto Delete pets","things", true)
+local eggs = Library:CreateTab("Auto Buy Eggs,Boosts","things", true)
+local Delete = Library:CreateTab("Auto Delete pets2 World 2","things", true)
+local Delete2 = Library:CreateTab("Auto Delete pets1 World 2","things", true)
+local Delete3 = Library:CreateTab("Auto Delete pets2 World 1","things", true)
+local Delete4 = Library:CreateTab("Auto Delete pets1 World 1","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
 
@@ -293,7 +289,11 @@ local children = game.Workspace:GetChildren()
     end
 end)
 
-boosts:CreateToggle("AutoCoinGather", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateButton("Boosts", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+eggs:CreateToggle("AutoCoinGather", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
@@ -309,7 +309,7 @@ game:GetService("ReplicatedStorage").Events.UpdateSkillsEvent:FireServer(unpack(
     end
 end)
 
-boosts:CreateToggle("AutoGemMine", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("AutoGemMine", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
@@ -325,7 +325,7 @@ game:GetService("ReplicatedStorage").Events.UpdateSkillsEvent:FireServer(unpack(
     end
 end)
 
-boosts:CreateToggle("Speedster", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Speedster", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
@@ -341,7 +341,7 @@ game:GetService("ReplicatedStorage").Events.UpdateSkillsEvent:FireServer(unpack(
     end
 end)
 
-boosts:CreateToggle("MonsterSlayer", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("MonsterSlayer", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
@@ -357,7 +357,7 @@ game:GetService("ReplicatedStorage").Events.UpdateSkillsEvent:FireServer(unpack(
     end
 end)
 
-boosts:CreateToggle("PetHandler", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("PetHandler", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
@@ -470,11 +470,152 @@ AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a bu
 game:GetService("CoreGui").uiui:Destroy()
 end)
 
+Delete:CreateButton("Gold Eggs World 2", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+Delete:CreateToggle("Delete Sandy Bear", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Sandy Bear",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete:CreateToggle("Delete Sandy Bat", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Sandy Bat",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete:CreateToggle("Delete Wavy Cat", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Wavy Cat",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete:CreateToggle("Delete Wavy Fox", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            local args = {
+    [1] = "Wavy Fox",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete:CreateToggle("Delete Wavy Shark", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            local args = {
+    [1] = "Wavy Shark",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete:CreateToggle("Delete Gold Dragon", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Gold Dragon",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete:CreateToggle("Delete Rainbow Shark", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Rainbow Shark",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete:CreateToggle("Delete Rainbow Dragon", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Rainbow Dragon",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
 Delete:CreateButton("Diamond Eggs World 2", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-Delete:CreateToggle("Auto Delete Sweet Dogs", function(arg) --the (arg) is if the checkbox is toggled or not
+Delete:CreateToggle("Delete Sweet Dogs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
@@ -491,7 +632,7 @@ game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(arg
     end
 end)
 
-Delete:CreateToggle("Auto Delete Sweet Cats", function(arg) --the (arg) is if the checkbox is toggled or not
+Delete:CreateToggle("Delete Sweet Cats", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
@@ -508,7 +649,7 @@ game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(arg
     end
 end)
 
-Delete:CreateToggle("Auto Delete Sweet Shark", function(arg) --the (arg) is if the checkbox is toggled or not
+Delete:CreateToggle("Delete Sweet Shark", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
@@ -525,7 +666,7 @@ game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(arg
     end
 end)
 
-Delete:CreateToggle("Auto Delete Sweet Unicorn", function(arg) --the (arg) is if the checkbox is toggled or not
+Delete:CreateToggle("Delete Sweet Unicorn", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
@@ -542,7 +683,7 @@ game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(arg
     end
 end)
 
-Delete:CreateToggle("Auto Delete Gummy Bear", function(arg) --the (arg) is if the checkbox is toggled or not
+Delete:CreateToggle("Delete Gummy Bear", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
@@ -559,7 +700,7 @@ game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(arg
     end
 end)
 
-Delete:CreateToggle("Auto Delete Gummy Panda", function(arg) --the (arg) is if the checkbox is toggled or not
+Delete:CreateToggle("Delete Gummy Panda", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
@@ -570,6 +711,906 @@ Delete:CreateToggle("Auto Delete Gummy Panda", function(arg) --the (arg) is if t
 }
 
 game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete:CreateButton("Platinum Eggs World 2", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+Delete:CreateToggle("Delete Sour Apple Gummy", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            local args = {
+    [1] = "Sour Apple Gummy",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete:CreateToggle("Delete Cotton Candy", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            local args = {
+    [1] = "Cotton Candy",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete:CreateToggle("Delete Unicorn", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Unicorn",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete:CreateToggle("Delete Dragon", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Dragon",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete:CreateToggle("Delete Magical Unicorn", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Magical Unicorn",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete:CreateToggle("Delete Void", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Void",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete2:CreateButton("Bronze Eggs World 2", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+Delete2:CreateToggle("Delete Kiwi Kitty", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            local args = {
+    [1] = "Kiwi Kitty",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete2:CreateToggle("Delete Coco Koala", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            local args = {
+    [1] = "Coco Koala",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete2:CreateToggle("Delete Berry Pup", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Berry Pup",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete2:CreateToggle("Delete Fudgy Fox", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Fudgy Fox",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete2:CreateToggle("Delete Candy Panda", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Candy Panda",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete2:CreateToggle("Delete Godly Panda", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Godly Panda",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete2:CreateButton("Silver Eggs World 2", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+Delete2:CreateToggle("Delete Fudgy Fox", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Fudgy Fox",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete2:CreateToggle("Delete Blue Shark", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Blue Shark",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete2:CreateToggle("Delete Red Shark", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Red Shark",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete2:CreateToggle("Delete Pink Shark", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            local args = {
+    [1] = "Pink Shark",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete2:CreateToggle("Delete Baby Shark", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            local args = {
+    [1] = "Baby Shark",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete2:CreateToggle("Delete Yellow Turtle", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Yellow Turtle",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete2:CreateToggle("Delete Orange Turtle", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Orange Turtle",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete2:CreateToggle("Delete Nuclear Shark", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Nuclear Shark",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete2:CreateToggle("Delete Godly Shark", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Godly Shark",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete3:CreateButton("Bronze Eggs World 1", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+Delete3:CreateToggle("Delete Sugar", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Sugar",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete3:CreateToggle("Delete Coco", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Coco",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete3:CreateToggle("Delete Berry", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Berry",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete3:CreateToggle("Delete Gum Drop", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Gum Drop",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete3:CreateButton("Silver Eggs World 1", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+Delete3:CreateToggle("Delete Banana", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Banana",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete3:CreateToggle("Delete Sherry", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Sherry",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete3:CreateToggle("Delete Blueberry", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Blueberry",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete3:CreateToggle("Delete Raspberry", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Raspberry",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete3:CreateToggle("Delete Peach", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Peach",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete3:CreateButton("Silver Eggs World 1", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+Delete3:CreateToggle("Delete Sweet", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Sweet",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete3:CreateToggle("Delete Sour", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Sour",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete3:CreateToggle("Delete Spicey", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Spicey",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete3:CreateToggle("Delete Twirl", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Twirl",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete3:CreateToggle("Delete Nutty", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Nutty",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete3:CreateToggle("Delete Tasty", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Tasty",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete4:CreateButton("Diamond Eggs World 1", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+Delete4:CreateToggle("Delete Sour Apple Gummy", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Sour Apple Gummy",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete4:CreateToggle("Delete Cotton Candy", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Cotton Candy",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete4:CreateToggle("Delete Unicorn", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Unicorn",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete4:CreateToggle("Delete Dragon", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Dragon",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete4:CreateToggle("Delete Magical Unicorn", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Magical Unicorn",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete4:CreateToggle("Delete Void", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Void",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete4:CreateButton("Super Eggs World 1", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+Delete4:CreateToggle("Delete Marshmallow Dominus", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Marshmallow Dominus",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete4:CreateToggle("Delete Fudge Dominus", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Fudge Dominus",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete4:CreateToggle("Delete Sweet Dominus", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Sweet Dominus",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete4:CreateToggle("Delete Sour Dominus", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Sour Dominus",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete4:CreateToggle("Delete Gummy Dominus", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Gummy Dominus",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete4:CreateToggle("Delete Tropical Dominus", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Tropical Dominus",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete4:CreateToggle("Delete Rainbow Dominus", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Rainbow Dominus",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Delete4:CreateToggle("Delete Golden Dominus", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Golden Dominus",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+
         end
     else
         _G.Basic = false
