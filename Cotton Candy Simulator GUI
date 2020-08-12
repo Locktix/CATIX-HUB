@@ -432,7 +432,10 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1156.631
 end)
 
 teleports:CreateToggle("Sell", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(946.355469, -163.192505, 32833.5313)
+for x = 1,2000000000000000000000000 do
+wait(0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(948.780518, -163.19249, 32830.0586)
+end
 end)
 
 AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
