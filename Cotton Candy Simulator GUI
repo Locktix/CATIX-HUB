@@ -785,6 +785,14 @@ game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(arg
 game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
 
             local args = {
+    [1] = "Purple Shark",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+
+            local args = {
     [1] = "Baby Shark",
     [2] = 1,
     [3] = false,
