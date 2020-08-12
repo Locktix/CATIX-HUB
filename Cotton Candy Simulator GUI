@@ -287,11 +287,11 @@ local children = game.Workspace:GetChildren()
     end
 end)
 
-eggs:CreateButton("Boosts", function() --you dont need "arg" for a button
+eggs:CreateButton("Auto Buy All Boosts", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-eggs:CreateToggle("AutoCoinGather", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("All Boosts", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
@@ -301,71 +301,35 @@ eggs:CreateToggle("AutoCoinGather", function(arg) --the (arg) is if the checkbox
 
 game:GetService("ReplicatedStorage").Events.UpdateSkillsEvent:FireServer(unpack(args))
 
-        end
-    else
-        _G.Basic = false
-    end
-end)
 
-eggs:CreateToggle("AutoGemMine", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.Basic = true 
-        while wait(0) and _G.Basic do
             local args = {
     [1] = "AutoGemMine"
 }
 
 game:GetService("ReplicatedStorage").Events.UpdateSkillsEvent:FireServer(unpack(args))
 
-        end
-    else
-        _G.Basic = false
-    end
-end)
 
-eggs:CreateToggle("Speedster", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.Basic = true 
-        while wait(0) and _G.Basic do
             local args = {
     [1] = "Speedster"
 }
 
 game:GetService("ReplicatedStorage").Events.UpdateSkillsEvent:FireServer(unpack(args))
 
-        end
-    else
-        _G.Basic = false
-    end
-end)
 
-eggs:CreateToggle("MonsterSlayer", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.Basic = true 
-        while wait(0) and _G.Basic do
             local args = {
     [1] = "MonsterSlayer"
 }
 
 game:GetService("ReplicatedStorage").Events.UpdateSkillsEvent:FireServer(unpack(args))
 
-        end
-    else
-        _G.Basic = false
-    end
-end)
 
-eggs:CreateToggle("PetHandler", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.Basic = true 
-        while wait(0) and _G.Basic do
             local args = {
     [1] = "PetHandler"
 }
 
 game:GetService("ReplicatedStorage").Events.UpdateSkillsEvent:FireServer(unpack(args))
 
-        end
+     end
     else
         _G.Basic = false
     end
@@ -1111,15 +1075,6 @@ game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(arg
         _G.Basic = false
     end
 end)
-
-
---| Anti AFK | By Altix#3395
-    local Virtual = game:service'VirtualUser'
-    game:service'Players'.LocalPlayer.Idled:connect(function()
-        Virtual:CaptureController()
-        Virtual:ClickButton2(Vector2.new())
-        wait(2)
-    end)
 
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
