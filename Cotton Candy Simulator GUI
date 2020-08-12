@@ -157,6 +157,24 @@ game:GetService("ReplicatedStorage").Events.BuyEggPromptEvent:FireServer(unpack(
     end
 end)
 
+eggs:CreateToggle("Auto Buy Platinum Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+  local args = {
+    [1] = "Starter World Diamond",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage").Events.BuyEggPromptEvent:FireServer(unpack(args))
+
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
 eggs:CreateButton("World 2", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
@@ -236,7 +254,7 @@ game:GetService("ReplicatedStorage").Events.BuyEggPromptEvent:FireServer(unpack(
     end
 end)
 
-teleports:CreateToggle("Auto Collect Gems", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateToggle("Auto Collect Gems", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0.5) and _G.Basic do
@@ -255,7 +273,7 @@ local children = game.Workspace:GetChildren()
     end
 end)
 
-teleports:CreateToggle("Auto Collect Sugar", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateToggle("Auto Collect Sugar", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0.5) and _G.Basic do
