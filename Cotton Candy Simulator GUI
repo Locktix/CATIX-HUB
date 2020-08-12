@@ -3,9 +3,8 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/prezt
 
 local AutoTab = Library:CreateTab("Cotton Candy Simulator GUI","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
-local eggs = Library:CreateTab("Auto Buy Eggs,Boosts","things", true)
-local Delete2 = Library:CreateTab("Auto Delete All Pets World 2","things", true)
-local Delete3 = Library:CreateTab("Auto Delete All Pets World 1","things", true)
+local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
+local Delete2 = Library:CreateTab("Auto Delete All Pets","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
 
@@ -237,18 +236,6 @@ game:GetService("ReplicatedStorage").Events.BuyEggPromptEvent:FireServer(unpack(
     end
 end)
 
-teleports:CreateButton("JUST WAIT FOR IT", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
-end)
-
-teleports:CreateButton("do not use both", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
-end)
-
-teleports:CreateButton("at the same time", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
-end)
-
 teleports:CreateToggle("Auto Collect Gems", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
@@ -282,54 +269,6 @@ local children = game.Workspace:GetChildren()
         end
     end
     end
-    else
-        _G.Basic = false
-    end
-end)
-
-eggs:CreateButton("Auto Buy All Boosts", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
-end)
-
-eggs:CreateToggle("All Boosts", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.Basic = true 
-        while wait(0) and _G.Basic do
-            local args = {
-    [1] = "AutoCoinGather"
-}
-
-game:GetService("ReplicatedStorage").Events.UpdateSkillsEvent:FireServer(unpack(args))
-
-
-            local args = {
-    [1] = "AutoGemMine"
-}
-
-game:GetService("ReplicatedStorage").Events.UpdateSkillsEvent:FireServer(unpack(args))
-
-
-            local args = {
-    [1] = "Speedster"
-}
-
-game:GetService("ReplicatedStorage").Events.UpdateSkillsEvent:FireServer(unpack(args))
-
-
-            local args = {
-    [1] = "MonsterSlayer"
-}
-
-game:GetService("ReplicatedStorage").Events.UpdateSkillsEvent:FireServer(unpack(args))
-
-
-            local args = {
-    [1] = "PetHandler"
-}
-
-game:GetService("ReplicatedStorage").Events.UpdateSkillsEvent:FireServer(unpack(args))
-
-     end
     else
         _G.Basic = false
     end
@@ -403,6 +342,52 @@ game:GetService("ReplicatedStorage").Events.ClaimAchievementEvent:FireServer(unp
         _G.Basic = false
     end
 end)
+
+AutoTab:CreateToggle("Auto Buy Boosts", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            local args = {
+    [1] = "AutoCoinGather"
+}
+
+game:GetService("ReplicatedStorage").Events.UpdateSkillsEvent:FireServer(unpack(args))
+
+
+            local args = {
+    [1] = "AutoGemMine"
+}
+
+game:GetService("ReplicatedStorage").Events.UpdateSkillsEvent:FireServer(unpack(args))
+
+
+            local args = {
+    [1] = "Speedster"
+}
+
+game:GetService("ReplicatedStorage").Events.UpdateSkillsEvent:FireServer(unpack(args))
+
+
+            local args = {
+    [1] = "MonsterSlayer"
+}
+
+game:GetService("ReplicatedStorage").Events.UpdateSkillsEvent:FireServer(unpack(args))
+
+
+            local args = {
+    [1] = "PetHandler"
+}
+
+game:GetService("ReplicatedStorage").Events.UpdateSkillsEvent:FireServer(unpack(args))
+
+     end
+    else
+        _G.Basic = false
+    end
+end)
+
+
 
 teleports:CreateButton("World 1", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1086.05542, 49.8905716, 58.4696999)
@@ -838,11 +823,11 @@ game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(arg
     end
 end)
 
-Delete3:CreateButton("Auto Delete All Pets World 1", function() --you dont need "arg" for a button
+Delete2:CreateButton("Auto Delete All Pets World 1", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-Delete3:CreateToggle("Delete All Pets World 1", function(arg) --the (arg) is if the checkbox is toggled or not
+Delete2:CreateToggle("Delete All Pets World 1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
