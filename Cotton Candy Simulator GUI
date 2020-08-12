@@ -9,7 +9,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/prezt
 
 local AutoTab = Library:CreateTab("Cotton Candy Simulator GUI","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
-local boosts = Library:CreateTab("Auto Buy Boosts,Stuffs","things", true)
+local boosts = Library:CreateTab("Auto Buy Boosts","things", true)
 local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
 local Delete = Library:CreateTab("Auto Delete pets","things", true)
 local credits = Library:CreateTab("Credits","things", true)
