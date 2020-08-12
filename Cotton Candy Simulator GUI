@@ -431,7 +431,7 @@ teleports:CreateButton("Safe Zone", function() --you dont need "arg" for a butto
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1156.63147, 71.4762573, -283.506531)
 end)
 
-teleports:CreateToggle("Sell", function() --you dont need "arg" for a button
+teleports:CreateToggle("Sell Impossible to Arrest", function() --you dont need "arg" for a button
 for x = 1,2000000000000000000000000 do
 wait(0)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(948.780518, -163.19249, 32830.0586)
