@@ -655,7 +655,7 @@ AutoTab:CreateToggle("Speed Hack 100", function(arg) --the (arg) is if the check
     end
 end)
 
-AutoTab:CreateButton("Best Tools", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateToggle("Best Tools", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
         while wait(0) and _G.Basic do
