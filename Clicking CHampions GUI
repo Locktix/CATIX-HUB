@@ -312,6 +312,21 @@ game:GetService("ReplicatedStorage").Events.Server.OpenEgg:InvokeServer(unpack(a
     end
 end)
 
+eggs:CreateToggle("Auto Buy Zombie Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local A_1 = "14"
+local A_2 = 1
+local Event = game:GetService("ReplicatedStorage").Events.Server.OpenEgg
+Event:InvokeServer(A_1, A_2)
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
 rebirth:CreateToggle("Auto Rebirth x1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
@@ -1176,6 +1191,10 @@ end)
 
 teleports:CreateButton("1Dc Zone", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(751.276489, 50.0287094, -1546.16321)
+end)
+
+teleports:CreateButton("1Ud Zone", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-16.2351398, 19.8869381, -862.301025)
 end)
 
 --| Anti AFK | By Altix#3395
