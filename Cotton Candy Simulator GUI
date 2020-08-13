@@ -4,6 +4,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/prezt
 local AutoTab = Library:CreateTab("Cotton Candy Simulator GUI","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
 local Teleports2 = Library:CreateTab("Tp To Coins","things", true)
+local Teleports3 = Library:CreateTab("Tp To Coins2","things", true)
 local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
 local Delete2 = Library:CreateTab("Auto Delete All Pets","things", true)
 local credits = Library:CreateTab("Credits","things", true)
@@ -1282,6 +1283,191 @@ Teleports2:CreateToggle("Coins 16", function(arg) --the (arg) is if the checkbox
         _G.Basic = true 
         while wait(0) and _G.Basic do
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1204.73218, -146.992508, 33058.6055)
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Teleports3:CreateToggle("Coins 17", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(953.294128, -163.192505, 32881.9648)
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Teleports3:CreateToggle("Coins 18", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1003.03864, -163.192505, 32911.3711)
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Teleports3:CreateToggle("Coins 19", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1044.46899, -163.192505, 32951.7891)
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Teleports3:CreateToggle("Coins 20", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1060.89197, -156.279541, 33013.1484)
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Teleports3:CreateToggle("Coins 21", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1063.08142, -163.192459, 33077.3516)
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Teleports3:CreateToggle("Coins 22", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1037.71423, -163.192505, 33217.1055)
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Teleports3:CreateToggle("Coins 23", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1057.35632, -163.192505, 33275.7617)
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Teleports3:CreateToggle("Coins 24", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1053.8186, -163.192459, 33326.1523)
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Teleports3:CreateToggle("Coins 25", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1003.47382, -163.158432, 33296.7188)
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Teleports3:CreateToggle("Coins 26", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(951.774963, -163.192505, 33299.0977)
+       
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Teleports3:CreateToggle("Coins 27", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(911.436584, -163.192505, 33322.5234)
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Teleports3:CreateToggle("Coins 28", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(817.364929, -163.192505, 33300.7578)
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Teleports3:CreateToggle("Coins 29", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(778.212158, -163.192505, 33283)
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Teleports3:CreateToggle("Coins 30", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(739.60321, -163.192505, 33262.3828)
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Teleports3:CreateToggle("Coins 31", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(699.03894, -163.192459, 33238.8594)
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+Teleports3:CreateToggle("Coins 32", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(675.967896, -163.192505, 33214.9883)
         end
     else
         _G.Basic = false
