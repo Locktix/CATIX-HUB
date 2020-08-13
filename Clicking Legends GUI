@@ -109,6 +109,40 @@ game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(
     end
 end)
 
+eggs:CreateToggle("Auto Buy Zone 3 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+    local args = {
+    [1] = "Graveyard",
+    [2] = "Single"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy Zone 4 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+       local args = {
+    [1] = "Volcano",
+    [2] = "Single"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
 AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
@@ -696,6 +730,15 @@ end)
 teleports:CreateButton("Zone 2", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(605.503296, 4.00753164, -142.980774)
 end)
+
+teleports:CreateButton("Zone 3", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(913.105957, 4.00753164, 731.323303)
+end)
+
+teleports:CreateButton("Zone 4", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(444.050049, 4.00753164, 730.470093)
+end)
+
 
 AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:Destroy()
