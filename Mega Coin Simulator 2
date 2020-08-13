@@ -307,7 +307,7 @@ eggs3:CreateToggle("Auto Buy Starter Eggs", function(arg) --the (arg) is if the 
         _G.Basic = true 
         while wait(0) and _G.Basic do
                   local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Starter",
     [3] = true,
 }
@@ -324,7 +324,7 @@ eggs3:CreateToggle("Auto Buy Advanced Eggs", function(arg) --the (arg) is if the
         _G.Basic = true 
         while wait(0) and _G.Basic do
                       local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Advanced",
     [3] = true,
 }
@@ -341,7 +341,7 @@ eggs3:CreateToggle("Auto Buy Joyful Eggs", function(arg) --the (arg) is if the c
         _G.Basic = true 
         while wait(0) and _G.Basic do
             local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Joyful",
     [3] = true,
 }
@@ -358,7 +358,7 @@ eggs3:CreateToggle("Auto Buy Gem Pets 1 Eggs", function(arg) --the (arg) is if t
         _G.Basic = true 
         while wait(0) and _G.Basic do
            local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Box1",
     [3] = true,
 }
@@ -375,7 +375,7 @@ eggs3:CreateToggle("Auto Buy Gem Pets 2 Eggs", function(arg) --the (arg) is if t
         _G.Basic = true 
         while wait(0) and _G.Basic do
            local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Box2",
     [3] = true,
 }
@@ -392,7 +392,7 @@ eggs3:CreateToggle("Auto Buy Pearl Eggs", function(arg) --the (arg) is if the ch
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Pearl",
     [3] = true,
 }
@@ -409,7 +409,7 @@ eggs3:CreateToggle("Auto Buy SandCastle Eggs", function(arg) --the (arg) is if t
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Sandcastle",
     [3] = true,
 }
@@ -426,7 +426,7 @@ eggs3:CreateToggle("Auto Buy Lavender Eggs", function(arg) --the (arg) is if the
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Lavender",
     [3] = true,
 }
@@ -443,7 +443,7 @@ eggs3:CreateToggle("Auto Buy Adventure Eggs", function(arg) --the (arg) is if th
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Adventure",
     [3] = true,
 }
@@ -460,7 +460,7 @@ eggs3:CreateToggle("Auto Buy Gem Pets 3 Eggs", function(arg) --the (arg) is if t
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "BoxYes",
     [3] = true,
 }
@@ -477,7 +477,7 @@ eggs3:CreateToggle("Auto Buy Gem Pets 4 Eggs", function(arg) --the (arg) is if t
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "BoxNo",
     [3] = true,
 }
@@ -494,7 +494,7 @@ eggs3:CreateToggle("Auto Buy Fruit Eggs", function(arg) --the (arg) is if the ch
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Fruit",
     [3] = true,
 }
@@ -511,7 +511,7 @@ eggs3:CreateToggle("Auto Buy Healthy Eggs", function(arg) --the (arg) is if the 
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Healthy",
     [3] = true,
 }
@@ -528,7 +528,7 @@ eggs3:CreateToggle("Auto Buy Magical Eggs", function(arg) --the (arg) is if the 
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Magical",
     [3] = true,
 }
@@ -545,7 +545,7 @@ eggs3:CreateToggle("Auto Buy Enchanted Eggs", function(arg) --the (arg) is if th
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Enchanted",
     [3] = true,
 }
@@ -562,7 +562,7 @@ eggs3:CreateToggle("Auto Buy Cave Eggs", function(arg) --the (arg) is if the che
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Cave",
     [3] = true,
 }
@@ -579,7 +579,7 @@ eggs3:CreateToggle("Auto Buy Gem Pets 6 Eggs", function(arg) --the (arg) is if t
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "BoxTokk",
     [3] = true,
 }
@@ -596,7 +596,7 @@ eggs3:CreateToggle("Auto Buy Symphony Eggs", function(arg) --the (arg) is if the
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Symphony",
     [3] = true,
 }
@@ -613,7 +613,7 @@ eggs4:CreateToggle("Auto Buy Confetti Eggs", function(arg) --the (arg) is if the
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Rubik",
     [3] = true,
 }
@@ -630,7 +630,7 @@ eggs4:CreateToggle("Auto Buy Musical other Eggs", function(arg) --the (arg) is i
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Musical",
     [3] = true,
 }
@@ -647,7 +647,7 @@ eggs4:CreateToggle("Auto Buy Musical Eggs", function(arg) --the (arg) is if the 
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Box12",
     [3] = true,
 }
@@ -664,7 +664,7 @@ eggs4:CreateToggle("Auto Buy Grassy Lands Eggs", function(arg) --the (arg) is if
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "GLands",
     [3] = true,
 }
@@ -681,7 +681,7 @@ eggs4:CreateToggle("Auto Buy Mystery Eggs", function(arg) --the (arg) is if the 
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Grassy2",
     [3] = true,
 }
@@ -698,7 +698,7 @@ eggs4:CreateToggle("Auto Buy Sinister Eggs", function(arg) --the (arg) is if the
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Grassy3",
     [3] = true,
 }
@@ -715,8 +715,25 @@ eggs4:CreateToggle("Auto Buy Aestetic Gems Eggs", function(arg) --the (arg) is i
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Boxh",
+    [3] = true,
+}
+
+game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+eggs4:CreateToggle("Auto Buy Zombie Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+local args = {
+    [1] = game:GetService("Players")["LocalPlayer"],
+    [2] = "Zombie",
     [3] = true,
 }
 
@@ -732,7 +749,7 @@ eggs1:CreateToggle("Auto Buy Starter Eggs", function(arg) --the (arg) is if the 
         _G.Basic = true 
         while wait(0) and _G.Basic do
                   local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Starter",
     [3] = false,
 }
@@ -749,7 +766,7 @@ eggs1:CreateToggle("Auto Buy Advanced Eggs", function(arg) --the (arg) is if the
         _G.Basic = true 
         while wait(0) and _G.Basic do
                       local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Advanced",
     [3] = false,
 }
@@ -766,7 +783,7 @@ eggs1:CreateToggle("Auto Buy Joyful Eggs", function(arg) --the (arg) is if the c
         _G.Basic = true 
         while wait(0) and _G.Basic do
             local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Joyful",
     [3] = false,
 }
@@ -783,7 +800,7 @@ eggs1:CreateToggle("Auto Buy Gem Pets 1 Eggs", function(arg) --the (arg) is if t
         _G.Basic = true 
         while wait(0) and _G.Basic do
            local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Box1",
     [3] = false,
 }
@@ -800,7 +817,7 @@ eggs1:CreateToggle("Auto Buy Gem Pets 2 Eggs", function(arg) --the (arg) is if t
         _G.Basic = true 
         while wait(0) and _G.Basic do
            local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Box2",
     [3] = false,
 }
@@ -817,7 +834,7 @@ eggs1:CreateToggle("Auto Buy Pearl Eggs", function(arg) --the (arg) is if the ch
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Pearl",
     [3] = false,
 }
@@ -834,7 +851,7 @@ eggs1:CreateToggle("Auto Buy SandCastle Eggs", function(arg) --the (arg) is if t
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Sandcastle",
     [3] = false,
 }
@@ -851,7 +868,7 @@ eggs1:CreateToggle("Auto Buy Lavender Eggs", function(arg) --the (arg) is if the
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Lavender",
     [3] = false,
 }
@@ -868,7 +885,7 @@ eggs1:CreateToggle("Auto Buy Adventure Eggs", function(arg) --the (arg) is if th
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Adventure",
     [3] = false,
 }
@@ -885,7 +902,7 @@ eggs1:CreateToggle("Auto Buy Gem Pets 3 Eggs", function(arg) --the (arg) is if t
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "BoxYes",
     [3] = false,
 }
@@ -902,7 +919,7 @@ eggs1:CreateToggle("Auto Buy Gem Pets 4 Eggs", function(arg) --the (arg) is if t
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "BoxNo",
     [3] = false,
 }
@@ -919,7 +936,7 @@ eggs1:CreateToggle("Auto Buy Fruit Eggs", function(arg) --the (arg) is if the ch
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Fruit",
     [3] = false,
 }
@@ -936,7 +953,7 @@ eggs1:CreateToggle("Auto Buy Healthy Eggs", function(arg) --the (arg) is if the 
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Healthy",
     [3] = false,
 }
@@ -953,7 +970,7 @@ eggs1:CreateToggle("Auto Buy Magical Eggs", function(arg) --the (arg) is if the 
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Magical",
     [3] = false,
 }
@@ -970,7 +987,7 @@ eggs1:CreateToggle("Auto Buy Enchanted Eggs", function(arg) --the (arg) is if th
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Enchanted",
     [3] = false,
 }
@@ -987,7 +1004,7 @@ eggs1:CreateToggle("Auto Buy Cave Eggs", function(arg) --the (arg) is if the che
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Cave",
     [3] = false,
 }
@@ -1004,7 +1021,7 @@ eggs2:CreateToggle("Auto Buy Gem Pets 6 Eggs", function(arg) --the (arg) is if t
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "BoxTokk",
     [3] = false,
 }
@@ -1021,7 +1038,7 @@ eggs2:CreateToggle("Auto Buy Symphony Eggs", function(arg) --the (arg) is if the
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Symphony",
     [3] = false,
 }
@@ -1038,7 +1055,7 @@ eggs2:CreateToggle("Auto Buy Confetti Eggs", function(arg) --the (arg) is if the
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Rubik",
     [3] = false,
 }
@@ -1055,7 +1072,7 @@ eggs2:CreateToggle("Auto Buy Musical other Eggs", function(arg) --the (arg) is i
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Musical",
     [3] = false,
 }
@@ -1072,7 +1089,7 @@ eggs2:CreateToggle("Auto Buy Musical Eggs", function(arg) --the (arg) is if the 
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Box12",
     [3] = false,
 }
@@ -1089,7 +1106,7 @@ eggs2:CreateToggle("Auto Buy Grassy Lands Eggs", function(arg) --the (arg) is if
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "GLands",
     [3] = false,
 }
@@ -1106,7 +1123,7 @@ eggs2:CreateToggle("Auto Buy Mystery Eggs", function(arg) --the (arg) is if the 
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Grassy2",
     [3] = false,
 }
@@ -1123,7 +1140,7 @@ eggs2:CreateToggle("Auto Buy Sinister Eggs", function(arg) --the (arg) is if the
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Grassy3",
     [3] = false,
 }
@@ -1140,8 +1157,25 @@ eggs2:CreateToggle("Auto Buy Aestetic Gems Eggs", function(arg) --the (arg) is i
         _G.Basic = true 
         while wait(0) and _G.Basic do
 local args = {
-    [1] = game:GetService("Players")["quentin453"],
+    [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Boxh",
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
+eggs2:CreateToggle("Auto BuyZombie Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+local args = {
+    [1] = game:GetService("Players")["LocalPlayer"],
+    [2] = "Zombie",
     [3] = false,
 }
 
@@ -1210,6 +1244,10 @@ end)
 
 teleports:CreateButton("Zone 11", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1071, 3, -12)
+end)
+
+teleports:CreateButton("Zone 12", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(960.720703, 3.50755286, 485.500763)
 end)
 
 
