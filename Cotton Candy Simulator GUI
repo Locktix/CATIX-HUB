@@ -554,6 +554,23 @@ game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(arg
     end
 end)
 
+Delete2:CreateToggle("Delete Sour Unicorn", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local args = {
+    [1] = "Sour Unicorn",
+    [2] = 1,
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.DeletePetEvent:FireServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
 Delete2:CreateButton("Gold Eggs World 2", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
