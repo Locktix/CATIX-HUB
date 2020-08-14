@@ -82,6 +82,22 @@ game:GetService("ReplicatedStorage").Remotes.OpenEgg:InvokeServer(unpack(args))
     end
 end)
 
+eggs:CreateToggle("Auto Buy 200K Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            local args = {
+    [1] = "200K Egg",
+    [2] = 1,
+}
+
+game:GetService("ReplicatedStorage").Remotes.OpenEgg:InvokeServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
 eggs:CreateToggle("Auto Buy 5M Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
