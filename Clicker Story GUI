@@ -1,10 +1,10 @@
-https://www.roblox.com/games/2302091358/Cookie-Clicker
+--https://www.roblox.com/games/4859936288/UPDATE-2-Clicker-Story#
 
 
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
-local AutoTab = Library:CreateTab("Cookie Clicker GUI","things", true)
+local AutoTab = Library:CreateTab("Clicker Story GUI","things", true)
 local Rebirth = Library:CreateTab("Auto Rebirth","things", true)
 local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
@@ -781,6 +781,10 @@ end)
 
 teleports:CreateButton("Jungle World", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1149.30188, -53.5753098, -4374.34814)
+end)
+
+teleports:CreateButton("Desert World", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1159.29663, -55.3753242, -6332.26025)
 end)
 
 teleports:CreateButton("Boss", function() --you dont need "arg" for a button
