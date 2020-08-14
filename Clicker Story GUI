@@ -210,6 +210,23 @@ game:GetService("ReplicatedStorage").Remotes.OpenEgg:InvokeServer(unpack(args))
     end
 end)
 
+
+eggs:CreateToggle("Auto Buy 49.5D Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+            local args = {
+    [1] = "Sakura Egg",
+    [2] = 1,
+}
+
+game:GetService("ReplicatedStorage").Remotes.OpenEgg:InvokeServer(unpack(args))
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
 AutoTab:CreateToggle("Speed Hack 100", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Basic = true 
@@ -801,6 +818,10 @@ end)
 
 teleports:CreateButton("Desert World", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1159.29663, -55.3753242, -6332.26025)
+end)
+
+teleports:CreateButton("Sakura World", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1151.19153, -53.5753365, -7351.24561)
 end)
 
 teleports:CreateButton("Boss", function() --you dont need "arg" for a button
