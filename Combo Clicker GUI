@@ -38,6 +38,10 @@ credits:CreateButton("Big C#5347", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
+credits:CreateButton("Bebo Mods#1110", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
 AutoTab:CreateButton("Attention Dysplay issues", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
@@ -1444,6 +1448,25 @@ eggs:CreateToggle("Auto Buy Ocean Egg (7)", function(arg) --the (arg) is if the 
 
               
               },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.Water = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy 3M Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Water = true 
+        while wait(0) and _G.Water do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg3M",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 10,
+                },
             }
             
             game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
