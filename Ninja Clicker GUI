@@ -313,8 +313,8 @@ end)
 
 eggs:CreateToggle("Auto Buy 5Qd Yens eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.m = true 
-        while wait(0) and _G.m do
+        _G.n = true 
+        while wait(0) and _G.n do
 local args = {
     [1] = "Artic Egg",
     [2] = false
@@ -332,7 +332,7 @@ workspace.Debris.Events.OpenEgg:FireServer(unpack(args))
 
         end
     else
-        _G.m = false
+        _G.n = false
     end
 end)
 
