@@ -83,44 +83,6 @@ local children = game.Workspace:GetChildren()
     end
 end)
 
-Buy:CreateToggle("Auto Buy Foods", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-_G.b = true 
-        while wait() and _G.b do
-            local args = {
-    [1] = {
-        [1] = "Foods",
-        [2] = "All",
-    },
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.ShopBuy:FireServer(unpack(args))
-        end
-
-    else
-        _G.b = false
-    end
-end)
-
-Buy:CreateToggle("Auto Buy Backpacks", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-_G.c = true 
-        while wait() and _G.c do
-local args = {
-    [1] = {
-        [1] = "Backpacks",
-        [2] = "All",
-    },
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.ShopBuy:FireServer(unpack(args))
-        end
-
-    else
-        _G.c = false
-    end
-end)
-
 eggs:CreateToggle("Auto Buy Eggs 15K", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
 _G.e = true 
