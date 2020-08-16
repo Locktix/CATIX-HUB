@@ -64,6 +64,10 @@ end
     end
 end)
 
+AutoTab:CreateButton("Attention Lags", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(nothing)
+end)
+
 AutoTab:CreateToggle("Auto Collect Coins", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.d = true 
@@ -85,15 +89,14 @@ end)
 
 AutoTab:CreateToggle("Auto Jump", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.za = true 
-        while wait(0) and _G.za do
-           while true do wait()
+_G.za = true 
+        while wait() and _G.za do
+while true do wait()
 game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end
-    end
-end
-
-    else
+           end
+  else
+    
         _G.za = false
     end
 end)
@@ -240,10 +243,6 @@ game:GetService("ReplicatedStorage").EggEvent:FireServer(unpack(args))
     
         _G.l = false
     end
-end)
-
-AutoTab:CreateButton("Attention Lags", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(nothing)
 end)
 
 --| Anti AFK | By Altix#3395
