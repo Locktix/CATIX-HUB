@@ -64,6 +64,25 @@ end
     end
 end)
 
+AutoTab:CreateToggle("Auto Collect Coins", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.d = true 
+        while wait(0.5) and _G.d do
+local children = game.Workspace:GetChildren()
+    for _, child in pairs(children) do
+        for _, child in pairs(child:GetChildren()) do
+            table.insert(children, child)
+         end
+         if child:IsA("BasePart") and child.Name == "💸Coins💰" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame            
+        end
+    end
+    end
+    else
+        _G.d = false
+    end
+end)
+
 Buy:CreateToggle("Auto Buy Foods", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
 _G.b = true 
@@ -99,25 +118,6 @@ game:GetService("ReplicatedStorage").RemoteEvents.ShopBuy:FireServer(unpack(args
 
     else
         _G.c = false
-    end
-end)
-
-AutoTab:CreateToggle("Auto Collect Coins", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.d = true 
-        while wait(0.5) and _G.d do
-local children = game.Workspace:GetChildren()
-    for _, child in pairs(children) do
-        for _, child in pairs(child:GetChildren()) do
-            table.insert(children, child)
-         end
-         if child:IsA("BasePart") and child.Name == "💸Coins💰" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame            
-        end
-    end
-    end
-    else
-        _G.d = false
     end
 end)
 
