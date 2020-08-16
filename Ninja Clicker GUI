@@ -311,6 +311,31 @@ workspace.Debris.Events.OpenEgg:FireServer(unpack(args))
     end
 end)
 
+eggs:CreateToggle("Auto Buy 5Qd Yens eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.m = true 
+        while wait(0) and _G.m do
+local args = {
+    [1] = "Artic Egg",
+    [2] = false
+}
+
+workspace.Debris.Events.OpenEgg:FireServer(unpack(args))
+
+
+
+
+
+
+
+
+
+        end
+    else
+        _G.m = false
+    end
+end)
+
 AutoTab:CreateToggle("Speed Hack 100", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
 _G.Speed = true 
@@ -839,6 +864,10 @@ end)
 
 teleports:CreateButton("Air World", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-604.856018, 112.074394, 694.230652)
+end)
+
+teleports:CreateButton("Water World", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(225.324036, 9.02493668, 1172.85864)
 end)
 
 --| Anti AFK | By Altix#3395
