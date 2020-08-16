@@ -87,7 +87,7 @@ local children = game.Workspace:GetChildren()
     end
 end)
 
-AutoTab:CreateToggle("Auto Jump", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateButton("Auto Jump", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
 _G.za = true 
         while wait() and _G.za do
