@@ -1,0 +1,263 @@
+
+--https://www.roblox.com/games/4858201613/Food-Masters-x2-Coins
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
+
+local AutoTab = Library:CreateTab("Food Masters GUI","things", true)
+local Buy = Library:CreateTab("Auto Buy","things", true)
+local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
+local credits = Library:CreateTab("Credits","things", true)
+
+
+credits:CreateButton("Our Discords", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("masterkyllian#1723", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("bsoleil31FR[inchala ptn]#9001", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("https://discord.gg/PdUTrVG", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("Big C#5347", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("Bebo Mods1110", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+
+AutoTab:CreateToggle("Speed Hack 100", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.Speed = true 
+        while wait() and _G.Speed do
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+        end
+    else
+        _G.Speed = false
+           game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
+         end
+end)
+
+
+AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.a = true 
+        while wait(0) and _G.a do
+            if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
+            game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool"):Activate()
+    end
+end
+
+    else
+        _G.a = false
+    end
+end)
+
+Buy:CreateToggle("Auto Buy Foods", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.b = true 
+        while wait() and _G.b do
+            local args = {
+    [1] = {
+        [1] = "Foods",
+        [2] = "All",
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.ShopBuy:FireServer(unpack(args))
+        end
+
+    else
+        _G.b = false
+    end
+end)
+
+Buy:CreateToggle("Auto Buy Backpacks", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.c = true 
+        while wait() and _G.c do
+local args = {
+    [1] = {
+        [1] = "Backpacks",
+        [2] = "All",
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.ShopBuy:FireServer(unpack(args))
+        end
+
+    else
+        _G.c = false
+    end
+end)
+
+AutoTab:CreateToggle("Auto Collect Coins", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.d = true 
+        while wait(0.5) and _G.d do
+local children = game.Workspace:GetChildren()
+    for _, child in pairs(children) do
+        for _, child in pairs(child:GetChildren()) do
+            table.insert(children, child)
+         end
+         if child:IsA("BasePart") and child.Name == "💸Coins💰" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame            
+        end
+    end
+    end
+    else
+        _G.d = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy Eggs 15K", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.e = true 
+        while wait() and _G.e do
+    local args = {
+    [1] = "2",
+}
+
+game:GetService("ReplicatedStorage").EggEvent:FireServer(unpack(args))
+           end
+  else
+    
+        _G.e = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy Eggs 75K", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.f = true 
+        while wait() and _G.f do
+    local args = {
+    [1] = "3",
+}
+
+game:GetService("ReplicatedStorage").EggEvent:FireServer(unpack(args))
+           end
+  else
+    
+        _G.f = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy Eggs 375K", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.g = true 
+        while wait() and _G.g do
+    local args = {
+    [1] = "4",
+}
+
+game:GetService("ReplicatedStorage").EggEvent:FireServer(unpack(args))
+           end
+  else
+    
+        _G.g = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy Eggs 1,75M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.h = true 
+        while wait() and _G.h do
+    local args = {
+    [1] = "5",
+}
+
+game:GetService("ReplicatedStorage").EggEvent:FireServer(unpack(args))
+           end
+  else
+    
+        _G.h = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy Eggs 1,25B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.i = true 
+        while wait() and _G.i do
+    local args = {
+    [1] = "6",
+}
+
+game:GetService("ReplicatedStorage").EggEvent:FireServer(unpack(args))
+           end
+  else
+    
+        _G.i = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy Eggs 2,75B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.j = true 
+        while wait() and _G.j do
+    local args = {
+    [1] = "7",
+}
+
+game:GetService("ReplicatedStorage").EggEvent:FireServer(unpack(args))
+           end
+  else
+    
+        _G.j = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy Eggs 4,12B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.k = true 
+        while wait() and _G.k do
+    local args = {
+    [1] = "8",
+}
+
+game:GetService("ReplicatedStorage").EggEvent:FireServer(unpack(args))
+           end
+  else
+    
+        _G.k = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy Eggs 7,82B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.l = true 
+        while wait() and _G.l do
+    local args = {
+    [1] = "9",
+}
+
+game:GetService("ReplicatedStorage").EggEvent:FireServer(unpack(args))
+           end
+  else
+    
+        _G.l = false
+    end
+end)
+
+AutoTab:CreateButton("Attention Lags", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(nothing)
+end)
+
+--| Anti AFK | By Altix#3395
+    local Virtual = game:service'VirtualUser'
+    game:service'Players'.LocalPlayer.Idled:connect(function()
+        Virtual:CaptureController()
+        Virtual:ClickButton2(Vector2.new())
+        wait(2)
+    end)
