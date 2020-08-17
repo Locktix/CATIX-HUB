@@ -12,6 +12,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/prezt
 local AutoTab = Library:CreateTab("Gem Clicker GUI","things", true)
 local eggs = Library:CreateTab("Auto Buy Eggs x3","things", true)
 local Rebirths = Library:CreateTab("Auto Rebirths","things", true)
+local Sacrifices = Library:CreateTab("Auto Sacrifices","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
@@ -55,18 +56,6 @@ _G.Speed = true
         _G.Speed = false
            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
          end
-end)
-
-AutoTab:CreateToggle("Auto Sacrifices", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.z = true 
-        while wait(0) and _G.z do
- 
-game:GetService("ReplicatedStorage").RemoteEvents.Sacrifice:FireServer()
-        end
-    else
-        _G.z = false
-    end
 end)
 
 AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
@@ -494,6 +483,90 @@ game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
         end
     else
         _G.e8 = false
+    end
+end)
+
+Sacrifices:CreateToggle("Auto Buy Sacrifices x1", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.S1 = true 
+        while wait(0) and _G.S1 do
+   
+game:GetService("ReplicatedStorage").RemoteEvents.Sacrifice:FireServer()
+        end
+    else
+        _G.S1 = false
+    end
+end)
+
+Sacrifices:CreateToggle("Auto Buy Sacrifices x5", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.S2 = true 
+        while wait(0) and _G.S2 do
+   
+game:GetService("ReplicatedStorage").RemoteEvents["Sacrifice5"]:FireServer()
+        end
+    else
+        _G.S2 = false
+    end
+end)
+
+Sacrifices:CreateToggle("Auto Buy Sacrifices x25", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.S3 = true 
+        while wait(0) and _G.S3 do
+   
+game:GetService("ReplicatedStorage").RemoteEvents["Sacrifice25"]:FireServer()
+        end
+    else
+        _G.S3 = false
+    end
+end)
+
+Sacrifices:CreateToggle("Auto Buy Sacrifices x100", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.S4 = true 
+        while wait(0) and _G.S4 do
+   
+game:GetService("ReplicatedStorage").RemoteEvents["Sacrifice100"]:FireServer()
+        end
+    else
+        _G.S4 = false
+    end
+end)
+
+Sacrifices:CreateToggle("Auto Buy Sacrifices x500", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.S5 = true 
+        while wait(0) and _G.S5 do
+   
+game:GetService("ReplicatedStorage").RemoteEvents["Sacrifice500"]:FireServer()
+        end
+    else
+        _G.S5 = false
+    end
+end)
+
+Sacrifices:CreateToggle("Auto Buy Sacrifices x1K", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.S6 = true 
+        while wait(0) and _G.S6 do
+   
+game:GetService("ReplicatedStorage").RemoteEvents["Sacrifice1K"]:FireServer()
+        end
+    else
+        _G.S6 = false
+    end
+end)
+
+Sacrifices:CreateToggle("Auto Buy Sacrifices x10k", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.S7 = true 
+        while wait(0) and _G.S7 do
+   
+game:GetService("ReplicatedStorage").RemoteEvents["Sacrifice10K"]:FireServer()
+        end
+    else
+        _G.S7 = false
     end
 end)
 
