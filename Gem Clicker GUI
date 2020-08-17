@@ -317,6 +317,42 @@ game:GetService("ReplicatedStorage")["Rebirth10B"]:FireServer()
     end
 end)
 
+Rebirths:CreateToggle("Auto Rebirths x100B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.p = true 
+        while wait(0) and _G.p do
+   
+game:GetService("ReplicatedStorage")["Rebirth100B"]:FireServer()
+        end
+    else
+        _G.p = false
+    end
+end)
+
+Rebirths:CreateToggle("Auto Rebirths x1T", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.q = true 
+        while wait(0) and _G.q do
+   
+game:GetService("ReplicatedStorage")["Rebirth1T"]:FireServer()
+        end
+    else
+        _G.q = false
+    end
+end)
+
+Rebirths:CreateToggle("Auto Rebirths x10T", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.r = true 
+        while wait(0) and _G.r do
+   
+game:GetService("ReplicatedStorage")["Rebirth10T"]:FireServer()
+        end
+    else
+        _G.r = false
+    end
+end)
+
 eggs:CreateToggle("Auto Buy Common Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e1 = true 
@@ -443,6 +479,24 @@ game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
     end
 end)
 
+eggs:CreateToggle("Auto Buy Robotic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e8 = true 
+        while wait(0) and _G.e8 do
+   
+local args = {
+    [1] = game:GetService("Players")["LocalPlayer"],
+    [2] = "Robotic",
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
+        end
+    else
+        _G.e8 = false
+    end
+end)
+
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-951.15332, -375.698547, 626.717957)
 end)
@@ -466,6 +520,11 @@ end)
 teleports:CreateButton("World Boost x6", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2049.70288, -376.992462, -1944.70618)
 end)
+
+teleports:CreateButton("World Boost x7", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1395.96582, -376.992554, -1936.14221)
+end)
+
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
     game:service'Players'.LocalPlayer.Idled:connect(function()
