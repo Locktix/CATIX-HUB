@@ -384,7 +384,7 @@ game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
     end
 end)
 
-eggs:CreateToggle("Auto Buy Ultimate 5T Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Auto Buy Ultimate 1T Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e6 = true 
         while wait(0) and _G.e6 do
