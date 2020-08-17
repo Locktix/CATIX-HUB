@@ -81,6 +81,9 @@ teleports:CreateButton("Zone LVL 9", function() --you dont need "arg" for a butt
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(143.679596, 71.4056473, -225.753571)
 end)
 
+teleports:CreateButton("Zone LVL 13", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(379.687073, 2.41427183, -205.833862)
+end)
 
 teleports:CreateButton("Zone LVL 17", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(408.572571, 2.41427112, -203.603516)
