@@ -59,13 +59,13 @@ end)
 
 AutoTab:CreateToggle("Auto Sacrifices", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.b = true 
-        while wait(0) and _G.b do
+        _G.z = true 
+        while wait(0) and _G.z do
  
 game:GetService("ReplicatedStorage").RemoteEvents.Sacrifice:FireServer()
         end
     else
-        _G.b = false
+        _G.z = false
     end
 end)
 
