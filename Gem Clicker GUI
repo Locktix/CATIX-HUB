@@ -78,12 +78,39 @@ AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox 
         _G.b = true 
         while wait(0) and _G.b do
  
-game.RunService.RenderStepped:Connect(function()
- for i=1,1 do
+
    game:GetService("ReplicatedStorage").Click:FireServer()
- end
-end)
-        end
+
+   game:GetService("ReplicatedStorage").Click:FireServer()
+
+   game:GetService("ReplicatedStorage").Click:FireServer()
+
+   game:GetService("ReplicatedStorage").Click:FireServer()
+
+   game:GetService("ReplicatedStorage").Click:FireServer()
+
+   game:GetService("ReplicatedStorage").Click:FireServer()
+
+   game:GetService("ReplicatedStorage").Click:FireServer()
+
+   game:GetService("ReplicatedStorage").Click:FireServer()
+
+   game:GetService("ReplicatedStorage").Click:FireServer()
+
+   game:GetService("ReplicatedStorage").Click:FireServer()
+
+   game:GetService("ReplicatedStorage").Click:FireServer()
+
+   game:GetService("ReplicatedStorage").Click:FireServer()
+
+   game:GetService("ReplicatedStorage").Click:FireServer()
+
+   game:GetService("ReplicatedStorage").Click:FireServer()
+
+   game:GetService("ReplicatedStorage").Click:FireServer()
+
+   game:GetService("ReplicatedStorage").Click:FireServer()
+    end
     else
         _G.b = false
     end
