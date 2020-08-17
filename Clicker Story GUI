@@ -6,6 +6,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/prezt
 
 local AutoTab = Library:CreateTab("Clicker Story GUI","things", true)
 local Rebirth = Library:CreateTab("Auto Rebirth","things", true)
+local Rebirth2 = Library:CreateTab("Auto Rebirth2","things", true)
 local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
 local Upgrades = Library:CreateTab("Upgrades","things", true)
@@ -580,7 +581,7 @@ game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
     end
 end)
 
-Rebirth:CreateToggle("Auto Rebirth x1Qd", function(arg) --the (arg) is if the checkbox is toggled or not
+Rebirth2:CreateToggle("Auto Rebirth x1Qd", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Rebirth = true 
         while wait(0) and _G.Rebirth do
@@ -595,7 +596,7 @@ game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
     end
 end)
 
-Rebirth:CreateToggle("Auto Rebirth x500Qd", function(arg) --the (arg) is if the checkbox is toggled or not
+Rebirth2:CreateToggle("Auto Rebirth x500Qd", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Rebirth = true 
         while wait(0) and _G.Rebirth do
@@ -610,7 +611,7 @@ game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
     end
 end)
 
-Rebirth:CreateToggle("Auto Rebirth x1Qn", function(arg) --the (arg) is if the checkbox is toggled or not
+Rebirth2:CreateToggle("Auto Rebirth x1Qn", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Rebirth = true 
         while wait(0) and _G.Rebirth do
@@ -625,7 +626,22 @@ game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
     end
 end)
 
-Rebirth:CreateToggle("Auto Rebirth x500Qn", function(arg) --the (arg) is if the checkbox is toggled or not
+Rebirth2:CreateToggle("Auto Rebirth x50Qn", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Rebirth = true 
+        while wait(0) and _G.Rebirth do
+       local args = {
+    [1] = 50000000000000000000,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
+        end
+    else
+        _G.Rebirth = false
+    end
+end)
+
+Rebirth2:CreateToggle("Auto Rebirth x500Qn", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Rebirth = true 
         while wait(0) and _G.Rebirth do
@@ -640,7 +656,7 @@ game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
     end
 end)
 
-Rebirth:CreateToggle("Auto Rebirth x1Sp", function(arg) --the (arg) is if the checkbox is toggled or not
+Rebirth2:CreateToggle("Auto Rebirth x1Sp", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Rebirth = true 
         while wait(0) and _G.Rebirth do
@@ -655,7 +671,7 @@ game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
     end
 end)
 
-Rebirth:CreateToggle("Auto Rebirth x500Sp", function(arg) --the (arg) is if the checkbox is toggled or not
+Rebirth2:CreateToggle("Auto Rebirth x500Sp", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Rebirth = true 
         while wait(0) and _G.Rebirth do
