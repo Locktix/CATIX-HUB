@@ -69,10 +69,6 @@ game:GetService("ReplicatedStorage").RemoteEvents.Sacrifice:FireServer()
     end
 end)
 
-AutoTab:CreateButton("Attention Hight Ping", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(nothing)
-end)
-
 AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.b = true 
