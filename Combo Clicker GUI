@@ -1143,27 +1143,27 @@ end)
 
 eggs2:CreateToggle("Auto Buy Frost Egg (13)3", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.133 = true 
-        while wait(0) and _G.133 do
+        _G.D = true 
+        while wait(0) and _G.D do
             local args = {
                 [1] = {
                     ["EggType"] = "Egg13",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 40,
+                    ["Amount"] = 10,
                 },
             }
             
             game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
         end
     else
-        _G.133 = false
+        _G.D = false
     end
 end)
 
 eggs2:CreateToggle("Auto Buy Frost Egg (13)2", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.132 = true 
-        while wait(0) and _G.132 do
+        _G.L = true 
+        while wait(0) and _G.L do
             local args = {
                 [1] = {
                     ["EggType"] = "Egg13",
@@ -1175,14 +1175,14 @@ eggs2:CreateToggle("Auto Buy Frost Egg (13)2", function(arg) --the (arg) is if t
             game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
         end
     else
-        _G.132 = false
+        _G.L = false
     end
 end)
 
 eggs2:CreateToggle("Auto Buy Frost Egg (13)1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.131 = true 
-        while wait(0) and _G.131 do
+        _G.M = true 
+        while wait(0) and _G.M do
             local args = {
                 [1] = {
                     ["EggType"] = "Egg13",
@@ -1194,14 +1194,14 @@ eggs2:CreateToggle("Auto Buy Frost Egg (13)1", function(arg) --the (arg) is if t
             game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
         end
     else
-        _G.131 = false
+        _G.M = false
     end
 end)
 
 eggs2:CreateToggle("Auto Buy Frost Egg (13)", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.13 = true 
-        while wait(0) and _G.13 do
+        _G.N = true 
+        while wait(0) and _G.N do
             local args = {
                 [1] = {
                     ["EggType"] = "Egg13",
@@ -1213,7 +1213,7 @@ eggs2:CreateToggle("Auto Buy Frost Egg (13)", function(arg) --the (arg) is if th
             game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
         end
     else
-        _G.13 = false
+        _G.N = false
     end
 end)
 
