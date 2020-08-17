@@ -286,7 +286,7 @@ Rebirths:CreateToggle("Auto Rebirths x100M", function(arg) --the (arg) is if the
         _G.m = true 
         while wait(0) and _G.m do
    
-game:GetService("ReplicatedStorage")["Rebirth100000000"]:FireServer()
+game:GetService("ReplicatedStorage")["Rebirth100M"]:FireServer()
         end
     else
         _G.m = false
@@ -298,7 +298,7 @@ Rebirths:CreateToggle("Auto Rebirths x1B", function(arg) --the (arg) is if the c
         _G.n = true 
         while wait(0) and _G.n do
    
-game:GetService("ReplicatedStorage")["Rebirth1000000000"]:FireServer()
+game:GetService("ReplicatedStorage")["Rebirth1B"]:FireServer()
         end
     else
         _G.n = false
@@ -310,7 +310,7 @@ Rebirths:CreateToggle("Auto Rebirths x10B", function(arg) --the (arg) is if the 
         _G.o = true 
         while wait(0) and _G.o do
    
-game:GetService("ReplicatedStorage")["Rebirth10000000000"]:FireServer()
+game:GetService("ReplicatedStorage")["Rebirth10B"]:FireServer()
         end
     else
         _G.o = false
