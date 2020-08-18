@@ -64,37 +64,12 @@ AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox 
         while wait(0) and _G.b do
  
 
-   game:GetService("ReplicatedStorage").Click:FireServer()
+game.RunService.RenderStepped:Connect(function()
+ for i=1,1 do
+    workspace["player name"].Bomb.E:FireServer()    --Change Your Name
+ end
+end)
 
-   game:GetService("ReplicatedStorage").Click:FireServer()
-
-   game:GetService("ReplicatedStorage").Click:FireServer()
-
-   game:GetService("ReplicatedStorage").Click:FireServer()
-
-   game:GetService("ReplicatedStorage").Click:FireServer()
-
-   game:GetService("ReplicatedStorage").Click:FireServer()
-
-   game:GetService("ReplicatedStorage").Click:FireServer()
-
-   game:GetService("ReplicatedStorage").Click:FireServer()
-
-   game:GetService("ReplicatedStorage").Click:FireServer()
-
-   game:GetService("ReplicatedStorage").Click:FireServer()
-
-   game:GetService("ReplicatedStorage").Click:FireServer()
-
-   game:GetService("ReplicatedStorage").Click:FireServer()
-
-   game:GetService("ReplicatedStorage").Click:FireServer()
-
-   game:GetService("ReplicatedStorage").Click:FireServer()
-
-   game:GetService("ReplicatedStorage").Click:FireServer()
-
-   game:GetService("ReplicatedStorage").Click:FireServer()
     end
     else
         _G.b = false
