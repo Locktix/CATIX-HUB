@@ -1534,6 +1534,25 @@ crates:CreateToggle("Auto Buy Hero Crate (4)", function(arg) --the (arg) is if t
     end
 end)
 
+crates:CreateToggle("Auto Buy Mystic Crate (5)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.OOD2 = true 
+        while wait(0) and _G.OOD2 do
+ local args = {
+    [1] = {
+        ["Amount"] = 3,
+        ["UpdateType"] = "Open",
+        ["CrateType"] = "Crate5",
+    },
+}
+
+game:GetService("ReplicatedStorage").Functions.CrateFunction:InvokeServer(unpack(args))           
+        end
+    else
+        _G.OOD2 = false
+    end
+end)
+
 AutoTab:CreateToggle("Auto Buy Potions", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.as = true 
@@ -1612,7 +1631,7 @@ end
     end
 end)
 
-Upgrades:CreateToggle("Auto Buy All Upgrades", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateToggle("Auto Buy All Upgrades", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.a = true 
         while wait(0) and _G.a do
@@ -1761,7 +1780,26 @@ local args = {
 
 game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
 
+local args = {
+    [1] = {
+        ["Upgrade"] = "HatTier",
+        ["RequestType"] = "UpgradeMax"
+    }
+}
+
+game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+
+local args = {
+    [1] = {
+        ["Upgrade"] = "PetCloner",
+        ["RequestType"] = "UpgradeMax"
+    }
+}
+
+game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+
         end
+end
     else
         _G.m = false
     end
