@@ -25,13 +25,14 @@ credits:CreateButton("bsoleil31FR[inchala ptn]#9001", function() --you dont need
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("Big C#5347", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
-end)
-
 credits:CreateButton("https://discord.gg/PdUTrVG", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
+
+credits:CreateButton("Bebo Mods#1110", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
 
 AutoTab:CreateToggle("Auto Lucky Blocks FREE", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
