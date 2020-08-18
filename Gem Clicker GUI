@@ -605,7 +605,7 @@ Sacrifices:CreateToggle("Auto Buy Sacrifices x1K", function(arg) --the (arg) is 
         _G.S6 = true 
         while wait(0) and _G.S6 do
    
-game:GetService("ReplicatedStorage").RemoteEvents["Sacrifice1K"]:FireServer()
+game:GetService("ReplicatedStorage").RemoteEvents["Sacrifice1k"]:FireServer()
         end
     else
         _G.S6 = false
@@ -617,7 +617,7 @@ Sacrifices:CreateToggle("Auto Buy Sacrifices x10k", function(arg) --the (arg) is
         _G.S7 = true 
         while wait(0) and _G.S7 do
    
-game:GetService("ReplicatedStorage").RemoteEvents["Sacrifice10K"]:FireServer()
+game:GetService("ReplicatedStorage").RemoteEvents["Sacrifice10k"]:FireServer()
         end
     else
         _G.S7 = false
@@ -629,7 +629,7 @@ Sacrifices:CreateToggle("Auto Buy Sacrifices x100k", function(arg) --the (arg) i
         _G.S8 = true 
         while wait(0) and _G.S8 do
    
-game:GetService("ReplicatedStorage").RemoteEvents["Sacrifice100K"]:FireServer()
+game:GetService("ReplicatedStorage").RemoteEvents["Sacrifice100k"]:FireServer()
         end
     else
         _G.S8 = false
