@@ -937,7 +937,7 @@ rebirths:CreateToggle("Rebirth X1", function(arg) --the (arg) is if the checkbox
     end
 end)
 
-eggs2:CreateToggle("Auto Buy Frost Egg (14)3", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs2:CreateToggle("Auto Buy Mystic Egg (14)3", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.E14 = true 
         while wait(0) and _G.E14 do
@@ -956,7 +956,7 @@ eggs2:CreateToggle("Auto Buy Frost Egg (14)3", function(arg) --the (arg) is if t
     end
 end)
 
-eggs2:CreateToggle("Auto Buy Frost Egg (14)2", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs2:CreateToggle("Auto Buy Mystic Egg (14)2", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.E141 = true 
         while wait(0) and _G.E141 do
@@ -975,7 +975,7 @@ eggs2:CreateToggle("Auto Buy Frost Egg (14)2", function(arg) --the (arg) is if t
     end
 end)
 
-eggs2:CreateToggle("Auto Buy Frost Egg (14)1", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs2:CreateToggle("Auto Buy Mystic Egg (14)1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.E142 = true 
         while wait(0) and _G.E142 do
@@ -994,7 +994,7 @@ eggs2:CreateToggle("Auto Buy Frost Egg (14)1", function(arg) --the (arg) is if t
     end
 end)
 
-eggs2:CreateToggle("Auto Buy Frost Egg (14)", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs2:CreateToggle("Auto Buy Mystic Egg (14)", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.E143 = true 
         while wait(0) and _G.E143 do
