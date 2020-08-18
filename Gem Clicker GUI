@@ -116,6 +116,61 @@ AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox 
     end
 end)
 
+AutoTab:CreateToggle("Buy Click Faster", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.cl = true 
+        while wait(0) and _G.cl do
+   
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade2"]:FireServer()
+        end
+    else
+        _G.cl = false
+    end
+end)
+
+AutoTab:CreateToggle("Buy Gem Multiplier", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Gem = true 
+        while wait(0) and _G.Gem do
+   
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1100"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade11M"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1100M"]:FireServer()
+        end
+    else
+        _G.Gem = false
+    end
+end)
+
+AutoTab:CreateToggle("Buy Xp Multiplier", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.xp = true 
+        while wait(0) and _G.xp do
+   
+game:GetService("ReplicatedStorage").Upgrades["Upgrade4"]:FireServer()
+        end
+    else
+        _G.xp = false
+    end
+end)
+
+AutoTab:CreateToggle("Buy Increase Walkspeed", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.In = true 
+        while wait(0) and _G.In do
+   
+game:GetService("ReplicatedStorage").Upgrades["Upgrade3"]:FireServer()
+        end
+    else
+        _G.In = false
+    end
+end)
+
 Rebirths:CreateToggle("Auto Rebirths x1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.c = true 
