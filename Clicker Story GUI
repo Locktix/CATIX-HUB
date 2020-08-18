@@ -104,7 +104,7 @@ eggs:CreateToggle("Auto Buy 750K Eggs", function(arg) --the (arg) is if the chec
         _G.e = true 
         while wait(0) and _G.e do
             local args = {
-    [1] = "XBOX Egg",
+    [1] = "X Egg",
     [2] = 1,
 }
 
@@ -973,7 +973,7 @@ eggs2:CreateToggle("Auto Buy 750K Eggs", function(arg) --the (arg) is if the che
         _G.e1 = true 
         while wait(0) and _G.e1 do
             local args = {
-    [1] = "XBOX Egg",
+    [1] = "X Egg",
     [2] = 3,
 }
 
