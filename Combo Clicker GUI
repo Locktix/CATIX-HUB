@@ -3,8 +3,6 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
 local AutoTab = Library:CreateTab("Combo Clickers GUI","things", true)
-local potions = Library:CreateTab("Auto Buy Potions","things", true)
-local Upgrades = Library:CreateTab("Auto Buy Upgrades","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
 local rebirths = Library:CreateTab("Auto Rebirths","things", true)
 local rebirths2 = Library:CreateTab("Auto Rebirths 2","things", true)
@@ -45,245 +43,6 @@ end)
 
 AutoTab:CreateButton("Attention Dysplay issues", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
-end)
-
-Upgrades:CreateToggle("Increase Walk Speed", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.a = true 
-        while wait(0) and _G.a do
-      local args = {
-    [1] = {
-        ["Upgrade"] = "WalkSpeed",
-        ["RequestType"] = "UpgradeMax"
-    }
-}
-
-game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
-
-        end
-    else
-        _G.a = false
-    end
-end)
-
-Upgrades:CreateToggle("Faster Combo", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.b = true 
-        while wait(0) and _G.b do
-            local args = {
-    [1] = {
-        ["Upgrade"] = "FasterCombo",
-        ["RequestType"] = "UpgradeMax",
-    },
-}
-
-game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
-        end
-    else
-        _G.b = false
-    end
-end)
-
-Upgrades:CreateToggle("Pet Luck", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.c = true 
-        while wait(0) and _G.c do
-           local args = {
-    [1] = {
-        ["Upgrade"] = "PetLuck",
-        ["RequestType"] = "UpgradeMax",
-    },
-}
-
-game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
-        end
-    else
-        _G.c = false
-    end
-end)
-
-Upgrades:CreateToggle("x1 Hat Equip", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.d = true 
-        while wait(0) and _G.d do
-            
-local args = {
-    [1] = {
-        ["Upgrade"] = "HatSlot",
-        ["RequestType"] = "UpgradeMax",
-    },
-}
-
-game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
-        end
-    else
-        _G.d = false
-    end
-end)
-
-Upgrades:CreateToggle("FREE auto Clicker", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.e = true 
-        while wait(0) and _G.e do
-           
-local args = {
-    [1] = {
-        ["Upgrade"] = "FreeAutoClicker",
-        ["RequestType"] = "UpgradeMax",
-    },
-}
-
-game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
-        end
-    else
-        _G.e = false
-    end
-end)
-
-Upgrades:CreateToggle("Gem Increase", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.f = true 
-        while wait(0) and _G.f do
-           local args = {
-    [1] = {
-        ["Upgrade"] = "GemIncrease",
-        ["RequestType"] = "UpgradeMax",
-    },
-}
-
-game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
-        end
-    else
-        _G.f = false
-    end
-end)
-
-Upgrades:CreateToggle("Rebirths Buttons", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.g = true 
-        while wait(0) and _G.g do
-          local args = {
-    [1] = {
-        ["Upgrade"] = "RebirthOptions",
-        ["RequestType"] = "UpgradeMax",
-    },
-}
-
-game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
-        end
-    else
-        _G.g = false
-    end
-end)
-
-Upgrades:CreateToggle("Pet Slots", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.h = true 
-        while wait(0) and _G.h do
-           local args = {
-    [1] = {
-        ["Upgrade"] = "PetSlot",
-        ["RequestType"] = "UpgradeMax",
-    },
-}
-
-game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
-        end
-    else
-        _G.h = false
-    end
-end)
-
-Upgrades:CreateToggle("Inventory", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.i = true 
-        while wait(0) and _G.i do
-           local args = {
-    [1] = {
-        ["Upgrade"] = "Inventory",
-        ["RequestType"] = "UpgradeMax",
-    },
-}
-
-game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
-        end
-    else
-        _G.i = false
-    end
-end)
-
-Upgrades:CreateToggle("Oppen Speed", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.j = true 
-        while wait(0) and _G.j do
-         local args = {
-    [1] = {
-        ["Upgrade"] = "OpeningSpeed",
-        ["RequestType"] = "UpgradeMax",
-    },
-}
-
-game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
-        end
-    else
-        _G.j = false
-    end
-end)
-
-Upgrades:CreateToggle("Max Combo", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.k = true 
-        while wait(0) and _G.k do
-            
-local args = {
-    [1] = {
-        ["Upgrade"] = "MaxCombo",
-        ["RequestType"] = "UpgradeMax",
-    },
-}
-
-game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
-        end
-    else
-        _G.k = false
-    end
-end)
-
-Upgrades:CreateToggle("Rocket Jump", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.l = true 
-        while wait(0) and _G.l do
-            local args = {
-    [1] = {
-        ["Upgrade"] = "RocketJump",
-        ["RequestType"] = "UpgradeMax",
-    },
-}
-
-game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
-        end
-    else
-        _G.l = false
-    end
-end)
-
-Upgrades:CreateToggle("Pet Tier", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.m = true 
-        while wait(0) and _G.m do
-local args = {
-    [1] = {
-        ["Upgrade"] = "PetTier",
-        ["RequestType"] = "UpgradeMax"
-    }
-}
-
-game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
-
-        end
-    else
-        _G.m = false
-    end
 end)
 
 AutoTab:CreateToggle("Speed Hack 100", function(arg) --the (arg) is if the checkbox is toggled or not
@@ -1184,7 +943,7 @@ eggs2:CreateToggle("Auto Buy Frost Egg (14)3", function(arg) --the (arg) is if t
         while wait(0) and _G.E14 do
             local args = {
                 [1] = {
-                    ["EggType"] = "Egg13",
+                    ["EggType"] = "Egg14",
                     ["UpdateType"] = "Open",
                     ["Amount"] = 10,
                 },
@@ -1203,7 +962,7 @@ eggs2:CreateToggle("Auto Buy Frost Egg (14)2", function(arg) --the (arg) is if t
         while wait(0) and _G.E141 do
             local args = {
                 [1] = {
-                    ["EggType"] = "Egg13",
+                    ["EggType"] = "Egg14",
                     ["UpdateType"] = "Open",
                     ["Amount"] = 10,
                 },
@@ -1222,7 +981,7 @@ eggs2:CreateToggle("Auto Buy Frost Egg (14)1", function(arg) --the (arg) is if t
         while wait(0) and _G.E142 do
             local args = {
                 [1] = {
-                    ["EggType"] = "Egg13",
+                    ["EggType"] = "Egg14",
                     ["UpdateType"] = "Open",
                     ["Amount"] = 10,
                 },
@@ -1241,7 +1000,7 @@ eggs2:CreateToggle("Auto Buy Frost Egg (14)", function(arg) --the (arg) is if th
         while wait(0) and _G.E143 do
             local args = {
                 [1] = {
-                    ["EggType"] = "Egg13",
+                    ["EggType"] = "Egg14",
                     ["UpdateType"] = "Open",
                     ["Amount"] = 10,
                 },
@@ -1250,7 +1009,7 @@ eggs2:CreateToggle("Auto Buy Frost Egg (14)", function(arg) --the (arg) is if th
             game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
         end
     else
-        _G.NE143 = false
+        _G.E143 = false
     end
 end)
 
@@ -1775,11 +1534,7 @@ crates:CreateToggle("Auto Buy Hero Crate (4)", function(arg) --the (arg) is if t
     end
 end)
 
-potions:CreateButton("Attention Dysplay issues", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
-end)
-
-potions:CreateToggle("Potion x2 CLICKS", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateToggle("Auto Buy Potions", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.as = true 
         while wait(0) and _G.as do
@@ -1790,16 +1545,8 @@ potions:CreateToggle("Potion x2 CLICKS", function(arg) --the (arg) is if the che
     },
 }
 game:GetService("ReplicatedStorage").Functions.Potions:InvokeServer(unpack(args))
-end
-    else
-        _G.as = false
-    end
-end)
 
-potions:CreateToggle("Potion x25 CLICKS", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.as = true 
-        while wait(0) and _G.as do
+  
             local args = {
             [1] = "Purchase",
             [2] = {
@@ -1807,16 +1554,9 @@ potions:CreateToggle("Potion x25 CLICKS", function(arg) --the (arg) is if the ch
     },
 }
 game:GetService("ReplicatedStorage").Functions.Potions:InvokeServer(unpack(args))
-end
-    else
-        _G.as = false
-    end
-end)
 
-potions:CreateToggle("Potion x10 CLICKS", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.as = true 
-        while wait(0) and _G.as do
+
+
             local args = {
             [1] = "Purchase",
             [2] = {
@@ -1824,16 +1564,9 @@ potions:CreateToggle("Potion x10 CLICKS", function(arg) --the (arg) is if the ch
     },
 }
 game:GetService("ReplicatedStorage").Functions.Potions:InvokeServer(unpack(args))
-end
-    else
-        _G.as = false
-    end
-end)
 
-potions:CreateToggle("Potion x5 CLICKS", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.as = true 
-        while wait(0) and _G.as do
+
+
             local args = {
             [1] = "Purchase",
             [2] = {
@@ -1841,16 +1574,9 @@ potions:CreateToggle("Potion x5 CLICKS", function(arg) --the (arg) is if the che
     },
 }
 game:GetService("ReplicatedStorage").Functions.Potions:InvokeServer(unpack(args))
-end
-    else
-        _G.as = false
-    end
-end)
 
-potions:CreateToggle("Potion x5 Gems", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.as = true 
-        while wait(0) and _G.as do
+
+
             local args = {
             [1] = "Purchase",
             [2] = {
@@ -1858,16 +1584,9 @@ potions:CreateToggle("Potion x5 Gems", function(arg) --the (arg) is if the check
     },
 }
 game:GetService("ReplicatedStorage").Functions.Potions:InvokeServer(unpack(args))
-end
-    else
-        _G.as = false
-    end
-end)
 
-potions:CreateToggle("Potion x2 Gems", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.as = true 
-        while wait(0) and _G.as do
+
+
             local args = {
             [1] = "Purchase",
             [2] = {
@@ -1875,16 +1594,9 @@ potions:CreateToggle("Potion x2 Gems", function(arg) --the (arg) is if the check
     },
 }
 game:GetService("ReplicatedStorage").Functions.Potions:InvokeServer(unpack(args))
-end
-    else
-        _G.as = false
-    end
-end)
 
-potions:CreateToggle("Potion x2 Luck", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.as = true 
-        while wait(0) and _G.as do
+
+
   local args = {
     [1] = "Purchase",
     [2] = {
@@ -1897,6 +1609,161 @@ game:GetService("ReplicatedStorage").Functions.Potions:InvokeServer(unpack(args)
 end
     else
         _G.as = false
+    end
+end)
+
+Upgrades:CreateToggle("Auto Buy All Upgrades", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.a = true 
+        while wait(0) and _G.a do
+      local args = {
+    [1] = {
+        ["Upgrade"] = "WalkSpeed",
+        ["RequestType"] = "UpgradeMax"
+    }
+}
+
+game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+
+
+
+
+            local args = {
+    [1] = {
+        ["Upgrade"] = "FasterCombo",
+        ["RequestType"] = "UpgradeMax",
+    },
+}
+
+game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+
+
+
+           local args = {
+    [1] = {
+        ["Upgrade"] = "PetLuck",
+        ["RequestType"] = "UpgradeMax",
+    },
+}
+
+game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+
+
+
+            
+local args = {
+    [1] = {
+        ["Upgrade"] = "HatSlot",
+        ["RequestType"] = "UpgradeMax",
+    },
+}
+
+game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+
+
+
+           
+local args = {
+    [1] = {
+        ["Upgrade"] = "FreeAutoClicker",
+        ["RequestType"] = "UpgradeMax",
+    },
+}
+
+game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+
+
+
+           local args = {
+    [1] = {
+        ["Upgrade"] = "GemIncrease",
+        ["RequestType"] = "UpgradeMax",
+    },
+}
+
+game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+
+
+          local args = {
+    [1] = {
+        ["Upgrade"] = "RebirthOptions",
+        ["RequestType"] = "UpgradeMax",
+    },
+}
+
+game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+
+
+
+           local args = {
+    [1] = {
+        ["Upgrade"] = "PetSlot",
+        ["RequestType"] = "UpgradeMax",
+    },
+}
+
+game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+
+
+
+           local args = {
+    [1] = {
+        ["Upgrade"] = "Inventory",
+        ["RequestType"] = "UpgradeMax",
+    },
+}
+
+game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+
+
+
+         local args = {
+    [1] = {
+        ["Upgrade"] = "OpeningSpeed",
+        ["RequestType"] = "UpgradeMax",
+    },
+}
+
+game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+ 
+
+
+        while wait(0) and _G.k do
+            
+local args = {
+    [1] = {
+        ["Upgrade"] = "MaxCombo",
+        ["RequestType"] = "UpgradeMax",
+    },
+}
+
+game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+
+
+
+            local args = {
+    [1] = {
+        ["Upgrade"] = "RocketJump",
+        ["RequestType"] = "UpgradeMax",
+    },
+}
+
+game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+
+
+
+local args = {
+    [1] = {
+        ["Upgrade"] = "PetTier",
+        ["RequestType"] = "UpgradeMax"
+    }
+}
+
+game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.m = false
     end
 end)
 
