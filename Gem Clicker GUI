@@ -129,18 +129,54 @@ game:GetService("ReplicatedStorage").Upgrades["Upgrade2"]:FireServer()
     end
 end)
 
-AutoTab:CreateToggle("Buy Gem Multiplier", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateToggle("Buy Gem Multiplier x1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Gem = true 
         while wait(0) and _G.Gem do
    
 game:GetService("ReplicatedStorage").Upgrades["Upgrade1"]:FireServer()
 
+        end
+    else
+        _G.Gem = false
+    end
+end)
+
+AutoTab:CreateToggle("Buy Gem Multiplier x100", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Gem = true 
+        while wait(0) and _G.Gem do
+   
+
+
 game:GetService("ReplicatedStorage").Upgrades["Upgrade1100"]:FireServer()
+
+
+        end
+    else
+        _G.Gem = false
+    end
+end)
+
+AutoTab:CreateToggle("Buy Gem Multiplier x1m", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Gem = true 
+        while wait(0) and _G.Gem do
 
 game:GetService("ReplicatedStorage").Upgrades["Upgrade11M"]:FireServer()
 
-game:GetService("ReplicatedStorage").Upgrades["Upgrade1100M"]:FireServer()
+        end
+    else
+        _G.Gem = false
+    end
+end)
+
+AutoTab:CreateToggle("Buy Gem Multiplier x100m", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Gem = true 
+        while wait(0) and _G.Gem do
+   game:GetService("ReplicatedStorage").Upgrades["Upgrade1100M"]:FireServer()
+
         end
     else
         _G.Gem = false
