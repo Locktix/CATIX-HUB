@@ -342,6 +342,42 @@ game:GetService("ReplicatedStorage")["Rebirth10T"]:FireServer()
     end
 end)
 
+Rebirths:CreateToggle("Auto Rebirths x1Qa", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.r1 = true 
+        while wait(0) and _G.r1 do
+   
+game:GetService("ReplicatedStorage")["Rebirth1Qa"]:FireServer()
+        end
+    else
+        _G.r1 = false
+    end
+end)
+
+Rebirths:CreateToggle("Auto Rebirths x100Qa", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.r2 = true 
+        while wait(0) and _G.r2 do
+   
+game:GetService("ReplicatedStorage")["Rebirth100Qa"]:FireServer()
+        end
+    else
+        _G.r2 = false
+    end
+end)
+
+Rebirths:CreateToggle("Auto Rebirths x1Qn", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.r3 = true 
+        while wait(0) and _G.r3 do
+   
+game:GetService("ReplicatedStorage")["Rebirth1Qn"]:FireServer()
+        end
+    else
+        _G.r3 = false
+    end
+end)
+
 eggs:CreateToggle("Auto Buy Common Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e1 = true 
@@ -486,6 +522,24 @@ game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
     end
 end)
 
+eggs:CreateToggle("Auto Buy Shiny Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e9 = true 
+        while wait(0) and _G.e9 do
+   
+local args = {
+    [1] = game:GetService("Players")["LocalPlayer"],
+    [2] = "Shiny",
+    [3] = true,
+}
+
+game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
+  end
+  else
+        _G.e9 = false
+    end
+end)
+
 Sacrifices:CreateToggle("Auto Buy Sacrifices x1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.S1 = true 
@@ -570,6 +624,42 @@ game:GetService("ReplicatedStorage").RemoteEvents["Sacrifice10K"]:FireServer()
     end
 end)
 
+Sacrifices:CreateToggle("Auto Buy Sacrifices x100k", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.S8 = true 
+        while wait(0) and _G.S8 do
+   
+game:GetService("ReplicatedStorage").RemoteEvents["Sacrifice100K"]:FireServer()
+        end
+    else
+        _G.S8 = false
+    end
+end)
+
+Sacrifices:CreateToggle("Auto Buy Sacrifices x1M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.S9 = true 
+        while wait(0) and _G.S9 do
+   
+game:GetService("ReplicatedStorage").RemoteEvents["Sacrifice1M"]:FireServer()
+        end
+    else
+        _G.S9 = false
+    end
+end)
+
+Sacrifices:CreateToggle("Auto Buy Sacrifices x10M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.S10 = true 
+        while wait(0) and _G.S10 do
+   
+game:GetService("ReplicatedStorage").RemoteEvents["Sacrifice10M"]:FireServer()
+        end
+    else
+        _G.S10 = false
+    end
+end)
+
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-951.15332, -375.698547, 626.717957)
 end)
@@ -596,6 +686,10 @@ end)
 
 teleports:CreateButton("World Boost x7", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1395.96582, -376.992554, -1936.14221)
+end)
+
+teleports:CreateButton("World Boost x8", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-834.579224, -361.419617, -1976.45862)
 end)
 
 --| Anti AFK | By Altix#3395
