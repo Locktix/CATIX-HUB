@@ -247,6 +247,22 @@ game:GetService("ReplicatedStorage").Events["Eggs Events"].OpenEgg:FireServer(un
     end
 end)
 
+eggs:CreateToggle("Auto Buy Frozen Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.k2 = true 
+        while wait(0) and _G.k2 do
+            local args = {
+    [1] = "Frozen Tier"
+}
+
+game:GetService("ReplicatedStorage").Events["Eggs Events"].OpenEgg:FireServer(unpack(args))
+
+        end
+    else
+        _G.k2 = false
+    end
+end)
+
 buy:CreateToggle("Auto Buy Bags", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.l = true 
