@@ -54,7 +54,7 @@ _G.Speed = true
          end
 end)
 
-AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateToggle("Auto Click Patched For moment", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.b = true 
         while wait(0) and _G.b do
@@ -62,9 +62,10 @@ AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox 
 
 game.RunService.RenderStepped:Connect(function()
  for i=1,1 do
-    workspace["player name"].Bomb.E:FireServer()    --Change Your Name
+   game:GetService("ReplicatedStorage").AutoClick:FireServer()
  end
 end)
+
     end
     else
         _G.b = false
@@ -89,7 +90,11 @@ AutoTab:CreateToggle("Buy Click Faster", function(arg) --the (arg) is if the che
         while wait(0) and _G.cl do
    
 
-game:GetService("ReplicatedStorage").Upgrades["Upgrade2"]:FireServer()
+game.RunService.RenderStepped:Connect(function()
+ for i=1,1 do
+ game:GetService("ReplicatedStorage").AutoClick:FireServer()    
+ end
+end)
         end
     else
         _G.cl = false
