@@ -65,7 +65,6 @@ game.RunService.RenderStepped:Connect(function()
     workspace["player name"].Bomb.E:FireServer()    --Change Your Name
  end
 end)
-
     end
     else
         _G.b = false
