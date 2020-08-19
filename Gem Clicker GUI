@@ -136,6 +136,25 @@ AutoTab:CreateToggle("Buy Gem Multiplier x1", function(arg) --the (arg) is if th
    
 game:GetService("ReplicatedStorage").Upgrades["Upgrade1"]:FireServer()
 
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1"]:FireServer()
+
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1"]:FireServer()
+
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1"]:FireServer()
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1"]:FireServer()
+
         end
     else
         _G.Gem = false
@@ -148,6 +167,27 @@ AutoTab:CreateToggle("Buy Gem Multiplier x100", function(arg) --the (arg) is if 
         while wait(0) and _G.Gem do
    
 
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1100"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1100"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1100"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1100"]:FireServer()
+
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1100"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1100"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1100"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1100"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1100"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1100"]:FireServer()
 
 game:GetService("ReplicatedStorage").Upgrades["Upgrade1100"]:FireServer()
 
@@ -165,6 +205,24 @@ AutoTab:CreateToggle("Buy Gem Multiplier x1m", function(arg) --the (arg) is if t
 
 game:GetService("ReplicatedStorage").Upgrades["Upgrade11M"]:FireServer()
 
+game:GetService("ReplicatedStorage").Upgrades["Upgrade11M"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade11M"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade11M"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade11M"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade11M"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade11M"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade11M"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade11M"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade11M"]:FireServer()
+
         end
     else
         _G.Gem = false
@@ -176,6 +234,26 @@ AutoTab:CreateToggle("Buy Gem Multiplier x100m", function(arg) --the (arg) is if
         _G.Gem = true 
         while wait(0) and _G.Gem do
    game:GetService("ReplicatedStorage").Upgrades["Upgrade1100M"]:FireServer()
+
+   game:GetService("ReplicatedStorage").Upgrades["Upgrade1100M"]:FireServer()
+
+   game:GetService("ReplicatedStorage").Upgrades["Upgrade1100M"]:FireServer()
+
+   game:GetService("ReplicatedStorage").Upgrades["Upgrade1100M"]:FireServer()
+
+   game:GetService("ReplicatedStorage").Upgrades["Upgrade1100M"]:FireServer()
+
+   game:GetService("ReplicatedStorage").Upgrades["Upgrade1100M"]:FireServer()
+
+   game:GetService("ReplicatedStorage").Upgrades["Upgrade1100M"]:FireServer()
+
+   game:GetService("ReplicatedStorage").Upgrades["Upgrade1100M"]:FireServer()
+
+
+   game:GetService("ReplicatedStorage").Upgrades["Upgrade1100M"]:FireServer()
+
+   game:GetService("ReplicatedStorage").Upgrades["Upgrade1100M"]:FireServer()
+
 
         end
     else
