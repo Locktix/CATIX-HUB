@@ -1,15 +1,15 @@
+--https://www.roblox.com/games/5514871679/UPDATE-1-Castle-Clickers
+
+
+
 
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
-local AutoTab = Library:CreateTab("Combo Clickers GUI","things", true)
-local teleports = Library:CreateTab("Teleports","things", true)
-local rebirths = Library:CreateTab("Auto Rebirths","things", true)
-local rebirths2 = Library:CreateTab("Auto Rebirths 2","things", true)
-local rebirths3 = Library:CreateTab("Auto Rebirths 3","things", true)
+local AutoTab = Library:CreateTab("Castle-Clickers GUI","things", true)
+local Rebirths = Library:CreateTab("Auto Buy Rebirths","things", true)
+local Rebirths1 = Library:CreateTab("Rebirths whit max upgrade","things", true)
 local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
-local eggs2 = Library:CreateTab("Auto Buy Eggs 2","things", true)
-local crates = Library:CreateTab("Auto Buy Crates","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
 
@@ -38,1947 +38,930 @@ game:GetService("CoreGui").uiui:nothing()
 end)
 
 
-AutoTab:CreateButton("Attention Dysplay issues", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
-end)
-
 AutoTab:CreateToggle("Speed Hack 100", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.n = true 
-        while wait(0) and _G.n do
+_G.Speed = true 
+        while wait() and _G.Speed do
             game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
         end
     else
-        _G.n = false
-    end
+        _G.Speed = false
+           game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
+         end
 end)
 
-AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateToggle("Auto Click x100", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.o = true 
-        while wait(0) and _G.o do
-            game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+_G.za = true 
+        while wait() and _G.za do
 
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
 
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+  
 
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+game.RunService.RenderStepped:Connect(function()
+ for i=1,1 do
 
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
+game:GetService("ReplicatedStorage").RemoteEvents.Click:FireServer()
 
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
-
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
-
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
-
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
-
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
-
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
-
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
-
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
-
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
-
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
-
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
-
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
-
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
-
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
-
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
-
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
-
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
-
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
-
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
-
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
-
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
-
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
-
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
-
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
-
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
-
-game:GetService("ReplicatedStorage").Functions.Click:InvokeServer("Click")
-        end
-    else
-        _G.o = false
-    end
+ end
 end)
 
-eggs:CreateToggle("Auto Evolve Pets", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.p = true 
-        while wait(0) and _G.p do
-            local A_1 = 
-{
-	["UpdateType"] = "UpgradeAllPets"
-}
-local Event = game:GetService("ReplicatedStorage").Events.InventoryEvent
-Event:FireServer(A_1)
-
-        end
-    else
-        _G.p = false
-    end
-end)
-
-rebirths3:CreateToggle("Rebirth X10Se", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.a = true 
-        while wait(0) and _G.a do
-            local args = {
-                [1] = {
-                    ["Option"] = 1000000000000000000000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.a = false
-    end
-end)
-
-rebirths3:CreateToggle("Rebirth X1Se", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.a = true 
-        while wait(0) and _G.a do
-            local args = {
-                [1] = {
-                    ["Option"] = 100000000000000000000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.a = false
-    end
-end)
-
-rebirths3:CreateToggle("Rebirth X100S", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.a = true 
-        while wait(0) and _G.a do
-            local args = {
-                [1] = {
-                    ["Option"] = 10000000000000000000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.a = false
-    end
-end)
-
-rebirths3:CreateToggle("Rebirth X10S", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.a = true 
-        while wait(0) and _G.a do
-            local args = {
-                [1] = {
-                    ["Option"] = 10000000000000000000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.a = false
-    end
-end)
-
-rebirths3:CreateToggle("Rebirth X1S", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.a = true 
-        while wait(0) and _G.a do
-            local args = {
-                [1] = {
-                    ["Option"] = 1000000000000000000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.a = false
-    end
-end)
-
-rebirths3:CreateToggle("Rebirth X100Qu", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.a = true 
-        while wait(0) and _G.a do
-            local args = {
-                [1] = {
-                    ["Option"] = 100000000000000000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.a = false
-    end
-end)
-
-rebirths3:CreateToggle("Rebirth X10Qu", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.a = true 
-        while wait(0) and _G.a do
-            local args = {
-                [1] = {
-                    ["Option"] = 10000000000000000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.a = false
-    end
-end)
-
-rebirths3:CreateToggle("Rebirth X1Qu", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.b = true 
-        while wait(0) and _G.b do
-            local args = {
-                [1] = {
-                    ["Option"] = 1000000000000000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.b = false
-    end
-end)
-
-rebirths2:CreateToggle("Rebirth X100Q", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.c = true 
-        while wait(0) and _G.c do
-            local args = {
-                [1] = {
-                    ["Option"] = 100000000000000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.c = false
-    end
-end)
-
-rebirths2:CreateToggle("Rebirth X10Q", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.d = true 
-        while wait(0) and _G.d do
-            local args = {
-                [1] = {
-                    ["Option"] = 10000000000000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.d = false
-    end
-end)
-
-rebirths2:CreateToggle("Rebirth X1Q", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.e = true 
-        while wait(0) and _G.e do
-            local args = {
-                [1] = {
-                    ["Option"] = 1000000000000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.e = false
-    end
-end)
-
-rebirths2:CreateToggle("Rebirth X100T", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.f = true 
-        while wait(0) and _G.f do
-            local args = {
-                [1] = {
-                    ["Option"] = 100000000000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.f = false
-    end
-end)
-
-rebirths2:CreateToggle("Rebirth X25T", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.g = true 
-        while wait(0) and _G.g do
-            local args = {
-                [1] = {
-                    ["Option"] = 25000000000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.g = false
-    end
-end)
-
-rebirths2:CreateToggle("Rebirth X10T", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.h = true 
-        while wait(0) and _G.h do
-            local args = {
-                [1] = {
-                    ["Option"] = 10000000000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.h = false
-    end
-end)
-
-rebirths2:CreateToggle("Rebirth X5T", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.i = true 
-        while wait(0) and _G.i do
-            local args = {
-                [1] = {
-                    ["Option"] = 5000000000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.i = false
-    end
-end)
-
-rebirths2:CreateToggle("Rebirth X2,5T", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.j = true 
-        while wait(0) and _G.j do
-            local args = {
-                [1] = {
-                    ["Option"] = 2500000000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.j = false
-    end
-end)
-
-
-rebirths2:CreateToggle("Rebirth X1T", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.k = true 
-        while wait(0) and _G.k do
-            local args = {
-                [1] = {
-                    ["Option"] = 1000000000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.k = false
-    end
-end)
-
-rebirths2:CreateToggle("Rebirth X500B", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.l = true 
-        while wait(0) and _G.l do
-            local args = {
-                [1] = {
-                    ["Option"] = 500000000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.l = false
-    end
-end)
-
-rebirths2:CreateToggle("Rebirth X250B", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.m = true 
-        while wait(0) and _G.m do
-            local args = {
-                [1] = {
-                    ["Option"] = 250000000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.m = false
-    end
-end)
-
-rebirths2:CreateToggle("Rebirth X100B", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.n = true 
-        while wait(0) and _G.n do
-            local args = {
-                [1] = {
-                    ["Option"] = 100000000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.n = false
-    end
-end)
-
-rebirths2:CreateToggle("Rebirth X50B", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.o = true 
-        while wait(0) and _G.o do
-            local args = {
-                [1] = {
-                    ["Option"] = 50000000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.o = false
-    end
-end)
-
-rebirths2:CreateToggle("Rebirth X25B", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.p = true 
-        while wait(0) and _G.p do
-            local args = {
-                [1] = {
-                    ["Option"] = 25000000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.p = false
-    end
-end)
-
-rebirths2:CreateToggle("Rebirth X10B", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.q = true 
-        while wait(0) and _G.q do
-            local args = {
-                [1] = {
-                    ["Option"] = 10000000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.q = false
-    end
-end)
-
-rebirths2:CreateToggle("Rebirth X2,5B", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.r = true 
-        while wait(0) and _G.r do
-            local args = {
-                [1] = {
-                    ["Option"] = 2500000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.r = false
-    end
-end)
-
-rebirths:CreateToggle("Rebirth X1B", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.s = true 
-        while wait(0) and _G.s do
-            local args = {
-                [1] = {
-                    ["Option"] = 1000000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.s = false
-    end
-end)
-
-rebirths:CreateToggle("Rebirth X500M", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.t = true 
-        while wait(0) and _G.t do
-            local args = {
-                [1] = {
-                    ["Option"] = 500000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.t = false
-    end
-end)
-
-rebirths:CreateToggle("Rebirth X100M", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.u = true 
-        while wait(0) and _G.u do
-            local args = {
-                [1] = {
-                    ["Option"] = 100000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.u = false
-    end
-end)
-
-rebirths:CreateToggle("Rebirth X50M", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.v = true 
-        while wait(0) and _G.v do
-            local args = {
-                [1] = {
-                    ["Option"] = 50000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.v = false
-    end
-end)
-
-rebirths:CreateToggle("Rebirth X15M", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.w = true 
-        while wait(0) and _G.w do
-            local args = {
-                [1] = {
-                    ["Option"] = 15000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.w = false
-    end
-end)
-
-rebirths:CreateToggle("Rebirth X10M", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.x = true 
-        while wait(0) and _G.x do
-            local args = {
-                [1] = {
-                    ["Option"] = 10000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.x = false
-    end
-end)
-
-rebirths:CreateToggle("Rebirth X5M", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.y = true 
-        while wait(0) and _G.y do
-            local args = {
-                [1] = {
-                    ["Option"] = 5000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.y = false
-    end
-end)
-
-rebirths:CreateToggle("Rebirth X2M", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.z = true 
-        while wait(0) and _G.z do
-            local args = {
-                [1] = {
-                    ["Option"] = 2000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.z = false
-    end
-end)
-
-rebirths:CreateToggle("Rebirth X1M", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.za = true 
-        while wait(0) and _G.za do
-            local args = {
-                [1] = {
-                    ["Option"] = 1000000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
+           end
+  else
+    
         _G.za = false
     end
 end)
 
-rebirths:CreateToggle("Rebirth X500K", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateToggle("Auto Click x8", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.zb = true 
-        while wait(0) and _G.zb do
-            local args = {
-                [1] = {
-                    ["Option"] = 500000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zb = false
-    end
-end)
+_G.za = true 
+        while wait() and _G.za do
 
-rebirths:CreateToggle("Rebirth X250K", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zc = true 
-        while wait(0) and _G.zc do
-            local args = {
-                [1] = {
-                    ["Option"] = 250000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zc = false
-    end
-end)
-
-rebirths:CreateToggle("Rebirth X100K", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zd = true 
-        while wait(0) and _G.zd do
-            local args = {
-                [1] = {
-                    ["Option"] = 100000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zd = false
-    end
-end)
-
-rebirths:CreateToggle("Rebirth X50K", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.ze = true 
-        while wait(0) and _G.ze do
-            local args = {
-                [1] = {
-                    ["Option"] = 50000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.ze = false
-    end
-end)
-
-rebirths:CreateToggle("Rebirth X25K", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zf = true 
-        while wait(0) and _G.zf do
-            local args = {
-                [1] = {
-                    ["Option"] = 25000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zf = false
-    end
-end)
-
-rebirths:CreateToggle("Rebirth X10K", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zg = true 
-        while wait(0) and _G.zg do
-            local args = {
-                [1] = {
-                    ["Option"] = 10000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zg = false
-    end
-end)
-
-rebirths:CreateToggle("Rebirth X2,5K", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zh = true 
-        while wait(0) and _G.zh do
-            local args = {
-                [1] = {
-                    ["Option"] = 2500,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zh = false
-    end
-end)
-
-rebirths:CreateToggle("Rebirth X1K", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zi = true 
-        while wait(0) and _G.zi do
-            local args = {
-                [1] = {
-                    ["Option"] = 1000,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zi = false
-    end
-end)
-
-rebirths:CreateToggle("Rebirth X500", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zj = true 
-        while wait(0) and _G.zj do
-            local args = {
-                [1] = {
-                    ["Option"] = 500,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zj = false
-    end
-end)
-
-rebirths:CreateToggle("Rebirth X100", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zk = true 
-        while wait(0) and _G.zk do
-            local args = {
-                [1] = {
-                    ["Option"] = 100,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zk = false
-    end
-end)
-
-rebirths:CreateToggle("Rebirth X50", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zl = true 
-        while wait(0) and _G.zl do
-            local args = {
-                [1] = {
-                    ["Option"] = 50,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zl = false
-    end
-end)
-
-rebirths:CreateToggle("Rebirth X10", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zm = true 
-        while wait(0) and _G.zm do
-            local args = {
-                [1] = {
-                    ["Option"] = 10,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zm = false
-    end
-end)
-
-rebirths:CreateToggle("Rebirth X1", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zn = true 
-        while wait(0) and _G.zn do
-            local args = {
-                [1] = {
-                    ["Option"] = 1,
-                    ["RequestType"] = "RequestRebirth",
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zn = false
-    end
-end)
-
-eggs2:CreateToggle("Auto Buy Royal Egg (15)3", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.nm = true 
-        while wait(0) and _G.nm do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg15",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.nm = false
-    end
-end)
-
-eggs2:CreateToggle("Auto Buy Royal Egg (15)2", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.E151 = true 
-        while wait(0) and _G.E151 do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg15",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.E151 = false
-    end
-end)
-
-eggs2:CreateToggle("Auto Buy Royal Egg (15)1", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.E152 = true 
-        while wait(0) and _G.E152 do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg15",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.E152 = false
-    end
-end)
-
-eggs2:CreateToggle("Auto Buy Royal Egg (15)", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.E153 = true 
-        while wait(0) and _G.E153 do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg15",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.E153 = false
-    end
-end)
-
-eggs2:CreateToggle("Auto Buy Mystic Egg (14)3", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.E14 = true 
-        while wait(0) and _G.E14 do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg14",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.E14 = false
-    end
-end)
-
-eggs2:CreateToggle("Auto Buy Mystic Egg (14)2", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.E141 = true 
-        while wait(0) and _G.E141 do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg14",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.E141 = false
-    end
-end)
-
-eggs2:CreateToggle("Auto Buy Mystic Egg (14)1", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.E142 = true 
-        while wait(0) and _G.E142 do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg14",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.E142 = false
-    end
-end)
-
-eggs2:CreateToggle("Auto Buy Mystic Egg (14)", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.E143 = true 
-        while wait(0) and _G.E143 do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg14",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.E143 = false
-    end
-end)
-
-eggs2:CreateToggle("Auto Buy Frost Egg (13)3", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.D = true 
-        while wait(0) and _G.D do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg13",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.D = false
-    end
-end)
-
-eggs2:CreateToggle("Auto Buy Frost Egg (13)2", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.L = true 
-        while wait(0) and _G.L do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg13",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.L = false
-    end
-end)
-
-eggs2:CreateToggle("Auto Buy Frost Egg (13)1", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.M = true 
-        while wait(0) and _G.M do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg13",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.M = false
-    end
-end)
-
-eggs2:CreateToggle("Auto Buy Frost Egg (13)", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.N = true 
-        while wait(0) and _G.N do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg13",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.N = false
-    end
-end)
-
-eggs2:CreateToggle("Auto Buy Russo Egg (12)", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zr = true 
-        while wait(0) and _G.zr do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg12",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zr = false
-    end
-end)
-
-eggs2:CreateToggle("Auto Buy Arcade Egg (11)", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zv = true 
-        while wait(0) and _G.zv do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg11",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zv = false
-    end
-end)
-
-eggs2:CreateToggle("Auto Buy Dragons Egg (10)", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zz = true 
-        while wait(0) and _G.zz do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg10",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zz = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy villian Egg (9)", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zza = true 
-        while wait(0) and _G.zza do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg9",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zza = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Alien Egg (8)3", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzb = true 
-        while wait(0) and _G.zzb do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg8",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zzb = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Alien Egg (8)2", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzc = true 
-        while wait(0) and _G.zzc do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg8",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zzc = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Alien Egg (8)1", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzd = true 
-        while wait(0) and _G.zzd do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg8",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zzd = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Alien Egg (8)", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zze = true 
-        while wait(0) and _G.zze do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg8",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zze = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Ocean Egg (7)3", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzf = true 
-        while wait(0) and _G.zzf do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg7",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-
-              
-              },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zzf = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Ocean Egg (7)2", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzg = true 
-        while wait(0) and _G.zzg do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg7",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-
-              
-              },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zzg = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Ocean Egg (7)1", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzh = true 
-        while wait(0) and _G.zzh do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg7",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-
-              
-              },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zzh = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Ocean Egg (7)", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzi = true 
-        while wait(0) and _G.zzi do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg7",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-
-              
-              },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zzi = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy 3M Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzj = true 
-        while wait(0) and _G.zzj do
-        local args = {
-    [1] = {
-        ["EggType"] = "Egg3M",
-        ["UpdateType"] = "Open",
-        ["Amount"] = 3,
-    },
-}
-
-game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))          
-        end
-    else
-        _G.zzj = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Ancient Egg (6)", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzo = true 
-        while wait(0) and _G.zzo do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg6",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zzo = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Carnival Egg (5)", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzp = true 
-        while wait(0) and _G.zzp do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg5",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zzp = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Emojis Egg (4)", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzq = true 
-        while wait(0) and _G.zzq do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg4",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zzq = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Tropical Egg (3)", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzr = true 
-        while wait(0) and _G.zzr do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg3",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zzr = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Spotted Egg (2)", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzs = true 
-        while wait(0) and _G.zzs do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg2",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zzs = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy  Egg (1)", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzt = true 
-        while wait(0) and _G.zzt do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg1",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.zzt = false
-    end
-end)
-
-crates:CreateToggle("Auto Buy Blossom Crate (2)", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.ODD = true 
-        while wait(0) and _G.ODD do
-            local args = {
-                [1] = {
-                    ["CrateType"] = "Crate2",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.CrateFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.ODD = false
-    end
-end)
-
-crates:CreateToggle("Auto Buy Carnival Crate (3)", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.ODD4 = true 
-        while wait(0) and _G.ODD4 do
-            local args = {
-                [1] = {
-                    ["CrateType"] = "Crate3",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.CrateFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.ODD4 = false
-    end
-end)
-
-crates:CreateToggle("Auto Buy Grasy Crate (1)", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.ODD1 = true 
-        while wait(0) and _G.ODD1 do
-            local args = {
-                [1] = {
-                    ["CrateType"] = "Crate1",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.CrateFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.ODD1 = false
-    end
-end)
-
-crates:CreateToggle("Auto Buy Hero Crate (4)", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.OOD2 = true 
-        while wait(0) and _G.OOD2 do
-            local args = {
-                [1] = {
-                    ["CrateType"] = "Crate4",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 3,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.CrateFunction:InvokeServer(unpack(args))            
-        end
-    else
-        _G.OOD2 = false
-    end
-end)
-
-crates:CreateToggle("Auto Buy Mystic Crate (5)", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.OOD2 = true 
-        while wait(0) and _G.OOD2 do
- local args = {
-    [1] = {
-        ["Amount"] = 3,
-        ["UpdateType"] = "Open",
-        ["CrateType"] = "Crate5",
-    },
-}
-
-game:GetService("ReplicatedStorage").Functions.CrateFunction:InvokeServer(unpack(args))           
-        end
-    else
-        _G.OOD2 = false
-    end
-end)
-
-AutoTab:CreateToggle("Auto Buy Potions", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.as = true 
-        while wait(0) and _G.as do
-            local args = {
-            [1] = "Purchase",
-            [2] = {
-        ["Type"] = "ClickBooster2",
-    },
-}
-game:GetService("ReplicatedStorage").Functions.Potions:InvokeServer(unpack(args))
 
   
-            local args = {
-            [1] = "Purchase",
-            [2] = {
-        ["Type"] = "ClickBooster25",
-    },
-}
-game:GetService("ReplicatedStorage").Functions.Potions:InvokeServer(unpack(args))
 
 
 
-            local args = {
-            [1] = "Purchase",
-            [2] = {
-        ["Type"] = "ClickBooster10",
-    },
-}
-game:GetService("ReplicatedStorage").Functions.Potions:InvokeServer(unpack(args))
+game:GetService("ReplicatedStorage").RemoteEvents.Click:FireServer()
+
+
+game:GetService("ReplicatedStorage").RemoteEvents.Click:FireServer()
+
+
+game:GetService("ReplicatedStorage").RemoteEvents.Click:FireServer()
+
+
+game:GetService("ReplicatedStorage").RemoteEvents.Click:FireServer()
+
+
+game:GetService("ReplicatedStorage").RemoteEvents.Click:FireServer()
+
+
+game:GetService("ReplicatedStorage").RemoteEvents.Click:FireServer()
+
+
+game:GetService("ReplicatedStorage").RemoteEvents.Click:FireServer()
+
+
+game:GetService("ReplicatedStorage").RemoteEvents.Click:FireServer()
 
 
 
-            local args = {
-            [1] = "Purchase",
-            [2] = {
-        ["Type"] = "ClickBooster5",
-    },
-}
-game:GetService("ReplicatedStorage").Functions.Potions:InvokeServer(unpack(args))
-
-
-
-            local args = {
-            [1] = "Purchase",
-            [2] = {
-        ["Type"] = "GemBooster5",
-    },
-}
-game:GetService("ReplicatedStorage").Functions.Potions:InvokeServer(unpack(args))
-
-
-
-            local args = {
-            [1] = "Purchase",
-            [2] = {
-        ["Type"] = "GemBooster2",
-    },
-}
-game:GetService("ReplicatedStorage").Functions.Potions:InvokeServer(unpack(args))
-
-
-
-  local args = {
-    [1] = "Purchase",
-    [2] = {
-        ["Amount"] = 1,
-        ["Type"] = "LuckBooster2",
-    },
-}
-
-game:GetService("ReplicatedStorage").Functions.Potions:InvokeServer(unpack(args))
-end
-    else
-        _G.as = false
+           end
+  else
+    
+        _G.za = false
     end
 end)
 
-AutoTab:CreateToggle("Auto Buy All Upgrades", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateToggle("Auto Buy Rebirths Upgrades", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.a = true 
-        while wait(0) and _G.a do
-      local args = {
-    [1] = {
-        ["Upgrade"] = "WalkSpeed",
-        ["RequestType"] = "UpgradeMax"
-    }
+_G.re = true 
+        while wait() and _G.re do
+
+
+ local args = {
+    [1] = "PetsEquipped"
 }
 
-game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+game:GetService("ReplicatedStorage").RemoteEvents.Upgrade:FireServer(unpack(args))
 
-
-
-
-            local args = {
-    [1] = {
-        ["Upgrade"] = "FasterCombo",
-        ["RequestType"] = "UpgradeMax",
-    },
-}
-
-game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
-
-
-
-           local args = {
-    [1] = {
-        ["Upgrade"] = "PetLuck",
-        ["RequestType"] = "UpgradeMax",
-    },
-}
-
-game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
-
-
-
-            
 local args = {
-    [1] = {
-        ["Upgrade"] = "HatSlot",
-        ["RequestType"] = "UpgradeMax",
-    },
+    [1] = "AutoClick"
 }
 
-game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+game:GetService("ReplicatedStorage").RemoteEvents.Upgrade:FireServer(unpack(args))
 
-
-
-           
 local args = {
-    [1] = {
-        ["Upgrade"] = "FreeAutoClicker",
-        ["RequestType"] = "UpgradeMax",
-    },
+    [1] = "AutoRebirth"
 }
 
-game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
-
-
-
-           local args = {
-    [1] = {
-        ["Upgrade"] = "GemIncrease",
-        ["RequestType"] = "UpgradeMax",
-    },
-}
-
-game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
-
-
-          local args = {
-    [1] = {
-        ["Upgrade"] = "RebirthOptions",
-        ["RequestType"] = "UpgradeMax",
-    },
-}
-
-game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
-
-
-
-           local args = {
-    [1] = {
-        ["Upgrade"] = "PetSlot",
-        ["RequestType"] = "UpgradeMax",
-    },
-}
-
-game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
-
-
-
-           local args = {
-    [1] = {
-        ["Upgrade"] = "Inventory",
-        ["RequestType"] = "UpgradeMax",
-    },
-}
-
-game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
-
-
-
-         local args = {
-    [1] = {
-        ["Upgrade"] = "OpeningSpeed",
-        ["RequestType"] = "UpgradeMax",
-    },
-}
-
-game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
- 
-
-
-        while wait(0) and _G.k do
-            
-local args = {
-    [1] = {
-        ["Upgrade"] = "MaxCombo",
-        ["RequestType"] = "UpgradeMax",
-    },
-}
-
-game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
-
-
-
-            local args = {
-    [1] = {
-        ["Upgrade"] = "RocketJump",
-        ["RequestType"] = "UpgradeMax",
-    },
-}
-
-game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
-
+game:GetService("ReplicatedStorage").RemoteEvents.Upgrade:FireServer(unpack(args))
 
 
 local args = {
-    [1] = {
-        ["Upgrade"] = "PetTier",
-        ["RequestType"] = "UpgradeMax"
-    }
+    [1] = "EggSpeed"
 }
 
-game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+game:GetService("ReplicatedStorage").RemoteEvents.Upgrade:FireServer(unpack(args))
+
 
 local args = {
-    [1] = {
-        ["Upgrade"] = "HatTier",
-        ["RequestType"] = "UpgradeMax"
-    }
+    [1] = "WalkSpeed"
 }
 
-game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+game:GetService("ReplicatedStorage").RemoteEvents.Upgrade:FireServer(unpack(args))
 
 local args = {
-    [1] = {
-        ["Upgrade"] = "PetCloner",
-        ["RequestType"] = "UpgradeMax"
-    }
+    [1] = "FasterAutoClick"
 }
 
-game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+game:GetService("ReplicatedStorage").RemoteEvents.Upgrade:FireServer(unpack(args))
+
+           end
+  else
+    
+        _G.re = false
+    end
+end)
+
+Rebirths:CreateToggle("Auto Rebirths x1", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.r1 = true 
+        while wait() and _G.r1 do
 
 local args = {
-    [1] = {
-        ["Upgrade"] = "ComboTime",
-        ["RequestType"] = "UpgradeMax",
-    },
+    [1] = 1,
 }
 
-game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
 
-        end
+           end
+  else
+    
+        _G.r1 = false
+    end
+end)
+
+Rebirths:CreateToggle("Auto Rebirths x2", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.r2 = true 
+        while wait() and _G.r2 do
+
+local args = {
+    [1] = 5,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+
+           end
+  else
+    
+        _G.r2 = false
+    end
+end)
+
+
+Rebirths:CreateToggle("Auto Rebirths x40", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.r40 = true 
+        while wait() and _G.r40 do
+
+local args = {
+    [1] = 100,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+
+           end
+  else
+    
+        _G.r40 = false
+    end
+end)
+
+Rebirths:CreateToggle("Auto Rebirths x200", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.r200 = true 
+        while wait() and _G.r200 do
+
+local args = {
+    [1] = 200,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+
+           end
+  else
+    
+        _G.r200 = false
+    end
+end)
+
+Rebirths:CreateToggle("Auto Rebirths x500", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.r1000 = true 
+        while wait() and _G.r1000 do
+
+local args = {
+    [1] = 1000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+           end
+  else
+    
+        _G.r1000 = false
+    end
+end)
+
+Rebirths:CreateToggle("Auto Rebirths x2k", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.r5000 = true 
+        while wait() and _G.r5000 do
+
+local args = {
+    [1] = 5000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+           end
+  else
+    
+        _G.r5000 = false
+    end
+end)
+
+Rebirths:CreateToggle("Auto Rebirths x4k", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.r10000 = true 
+        while wait() and _G.r10000 do
+
+local args = {
+    [1] = 10000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+           end
+  else
+    
+        _G.r10000 = false
+    end
+end)
+
+Rebirths:CreateToggle("Auto Rebirths x20k", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.r50000 = true 
+        while wait() and _G.r50000 do
+
+local args = {
+    [1] = 50000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+           end
+  else
+    
+        _G.r50000 = false
+    end
+end)
+
+Rebirths:CreateToggle("Auto Rebirths x40k", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.v100000 = true 
+        while wait() and _G.v100000 do
+
+local args = {
+    [1] = 100000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+           end
+  else
+    
+        _G.v100000 = false
+    end
+end)
+
+Rebirths:CreateToggle("Auto Rebirths x276k", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.v690000 = true 
+        while wait() and _G.v690000 do
+
+local args = {
+    [1] = 690000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+           end
+  else
+    
+        _G.v690000 = false
+    end
+end)
+
+Rebirths:CreateToggle("Auto Rebirths x1,4M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.v3500000 = true 
+        while wait() and _G.v3500000 do
+local args = {
+    [1] = 3500000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+           end
+  else
+    
+        _G.v3500000 = false
+    end
+end)
+
+Rebirths:CreateToggle("Auto Rebirths x4M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.v10000000 = true 
+        while wait() and _G.v10000000 do
+local args = {
+    [1] = 10000000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+           end
+  else
+    
+        _G.v10000000 = false
+    end
+end)
+
+Rebirths:CreateToggle("Auto Rebirths x40M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.v100000000 = true 
+        while wait() and _G.v100000000 do
+local args = {
+    [1] = 100000000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+           end
+  else
+    
+        _G.v100000000 = false
+    end
+end)
+
+Rebirths:CreateToggle("Auto Rebirths x140M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.v350000000 = true 
+        while wait() and _G.v350000000 do
+local args = {
+    [1] = 350000000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
 end
-    else
-        _G.m = false
+  else
+    
+        _G.v350000000 = false
     end
 end)
 
-teleports:CreateDropDown("Islands", {"Spawn", "Islands 1", "Islands 2", "Islands 3", "Islands 4", "Islands 5", "Islands 6", "Islands 7" , "Islands 8" , "Islands9", "Islands 10", "Islands 11", "Islands 12", "Islands 13"}, function(arg) --the (arg) is the option you choose 
-    if arg == "Spawn" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(53.6871033, 64.9600143, -916.602051)
-    elseif arg == "Islands 1" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(121.647934, 457.010315, -821.140198)
-    elseif arg == "Islands 2" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(15.2872801, 904.083008, -917.881653)
-    elseif arg == "Islands 3" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(80.4999313, 1717.63647, -1058.14905)
-    elseif arg == "Islands 4" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(239.828644, 2434.19946, -940.05658)
-    elseif arg == "Islands 5" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(280.046295, 3603.84424, -858.549377)  
-    elseif arg == "Islands 6" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(401.155701, 4312.67871, -765.344055) 
-    elseif arg == "Islands 7" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(581.19635, 5097.88477, -692.195923) 
-    elseif arg == "Islands 8" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(502.571442, 5894.22168, -702.051147) 
-    elseif arg == "Islands 9" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(652.303833, 6874.55908, -886.94928) 
-    elseif arg == "Islands 10" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(639.837158, 7832.3584, -972.805908)
-    elseif arg == "Islands 11" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(505.438507, 8859.80859, -916.89563)
-    elseif arg == "Islands 12" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(506.177124, 9814.79883, -918.168823)
-    elseif arg == "Islands 13" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(430.266144, 10732.1807, -878.734436)
+Rebirths:CreateToggle("Auto Rebirths x380M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.v950000000 = true 
+        while wait() and _G.v950000000 do
+local args = {
+    [1] = 950000000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+end
+  else
+    
+        _G.v950000000 = false
     end
 end)
 
-teleports:CreateButton("Island 14", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(405.558899, 11443.7959, -898.731812)
+Rebirths:CreateToggle("Auto Rebirths x1,6B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.v4000000000 = true 
+        while wait() and _G.v4000000000 do
+local args = {
+    [1] = 4000000000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+end
+  else
+    
+        _G.v4000000000 = false
+    end
 end)
 
-teleports:CreateButton("Island 15", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(372.993469, 12338.2129, -755.207336)
+Rebirths:CreateToggle("Auto Rebirths x3,6B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.v9000000000 = true 
+        while wait() and _G.v9000000000 do
+local args = {
+    [1] = 9000000000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+end
+  else
+    
+        _G.v9000000000 = false
+    end
+end)
+
+Rebirths:CreateToggle("Auto Rebirths x4B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.v10000000000 = true 
+        while wait() and _G.v10000000000 do
+local args = {
+    [1] = 10000000000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+end
+  else
+    
+        _G.v10000000000 = false
+    end
+end)
+
+Rebirths:CreateToggle("Auto Rebirths x24B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.v60000000000 = true 
+        while wait() and _G.v60000000000 do
+local args = {
+    [1] = 60000000000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+end
+  else
+    
+        _G.v60000000000 = false
+    end
+end)
+
+Rebirths:CreateToggle("Auto Rebirths x36B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.v90000000000 = true 
+        while wait() and _G.v90000000000 do
+local args = {
+    [1] = 90000000000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+end
+  else
+    
+        _G.v90000000000 = false
+    end
+end)
+
+Rebirths:CreateToggle("Auto Rebirths x52B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.v130000000000 = true 
+        while wait() and _G.v130000000000 do
+local args = {
+    [1] = 130000000000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+end
+  else
+    
+        _G.v130000000000 = false
+    end
+end)
+
+Rebirths:CreateToggle("Auto Rebirths x280B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.v700000000000 = true 
+        while wait() and _G.v700000000000 do
+local args = {
+    [1] = 700000000000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+end
+  else
+    
+        _G.v700000000000 = false
+    end
 end)
 
 
-teleports:CreateButton("Shop 1", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(13.023798, 65.5558624, -891.703064)
+Rebirths1:CreateToggle("Auto Rebirths x9400", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.r1 = true 
+        while wait() and _G.r1 do
+
+local args = {
+    [1] = 1,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+
+           end
+  else
+    
+        _G.r1 = false
+    end
 end)
 
-teleports:CreateButton("Shop 2", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(5.66315413, 65.0842514, -993.249878)
+Rebirths1:CreateToggle("Auto Rebirths x47,2k", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.r2 = true 
+        while wait() and _G.r2 do
+
+local args = {
+    [1] = 5,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+
+           end
+  else
+    
+        _G.r2 = false
+    end
 end)
 
-teleports:CreateButton("Spin Wheel", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(54.8322182, 64.9600067, -970.927917)
+
+Rebirths1:CreateToggle("Auto Rebirths x944k", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.r40 = true 
+        while wait() and _G.r40 do
+
+local args = {
+    [1] = 100,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+
+           end
+  else
+    
+        _G.r40 = false
+    end
 end)
 
-teleports:CreateButton("LeaderBoards", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-18.0845356, 65.6652069, -941.966614)
+Rebirths1:CreateToggle("Auto Rebirths x4,7m", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.r200 = true 
+        while wait() and _G.r200 do
+
+local args = {
+    [1] = 200,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+
+           end
+  else
+    
+        _G.r200 = false
+    end
 end)
+
+Rebirths1:CreateToggle("Auto Rebirths x9,4m", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.r1000 = true 
+        while wait() and _G.r1000 do
+
+local args = {
+    [1] = 1000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+           end
+  else
+    
+        _G.r1000 = false
+    end
+end)
+
+Rebirths1:CreateToggle("Auto Rebirths x47,2M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.r5000 = true 
+        while wait() and _G.r5000 do
+
+local args = {
+    [1] = 5000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+           end
+  else
+    
+        _G.r5000 = false
+    end
+end)
+
+Rebirths1:CreateToggle("Auto Rebirths x94,4M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.r10000 = true 
+        while wait() and _G.r10000 do
+
+local args = {
+    [1] = 10000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+           end
+  else
+    
+        _G.r10000 = false
+    end
+end)
+
+Rebirths1:CreateToggle("Auto Rebirths x472M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.r50000 = true 
+        while wait() and _G.r50000 do
+
+local args = {
+    [1] = 50000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+           end
+  else
+    
+        _G.r50000 = false
+    end
+end)
+
+Rebirths1:CreateToggle("Auto Rebirths x944M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.v100000 = true 
+        while wait() and _G.v100000 do
+
+local args = {
+    [1] = 100000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+           end
+  else
+    
+        _G.v100000 = false
+    end
+end)
+
+Rebirths1:CreateToggle("Auto Rebirths x6,5B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.v690000 = true 
+        while wait() and _G.v690000 do
+
+local args = {
+    [1] = 690000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+           end
+  else
+    
+        _G.v690000 = false
+    end
+end)
+
+Rebirths1:CreateToggle("Auto Rebirths x33b", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.v3500000 = true 
+        while wait() and _G.v3500000 do
+local args = {
+    [1] = 3500000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+           end
+  else
+    
+        _G.v3500000 = false
+    end
+end)
+
+Rebirths1:CreateToggle("Auto Rebirths x94,4B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.v10000000 = true 
+        while wait() and _G.v1000000 do
+local args = {
+    [1] = 10000000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+           end
+  else
+    
+        _G.v10000000 = false
+    end
+end)
+
+Rebirths1:CreateToggle("Auto Rebirths x944b", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.v100000000 = true 
+        while wait() and _G.v100000000 do
+local args = {
+    [1] = 100000000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+           end
+  else
+    
+        _G.v100000000 = false
+    end
+end)
+
+Rebirths1:CreateToggle("Auto Rebirths x3,3T", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.v350000000 = true 
+        while wait() and _G.v350000000 do
+local args = {
+    [1] = 350000000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+end
+  else
+    
+        _G.v350000000 = false
+    end
+end)
+
+Rebirths1:CreateToggle("Auto Rebirths x8,9T", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.v950000000 = true 
+        while wait() and _G.v950000000 do
+local args = {
+    [1] = 950000000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+end
+  else
+    
+        _G.v950000000 = false
+    end
+end)
+
+Rebirths1:CreateToggle("Auto Rebirths x18,8T", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.v2000000000 = true 
+        while wait() and _G.v2000000000 do
+local args = {
+    [1] = 2000000000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+end
+  else
+    
+        _G.v2000000000 = false
+    end
+end)
+
+Rebirths1:CreateToggle("Auto Rebirths x37,7T", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.v4000000000 = true 
+        while wait() and _G.v4000000000 do
+local args = {
+    [1] = 4000000000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+end
+  else
+    
+        _G.v4000000000 = false
+    end
+end)
+
+Rebirths1:CreateToggle("Auto Rebirths x84,9T", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.v9000000000 = true 
+        while wait() and _G.v9000000000 do
+local args = {
+    [1] = 9000000000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+end
+  else
+    
+        _G.v9000000000 = false
+    end
+end)
+
+Rebirths1:CreateToggle("Auto Rebirths x94,4t", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.v10000000000 = true 
+        while wait() and _G.v10000000000 do
+local args = {
+    [1] = 10000000000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+end
+  else
+    
+        _G.v10000000000 = false
+    end
+end)
+
+Rebirths1:CreateToggle("Auto Rebirths x283,2T", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.v10000000000 = true 
+        while wait() and _G.v10000000000 do
+local args = {
+    [1] = 10000000000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+end
+  else
+    
+        _G.v10000000000 = false
+    end
+end)
+
+Rebirths1:CreateToggle("Auto Rebirths x566T", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.v60000000000 = true 
+        while wait() and _G.v60000000000 do
+local args = {
+    [1] = 60000000000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+end
+  else
+    
+        _G.v60000000000 = false
+    end
+end)
+
+Rebirths1:CreateToggle("Auto Rebirths x1,2Qd", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.v130000000000 = true 
+        while wait() and _G.v130000000000 do
+local args = {
+    [1] = 130000000000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+end
+  else
+    
+        _G.v130000000000 = false
+    end
+end)
+
+Rebirths1:CreateToggle("Auto Rebirths x6,6qd", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.v700000000000 = true 
+        while wait() and _G.v700000000000 do
+local args = {
+    [1] = 700000000000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+end
+  else
+    
+        _G.v700000000000 = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy Heaven Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.g = true 
+        while wait() and _G.g do
+local args = {
+    [1] = "Heaven Egg",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Eclicked:FireServer(unpack(args))
+ end
+        _G.g = false
+    end
+end)
+
+eggs:CreateToggle("inf pets equip", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.g = true 
+        while wait() and _G.g do
+game.Players.LocalPlayer.MaxPets.Value = 6942000000000
+
+     end
+        _G.g = false
+    end
+end)
+
+eggs:CreateToggle("Free Triple Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.g = true 
+        while wait() and _G.g do
+game.Players.LocalPlayer.TripleEggs.Value = 1
+
+
+     end
+        _G.g = false
+    end
+end)
+
+teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(71.7898483, 3.66993809, 83.2115402)
+end)
+
+teleports:CreateButton("Shop", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(216.487625, 3.76654005, 43.1189423)
+end)
+
 AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:Destroy()
 end)
@@ -1990,4 +973,3 @@ end)
         Virtual:ClickButton2(Vector2.new())
         wait(2)
     end)
-
