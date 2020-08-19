@@ -13,6 +13,7 @@ local AutoTab = Library:CreateTab("Gem Clicker GUI","things", true)
 local eggs = Library:CreateTab("Auto Buy Eggs x3","things", true)
 local Rebirths = Library:CreateTab("Auto Rebirths","things", true)
 local Sacrifices = Library:CreateTab("Auto Sacrifices","things", true)
+local Relinquish = Library:CreateTab("Auto Relinquish","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
@@ -271,6 +272,42 @@ AutoTab:CreateToggle("Buy Increase Walkspeed", function(arg) --the (arg) is if t
         while wait(0) and _G.In do
    
 game:GetService("ReplicatedStorage").Upgrades["Upgrade3"]:FireServer()
+        end
+    else
+        _G.In = false
+    end
+end)
+
+AutoTab:CreateToggle("Buy Relinquish Upgrades", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.In = true 
+        while wait(0) and _G.In do
+   
+game:GetService("ReplicatedStorage").Upgrades["Relinquish1"]:FireServer()
+        end
+    else
+        _G.In = false
+    end
+end)
+
+AutoTab:CreateToggle("Buy Relinquish Upgrades 1", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.In = true 
+        while wait(0) and _G.In do
+   
+game:GetService("ReplicatedStorage").Upgrades["Relinquish2"]:FireServer()
+        end
+    else
+        _G.In = false
+    end
+end)
+
+AutoTab:CreateToggle("Buy Relinquish Upgrades 2", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.In = true 
+        while wait(0) and _G.In do
+   
+game:GetService("ReplicatedStorage").Upgrades["Relinquish3"]:FireServer()
         end
     else
         _G.In = false
@@ -667,6 +704,23 @@ game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
     end
 end)
 
+eggs:CreateToggle("Auto Buy 100k Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e9 = true 
+        while wait(0) and _G.e9 do
+local args = {
+    [1] = game:GetService("Players")["LocalPlayer"],
+    [2] = "100k",
+    [3] = true,
+}
+
+game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
+  end
+  else
+        _G.e9 = false
+    end
+end)
+
 Sacrifices:CreateToggle("Auto Buy Sacrifices x1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.S1 = true 
@@ -787,6 +841,42 @@ game:GetService("ReplicatedStorage").RemoteEvents["Sacrifice10M"]:FireServer()
     end
 end)
 
+Sacrifices:CreateToggle("Auto Buy Sacrifices x1B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.S11 = true 
+        while wait(0) and _G.S11 do
+   
+game:GetService("ReplicatedStorage").RemoteEvents["Sacrifice1B"]:FireServer()
+        end
+    else
+        _G.S11 = false
+    end
+end)
+
+Relinqush:CreateToggle("Auto Buy Relinquish x1", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.S11 = true 
+        while wait(0) and _G.S11 do
+   
+game:GetService("ReplicatedStorage").RemoteEvents.Relinquish:FireServer()
+        end
+    else
+        _G.S11 = false
+    end
+end)
+
+Sacrifices:CreateToggle("Auto Buy Relinquish x5", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.S11 = true 
+        while wait(0) and _G.S11 do
+   
+game:GetService("ReplicatedStorage").RemoteEvents["Relinquish5"]:FireServer()
+        end
+    else
+        _G.S11 = false
+    end
+end)
+
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-951.15332, -375.698547, 626.717957)
 end)
@@ -817,6 +907,10 @@ end)
 
 teleports:CreateButton("World Boost x8", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-834.579224, -361.419617, -1976.45862)
+end)
+
+teleports:CreateButton("World Boost x20", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2459.81592, -376.466248, 150.067444)
 end)
 
 --| Anti AFK | By Altix#3395
