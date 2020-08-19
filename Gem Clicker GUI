@@ -249,6 +249,35 @@ end)
     end
 end)
 
+AutoTab:CreateToggle("Buy Gem Multiplier x1T", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Gem = true 
+        while wait(0) and _G.Gem do
+
+
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1T"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1T"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1T"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1T"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1T"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1T"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1T"]:FireServer()
+
+game:GetService("ReplicatedStorage").Upgrades["Upgrade1T"]:FireServer()
+
+        end
+    else
+        _G.Gem = false
+    end
+end)
+
 AutoTab:CreateToggle("Buy Xp Multiplier", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.xp = true 
@@ -853,7 +882,7 @@ game:GetService("ReplicatedStorage").RemoteEvents["Sacrifice1B"]:FireServer()
     end
 end)
 
-Relinqush:CreateToggle("Auto Buy Relinquish x1", function(arg) --the (arg) is if the checkbox is toggled or not
+Relinquish:CreateToggle("Auto Buy Relinquish x1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.S11 = true 
         while wait(0) and _G.S11 do
@@ -865,7 +894,7 @@ game:GetService("ReplicatedStorage").RemoteEvents.Relinquish:FireServer()
     end
 end)
 
-Sacrifices:CreateToggle("Auto Buy Relinquish x5", function(arg) --the (arg) is if the checkbox is toggled or not
+Relinquish:CreateToggle("Auto Buy Relinquish x5", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.S11 = true 
         while wait(0) and _G.S11 do
