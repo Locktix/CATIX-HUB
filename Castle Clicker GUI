@@ -122,26 +122,6 @@ game:GetService("ReplicatedStorage").RemoteEvents.Upgrade:FireServer(unpack(args
     end
 end)
 
-
-AutoTab:CreateToggle("Auto Collect Gems", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.o = true 
-        while wait(0.5) and _G.o do
-local children = game.Workspace:GetChildren()
-    for _, child in pairs(children) do
-        for _, child in pairs(child:GetChildren()) do
-            table.insert(children, child)
-         end
-         if child:IsA("BasePart") and child.Name == "Gem" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame            
-        end
-    end
-    end
-    else
-        _G.o = false
-    end
-end)
-
 Rebirths:CreateToggle("Auto Rebirths x1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
 _G.r1 = true 
