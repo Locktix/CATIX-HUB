@@ -175,6 +175,381 @@ AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox 
     end
 end)
 
+AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b = true 
+        while wait(0) and _G.b do
+       
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+
+        end
+    else
+        _G.b = false
+    end
+end)
+
+AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b = true 
+        while wait(0) and _G.b do
+       
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+
+        end
+    else
+        _G.b = false
+    end
+end)
+
+AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b = true 
+        while wait(0) and _G.b do
+       
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+
+        end
+    else
+        _G.b = false
+    end
+end)
+
 AutoTab:CreateToggle("Auto Upgrades", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.c = true 
@@ -247,8 +622,8 @@ end)
 
 eggs2:CreateToggle("Auto Buy Dominus Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.E1 = true 
-        while wait(0) and _G.E1 do
+        _G.E2 = true 
+        while wait(0) and _G.E2 do
        
 
 
@@ -262,7 +637,49 @@ game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
 
         end
     else
-        _G.E1 = false
+        _G.E2 = false
+    end
+end)
+
+eggs1:CreateToggle("Auto Buy  Common Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.E3 = true 
+        while wait(0) and _G.E3 do
+       
+
+
+local args = {
+    [1] = game:GetService("Players")["LocalPlayer"],
+    [2] = "Rare",
+    [3] = true,
+}
+
+game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.E3 = false
+    end
+end)
+
+eggs2:CreateToggle("Auto Buy Common Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.E4 = true 
+        while wait(0) and _G.E4 do
+       
+
+
+local args = {
+    [1] = game:GetService("Players")["LocalPlayer"],
+    [2] = "Rare",
+    [3] = true,
+}
+
+game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.E4 = false
     end
 end)
 
