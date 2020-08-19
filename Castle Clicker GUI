@@ -72,6 +72,48 @@ end)
     end
 end)
 
+AutoTab:CreateToggle("Auto Click x8", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.za = true 
+        while wait() and _G.za do
+
+
+  
+
+
+
+game:GetService("ReplicatedStorage").RemoteEvents.Click:FireServer()
+
+
+game:GetService("ReplicatedStorage").RemoteEvents.Click:FireServer()
+
+
+game:GetService("ReplicatedStorage").RemoteEvents.Click:FireServer()
+
+
+game:GetService("ReplicatedStorage").RemoteEvents.Click:FireServer()
+
+
+game:GetService("ReplicatedStorage").RemoteEvents.Click:FireServer()
+
+
+game:GetService("ReplicatedStorage").RemoteEvents.Click:FireServer()
+
+
+game:GetService("ReplicatedStorage").RemoteEvents.Click:FireServer()
+
+
+game:GetService("ReplicatedStorage").RemoteEvents.Click:FireServer()
+
+
+
+           end
+  else
+    
+        _G.za = false
+    end
+end)
+
 AutoTab:CreateToggle("Auto Buy Rebirths Upgrades", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
 _G.re = true 
