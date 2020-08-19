@@ -58,6 +58,36 @@ AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox 
 
   game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
 
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
 
         end
     else
