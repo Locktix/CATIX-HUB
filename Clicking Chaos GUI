@@ -423,6 +423,24 @@ game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
     end
 end)
 
+Rebirths:CreateToggle("Rebirths x50k ", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.r50k = true 
+        while wait(0) and _G.r50k do
+         
+local args = {
+    [1] = 10,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
+
+
+        end
+    else
+        _G.r50k = false
+    end
+end)
+
 
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-196.585602, 36.2450066, 7.58795643)
