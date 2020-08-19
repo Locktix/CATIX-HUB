@@ -884,22 +884,6 @@ end
     end
 end)
 
-Rebirths1:CreateToggle("Auto Rebirths x849T", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-_G.v90000000000 = true 
-        while wait() and _G.v90000000000 do
-local args = {
-    [1] = 90000000000,
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
-end
-  else
-    
-        _G.v90000000000 = false
-    end
-end)
-
 Rebirths1:CreateToggle("Auto Rebirths x1,2Qd", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
 _G.v130000000000 = true 
