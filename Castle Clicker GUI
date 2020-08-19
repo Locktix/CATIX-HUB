@@ -8,7 +8,6 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/prezt
 
 local AutoTab = Library:CreateTab("Castle-Clickers GUI","things", true)
 local Rebirths = Library:CreateTab("Auto Buy Rebirths","things", true)
-local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
 
