@@ -233,28 +233,15 @@ AutoTab:CreateToggle("Buy Gem Multiplier x100m", function(arg) --the (arg) is if
     if arg then
         _G.Gem = true 
         while wait(0) and _G.Gem do
-   game:GetService("ReplicatedStorage").Upgrades["Upgrade1100M"]:FireServer()
-
-   game:GetService("ReplicatedStorage").Upgrades["Upgrade1100M"]:FireServer()
-
-   game:GetService("ReplicatedStorage").Upgrades["Upgrade1100M"]:FireServer()
-
-   game:GetService("ReplicatedStorage").Upgrades["Upgrade1100M"]:FireServer()
-
-   game:GetService("ReplicatedStorage").Upgrades["Upgrade1100M"]:FireServer()
-
-   game:GetService("ReplicatedStorage").Upgrades["Upgrade1100M"]:FireServer()
-
-   game:GetService("ReplicatedStorage").Upgrades["Upgrade1100M"]:FireServer()
-
-   game:GetService("ReplicatedStorage").Upgrades["Upgrade1100M"]:FireServer()
 
 
-   game:GetService("ReplicatedStorage").Upgrades["Upgrade1100M"]:FireServer()
-
-   game:GetService("ReplicatedStorage").Upgrades["Upgrade1100M"]:FireServer()
 
 
+game.RunService.RenderStepped:Connect(function()
+ for i=1,1 do
+      game:GetService("ReplicatedStorage").Upgrades["Upgrade1100M"]:FireServer()
+ end
+end)
         end
     else
         _G.Gem = false
@@ -266,29 +253,12 @@ AutoTab:CreateToggle("Buy Xp Multiplier", function(arg) --the (arg) is if the ch
         _G.xp = true 
         while wait(0) and _G.xp do
    
-game:GetService("ReplicatedStorage").Upgrades["Upgrade4"]:FireServer()
 
-game:GetService("ReplicatedStorage").Upgrades["Upgrade4"]:FireServer()
-
-game:GetService("ReplicatedStorage").Upgrades["Upgrade4"]:FireServer()
-
-game:GetService("ReplicatedStorage").Upgrades["Upgrade4"]:FireServer()
-
-game:GetService("ReplicatedStorage").Upgrades["Upgrade4"]:FireServer()
-
-game:GetService("ReplicatedStorage").Upgrades["Upgrade4"]:FireServer()
-
-
-
-game:GetService("ReplicatedStorage").Upgrades["Upgrade4"]:FireServer()
-
-game:GetService("ReplicatedStorage").Upgrades["Upgrade4"]:FireServer()
-
-
-
-game:GetService("ReplicatedStorage").Upgrades["Upgrade4"]:FireServer()
-
-game:GetService("ReplicatedStorage").Upgrades["Upgrade4"]:FireServer()
+game.RunService.RenderStepped:Connect(function()
+ for i=1,1 do
+    game:GetService("ReplicatedStorage").Upgrades["Upgrade4"]:FireServer()
+ end
+end)
         end
     else
         _G.xp = false
