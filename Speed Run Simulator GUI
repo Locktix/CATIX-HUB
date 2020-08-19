@@ -221,6 +221,22 @@ game:GetService("ReplicatedStorage").Remotes.CanBuyEgg:InvokeServer(unpack(args)
     end
 end)
 
+eggs:CreateToggle("Eggs 20 Rebirths", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l = true 
+        while wait(0) and _G.l do
+local args = {
+    [1] = "EggTen",
+}
+
+game:GetService("ReplicatedStorage").Remotes.CanBuyEgg:InvokeServer(unpack(args))
+        end
+    else
+        _G.l = false
+    end
+end)
+
+
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1382.5249, 197.269852, -562.271484)
 end)
@@ -245,8 +261,12 @@ teleports:CreateButton("Zone 5", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(6552.01904, 197.414993, -540.391968)
 end)
 
-teleports:CreateButton("Zone 5", function() --you dont need "arg" for a button
+teleports:CreateButton("Zone 6", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(7519.91357, 197.269821, -642.987244)
+end)
+
+teleports:CreateButton("Zone 7", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(8774.20313, 197.269836, -667.307495)
 end)
 
 --| Anti AFK | By Altix#3395
