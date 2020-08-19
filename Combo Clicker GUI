@@ -141,6 +141,42 @@ Event:FireServer(A_1)
     end
 end)
 
+rebirths3:CreateToggle("Rebirth X10Se", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.a = true 
+        while wait(0) and _G.a do
+            local args = {
+                [1] = {
+                    ["Option"] = 1000000000000000000000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.a = false
+    end
+end)
+
+rebirths3:CreateToggle("Rebirth X1Se", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.a = true 
+        while wait(0) and _G.a do
+            local args = {
+                [1] = {
+                    ["Option"] = 100000000000000000000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.a = false
+    end
+end)
+
 rebirths3:CreateToggle("Rebirth X100S", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.a = true 
@@ -934,6 +970,82 @@ rebirths:CreateToggle("Rebirth X1", function(arg) --the (arg) is if the checkbox
     end
 end)
 
+eggs2:CreateToggle("Auto Buy Royal Egg (15)3", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.nm = true 
+        while wait(0) and _G.nm do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg15",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 3,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.nm = false
+    end
+end)
+
+eggs2:CreateToggle("Auto Buy Royal Egg (15)2", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.E151 = true 
+        while wait(0) and _G.E151 do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg15",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 3,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.E151 = false
+    end
+end)
+
+eggs2:CreateToggle("Auto Buy Royal Egg (15)1", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.E152 = true 
+        while wait(0) and _G.E152 do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg15",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 3,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.E152 = false
+    end
+end)
+
+eggs2:CreateToggle("Auto Buy Royal Egg (15)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.E153 = true 
+        while wait(0) and _G.E153 do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg15",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 3,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.E153 = false
+    end
+end)
+
 eggs2:CreateToggle("Auto Buy Mystic Egg (14)3", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.E14 = true 
@@ -942,7 +1054,7 @@ eggs2:CreateToggle("Auto Buy Mystic Egg (14)3", function(arg) --the (arg) is if 
                 [1] = {
                     ["EggType"] = "Egg14",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
                 },
             }
             
@@ -961,7 +1073,7 @@ eggs2:CreateToggle("Auto Buy Mystic Egg (14)2", function(arg) --the (arg) is if 
                 [1] = {
                     ["EggType"] = "Egg14",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
                 },
             }
             
@@ -980,7 +1092,7 @@ eggs2:CreateToggle("Auto Buy Mystic Egg (14)1", function(arg) --the (arg) is if 
                 [1] = {
                     ["EggType"] = "Egg14",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
                 },
             }
             
@@ -999,7 +1111,7 @@ eggs2:CreateToggle("Auto Buy Mystic Egg (14)", function(arg) --the (arg) is if t
                 [1] = {
                     ["EggType"] = "Egg14",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
                 },
             }
             
@@ -1018,7 +1130,7 @@ eggs2:CreateToggle("Auto Buy Frost Egg (13)3", function(arg) --the (arg) is if t
                 [1] = {
                     ["EggType"] = "Egg13",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
                 },
             }
             
@@ -1037,7 +1149,7 @@ eggs2:CreateToggle("Auto Buy Frost Egg (13)2", function(arg) --the (arg) is if t
                 [1] = {
                     ["EggType"] = "Egg13",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
                 },
             }
             
@@ -1056,7 +1168,7 @@ eggs2:CreateToggle("Auto Buy Frost Egg (13)1", function(arg) --the (arg) is if t
                 [1] = {
                     ["EggType"] = "Egg13",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
                 },
             }
             
@@ -1075,7 +1187,7 @@ eggs2:CreateToggle("Auto Buy Frost Egg (13)", function(arg) --the (arg) is if th
                 [1] = {
                     ["EggType"] = "Egg13",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
                 },
             }
             
@@ -1094,7 +1206,7 @@ eggs2:CreateToggle("Auto Buy Russo Egg (12)", function(arg) --the (arg) is if th
                 [1] = {
                     ["EggType"] = "Egg12",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
                 },
             }
             
@@ -1113,7 +1225,7 @@ eggs2:CreateToggle("Auto Buy Arcade Egg (11)", function(arg) --the (arg) is if t
                 [1] = {
                     ["EggType"] = "Egg11",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
                 },
             }
             
@@ -1132,7 +1244,7 @@ eggs2:CreateToggle("Auto Buy Dragons Egg (10)", function(arg) --the (arg) is if 
                 [1] = {
                     ["EggType"] = "Egg10",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
                 },
             }
             
@@ -1151,7 +1263,7 @@ eggs:CreateToggle("Auto Buy villian Egg (9)", function(arg) --the (arg) is if th
                 [1] = {
                     ["EggType"] = "Egg9",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
                 },
             }
             
@@ -1170,7 +1282,7 @@ eggs:CreateToggle("Auto Buy Alien Egg (8)3", function(arg) --the (arg) is if the
                 [1] = {
                     ["EggType"] = "Egg8",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
                 },
             }
             
@@ -1189,7 +1301,7 @@ eggs:CreateToggle("Auto Buy Alien Egg (8)2", function(arg) --the (arg) is if the
                 [1] = {
                     ["EggType"] = "Egg8",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
                 },
             }
             
@@ -1208,7 +1320,7 @@ eggs:CreateToggle("Auto Buy Alien Egg (8)1", function(arg) --the (arg) is if the
                 [1] = {
                     ["EggType"] = "Egg8",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
                 },
             }
             
@@ -1227,7 +1339,7 @@ eggs:CreateToggle("Auto Buy Alien Egg (8)", function(arg) --the (arg) is if the 
                 [1] = {
                     ["EggType"] = "Egg8",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
                 },
             }
             
@@ -1246,7 +1358,7 @@ eggs:CreateToggle("Auto Buy Ocean Egg (7)3", function(arg) --the (arg) is if the
                 [1] = {
                     ["EggType"] = "Egg7",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
 
               
               },
@@ -1267,7 +1379,7 @@ eggs:CreateToggle("Auto Buy Ocean Egg (7)2", function(arg) --the (arg) is if the
                 [1] = {
                     ["EggType"] = "Egg7",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
 
               
               },
@@ -1288,7 +1400,7 @@ eggs:CreateToggle("Auto Buy Ocean Egg (7)1", function(arg) --the (arg) is if the
                 [1] = {
                     ["EggType"] = "Egg7",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
 
               
               },
@@ -1309,7 +1421,7 @@ eggs:CreateToggle("Auto Buy Ocean Egg (7)", function(arg) --the (arg) is if the 
                 [1] = {
                     ["EggType"] = "Egg7",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
 
               
               },
@@ -1326,15 +1438,15 @@ eggs:CreateToggle("Auto Buy 3M Egg", function(arg) --the (arg) is if the checkbo
     if arg then
         _G.zzj = true 
         while wait(0) and _G.zzj do
-            local args = {
-                [1] = {
-                    ["EggType"] = "Egg3M",
-                    ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
-                },
-            }
-            
-            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        local args = {
+    [1] = {
+        ["EggType"] = "Egg3M",
+        ["UpdateType"] = "Open",
+        ["Amount"] = 3,
+    },
+}
+
+game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))          
         end
     else
         _G.zzj = false
@@ -1349,7 +1461,7 @@ eggs:CreateToggle("Auto Buy Ancient Egg (6)", function(arg) --the (arg) is if th
                 [1] = {
                     ["EggType"] = "Egg6",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
                 },
             }
             
@@ -1368,7 +1480,7 @@ eggs:CreateToggle("Auto Buy Carnival Egg (5)", function(arg) --the (arg) is if t
                 [1] = {
                     ["EggType"] = "Egg5",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
                 },
             }
             
@@ -1387,7 +1499,7 @@ eggs:CreateToggle("Auto Buy Emojis Egg (4)", function(arg) --the (arg) is if the
                 [1] = {
                     ["EggType"] = "Egg4",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
                 },
             }
             
@@ -1406,7 +1518,7 @@ eggs:CreateToggle("Auto Buy Tropical Egg (3)", function(arg) --the (arg) is if t
                 [1] = {
                     ["EggType"] = "Egg3",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
                 },
             }
             
@@ -1425,7 +1537,7 @@ eggs:CreateToggle("Auto Buy Spotted Egg (2)", function(arg) --the (arg) is if th
                 [1] = {
                     ["EggType"] = "Egg2",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
                 },
             }
             
@@ -1444,7 +1556,7 @@ eggs:CreateToggle("Auto Buy  Egg (1)", function(arg) --the (arg) is if the check
                 [1] = {
                     ["EggType"] = "Egg1",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
                 },
             }
             
@@ -1463,7 +1575,7 @@ crates:CreateToggle("Auto Buy Blossom Crate (2)", function(arg) --the (arg) is i
                 [1] = {
                     ["CrateType"] = "Crate2",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
                 },
             }
             
@@ -1482,7 +1594,7 @@ crates:CreateToggle("Auto Buy Carnival Crate (3)", function(arg) --the (arg) is 
                 [1] = {
                     ["CrateType"] = "Crate3",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
                 },
             }
             
@@ -1501,7 +1613,7 @@ crates:CreateToggle("Auto Buy Grasy Crate (1)", function(arg) --the (arg) is if 
                 [1] = {
                     ["CrateType"] = "Crate1",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
                 },
             }
             
@@ -1520,7 +1632,7 @@ crates:CreateToggle("Auto Buy Hero Crate (4)", function(arg) --the (arg) is if t
                 [1] = {
                     ["CrateType"] = "Crate4",
                     ["UpdateType"] = "Open",
-                    ["Amount"] = 10,
+                    ["Amount"] = 3,
                 },
             }
             
@@ -1795,6 +1907,15 @@ local args = {
 
 game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
 
+local args = {
+    [1] = {
+        ["Upgrade"] = "ComboTime",
+        ["RequestType"] = "UpgradeMax",
+    },
+}
+
+game:GetService("ReplicatedStorage").Functions.UpgradeFunction:InvokeServer(unpack(args))
+
         end
 end
     else
@@ -1802,7 +1923,7 @@ end
     end
 end)
 
-teleports:CreateDropDown("Islands", {"Spawn", "Islands 1", "Islands 2", "Islands 3", "Islands 4", "Islands 5", "Islands 6", "Islands 7" , "Islands 8" , "Islands9", "Islands 10", "Islands 11", "Islands 12", "Islands 13", "Islands14"}, function(arg) --the (arg) is the option you choose 
+teleports:CreateDropDown("Islands", {"Spawn", "Islands 1", "Islands 2", "Islands 3", "Islands 4", "Islands 5", "Islands 6", "Islands 7" , "Islands 8" , "Islands9", "Islands 10", "Islands 11", "Islands 12", "Islands 13"}, function(arg) --the (arg) is the option you choose 
     if arg == "Spawn" then
         game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(53.6871033, 64.9600143, -916.602051)
     elseif arg == "Islands 1" then
@@ -1831,10 +1952,17 @@ teleports:CreateDropDown("Islands", {"Spawn", "Islands 1", "Islands 2", "Islands
         game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(506.177124, 9814.79883, -918.168823)
     elseif arg == "Islands 13" then
         game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(430.266144, 10732.1807, -878.734436)
-    elseif arg == "Islands 14" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(405.558899, 11443.7959, -898.731812)
     end
 end)
+
+teleports:CreateButton("Island 14", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(405.558899, 11443.7959, -898.731812)
+end)
+
+teleports:CreateButton("Island 15", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(372.993469, 12338.2129, -755.207336)
+end)
+
 
 teleports:CreateButton("Shop 1", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(13.023798, 65.5558624, -891.703064)
