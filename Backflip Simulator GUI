@@ -1,166 +1,94 @@
 --https://www.roblox.com/games/3923754109/CODE-10M-Backflip-Simulator
+local ui = loadstring(game:HttpGet("https://pastebin.com/raw/zQWg2eeL"))()
 
+-- UI:Init(parent)
+-- Init:AddTab(title)
+-- AddTab:AddSection(title)
+-- AddSection:AddButton(text, callback)
+-- AddSection:AddSlider(text, default, callback)
+-- AddSection:AddKeybind(text, default, callback)
+-- AddSection:AddToggle(text, default, callback)
 
-
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
-
-local AutoTab = Library:CreateTab("Backflip Simulator GUI","things", true)
-local teleports = Library:CreateTab("Teleports","things", true)
-local AutoRebirth = Library:CreateTab("Auto Rebirth","things", true)
-local credits = Library:CreateTab("Credits","things", true)
-
-credits:CreateButton("Our Discords", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
-end)
-
-credits:CreateButton("masterkyllian#1723", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
-end)
-
-credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
-end)
-
-credits:CreateButton("bsoleil31FR[inchala ptn]#9001", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
-end)
-
-credits:CreateButton("https://discord.gg/PdUTrVG", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
-end)
-
-credits:CreateButton("Bebo Mods#9619", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
-end)
-
-
-AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.a = true 
-        while wait(0) and _G.a do
-            local Event = game:GetService("ReplicatedStorage").BackEvent
+local mainUI = ui:Init(game:GetService("CoreGui"))
+local homeTab = mainUI:AddTab("Hacks")
+local rebirths = mainUI:AddTab("Rebirths")
+local teleports = mainUI:AddTab("Teleports")
+local farmSection = homeTab:AddSection("Auto Farmers")
+local farmMobs = farmSection:AddToggle("Auto Clicks", false, function()
+_G.b = true 
+while wait() and _G.b do
+    for i = 1, 100 do 
+        local Event = game:GetService("ReplicatedStorage").BackEvent
 Event:FireServer()
-        end
-    else
-        _G.a = false
-    end
+     end
+
+    
+end
 end)
-
-AutoTab:CreateToggle("Speed Hack 100", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-_G.Speed = true 
-        while wait() and _G.Speed do
-            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
-        end
-    else
-        _G.Speed = false
-           game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
-         end
+local farmBosses = farmSection:AddToggle("Speed Hack", false, function()
+_G.c = true 
+while wait() and _G.c do
+   
+     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+    end 
 end)
-
-AutoRebirth:CreateToggle("Auto Rebirth x500", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.c = true 
-        while wait(0) and _G.c do
-            local A_1 = 500
-local Event = game:GetService("ReplicatedStorage").RebirthEvent
-Event:FireServer(A_1)
-        end
-    else
-        _G.c = false
-    end
-end)
-
-
-AutoRebirth:CreateToggle("Auto Rebirth x50", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.d = true 
-        while wait(0) and _G.d do
-            local A_1 = 50
-local Event = game:GetService("ReplicatedStorage").RebirthEvent
-Event:FireServer(A_1)
-        end
-    else
-        _G.d = false
-    end
-end)
-
-
-AutoRebirth:CreateToggle("Auto Rebirth x5", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.e = true 
-        while wait(0) and _G.e do
-            local A_1 = 5
-local Event = game:GetService("ReplicatedStorage").RebirthEvent
-Event:FireServer(A_1)
-        end
-    else
-        _G.e = false
-    end
-end)
-
-AutoRebirth:CreateToggle("Auto Rebirth x1", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
+local farmSection = rebirths:AddSection("Rebirths")
+local farmBosses = farmSection:AddToggle("Auto Rebirth x1", false, function()
         _G.f = true 
         while wait(0) and _G.f do
             local A_1 = 1
 local Event = game:GetService("ReplicatedStorage").RebirthEvent
 Event:FireServer(A_1)
-        end
-    else
-        _G.f = false
-    end
+end
 end)
-
-AutoRebirth:CreateButton("Bugged", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:Nothing()
+local farmBosses = farmSection:AddToggle("Auto Rebirth x5", false, function()
+        _G.g = true 
+        while wait(0) and _G.g do
+            local A_1 = 5
+local Event = game:GetService("ReplicatedStorage").RebirthEvent
+Event:FireServer(A_1)
+end
 end)
-
-AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:Destroy()
+local farmBosses = farmSection:AddToggle("Auto Rebirth x50", false, function()
+        _G.h = true 
+        while wait(0) and _G.h do
+            local A_1 = 50
+local Event = game:GetService("ReplicatedStorage").RebirthEvent
+Event:FireServer(A_1)
+end
 end)
-
-teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
+local farmBosses = farmSection:AddToggle("Auto Rebirth x500", false, function()
+print("Kill All")
+        _G.i = true 
+        while wait(0) and _G.i do
+            local A_1 = 500
+local Event = game:GetService("ReplicatedStorage").RebirthEvent
+Event:FireServer(A_1)
+end
+end)
+local farmSection = teleports:AddSection("Teleports")
+local farmBosses = farmSection:AddButton("Spawn", function()
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-22.9672718, 66.0953903, -892.778992)
 end)
-
-teleports:CreateButton("Island 1", function() --you dont need "arg" for a button
+local farmBosses = farmSection:AddButton("Island 1", function()
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-66.4510803, 996.283813, -904.833496)
 end)
-
-teleports:CreateButton("Island 2", function() --you dont need "arg" for a button
+local farmBosses = farmSection:AddButton("Island 2", function()
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-68.9000015, 1942.18298, -904.305481)
 end)
-
-teleports:CreateButton("Island 3", function() --you dont need "arg" for a button
+local farmBosses = farmSection:AddButton("Island 3", function()
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-64.3711243, 3544.42065, -910.880005)
 end)
-
-teleports:CreateButton("Island 4", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-64.3710022, 5879.87451, -925.209656)
+local farmBosses = farmSection:AddButton("Island 4", function()
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-70.6077271, 5880.72217, -913.588379)
 end)
-
-teleports:CreateButton("Island 5", function() --you dont need "arg" for a button
+local farmBosses = farmSection:AddButton("Island 5", function()
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-36.2949486, 13558.252, -833.457153)
 end)
-
-teleports:CreateButton("Island 6", function() --you dont need "arg" for a button
+local farmBosses = farmSection:AddButton("Island 6", function()
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-48.8445778, 16742.0957, -825.835632)
 end)
-
-teleports:CreateButton("Mystery Island", function() --you dont need "arg" for a button
+local farmBosses = farmSection:AddButton("Mystery Island", function()
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-13399.8145, 47474.6094, -829.851379)
 end)
 
---| Anti AFK | By Altix#3395
-    local Virtual = game:service'VirtualUser'
-    game:service'Players'.LocalPlayer.Idled:connect(function()
-        Virtual:CaptureController()
-        Virtual:ClickButton2(Vector2.new())
-        wait(2)
-    end)
-
-setfflag("DFStringCrashPadUploadToBacktraceToBacktraceBaseUrl", "")
-setfflag("DFIntCrashUploadToBacktracePercentage", "0")
-setfflag("DFStringCrashUploadToBacktraceBlackholeToken", "")
-setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
