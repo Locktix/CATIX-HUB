@@ -278,20 +278,45 @@ game:GetService("ReplicatedStorage").Upgrades["Upgrade1T"]:FireServer()
     end
 end)
 
-AutoTab:CreateToggle("Buy Xp Multiplier", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateToggle("Buy Xp Multiplier x1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.xp = true 
         while wait(0) and _G.xp do
    
+  game:GetService("ReplicatedStorage").Upgrades["Upgrade4"]:FireServer()
 
-game.RunService.RenderStepped:Connect(function()
- for i=1,1 do
-    game:GetService("ReplicatedStorage").Upgrades["Upgrade4"]:FireServer()
- end
-end)
+
         end
     else
         _G.xp = false
+    end
+end)
+
+AutoTab:CreateToggle("Buy Xp Multiplier x10k", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.xD = true 
+        while wait(0) and _G.xD do
+   
+
+  game:GetService("ReplicatedStorage").Upgrades["Upgrade410000"]:FireServer()
+
+        end
+    else
+        _G.xD = false
+    end
+end)
+
+AutoTab:CreateToggle("Buy Xp Multiplier x1M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.xDD = true 
+        while wait(0) and _G.xDD do
+   
+
+ game:GetService("ReplicatedStorage").Upgrades["Upgrade41000000"]:FireServer()
+
+        end
+    else
+        _G.xDD = false
     end
 end)
 
@@ -733,6 +758,23 @@ game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
     end
 end)
 
+eggs:CreateToggle("Auto Buy toxic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e9 = true 
+        while wait(0) and _G.e9 do
+local args = {
+    [1] = game:GetService("Players")["LocalPlayer"],
+    [2] = "Toxic",
+    [3] = true,
+}
+
+game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
+  end
+  else
+        _G.e9 = false
+    end
+end)
+
 eggs:CreateToggle("Auto Buy 100k Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e9 = true 
@@ -903,6 +945,28 @@ game:GetService("ReplicatedStorage").RemoteEvents["Relinquish5"]:FireServer()
         end
     else
         _G.S11 = false
+    end
+end)
+Relinquish:CreateToggle("Auto Buy Relinquish x25", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.S13 = true 
+        while wait(0) and _G.S13 do
+   
+game:GetService("ReplicatedStorage").RemoteEvents["Relinquish25"]:FireServer()
+        end
+    else
+        _G.S13 = false
+    end
+end)
+Relinquish:CreateToggle("Auto Buy Relinquish x100", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.S12 = true 
+        while wait(0) and _G.S12 do
+   
+game:GetService("ReplicatedStorage").RemoteEvents["Relinquish100"]:FireServer()
+        end
+    else
+        _G.S12 = false
     end
 end)
 
