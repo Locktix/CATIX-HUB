@@ -67,6 +67,20 @@ _G.a= true
          end
 end)
 
+AutoTab:CreateToggle("Auto Jump", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.za = true 
+        while wait() and _G.za do
+while true do wait()
+game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end
+           end
+  else
+    
+        _G.za = false
+    end
+end)
+
 Rebirths:CreateToggle("Auto Rebirths x1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
 _G.b= true 
@@ -341,6 +355,14 @@ end)
 
 teleports:CreateButton("Sell", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(182.214462, 5.08189011, -118.789383)
+end)
+
+teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
+    game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(199.636292, 5.08309937, -101.552391)
+    end)
+
+teleports:CreateButton("Sell x2", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(147.961823, 363.885223, -143.617783)
 end)
 
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
