@@ -1434,13 +1434,13 @@ eggs:CreateToggle("Auto Buy Ocean Egg (7)", function(arg) --the (arg) is if the 
     end
 end)
 
-eggs:CreateToggle("Auto Buy 3M Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Auto Buy 5M Egg", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzj = true 
         while wait(0) and _G.zzj do
         local args = {
     [1] = {
-        ["EggType"] = "Egg3M",
+        ["EggType"] = "Egg5M",
         ["UpdateType"] = "Open",
         ["Amount"] = 3,
     },
