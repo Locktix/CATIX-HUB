@@ -1,10 +1,4 @@
 --https://www.roblox.com/games/5281022480/Beta-Soda-Simulator
-
-
-
-
-
-
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
 local AutoTab = Library:CreateTab("Soda-Simulator GUI","things", true)
@@ -205,7 +199,7 @@ game:GetService("ReplicatedStorage").Events.TradeEvent:FireServer()
     end
 end)
 
-AutoTab:CreateToggle("Auto Collect Chests", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateToggle("Auto Collect Chests and coins", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.o = true 
         while wait(0.5) and _G.o do
@@ -215,8 +209,12 @@ local children = game.Workspace:GetChildren()
             table.insert(children, child)
          end
          if child:IsA("BasePart") and child.Name == "Chest" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame           
+else
+  if child:IsA("BasePart") and child.Name == "NormalCoin" then
             child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame            
         end
+end
     end
     end
     else
