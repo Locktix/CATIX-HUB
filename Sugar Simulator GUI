@@ -1,0 +1,511 @@
+--https://www.roblox.com/games/2846607892/Sugar-Simulator
+
+
+
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
+
+local AutoTab = Library:CreateTab("Sugar-Simulator GUI","things", true)
+local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
+local teleports = Library:CreateTab("Teleports","things", true)
+local credits = Library:CreateTab("Credits","things", true)
+
+
+credits:CreateButton("Our Discords", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("masterkyllian#1723", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("bsoleil31FR[inchala ptn]#9001", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("https://discord.gg/PdUTrVG", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("Bebo Mods#9619", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.a = true 
+        while wait() and _G.a do
+            game:GetService("ReplicatedStorage").Events.ScreenClick:FireServer()
+end
+    else
+        _G.a = false
+         
+         end
+end)
+
+AutoTab:CreateToggle("Auto Rebirths", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.b = true 
+        while wait() and _G.b do
+       local args = {
+    [1] = "Rebirth",
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+end
+    else
+        _G.b = false
+         
+         end
+end)
+
+AutoTab:CreateButton("Do not Use All", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+
+AutoTab:CreateButton("At The Same Time", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+AutoTab:CreateToggle("Auto Candies Starter World", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c = true 
+        while wait(1) and _G.c do
+local children = game.Workspace:GetChildren()
+    for _, child in pairs(children) do
+        for _, child in pairs(child:GetChildren()) do
+            table.insert(children, child)
+         end
+         if child:IsA("BasePart") and child.Name == "Ring Pop" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
+else
+ if child:IsA("BasePart") and child.Name == "M&Ms" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
+else
+ if child:IsA("BasePart") and child.Name == "Candy Bracelet" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
+else
+ if child:IsA("BasePart") and child.Name == "Skittles" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
+else
+ if child:IsA("BasePart") and child.Name == "Chocolate Bar" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame 
+else
+ if child:IsA("BasePart") and child.Name == "Heart Candies" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame 
+end
+end    
+
+end
+end
+end       
+        end
+    end
+    end
+    else
+        _G.c = false
+    end
+end)
+
+AutoTab:CreateToggle("Auto Candies Candy World", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c2 = true 
+        while wait(1) and _G.c2 do
+local children = game.Workspace:GetChildren()
+    for _, child in pairs(children) do
+        for _, child in pairs(child:GetChildren()) do
+            table.insert(children, child)
+         end
+         if child:IsA("BasePart") and child.Name == "Smarties" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
+else
+ if child:IsA("BasePart") and child.Name == "Starburst" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
+else
+ if child:IsA("BasePart") and child.Name == "Candy Cane" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
+else
+ if child:IsA("BasePart") and child.Name == "Jaw Breaker" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
+else
+ if child:IsA("BasePart") and child.Name == "Lollipop" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame 
+else
+ if child:IsA("BasePart") and child.Name == "Jelly Beans" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame 
+end
+end    
+
+end
+end
+end       
+        end
+    end
+    end
+    else
+        _G.c2 = false
+    end
+end)
+
+AutoTab:CreateToggle("Auto Candies Beach World", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c3 = true 
+        while wait(1) and _G.c3 do
+local children = game.Workspace:GetChildren()
+    for _, child in pairs(children) do
+        for _, child in pairs(child:GetChildren()) do
+            table.insert(children, child)
+         end
+         if child:IsA("BasePart") and child.Name == "Gummy Worms" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
+else
+ if child:IsA("BasePart") and child.Name == "Chocolate Egg" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
+else
+ if child:IsA("BasePart") and child.Name == "Starburst" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
+else
+ if child:IsA("BasePart") and child.Name == "Chocolate Coin" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
+else
+ if child:IsA("BasePart") and child.Name == "Twizzlers" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame 
+else
+ if child:IsA("BasePart") and child.Name == "Jaw Breaker" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame 
+end    
+
+end
+end
+end    
+end
+        end
+    end
+    end
+    else
+        _G.c3 = false
+    end
+end)
+
+AutoTab:CreateToggle("Auto Candies SnowTime World", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c4 = true 
+        while wait(1) and _G.c4 do
+local children = game.Workspace:GetChildren()
+    for _, child in pairs(children) do
+        for _, child in pairs(child:GetChildren()) do
+            table.insert(children, child)
+         end
+         if child:IsA("BasePart") and child.Name == "Mike n' Ikes" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
+else
+ if child:IsA("BasePart") and child.Name == "Chocolate Egg" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
+else
+ if child:IsA("BasePart") and child.Name == "Chocolate Raisins" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
+else
+ if child:IsA("BasePart") and child.Name == "Rockets" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
+else
+ if child:IsA("BasePart") and child.Name == "Twizzlers" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame 
+else
+ if child:IsA("BasePart") and child.Name == "Nerds" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame 
+end    
+
+end
+end
+end    
+end
+        end
+    end
+    end
+    else
+        _G.c4 = false
+    end
+end)
+
+AutoTab:CreateToggle("Auto Candies Forest World", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c5 = true 
+        while wait(1) and _G.c5 do
+local children = game.Workspace:GetChildren()
+    for _, child in pairs(children) do
+        for _, child in pairs(child:GetChildren()) do
+            table.insert(children, child)
+         end
+         if child:IsA("BasePart") and child.Name == "Candy Corn" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
+else
+ if child:IsA("BasePart") and child.Name == "Cake Pop" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
+else
+ if child:IsA("BasePart") and child.Name == "Gushers" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
+else
+ if child:IsA("BasePart") and child.Name == "Rockets" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
+else
+ if child:IsA("BasePart") and child.Name == "Mike n' Ikes" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame 
+else
+ if child:IsA("BasePart") and child.Name == "Caramel" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame 
+end    
+
+end
+end
+end    
+end
+        end
+    end
+    end
+    else
+        _G.c5 = false
+    end
+end)
+
+Buy:CreateToggle("Auto Buy Teeth", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.d = true 
+        while wait() and _G.d do
+       local args = {
+    [1] = "Rebirth",
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+end
+    else
+        _G.d = false
+         
+         end
+end)
+
+Buy:CreateToggle("Auto Buy Fat", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.e = true 
+        while wait() and _G.e do
+       local args = {
+    [1] = "Rebirth",
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+end
+    else
+        _G.e = false
+         
+         end
+end)
+
+
+eggs:CreateToggle("Auto Buy Normal Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.f = true 
+        while wait() and _G.f do
+    
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Egg",
+        [2] = "Normal",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+end
+    else
+        _G.f = false
+         
+         end
+end)
+
+eggs:CreateToggle("Auto Buy Water Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.g = true 
+        while wait() and _G.g do
+    
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Egg",
+        [2] = "Water",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+end
+    else
+        _G.g = false
+         
+         end
+end)
+
+eggs:CreateToggle("Auto Buy Safari Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.h = true 
+        while wait() and _G.h do
+    
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Egg",
+        [2] = "Safari",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+end
+    else
+        _G.h= false
+         
+         end
+end)
+
+eggs:CreateToggle("Auto Buy Flight Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.h = true 
+        while wait() and _G.h do
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Egg",
+        [2] = "Flight",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+end
+    else
+        _G.h= false
+         
+         end
+end)
+
+eggs:CreateToggle("Auto Buy Candy Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.i = true 
+        while wait() and _G.i do
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Egg",
+        [2] = "Candy",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+end
+    else
+        _G.i= false
+         
+         end
+end)
+
+eggs:CreateToggle("Auto Buy Space Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.i = true 
+        while wait() and _G.i do
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Egg",
+        [2] = "Space",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+end
+    else
+        _G.i= false
+         
+         end
+end)
+
+eggs:CreateToggle("Auto Buy Light Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.i = true 
+        while wait() and _G.i do
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Egg",
+        [2] = "Light",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+end
+    else
+        _G.i= false
+         
+         end
+end)
+
+eggs:CreateToggle("Auto Buy Beach Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.i = true 
+        while wait() and _G.i do
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Egg",
+        [2] = "Beach",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+end
+    else
+        _G.i= false
+         
+         end
+end)
+
+
+
+teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(58.9317627, 21.6812668, -766.870239)
+end)
+
+teleports:CreateButton("Candy World", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(42.0444489, 21.581295, 34.5133057)
+end)
+
+teleports:CreateButton("Beach World", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(797.114807, 28.4676743, -770.014465)
+end)
+
+teleports:CreateButton("Snow World", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-417.752838, 21.6036167, -475.155457)
+end)
+
+teleports:CreateButton("Forest World", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(541.513672, 20.4250393, -131.343826)
+end)
+
+teleports:CreateButton("Desert World", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-937.704712, 23.1520271, -1280.89917)
+end)
+
+teleports:CreateButton("Cloud World", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2024.5907, 11.9402943, 514.872437)
+end)
+
+AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:Destroy()
+end)
+
+--| Anti AFK | By Altix#3395
+    local Virtual = game:service'VirtualUser'
+    game:service'Players'.LocalPlayer.Idled:connect(function()
+        Virtual:CaptureController()
+        Virtual:ClickButton2(Vector2.new())
+        wait(2)
+    end)
