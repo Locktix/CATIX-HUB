@@ -4,7 +4,8 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
 local AutoTab = Library:CreateTab("CLICKING-LEGENDS GUI","things", true)
-local Rebirths = Library:CreateTab("Auto Buy Rebirths","things", true)
+local Rebirths = Library:CreateTab("Auto Buy Rebirths 1","things", true)
+local Rebirths2 = Library:CreateTab("Auto Buy Rebirths 2","things", true)
 local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
 local credits = Library:CreateTab("Credits","things", true)
@@ -141,6 +142,58 @@ game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(
         end
     else
         _G.g = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy Zone 5 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.od = true 
+        while wait(0) and _G.od do
+local args = {
+    [1] = "Cloud",
+    [2] = "Single",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.od = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy Zone 6 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e7 = true 
+        while wait(0) and _G.e7 do
+local args = {
+    [1] = "Crystal",
+    [2] = "Single",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.e7 = false
+    end
+end)
+
+
+eggs:CreateToggle("Auto Buy Zone 7 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e7 = true 
+        while wait(0) and _G.e7 do
+local args = {
+    [1] = "Beach",
+    [2] = "Single",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.e7 = false
     end
 end)
 
@@ -480,6 +533,182 @@ game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
     end
 end)
 
+Rebirths:CreateToggle("Auto Rebirths x7,5B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zc = true 
+        while wait(0) and _G.zc do
+           local args = {
+    [1] =  7500000000
+}
+
+game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
+
+        end
+    else
+        _G.zc = false
+    end
+end)
+
+Rebirths:CreateToggle("Auto Rebirths x25B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zd = true 
+        while wait(0) and _G.zd do
+           local args = {
+    [1] =  25000000000
+}
+
+game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
+
+        end
+    else
+        _G.zd = false
+    end
+end)
+
+Rebirths:CreateToggle("Auto Rebirths x100B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.ze = true 
+        while wait(0) and _G.ze do
+           local args = {
+    [1] =  100000000000
+}
+
+game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
+
+        end
+    else
+        _G.ze = false
+    end
+end)
+
+Rebirths:CreateToggle("Auto Rebirths x250B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zf = true 
+        while wait(0) and _G.zf do
+           local args = {
+    [1] =  250000000000
+}
+
+game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
+
+        end
+    else
+        _G.zf = false
+    end
+end)
+
+Rebirths2:CreateToggle("Auto Rebirths x2,5T", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zg = true 
+        while wait(0) and _G.zg do
+           local args = {
+    [1] =  2500000000000
+      }
+
+game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
+
+        end
+    else
+        _G.zg = false
+    end
+end)
+
+Rebirths2:CreateToggle("Auto Rebirths x5T", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zh = true 
+        while wait(0) and _G.zh do
+           local args = {
+    [1] =  5000000000000
+}
+
+game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
+
+        end
+    else
+        _G.zh = false
+    end
+end)
+
+Rebirths2:CreateToggle("Auto Rebirths x50T", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zi = true 
+        while wait(0) and _G.zi do
+           local args = {
+    [1] =  50000000000000
+}
+
+game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
+
+        end
+    else
+        _G.zi = false
+    end
+end)
+
+Rebirths2:CreateToggle("Auto Rebirths x250T", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zj = true 
+        while wait(0) and _G.zj do
+           local args = {
+    [1] =  250000000000000
+}
+
+game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
+
+        end
+    else
+        _G.zj = false
+    end
+end)
+
+Rebirths2:CreateToggle("Auto Rebirths x2,5Qd", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zk = true 
+        while wait(0) and _G.zk do
+           local args = {
+    [1] =  2500000000000000
+          }
+
+game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
+
+        end
+    else
+        _G.zk = false
+    end
+end)
+
+Rebirths2:CreateToggle("Auto Rebirths x25Qd", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zl = true 
+        while wait(0) and _G.zl do
+           local args = {
+    [1] =  25000000000000000
+}
+
+game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
+
+        end
+    else
+        _G.zl = false
+    end
+end)
+
+Rebirths2:CreateToggle("Auto Rebirths x100Qd", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zm = true 
+        while wait(0) and _G.zm do
+           local args = {
+    [1] =  100000000000000000
+}
+
+game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
+
+        end
+    else
+        _G.zm = false
+    end
+end)
+
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-167.757645, 4.20753145, 295.139069)
 end)
@@ -499,6 +728,21 @@ end)
 teleports:CreateButton("Zone 4", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(444.050049, 4.00753164, 730.470093)
 end)
+
+teleports:CreateButton("Zone 5", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1138.22034, 4.00753164, -168.655655)
+end)
+
+
+teleports:CreateButton("Zone 6", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1375.7804, 4.00753164, 713.146301)
+end)
+
+
+teleports:CreateButton("Zone 7", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1632.17896, 4.00753164, -136.755173)
+end)
+
 
 
 AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
