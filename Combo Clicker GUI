@@ -970,14 +970,13 @@ rebirths:CreateToggle("Rebirth X1", function(arg) --the (arg) is if the checkbox
     end
 end)
 
-
-eggs2:CreateToggle("Auto Buy Spirit Egg (16)3", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs2:CreateToggle("Auto Buy Music Egg (17)3", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.ddddd = true 
-        while wait(0) and _G.ddddd do
+        _G.E173 = true 
+        while wait(0) and _G.E163 do
             local args = {
                 [1] = {
-                    ["EggType"] = "Egg16",
+                    ["EggType"] = "Egg17",
                     ["UpdateType"] = "Open",
                     ["Amount"] = 3,
                 },
@@ -986,17 +985,17 @@ eggs2:CreateToggle("Auto Buy Spirit Egg (16)3", function(arg) --the (arg) is if 
             game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
         end
     else
-        _G.ddddd = false
+        _G.E173 = false
     end
 end)
 
-eggs2:CreateToggle("Auto Buy Spirit Egg (16)2", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs2:CreateToggle("Auto Buy Music Egg (17)2", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.E161 = true 
-        while wait(0) and _G.E161 do
+        _G.E172 = true 
+        while wait(0) and _G.E172 do
             local args = {
                 [1] = {
-                    ["EggType"] = "Egg16",
+                    ["EggType"] = "Egg17",
                     ["UpdateType"] = "Open",
                     ["Amount"] = 3,
                 },
@@ -1005,17 +1004,17 @@ eggs2:CreateToggle("Auto Buy Spirit Egg (16)2", function(arg) --the (arg) is if 
             game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
         end
     else
-        _G.E161 = false
+        _G.E172 = false
     end
 end)
 
-eggs2:CreateToggle("Auto Buy Spirit Egg (16)1", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs2:CreateToggle("Auto Buy Music Egg (17)1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.E162 = true 
-        while wait(0) and _G.E162 do
+        _G.E171 = true 
+        while wait(0) and _G.E171 do
             local args = {
                 [1] = {
-                    ["EggType"] = "Egg16",
+                    ["EggType"] = "Egg17",
                     ["UpdateType"] = "Open",
                     ["Amount"] = 3,
                 },
@@ -1024,7 +1023,26 @@ eggs2:CreateToggle("Auto Buy Spirit Egg (16)1", function(arg) --the (arg) is if 
             game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
         end
     else
-        _G.E162 = false
+        _G.E171 = false
+    end
+end)
+
+eggs2:CreateToggle("Auto Buy Music Egg (17)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.E17 = true 
+        while wait(0) and _G.E17 do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg17",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 3,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.E17 = false
     end
 end)
 
@@ -1984,6 +2002,10 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(372.9934
 end)
 teleports:CreateButton("Island 16", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(399.82663, 13106.3906, -718.65509)
+end)
+
+teleports:CreateButton("Island 17", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(396.47406, 13890.3213, -867.959778)
 end)
 
 teleports:CreateButton("Shop 1", function() --you dont need "arg" for a button
