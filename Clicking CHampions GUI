@@ -298,6 +298,21 @@ Event:InvokeServer(A_1, A_2)
     end
 end)
 
+eggs:CreateToggle("Auto Buy Secret Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local A_1 = "Secret"
+local A_2 = 1
+local Event = game:GetService("ReplicatedStorage").Events.Server.OpenEgg
+Event:InvokeServer(A_1, A_2)
+
+        end
+    else
+        _G.Basic = false
+    end
+end)
+
 --Updated by ☣BioHazard☣#9086--
 eggs:CreateToggle("Auto Buy Roman Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
