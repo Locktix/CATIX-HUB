@@ -77,6 +77,39 @@ AutoTab:CreateToggle("Auto Rebirths", function(arg) --the (arg) is if the checkb
     end
 end)
 
+AutoTab:CreateToggle("Inf Pets Eqsuiped", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.lel = true 
+        while wait(0) and _G.lel do
+      for i=1,50 do
+game:GetService("Players").LocalPlayer.PetSlot.Value = 9e18
+
+ end
+ 
+
+        end
+    else
+        _G.lel = false
+    end
+end)
+
+AutoTab:CreateToggle("Auto Pets Storage", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Od = true 
+        while wait(0) and _G.Od do
+      for i=1,50 do
+game:GetService("Players").LocalPlayer.InvSpace.Value = 9e18
+
+
+ end
+ 
+
+        end
+    else
+        _G.Od = false
+    end
+end)
+
 AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:Destroy()
 end)
