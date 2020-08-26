@@ -1,13 +1,11 @@
---https://www.roblox.com/games/4502746301/Bow-Simulator
+--https://www.roblox.com/games/4246487209/Boss-Fighting-Simulator
 
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
-local AutoTab = Library:CreateTab("Bow Simulator GUI","things", true)
-local AutoBuy = Library:CreateTab("Auto Buy","things", true)
-local Hats = Library:CreateTab("Auto Buy Hats","things", true)
-local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
+local AutoTab = Library:CreateTab("Boss Fighting Sim GUI","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
+local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
@@ -109,357 +107,28 @@ _G.Speed = true
          end
 end)
 
-
-eggs:CreateToggle("Auto Buy Shiny Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.a = true 
         while wait(0) and _G.a do
-local args = {
-    [1] = "OpenEgg",
-    [2] = 1,
-    [3] = "Shiny902",
-}
-
-game:GetService("ReplicatedStorage").Communication.RE:FireServer(unpack(args))
+           local A_1 = game:GetService("Workspace").Players.quentin453["Doom Linked Sword"]  --change by your sword name
+local Event = game:GetService("ReplicatedStorage").Remotes.Power
+Event:FireServer(A_1)
         end
     else
         _G.a = false
     end
 end)
 
-eggs:CreateToggle("Auto Buy Dominus Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateToggle("Auto Sell", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.b = true 
         while wait(0) and _G.b do
-local args = {
-    [1] = "OpenEgg",
-    [2] = 1,
-    [3] = "Dominus901",
-}
-
-game:GetService("ReplicatedStorage").Communication.RE:FireServer(unpack(args))
+           local Event = game:GetService("ReplicatedStorage").Remotes.SellPower
+Event:InvokeServer()
         end
     else
         _G.b = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Frost Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.c = true 
-        while wait(0) and _G.c do
-local args = {
-    [1] = "OpenEgg",
-    [2] = 1,
-    [3] = "Frost9",
-}
-
-game:GetService("ReplicatedStorage").Communication.RE:FireServer(unpack(args))
-        end
-    else
-        _G.c = false
-    end
-end)
-
-
-eggs:CreateToggle("Auto Buy Plastic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.d = true 
-        while wait(0) and _G.d do
-local args = {
-    [1] = "OpenEgg",
-    [2] = 1,
-    [3] = "Plastic8",
-}
-
-game:GetService("ReplicatedStorage").Communication.RE:FireServer(unpack(args))
-        end
-    else
-        _G.d = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Sandy Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.e = true 
-        while wait(0) and _G.e do
-local args = {
-    [1] = "OpenEgg",
-    [2] = 1,
-    [3] = "Sandy7",
-}
-
-game:GetService("ReplicatedStorage").Communication.RE:FireServer(unpack(args))
-        end
-    else
-        _G.e = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Golden Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.f = true 
-        while wait(0) and _G.f do
-local args = {
-    [1] = "OpenEgg",
-    [2] = 1,
-    [3] = "Golden6",
-}
-
-game:GetService("ReplicatedStorage").Communication.RE:FireServer(unpack(args))
-        end
-    else
-        _G.f = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Rubby Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.g = true 
-        while wait(0) and _G.g do
-  local args = {
-    [1] = "OpenEgg",
-    [2] = 1,
-    [3] = "Ruby5",
-}
-
-game:GetService("ReplicatedStorage").Communication.RE:FireServer(unpack(args))
-        end
-    else
-        _G.g = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Dragon Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.h = true 
-        while wait(0) and _G.h do
-     local args = {
-    [1] = "OpenEgg",
-    [2] = 1,
-    [3] = "Dragon3",
-}
-
-game:GetService("ReplicatedStorage").Communication.RE:FireServer(unpack(args))
-        end
-    else
-        _G.h = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Glow Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.i = true 
-        while wait(0) and _G.i do
-     local args = {
-    [1] = "OpenEgg",
-    [2] = 1,
-    [3] = "Glow4",
-}
-
-game:GetService("ReplicatedStorage").Communication.RE:FireServer(unpack(args))
-        end
-    else
-        _G.i = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Tier 2 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.j = true 
-        while wait(0) and _G.j do
-     local args = {
-    [1] = "OpenEgg",
-    [2] = 1,
-    [3] = "Tier 2",
-}
-
-game:GetService("ReplicatedStorage").Communication.RE:FireServer(unpack(args))
-        end
-    else
-        _G.j = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Tier 1 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.k = true 
-        while wait(0) and _G.k do
-     local args = {
-    [1] = "OpenEgg",
-    [2] = 1,
-    [3] = "Tier 1",
-}
-
-game:GetService("ReplicatedStorage").Communication.RE:FireServer(unpack(args))
-        end
-    else
-        _G.k = false
-    end
-end)
-
-Hats:CreateToggle("Auto Buy Hat Tier1", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.l = true 
-        while wait(0) and _G.l do
-          local args = {
-    [1] = "OpenCrate",
-    [2] = 1,
-    [3] = "Tier 1",
-}
-
-game:GetService("ReplicatedStorage").Communication.RE:FireServer(unpack(args))
-        end
-    else
-        _G.l = false
-    end
-end)
-
-Hats:CreateToggle("Auto Buy Hat Tier2", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.m = true 
-        while wait(0) and _G.m do
-          local args = {
-    [1] = "OpenCrate",
-    [2] = 1,
-    [3] = "Tier 2",
-}
-
-game:GetService("ReplicatedStorage").Communication.RE:FireServer(unpack(args))
-        end
-    else
-        _G.m = false
-    end
-end)
-
-Hats:CreateToggle("Auto Buy Hat Tier3", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.n = true 
-        while wait(0) and _G.n do
-          local args = {
-    [1] = "OpenCrate",
-    [2] = 1,
-    [3] = "Tier 3",
-}
-
-game:GetService("ReplicatedStorage").Communication.RE:FireServer(unpack(args))
-        end
-    else
-        _G.n = false
-    end
-end)
-
-Hats:CreateToggle("Auto Buy Hat Tier4", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.o = true 
-        while wait(0) and _G.o do
-          local args = {
-    [1] = "OpenCrate",
-    [2] = 1,
-    [3] = "Tier 4",
-}
-
-game:GetService("ReplicatedStorage").Communication.RE:FireServer(unpack(args))
-        end
-    else
-        _G.o = false
-    end
-end)
-
-Hats:CreateToggle("Auto Buy Hat Tier5", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.p = true 
-        while wait(0) and _G.p do
-          local args = {
-    [1] = "OpenCrate",
-    [2] = 1,
-    [3] = "Tier 5",
-}
-
-game:GetService("ReplicatedStorage").Communication.RE:FireServer(unpack(args))
-        end
-    else
-        _G.p = false
-    end
-end)
-
-Hats:CreateToggle("Auto Buy Hat Tier6", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.q = true 
-        while wait(0) and _G.q do
-          local args = {
-    [1] = "OpenCrate",
-    [2] = 1,
-    [3] = "Tier 6",
-}
-
-game:GetService("ReplicatedStorage").Communication.RE:FireServer(unpack(args))
-        end
-    else
-        _G.q = false
-    end
-end)
-
-AutoBuy:CreateToggle("Auto Buy Bows", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.r = true 
-        while wait(0) and _G.r do
-           local args = {
-    [1] = "CSBuyAllPossible",
-    [2] = "Bows",
-}
-
-game:GetService("ReplicatedStorage").Communication.RE:FireServer(unpack(args))
-        end
-    else
-        _G.r = false
-    end
-end)
-
-AutoBuy:CreateToggle("Auto Buy Quivers", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.s = true 
-        while wait(0) and _G.s do
-          local args = {
-    [1] = "CSBuyAllPossible",
-    [2] = "Quivers",
-}
-
-game:GetService("ReplicatedStorage").Communication.RE:FireServer(unpack(args))
-        end
-    else
-        _G.s = false
-    end
-end)
-
-AutoBuy:CreateToggle("Auto Buy Ranks", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.t = true 
-        while wait(0) and _G.t do
-         local args = {
-    [1] = "CSBuyAllPossible",
-    [2] = "Ranks",
-}
-
-game:GetService("ReplicatedStorage").Communication.RE:FireServer(unpack(args))
-        end
-    else
-        _G.t = false
-    end
-end)
-
-AutoTab:CreateToggle("Auto Sell", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.u = true 
-        while wait(0) and _G.u do
-         local args = {
-    [1] = "SellTeleport",
-}
-
-game:GetService("ReplicatedStorage").Communication.RE:FireServer(unpack(args))
-        end
-    else
-        _G.u = false
     end
 end)
 
@@ -475,17 +144,59 @@ _G.Speed = true
          end
 end)
 
-AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Auto Buy Common Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.w = true 
-        while wait(0) and _G.w do
-            if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
-            game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool"):Activate()
-    end
-end
+        _G.d = true 
+        while wait(0) and _G.d do
+            local A_1 = "Common Egg"
+local Event = game:GetService("ReplicatedStorage").Remotes.EggPurchase
+Event:InvokeServer(A_1)
 
+        end
     else
-        _G.w = false
+        _G.d = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy Crystal Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e = true 
+        while wait(0) and _G.e do
+            local A_1 = "Crystal Egg"
+local Event = game:GetService("ReplicatedStorage").Remotes.EggPurchase
+Event:InvokeServer(A_1)
+
+        end
+    else
+        _G.e = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy Jade Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f = true 
+        while wait(0) and _G.f do
+            local A_1 = "Jade Egg"
+local Event = game:GetService("ReplicatedStorage").Remotes.EggPurchase
+Event:InvokeServer(A_1)
+
+        end
+    else
+        _G.f = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy Magma Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.g = true 
+        while wait(0) and _G.g do
+            local A_1 = "Magma Egg"
+local Event = game:GetService("ReplicatedStorage").Remotes.EggPurchase
+Event:InvokeServer(A_1)
+
+        end
+    else
+        _G.g = false
     end
 end)
 
@@ -493,56 +204,64 @@ AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a bu
 game:GetService("CoreGui").uiui:Destroy()
 end)
 
-teleports:CreateDropDown("Islands World 1", {"Spawn", "Islands 1", "Islands 2", "Islands 3", "Islands 4"}, function(arg) --the (arg) is the option you choose 
-    if arg == "Spawn" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(168.053314, 23.253582, -85.6360474)
-    elseif arg == "Islands 1" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-21.463356, 941.92981, -53.7636833)
-    elseif arg == "Islands 2" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-46.9555321, 2653.21948, -30.7914066)
-    elseif arg == "Islands 3" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-77.4848557, 4960.21826, -33.9025917)
-    elseif arg == "Islands 4" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-29.3737602, 8502.2168, -45.3552628)
-    end
+teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-105.465355, -33.3870811, 53.7590866)
 end)
 
-teleports:CreateDropDown("Islands World 2", {"Spawn", "Islands 1", "Islands 2", "Islands 3"}, function(arg) --the (arg) is the option you choose 
-    if arg == "Spawn" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-16676.9941, 81.8307724, 85182.1484)
-    elseif arg == "Islands 1" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-16610.6973, 2161.91089, 85300.6953)
-    elseif arg == "Islands 2" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-46.9555321, 2653.21948, -30.7914066)
-    elseif arg == "Islands 3" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-16552.9355, 6120.62744, 85205.7656)
-    end
+teleports:CreateButton("Islands", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2.56613421, 47.9358253, 6165.32031)
 end)
 
-teleports:CreateDropDown("Islands World 3", {"Spawn", "Islands 1", "Islands 2", "Islands 3", "Islands 4"}, function(arg) --the (arg) is the option you choose 
-    if arg == "Spawn" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(71218.2422, 6767.20264, 127004.688)
-    elseif arg == "Islands 1" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(71145.6094, 10205.4844, 126954.516)
-    elseif arg == "Islands 2" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(71157.4922, 10205.625, 126953.594)
-    elseif arg == "Islands 3" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(71086.4766, 14679.7891, 126944.859)
-    elseif arg == "Islands 4" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(71147.0234, 20461.9492, 126978.914)
-    end
+teleports:CreateButton("Crystal Island", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-163.535461, 255.26384, 6493.34863)
 end)
 
-teleports:CreateDropDown("Islands World 4", {"Spawn", "Islands 1", "Islands 2", "Islands 3"}, function(arg) --the (arg) is the option you choose 
-    if arg == "Spawn" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-21947.7188, -58.9395638, 168446.922)
-    elseif arg == "Islands 1" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-21977.3066, 4418.59912, 168386.5)
-    elseif arg == "Islands 2" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-21974.8945, 11097.8486, 168445.406)
-    elseif arg == "Islands 3" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-21953.2813, 19546.6973, 168422.953)
-    end
+teleports:CreateButton("Jade Island", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-361.330994, 255.331802, 5993.65381)
+end)
+
+teleports:CreateButton("Noob Boss", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1586.28516, 156.807495, 946.955261)
+end)
+
+teleports:CreateButton("Samurai Boss", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-919.472412, 156.807495, 3928.95898)
+end)
+
+teleports:CreateButton("Crystal Warlord Boss", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(438.017395, 156.807495, 4019.84644)
+end)
+
+teleports:CreateButton("Black knight Boss", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2020.24707, 156.807495, 2332.23584)
+end)
+
+teleports:CreateButton("Ice King Boss", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(456.778168, 156.807495, 2585.30127)
+end)
+
+teleports:CreateButton("Undead Boss", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-837.53479, 156.807495, 2570.22241)
+end)
+
+teleports:CreateButton("Ninja Boss", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1634.01245, 156.807495, 1655.13721)
+end)
+
+teleports:CreateButton("Zeus Boss", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2106.80811, 156.807495, 903.976196)
+end)
+
+teleports:CreateButton("ORC Boss", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1589.28198, 156.807495, -1029.22937)
+end)
+
+teleports:CreateButton("Knight Boss", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1469.49341, 156.807495, -30.9574394)
+end)
+
+teleports:CreateButton("Gren Reaper Boss", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1783.79297, 156.807495, 3803.48462)
 end)
 
 --| Anti AFK | By Altix#3395
