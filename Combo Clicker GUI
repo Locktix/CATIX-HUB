@@ -1033,7 +1033,7 @@ rebirths:CreateToggle("Rebirth X1", function(arg) --the (arg) is if the checkbox
     end
 end)
 
-eggs2:CreateToggle("Auto Buy Music Egg (18)3", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs2:CreateToggle("Auto Buy Abyss Egg (18)3", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.E183 = true 
         while wait(0) and _G.E183 do
@@ -1052,7 +1052,7 @@ eggs2:CreateToggle("Auto Buy Music Egg (18)3", function(arg) --the (arg) is if t
     end
 end)
 
-eggs2:CreateToggle("Auto Buy Music Egg (18)2", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs2:CreateToggle("Auto Buy Abyss Egg (18)2", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.E182 = true 
         while wait(0) and _G.E182 do
@@ -1071,7 +1071,7 @@ eggs2:CreateToggle("Auto Buy Music Egg (18)2", function(arg) --the (arg) is if t
     end
 end)
 
-eggs2:CreateToggle("Auto Buy Music Egg (18)1", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs2:CreateToggle("Auto Buy Abyss Egg (18)1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.E181 = true 
         while wait(0) and _G.E181 do
@@ -1090,7 +1090,7 @@ eggs2:CreateToggle("Auto Buy Music Egg (18)1", function(arg) --the (arg) is if t
     end
 end)
 
-eggs2:CreateToggle("Auto Buy Music Egg (18)", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs2:CreateToggle("Auto Buy Abyss Egg (18)", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.E18 = true 
         while wait(0) and _G.E18 do
