@@ -93,7 +93,7 @@ game:GetService("Players").LocalPlayer.PetSlot.Value = 9e18
     end
 end)
 
-AutoTab:CreateToggle("Auto Pets Storage", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateToggle("Inf Pets Storage", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Od = true 
         while wait(0) and _G.Od do
