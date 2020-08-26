@@ -3,14 +3,14 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
 local AutoTab = Library:CreateTab("Combo Clickers GUI","things", true)
-local teleports = Library:CreateTab("Teleports","things", true)
+local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
+local eggs2 = Library:CreateTab("Auto Buy Eggs 2","things", true)
 local rebirths = Library:CreateTab("Auto Rebirths","things", true)
 local rebirths2 = Library:CreateTab("Auto Rebirths 2","things", true)
 local rebirths3 = Library:CreateTab("Auto Rebirths 3","things", true)
-local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
-local eggs2 = Library:CreateTab("Auto Buy Eggs 2","things", true)
 local crates = Library:CreateTab("Auto Buy Crates","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
+local teleports = Library:CreateTab("Teleports","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
 
@@ -1030,6 +1030,82 @@ rebirths:CreateToggle("Rebirth X1", function(arg) --the (arg) is if the checkbox
         end
     else
         _G.zn = false
+    end
+end)
+
+eggs2:CreateToggle("Auto Buy Music Egg (18)3", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.E183 = true 
+        while wait(0) and _G.E183 do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg18",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 3,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.E183 = false
+    end
+end)
+
+eggs2:CreateToggle("Auto Buy Music Egg (18)2", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.E182 = true 
+        while wait(0) and _G.E182 do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg18",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 3,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.E182 = false
+    end
+end)
+
+eggs2:CreateToggle("Auto Buy Music Egg (18)1", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.E181 = true 
+        while wait(0) and _G.E181 do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg18",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 3,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.E181 = false
+    end
+end)
+
+eggs2:CreateToggle("Auto Buy Music Egg (18)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.E18 = true 
+        while wait(0) and _G.E18 do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg18",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 3,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.E18 = false
     end
 end)
 
@@ -2071,6 +2147,10 @@ end)
 
 teleports:CreateButton("Island 17", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(396.47406, 13890.3213, -867.959778)
+end)
+
+teleports:CreateButton("Island 18", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(429.792755, 14317.666, -865.610596)
 end)
 
 teleports:CreateButton("Shop 1", function() --you dont need "arg" for a button
