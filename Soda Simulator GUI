@@ -1,69 +1,297 @@
 --https://www.roblox.com/games/5281022480/Beta-Soda-Simulator
-local ui = loadstring(game:HttpGet("https://pastebin.com/raw/zQWg2eeL"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
--- UI:Init(parent)
--- Init:AddTab(title)
--- AddTab:AddSection(title)
--- AddSection:AddButton(text, callback)
--- AddSection:AddSlider(text, default, callback)
--- AddSection:AddKeybind(text, default, callback)
--- AddSection:AddToggle(text, default, callback)
+local AutoTab = Library:CreateTab("Soda-Simulator GUI","things", true)
+local eggs1 = Library:CreateTab("Auto Buy Eggs x1","things", true)
+local eggs2 = Library:CreateTab("Auto Buy Eggs x3","things", true)
+local MISC = Library:CreateTab("MISC","things", true)
+local credits = Library:CreateTab("Credits","things", true)
 
-local mainUI = ui:Init(game:GetService("CoreGui"))
-local homeTab = mainUI:AddTab("Hacks")
-local eggs = mainUI:AddTab("Eggs x1")
-local eggs2 = mainUI:AddTab("Eggs x3")
-local farmSection = homeTab:AddSection("Auto Farmers")
-local farmMobs = farmSection:AddToggle("Auto Clicks", false, function()
-_G.b = true 
-while wait() and _G.b do
-    for i = 1, 100 do 
-        game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
-        game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
-        game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
-       _G.b = false
-       end 
+
+credits:CreateButton("Our Discords", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("masterkyllian#1723", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("bsoleil31FR[inchala ptn]#9001", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("https://discord.gg/PdUTrVG", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("Bebo Mods#9619", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+
+MISC:CreateButton("NO CLIP Press(E)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.NO = true 
+  noclip = false
+game:GetService('RunService').Stepped:connect(function()
+if noclip then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+plr = game.Players.LocalPlayer
+mouse = plr:GetMouse()
+mouse.KeyDown:connect(function(key)
+
+if key == "e" then
+noclip = not noclip
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+print('Created by FileExplorer')
+print('Credits to Peyton for the ChangeState part of this script')
+
+         
+else
+_G.NO = false
+end
+end)
+
+MISC:CreateButton("Inf Jump", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.INF = true 
+        while wait() and _G.INF do
+  InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
+         end
+else
+_G.INF = false
+end
+end)
+
+MISC:CreateButton("Ctrl + Click +TP", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.TP = true 
+        while wait() and _G.TP do
+ local Plr = game:GetService("Players").LocalPlayer
+local Mouse = Plr:GetMouse()
+
+Mouse.Button1Down:connect(function()
+if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end
+if not Mouse.Target then return end
+Plr.Character:MoveTo(Mouse.Hit.p)
+end)
+         end
+else
+_G.TP = false
+end
+end)
+
+MISC:CreateToggle("Speed Hack 100", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.Speed = true 
+        while wait() and _G.Speed do
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+        end
+    else
+        _G.Speed = false
+           game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
+         end
+end)
+
+
+AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b = true 
+        while wait(0) and _G.b do
+       
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+  game:GetService("ReplicatedStorage").Events["Energy2Event"]:FireServer()
+
+
+        end
+    else
+        _G.b = false
     end
 end)
-local farmBosses = farmSection:AddToggle("Auto Upgrades", false, function()
-_G.c = true 
-while wait() and _G.c do
-   
-  game:GetService("ReplicatedStorage").Events.UpgradeEvent:FireServer()
-     _G.c = false
-        
+
+AutoTab:CreateToggle("Auto Upgrades", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c = true 
+        while wait(0) and _G.c do
+       
+
+game:GetService("ReplicatedStorage").Events.UpgradeEvent:FireServer()
+
+
+        end
+    else
+        _G.c = false
     end
 end)
-local farmBosses = farmSection:AddToggle("Auto Sell", false, function()
-_G.d = true
-while wait() and _G.d do
+
+AutoTab:CreateToggle("Auto Sell", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.d = true 
+        while wait(0) and _G.d do
+       
+
 game:GetService("ReplicatedStorage").Events.TradeEvent:FireServer()
-       _G.d = false
-        
+
+
+        end
+    else
+        _G.d = false
     end
 end)
-local farmBosses = farmSection:AddToggle("Auto Collect Coins", false, function()
-_G.o = true
-while wait(0.5) and _G.o do
+
+AutoTab:CreateToggle("Auto Collect Chests and coins", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.o = true 
+        while wait(0.5) and _G.o do
 local children = game.Workspace:GetChildren()
     for _, child in pairs(children) do
-    for _, child in pairs(child:GetChildren()) do
-    table.insert(children, child)
+        for _, child in pairs(child:GetChildren()) do
+            table.insert(children, child)
+         end
+         if child:IsA("BasePart") and child.Name == "Chest" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame           
+else
+  if child:IsA("BasePart") and child.Name == "NormalCoin" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame            
+        end
 end
-    if child:IsA("BasePart") and child.Name == "Chest" then
-        child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame  
-end
-end 
-for i, v in pairs(game:GetService("Workspace").Treasure.Coins:GetChildren("NormalCoin")) do
-    v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-end
-end
+    end
+    end
+    else
+        _G.o = false
+    end
 end)
-    
-local farmSection = eggs:AddSection("Auto Eggs x1")
-local farmBosses = farmSection:AddToggle("Auto Buy Dominus Eggs", false, function()
-_G.egg = true
-while wait() and _G.egg do
+
+eggs1:CreateToggle("Auto Buy Dominus Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.E1 = true 
+        while wait(0) and _G.E1 do
+       
+
+
 local args = {
     [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Common",
@@ -71,31 +299,20 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
-      
 
-        _G.egg = false
-        
+        end
+    else
+        _G.E1 = false
     end
 end)
 
-local farmBosses = farmSection:AddToggle("Auto Buy Common Eggs", false, function()
-_G.egg1 = true
-while wait() and _G.egg1 do
-local args = {
-    [1] = game:GetService("Players")["LocalPlayer"],
-    [2] = "Rare",
-    [3] = false,
-}
+eggs2:CreateToggle("Auto Buy Dominus Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.E2 = true 
+        while wait(0) and _G.E2 do
+       
 
-game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
-   _G.egg1 = false
-        
-    end
-end)
-local farmSection = eggs2:AddSection("Auto Eggs x3")
-local farmBosses = farmSection:AddToggle("Auto Buy Dominus Eggs", false, function()
-_G.egg = true
-while wait() and _G.egg do
+
 local args = {
     [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Common",
@@ -103,13 +320,41 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
-   _G.egg = false
-        
+
+        end
+    else
+        _G.E2 = false
     end
 end)
-local farmBosses = farmSection:AddToggle("Auto Buy Common Eggs", false, function()
-_G.egg1 = true
-while wait() and _G.egg1 do
+
+eggs1:CreateToggle("Auto Buy  Common Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.E3 = true 
+        while wait(0) and _G.E3 do
+       
+
+
+local args = {
+    [1] = game:GetService("Players")["LocalPlayer"],
+    [2] = "Rare",
+    [3] = false,
+}
+
+game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.E3 = false
+    end
+end)
+
+eggs2:CreateToggle("Auto Buy Common Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.E4 = true 
+        while wait(0) and _G.E4 do
+       
+
+
 local args = {
     [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Rare",
@@ -118,7 +363,20 @@ local args = {
 
 game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
 
-     _G.egg1 = false
-        
+        end
+    else
+        _G.E4 = false
     end
 end)
+
+AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:Destroy()
+end)
+
+--| Anti AFK | By Altix#3395
+    local Virtual = game:service'VirtualUser'
+    game:service'Players'.LocalPlayer.Idled:connect(function()
+        Virtual:CaptureController()
+        Virtual:ClickButton2(Vector2.new())
+        wait(2)
+    end)
