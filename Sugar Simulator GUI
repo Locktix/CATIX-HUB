@@ -7,7 +7,9 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/prezt
 
 local AutoTab = Library:CreateTab("Sugar-Simulator GUI","things", true)
 local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
+local buy = Library:CreateTab("Auto Buy","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
+local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
 
@@ -35,6 +37,68 @@ credits:CreateButton("Bebo Mods#9619", function() --you dont need "arg" for a bu
 game:GetService("CoreGui").uiui:nothing()
 end)
 
+MISC:CreateButton("NO CLIP Press(E)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.NO = true 
+  noclip = false
+game:GetService('RunService').Stepped:connect(function()
+if noclip then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+plr = game.Players.LocalPlayer
+mouse = plr:GetMouse()
+mouse.KeyDown:connect(function(key)
+
+if key == "e" then
+noclip = not noclip
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+print('Created by FileExplorer')
+print('Credits to Peyton for the ChangeState part of this script')
+
+         
+else
+_G.NO = false
+end
+end)
+
+MISC:CreateButton("Inf Jump", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.INF = true 
+        while wait() and _G.INF do
+  InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
+         end
+else
+_G.INF = false
+end
+end)
+
+MISC:CreateButton("Ctrl + Click +TP", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.TP = true 
+        while wait() and _G.TP do
+ local Plr = game:GetService("Players").LocalPlayer
+local Mouse = Plr:GetMouse()
+
+Mouse.Button1Down:connect(function()
+if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end
+if not Mouse.Target then return end
+Plr.Character:MoveTo(Mouse.Hit.p)
+end)
+         end
+else
+_G.TP = false
+end
+end)
+
+
 AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
 _G.a = true 
@@ -59,6 +123,57 @@ game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
 end
     else
         _G.b = false
+         
+         end
+end)
+
+AutoTab:CreateToggle("Auto Equip Pets", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.bd = true 
+        while wait() and _G.bd do
+local args = {
+    [1] = "Equip",
+    [2] = {
+        [1] = "Pets",
+        [2] = "Desert Hare",
+        [3] = "Desert Hare1",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+local args = {
+    [1] = "Equip",
+    [2] = {
+        [1] = "Pets",
+        [2] = "Armadillo",
+        [3] = "Armadillo2",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+local args = {
+    [1] = "Equip",
+    [2] = {
+        [1] = "Pets",
+        [2] = "Sand Eagle",
+        [3] = "Sand Eagle1",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+local args = {
+    [1] = "Equip",
+    [2] = {
+        [1] = "Pets",
+        [2] = "Armadillo",
+        [3] = "Armadillo1",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+end
+    else
+        _G.bd = false
          
          end
 end)
@@ -629,7 +744,254 @@ end
          end
 end)
 
+buy:CreateToggle("Auto Buy Bags", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.b1 = true 
+        while wait() and _G.b1 do
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Fatness",
+        [2] = "Skinny-bones",
+    },
+}
 
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Fatness",
+        [2] = "Super Skinny",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Fatness",
+        [2] = "Skinny",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Fatness",
+        [2] = "Average",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Fatness",
+        [2] = "Heavy",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Fatness",
+        [2] = "Chubby",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Fatness",
+        [2] = "Super Chubby",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Fatness",
+        [2] = "Overweight",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Fatness",
+        [2] = "Fat",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Fatness",
+        [2] = "Really Fat",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Fatness",
+        [2] = "Obese",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Fatness",
+        [2] = "Giant",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Fatness",
+        [2] = "Frickn\' Huge",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+end
+    else
+        _G.b1= false
+         
+         end
+end)
+
+buy:CreateToggle("Auto Buy Tools", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.b2 = true 
+        while wait() and _G.b2 do
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Teeth",
+        [2] = "Broken",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Teeth",
+        [2] = "Rotten",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Teeth",
+        [2] = "Cavities",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Teeth",
+        [2] = "Sensitive",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Teeth",
+        [2] = "Normal",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Teeth",
+        [2] = "Clean",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Teeth",
+        [2] = "Pearly White",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Teeth",
+        [2] = "Perfect",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Teeth",
+        [2] = "Iron",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Teeth",
+        [2] = "Diamond",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Teeth",
+        [2] = "Neon",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+local args = {
+    [1] = "Buy",
+    [2] = {
+        [1] = "Teeth",
+        [2] = "Angelic",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+end
+    else
+        _G.b2 = false
+         
+         end
+end)
 
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(58.9317627, 21.6812668, -766.870239)
@@ -657,6 +1019,10 @@ end)
 
 teleports:CreateButton("Cloud World", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2024.5907, 11.9402943, 514.872437)
+end)
+
+teleports:CreateButton("sell x5", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-908.823425, 23.1520271, -1262.09644)
 end)
 
 --| Anti AFK | By Altix#3395
