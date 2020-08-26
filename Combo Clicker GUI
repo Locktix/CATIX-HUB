@@ -973,7 +973,7 @@ end)
 eggs2:CreateToggle("Auto Buy Music Egg (17)3", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.E173 = true 
-        while wait(0) and _G.E163 do
+        while wait(0) and _G.E173 do
             local args = {
                 [1] = {
                     ["EggType"] = "Egg17",
