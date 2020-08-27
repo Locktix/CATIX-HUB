@@ -862,10 +862,10 @@ game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
     end
 end)
 
-eggs:CreateToggle("Auto Buy Cost 1sp Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Auto Buy Cost 1O Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.e11 = true 
-        while wait(0) and _G.e11 do
+        _G.e12 = true 
+        while wait(0) and _G.e12 do
 local args = {
     [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Atlantis",
@@ -875,10 +875,46 @@ local args = {
 game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
   end
   else
-        _G.e11 = false
+        _G.e12 = false
     end
 end)
 
+eggs:CreateToggle("Auto Buy Cost 1N Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e13 = true 
+        while wait(0) and _G.e13 do
+
+local args = {
+    [1] = game:GetService("Players")["LocalPlayer"],
+    [2] = "Russo",
+    [3] = true,
+}
+
+game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
+  end
+  else
+        _G.e13 = false
+    end
+end)
+
+
+eggs:CreateToggle("Auto Buy Cost 1De Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e14 = true 
+        while wait(0) and _G.e14 do
+
+local args = {
+    [1] = game:GetService("Players")["LocalPlayer"],
+    [2] = "Bat",
+    [3] = true,
+}
+
+game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
+  end
+  else
+        _G.e14 = false
+    end
+end)
 eggs:CreateToggle("Auto Buy 100k Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e9 = true 
@@ -887,6 +923,23 @@ local args = {
     [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "100k",
     [3] = true,
+}
+
+game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
+  end
+  else
+        _G.e9 = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy 200k Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e9 = true 
+        while wait(0) and _G.e9 do
+local args = {
+    [1] = game:GetService("Players")["LocalPlayer"],
+    [2] = "200K",
+    [3] = false,
 }
 
 game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
@@ -1064,6 +1117,42 @@ game:GetService("ReplicatedStorage").RemoteEvents["Sacrifice1T"]:FireServer()
     end
 end)
 
+Sacrifices:CreateToggle("Auto Buy Sacrifices x100T", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.S14 = true 
+        while wait(0) and _G.S14 do
+   
+game:GetService("ReplicatedStorage").RemoteEvents["Sacrifice100T"]:FireServer()
+        end
+    else
+        _G.S14 = false
+    end
+end)
+
+Sacrifices:CreateToggle("Auto Buy Sacrifices x1Qa", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.S15 = true 
+        while wait(0) and _G.S15 do
+   
+game:GetService("ReplicatedStorage").RemoteEvents["Sacrifice1Qa"]:FireServer()
+        end
+    else
+        _G.S15 = false
+    end
+end)
+
+Sacrifices:CreateToggle("Auto Buy Sacrifices x10Qa", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.S16 = true 
+        while wait(0) and _G.S16 do
+   
+game:GetService("ReplicatedStorage").RemoteEvents["Sacrifice10Qa"]:FireServer()
+        end
+    else
+        _G.S16 = false
+    end
+end)
+
 Relinquish:CreateToggle("Auto Buy Relinquish x1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.S11 = true 
@@ -1110,6 +1199,42 @@ game:GetService("ReplicatedStorage").RemoteEvents["Relinquish100"]:FireServer()
     end
 end)
 
+Relinquish:CreateToggle("Auto Buy Relinquish x500", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.S14 = true 
+        while wait(0) and _G.S14 do
+   
+game:GetService("ReplicatedStorage").RemoteEvents["Relinquish500"]:FireServer()
+        end
+    else
+        _G.S14 = false
+    end
+end)
+
+Relinquish:CreateToggle("Auto Buy Relinquish x10K", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.S15 = true 
+        while wait(0) and _G.S15 do
+   
+game:GetService("ReplicatedStorage").RemoteEvents["Relinquish10000"]:FireServer()
+        end
+    else
+        _G.S15 = false
+    end
+end)
+
+Relinquish:CreateToggle("Auto Buy Relinquish x100K", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.S16 = true 
+        while wait(0) and _G.S16 do
+   
+game:GetService("ReplicatedStorage").RemoteEvents["Relinquish100000"]:FireServer()
+        end
+    else
+        _G.S16 false
+    end
+end)
+
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-951.15332, -375.698547, 626.717957)
 end)
@@ -1144,6 +1269,22 @@ end)
 
 teleports:CreateButton("World Boost x20", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2459.81592, -376.466248, 150.067444)
+end)
+
+teleports:CreateButton("World Boost x30", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2484.45068, -375.41156, 590.383545)
+end)
+
+teleports:CreateButton("World Boost x35", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2498.61621, -375.411652, 911.473511)
+end)
+
+teleports:CreateButton("World Boost x50", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2514.03784, -376.544281, 1114.79114)
+end)
+
+teleports:CreateButton("World Boost x60", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2506.39136, -376.544281, 1386.86243)
 end)
 
 --| Anti AFK | By Altix#3395
