@@ -56,7 +56,7 @@ Event:InvokeServer()
     end
 end)
 
-MISC:CreateButton("NO CLIP Press(E)", function(arg) --the (arg) is if the checkbox is toggled or not
+MISC:CreateToggle("NO CLIP Press(E)", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
 _G.NO = true 
   noclip = false
@@ -83,7 +83,7 @@ _G.NO = false
 end
 end)
 
-MISC:CreateButton("Inf Jump", function(arg) --the (arg) is if the checkbox is toggled or not
+MISC:CreateToggle("Inf Jump", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
 _G.INF = true 
         while wait() and _G.INF do
@@ -96,24 +96,6 @@ end)
          end
 else
 _G.INF = false
-end
-end)
-
-MISC:CreateButton("Ctrl + Click +TP", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-_G.TP = true 
-        while wait() and _G.TP do
- local Plr = game:GetService("Players").LocalPlayer
-local Mouse = Plr:GetMouse()
-
-Mouse.Button1Down:connect(function()
-if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end
-if not Mouse.Target then return end
-Plr.Character:MoveTo(Mouse.Hit.p)
-end)
-         end
-else
-_G.TP = false
 end
 end)
 
@@ -444,7 +426,20 @@ Event:InvokeServer(A_1, A_2)
     end
 end)
 
+eggs:CreateToggle("Auto Buy 15M Pets", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Basic = true 
+        while wait(0) and _G.Basic do
+           local A_1 = "15M"
+local A_2 = 1
+local Event = game:GetService("ReplicatedStorage").Events.Server.OpenEgg
+Event:InvokeServer(A_1, A_2)
 
+        end
+    else
+        _G.Basic = false
+    end
+end)
 
 rebirth:CreateToggle("Auto Rebirth x1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
