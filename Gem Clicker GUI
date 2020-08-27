@@ -84,6 +84,18 @@ _G.Speed = true
          end
 end)
 
+AutoTab:CreateToggle("Auto Mega Click", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.ME = true 
+        while wait() and _G.ME do
+     game:GetService("ReplicatedStorage")["Click2"]:FireServer()
+        end
+    else
+        _G.ME = false
+          
+         end
+end)
+
 AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.b = true 
@@ -1231,7 +1243,7 @@ Relinquish:CreateToggle("Auto Buy Relinquish x100K", function(arg) --the (arg) i
 game:GetService("ReplicatedStorage").RemoteEvents["Relinquish100000"]:FireServer()
         end
     else
-        _G.S16 false
+        _G.S16 = false
     end
 end)
 
