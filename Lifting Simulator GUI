@@ -5,8 +5,6 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
 local AutoTab = Library:CreateTab("Lifting-Simulator GUI","things", true)
-local teleports = Library:CreateTab("Teleports","things", true)
-local rebirths = Library:CreateTab("Auto Rebirth","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
@@ -35,7 +33,7 @@ credits:CreateButton("Bebo Mods#9619", function() --you dont need "arg" for a bu
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-Auto Tab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
 _G.a = true 
         while wait() and _G.a do
@@ -54,7 +52,7 @@ game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
          end
 end)
 
-Auto Tab:CreateToggle("Auto Sell", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateToggle("Auto Sell", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
 _G.b = true 
         while wait() and _G.b do
@@ -102,40 +100,6 @@ print('Credits to Peyton for the ChangeState part of this script')
          
 else
 _G.NO = false
-end
-end)
-
-MISC:CreateButton("Inf Jump", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-_G.INF = true 
-        while wait() and _G.INF do
-  InfiniteJumpEnabled = true
-game:GetService("UserInputService").JumpRequest:connect(function()
-	if InfiniteJumpEnabled then
-		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
-	end
-end)
-         end
-else
-_G.INF = false
-end
-end)
-
-MISC:CreateButton("Ctrl + Click +TP", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-_G.TP = true 
-        while wait() and _G.TP do
- local Plr = game:GetService("Players").LocalPlayer
-local Mouse = Plr:GetMouse()
-
-Mouse.Button1Down:connect(function()
-if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end
-if not Mouse.Target then return end
-Plr.Character:MoveTo(Mouse.Hit.p)
-end)
-         end
-else
-_G.TP = false
 end
 end)
 
