@@ -5,6 +5,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/prezt
 local AutoTab = Library:CreateTab("Combo Clickers GUI","things", true)
 local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
 local eggs2 = Library:CreateTab("Auto Buy Eggs 2","things", true)
+local eggs3 = Library:CreateTab("Auto Buy Eggs 3","things", true)
 local rebirths = Library:CreateTab("Auto Rebirths","things", true)
 local rebirths2 = Library:CreateTab("Auto Rebirths 2","things", true)
 local rebirths3 = Library:CreateTab("Auto Rebirths 3","things", true)
@@ -1380,7 +1381,64 @@ eggs2:CreateToggle("Auto Buy Arcade Egg (11)", function(arg) --the (arg) is if t
     end
 end)
 
-eggs2:CreateToggle("Auto Buy Dragons Egg (10)", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs3:CreateToggle("Auto Dragons Egg (10)3", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zz6 = true 
+        while wait(0) and _G.zz6 do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg10",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 3,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.zz6 = false
+    end
+end)
+
+eggs3:CreateToggle("Auto Dragons Egg (10)2", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zz5 = true 
+        while wait(0) and _G.zz5 do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg10",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 3,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.zz5 = false
+    end
+end)
+
+eggs3:CreateToggle("Auto Dragons Egg (10)1", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zz4 = true 
+        while wait(0) and _G.zz4 do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg10",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 3,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.zz4 = false
+    end
+end)
+
+eggs3:CreateToggle("Auto Dragons Egg (10)", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zz = true 
         while wait(0) and _G.zz do
@@ -1578,13 +1636,13 @@ eggs:CreateToggle("Auto Buy Ocean Egg (7)", function(arg) --the (arg) is if the 
     end
 end)
 
-eggs:CreateToggle("Auto Buy 6M Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Auto Buy 7M Egg", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzj = true 
         while wait(0) and _G.zzj do
         local args = {
     [1] = {
-        ["EggType"] = "Egg6M",
+        ["EggType"] = "Egg7M",
         ["UpdateType"] = "Open",
         ["Amount"] = 3,
     },
