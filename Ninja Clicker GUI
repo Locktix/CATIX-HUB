@@ -247,7 +247,7 @@ eggs:CreateToggle("Auto Buy 3T Yens eggs", function(arg) --the (arg) is if the c
         while wait(0) and _G.k do
 local args = {
     [1] = "Beehive Egg",
-    [2] = false
+    [2] = true
 }
 
 workspace.Debris.Events.OpenEgg:FireServer(unpack(args))
@@ -271,7 +271,7 @@ eggs:CreateToggle("Auto Buy 30T Yens eggs", function(arg) --the (arg) is if the 
         while wait(0) and _G.l do
 local args = {
     [1] = "Angelic Egg",
-    [2] = false
+    [2] = true
 }
 
 workspace.Debris.Events.OpenEgg:FireServer(unpack(args))
@@ -295,7 +295,7 @@ eggs:CreateToggle("Auto Buy 300T Yens eggs", function(arg) --the (arg) is if the
         while wait(0) and _G.m do
 local args = {
     [1] = "Demonic Egg",
-    [2] = false
+    [2] = true
 }
 
 workspace.Debris.Events.OpenEgg:FireServer(unpack(args))
@@ -319,7 +319,7 @@ eggs:CreateToggle("Auto Buy 5Qd Yens eggs", function(arg) --the (arg) is if the 
         while wait(0) and _G.n do
 local args = {
     [1] = "Artic Egg",
-    [2] = false
+    [2] = true
 }
 
 workspace.Debris.Events.OpenEgg:FireServer(unpack(args))
@@ -344,7 +344,7 @@ eggs:CreateToggle("Auto Buy 15Qd Yens eggs", function(arg) --the (arg) is if the
         while wait(0) and _G.n do
 local args = {
     [1] = "Party Egg",
-    [2] = false
+    [2] = true
 }
 
 workspace.Debris.Events.OpenEgg:FireServer(unpack(args))
@@ -369,7 +369,32 @@ eggs:CreateToggle("Auto Buy Coco eggs", function(arg) --the (arg) is if the chec
         while wait(0) and _G.n do
 local args = {
     [1] = "Coco Egg",
-    [2] = false
+    [2] = true
+}
+
+workspace.Debris.Events.OpenEgg:FireServer(unpack(args))
+
+
+
+
+
+
+
+
+
+        end
+    else
+        _G.n = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy 10M eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.n = true 
+        while wait(0) and _G.n do
+local args = {
+    [1] = "10M",
+    [2] = true
 }
 
 workspace.Debris.Events.OpenEgg:FireServer(unpack(args))
