@@ -393,7 +393,7 @@ eggs:CreateToggle("Auto Buy 10M eggs", function(arg) --the (arg) is if the check
         _G.o = true 
         while wait(0) and _G.o do
 local args = {
-    [1] = "10M",
+    [1] = "10M Egg",
     [2] = true
 }
 
