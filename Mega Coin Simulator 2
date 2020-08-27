@@ -115,7 +115,7 @@ end)
 
 
 
-MISC:CreateButton("NO CLIP Press(E)", function(arg) --the (arg) is if the checkbox is toggled or not
+MISC:CreateToggle("NO CLIP Press(E)", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
 _G.NO = true 
   noclip = false
@@ -142,7 +142,7 @@ _G.NO = false
 end
 end)
 
-MISC:CreateButton("Inf Jump", function(arg) --the (arg) is if the checkbox is toggled or not
+MISC:CreateToggle("Inf Jump", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
 _G.INF = true 
         while wait() and _G.INF do
@@ -155,24 +155,6 @@ end)
          end
 else
 _G.INF = false
-end
-end)
-
-MISC:CreateButton("Ctrl + Click +TP", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-_G.TP = true 
-        while wait() and _G.TP do
- local Plr = game:GetService("Players").LocalPlayer
-local Mouse = Plr:GetMouse()
-
-Mouse.Button1Down:connect(function()
-if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end
-if not Mouse.Target then return end
-Plr.Character:MoveTo(Mouse.Hit.p)
-end)
-         end
-else
-_G.TP = false
 end
 end)
 
