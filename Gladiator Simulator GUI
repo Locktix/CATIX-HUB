@@ -88,18 +88,6 @@ Event:FireServer(A_1)
     end
 end)
 
-AutoTab:CreateToggle("Auto Fire", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.c = true 
-        while wait(0) and _G.c do
-            local Event = game:GetService("Workspace").quentin453.Power.Fire
-Event:FireServer()
-        end
-    else
-        _G.c = false
-    end
-end)
-
 AutoTab:CreateToggle("Auto Train Durability", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.d = true 
