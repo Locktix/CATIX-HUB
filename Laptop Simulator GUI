@@ -82,21 +82,6 @@ _G.NO = false
 end
 end)
 
-MISC:CreateToggle("Inf Jump", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-_G.INF = true 
-        while wait() and _G.INF do
-  InfiniteJumpEnabled = true
-game:GetService("UserInputService").JumpRequest:connect(function()
-	if InfiniteJumpEnabled then
-		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
-	end
-end)
-         end
-else
-_G.INF = false
-end
-end)
 
 MISC:CreateToggle("Speed Hack 100", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
