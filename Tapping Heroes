@@ -1357,10 +1357,10 @@ teleports:CreateButton("Zone 10", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-8205.54688, 3.00753093, -86.6548538)
 end)
 teleports:CreateButton("Zone 11", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-8968.21484, 3.00753164, -104.281876)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-9016.79004, 3.50753164, -185.327057)
 end)
 teleports:CreateButton("Zone 12", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.newF(-9652.51367, 3.00753164, -122.608238)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-9646.76758, 3.00753164, -88.3352737)
 end)
 
 MISC:CreateToggle("NO CLIP Press(E)", function(arg) --the (arg) is if the checkbox is toggled or not
