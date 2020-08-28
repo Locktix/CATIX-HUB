@@ -56,6 +56,77 @@ Event:InvokeServer()
     end
 end)
 
+AutoTab:CreateToggle("Auto Buy Upgrades", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Upd = true 
+        while wait(0) and _G.Upd do
+local args = {
+    [1] = "Faster Speed",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestRebirthUpgrade:InvokeServer(unpack(args))
+local args = {
+    [1] = "Jump Height",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestRebirthUpgrade:InvokeServer(unpack(args))
+local args = {
+    [1] = "Faster Egg Open",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestRebirthUpgrade:InvokeServer(unpack(args))
+local args = {
+    [1] = "More Pet Slots",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestRebirthUpgrade:InvokeServer(unpack(args))
+local args = {
+    [1] = "More Gems",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestRebirthUpgrade:InvokeServer(unpack(args))
+local args = {
+    [1] = "More Luck",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestRebirthUpgrade:InvokeServer(unpack(args))
+local args = {
+    [1] = "Auto Clicker",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestRebirthUpgrade:InvokeServer(unpack(args))
+local args = {
+    [1] = "x2 Clicks Chance",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestRebirthUpgrade:InvokeServer(unpack(args))
+local args = {
+    [1] = "More Rebirths",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestRebirthUpgrade:InvokeServer(unpack(args))
+local args = {
+    [1] = "Faster Auto Click",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestRebirthUpgrade:InvokeServer(unpack(args))
+local args = {
+    [1] = "More Pets",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestRebirthUpgrade:InvokeServer(unpack(args))
+local args = {
+    [1] = "Auto Rebirth",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestRebirthUpgrade:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.Upd = false
+    end
+end)
+
 AutoTab:CreateToggle("Auto Buy Potions", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.PO = true 
