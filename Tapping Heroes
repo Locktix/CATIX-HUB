@@ -4,6 +4,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/prezt
 
 local AutoTab = Library:CreateTab("Tapping-Heroes GUI","things", true)
 local eggs= Library:CreateTab("Auto Buy Eggs","things", true)
+local eggs2= Library:CreateTab("Auto Buy Eggs2","things", true)
 local Rebirths = Library:CreateTab("Auto Rebirths","things", true)
 local Rebirths2= Library:CreateTab("Auto Rebirths 2","things", true)
 local teleports= Library:CreateTab("Teleports","things", true)
@@ -856,7 +857,7 @@ game:GetService("ReplicatedStorage").comm.re:FireServer(unpack(args))
     end
 end)
 
-eggs:CreateToggle("Auto Buy Shadow Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs2:CreateToggle("Auto Buy Shadow Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Shadow = true 
         while wait(0) and _G.Shadow do
@@ -872,7 +873,7 @@ game:GetService("ReplicatedStorage").comm.rf:InvokeServer(unpack(args))
     end
 end)
 
-eggs:CreateToggle("Auto Buy Golden Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs2:CreateToggle("Auto Buy Golden Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Golden = true 
         while wait(0) and _G.Golden do
@@ -888,7 +889,7 @@ game:GetService("ReplicatedStorage").comm.rf:InvokeServer(unpack(args))
     end
 end)
 
-eggs:CreateToggle("Auto Buy Blood Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs2:CreateToggle("Auto Buy Blood Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.BL = true 
         while wait(0) and _G.BL do
@@ -904,7 +905,7 @@ game:GetService("ReplicatedStorage").comm.rf:InvokeServer(unpack(args))
     end
 end)
 
-eggs:CreateToggle("Auto Buy Empty Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs2:CreateToggle("Auto Buy Empty Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.EmptyL = true 
         while wait(0) and _G.EmptyL do
