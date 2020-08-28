@@ -380,6 +380,23 @@ _G.j= true
          end
 end)
 
+eggs:CreateToggle("Auto Open Sand Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.SAND = true 
+        while wait() and _G.SAND do
+            local args = {
+    [1] = "Sand",
+    [2] = "R"
+}
+
+game:GetService("ReplicatedStorage").Shared.RemoteFunctions.OpenEgg:InvokeServer(unpack(args))
+        end
+    else
+        _G.SAND = false
+    end
+end)
+
+
 teleports:CreateButton("Sell", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(182.214462, 5.08189011, -118.789383)
 end)
