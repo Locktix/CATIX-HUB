@@ -56,6 +56,38 @@ Event:InvokeServer()
     end
 end)
 
+AutoTab:CreateToggle("Auto Buy Potions", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.PO = true 
+        while wait(0) and _G.PO do
+local args = {
+    [1] = "Shiny Boost",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.PotionBuy:InvokeServer(unpack(args))
+local args = {
+    [1] = "Click Boost",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.PotionBuy:InvokeServer(unpack(args))
+local args = {
+    [1] = "Mega Click",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.PotionBuy:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "Insane Click",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.PotionBuy:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.PO = false
+    end
+end)
+
 MISC:CreateToggle("NO CLIP Press(E)", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
 _G.NO = true 
