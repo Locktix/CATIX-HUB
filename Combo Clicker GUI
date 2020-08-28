@@ -196,7 +196,7 @@ rebirths3:CreateToggle("Rebirth X1Se", function(arg) --the (arg) is if the check
         while wait(0) and _G.a do
             local args = {
                 [1] = {
-                    ["Option"] = 100000000000000000000000,
+                    ["Option"] = 1000000000000000000000000,
                     ["RequestType"] = "RequestRebirth",
                 },
             }
@@ -214,7 +214,7 @@ rebirths3:CreateToggle("Rebirth X100S", function(arg) --the (arg) is if the chec
         while wait(0) and _G.a do
             local args = {
                 [1] = {
-                    ["Option"] = 10000000000000000000000,
+                    ["Option"] = 100000000000000000000000,
                     ["RequestType"] = "RequestRebirth",
                 },
             }
@@ -1861,6 +1861,26 @@ game:GetService("ReplicatedStorage").Functions.CrateFunction:InvokeServer(unpack
         end
     else
         _G.OOD2 = false
+    end
+end)
+
+
+crates:CreateToggle("Auto Buy Abyssal Crate (6)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.OOD3 = true 
+        while wait(0) and _G.OOD3 do
+ local args = {
+    [1] = {
+        ["Amount"] = 3,
+        ["UpdateType"] = "Open",
+        ["CrateType"] = "Crate6",
+    },
+}
+
+game:GetService("ReplicatedStorage").Functions.CrateFunction:InvokeServer(unpack(args))           
+        end
+    else
+        _G.OOD3 = false
     end
 end)
 
