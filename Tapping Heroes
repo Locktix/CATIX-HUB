@@ -856,6 +856,38 @@ game:GetService("ReplicatedStorage").comm.re:FireServer(unpack(args))
     end
 end)
 
+eggs:CreateToggle("Auto Buy Shadow Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Shadow = true 
+        while wait(0) and _G.Shadow do
+local args = {
+    [1] = "buyegg",
+    [2] = "Shadow Egg"
+}
+
+game:GetService("ReplicatedStorage").comm.rf:InvokeServer(unpack(args))
+        end
+    else
+        _G.Shadow = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy Golden Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Golden = true 
+        while wait(0) and _G.Golden do
+local args = {
+    [1] = "buyegg",
+    [2] = "Golden Egg"
+}
+
+game:GetService("ReplicatedStorage").comm.rf:InvokeServer(unpack(args))
+        end
+    else
+        _G.Golden = false
+    end
+end)
+
 eggs:CreateToggle("Auto Buy Blood Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.BL = true 
@@ -1306,6 +1338,9 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-8205.54
 end)
 teleports:CreateButton("Zone 11", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-8968.21484, 3.00753164, -104.281876)
+end)
+teleports:CreateButton("Zone 12", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-9652.51367, 3.00753164, -122.608238)
 end)
 
 MISC:CreateToggle("NO CLIP Press(E)", function(arg) --the (arg) is if the checkbox is toggled or not
