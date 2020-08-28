@@ -3,6 +3,7 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
 local AutoTab = Library:CreateTab("Combo Clickers GUI","things", true)
+local teleports = Library:CreateTab("Teleports","things", true)
 local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
 local eggs2 = Library:CreateTab("Auto Buy Eggs 2","things", true)
 local eggs3 = Library:CreateTab("Auto Buy Eggs 3","things", true)
@@ -11,7 +12,6 @@ local rebirths2 = Library:CreateTab("Auto Rebirths 2","things", true)
 local rebirths3 = Library:CreateTab("Auto Rebirths 3","things", true)
 local crates = Library:CreateTab("Auto Buy Crates","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
-local teleports = Library:CreateTab("Teleports","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
 
@@ -1457,6 +1457,82 @@ eggs3:CreateToggle("Auto Dragons Egg (10)", function(arg) --the (arg) is if the 
     end
 end)
 
+eggs3:CreateToggle("Auto Minion Egg (19)3", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.MINION4 = true 
+        while wait(0) and _G.MINION4 do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg19",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 3,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.MINION4 = false
+    end
+end)
+
+eggs3:CreateToggle("Auto Minion Egg (19)2", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.MINION3 = true 
+        while wait(0) and _G.MINION3 do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg19",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 3,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.MINION3 = false
+    end
+end)
+
+eggs3:CreateToggle("Auto Minion Egg (19)1", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.MINION2 = true 
+        while wait(0) and _G.MINION2 do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg19",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 3,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.MINION2 = false
+    end
+end)
+
+eggs3:CreateToggle("Auto Minion Egg (19)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.MINION1 = true 
+        while wait(0) and _G.MINION1 do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg19",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 3,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.MINION1 = false
+    end
+end)
+
 eggs:CreateToggle("Auto Buy villian Egg (9)", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zza = true 
@@ -2145,7 +2221,7 @@ end
     end
 end)
 
-teleports:CreateDropDown("Islands", {"Spawn", "Islands 1", "Islands 2", "Islands 3", "Islands 4", "Islands 5", "Islands 6", "Islands 7" , "Islands 8" , "Islands9", "Islands 10", "Islands 11", "Islands 12", "Islands 13"}, function(arg) --the (arg) is the option you choose 
+teleports:CreateDropDown("Islands", {"Spawn", "Islands 1", "Islands 2", "Islands 3", "Islands 4", "Islands 5", "Islands 6", "Islands 7" , "Islands 8" , "Islands 10", "Islands 11", "Islands 12", "Islands 13"}, function(arg) --the (arg) is the option you choose 
     if arg == "Spawn" then
         game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-27.2958336, 54.7868347, -880.203003)
     elseif arg == "Islands 1" then
@@ -2176,7 +2252,7 @@ teleports:CreateDropDown("Islands", {"Spawn", "Islands 1", "Islands 2", "Islands
 end)
 
 teleports:CreateButton("Island 9", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(660.950012, 6874.55908, -886.447327)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(530.815979, 5905.21631, -724.711487)
 end)
 
 teleports:CreateButton("Island 14", function() --you dont need "arg" for a button
@@ -2197,6 +2273,11 @@ end)
 teleports:CreateButton("Island 18", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(429.792755, 14317.666, -865.610596)
 end)
+
+teleports:CreateButton("Island 19", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(431.707916, 14813.1299, -862.556519)
+end)
+
 
 teleports:CreateButton("Shop 1", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-39.3278999, 54.5634804, -831.109619)
