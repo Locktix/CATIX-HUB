@@ -36,6 +36,25 @@ credits:CreateButton("Big C#5347", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
+AutoTab:CreateToggle("Auto Collect diamond", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Collec = true 
+        while wait(0.5) and _G.Collec do
+local children = game.Workspace:GetChildren()
+    for _, child in pairs(children) do
+        for _, child in pairs(child:GetChildren()) do
+            table.insert(children, child)
+         end
+         if child:IsA("BasePart") and child.Name == "diamond" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame            
+        end
+    end
+    end
+    else
+        _G.Collec = false
+    end
+end)
+
 AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.a = true 
@@ -1341,7 +1360,7 @@ teleports:CreateButton("Zone 11", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-8968.21484, 3.00753164, -104.281876)
 end)
 teleports:CreateButton("Zone 12", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-9652.51367, 3.00753164, -122.608238)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.newF(-9652.51367, 3.00753164, -122.608238)
 end)
 
 MISC:CreateToggle("NO CLIP Press(E)", function(arg) --the (arg) is if the checkbox is toggled or not
