@@ -953,6 +953,40 @@ workspace.Debris.Events.MakeRebirth:FireServer(unpack(args))
     end
 end)
 
+reb:CreateToggle("Auto Rebirth 500Sx", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zu = true 
+        while wait(0) and _G.zu do
+           local args = {
+    [1] = 500000000000000000000000
+}
+
+workspace.Debris.Events.MakeRebirth:FireServer(unpack(args))
+
+
+        end
+    else
+        _G.zu = false
+    end
+end)
+
+reb:CreateToggle("Auto Rebirth 1Sp", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zu = true 
+        while wait(0) and _G.zu do
+           local args = {
+    [1] = 1000000000000000000000000
+}
+
+workspace.Debris.Events.MakeRebirth:FireServer(unpack(args))
+
+
+        end
+    else
+        _G.zu = false
+    end
+end)
+
 AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:Destroy()
 end)
