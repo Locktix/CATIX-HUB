@@ -1,6 +1,4 @@
---https://www.roblox.com/games/5373489830/X5-SECRET-Clicking-Champions--
---SNUG WORLD CODE IS SecretSnug--
---CDTV WORLD CODE IS CDTVHasASecret--
+--https://www.roblox.com/games/5373489830/X5-SECRET-Clicking-Champions
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
@@ -11,7 +9,6 @@ local teleports2 = Library:CreateTab("Teleports 2","things", true)
 local rebirth = Library:CreateTab("Auto Rebirth","things", true)
 local rebirth2 = Library:CreateTab("Auto Rebirth 2","things", true)
 local rebirth3 = Library:CreateTab("Auto Rebirth 3","things", true)
-local rebirth4 = Library:CreateTab("Auto Rebirth 4","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
@@ -833,7 +830,7 @@ Event:InvokeServer(A_1)
     end
 end)
 
-rebirth:CreateToggle("Auto Rebirth x100B", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirth2:CreateToggle("Auto Rebirth x100B", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zr = true 
         while wait(0) and _G.zr do
@@ -848,7 +845,7 @@ Event:InvokeServer(A_1)
     end
 end)
 
-rebirth:CreateToggle("Auto Rebirth x250B", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirth2:CreateToggle("Auto Rebirth x250B", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zs = true 
         while wait(0) and _G.zs do
@@ -1103,7 +1100,7 @@ Event:InvokeServer(A_1)
     end
 end)
 
-rebirth2:CreateToggle("Auto Rebirth x150Qa", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirth3:CreateToggle("Auto Rebirth x150Qa", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzj = true 
         while wait(0) and _G.zzj do
@@ -1118,7 +1115,7 @@ Event:InvokeServer(A_1)
     end
 end)
 
-rebirth2:CreateToggle("Auto Rebirth x250Qa", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirth3:CreateToggle("Auto Rebirth x250Qa", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzh = true 
         while wait(0) and _G.zzh do
@@ -1133,7 +1130,7 @@ Event:InvokeServer(A_1)
     end
 end)
 
-rebirth2:CreateToggle("Auto Rebirth x500Qa", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirth3:CreateToggle("Auto Rebirth x500Qa", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzi = true 
         while wait(0) and _G.zzi do
@@ -1148,7 +1145,7 @@ Event:InvokeServer(A_1)
     end
 end)
 
-rebirth2:CreateToggle("Auto Rebirth x750Qa", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirth3:CreateToggle("Auto Rebirth x750Qa", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzj = true 
         while wait(0) and _G.zzj do
@@ -1163,7 +1160,7 @@ Event:InvokeServer(A_1)
     end
 end)
 
-rebirth2:CreateToggle("Auto Rebirth x1Qi", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirth3:CreateToggle("Auto Rebirth x1Qi", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzk = true 
         while wait(0) and _G.zzk do
@@ -1178,7 +1175,7 @@ Event:InvokeServer(A_1)
     end
 end)
 
-rebirth4:CreateToggle("Auto Rebirth x5Qi", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirth3:CreateToggle("Auto Rebirth x5Qi", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzl  = true 
         while wait(0) and _G.zzl do
@@ -1193,7 +1190,7 @@ Event:InvokeServer(A_1)
     end
 end)
 
-rebirth4:CreateToggle("Auto Rebirth x15Qi", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirth3:CreateToggle("Auto Rebirth x15Qi", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzm = true 
         while wait(0) and _G.zzm do
@@ -1208,7 +1205,7 @@ Event:InvokeServer(A_1)
     end
 end)
 
-rebirth4:CreateToggle("Auto Rebirth x25Qi", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirth3:CreateToggle("Auto Rebirth x25Qi", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzn = true 
         while wait(0) and _G.zzn do
@@ -1223,7 +1220,7 @@ Event:InvokeServer(A_1)
     end
 end)
 
-rebirth4:CreateToggle("Auto Rebirth x50Qi", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirth3:CreateToggle("Auto Rebirth x50Qi", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzo = true 
         while wait(0) and _G.zzo do
@@ -1238,7 +1235,7 @@ Event:InvokeServer(A_1)
     end
 end)
 
-rebirth4:CreateToggle("Auto Rebirth x75Qi", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirth3:CreateToggle("Auto Rebirth x75Qi", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzp = true 
         while wait(0) and _G.zzp do
@@ -1253,7 +1250,7 @@ Event:InvokeServer(A_1)
     end
 end)
 
-rebirth4:CreateToggle("Auto Rebirth x100Qi", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirth3:CreateToggle("Auto Rebirth x100Qi", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzq = true 
         while wait(0) and _G.zzq do
@@ -1268,7 +1265,7 @@ Event:InvokeServer(A_1)
     end
 end)
 
-rebirth4:CreateToggle("Auto Rebirth x500Qi", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirth3:CreateToggle("Auto Rebirth x500Qi", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzr = true 
         while wait(0) and _G.zzr do
