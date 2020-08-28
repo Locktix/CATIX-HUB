@@ -959,29 +959,6 @@ game:GetService("ReplicatedStorage").RemoteEvents.Eclicked:FireServer(unpack(arg
     end
 end)
 
-eggs:CreateToggle("inf pets equip", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-_G.g = true 
-        while wait() and _G.g do
-game.Players.LocalPlayer.MaxPets.Value = 6942000000000
-
-     end
-        _G.g = false
-    end
-end)
-
-eggs:CreateToggle("Free Triple Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-_G.g = true 
-        while wait() and _G.g do
-game.Players.LocalPlayer.TripleEggs.Value = 1
-
-
-     end
-        _G.g = false
-    end
-end)
-
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(71.7898483, 3.66993809, 83.2115402)
 end)
