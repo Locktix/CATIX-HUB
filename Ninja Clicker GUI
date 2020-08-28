@@ -8,6 +8,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/prezt
 local AutoTab = Library:CreateTab("Ninja Clicker GUI","things", true)
 local eggs = Library:CreateTab("Auto Buy Eggs X3","things", true)
 local reb = Library:CreateTab("Auto Rebirths","things", true)
+local reb2 = Library:CreateTab("Auto Rebirths2","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
 local potions = Library:CreateTab("Auto Buy Potions","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
@@ -919,7 +920,7 @@ workspace.Debris.Events.MakeRebirth:FireServer(unpack(args))
     end
 end)
 
-reb:CreateToggle("Auto Rebirth x1Qn", function(arg) --the (arg) is if the checkbox is toggled or not
+reb2:CreateToggle("Auto Rebirth x1Qn", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zt = true 
         while wait(0) and _G.zt do
@@ -936,7 +937,7 @@ workspace.Debris.Events.MakeRebirth:FireServer(unpack(args))
     end
 end)
 
-reb:CreateToggle("Auto Rebirth 50Sx", function(arg) --the (arg) is if the checkbox is toggled or not
+reb2:CreateToggle("Auto Rebirth 50Sx", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zt = true 
         while wait(0) and _G.zt do
@@ -953,7 +954,7 @@ workspace.Debris.Events.MakeRebirth:FireServer(unpack(args))
     end
 end)
 
-reb:CreateToggle("Auto Rebirth 500Sx", function(arg) --the (arg) is if the checkbox is toggled or not
+reb2:CreateToggle("Auto Rebirth 500Sx", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zu = true 
         while wait(0) and _G.zu do
@@ -970,7 +971,7 @@ workspace.Debris.Events.MakeRebirth:FireServer(unpack(args))
     end
 end)
 
-reb:CreateToggle("Auto Rebirth 1Sp", function(arg) --the (arg) is if the checkbox is toggled or not
+reb2:CreateToggle("Auto Rebirth 1Sp", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zu = true 
         while wait(0) and _G.zu do
