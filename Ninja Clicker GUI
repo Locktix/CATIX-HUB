@@ -998,7 +998,7 @@ local args = {
     [2] = false
 }
 
-workspace.Debris.Events.OpenEgg:FireServer(unpack(args))
+workspace.Debris.Events.OpenCrate:FireServer(unpack(args))
 
 
 
