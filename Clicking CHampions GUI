@@ -1279,6 +1279,52 @@ Event:InvokeServer(A_1)
         _G.zzr = false
     end
 end)
+
+rebirth3:CreateToggle("Auto Rebirth x1Sx", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zzs = true 
+        while wait(0) and _G.zzs do
+            local A_1 = "9"
+local A_1 = 1000000000000000000000
+local Event = game:GetService("ReplicatedStorage").Events.Server.RequestRebirth
+Event:InvokeServer(A_1)		
+
+        end
+    else
+        _G.zzs = false
+    end
+end)
+
+rebirth3:CreateToggle("Auto Rebirth x1Sp", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zzt = true 
+        while wait(0) and _G.zzt do
+            local A_1 = "9"
+local A_1 = 1000000000000000000000000
+local Event = game:GetService("ReplicatedStorage").Events.Server.RequestRebirth
+Event:InvokeServer(A_1)		
+
+        end
+    else
+        _G.zzt = false
+    end
+end)
+
+
+rebirth3:CreateToggle("Auto Rebirth x1Oc", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zzu = true 
+        while wait(0) and _G.zzu do
+            local A_1 = "9"
+local A_1 = 1000000000000000000000000000
+local Event = game:GetService("ReplicatedStorage").Events.Server.RequestRebirth
+Event:InvokeServer(A_1)		
+
+        end
+    else
+        _G.zzu = false
+    end
+end)
 AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:Destroy()
 end)
