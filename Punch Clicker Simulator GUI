@@ -231,6 +231,21 @@ game:GetService("ReplicatedStorage").OpenEgg:FireServer(unpack(args))
     end
 end)
 
+eggs:CreateToggle("Auto Buy Tier 6 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.t6 = true 
+        while wait(0) and _G.t6 do
+local args = {
+    [1] = "Tier6",
+}
+
+game:GetService("ReplicatedStorage").OpenEgg:FireServer(unpack(args))
+        end
+    else
+        _G.t6= false
+    end
+end)
+
 rebirths:CreateToggle("Auto Buy Rebirths X1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.r1 = true 
@@ -495,6 +510,7 @@ end)
 teleports:CreateButton("Zone x4,5K punch", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-195.301315, 418.275848, -1679.46033)
 end)
+
 
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
