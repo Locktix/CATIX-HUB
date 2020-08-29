@@ -1457,6 +1457,82 @@ eggs3:CreateToggle("Auto Dragons Egg (10)", function(arg) --the (arg) is if the 
     end
 end)
 
+eggs3:CreateToggle("Auto Minion Egg 2 (20)3", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.MINION8 = true 
+        while wait(0) and _G.MINION8 do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg20",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 3,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.MINION8 = false
+    end
+end)
+
+eggs3:CreateToggle("Auto Minion Egg 2 (20)2", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.MINION7 = true 
+        while wait(0) and _G.MINION7 do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg00",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 3,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.MINION7 = false
+    end
+end)
+
+eggs3:CreateToggle("Auto Minion Egg 2 (20)1", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.MINION6 = true 
+        while wait(0) and _G.MINION6 do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg20",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 3,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.MINION6 = false
+    end
+end)
+
+eggs3:CreateToggle("Auto Minion Egg 2 (20)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.MINION5 = true 
+        while wait(0) and _G.MINION5 do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg20",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 3,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.MINION5 = false
+    end
+end)
+
 eggs3:CreateToggle("Auto Minion Egg (19)3", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.MINION4 = true 
