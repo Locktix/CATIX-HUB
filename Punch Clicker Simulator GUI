@@ -399,7 +399,7 @@ rebirths:CreateToggle("Auto Buy Rebirths X1.6T", function(arg) --the (arg) is if
         while wait(0) and _G.r11 do
 local args = {
     [1] = "Rebirth",
-    [2] = 13,
+    [2] = 11,
 }
 
 game:GetService("ReplicatedStorage").Buy:FireServer(unpack(args))
@@ -416,7 +416,7 @@ rebirths:CreateToggle("Auto Buy Rebirths X789T", function(arg) --the (arg) is if
         while wait(0) and _G.r12 do
 local args = {
     [1] = "Rebirth",
-    [2] = 13,
+    [2] = 12,
 }
 
 game:GetService("ReplicatedStorage").Buy:FireServer(unpack(args))
