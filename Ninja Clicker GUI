@@ -989,26 +989,6 @@ workspace.Debris.Events.MakeRebirth:FireServer(unpack(args))
     end
 end)
 
-crates:CreateToggle("Auto Buy Crate 100Qn", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.CR1 = true 
-        while wait(0) and _G.CR1 do
-local args = {
-    [1] = "Wooden Crate",
-    [2] = false
-}
-
-workspace.Debris.Events.OpenCrate:FireServer(unpack(args))
-
-
-
-
-        end
-    else
-        _G.CR1 = false
-    end
-end)
-
 AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:Destroy()
 end)
