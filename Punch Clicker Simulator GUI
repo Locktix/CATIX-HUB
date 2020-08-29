@@ -460,6 +460,22 @@ game:GetService("ReplicatedStorage").Buy:FireServer(unpack(args))
     end
 end)
 
+rebirths:CreateToggle("Auto Buy Rebirths X1sx", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.r15 = true 
+        while wait(0) and _G.r15 do
+local args = {
+    [1] = "Rebirth",
+    [2] = 15,
+}
+
+game:GetService("ReplicatedStorage").Buy:FireServer(unpack(args))
+        end
+    else
+        _G.r15= false
+    end
+end)
+
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-391.081116, 417.264679, 242.677063)
 end)
