@@ -390,8 +390,7 @@ workspace.Debris.Events.OpenEgg:FireServer(unpack(args))
     end
 end)
 
-eggs:CreateToggle("Auto Buy 10M 
-s", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Auto Buy 10M Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.o = true 
         while wait(0) and _G.o do
@@ -999,8 +998,7 @@ local args = {
     [2] = false
 }
 
-workspace.Debris.Events.OpenCrate:InvokeServer(unpack(args))
-
+workspace.Debris.Events.OpenEgg:FireServer(unpack(args))
 
 
 
