@@ -2301,57 +2301,57 @@ teleports:CreateDropDown("Islands", {"Spawn", "Islands 1", "Islands 2", "Islands
     if arg == "Spawn" then
         game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-27.2958336, 54.7868347, -880.203003)
     elseif arg == "Islands 1" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(121.647934, 457.010315, -821.140198)
+        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(79.8636856, 329.71756, -819.814636)
     elseif arg == "Islands 2" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(15.2872801, 904.083008, -917.881653)
+        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(15.2678299, 550.582336, -916.540649)
     elseif arg == "Islands 3" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(80.4999313, 1717.63647, -1058.14905)
+        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(95.4841232, 940.433105, -1056.80762)
     elseif arg == "Islands 4" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(239.828644, 2434.19946, -940.05658)
+        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(240.661774, 1319.08423, -940.158447)
     elseif arg == "Islands 5" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(280.046295, 3603.84424, -858.549377)  
+        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(272.899475, 1939.27087, -849.953796)  
     elseif arg == "Islands 6" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(401.155701, 4312.67871, -765.344055) 
+        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(332.89212, 2250.11816, -774.391113) 
     elseif arg == "Islands 7" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(581.19635, 5097.88477, -692.195923) 
+        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(571.006042, 2561.78735, -695.975281) 
     elseif arg == "Islands 8" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(581.19635, 5097.88477, -692.195923) 
+        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(500.847748, 3100.41943, -700.950012) 
       elseif arg == "Islands 10" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(639.837158, 7832.3584, -972.805908)
+        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(640.169922, 3614.15576, -972.179993)
     elseif arg == "Islands 11" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(505.438507, 8859.80859, -916.89563)
+        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(501.038361, 3856.90454, -915.60907)
     elseif arg == "Islands 12" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(506.177124, 9814.79883, -918.168823)
+        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(501.506683, 4092.29517, -918.616943)
     elseif arg == "Islands 13" then
-        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(430.266144, 10732.1807, -878.734436)
+        game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(428.418457, 4502.57715, -868.273926)
     end
 end)
 
 teleports:CreateButton("Island 9", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(530.815979, 5905.21631, -724.711487)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(661.645447, 3390.95605, -887.30365)
 end)
 
 teleports:CreateButton("Island 14", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(405.558899, 11443.7959, -898.731812)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(397.543274, 4684.89551, -888.318359)
 end)
 
 teleports:CreateButton("Island 15", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(372.993469, 12338.2129, -755.207336)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(355.653839, 5035.20654, -762.790894)
 end)
 teleports:CreateButton("Island 16", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(399.82663, 13106.3906, -718.65509)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(422.989746, 5346.68945, -732.380737)
 end)
 
 teleports:CreateButton("Island 17", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(396.47406, 13890.3213, -867.959778)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(400.194427, 5717.6709, -859.416016)
 end)
 
 teleports:CreateButton("Island 18", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(429.792755, 14317.666, -865.610596)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(435.302246, 6019.95898, -874.264465)
 end)
 
 teleports:CreateButton("Island 19", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(431.707916, 14813.1299, -862.556519)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(427.123047, 6393.72217, -858.323059)
 end)
 
 
