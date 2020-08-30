@@ -1028,6 +1028,165 @@ workspace.Debris.Events.MakeRebirth:FireServer(unpack(args))
     end
 end)
 
+reb2:CreateToggle("Auto Rebirth 50Sp", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zu = true 
+        while wait(0) and _G.zu do
+           local args = {
+    [1] = 50000000000000000000000000
+}
+
+workspace.Debris.Events.MakeRebirth:FireServer(unpack(args))
+
+
+        end
+    else
+        _G.zu = false
+    end
+end)
+
+reb2:CreateToggle("Auto Rebirth 100Sp", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zu = true 
+        while wait(0) and _G.zu do
+           local args = {
+    [1] = 100000000000000000000000000
+}
+
+workspace.Debris.Events.MakeRebirth:FireServer(unpack(args))
+
+
+        end
+    else
+        _G.zu = false
+    end
+end)
+reb2:CreateToggle("Auto Rebirth 250Sp", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zu = true 
+        while wait(0) and _G.zu do
+           local args = {
+    [1] = 250000000000000000000000000
+}
+
+workspace.Debris.Events.MakeRebirth:FireServer(unpack(args))
+
+
+        end
+    else
+        _G.zu = false
+    end
+end)
+
+reb2:CreateToggle("Auto Rebirth 500Sp", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zu = true 
+        while wait(0) and _G.zu do
+           local args = {
+    [1] = 500000000000000000000000000
+}
+
+workspace.Debris.Events.MakeRebirth:FireServer(unpack(args))
+
+
+        end
+    else
+        _G.zu = false
+    end
+end)
+
+reb2:CreateToggle("Auto Rebirth 750Sp", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zv = true 
+        while wait(0) and _G.zv do
+           local args = {
+    [1] = 750000000000000000000000000
+}
+
+workspace.Debris.Events.MakeRebirth:FireServer(unpack(args))
+
+
+        end
+    else
+        _G.zv = false
+    end
+end)
+
+reb2:CreateToggle("Auto Rebirth 1O", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zw = true 
+        while wait(0) and _G.zw do
+       local A_1 = 1e+27
+local Event = game:GetService("Workspace").Debris.Events.MakeRebirth
+Event:FireServer(A_1)
+
+
+        end
+    else
+        _G.zw = false
+    end
+end)
+
+
+reb2:CreateToggle("Auto Rebirth 10O", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zx = true 
+        while wait(0) and _G.zx do
+         local A_1 = 1e+28
+local Event = game:GetService("Workspace").Debris.Events.MakeRebirth
+Event:FireServer(A_1)
+
+
+        end
+    else
+        _G.zx = false
+    end
+end)
+
+reb2:CreateToggle("Auto Rebirth 50O", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zy = true 
+        while wait(0) and _G.zy do
+     local A_1 = 5e+28
+local Event = game:GetService("Workspace").Debris.Events.MakeRebirth
+Event:FireServer(A_1)
+
+
+        end
+    else
+        _G.zy = false
+    end
+end)
+
+reb2:CreateToggle("Auto Rebirth 100O", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zz = true 
+        while wait(0) and _G.zz do
+  local A_1 = 1e+29
+local Event = game:GetService("Workspace").Debris.Events.MakeRebirth
+Event:FireServer(A_1)
+
+        end
+    else
+        _G.zz = false
+    end
+end)
+
+reb2:CreateToggle("Auto Rebirth 250O", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zza = true 
+        while wait(0) and _G.zza do
+local A_1 = 2.5e+29
+local Event = game:GetService("Workspace").Debris.Events.MakeRebirth
+Event:FireServer(A_1)
+
+
+        end
+    else
+        _G.zza = false
+    end
+end)
+
 AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:Destroy()
 end)
