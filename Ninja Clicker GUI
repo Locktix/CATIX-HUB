@@ -415,6 +415,31 @@ workspace.Debris.Events.OpenEgg:FireServer(unpack(args))
     end
 end)
 
+eggs:CreateToggle("Auto Buy Atlantis Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.o = true 
+        while wait(0) and _G.o do
+local args = {
+    [1] = "Infected Egg",
+    [2] = true
+}
+
+workspace.Debris.Events.OpenEgg:FireServer(unpack(args))
+
+
+
+
+
+
+
+
+
+        end
+    else
+        _G.o = false
+    end
+end)
+
 MISC:CreateToggle("NO CLIP Press(E)", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
 _G.NO = true 
