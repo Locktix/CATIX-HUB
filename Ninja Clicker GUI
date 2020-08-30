@@ -40,7 +40,21 @@ credits:CreateButton("Bebo Mods#1110", function() --you dont need "arg" for a bu
 game:GetService("CoreGui").uiui:nothing()
 end)
 
+crates:CreateToggle("Auto Buy Crate 1", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.cr1 = true 
+        while wait(0) and _G.cr1 do
+local A_1 = "Wooden Crate"
+local A_2 = true
+local Event = game:GetService("Workspace").Debris.Events.OpenCrate
+Event:FireServer(A_1, A_2)
 
+
+        end
+    else
+        _G.cr1 = false
+    end
+end)
 eggs:CreateToggle("Auto Buy 1K Shurikens eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.a = true 
