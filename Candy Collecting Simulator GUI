@@ -6,6 +6,7 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
 local AutoTab = Library:CreateTab("Candy Collecting GUI","things", true)
+local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
@@ -104,7 +105,20 @@ AutoTab:CreateToggle("Inf Range", function(arg) --the (arg) is if the checkbox i
         _G.b = false
     end
 end)
+AutoTab:CreateToggle("Auto Rebirths", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.reb = true 
+        while wait(0) and _G.reb do
+       local args = {
+    [1] = "Rebirth",
+}
 
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+        end
+    else
+        _G.reb = false
+    end
+end)
 AutoTab:CreateToggle("Speed Hack 200", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
 _G.Speed = true 
@@ -116,6 +130,184 @@ _G.Speed = true
            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
          end
 end)
+eggs:CreateToggle("Auto Buy Clown Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e1 = true 
+        while wait(0) and _G.e1 do
+         local args = {
+    [1] = "OpenEgg",
+    [2] = "ClownEgg",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+        end
+    else
+        _G.e1 = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy Circus Animals Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e2 = true 
+        while wait(0) and _G.e2 do
+         local args = {
+    [1] = "OpenEgg",
+    [2] = "CircusAnimals",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+        end
+    else
+        _G.e2 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Angels Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e3 = true 
+        while wait(0) and _G.e3 do
+         local args = {
+    [1] = "OpenEgg",
+    [2] = "AngelEgg",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+        end
+    else
+        _G.e3 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Lion Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e4 = true 
+        while wait(0) and _G.e4 do
+         local args = {
+    [1] = "OpenEgg",
+    [2] = "LionEgg",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+        end
+    else
+        _G.e4 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Cracked Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e5 = true 
+        while wait(0) and _G.e5 do
+         local args = {
+    [1] = "OpenEgg",
+    [2] = "CrackedEgg",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+        end
+    else
+        _G.e5 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Eye Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e6 = true 
+        while wait(0) and _G.e6 do
+      local args = {
+    [1] = "OpenEgg",
+    [2] = "Eye",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+        end
+    else
+        _G.e6 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Lava Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e7 = true 
+        while wait(0) and _G.e7 do
+      local args = {
+    [1] = "OpenEgg",
+    [2] = "Lava",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+        end
+    else
+        _G.e7 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Devil Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+     if arg then
+        _G.e7 = true 
+        while wait(0) and _G.e8 do
+      local args = {
+    [1] = "OpenEgg",
+    [2] = "Devil",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+        end
+    else
+        _G.e7 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Pumpkin Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e9 = true 
+        while wait(0) and _G.e9 do
+      local args = {
+    [1] = "OpenEgg",
+    [2] = "Pumpkin"
+    }
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+        end
+    else
+        _G.e9 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Angry Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e10 = true 
+        while wait(0) and _G.e10 do
+      local args = {
+    [1] = "OpenEgg",
+    [2] = "Angry",
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+}
+        end
+    else
+        _G.e10 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Moon Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e11 = true 
+        while wait(0) and _G.e11 do
+      local args = {
+    [1] = "OpenEgg",
+    [2] = "Moon",
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+}
+        end
+    else
+        _G.e11 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Basic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e12 = true 
+        while wait(0) and _G.e12 do
+      local args = {
+    [1] = "OpenEgg",
+    [2] = "Basic",
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+}
+        end
+    else
+        _G.e12 = false
+    end
+end)
+
 
 AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:Destroy()
