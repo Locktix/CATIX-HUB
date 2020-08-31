@@ -133,7 +133,7 @@ end)
 eggs:CreateToggle("Auto Buy Clown Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e1 = true 
-        while wait(0) and _G.e1 do
+        while wait(0.5) and _G.e1 do
          local args = {
     [1] = "OpenEgg",
     [2] = "ClownEgg",
@@ -149,7 +149,7 @@ end)
 eggs:CreateToggle("Auto Buy Circus Animals Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e2 = true 
-        while wait(0) and _G.e2 do
+        while wait(0.5) and _G.e2 do
          local args = {
     [1] = "OpenEgg",
     [2] = "CircusAnimals",
@@ -164,7 +164,7 @@ end)
 eggs:CreateToggle("Auto Buy Angels Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e3 = true 
-        while wait(0) and _G.e3 do
+        while wait(0.5) and _G.e3 do
          local args = {
     [1] = "OpenEgg",
     [2] = "AngelEgg",
@@ -179,7 +179,7 @@ end)
 eggs:CreateToggle("Auto Buy Lion Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e4 = true 
-        while wait(0) and _G.e4 do
+        while wait(0.5) and _G.e4 do
          local args = {
     [1] = "OpenEgg",
     [2] = "LionEgg",
@@ -194,7 +194,7 @@ end)
 eggs:CreateToggle("Auto Buy Cracked Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e5 = true 
-        while wait(0) and _G.e5 do
+        while wait(0.5) and _G.e5 do
          local args = {
     [1] = "OpenEgg",
     [2] = "CrackedEgg",
@@ -209,7 +209,7 @@ end)
 eggs:CreateToggle("Auto Buy Eye Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e6 = true 
-        while wait(0) and _G.e6 do
+        while wait(0.5) and _G.e6 do
       local args = {
     [1] = "OpenEgg",
     [2] = "Eye",
@@ -224,7 +224,7 @@ end)
 eggs:CreateToggle("Auto Buy Lava Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e7 = true 
-        while wait(0) and _G.e7 do
+        while wait(0.5) and _G.e7 do
       local args = {
     [1] = "OpenEgg",
     [2] = "Lava",
@@ -239,7 +239,7 @@ end)
 eggs:CreateToggle("Auto Buy Devil Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
      if arg then
         _G.e7 = true 
-        while wait(0) and _G.e8 do
+        while wait(0.5) and _G.e8 do
       local args = {
     [1] = "OpenEgg",
     [2] = "Devil",
@@ -254,7 +254,7 @@ end)
 eggs:CreateToggle("Auto Buy Pumpkin Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e9 = true 
-        while wait(0) and _G.e9 do
+        while wait(0.5) and _G.e9 do
       local args = {
     [1] = "OpenEgg",
     [2] = "Pumpkin"
@@ -268,7 +268,7 @@ end)
 eggs:CreateToggle("Auto Buy Angry Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e10 = true 
-        while wait(0) and _G.e10 do
+        while wait(0.5) and _G.e10 do
       local args = {
     [1] = "OpenEgg",
     [2] = "Angry",
@@ -282,7 +282,7 @@ end)
 eggs:CreateToggle("Auto Buy Moon Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e11 = true 
-        while wait(0) and _G.e11 do
+        while wait(0.5) and _G.e11 do
       local args = {
     [1] = "OpenEgg",
     [2] = "Moon",
@@ -296,7 +296,7 @@ end)
 eggs:CreateToggle("Auto Buy Basic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e12 = true 
-        while wait(0) and _G.e12 do
+        while wait(0.5) and _G.e12 do
       local args = {
     [1] = "OpenEgg",
     [2] = "Basic",
