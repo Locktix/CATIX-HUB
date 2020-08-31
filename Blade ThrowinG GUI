@@ -103,13 +103,7 @@ end)
 AutoTab:CreateToggle("Auto Buy Blade", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.c = true 
-        while wait(0) and _G.c do
-local args = {
-    [1] = "BuyBlade",
-    [2] = true,
-}
 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 
 local args = {
     [1] = "BuyBlade",
@@ -127,12 +121,7 @@ AutoTab:CreateToggle("Auto Buy Energy", function(arg) --the (arg) is if the chec
     if arg then
         _G.d = true 
         while wait(0) and _G.d do
-local args = {
-    [1] = "BuyEnergy",
-    [2] = true,
-}
 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 local args = {
     [1] = "BuyEnergy",
     [2] = true,
@@ -150,12 +139,7 @@ AutoTab:CreateToggle("Auto Buy Ranks", function(arg) --the (arg) is if the check
     if arg then
         _G.ran = true 
         while wait(0) and _G.ran do
-local args = {
-    [1] = "BuyRank",
-    [2] = true,
-}
 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 local args = {
     [1] = "BuyRank",
     [2] = true,
@@ -178,12 +162,6 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-local args = {
-    [1] = "BuyAura",
-    [2] = true,
-}
-
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 
         end
     else
@@ -194,12 +172,7 @@ AutoTab:CreateToggle("Auto Buy Jump", function(arg) --the (arg) is if the checkb
     if arg then
         _G.ju = true 
         while wait(0) and _G.ju do
-local args = {
-    [1] = "BuyJump",
-    [2] = true,
-}
 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 local args = {
     [1] = "BuyJump",
     [2] = true,
@@ -230,11 +203,7 @@ AutoTab:CreateToggle("Auto Equip Best Pets", function(arg) --the (arg) is if the
     if arg then
         _G.e = true 
         while wait(0) and _G.e do
-local args = {
-    [1] = "EquipBest",
-}
 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 local args = {
     [1] = "EquipBest",
 }
@@ -249,11 +218,7 @@ AutoTab:CreateToggle("Auto Evolve Pets", function(arg) --the (arg) is if the che
     if arg then
         _G.f = true 
         while wait(0) and _G.f do
-local args = {
-    [1] = "EvolveAll",
-}
 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 local args = {
     [1] = "EvolveAll",
 }
