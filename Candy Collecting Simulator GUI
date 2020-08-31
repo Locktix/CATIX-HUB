@@ -131,7 +131,7 @@ _G.Speed = true
            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
          end
 end)
-eggs:CreateToggle("Auto Rainbow Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Auto Rainbow Pets", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Shinyb = true 
         while wait(0) and _G.Shinyb do
@@ -620,7 +620,7 @@ game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
         _G.Shinyb = false
     end
 end)
-eggs:CreateToggle("Auto Shiny Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Auto Shiny Pets", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.Rainbowb = true 
         while wait(0) and _G.Rainbowb do
