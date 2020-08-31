@@ -244,6 +244,78 @@ game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
         _G.f = false
     end
 end)
+AutoTab:CreateButton("Tp To all islands", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(169.715515, 63692.0273, -443.743317)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(228.572693, 60900.6406, -441.599518)
+wait(0)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(290.379517, 58501.0664, -461.26358)
+wait(0)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(240.64003, 55740.9648, -453.965179)
+wait(0)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(235.714417, 53018.3359, -436.52359)
+wait(0)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(253.501984, 49799.8359, -454.51004)
+wait(0)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(171.247665, 46937.0664, -468.310547)
+wait(0)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(211.028992, 43089.4063, -483.383148)
+wait(0)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(204.25473, 39178.25, -526.006775)
+wait(0)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(244.463364, 35139.6523, -473.203705)
+wait(0)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(203.959961, 31401.5898, -488.469849)
+wait(0)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(238.740265, 27705.4902, -487.803528)
+wait(0)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(177.480301, 24541.3184, -441.331024)
+wait(0)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(168.077271, 20581.0273, -448.394073)
+wait(0)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(127.950157, 16749.3281, -440.292023)
+wait(0)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(158.562897, 15549.8984, -446.668579)
+wait(0)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(137.719406, 13531.25, -427.41864)
+wait(0)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(135.015594, 11480.1094, -448.33905)
+wait(0)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(124.152832, 8544.24805, -476.911469)
+wait(0)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(208.788971, 5343.6792, -531.224609)
+wait(0)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(132.377808, 3372.43066, -529.078979)
+wait(0)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(156.397232, 1815.45044, -656.470215)
+wait(0)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(191.122055, 601.349121, -603.616821)
+wait(0)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(152.85643, -96.194046, -635.704041)
+end)
+
 AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:Destroy()
 end)
@@ -949,6 +1021,17 @@ game:GetService("Players").LocalPlayer.Idled:connect(function()
    wait(1)
    vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end)
+
+local ot = mt.__namecall
+mt.__namecall = function(self, ...)
+   local args = {...}
+   local method = namecallMethod()
+   if tostring(method) == "Kick" then
+      print('Kick attempt')
+       return
+   end
+   return ot(self, ...)
+end
 
 teleports:CreateButton("Zone 23", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(169.715515, 63692.0273, -443.743317)
