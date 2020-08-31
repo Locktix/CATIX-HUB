@@ -190,6 +190,28 @@ game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
         _G.ran= false
     end
 end)
+AutoTab:CreateToggle("Auto Buy Jump", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.ju = true 
+        while wait(0) and _G.ju do
+local args = {
+    [1] = "BuyJump",
+    [2] = true,
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyJump",
+    [2] = true,
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.ju= false
+    end
+end)
 AutoTab:CreateToggle("Auto SellX60", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.se = true 
@@ -243,77 +265,6 @@ game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
     else
         _G.f = false
     end
-end)
-AutoTab:CreateButton("Tp To all islands", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(169.715515, 63692.0273, -443.743317)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(228.572693, 60900.6406, -441.599518)
-wait(0)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(290.379517, 58501.0664, -461.26358)
-wait(0)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(240.64003, 55740.9648, -453.965179)
-wait(0)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(235.714417, 53018.3359, -436.52359)
-wait(0)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(253.501984, 49799.8359, -454.51004)
-wait(0)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(171.247665, 46937.0664, -468.310547)
-wait(0)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(211.028992, 43089.4063, -483.383148)
-wait(0)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(204.25473, 39178.25, -526.006775)
-wait(0)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(244.463364, 35139.6523, -473.203705)
-wait(0)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(203.959961, 31401.5898, -488.469849)
-wait(0)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(238.740265, 27705.4902, -487.803528)
-wait(0)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(177.480301, 24541.3184, -441.331024)
-wait(0)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(168.077271, 20581.0273, -448.394073)
-wait(0)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(127.950157, 16749.3281, -440.292023)
-wait(0)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(158.562897, 15549.8984, -446.668579)
-wait(0)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(137.719406, 13531.25, -427.41864)
-wait(0)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(135.015594, 11480.1094, -448.33905)
-wait(0)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(124.152832, 8544.24805, -476.911469)
-wait(0)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(208.788971, 5343.6792, -531.224609)
-wait(0)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(132.377808, 3372.43066, -529.078979)
-wait(0)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(156.397232, 1815.45044, -656.470215)
-wait(0)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(191.122055, 601.349121, -603.616821)
-wait(0)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(152.85643, -96.194046, -635.704041)
 end)
 
 AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
@@ -387,12 +338,6 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-local args = {
-    [1] = "BuyEgg",
-    [2] = "BasicEgg",
-}
-
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 
 
         end
@@ -405,12 +350,6 @@ eggs:CreateToggle("Auto Buy Dirt Eggs", function(arg) --the (arg) is if the chec
         _G.z = true 
         while wait(0) and _G.z do
 
-local args = {
-    [1] = "BuyEgg",
-    [2] = "DirtEgg",
-}
-
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 local args = {
     [1] = "BuyEgg",
     [2] = "DirtEgg",
@@ -435,12 +374,6 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-local args = {
-    [1] = "BuyEgg",
-    [2] = "MoonEgg",
-}
-
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 
 
         end
@@ -459,12 +392,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-local args = {
-    [1] = "BuyEgg",
-    [2] = "TreeEgg",
-}
 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 
 
         end
@@ -483,12 +411,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-local args = {
-    [1] = "BuyEgg",
-    [2] = "AquaEgg",
-}
 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 
 
         end
@@ -501,12 +424,6 @@ eggs:CreateToggle("Auto Buy Blossom Eggs", function(arg) --the (arg) is if the c
         _G.m = true 
         while wait(0) and _G.m do
 
-local args = {
-    [1] = "BuyEgg",
-    [2] = "BlossomEgg",
-}
-
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 local args = {
     [1] = "BuyEgg",
     [2] = "BlossomEgg",
@@ -531,12 +448,6 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-local args = {
-    [1] = "BuyEgg",
-    [2] = "LavaEgg",
-}
-
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 
 
         end
@@ -555,12 +466,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-local args = {
-    [1] = "BuyEgg",
-    [2] = "FrozenEgg",
-}
 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 
 
         end
@@ -579,12 +485,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-local args = {
-    [1] = "BuyEgg",
-    [2] = "CyberEgg",
-}
 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 
 
         end
@@ -603,12 +504,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-local args = {
-    [1] = "BuyEgg",
-    [2] = "CandyEgg",
-}
 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 
 
         end
@@ -621,12 +517,6 @@ eggs:CreateToggle("Auto Buy Electric Eggs", function(arg) --the (arg) is if the 
         _G.r = true 
         while wait(0) and _G.r do
 
-local args = {
-    [1] = "BuyEgg",
-    [2] = "ElectricEgg",
-}
-
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 local args = {
     [1] = "BuyEgg",
     [2] = "ElectricEgg",
@@ -651,12 +541,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-local args = {
-    [1] = "BuyEgg",
-    [2] = "RadioactiveEgg",
-}
 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 
 
         end
@@ -675,12 +560,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-local args = {
-    [1] = "BuyEgg",
-    [2] = "PlasmaEgg",
-}
 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 
 
         end
@@ -699,12 +579,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-local args = {
-    [1] = "BuyEgg",
-    [2] = "DemonEgg",
-}
 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 
 
         end
@@ -723,12 +598,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-local args = {
-    [1] = "BuyEgg",
-    [2] = "MonochromeEgg",
-}
 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 
 
         end
@@ -747,12 +617,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-local args = {
-    [1] = "BuyEgg",
-    [2] = "AngelicEgg",
-}
 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 
 
         end
@@ -771,12 +636,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-local args = {
-    [1] = "BuyEgg",
-    [2] = "CrystalEgg",
-}
 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 
 
         end
@@ -795,12 +655,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-local args = {
-    [1] = "BuyEgg",
-    [2] = "SharpEgg",
-}
 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 
 
         end
@@ -819,12 +674,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-local args = {
-    [1] = "BuyEgg",
-    [2] = "AncientEgg",
-}
 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 
 
         end
@@ -843,12 +693,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-local args = {
-    [1] = "BuyEgg",
-    [2] = "GlitchEgg",
-}
 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 
 
         end
@@ -867,12 +712,8 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-local args = {
-    [1] = "BuyEgg",
-    [2] = "SteampunkEgg",
-}
 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
 
 
         end
@@ -891,12 +732,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-local args = {
-    [1] = "BuyEgg",
-    [2] = "ToxicPotionEgg",
-}
 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 
 
         end
@@ -915,12 +751,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-local args = {
-    [1] = "BuyEgg",
-    [2] = "SuperEgg",
-}
 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 
 
         end
@@ -939,12 +770,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-local args = {
-    [1] = "BuyEgg",
-    [2] = "SpookyEgg",
-}
 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 
 
         end
@@ -963,12 +789,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-local args = {
-    [1] = "BuyEgg",
-    [2] = "AbstractEgg",
-}
 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 
 
         end
@@ -987,12 +808,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-local args = {
-    [1] = "BuyEgg",
-    [2] = "FutureEgg",
-}
 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 
 
         end
@@ -1011,12 +827,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-local args = {
-    [1] = "BuyEgg",
-    [2] = "SpaceEgg",
-}
 
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 
 
         end
@@ -1024,63 +835,26 @@ game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
         _G.zi = false
     end
 end)
---| Anti AFK | By Altix#3395
-    local Virtual = game:service'VirtualUser'
-    game:service'Players'.LocalPlayer.Idled:connect(function()
-        Virtual:CaptureController()
-        Virtual:ClickButton2(Vector2.new())
-        wait(2)
-    end)
-    
-    local vu = game:GetService("VirtualUser")
-game:GetService("Players").LocalPlayer.Idled:connect(function()
-   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-   wait(1)
-   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-end)
 
-local ot = mt.__namecall
-mt.__namecall = function(self, ...)
-   local args = {...}
-   local method = namecallMethod()
-   if tostring(method) == "Kick" then
-      print('Kick attempt')
-       return
-   end
-   return ot(self, ...)
-end
 
 teleports:CreateButton("Zone 23", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(169.715515, 63692.0273, -443.743317)
 end)
-
 teleports:CreateButton("Zone 22", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(228.572693, 60900.6406, -441.599518)
 end)
-
-
 teleports:CreateButton("Zone 21", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(290.379517, 58501.0664, -461.26358)
 end)
-
-
-
 teleports:CreateButton("Zone 20", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(240.64003, 55740.9648, -453.965179)
 end)
-
-
-
 teleports:CreateButton("Zone 19", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(235.714417, 53018.3359, -436.52359)
 end)
-
-
 teleports:CreateButton("Zone 18", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(253.501984, 49799.8359, -454.51004)
 end)
-
-
 teleports:CreateButton("Zone 17", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(171.247665, 46937.0664, -468.310547)
 end)
@@ -1135,3 +909,21 @@ end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(152.85643, -96.194046, -635.704041)
 end)
+
+    local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+
+local ot = mt.__namecall
+mt.__namecall = function(self, ...)
+   local args = {...}
+   local method = namecallMethod()
+   if tostring(method) == "Kick" then
+      print('Kick attempt')
+       return
+   end
+   return ot(self, ...)
+end
