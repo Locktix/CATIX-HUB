@@ -297,6 +297,25 @@ end
         _G.e4= false
     end
 end)
+eggs:CreateToggle("Auto Buy Snow Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e5 = true 
+        while wait(0) and _G.e5 do
+
+local args = {
+    [1] = "Snow",
+    [2] = "Single",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
+
+ 
+end
+
+    else
+        _G.e5= false
+    end
+end)
 teleports:CreateButton("Sell", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(0.193530664, 3.51879215, 737.712036)
 end)
@@ -308,7 +327,9 @@ end)
 teleports:CreateButton("Zone 2", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-983.430176, 10.9891491, 908.698853)
 end)
-
+teleports:CreateButton("Zone 3", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-951.651794, 10.9020271, -109.443535)
+end)
 
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
