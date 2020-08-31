@@ -103,7 +103,7 @@ end)
 AutoTab:CreateToggle("Auto Buy Blade", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.c = true 
-
+    while wait(0) and _G.c do
 
 local args = {
     [1] = "BuyBlade",
