@@ -1456,14 +1456,69 @@ eggs3:CreateToggle("Auto Dragons Egg (10)", function(arg) --the (arg) is if the 
         _G.zz = false
     end
 end)
-
-eggs3:CreateToggle("Auto Minion Egg 2 (20)3", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs3:CreateToggle("Auto Frozen Egg (21)3", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.MINION8 = true 
         while wait(0) and _G.MINION8 do
             local args = {
                 [1] = {
-                    ["EggType"] = "Egg20",
+                    ["EggType"] = "Egg21",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 3,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.MINION8 = false
+    end
+end)
+
+eggs3:CreateToggle("Auto Frozen Egg (21)2", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.MINION7 = true 
+        while wait(0) and _G.MINION7 do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg21",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 3,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.MINION7 = false
+    end
+end)
+
+eggs3:CreateToggle("Auto Frozen Egg (21)1", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.MINION6 = true 
+        while wait(0) and _G.MINION6 do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg21",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 3,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.MINION6 = false
+    end
+end)
+eggs3:CreateToggle("Auto Frozen Egg (21)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.MINION8 = true 
+        while wait(0) and _G.MINION8 do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg21",
                     ["UpdateType"] = "Open",
                     ["Amount"] = 3,
                 },
@@ -1482,7 +1537,7 @@ eggs3:CreateToggle("Auto Minion Egg 2 (20)2", function(arg) --the (arg) is if th
         while wait(0) and _G.MINION7 do
             local args = {
                 [1] = {
-                    ["EggType"] = "Egg00",
+                    ["EggType"] = "Egg20",
                     ["UpdateType"] = "Open",
                     ["Amount"] = 3,
                 },
@@ -2353,7 +2408,9 @@ end)
 teleports:CreateButton("Island 19", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(427.123047, 6393.72217, -858.323059)
 end)
-
+teleports:CreateButton("Island 20", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(384.235504, 6712.52051, -857.059998)
+end)
 
 teleports:CreateButton("Shop 1", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-39.3278999, 54.5634804, -831.109619)
