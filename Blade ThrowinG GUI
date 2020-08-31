@@ -235,12 +235,6 @@ end)
 AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:Destroy()
 end)
-HIT:CreateButton("Reclick On Auto Hitwhen there", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(303.511963, 185.362595, -2498.69287)
-end)
-HIT:CreateButton("is a boss who respawns", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(303.511963, 185.362595, -2498.69287)
-end)
 HIT:CreateToggle("Auto Hit Evil Fox", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.g = true 
@@ -257,6 +251,12 @@ game:GetService("ReplicatedStorage").RE:FireServer(unpack(args))
     else
         _G.g = false
     end
+end)
+HIT:CreateButton("Go To Spawn Boss", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(nothing)
+end)
+HIT:CreateButton("To Work", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(nothing)
 end)
 HIT:CreateToggle("Auto Hit Lava Golem", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
@@ -292,23 +292,11 @@ game:GetService("ReplicatedStorage").RE:FireServer(unpack(args))
         _G.h8 = false
     end
 end)
-eggs:CreateToggle("Auto Buy Basic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.i = true 
-        while wait(0) and _G.i do
-
-local args = {
-    [1] = "BuyEgg",
-    [2] = "BasicEgg",
-}
-
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-
-
-        end
-    else
-        _G.i = false
-    end
+HIT:CreateButton("Tp To Boss Spawn", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(220.213577, -45.8314438, -772.90802)
+end)
+HIT:CreateButton("Tp To Zone 23 Boss", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(199.992081, 63743.5156, -740.05072)
 end)
 eggs:CreateToggle("Auto Buy Dirt Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
