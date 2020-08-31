@@ -133,7 +133,7 @@ end)
 eggs:CreateToggle("Auto Buy Clown Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e1 = true 
-        while wait(0.5) and _G.e1 do
+        while wait(0) and _G.e1 do
          local args = {
     [1] = "OpenEgg",
     [2] = "ClownEgg",
@@ -149,7 +149,7 @@ end)
 eggs:CreateToggle("Auto Buy Circus Animals Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e2 = true 
-        while wait(0.5) and _G.e2 do
+        while wait(0) and _G.e2 do
          local args = {
     [1] = "OpenEgg",
     [2] = "CircusAnimals",
@@ -164,7 +164,7 @@ end)
 eggs:CreateToggle("Auto Buy Angels Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e3 = true 
-        while wait(0.5) and _G.e3 do
+        while wait(0) and _G.e3 do
          local args = {
     [1] = "OpenEgg",
     [2] = "AngelEgg",
@@ -179,7 +179,7 @@ end)
 eggs:CreateToggle("Auto Buy Lion Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e4 = true 
-        while wait(0.5) and _G.e4 do
+        while wait(0) and _G.e4 do
          local args = {
     [1] = "OpenEgg",
     [2] = "LionEgg",
@@ -194,7 +194,7 @@ end)
 eggs:CreateToggle("Auto Buy Cracked Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e5 = true 
-        while wait(0.5) and _G.e5 do
+        while wait(0) and _G.e5 do
          local args = {
     [1] = "OpenEgg",
     [2] = "CrackedEgg",
@@ -209,7 +209,7 @@ end)
 eggs:CreateToggle("Auto Buy Eye Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e6 = true 
-        while wait(0.5) and _G.e6 do
+        while wait(0) and _G.e6 do
       local args = {
     [1] = "OpenEgg",
     [2] = "Eye",
@@ -224,16 +224,98 @@ end)
 eggs:CreateToggle("Auto Buy Lava Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e7 = true 
-        while wait(0.5) and _G.e7 do
-      local args = {
+        while wait(0) and _G.e7 do
+local args = {
     [1] = "OpenEgg",
     [2] = "Lava",
 }
 
-game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
         end
     else
         _G.e7 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Devil Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.De = true 
+        while wait(0) and _G.De do
+
+local args = {
+    [1] = "OpenEgg",
+    [2] = "Devil",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.De = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Pumpkin Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Pum = true 
+        while wait(0) and _G.Pum do
+
+local args = {
+    [1] = "OpenEgg",
+    [2] = "Pumpkin",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.Pum = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Angry Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.An = true 
+        while wait(0) and _G.An do
+local args = {
+    [1] = "OpenEgg",
+    [2] = "Angry",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.An = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Moon Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Mo = true 
+        while wait(0) and _G.Mo do
+local args = {
+    [1] = "OpenEgg",
+    [2] = "Moon",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.Mo = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Basic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.ba = true 
+        while wait(0) and _G.ba do
+local args = {
+    [1] = "OpenEgg",
+    [2] = "Basic",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.ba = false
     end
 end)
 AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
