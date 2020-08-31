@@ -359,6 +359,23 @@ game:GetService("ReplicatedStorage").RE:FireServer(unpack(args))
         _G.h = false
     end
 end)
+HIT:CreateToggle("Auto Hit Rhino King", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.h8 = true 
+        while wait(0) and _G.h8 do
+
+local args = {
+    [1] = "HitBoss",
+    [2] = workspace.Boss["Rhino King"],
+}
+
+game:GetService("ReplicatedStorage").RE:FireServer(unpack(args))
+
+        end
+    else
+        _G.h8 = false
+    end
+end)
 eggs:CreateToggle("Auto Buy Basic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.i = true 
