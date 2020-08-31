@@ -7,6 +7,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/prezt
 
 local AutoTab = Library:CreateTab("Candy Collecting GUI","things", true)
 local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
+local chest = Library:CreateTab("Auto Buy Chests","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
@@ -130,10 +131,990 @@ _G.Speed = true
            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
          end
 end)
+eggs:CreateToggle("Auto Rainbow Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Shinyb = true 
+        while wait(0) and _G.Shinyb do
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 1,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 2,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 3,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 4,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 5,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 6,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 7,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 8,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 9,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 10,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 11,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 12,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 13,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 14,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 15,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 16,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 17,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 18,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 19,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 20,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 21,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 22,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 23,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 24,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 25,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 26,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 27,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 28,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 29,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 30,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 31,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 32,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 33,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 34,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 35,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 36,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 37,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 38,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 39,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 40,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 41,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 42,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 43,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 44,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 45,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 46,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 47,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 48,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 49,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 50,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 51,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 52,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 53,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 54,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 55,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 56,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 57,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 58,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 59,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 60,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 61,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 62,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 63,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 64,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 65,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 66,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 67,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 68,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 69,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 70,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 71,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 72,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 73,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 74,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 75,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 76,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 77,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 78,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 79,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbow",
+    [2] = 80,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+        end
+    else
+        _G.Shinyb = false
+    end
+end)
+eggs:CreateToggle("Auto Shiny Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Rainbowb = true 
+        while wait(0) and _G.Rainbowb do
+
+local args = {
+    [1] = "MakeShiny",
+    [2] = 1,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 2,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 3,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 4,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 5,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 6,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 7,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 8,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 9,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 10,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 11,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 12,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 13,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 14,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 15,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 16,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 17,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 18,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 19,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 20,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 21,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 22,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 23,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 24,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 25,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 26,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 27,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 28,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 29,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 30,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 31,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 32,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 33,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 34,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 35,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 36,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 37,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 38,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 39,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 40,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 41,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 42,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 43,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 44,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 45,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 46,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 47,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 48,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 49,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 50,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 51,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 52,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 53,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 54,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 55,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 56,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 57,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 58,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 59,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 60,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 61,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 62,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 63,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 64,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 65,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 66,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 67,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 68,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 69,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 70,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 71,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 72,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 73,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 74,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 75,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 76,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 77,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 78,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 79,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShiny",
+    [2] = 80,
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+        end
+    else
+        _G.Rainbowb = false
+    end
+end)
 eggs:CreateToggle("Auto Buy Clown Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e1 = true 
         while wait(0) and _G.e1 do
+
          local args = {
     [1] = "OpenEgg",
     [2] = "ClownEgg",
@@ -150,6 +1131,7 @@ eggs:CreateToggle("Auto Buy Circus Animals Eggs", function(arg) --the (arg) is i
     if arg then
         _G.e2 = true 
         while wait(0) and _G.e2 do
+
          local args = {
     [1] = "OpenEgg",
     [2] = "CircusAnimals",
@@ -165,6 +1147,7 @@ eggs:CreateToggle("Auto Buy Angels Eggs", function(arg) --the (arg) is if the ch
     if arg then
         _G.e3 = true 
         while wait(0) and _G.e3 do
+
          local args = {
     [1] = "OpenEgg",
     [2] = "AngelEgg",
@@ -180,6 +1163,7 @@ eggs:CreateToggle("Auto Buy Lion Eggs", function(arg) --the (arg) is if the chec
     if arg then
         _G.e4 = true 
         while wait(0) and _G.e4 do
+
          local args = {
     [1] = "OpenEgg",
     [2] = "LionEgg",
@@ -195,6 +1179,7 @@ eggs:CreateToggle("Auto Buy Cracked Eggs", function(arg) --the (arg) is if the c
     if arg then
         _G.e5 = true 
         while wait(0) and _G.e5 do
+
          local args = {
     [1] = "OpenEgg",
     [2] = "CrackedEgg",
@@ -215,7 +1200,8 @@ eggs:CreateToggle("Auto Buy Eye Eggs", function(arg) --the (arg) is if the check
     [2] = "Eye",
 }
 
-game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+
         end
     else
         _G.e6 = false
@@ -225,6 +1211,7 @@ eggs:CreateToggle("Auto Buy Lava Eggs", function(arg) --the (arg) is if the chec
     if arg then
         _G.e7 = true 
         while wait(0) and _G.e7 do
+
 local args = {
     [1] = "OpenEgg",
     [2] = "Lava",
@@ -246,7 +1233,8 @@ local args = {
     [2] = "Devil",
 }
 
-game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+
 
         end
     else
@@ -263,7 +1251,7 @@ local args = {
     [2] = "Pumpkin",
 }
 
-game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
 
         end
     else
@@ -279,7 +1267,8 @@ local args = {
     [2] = "Angry",
 }
 
-game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+
 
         end
     else
@@ -295,7 +1284,8 @@ local args = {
     [2] = "Moon",
 }
 
-game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+
 
         end
     else
@@ -311,11 +1301,857 @@ local args = {
     [2] = "Basic",
 }
 
-game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+
 
         end
     else
         _G.ba = false
+    end
+end)
+chest:CreateToggle("Auto Shiny Costumes", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.ShinyA = true 
+        while wait(1) and _G.ShinyA do
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "PaulBlartTheCircusCop",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "Conductor",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "SmileyTheClown",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "CircusK9",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "NickBass",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "CircusTender",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "CircusOwner",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "Owner'sSon",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "CircusElephant",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "Mr.Fox",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "Skeleton",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "Zombie",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "Anubis",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "TRex",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "CaptainSquid",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "Frankenstein",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "PumpkinReaper",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "CircuitBreaker",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "Overlord",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "Knight",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "SpaceMan",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "FredTheZombie",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "MagmaFiend",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "Thickhoof",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "Mr.Robot",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "DrFiaTyfoid",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "Snowman",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "LagoonLieutenant",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "BeeSoldier",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "DragonflyStriker",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "Croczilla",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "FredTheZombie",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "Agrynoth",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "Mushiro",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "Werewolf",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "Gargoyle",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "CratusTheWarlord",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "CloudWarrior",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "CloudProtector",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "Thrasher",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "MechWasp",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "TechnoWizard",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "TripleHeadedTrouble",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "Wyldfire",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "SunSlayer",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "Birdcaller",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "Icicle",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "Equinox",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "Starmist",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "Erisyphia",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "Guardian",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "AxeAngel",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeShinyCostume",
+    [2] = "DJDataBaze",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+        end
+    else
+        _G.ShinyA = false
+    end
+end)
+chest:CreateToggle("Auto Rainbow Costumes", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.RainbowA = true 
+        while wait(1) and _G.RainbowA do
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "PaulBlartTheCircusCop",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "Conductor",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "SmileyTheClown",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "CircusK9",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "NickBass",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "CircusTender",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "CircusOwner",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "Owner'sSon",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "CircusElephant",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "Mr.Fox",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "Skeleton",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "Zombie",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "Anubis",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "TRex",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "CaptainSquid",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "Frankenstein",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "PumpkinReaper",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "CircuitBreaker",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "Overlord",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "Knight",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "SpaceMan",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "FredTheZombie",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "MagmaFiend",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "Thickhoof",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "Mr.Robot",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "DrFiaTyfoid",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "Snowman",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "LagoonLieutenant",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "BeeSoldier",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "DragonflyStriker",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "Croczilla",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "FredTheZombie",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "Agrynoth",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "Mushiro",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "Werewolf",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "Gargoyle",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "CratusTheWarlord",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "CloudWarrior",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "CloudProtector",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "Thrasher",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "MechWasp",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "TechnoWizard",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "TripleHeadedTrouble",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "Wyldfire",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "SunSlayer",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "Birdcaller",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "Icicle",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "Equinox",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "Starmist",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "Erisyphia",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "Guardian",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "AxeAngel",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+local args = {
+    [1] = "MakeRainbowCostume",
+    [2] = "DJDataBaze",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+        end
+    else
+        _G.RainbowA = false
+    end
+end)
+chest:CreateToggle("Auto Buy Green Circus Chest", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c1 = true 
+        while wait(0) and _G.c1 do
+local args = {
+    [1] = "OpenCostume",
+    [2] = "GreenChest",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.c1 = false
+    end
+end)
+chest:CreateToggle("Auto Buy Pink Circus Chest", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c2 = true 
+        while wait(0) and _G.c2 do
+
+local args = {
+    [1] = "OpenCostume",
+    [2] = "PinkChest",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.c2 = false
+    end
+end)
+chest:CreateToggle("Auto Buy Epic Angel Chest", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c3 = true 
+        while wait(0) and _G.c3 do
+
+local args = {
+    [1] = "OpenCostume",
+    [2] = "EpicAngelChest",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.c3 = false
+    end
+end)
+chest:CreateToggle("Auto Buy Gold Angel Chest", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c4 = true 
+        while wait(0) and _G.c4 do
+
+local args = {
+    [1] = "OpenCostume",
+    [2] = "GoldAngelChest",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.c4 = false
+    end
+end)
+chest:CreateToggle("Auto Buy Angel Chest", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c5 = true 
+        while wait(0) and _G.c5 do
+
+local args = {
+    [1] = "OpenCostume",
+    [2] = "AngelChest",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.c5 = false
+    end
+end)
+chest:CreateToggle("Auto Buy Green Lava Chest", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c6 = true 
+        while wait(0) and _G.c6 do
+
+local args = {
+    [1] = "OpenCostume",
+    [2] = "GreenLavaChest",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.c6 = false
+    end
+end)
+chest:CreateToggle("Auto Buy Blue Lava Chest", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c7 = true 
+        while wait(0) and _G.c7 do
+
+local args = {
+    [1] = "OpenCostume",
+    [2] = "BlueLavaChest",
+}
+
+
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.c7 = false
+    end
+end)
+chest:CreateToggle("Auto Buy Lava Chest", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c8 = true 
+        while wait(0) and _G.c8 do
+
+local args = {
+    [1] = "OpenCostume",
+    [2] = "LavaChest",
+}
+
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.c8 = false
+    end
+end)
+chest:CreateToggle("Auto Buy Basic Chest", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c9 = true 
+        while wait(0) and _G.c9 do
+
+local args = {
+    [1] = "OpenCostume",
+    [2] = "BasicChest",
+}
+
+
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.c9 = false
+    end
+end)
+chest:CreateToggle("Auto Buy Gold Chest", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c10 = true 
+        while wait(0) and _G.c10 do
+
+local args = {
+    [1] = "OpenCostume",
+    [2] = "GoldChest",
+}
+
+
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.c10 = false
+    end
+end)
+chest:CreateToggle("Auto Buy Black Chest", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c11 = true 
+        while wait(0) and _G.c11 do
+
+local args = {
+    [1] = "OpenCostume",
+    [2] = "BlackChest",
+}
+
+
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.c11 = false
     end
 end)
 AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
