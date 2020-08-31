@@ -1,0 +1,1037 @@
+--https://www.roblox.com/games/4704006941/5000X-Blade-Throwing-Simulator
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
+
+local AutoTab = Library:CreateTab("Blade-Throwing GUI","things", true)
+local teleports = Library:CreateTab("Teleports","things", true)
+local HIT = Library:CreateTab("Auto Kill Boss","things", true)
+local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
+local eggs2 = Library:CreateTab("Auto Buy Eggs 2","things", true)
+local MISC = Library:CreateTab("MISC","things", true)
+local credits = Library:CreateTab("Credits","things", true)
+
+
+credits:CreateButton("Our Discords", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("masterkyllian#1723", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("bsoleil31FR[inchala ptn]#9001", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("https://discord.gg/PdUTrVG", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("Bebo Mods#1110", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+
+AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:Destroy()
+end)
+
+
+MISC:CreateButton("NO CLIP Press(E)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.NO = true 
+  noclip = false
+game:GetService('RunService').Stepped:connect(function()
+if noclip then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+plr = game.Players.LocalPlayer
+mouse = plr:GetMouse()
+mouse.KeyDown:connect(function(key)
+
+if key == "e" then
+noclip = not noclip
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+print('Created by FileExplorer')
+print('Credits to Peyton for the ChangeState part of this script')
+
+         
+else
+_G.NO = false
+end
+end)
+
+MISC:CreateToggle("Speed Hack 100", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.Speed = true 
+        while wait() and _G.Speed do
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+        end
+    else
+        _G.Speed = false
+           game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
+         end
+end)
+
+
+
+AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b = true 
+        while wait(0) and _G.b do
+local args = {
+    [1] = "Throw",
+    [2] = Vector3.new(135.661987, -91.4622192, -669.306519),
+    [3] = true,
+}
+
+game:GetService("ReplicatedStorage").RE:FireServer(unpack(args))
+
+        end
+    else
+        _G.b= false
+    end
+end)
+
+AutoTab:CreateToggle("Auto Buy Blade", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c = true 
+        while wait(0) and _G.c do
+local args = {
+    [1] = "BuyBlade",
+    [2] = true,
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "BuyBlade",
+    [2] = true,
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.c= false
+    end
+end)
+AutoTab:CreateToggle("Auto Buy Energy", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.d = true 
+        while wait(0) and _G.d do
+local args = {
+    [1] = "BuyEnergy",
+    [2] = true,
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyEnergy",
+    [2] = true,
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.d= false
+    end
+end)
+AutoTab:CreateToggle("Auto Buy Ranks", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.ran = true 
+        while wait(0) and _G.ran do
+local args = {
+    [1] = "BuyRank",
+    [2] = true,
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyRank",
+    [2] = true,
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.ran= false
+    end
+end)
+AutoTab:CreateToggle("Auto Buy Auras", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.ran = true 
+        while wait(0) and _G.ran do
+local args = {
+    [1] = "BuyAura",
+    [2] = true,
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyAura",
+    [2] = true,
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.ran= false
+    end
+end)
+AutoTab:CreateToggle("Auto SellX60", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.se = true 
+        while wait(0) and _G.se do
+local string_1 = "SellPower";
+local userdata_1 = game:GetService("Workspace").Ignore.Rings["24Sell"].Collider;
+local Target = game:GetService("ReplicatedStorage").RF;
+Target:InvokeServer(string_1, userdata_1);
+
+        end
+    else
+        _G.se = false
+    end
+end)
+AutoTab:CreateToggle("Auto Equip Best Pets", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e = true 
+        while wait(0) and _G.e do
+local args = {
+    [1] = "EquipBest",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "EquipBest",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+        end
+    else
+        _G.e= false
+    end
+end)
+AutoTab:CreateToggle("Auto Evolve Pets", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f = true 
+        while wait(0) and _G.f do
+local args = {
+    [1] = "EvolveAll",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "EvolveAll",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.f = false
+    end
+end)
+AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:Destroy()
+end)
+HIT:CreateButton("Reclick On Auto Hitwhen there", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(303.511963, 185.362595, -2498.69287)
+end)
+HIT:CreateButton("is a boss who respawns", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(303.511963, 185.362595, -2498.69287)
+end)
+HIT:CreateToggle("Auto Hit Evil Fox", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.g = true 
+        while wait(0) and _G.g do
+
+local args = {
+    [1] = "HitBoss",
+    [2] = workspace.Boss["Evil Fox"],
+}
+
+game:GetService("ReplicatedStorage").RE:FireServer(unpack(args))
+
+        end
+    else
+        _G.g = false
+    end
+end)
+HIT:CreateToggle("Auto Hit Lava Golem", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.h = true 
+        while wait(0) and _G.h do
+
+local args = {
+    [1] = "HitBoss",
+    [2] = workspace.Boss["Lava Golem"],
+}
+
+game:GetService("ReplicatedStorage").RE:FireServer(unpack(args))
+
+        end
+    else
+        _G.h = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Basic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.i = true 
+        while wait(0) and _G.i do
+
+local args = {
+    [1] = "BuyEgg",
+    [2] = "BasicEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyEgg",
+    [2] = "BasicEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.i = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Dirt Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.z = true 
+        while wait(0) and _G.z do
+
+local args = {
+    [1] = "BuyEgg",
+    [2] = "DirtEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyEgg",
+    [2] = "DirtEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.z = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Moon Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.j = true 
+        while wait(0) and _G.j do
+
+local args = {
+    [1] = "BuyEgg",
+    [2] = "MoonEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyEgg",
+    [2] = "MoonEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.j = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Tree Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.k = true 
+        while wait(0) and _G.k do
+
+local args = {
+    [1] = "BuyEgg",
+    [2] = "TreeEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyEgg",
+    [2] = "TreeEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.k = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Aqua Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l = true 
+        while wait(0) and _G.l do
+
+local args = {
+    [1] = "BuyEgg",
+    [2] = "AquaEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyEgg",
+    [2] = "AquaEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.l = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Blossom Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.m = true 
+        while wait(0) and _G.m do
+
+local args = {
+    [1] = "BuyEgg",
+    [2] = "BlossomEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyEgg",
+    [2] = "BlossomEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.m = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Lava Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.n = true 
+        while wait(0) and _G.n do
+
+local args = {
+    [1] = "BuyEgg",
+    [2] = "LavaEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyEgg",
+    [2] = "LavaEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.n = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Frozen Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.o = true 
+        while wait(0) and _G.o do
+
+local args = {
+    [1] = "BuyEgg",
+    [2] = "FrozenEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyEgg",
+    [2] = "FrozenEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.o = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Cyber Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.p = true 
+        while wait(0) and _G.p do
+
+local args = {
+    [1] = "BuyEgg",
+    [2] = "CyberEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyEgg",
+    [2] = "CyberEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.p = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Candy Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.q = true 
+        while wait(0) and _G.q do
+
+local args = {
+    [1] = "BuyEgg",
+    [2] = "CandyEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyEgg",
+    [2] = "CandyEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.q = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Electric Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.r = true 
+        while wait(0) and _G.r do
+
+local args = {
+    [1] = "BuyEgg",
+    [2] = "ElectricEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyEgg",
+    [2] = "ElectricEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.r = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Radioactive Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.s = true 
+        while wait(0) and _G.s do
+
+local args = {
+    [1] = "BuyEgg",
+    [2] = "RadioactiveEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyEgg",
+    [2] = "RadioactiveEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.s = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Plasma Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.t = true 
+        while wait(0) and _G.t do
+
+local args = {
+    [1] = "BuyEgg",
+    [2] = "PlasmaEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyEgg",
+    [2] = "PlasmaEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.t = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Demon Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.u = true 
+        while wait(0) and _G.u do
+
+local args = {
+    [1] = "BuyEgg",
+    [2] = "DemonEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyEgg",
+    [2] = "DemonEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.u = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Monochrome Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.v = true 
+        while wait(0) and _G.v do
+
+local args = {
+    [1] = "BuyEgg",
+    [2] = "MonochromeEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyEgg",
+    [2] = "MonochromeEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.v = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Angelic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.w = true 
+        while wait(0) and _G.w do
+
+local args = {
+    [1] = "BuyEgg",
+    [2] = "AngelicEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyEgg",
+    [2] = "AngelicEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.w = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Crystal Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.x = true 
+        while wait(0) and _G.x do
+
+local args = {
+    [1] = "BuyEgg",
+    [2] = "CrystalEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyEgg",
+    [2] = "CrystalEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.x = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Sharp Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.y = true 
+        while wait(0) and _G.y do
+
+local args = {
+    [1] = "BuyEgg",
+    [2] = "SharpEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyEgg",
+    [2] = "SharpEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.y = false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Ancient Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.za = true 
+        while wait(0) and _G.za do
+
+local args = {
+    [1] = "BuyEgg",
+    [2] = "AncientEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyEgg",
+    [2] = "AncientEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.za = false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Glitch Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zb = true 
+        while wait(0) and _G.zb do
+
+local args = {
+    [1] = "BuyEgg",
+    [2] = "GlitchEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyEgg",
+    [2] = "GlitchEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.zb = false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Steampunk Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zc = true 
+        while wait(0) and _G.zc do
+
+local args = {
+    [1] = "BuyEgg",
+    [2] = "SteampunkEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyEgg",
+    [2] = "SteampunkEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.zc = false
+    end
+end)
+eggs2:CreateToggle("Auto Buy ToxicPotion Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zd = true 
+        while wait(0) and _G.zd do
+
+local args = {
+    [1] = "BuyEgg",
+    [2] = "ToxicPotionEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyEgg",
+    [2] = "ToxicPotionEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.zd = false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Super Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.ze = true 
+        while wait(0) and _G.ze do
+
+local args = {
+    [1] = "BuyEgg",
+    [2] = "SuperEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyEgg",
+    [2] = "SuperEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.ze = false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Spooky Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zf = true 
+        while wait(0) and _G.zf do
+
+local args = {
+    [1] = "BuyEgg",
+    [2] = "SpookyEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyEgg",
+    [2] = "SpookyEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.zf = false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Abstract Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zg = true 
+        while wait(0) and _G.zg do
+
+local args = {
+    [1] = "BuyEgg",
+    [2] = "AbstractEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyEgg",
+    [2] = "AbstractEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.zg = false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Future Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zh = true 
+        while wait(0) and _G.zh do
+
+local args = {
+    [1] = "BuyEgg",
+    [2] = "FutureEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyEgg",
+    [2] = "FutureEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.zh = false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Space Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zi = true 
+        while wait(0) and _G.zi do
+
+local args = {
+    [1] = "BuyEgg",
+    [2] = "SpaceEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "BuyEgg",
+    [2] = "SpaceEgg",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.zi = false
+    end
+end)
+--| Anti AFK | By Altix#3395
+    local Virtual = game:service'VirtualUser'
+    game:service'Players'.LocalPlayer.Idled:connect(function()
+        Virtual:CaptureController()
+        Virtual:ClickButton2(Vector2.new())
+        wait(2)
+    end)
+    
+    local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+
+teleports:CreateButton("Zone 23", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(169.715515, 63692.0273, -443.743317)
+end)
+
+teleports:CreateButton("Zone 22", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(228.572693, 60900.6406, -441.599518)
+end)
+
+
+teleports:CreateButton("Zone 21", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(290.379517, 58501.0664, -461.26358)
+end)
+
+
+
+teleports:CreateButton("Zone 20", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(240.64003, 55740.9648, -453.965179)
+end)
+
+
+
+teleports:CreateButton("Zone 19", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(235.714417, 53018.3359, -436.52359)
+end)
+
+
+teleports:CreateButton("Zone 18", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(253.501984, 49799.8359, -454.51004)
+end)
+
+
+teleports:CreateButton("Zone 17", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(171.247665, 46937.0664, -468.310547)
+end)
+teleports:CreateButton("Zone 16", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(211.028992, 43089.4063, -483.383148)
+end)
+teleports:CreateButton("Zone 15", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(204.25473, 39178.25, -526.006775)
+end)
+teleports:CreateButton("Zone 14", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(244.463364, 35139.6523, -473.203705)
+end)
+teleports:CreateButton("Zone 13", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(203.959961, 31401.5898, -488.469849)
+end)
+teleports:CreateButton("Zone 12", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(238.740265, 27705.4902, -487.803528)
+end)
+teleports:CreateButton("Zone 11", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(177.480301, 24541.3184, -441.331024)
+end)
+teleports:CreateButton("Zone 10", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(168.077271, 20581.0273, -448.394073)
+end)
+teleports:CreateButton("Zone 9", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(127.950157, 16749.3281, -440.292023)
+end)
+teleports:CreateButton("Zone 8", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(158.562897, 15549.8984, -446.668579)
+end)
+teleports:CreateButton("Zone 7", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(137.719406, 13531.25, -427.41864)
+end)
+teleports:CreateButton("Zone 6", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(135.015594, 11480.1094, -448.33905)
+end)
+teleports:CreateButton("Zone 5", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(124.152832, 8544.24805, -476.911469)
+end)
+teleports:CreateButton("Zone 4", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(208.788971, 5343.6792, -531.224609)
+end)
+teleports:CreateButton("Zone 3", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(132.377808, 3372.43066, -529.078979)
+end)
+teleports:CreateButton("Zone 2", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(156.397232, 1815.45044, -656.470215)
+end)
+teleports:CreateButton("Zone 1", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(191.122055, 601.349121, -603.616821)
+end)
+teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(152.85643, -96.194046, -635.704041)
+end)
