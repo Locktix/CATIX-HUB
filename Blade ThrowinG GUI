@@ -154,8 +154,8 @@ game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 end)
 AutoTab:CreateToggle("Auto Buy Auras", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.ran = true 
-        while wait(0) and _G.ran do
+        _G.au = true 
+        while wait(0) and _G.au do
 local args = {
     [1] = "BuyAura",
     [2] = true,
@@ -165,7 +165,7 @@ game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 
         end
     else
-        _G.ran= false
+        _G.au= false
     end
 end)
 AutoTab:CreateToggle("Auto Buy Jump", function(arg) --the (arg) is if the checkbox is toggled or not
@@ -183,6 +183,57 @@ game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
         end
     else
         _G.ju= false
+    end
+end)
+AutoTab:CreateToggle("Auto Buy Perk1", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.p21 = true 
+        while wait(0) and _G.p21 do
+
+local args = {
+    [1] = "BuyPerk1",
+    [2] = true,
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.p21= false
+    end
+end)
+AutoTab:CreateToggle("Auto Buy Perk2", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.p22 = true 
+        while wait(0) and _G.p22 do
+
+local args = {
+    [1] = "BuyPerk2",
+    [2] = true,
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.p22= false
+    end
+end)
+AutoTab:CreateToggle("Auto Buy Perk3", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.p23 = true 
+        while wait(0) and _G.p23 do
+
+local args = {
+    [1] = "BuyPerk3",
+    [2] = true,
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.p23= false
     end
 end)
 AutoTab:CreateToggle("Auto SellX60", function(arg) --the (arg) is if the checkbox is toggled or not
@@ -235,6 +286,12 @@ end)
 AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:Destroy()
 end)
+HIT:CreateButton("Go To Spawn Boss", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(nothing)
+end)
+HIT:CreateButton("To Work", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(nothing)
+end)
 HIT:CreateToggle("Auto Hit Evil Fox", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.g = true 
@@ -251,12 +308,6 @@ game:GetService("ReplicatedStorage").RE:FireServer(unpack(args))
     else
         _G.g = false
     end
-end)
-HIT:CreateButton("Go To Spawn Boss", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(nothing)
-end)
-HIT:CreateButton("To Work", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(nothing)
 end)
 HIT:CreateToggle("Auto Hit Lava Golem", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
