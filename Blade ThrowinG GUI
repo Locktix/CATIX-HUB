@@ -191,12 +191,11 @@ AutoTab:CreateToggle("Auto Buy Perk1", function(arg) --the (arg) is if the check
         while wait(0) and _G.p21 do
 
 local args = {
-    [1] = "BuyPerk1",
-    [2] = true,
+    [1] = "BuyPerk",
+    [2] = "1",
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-
         end
     else
         _G.p21= false
@@ -208,8 +207,8 @@ AutoTab:CreateToggle("Auto Buy Perk2", function(arg) --the (arg) is if the check
         while wait(0) and _G.p22 do
 
 local args = {
-    [1] = "BuyPerk2",
-    [2] = true,
+    [1] = "BuyPerk",
+    [2] = "2",
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
@@ -225,8 +224,8 @@ AutoTab:CreateToggle("Auto Buy Perk3", function(arg) --the (arg) is if the check
         while wait(0) and _G.p23 do
 
 local args = {
-    [1] = "BuyPerk3",
-    [2] = true,
+    [1] = "BuyPerk",
+    [2] = "3",
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
