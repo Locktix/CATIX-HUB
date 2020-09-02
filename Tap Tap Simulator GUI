@@ -278,7 +278,7 @@ end)
 Rebirths:CreateToggle("Auto Buy Rebirths x20", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.p = true 
-       while wait(0) and _G.p
+       while wait(0) and _G.p do
 local args = {
     [1] = 20,
 }
