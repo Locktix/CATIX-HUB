@@ -1456,6 +1456,81 @@ eggs3:CreateToggle("Auto Dragons Egg (10)", function(arg) --the (arg) is if the 
         _G.zz = false
     end
 end)
+eggs3:CreateToggle("Auto Pirate Egg (22)3", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.PIRATE1 = true 
+        while wait(0) and _G.PIRATE1 do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg22",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 3,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.PIRATE1 = false
+    end
+end)
+
+eggs3:CreateToggle("Auto Pirate Egg (22)2", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.PIRATE2 = true 
+        while wait(0) and _G.PIRATE2 do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg22",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 3,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.PIRATE2 = false
+    end
+end)
+
+eggs3:CreateToggle("Auto Pirate Egg (22)1", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.PIRATE3 = true 
+        while wait(0) and _G.PIRATE3 do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg22",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 3,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.PIRATE3 = false
+    end
+end)
+eggs3:CreateToggle("Auto Pirate Egg (22)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.PIRATE4 = true 
+        while wait(0) and _G.PIRATE4 do
+            local args = {
+                [1] = {
+                    ["EggType"] = "Egg22",
+                    ["UpdateType"] = "Open",
+                    ["Amount"] = 3,
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.PIRATE4 = false
+    end
+end)
+
 eggs3:CreateToggle("Auto Frozen Egg (21)3", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.MINION8 = true 
@@ -2411,7 +2486,9 @@ end)
 teleports:CreateButton("Island 20", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(384.235504, 6712.52051, -857.059998)
 end)
-
+teleports:CreateButton("Island 21", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(414.405029, 7160.31543, -1003.33319)
+end)
 teleports:CreateButton("Shop 1", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-39.3278999, 54.5634804, -831.109619)
 end)
