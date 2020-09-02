@@ -275,6 +275,34 @@ end
         _G.o= false
     end
 end)
+Rebirths:CreateToggle("Auto Buy Rebirths x20", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.p = true 
+       while wait(0) and _G.p
+local args = {
+    [1] = 20,
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyRebirths:InvokeServer(unpack(args))
+end
+    else
+        _G.p= false
+    end
+end)
+Rebirths:CreateToggle("Auto Buy Rebirths x50", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.q = true 
+       while wait(0) and _G.q do
+local args = {
+    [1] = 50,
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyRebirths:InvokeServer(unpack(args))
+end
+    else
+        _G.q= false
+    end
+end)
 teleports:CreateButton("Aqua", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(640.644165, 37.8075066, 628.374939)
 end)
