@@ -1301,7 +1301,7 @@ game:GetService("ReplicatedStorage").Events.Server.PotionBuy:InvokeServer(unpack
         _G.zzzc = false
     end
 end)
-potions:CreateToggle("Auto Buy Gold Reb x1", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirth4:CreateToggle("Auto Buy Gold Reb x1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzzd = true 
         while wait(0) and _G.zzzd do
@@ -1315,7 +1315,7 @@ game:GetService("ReplicatedStorage").Events.Server.RequestGoldenRebirth:InvokeSe
         _G.zzzd = false
     end
 end)
-potions:CreateToggle("Auto Buy Gold Reb x5", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirth4:CreateToggle("Auto Buy Gold Reb x5", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzze = true 
         while wait(0) and _G.zzze do
@@ -1329,7 +1329,7 @@ game:GetService("ReplicatedStorage").Events.Server.RequestGoldenRebirth:InvokeSe
         _G.zzze = false
     end
 end)
-potions:CreateToggle("Auto Buy Gold Reb x15", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirth4:CreateToggle("Auto Buy Gold Reb x15", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzzf = true 
         while wait(0) and _G.zzzf do
@@ -1343,7 +1343,7 @@ game:GetService("ReplicatedStorage").Events.Server.RequestGoldenRebirth:InvokeSe
         _G.zzzf = false
     end
 end)
-potions:CreateToggle("Auto Buy Gold Reb x25", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirth4:CreateToggle("Auto Buy Gold Reb x25", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzzg = true 
         while wait(0) and _G.zzzg do
@@ -1357,7 +1357,7 @@ game:GetService("ReplicatedStorage").Events.Server.RequestGoldenRebirth:InvokeSe
         _G.zzzg = false
     end
 end)
-potions:CreateToggle("Auto Buy Gold Reb x50", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirth4:CreateToggle("Auto Buy Gold Reb x50", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzzh = true 
         while wait(0) and _G.zzzh do
@@ -1371,7 +1371,7 @@ game:GetService("ReplicatedStorage").Events.Server.RequestGoldenRebirth:InvokeSe
         _G.zzzh = false
     end
 end)
-potions:CreateToggle("Auto Buy Gold Reb x75", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirth4:CreateToggle("Auto Buy Gold Reb x75", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzzi = true 
         while wait(0) and _G.zzzi do
