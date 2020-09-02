@@ -12,7 +12,8 @@ local eggs2 = Library:CreateTab("Auto Buy Eggs 2","things", true)
 local rebirth = Library:CreateTab("Auto Rebirth","things", true)
 local rebirth2 = Library:CreateTab("Auto Rebirth 2","things", true)
 local rebirth3 = Library:CreateTab("Auto Rebirth 3","things", true)
-local rebirth4 = Library:CreateTab("Auto Gold Rebirths","things", true)
+local rebirth4 = Library:CreateTab("Auto Rebirth 4","things", true)
+local rebirth5 = Library:CreateTab("Auto Gold Rebirths","things", true)
 local potions = Library:CreateTab("Auto Buy Potions","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
@@ -1241,7 +1242,380 @@ Event:InvokeServer(A_1)
         _G.zzy = false
     end
 end)
+rebirth3:CreateToggle("Auto Rebirth x1.5Sx", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zzzk = true 
+        while wait(0) and _G.zzzk do
+            local A_1 = "9"
+local A_1 = 1500000000000000000000
+local Event = game:GetService("ReplicatedStorage").Events.Server.RequestRebirth
+Event:InvokeServer(A_1)		
 
+        end
+    else
+        _G.zzzk = false
+    end
+end)
+
+rebirth3:CreateToggle("Auto Rebirth x2.5Sx", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zzzl = true 
+        while wait(0) and _G.zzzl do
+            local A_1 = "9"
+local A_1 = 2500000000000000000000
+local Event = game:GetService("ReplicatedStorage").Events.Server.RequestRebirth
+Event:InvokeServer(A_1)		
+
+        end
+    else
+        _G.zzzl = false
+    end
+end)
+
+rebirth3:CreateToggle("Auto Rebirth x5Sx", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zzzm = true 
+        while wait(0) and _G.zzzm do
+            local A_1 = "9"
+local A_1 = 5000000000000000000000
+local Event = game:GetService("ReplicatedStorage").Events.Server.RequestRebirth
+Event:InvokeServer(A_1)		
+
+        end
+    else
+        _G.zzzm = false
+    end
+end)
+
+rebirth3:CreateToggle("Auto Rebirth x7.5Sx", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zzzn = true 
+        while wait(0) and _G.zzzn do
+            local A_1 = "9"
+local A_1 = 7500000000000000000000
+local Event = game:GetService("ReplicatedStorage").Events.Server.RequestRebirth
+Event:InvokeServer(A_1)		
+
+        end
+    else
+        _G.zzzn = false
+    end
+end)
+
+rebirth3:CreateToggle("Auto Rebirth x50Sx", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zzzo = true 
+        while wait(0) and _G.zzzo do
+            local A_1 = "9"
+local A_1 = 50000000000000000000000
+local Event = game:GetService("ReplicatedStorage").Events.Server.RequestRebirth
+Event:InvokeServer(A_1)		
+
+        end
+    else
+        _G.zzzo = false
+    end
+end)
+
+rebirth3:CreateToggle("Auto Rebirth x150Sx", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zzzp = true 
+        while wait(0) and _G.zzzp do
+            local A_1 = "9"
+local A_1 = 150000000000000000000000
+local Event = game:GetService("ReplicatedStorage").Events.Server.RequestRebirth
+Event:InvokeServer(A_1)		
+
+        end
+    else
+        _G.zzzp = false
+    end
+end)
+
+rebirth3:CreateToggle("Auto Rebirth x250Sx", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zzzq = true 
+        while wait(0) and _G.zzzq do
+            local A_1 = "9"
+local A_1 = 250000000000000000000000
+local Event = game:GetService("ReplicatedStorage").Events.Server.RequestRebirth
+Event:InvokeServer(A_1)		
+
+        end
+    else
+        _G.zzzq = false
+    end
+end)
+
+rebirth3:CreateToggle("Auto Rebirth x500Sx", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zzzr = true 
+        while wait(0) and _G.zzzr do
+            local A_1 = "9"
+local A_1 = 500000000000000000000000
+local Event = game:GetService("ReplicatedStorage").Events.Server.RequestRebirth
+Event:InvokeServer(A_1)		
+
+        end
+    else
+        _G.zzzr = false
+    end
+end)
+
+rebirth3:CreateToggle("Auto Rebirth x750Sx", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zzzs = true 
+        while wait(0) and _G.zzzs do
+            local A_1 = "9"
+local A_1 = 750000000000000000000000
+local Event = game:GetService("ReplicatedStorage").Events.Server.RequestRebirth
+Event:InvokeServer(A_1)		
+
+        end
+    else
+        _G.zzzs = false
+    end
+end)
+
+rebirth4:CreateToggle("Auto Rebirth x1Sp", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zzzt = true 
+        while wait(0) and _G.zzzt do
+            local A_1 = "9"
+local A_1 = 1000000000000000000000000
+local Event = game:GetService("ReplicatedStorage").Events.Server.RequestRebirth
+Event:InvokeServer(A_1)		
+
+        end
+    else
+        _G.zzzt = false
+    end
+end)
+
+rebirth4:CreateToggle("Auto Rebirth x5Sp", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zzzu = true 
+        while wait(0) and _G.zzzu do
+            local A_1 = "9"
+local A_1 = 5000000000000000000000000
+local Event = game:GetService("ReplicatedStorage").Events.Server.RequestRebirth
+Event:InvokeServer(A_1)		
+
+        end
+    else
+        _G.zzzu = false
+    end
+end)
+
+rebirth4:CreateToggle("Auto Rebirth x15Sp", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zzzv = true 
+        while wait(0) and _G.zzzv do
+            local A_1 = "9"
+local A_1 = 15000000000000000000000000
+local Event = game:GetService("ReplicatedStorage").Events.Server.RequestRebirth
+Event:InvokeServer(A_1)		
+
+        end
+    else
+        _G.zzzv = false
+    end
+end)
+
+rebirth4:CreateToggle("Auto Rebirth x25Sp", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zzzw = true 
+        while wait(0) and _G.zzzw do
+            local A_1 = "9"
+local A_1 = 25000000000000000000000000
+local Event = game:GetService("ReplicatedStorage").Events.Server.RequestRebirth
+Event:InvokeServer(A_1)		
+
+        end
+    else
+        _G.zzzw = false
+    end
+end)
+
+rebirth4:CreateToggle("Auto Rebirth x50Sp", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zzzx = true 
+        while wait(0) and _G.zzzx do
+            local A_1 = "9"
+local A_1 = 50000000000000000000000000
+local Event = game:GetService("ReplicatedStorage").Events.Server.RequestRebirth
+Event:InvokeServer(A_1)		
+
+        end
+    else
+        _G.zzzx = false
+    end
+end)
+
+rebirth4:CreateToggle("Auto Rebirth x75Sp", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zzzy = true 
+        while wait(0) and _G.zzzy do
+            local A_1 = "9"
+local A_1 = 75000000000000000000000000
+local Event = game:GetService("ReplicatedStorage").Events.Server.RequestRebirth
+Event:InvokeServer(A_1)		
+
+        end
+    else
+        _G.zzzy = false
+    end
+end)
+
+rebirth4:CreateToggle("Auto Rebirth x100Sp", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zzzz = true 
+        while wait(0) and _G.zzzz do
+            local A_1 = "9"
+local A_1 = 100000000000000000000000000
+local Event = game:GetService("ReplicatedStorage").Events.Server.RequestRebirth
+Event:InvokeServer(A_1)		
+
+        end
+    else
+        _G.zzzz = false
+    end
+end)
+
+rebirth4:CreateToggle("Auto Rebirth x500Sp", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zzzza = true 
+        while wait(0) and _G.zzzza do
+            local A_1 = "9"
+local A_1 = 500000000000000000000000000
+local Event = game:GetService("ReplicatedStorage").Events.Server.RequestRebirth
+Event:InvokeServer(A_1)		
+
+        end
+    else
+        _G.zzzza = false
+    end
+end)
+
+rebirth4:CreateToggle("Auto Rebirth x1.5Oc", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zzzzb = true 
+        while wait(0) and _G.zzzzb do
+            local A_1 = "9"
+local A_1 = 1500000000000000000000000000
+local Event = game:GetService("ReplicatedStorage").Events.Server.RequestRebirth
+Event:InvokeServer(A_1)		
+
+        end
+    else
+        _G.zzzzb = false
+    end
+end)
+
+rebirth4:CreateToggle("Auto Rebirth x2.5Oc", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zzzzc = true 
+        while wait(0) and _G.zzzzc do
+            local A_1 = "9"
+local A_1 = 2500000000000000000000000000
+local Event = game:GetService("ReplicatedStorage").Events.Server.RequestRebirth
+Event:InvokeServer(A_1)		
+
+        end
+    else
+        _G.zzzzc = false
+    end
+end)
+
+rebirth4:CreateToggle("Auto Rebirth x5Oc", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zzzzd = true 
+        while wait(0) and _G.zzzzd do
+            local A_1 = "9"
+local A_1 = 5000000000000000000000000000
+local Event = game:GetService("ReplicatedStorage").Events.Server.RequestRebirth
+Event:InvokeServer(A_1)		
+
+        end
+    else
+        _G.zzzzd = false
+    end
+end)
+
+rebirth4:CreateToggle("Auto Rebirth x7.5Oc", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zzzze = true 
+        while wait(0) and _G.zzzze do
+            local A_1 = "9"
+local A_1 = 7500000000000000000000000000
+local Event = game:GetService("ReplicatedStorage").Events.Server.RequestRebirth
+Event:InvokeServer(A_1)		
+
+        end
+    else
+        _G.zzzze = false
+    end
+end)
+
+rebirth4:CreateToggle("Auto Rebirth x10Oc", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zzzzf = true 
+        while wait(0) and _G.zzzzf do
+            local A_1 = "9"
+local A_1 = 10000000000000000000000000000
+local Event = game:GetService("ReplicatedStorage").Events.Server.RequestRebirth
+Event:InvokeServer(A_1)		
+
+        end
+    else
+        _G.zzzzf = false
+    end
+end)
+
+rebirth4:CreateToggle("Auto Rebirth x50Oc", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zzzzg = true 
+        while wait(0) and _G.zzzzg do
+            local A_1 = "9"
+local A_1 = 50000000000000000000000000000
+local Event = game:GetService("ReplicatedStorage").Events.Server.RequestRebirth
+Event:InvokeServer(A_1)		
+
+        end
+    else
+        _G.zzzzg = false
+    end
+end)
+
+rebirth4:CreateToggle("Auto Rebirth x150Oc", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zzzzh = true 
+        while wait(0) and _G.zzzzh do
+            local A_1 = "9"
+local A_1 = 150000000000000000000000000000
+local Event = game:GetService("ReplicatedStorage").Events.Server.RequestRebirth
+Event:InvokeServer(A_1)		
+
+        end
+    else
+        _G.zzzzh = false
+    end
+end)
+
+rebirth4:CreateToggle("Auto Rebirth x250Oc", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zzzj = true 
+        while wait(0) and _G.zzzj do
+            local A_1 = "9"
+local A_1 = 250000000000000000000000000000
+local Event = game:GetService("ReplicatedStorage").Events.Server.RequestRebirth
+Event:InvokeServer(A_1)		
+
+        end
+    else
+        _G.zzzj = false
+    end
+end)
 potions:CreateToggle("Auto Buy X2 Clicks", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzz = true 
@@ -1301,7 +1675,7 @@ game:GetService("ReplicatedStorage").Events.Server.PotionBuy:InvokeServer(unpack
         _G.zzzc = false
     end
 end)
-rebirth4:CreateToggle("Auto Buy Gold Reb x1", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirth5:CreateToggle("Auto Buy Gold Reb x1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzzd = true 
         while wait(0) and _G.zzzd do
@@ -1315,7 +1689,7 @@ game:GetService("ReplicatedStorage").Events.Server.RequestGoldenRebirth:InvokeSe
         _G.zzzd = false
     end
 end)
-rebirth4:CreateToggle("Auto Buy Gold Reb x5", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirth5:CreateToggle("Auto Buy Gold Reb x5", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzze = true 
         while wait(0) and _G.zzze do
@@ -1329,7 +1703,7 @@ game:GetService("ReplicatedStorage").Events.Server.RequestGoldenRebirth:InvokeSe
         _G.zzze = false
     end
 end)
-rebirth4:CreateToggle("Auto Buy Gold Reb x15", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirth5:CreateToggle("Auto Buy Gold Reb x15", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzzf = true 
         while wait(0) and _G.zzzf do
@@ -1343,7 +1717,7 @@ game:GetService("ReplicatedStorage").Events.Server.RequestGoldenRebirth:InvokeSe
         _G.zzzf = false
     end
 end)
-rebirth4:CreateToggle("Auto Buy Gold Reb x25", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirth5:CreateToggle("Auto Buy Gold Reb x25", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzzg = true 
         while wait(0) and _G.zzzg do
@@ -1357,7 +1731,7 @@ game:GetService("ReplicatedStorage").Events.Server.RequestGoldenRebirth:InvokeSe
         _G.zzzg = false
     end
 end)
-rebirth4:CreateToggle("Auto Buy Gold Reb x50", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirth5:CreateToggle("Auto Buy Gold Reb x50", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzzh = true 
         while wait(0) and _G.zzzh do
@@ -1371,7 +1745,7 @@ game:GetService("ReplicatedStorage").Events.Server.RequestGoldenRebirth:InvokeSe
         _G.zzzh = false
     end
 end)
-rebirth4:CreateToggle("Auto Buy Gold Reb x75", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirth5:CreateToggle("Auto Buy Gold Reb x75", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzzi = true 
         while wait(0) and _G.zzzi do
