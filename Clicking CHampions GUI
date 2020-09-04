@@ -1,4 +1,4 @@
---https://www.roblox.com/games/5373489830/SECRET-EGG-Clicking-Champions--
+--https://www.roblox.com/games/5373489830/CHAPTER-2-Clicking-Champions--
 --SNUG WORLD CODE IS SecretSnug--
 --CDTV WORLD CODE IS CDTVHasASecret--
 
@@ -45,6 +45,18 @@ credits:CreateButton("☣BioHazard☣#9086", function() --you dont need "arg" fo
 game:GetService("CoreGui").uiui:nothing()
 end)
 
+AutoTab:CreateToggle("Auto Clicker", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.click = true 
+        while wait(0) and _G.click do
+            local Event = game:GetService("ReplicatedStorage").Events.Server.RegisterClick
+Event:InvokeServer()
+
+        end
+    else
+        _G.click = false
+    end
+end)
 
 AutoTab:CreateToggle("Speed Hack 100", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
@@ -386,7 +398,7 @@ game:GetService("ReplicatedStorage").Events.Server.OpenEgg:InvokeServer(unpack(a
 end)
 
 --Updated by ☣BioHazard☣#9086--
-eggs:CreateToggle("Auto Buy Snug Pets", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs2:CreateToggle("Auto Buy Snug Pets", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.v = true 
         while wait(0) and _G.v do
@@ -403,7 +415,7 @@ game:GetService("ReplicatedStorage").Events.Server.OpenEgg:InvokeServer(unpack(a
 end)
 
 --Updated by ☣BioHazard☣#9086--
-eggs:CreateToggle("Auto Buy CDTV Pets", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs2:CreateToggle("Auto Buy CDTV Pets", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.w = true 
         while wait(0) and _G.w do
@@ -420,7 +432,7 @@ game:GetService("ReplicatedStorage").Events.Server.OpenEgg:InvokeServer(unpack(a
 end)
 
 --Updated by ☣BioHazard☣#9086--
-eggs:CreateToggle("Auto Buy Secret Pets", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs2:CreateToggle("Auto Buy Secret Pets", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.x = true 
         while wait(0) and _G.x do
@@ -489,6 +501,25 @@ game:GetService("ReplicatedStorage").Events.Server.OpenEgg:InvokeServer(unpack(a
         _G.za = false
     end
 end)
+
+eggs2:CreateToggle("Auto Buy Hero Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zb = true 
+        while wait(0) and _G.zb do
+      
+local args = {
+    [1] = "51",
+    [2] = 1,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.OpenEgg:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.zb = false
+    end
+end)
+
 rebirth:CreateToggle("Auto Rebirth x1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zb = true 
@@ -1675,6 +1706,7 @@ game:GetService("ReplicatedStorage").Events.Server.PotionBuy:InvokeServer(unpack
         _G.zzzc = false
     end
 end)
+
 rebirth5:CreateToggle("Auto Buy Gold Reb x1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzzd = true 
@@ -1689,6 +1721,7 @@ game:GetService("ReplicatedStorage").Events.Server.RequestGoldenRebirth:InvokeSe
         _G.zzzd = false
     end
 end)
+
 rebirth5:CreateToggle("Auto Buy Gold Reb x5", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzze = true 
@@ -1703,6 +1736,7 @@ game:GetService("ReplicatedStorage").Events.Server.RequestGoldenRebirth:InvokeSe
         _G.zzze = false
     end
 end)
+
 rebirth5:CreateToggle("Auto Buy Gold Reb x15", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzzf = true 
@@ -1717,6 +1751,7 @@ game:GetService("ReplicatedStorage").Events.Server.RequestGoldenRebirth:InvokeSe
         _G.zzzf = false
     end
 end)
+
 rebirth5:CreateToggle("Auto Buy Gold Reb x25", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzzg = true 
@@ -1731,6 +1766,7 @@ game:GetService("ReplicatedStorage").Events.Server.RequestGoldenRebirth:InvokeSe
         _G.zzzg = false
     end
 end)
+
 rebirth5:CreateToggle("Auto Buy Gold Reb x50", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzzh = true 
@@ -1745,6 +1781,7 @@ game:GetService("ReplicatedStorage").Events.Server.RequestGoldenRebirth:InvokeSe
         _G.zzzh = false
     end
 end)
+
 rebirth5:CreateToggle("Auto Buy Gold Reb x75", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zzzi = true 
@@ -1759,6 +1796,7 @@ game:GetService("ReplicatedStorage").Events.Server.RequestGoldenRebirth:InvokeSe
         _G.zzzi = false
     end
 end)
+
 AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:Destroy()
 end)
@@ -1866,8 +1904,13 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1787.45
 end)
 
 teleports2:CreateButton("World 2", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2883.04785, 283.069214, -5140.09033)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3047.7688, 288.309906, -4947.67383)
 end)
+
+teleports2:CreateButton("50K Zone", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1790.07861, -114.363518, -4797.4209)
+end)
+
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
     game:service'Players'.LocalPlayer.Idled:connect(function()
