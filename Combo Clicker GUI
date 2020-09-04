@@ -2218,6 +2218,22 @@ game:GetService("ReplicatedStorage").Functions.CrateFunction:InvokeServer(unpack
         _G.OOD4 = false
     end
 end)
+eggs:CreateToggle("Auto Evolve Hats", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.UpgradeAllHats = true 
+        while wait(0) and _G.UpgradeAllHats do
+            local A_1 = 
+{
+	["UpdateType"] = "UpgradeAllHats"
+}
+local Event = game:GetService("ReplicatedStorage").Events.InventoryEvent
+Event:FireServer(A_1)
+
+        end
+    else
+        _G.UpgradeAllHats = false
+    end
+end)
 AutoTab:CreateToggle("Auto Buy Potions", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.as = true 
