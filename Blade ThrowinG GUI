@@ -281,7 +281,24 @@ game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
         _G.f = false
     end
 end)
+AutoTab:CreateToggle("Auto Wheel Spin", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.fgf = true 
+        while wait(0) and _G.fgf do
 
+local args = {
+    [1] = "Wheel",
+    [2] = "Wheel1",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+        end
+    else
+        _G.fgf = false
+    end
+end)
 AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:Destroy()
 end)
