@@ -2165,7 +2165,24 @@ game:GetService("ReplicatedStorage").Functions.CrateFunction:InvokeServer(unpack
         _G.OOD3 = false
     end
 end)
+crates:CreateToggle("Auto Buy Crate (7)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.OOD4 = true 
+        while wait(0) and _G.OOD4 do
+ local args = {
+    [1] = {
+        ["Amount"] = 3,
+        ["UpdateType"] = "Open",
+        ["CrateType"] = "Crate7",
+    },
+}
 
+game:GetService("ReplicatedStorage").Functions.CrateFunction:InvokeServer(unpack(args))           
+        end
+    else
+        _G.OOD4 = false
+    end
+end)
 AutoTab:CreateToggle("Auto Buy Potions", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.as = true 
