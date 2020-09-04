@@ -1962,7 +1962,7 @@ eggs:CreateToggle("Auto Buy 10M Egg pro", function(arg) --the (arg) is if the ch
     [1] = {
         ["EggType"] = "Egg10MPro",
         ["UpdateType"] = "Open",
-        ["Amount"] = 1,
+        ["Amount"] = 3,
     },
 }
 
