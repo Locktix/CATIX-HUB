@@ -25,11 +25,11 @@ credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "a
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("bsoleil31FR[inchala ptn]#9001", function() --you dont need "arg" for a button
+credits:CreateButton("bsoleil31FR#7202", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("https://discord.gg/PdUTrVG", function() --you dont need "arg" for a button
+credits:CreateButton("https://discord.gg/m9Nn3qd", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
@@ -1011,7 +1011,7 @@ local args = {
     [2] = "PinkChest",
 }
 
-game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
 
         end
     else
@@ -1028,7 +1028,7 @@ local args = {
     [2] = "EpicAngelChest",
 }
 
-game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
 
         end
     else
@@ -1045,7 +1045,7 @@ local args = {
     [2] = "GoldAngelChest",
 }
 
-game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
 
         end
     else
@@ -1062,7 +1062,7 @@ local args = {
     [2] = "AngelChest",
 }
 
-game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
 
         end
     else
@@ -1079,7 +1079,7 @@ local args = {
     [2] = "GreenLavaChest",
 }
 
-game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
 
         end
     else
@@ -1097,7 +1097,7 @@ local args = {
 }
 
 
-game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
 
         end
     else
@@ -1114,7 +1114,7 @@ local args = {
     [2] = "LavaChest",
 }
 
-game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
 
         end
     else
@@ -1132,7 +1132,7 @@ local args = {
 }
 
 
-game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
 
         end
     else
@@ -1150,7 +1150,7 @@ local args = {
 }
 
 
-game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
 
         end
     else
@@ -1168,7 +1168,7 @@ local args = {
 }
 
 
-game:GetService("ReplicatedStorage")["\n\t"]:FireServer(unpack(args))
+game:GetService("ReplicatedStorage")["\n\t"]:InvokeServer(unpack(args))
 
         end
     else
