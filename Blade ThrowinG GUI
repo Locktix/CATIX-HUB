@@ -10,7 +10,7 @@ local eggs2 = Library:CreateTab("Auto Buy Eggs 2","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
-
+--odd
 credits:CreateButton("Our Discords", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
