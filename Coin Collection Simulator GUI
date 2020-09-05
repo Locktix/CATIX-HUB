@@ -22,11 +22,11 @@ credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "a
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("bsoleil31FR[inchala ptn]#9001", function() --you dont need "arg" for a button
+credits:CreateButton("bsoleil31FR#7202", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("https://discord.gg/PdUTrVG", function() --you dont need "arg" for a button
+credits:CreateButton("https://discord.gg/m9Nn3qd", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
@@ -316,10 +316,20 @@ AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a bu
 game:GetService("CoreGui").uiui:Destroy()
 end)
 
---| Anti AFK | By Altix#3395
-    local Virtual = game:service'VirtualUser'
-    game:service'Players'.LocalPlayer.Idled:connect(function()
-        Virtual:CaptureController()
-        Virtual:ClickButton2(Vector2.new())
-        wait(2)
-    end)
+    local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+
+local ot = mt.__namecall
+mt.__namecall = function(self, ...)
+   local args = {...}
+   local method = namecallMethod()
+   if tostring(method) == "Kick" then
+      print('Kick attempt')
+       return
+   end
+   return ot(self, ...)
+end
