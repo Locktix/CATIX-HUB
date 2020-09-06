@@ -398,6 +398,25 @@ game:GetService("ReplicatedStorage").Remotes["Buy Item"]:InvokeServer(unpack(arg
         _G.e= false
     end
 end)
+AutoTab:CreateButton("If You Want Farm Eggs", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(d)
+end)
+AutoTab:CreateToggle("Add Buy Common Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.zzee = true 
+        while wait(0.5) and _G.zzee do
+local args = {
+    [1] = "Common",
+    [2] = 3,
+}
+
+game:GetService("ReplicatedStorage").Remotes["Buy Egg"]:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.zzee = false
+    end
+end)
 teleports:CreateButton("Sell", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-510.696259, 5.00755835, 175.697876)
 end)
