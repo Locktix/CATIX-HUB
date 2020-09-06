@@ -407,7 +407,7 @@ _G.zzee = true
         while wait(0.5) and _G.zzee do
 local args = {
     [1] = "Common",
-    [2] = 3,
+    [2] = 999,
 }
 
 game:GetService("ReplicatedStorage").Remotes["Buy Egg"]:InvokeServer(unpack(args))
