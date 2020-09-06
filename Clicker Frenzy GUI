@@ -378,6 +378,20 @@ game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
         _G.e6= false
     end
 end)
+eggs:CreateToggle("Auto Buy Candy Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e7 = true 
+        while wait(0) and _G.e7 do
+local args = {
+    [1] = "candy",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+        end
+    else
+        _G.e7= false
+    end
+end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(72.2369003, 7.56137753, -156.131592)
 end)
