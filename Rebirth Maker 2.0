@@ -3,7 +3,6 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
 local AutoTab = Library:CreateTab("Rebirth-Maker-2-0 GUI","things", true)
-local teleports = Library:CreateTab("Teleports","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
@@ -139,32 +138,6 @@ end)
 
 
 
-rebirths:CreateToggle("Rebirth x1", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.b = true 
-        while wait(0) and _G.b do
-           local A_1 = 1
-local Event = game:GetService("ReplicatedStorage").Remotes.MultiRebirth
-Event:FireServer(A_1)
-        end
-    else
-        _G.b= false
-    end
-end)
-
-
-
-teleports:CreateButton("Zone 18", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1691.21399, 27.4616146, -5681.1333)
-end)
-
-teleports:CreateButton("Zone 19", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1525.88171, 27.4269829, -5677.54443)
-end)
-
-teleports:CreateButton("Zone 20", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1689.25916, 27.4623146, -3887.64136)
-end)
 
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
