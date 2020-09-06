@@ -1,0 +1,182 @@
+--https://www.roblox.com/games/5055942264/EVENTS-Rebirth-Maker-2-0
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
+
+local AutoTab = Library:CreateTab("Rebirth-Maker-2-0 GUI","things", true)
+local teleports = Library:CreateTab("Teleports","things", true)
+local MISC = Library:CreateTab("MISC","things", true)
+local credits = Library:CreateTab("Credits","things", true)
+
+AutoTab:CreateToggle("Auto Collect Gems", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.o = true 
+        while wait(0.5) and _G.o do
+local children = game.Workspace:GetChildren()
+    for _, child in pairs(children) do
+        for _, child in pairs(child:GetChildren()) do
+            table.insert(children, child)
+         end
+         if child:IsA("BasePart") and child.Name == "Diamond" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame            
+        end
+    end
+    end
+    else
+        _G.o = false
+    end
+end)
+AutoTab:CreateToggle("Auto Buy Crate 1", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b = true 
+        while wait(0) and _G.b do
+         local args = {
+    [1] = game:GetService("Players")["LocalPlayer"],
+}
+
+game:GetService("ReplicatedStorage")["Crate1"]:FireServer(unpack(args))
+        end
+    else
+        _G.b= false
+    end
+end)
+AutoTab:CreateToggle("Auto Buy Crate 2", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c = true 
+        while wait(0) and _G.c do
+      local args = {
+    [1] = game:GetService("Players")["LocalPlayer"],
+}
+
+game:GetService("ReplicatedStorage")["Crate2"]:FireServer(unpack(args))
+        end
+    else
+        _G.c= false
+    end
+end)
+AutoTab:CreateToggle("Auto Buy Crate 3", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.d = true 
+        while wait(0) and _G.d do
+         local args = {
+    [1] = game:GetService("Players")["LocalPlayer"],
+}
+
+game:GetService("ReplicatedStorage")["Crate3"]:FireServer(unpack(args))
+        end
+    else
+        _G.d= false
+    end
+end)
+
+credits:CreateButton("Our Discords", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("masterkyllian#1723", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("bsoleil31FR#7202", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("https://discord.gg/m9Nn3qd", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("Bebo Mods#1110", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+
+AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:Destroy()
+end)
+
+
+MISC:CreateButton("NO CLIP Press(E)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.NO = true 
+  noclip = false
+game:GetService('RunService').Stepped:connect(function()
+if noclip then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+plr = game.Players.LocalPlayer
+mouse = plr:GetMouse()
+mouse.KeyDown:connect(function(key)
+
+if key == "e" then
+noclip = not noclip
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+print('Created by FileExplorer')
+print('Credits to Peyton for the ChangeState part of this script')
+
+         
+else
+_G.NO = false
+end
+end)
+
+MISC:CreateToggle("Speed Hack 100", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.Speed = true 
+        while wait() and _G.Speed do
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+        end
+    else
+        _G.Speed = false
+           game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
+         end
+end)
+
+
+
+rebirths:CreateToggle("Rebirth x1", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b = true 
+        while wait(0) and _G.b do
+           local A_1 = 1
+local Event = game:GetService("ReplicatedStorage").Remotes.MultiRebirth
+Event:FireServer(A_1)
+        end
+    else
+        _G.b= false
+    end
+end)
+
+
+
+teleports:CreateButton("Zone 18", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1691.21399, 27.4616146, -5681.1333)
+end)
+
+teleports:CreateButton("Zone 19", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1525.88171, 27.4269829, -5677.54443)
+end)
+
+teleports:CreateButton("Zone 20", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1689.25916, 27.4623146, -3887.64136)
+end)
+
+--| Anti AFK | By Altix#3395
+    local Virtual = game:service'VirtualUser'
+    game:service'Players'.LocalPlayer.Idled:connect(function()
+        Virtual:CaptureController()
+        Virtual:ClickButton2(Vector2.new())
+        wait(2)
+    end)
+    
+    local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
