@@ -519,7 +519,23 @@ game:GetService("ReplicatedStorage").Events.Server.OpenEgg:InvokeServer(unpack(a
         _G.zb = false
     end
 end)
+eggs2:CreateToggle("Auto Buy Lava Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zbd = true 
+        while wait(0) and _G.zbd do
+      
+local args = {
+    [1] = "52",
+    [2] = 1,
+}
 
+game:GetService("ReplicatedStorage").Events.Server.OpenEgg:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.zbd = false
+    end
+end)
 rebirth:CreateToggle("Auto Rebirth x1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zb = true 
@@ -1910,7 +1926,9 @@ end)
 teleports2:CreateButton("50K Zone", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1790.07861, -114.363518, -4797.4209)
 end)
-
+teleports2:CreateButton("Lava Zone", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3644.84814, 182.503952, -4046.03589)
+end)
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
     game:service'Players'.LocalPlayer.Idled:connect(function()
