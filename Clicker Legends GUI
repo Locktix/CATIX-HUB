@@ -145,8 +145,8 @@ end)
 
 eggs1:CreateToggle("Auto Buy Common Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.c = true 
-        while wait(0) and _G.c do
+        _G.c2 = true 
+        while wait(0) and _G.c2 do
 local args = {
     [1] = "CommonEgg",
     [2] = "Single",
@@ -155,13 +155,13 @@ local args = {
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
         end
     else
-        _G.c= false
+        _G.c2= false
     end
 end)
 eggs1:CreateToggle("Auto Buy Neon Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.d = true 
-        while wait(0) and _G.d do
+        _G.d2 = true 
+        while wait(0) and _G.d2 do
 local args = {
     [1] = "NeonEgg",
     [2] = "Single",
@@ -170,13 +170,13 @@ local args = {
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
         end
     else
-        _G.d= false
+        _G.d2= false
     end
 end)
 eggs1:CreateToggle("Auto Buy Beach Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.e = true 
-        while wait(0) and _G.e do
+        _G.e2 = true 
+        while wait(0) and _G.e2 do
 local args = {
     [1] = "BeachEgg",
     [2] = "Single",
@@ -185,13 +185,13 @@ local args = {
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
         end
     else
-        _G.e= false
+        _G.e2= false
     end
 end)
 eggs1:CreateToggle("Auto Buy Candy Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.f = true 
-        while wait(0) and _G.f do
+        _G.f2 = true 
+        while wait(0) and _G.f2 do
 local args = {
     [1] = "CandyEgg",
     [2] = "Single",
@@ -200,13 +200,13 @@ local args = {
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
         end
     else
-        _G.f= false
+        _G.f2= false
     end
 end)
 eggs1:CreateToggle("Auto Buy Volcano Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.g = true 
-        while wait(0) and _G.g do
+        _G.g2 = true 
+        while wait(0) and _G.g2 do
 local args = {
     [1] = "VolcanoEgg",
     [2] = "Single",
@@ -215,13 +215,13 @@ local args = {
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
         end
     else
-        _G.g= false
+        _G.g2= false
     end
 end)
 eggs1:CreateToggle("Auto Buy 100K Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.g = true 
-        while wait(0) and _G.g do
+        _G.h2 = true 
+        while wait(0) and _G.h2 do
 local args = {
     [1] = "eventegg",
     [2] = "Single",
@@ -230,7 +230,24 @@ local args = {
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
         end
     else
-        _G.g= false
+        _G.h2= false
+    end
+end)
+eggs1:CreateToggle("Auto Buy Monkey Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.i2 = true 
+        while wait(0) and _G.i2 do
+
+
+local args = {
+    [1] = "MonkeyEgg",
+    [2] = "Single",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
+        end
+    else
+        _G.i2= false
     end
 end)
 eggs2:CreateToggle("Auto Buy Common Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
@@ -310,8 +327,8 @@ game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(
 end)
 eggs2:CreateToggle("Auto Buy 100K Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.g = true 
-        while wait(0) and _G.g do
+        _G.h = true 
+        while wait(0) and _G.h do
 local args = {
     [1] = "eventegg",
     [2] = "Triple",
@@ -320,7 +337,24 @@ local args = {
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
         end
     else
-        _G.g= false
+        _G.h= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Monkey Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.i = true 
+        while wait(0) and _G.i do
+
+
+local args = {
+    [1] = "MonkeyEgg",
+    [2] = "Triple",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
+        end
+    else
+        _G.i= false
     end
 end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
@@ -337,7 +371,9 @@ end)
 teleports:CreateButton("Area Boost x2,5", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1504.37219, 21.0154209, 580.706543)
 end)
-
+teleports:CreateButton("Area Boost x3", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-121.929405, 16.6337032, -1405.86011)
+end)
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
     game:service'Players'.LocalPlayer.Idled:connect(function()
