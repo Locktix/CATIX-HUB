@@ -939,7 +939,35 @@ Event:FireServer()
         _G.k = false
     end
 end)
+AutoTab:CreateToggle("Auto Quests", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.k2 = true 
+        while wait(0) and _G.k2 do
+   local args = {
+    [1] = "Egg Hatcher",
+}
 
+game:GetService("ReplicatedStorage").Events.CollectAchievement:FireServer(unpack(args))
+local args = {
+    [1] = "Gem Collector",
+}
+
+game:GetService("ReplicatedStorage").Events.CollectAchievement:FireServer(unpack(args))
+local args = {
+    [1] = "Crumbs Eater",
+}
+
+game:GetService("ReplicatedStorage").Events.CollectAchievement:FireServer(unpack(args))
+local args = {
+    [1] = "Coin Collector",
+}
+
+game:GetService("ReplicatedStorage").Events.CollectAchievement:FireServer(unpack(args))
+        end
+    else
+        _G.k2 = false
+    end
+end)
 eggs:CreateToggle("Auto Buy Jungle Egg", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.l = true 
