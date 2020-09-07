@@ -40,7 +40,7 @@ game:GetService("CoreGui").uiui:Destroy()
 end)
 
 
-MISC:CreateButton("NO CLIP Press(E)", function(arg) --the (arg) is if the checkbox is toggled or not
+MISC:CreateToggle("NO CLIP Press(E)", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
 _G.NO = true 
   noclip = false
