@@ -1,0 +1,238 @@
+--https://www.roblox.com/games/2928055432/RPG-World
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
+
+local AutoTab = Library:CreateTab("RPG-World GUI","things", true)
+local teleports = Library:CreateTab("Teleports","things", true)
+local MISC = Library:CreateTab("MISC","things", true)
+local credits = Library:CreateTab("Credits","things", true)
+
+
+credits:CreateButton("Our Discords", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("masterkyllian#1723", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("bsoleil31FR#7202", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("https://discord.gg/m9Nn3qd", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("Bebo Mods#1110", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+
+AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:Destroy()
+end)
+
+
+MISC:CreateButton("NO CLIP Press(E)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.NO = true 
+  noclip = false
+game:GetService('RunService').Stepped:connect(function()
+if noclip then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+plr = game.Players.LocalPlayer
+mouse = plr:GetMouse()
+mouse.KeyDown:connect(function(key)
+
+if key == "e" then
+noclip = not noclip
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+print('Created by FileExplorer')
+print('Credits to Peyton for the ChangeState part of this script')
+
+         
+else
+_G.NO = false
+end
+end)
+
+MISC:CreateToggle("Speed Hack 250", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.Speed = true 
+        while wait() and _G.Speed do
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 250
+        end
+    else
+        _G.Speed = false
+           game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
+         end
+end)
+AutoTab:CreateToggle("BEST PETS FREE", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.a = true 
+        while wait(0) and _G.a do
+     local args = {
+    [1] = "Equip",
+    [2] = {
+        [3] = "Broken Egg4",
+        [2] = "Broken Egg",
+        [1] = "Pets",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+local args = {
+    [1] = "Equip",
+    [2] = {
+        [3] = "Broken Egg3",
+        [2] = "Broken Egg",
+        [1] = "Pets",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+local args = {
+    [1] = "Equip",
+    [2] = {
+        [3] = "Broken Egg2",
+        [2] = "Broken Egg",
+        [1] = "Pets",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+local args = {
+    [1] = "Equip",
+    [2] = {
+        [3] = "Broken Egg1",
+        [2] = "Broken Egg",
+        [1] = "Pets",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+        end
+    else
+        _G.a= false
+    end
+end)
+
+
+AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c = true 
+        while wait(0) and _G.c do
+    local args = {
+    [1] = "Click",
+    [2] = {
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.Npc:FireServer(unpack(args))
+        end
+    else
+        _G.c = false
+    end
+end)
+AutoTab:CreateToggle("Auto Rebirth", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b = true 
+        while wait(0) and _G.b do
+       local args = {
+    [1] = "Rebirth",
+}
+
+game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+        end
+    else
+        _G.b= false
+    end
+end)
+
+
+
+teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(284.140106, 0.207568884, 9.77445316)
+end)
+
+teleports:CreateButton("Zone 1", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(135.945053, -1.19244576, 9.39173603)
+end)
+
+teleports:CreateButton("Zone 2", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-155.955826, -1.19245577, -3.69919777)
+end)
+teleports:CreateButton("Zone 3", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-472.61554, -1.19245577, 23.9870148)
+end)
+teleports:CreateButton("Zone 4", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-724.241821, -1.19245613, 14.2533474)
+end)
+teleports:CreateButton("Zone 5", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1079.78674, -1.19245577, 21.5771732)
+end)
+teleports:CreateButton("Zone 6", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1329.71716, -1.19245613, 2.89308691)
+end)
+teleports:CreateButton("Zone 7", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1692.56262, -1.19245577, -35.8399162)
+end)
+teleports:CreateButton("Zone 8", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2068.40283, -1.04246891, -10.0048018)
+end)
+teleports:CreateButton("Zone 9", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2297.46948, -1.04247129, -4.33692074)
+end)
+teleports:CreateButton("Zone 10", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2669.51709, 1.11018515, -3.30309081)
+end)
+teleports:CreateButton("Zone 11", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2991.0105, -1.04247999, -2.22359633)
+end)
+teleports:CreateButton("Zone 12", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3472.57275, -1.04248035, -36.2489815)
+end)
+teleports:CreateButton("Zone 13", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-4006.84058, -0.989548683, -16.5964737)
+end)
+teleports:CreateButton("Zone Rebirths 1", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1424.87427, -1.1924572, -221.177719)
+end)
+teleports:CreateButton("Zone Rebirths 2", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1397.98743, -1.1924572, -549.57373)
+end)
+teleports:CreateButton("Zone Rebirths 3", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1379.39355, -1.1924572, -930.348145)
+end)
+teleports:CreateButton("Zone Rebirths 4", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1399.32056, -1.1924572, -1226.66418)
+end)
+teleports:CreateButton("Zone Rebirths 5", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1388.67358, -1.19254887, -1501.81531)
+end)
+teleports:CreateButton("Zone Rebirths 6", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1405.80688, -0.99713099, -1844.17004)
+end)
+--| Anti AFK | By Altix#3395
+    local Virtual = game:service'VirtualUser'
+    game:service'Players'.LocalPlayer.Idled:connect(function()
+        Virtual:CaptureController()
+        Virtual:ClickButton2(Vector2.new())
+        wait(2)
+    end)
+    
+    local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
