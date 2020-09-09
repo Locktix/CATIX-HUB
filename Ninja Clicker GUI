@@ -28,14 +28,13 @@ credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "a
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("bsoleil31FR[inchala ptn]#9001", function() --you dont need "arg" for a button
+credits:CreateButton("bsoleil31FR#7202", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("https://discord.gg/PdUTrVG", function() --you dont need "arg" for a button
+credits:CreateButton("https://discord.gg/m9Nn3qd", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
-
 credits:CreateButton("Bebo Mods#1110", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
@@ -374,8 +373,8 @@ end)
 
 eggs:CreateToggle("Auto Buy 15Qd Yens eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.n = true 
-        while wait(0) and _G.n do
+        _G.o = true 
+        while wait(0) and _G.o do
 local args = {
     [1] = "Party Egg",
     [2] = true
@@ -393,14 +392,14 @@ workspace.Debris.Events.OpenEgg:FireServer(unpack(args))
 
         end
     else
-        _G.n = false
+        _G.o = false
     end
 end)
 
 eggs:CreateToggle("Auto Buy Coco eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.n = true 
-        while wait(0) and _G.n do
+        _G.pn = true 
+        while wait(0) and _G.pn do
 local args = {
     [1] = "Coco Egg",
     [2] = true
@@ -418,14 +417,14 @@ workspace.Debris.Events.OpenEgg:FireServer(unpack(args))
 
         end
     else
-        _G.n = false
+        _G.pn = false
     end
 end)
 
 eggs:CreateToggle("Auto Buy 10M Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.o = true 
-        while wait(0) and _G.o do
+        _G.po = true 
+        while wait(0) and _G.po do
 local args = {
     [1] = "10M Egg",
     [2] = true
@@ -443,14 +442,14 @@ workspace.Debris.Events.OpenEgg:FireServer(unpack(args))
 
         end
     else
-        _G.o = false
+        _G.po = false
     end
 end)
 
 eggs:CreateToggle("Auto Buy Atlantis Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.o = true 
-        while wait(0) and _G.o do
+        _G.op = true 
+        while wait(0) and _G.op do
 local args = {
     [1] = "Infected Egg",
     [2] = true
@@ -468,10 +467,33 @@ workspace.Debris.Events.OpenEgg:FireServer(unpack(args))
 
         end
     else
-        _G.o = false
+        _G.op = false
     end
 end)
+eggs:CreateToggle("Auto Buy SWAMP Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.opp = true 
+        while wait(0) and _G.opp do
+local args = {
+    [1] = "Swamp Egg",
+    [2] = true
+}
 
+workspace.Debris.Events.OpenEgg:FireServer(unpack(args))
+
+
+
+
+
+
+
+
+
+        end
+    else
+        _G.opp = false
+    end
+end)
 MISC:CreateToggle("NO CLIP Press(E)", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
 _G.NO = true 
@@ -1244,7 +1266,9 @@ end)
 teleports:CreateButton("Water World", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(225.324036, 9.02493668, 1172.85864)
 end)
-
+teleports:CreateButton("Swamp World", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1445.80127, 3.68561292, -961.31781)
+end)
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
     game:service'Players'.LocalPlayer.Idled:connect(function()
