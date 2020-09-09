@@ -1,0 +1,487 @@
+--https://www.roblox.com/games/4254575069/Champion-Simulator?refPageId=806dcc9f-1afa-4834-ad30-46a06780cd69#!/store
+
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
+
+local AutoTab = Library:CreateTab("Champion-Simulator GUI","things", true)
+local teleports = Library:CreateTab("Teleports","things", true)
+local MISC = Library:CreateTab("MISC","things", true)
+local credits = Library:CreateTab("Credits","things", true)
+
+
+credits:CreateButton("Our Discords", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("masterkyllian#1723", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("bsoleil31FR#7202", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("https://discord.gg/m9Nn3qd", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("Bebo Mods#1110", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+
+AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:Destroy()
+end)
+
+
+MISC:CreateToggle("NO CLIP Press(E)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.NO = true 
+  noclip = false
+game:GetService('RunService').Stepped:connect(function()
+if noclip then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+plr = game.Players.LocalPlayer
+mouse = plr:GetMouse()
+mouse.KeyDown:connect(function(key)
+
+if key == "e" then
+noclip = not noclip
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+print('Created by FileExplorer')
+print('Credits to Peyton for the ChangeState part of this script')
+
+         
+else
+_G.NO = false
+end
+end)
+
+MISC:CreateToggle("Speed Hack 100", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.Speed = true 
+        while wait() and _G.Speed do
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+        end
+    else
+        _G.Speed = false
+           game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
+         end
+end)
+
+
+
+AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.a = true 
+        while wait(0) and _G.a do
+            if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
+            game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool"):Activate()
+    end
+end
+
+    else
+        _G.a = false
+    end
+end)
+AutoTab:CreateToggle("Auto Buy Gloves", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b = true 
+        while wait(0) and _G.b do
+       local args = {
+    [1] = "purchaseall",
+    [2] = 1,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Events.Gloves:FireServer(unpack(args))	
+end
+
+    else
+        _G.b = false
+    end
+end)
+AutoTab:CreateToggle("Auto Buy DNA", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c = true 
+        while wait(0) and _G.c do
+  local args = {
+    [1] = "purchaseall",
+    [2] = 1,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Events.DNA:FireServer(unpack(args))
+end
+
+    else
+        _G.c = false
+    end
+end)
+AutoTab:CreateToggle("Auto Buy Boss HITS", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.dd = true 
+        while wait(0) and _G.dd do
+local args = {
+    [1] = "purchase",
+    [2] = 1,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+local args = {
+    [1] = "purchase",
+    [2] = 2,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+local args = {
+    [1] = "purchase",
+    [2] = 3,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+local args = {
+    [1] = "purchase",
+    [2] = 4,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+local args = {
+    [1] = "purchase",
+    [2] = 5,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+local args = {
+    [1] = "purchase",
+    [2] = 6,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+local args = {
+    [1] = "purchase",
+    [2] = 7,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+local args = {
+    [1] = "purchase",
+    [2] = 8,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+local args = {
+    [1] = "purchase",
+    [2] = 9,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+local args = {
+    [1] = "purchase",
+    [2] = 10,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+local args = {
+    [1] = "purchase",
+    [2] = 11,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+local args = {
+    [1] = "purchase",
+    [2] = 12,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+local args = {
+    [1] = "purchase",
+    [2] = 13,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+local args = {
+    [1] = "purchase",
+    [2] = 14,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+local args = {
+    [1] = "purchase",
+    [2] = 15,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Events.BossSkill:FireServer(unpack(args))
+
+end
+
+    else
+        _G.dd = false
+    end
+end)
+AutoTab:CreateToggle("Auto Buy Jump", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.ddd = true 
+        while wait(0) and _G.ddd do
+local args = {
+    [1] = "purchase",
+    [2] = 1,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Events.JumpSkill:FireServer(unpack(args))
+local args = {
+    [1] = "purchase",
+    [2] = 2,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Events.JumpSkill:FireServer(unpack(args))
+local args = {
+    [1] = "purchase",
+    [2] = 3,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Events.JumpSkill:FireServer(unpack(args))
+local args = {
+    [1] = "purchase",
+    [2] = 4,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Events.JumpSkill:FireServer(unpack(args))
+local args = {
+    [1] = "purchase",
+    [2] = 5,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Events.JumpSkill:FireServer(unpack(args))
+
+
+end
+
+    else
+        _G.ddd = false
+    end
+end)
+MISC:CreateToggle("Bring Players", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.g = true 
+        while wait(0) and _G.g do
+_G.Kill = true
+while _G.Kill do
+wait()
+for i,v in pairs(game.Players:GetChildren()) do
+if v.Name ~= game.Players.LocalPlayer.Name then
+v.Character.Head.Anchored = true
+v.Character.Head.CFrame = game.Players.LocalPlayer.Character.Head.CFrame*CFrame.new(0,3,-3)
+end
+end
+end
+
+end
+
+    else
+        _G.g = false
+    end
+end)
+AutoTab:CreateToggle("Auto Hoops", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.gd = true 
+        while wait(0) and _G.gd do
+
+
+
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(271.664856, 137.174957, 209.503082))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(311.920898, 172.809341, 110.799057))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(178.715622, 350.740692, 166.314041))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(11.2795591, 333.63855, 170.908356))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(163.865128, 420.307648, 30.0916424))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(132.92247, 414.289948, -58.2123985))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(60.2700577, 453.797363, -66.627449))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(96.7146454, 559.672119, 126.076958))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-28.4861317, 623.832214, 128.697556))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(5.14368248, 677.031372, 255.402206))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(113.502899, 720.09259, 286.013733))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(141.365204, 1040.54504, 205.121109))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(59.4096375, 1062.11072, 129.920975))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(192.319443, 1333.41846, 62.0371437))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(194.995941, 1396.35999, 120.992439))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(27.3820763, 1432.77014, -11.683219))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(304.545288, 1771.9054, 190.223663))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(223.59903, 1942.74426, 92.7498779))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(267.838776, 1961.88879, -24.5702648))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-23.666008, 2006.94922, 266.628235))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(57.5974426, 2120.07129, 80.2312164))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(302.413727, 2118.6001, -15.6277399))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-20.5289783, 2288.74146, 178.395844))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(32.561367, 2312.90771, 290.473267))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(246.676697, 2388.3855, 216.121628))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(154.907776, 2559.24634, 167.340942))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-41.5522575, 2663.75781, 78.4898071))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-37.3715324, 1510.42566, 145.106644))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(56.2173882, 2798.31958, 128.409943))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(260.322937, 2766.38086, 194.496185))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(215.456833, 2875.11768, 355.458038))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-63.1260948, 2941.8418, 356.51004))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-110.387093, 2862.0127, 71.420517))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(103.90789, 2995.43823, 96.7542114))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(139.27301, 3155.08276, -45.9548225))
+wait(y)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(269.671143, 3199.80005, 11.9849739))
+wait(1)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(258.942719, 100.778015, 4.27662992))
+wait(1)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(388.882904, 5769.04688, 279.396149))
+wait(x)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(187.283463, 5670.87598, 312.347046))
+wait(x)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-204.024872, 5453.57373, 152.795609))
+wait(x)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-189.718185, 5543.06641, 17.7812328))
+wait(x)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(248.538284, 5188.87207, -13.1103544))
+wait(x)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(285.538086, 4965.32617, 146.091293))
+wait(x)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(360.924133, 4563.20117, 548.882385))
+wait(x)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(174.345413, 4398.72607, 209.172989))
+wait(x)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(101.886848, 4168.93164, 85.9316254))
+wait(x)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(272.739075, 3222.83105, 8.09238434))
+wait(x)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(213.095795, 2915.27246, 351.96701))
+wait(x)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-118.444946, 2878.09204, 71.0724182))
+wait(x)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-46.8307762, 2963.7627, 341.387207))
+wait(x)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-32.5643387, 2693.90332, 79.2791443))
+wait(x)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(166.506241, 2591.19238, 165.326294))
+wait(x)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(69.2609406, 2821.8916, 184.818039))
+
+end
+
+    else
+        _G.gd = false
+    end
+end)
+AutoTab:CreateToggle("Auto Collect Gems", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.lol = true 
+        while wait(0) and _G.lol do
+
+
+
+local plr = game.Players.LocalPlayer
+for i,v in pairs(game.Workspace.Pickups.Gem:GetChildren()) do
+if v and plr.Character:FindFirstChild("HumanoidRootPart") and v:IsA("MeshPart") then
+plr.Character.HumanoidRootPart.CFrame = v.CFrame
+end
+end
+end
+
+
+    else
+        _G.lol = false
+    end
+end)
+MISC:CreateToggle("Inf Double Jump", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e = true 
+        while wait(0) and _G.e do
+ game.Players.LocalPlayer.Others.DoubleJumps.Value = 9999999999999
+
+end
+
+    else
+        _G.e = false
+    end
+end)
+MISC:CreateToggle("Unlock Rebirths Islands", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f = true 
+        while wait(0) and _G.f do
+game:GetService("Players").LocalPlayer.Others.Rebirths.Value = 10
+
+
+end
+
+    else
+        _G.f = false
+    end
+end)
+teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-53.3565903, 3.6808784, 163.493317)
+end)
+teleports:CreateButton("Zone 1", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(124.771751, 815.296021, 115.089088)
+end)
+teleports:CreateButton("Zone 2", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(131.25531, 1608.5957, 103.393738)
+end)
+teleports:CreateButton("Zone 3", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(100.815781, 2369.88062, 132.018478)
+end)
+teleports:CreateButton("Zone 4", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(94.3880081, 3845.5354, 114.4636)
+end)
+teleports:CreateButton("Zone 5", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(116.226425, 5811.93896, 112.466423)
+end)
+--| Anti AFK | By Altix#3395
+    local Virtual = game:service'VirtualUser'
+    game:service'Players'.LocalPlayer.Idled:connect(function()
+        Virtual:CaptureController()
+        Virtual:ClickButton2(Vector2.new())
+        wait(2)
+    end)
+    
+    local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
