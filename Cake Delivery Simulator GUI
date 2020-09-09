@@ -3,8 +3,7 @@
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
-local AutoTab = Library:CreateTab("Combo Clickers GUI","things", true)
-local Buy = Library:CreateTab("Auto Buy","things", true)
+local AutoTab = Library:CreateTab("Cake-Delivery-Simulator GUI","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
@@ -61,6 +60,22 @@ end
 end)
 
 
+
+
+AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.a = true 
+        while wait(0) and _G.a do
+            if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
+            game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool"):Activate()
+    end
+end
+
+    else
+        _G.a = false
+    end
+end)
+
 MISC:CreateToggle("Speed Hack 100", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
 _G.Speed = true 
@@ -73,33 +88,7 @@ _G.Speed = true
          end
 end)
 
-AutoTab:CreateToggle("Auto click", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.a = true 
-        while wait(0) and _G.a do
-        local A_1 = game:GetService("Workspace").quentin453.Cake
-local Event = game:GetService("ReplicatedStorage").Cake
-Event:InvokeServer(A_1)
-    
-        end
-    else
-        _G.a = false
-    end
-end)
-
-AutoTab:CreateToggle("Speed Hack 100", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-_G.Speed = true 
-        while wait() and _G.Speed do
-            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
-        end
-    else
-        _G.Speed = false
-           game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
-         end
-end)
-
-Buy:CreateToggle("Auto Buy Cake", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateToggle("Auto Buy Cake", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.c = true 
         while wait(0) and _G.c do
@@ -113,7 +102,7 @@ Buy:CreateToggle("Auto Buy Cake", function(arg) --the (arg) is if the checkbox i
     end
 end)
 
-Buy:CreateToggle("Auto Buy Sac", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateToggle("Auto Buy Sac", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.d = true 
         while wait(0) and _G.d do
