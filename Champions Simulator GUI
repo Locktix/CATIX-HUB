@@ -6,6 +6,8 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/prezt
 local AutoTab = Library:CreateTab("Champion-Simulator GUI","things", true)
 local eggs = Library:CreateTab("Eggs","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
+local class1 = Library:CreateTab("Classes 1-15","things", true)
+local class2 = Library:CreateTab("Classes 16-31","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
@@ -315,6 +317,562 @@ end
         _G.ddd = false
     end
 end)
+
+
+class1:CreateToggle("Buy Class 2", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass2 = true 
+        while wait(0) and _G.bclass2 do
+
+
+ local args = {
+     [1] = "purchase",
+     [2] = 2, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass2 = false
+    end
+end)
+
+class1:CreateToggle("Buy Class 3", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass3 = true 
+        while wait(0) and _G.bclass3 do
+
+
+ local args = {
+     [1] = "purchase",
+     [2] = 3, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass3 = false
+    end
+end)
+
+class1:CreateToggle("Buy Class 4", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass4 = true 
+        while wait(0) and _G.bclass4 do
+
+
+ local args = {
+     [1] = "purchase",
+     [2] = 4, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass4 = false
+    end
+end)
+
+class1:CreateToggle("Buy Class 5", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass5 = true 
+        while wait(0) and _G.bclass5 do
+
+
+ local args = {
+     [1] = "purchase",
+     [2] = 5, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass5 = false
+    end
+end)
+
+class1:CreateToggle("Buy Class 6", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass6 = true 
+        while wait(0) and _G.bclass6 do
+
+
+ local args = {
+     [1] = "purchase",
+     [2] = 6, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass6 = false
+    end
+end)
+
+class1:CreateToggle("Buy Class 7", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass7 = true 
+        while wait(0) and _G.bclass7 do
+
+
+ local args = {
+     [1] = "purchase",
+     [2] = 7, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass7 = false
+    end
+end)
+
+class1:CreateToggle("Buy Class 8", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass8 = true 
+        while wait(0) and _G.bclass8 do
+
+
+ local args = {
+     [1] = "purchase",
+     [2] = 8, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass8 = false
+    end
+end)
+
+class1:CreateToggle("Buy Class 9", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass9 = true 
+        while wait(0) and _G.bclass9 do
+
+
+ local args = {
+     [1] = "purchase",
+     [2] = 9, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass9 = false
+    end
+end)
+
+class1:CreateToggle("Buy Class 10", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass10 = true 
+        while wait(0) and _G.bclass10 do
+
+
+ local args = {
+     [1] = "purchase",
+     [2] = 10, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass10 = false
+    end
+end)
+
+class1:CreateToggle("Buy Class 11", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass11 = true 
+        while wait(0) and _G.bclass11 do
+
+
+ local args = {
+     [1] = "purchase",
+     [2] = 11, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass11 = false
+    end
+end)
+
+class1:CreateToggle("Buy Class 12", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass12 = true 
+        while wait(0) and _G.bclass12 do
+
+
+ local args = {
+     [1] = "purchase",
+     [2] = 12, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass12 = false
+    end
+end)
+
+class1:CreateToggle("Buy Class 13", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass13 = true 
+        while wait(0) and _G.bclass13 do
+
+
+ local args = {
+     [1] = "purchase",
+     [2] = 13, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass13 = false
+    end
+end)
+
+class1:CreateToggle("Buy Class 14", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass14 = true 
+        while wait(0) and _G.bclass14 do
+
+
+ local args = {
+     [1] = "purchase",
+     [2] = 14, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass14 = false
+    end
+end)
+
+class1:CreateToggle("Buy Class 15", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass15 = true 
+        while wait(0) and _G.bclass15 do
+
+
+ local args = {
+     [1] = "purchase",
+     [2] = 15, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass15 = false
+    end
+end)
+
+class2:CreateToggle("Buy Class 16", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass16 = true 
+        while wait(0) and _G.bclass16 do
+
+ local args = {
+     [1] = "purchase",
+     [2] = 16, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass16 = false
+    end
+end)
+
+class2:CreateToggle("Buy Class 17", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass17 = true 
+        while wait(0) and _G.bclass17 do
+
+ local args = {
+     [1] = "purchase",
+     [2] = 17, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass17 = false
+    end
+end)
+
+class2:CreateToggle("Buy Class 18", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass18 = true 
+        while wait(0) and _G.bclass18 do
+
+ local args = {
+     [1] = "purchase",
+     [2] = 18, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass18 = false
+    end
+end)
+
+class2:CreateToggle("Buy Class 19", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass19 = true 
+        while wait(0) and _G.bclass19 do
+
+ local args = {
+     [1] = "purchase",
+     [2] = 19, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass19 = false
+    end
+end)
+
+class2:CreateToggle("Buy Class 20", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass20 = true 
+        while wait(0) and _G.bclass20 do
+
+ local args = {
+     [1] = "purchase",
+     [2] = 20, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass20 = false
+    end
+end)
+
+class2:CreateToggle("Buy Class 21", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass21 = true 
+        while wait(0) and _G.bclass21 do
+
+ local args = {
+     [1] = "purchase",
+     [2] = 21, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass21 = false
+    end
+end)
+
+class2:CreateToggle("Buy Class 22", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass22 = true 
+        while wait(0) and _G.bclass22 do
+
+ local args = {
+     [1] = "purchase",
+     [2] = 22, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass22 = false
+    end
+end)
+
+class2:CreateToggle("Buy Class 23", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass23 = true 
+        while wait(0) and _G.bclass23 do
+
+ local args = {
+     [1] = "purchase",
+     [2] = 23, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass23 = false
+    end
+end)
+
+class2:CreateToggle("Buy Class 24", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass24 = true 
+        while wait(0) and _G.bclass24 do
+
+ local args = {
+     [1] = "purchase",
+     [2] = 24, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass24 = false
+    end
+end)
+
+class2:CreateToggle("Buy Class 25", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass25 = true 
+        while wait(0) and _G.bclass25 do
+
+ local args = {
+     [1] = "purchase",
+     [2] = 25, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass25 = false
+    end
+end)
+
+class2:CreateToggle("Buy Class 26", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass26 = true 
+        while wait(0) and _G.bclass26 do
+
+ local args = {
+     [1] = "purchase",
+     [2] = 26, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass26 = false
+    end
+end)
+
+class2:CreateToggle("Buy Class 27", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass27 = true 
+        while wait(0) and _G.bclass27 do
+
+ local args = {
+     [1] = "purchase",
+     [2] = 27, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass27 = false
+    end
+end)
+
+class2:CreateToggle("Buy Class 28", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass28 = true 
+        while wait(0) and _G.bclass28 do
+
+ local args = {
+     [1] = "purchase",
+     [2] = 28, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass28 = false
+    end
+end)
+
+class2:CreateToggle("Buy Class 29", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass29 = true 
+        while wait(0) and _G.bclass29 do
+
+ local args = {
+     [1] = "purchase",
+     [2] = 29, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass29 = false
+    end
+end)
+
+class2:CreateToggle("Buy Class 30", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass30 = true 
+        while wait(0) and _G.bclass30 do
+
+ local args = {
+     [1] = "purchase",
+     [2] = 30, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass30 = false
+    end
+end)
+
+class2:CreateToggle("Buy Class 31", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bclass31 = true 
+        while wait(0) and _G.bclass31 do
+
+ local args = {
+     [1] = "purchase",
+     [2] = 31, 
+ }
+
+ game:GetService("ReplicatedStorage").Remotes.Events.Classes:FireServer(unpack(args))   wait(30)
+end
+
+    else
+        _G.bclass31 = false
+    end
+end)
+
 
 
 
@@ -962,7 +1520,7 @@ end)
 MISC:CreateButton("Unlock Rebirths Islands", function() --the (arg) is if the checkbox is toggled or not
         _G.f = true 
         while wait(0) and _G.f do
-game:GetService("Players").LocalPlayer.Others.Rebirths.Value = 99999999999
+game:GetService("Players").LocalPlayer.Others.Rebirths.Value = 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
     end
 end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
