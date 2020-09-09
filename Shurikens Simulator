@@ -242,7 +242,13 @@ teleports:CreateButton("Shurikens Reinforcement", function() --you dont need "ar
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-22.8163586, 4.54502439, -19.8480854)
 end)
 teleports:CreateButton("Last Islands", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3625.43457, 1388.9884, 383.514282)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3649.24414, 1416.73157, 417.894043)
+end)
+teleports:CreateButton("Just Tp to And Use", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(nothing)
+end)
+teleports:CreateButton("auto CLick Software", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(nothing)
 end)
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
