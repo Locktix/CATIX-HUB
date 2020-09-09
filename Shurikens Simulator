@@ -110,6 +110,24 @@ game:GetService("Players")["LocalPlayer"].PlayerGui.MainGui.AbilityShop.Interact
         _G.c= false
     end
 end)
+AutoTab:CreateToggle("Auto Sell X1", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.dd = true 
+        while wait(0) and _G.dd do
+local children = game.Workspace:GetChildren()
+    for _, child in pairs(children) do
+        for _, child in pairs(child:GetChildren()) do
+            table.insert(children, child)
+         end
+         if child:IsA("BasePart") and child.Name == "Sell" then
+            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        end
+    end
+        end
+    else
+        _G.dd= false
+    end
+end)
 eggs:CreateToggle("Eggs 1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.d = true 
