@@ -4,6 +4,7 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
 local AutoTab = Library:CreateTab("Champion-Simulator GUI","things", true)
+local eggs = Library:CreateTab("Eggs","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
@@ -94,7 +95,7 @@ end
     end
 end)
 
-AutoTab:CreateButton("Sell x10", function() --you dont need "arg" for a button
+teleports:CreateButton("Sell x10", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-22.9144306, 48.9636803, -5422.31543)
 end)
 
@@ -108,6 +109,25 @@ AutoTab:CreateToggle("Auto Buy Gloves", function(arg) --the (arg) is if the chec
 }
 
 game:GetService("ReplicatedStorage").Remotes.Events.Gloves:FireServer(unpack(args))	
+local args = {
+    [1] = "purchaseall",
+    [2] = 2,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Events.Gloves:FireServer(unpack(args))	
+local args = {
+    [1] = "purchaseall",
+    [2] = 3,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Events.Gloves:FireServer(unpack(args))	
+local args = {
+    [1] = "purchaseall",
+    [2] = 4,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Events.Gloves:FireServer(unpack(args))	
+
 end
 
     else
@@ -124,6 +144,28 @@ AutoTab:CreateToggle("Auto Buy DNA", function(arg) --the (arg) is if the checkbo
 }
 
 game:GetService("ReplicatedStorage").Remotes.Events.DNA:FireServer(unpack(args))
+
+local args = {
+    [1] = "purchaseall",
+    [2] = 2,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Events.DNA:FireServer(unpack(args))
+
+local args = {
+    [1] = "purchaseall",
+    [2] = 3,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Events.DNA:FireServer(unpack(args))
+
+local args = {
+    [1] = "purchaseall",
+    [2] = 4,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Events.DNA:FireServer(unpack(args))
+
 end
 
     else
@@ -273,10 +315,13 @@ end
         _G.ddd = false
     end
 end)
+
+
+
 MISC:CreateToggle("Bring Players", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.Kill = true 
-        while wait(0) and _G.Kill do
+        _G.g = true 
+        while wait(0) and _G.g do
 _G.Kill = true
 while _G.Kill do
 wait()
@@ -291,14 +336,489 @@ end
 end
 
     else
-        _G.Kill = false
+        _G.g = false
+    end
+end)
+eggs:CreateToggle("1", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l0 = true 
+        while wait(0) and _G.l0 do
+
+local args = {
+    [1] = "single",
+    [2] = 1,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Functions.EggHatch:InvokeServer(unpack(args))
+
+
+
+        end
+    else
+        _G.l0 = false
+    end
+end)
+eggs:CreateToggle("2", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l0 = true 
+        while wait(0) and _G.l0 do
+
+local args = {
+    [1] = "single",
+    [2] = 2,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Functions.EggHatch:InvokeServer(unpack(args))
+
+
+
+        end
+    else
+        _G.l0 = false
+    end
+end)
+eggs:CreateToggle("3", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l0 = true 
+        while wait(0) and _G.l0 do
+
+local args = {
+    [1] = "single",
+    [2] = 3,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Functions.EggHatch:InvokeServer(unpack(args))
+
+
+
+        end
+    else
+        _G.l0 = false
+    end
+end)
+eggs:CreateToggle("4", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l0 = true 
+        while wait(0) and _G.l0 do
+
+local args = {
+    [1] = "single",
+    [2] = 4,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Functions.EggHatch:InvokeServer(unpack(args))
+
+
+
+        end
+    else
+        _G.l0 = false
+    end
+end)
+eggs:CreateToggle("5", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l0 = true 
+        while wait(0) and _G.l0 do
+
+local args = {
+    [1] = "single",
+    [2] = 5,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Functions.EggHatch:InvokeServer(unpack(args))
+
+
+
+        end
+    else
+        _G.l0 = false
+    end
+end)
+eggs:CreateToggle("6", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l0 = true 
+        while wait(0) and _G.l0 do
+
+local args = {
+    [1] = "single",
+    [2] = 6,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Functions.EggHatch:InvokeServer(unpack(args))
+
+
+
+        end
+    else
+        _G.l0 = false
+    end
+end)
+eggs:CreateToggle("7", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l0 = true 
+        while wait(0) and _G.l0 do
+
+local args = {
+    [1] = "single",
+    [2] = 7,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Functions.EggHatch:InvokeServer(unpack(args))
+
+
+
+        end
+    else
+        _G.l0 = false
+    end
+end)
+eggs:CreateToggle("8", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l0 = true 
+        while wait(0) and _G.l0 do
+
+local args = {
+    [1] = "single",
+    [2] = 8,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Functions.EggHatch:InvokeServer(unpack(args))
+
+
+
+        end
+    else
+        _G.l0 = false
+    end
+end)
+eggs:CreateToggle("9", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l0 = true 
+        while wait(0) and _G.l0 do
+
+local args = {
+    [1] = "single",
+    [2] = 9,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Functions.EggHatch:InvokeServer(unpack(args))
+
+
+
+        end
+    else
+        _G.l0 = false
+    end
+end)
+
+eggs:CreateToggle("10", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l0 = true 
+        while wait(0) and _G.l0 do
+
+local args = {
+    [1] = "single",
+    [2] = 10,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Functions.EggHatch:InvokeServer(unpack(args))
+
+
+
+        end
+    else
+        _G.l0 = false
+    end
+end)
+eggs:CreateToggle("11", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l0 = true 
+        while wait(0) and _G.l0 do
+
+local args = {
+    [1] = "single",
+    [2] = 11,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Functions.EggHatch:InvokeServer(unpack(args))
+
+
+
+        end
+    else
+        _G.l0 = false
+    end
+end)
+eggs:CreateToggle("12", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l0 = true 
+        while wait(0) and _G.l0 do
+
+local args = {
+    [1] = "single",
+    [2] = 12,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Functions.EggHatch:InvokeServer(unpack(args))
+
+
+
+        end
+    else
+        _G.l0 = false
+    end
+end)
+eggs:CreateToggle("13", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l0 = true 
+        while wait(0) and _G.l0 do
+
+local args = {
+    [1] = "single",
+    [2] = 13,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Functions.EggHatch:InvokeServer(unpack(args))
+
+
+
+        end
+    else
+        _G.l0 = false
+    end
+end)
+eggs:CreateToggle("14", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l0 = true 
+        while wait(0) and _G.l0 do
+
+local args = {
+    [1] = "single",
+    [2] = 14,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Functions.EggHatch:InvokeServer(unpack(args))
+
+
+
+        end
+    else
+        _G.l0 = false
+    end
+end)
+eggs:CreateToggle("15", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l0 = true 
+        while wait(0) and _G.l0 do
+
+local args = {
+    [1] = "single",
+    [2] = 15,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Functions.EggHatch:InvokeServer(unpack(args))
+
+
+
+        end
+    else
+        _G.l0 = false
+    end
+end)
+eggs:CreateToggle("16", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l0 = true 
+        while wait(0) and _G.l0 do
+
+local args = {
+    [1] = "single",
+    [2] = 16,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Functions.EggHatch:InvokeServer(unpack(args))
+
+
+
+        end
+    else
+        _G.l0 = false
+    end
+end)
+eggs:CreateToggle("17", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l0 = true 
+        while wait(0) and _G.l0 do
+
+local args = {
+    [1] = "single",
+    [2] = 17,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Functions.EggHatch:InvokeServer(unpack(args))
+
+
+
+        end
+    else
+        _G.l0 = false
+    end
+end)
+eggs:CreateToggle("18", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l0 = true 
+        while wait(0) and _G.l0 do
+
+local args = {
+    [1] = "single",
+    [2] = 18,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Functions.EggHatch:InvokeServer(unpack(args))
+
+
+
+        end
+    else
+        _G.l0 = false
+    end
+end)
+eggs:CreateToggle("19", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l0 = true 
+        while wait(0) and _G.l0 do
+
+local args = {
+    [1] = "single",
+    [2] = 19,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Functions.EggHatch:InvokeServer(unpack(args))
+
+
+
+        end
+    else
+        _G.l0 = false
+    end
+end)
+eggs:CreateToggle("20", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l0 = true 
+        while wait(0) and _G.l0 do
+
+local args = {
+    [1] = "single",
+    [2] = 20,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Functions.EggHatch:InvokeServer(unpack(args))
+
+
+
+        end
+    else
+        _G.l0 = false
+    end
+end)
+eggs:CreateToggle("21", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l0 = true 
+        while wait(0) and _G.l0 do
+
+local args = {
+    [1] = "single",
+    [2] = 21,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Functions.EggHatch:InvokeServer(unpack(args))
+
+
+
+        end
+    else
+        _G.l0 = false
+    end
+end)
+eggs:CreateToggle("22", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l0 = true 
+        while wait(0) and _G.l0 do
+
+local args = {
+    [1] = "single",
+    [2] = 22,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Functions.EggHatch:InvokeServer(unpack(args))
+
+
+
+        end
+    else
+        _G.l0 = false
+    end
+end)
+eggs:CreateToggle("23", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l0 = true 
+        while wait(0) and _G.l0 do
+
+local args = {
+    [1] = "single",
+    [2] = 23,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Functions.EggHatch:InvokeServer(unpack(args))
+
+
+
+        end
+    else
+        _G.l0 = false
+    end
+end)
+eggs:CreateToggle("24", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l0 = true 
+        while wait(0) and _G.l0 do
+
+local args = {
+    [1] = "single",
+    [2] = 24,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Functions.EggHatch:InvokeServer(unpack(args))
+
+
+
+        end
+    else
+        _G.l0 = false
+    end
+end)
+eggs:CreateToggle("25", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l0 = true 
+        while wait(0) and _G.l0 do
+
+local args = {
+    [1] = "single",
+    [2] = 25,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Functions.EggHatch:InvokeServer(unpack(args))
+
+
+
+        end
+    else
+        _G.l0 = false
     end
 end)
 AutoTab:CreateToggle("Auto Hoops", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.gd = true 
         while wait(0) and _G.gd do
-
 
 
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(271.664856, 137.174957, 209.503082))
