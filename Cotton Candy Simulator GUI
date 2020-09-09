@@ -333,7 +333,7 @@ AutoTab:CreateToggle("Auto Collect Coins", function(arg) --the (arg) is if the c
 local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
 
 for i, v in next, Workspace:GetDescendants() do
-   if v.Name == 'coroutine' then
+   if v.Name == 'Coin' then
      v.CFrame = root.CFrame
        wait()
    
