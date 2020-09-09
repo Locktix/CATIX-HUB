@@ -10,7 +10,7 @@ local eggs2 = Library:CreateTab("Auto Buy Eggs 2","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
---odd
+
 credits:CreateButton("Our Discords", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
@@ -235,12 +235,12 @@ game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
         _G.p23= false
     end
 end)
-AutoTab:CreateToggle("Auto SellX60", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateToggle("Auto SellX70", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.se = true 
         while wait(0) and _G.se do
 local string_1 = "SellPower";
-local userdata_1 = game:GetService("Workspace").Ignore.Rings["24Sell"].Collider;
+local userdata_1 = game:GetService("Workspace").Ignore.Rings["25Sell"].Collider;
 local Target = game:GetService("ReplicatedStorage").RF;
 Target:InvokeServer(string_1, userdata_1);
 
@@ -302,12 +302,7 @@ end)
 AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:Destroy()
 end)
-HIT:CreateButton("Go To Spawn Boss", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(nothing)
-end)
-HIT:CreateButton("To Work", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(nothing)
-end)
+
 HIT:CreateToggle("Auto Hit Evil Fox", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.g = true 
@@ -325,23 +320,7 @@ game:GetService("ReplicatedStorage").RE:FireServer(unpack(args))
         _G.g = false
     end
 end)
-HIT:CreateToggle("Auto Hit Lava Golem", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.h = true 
-        while wait(0) and _G.h do
 
-local args = {
-    [1] = "HitBoss",
-    [2] = workspace.Boss["Lava Golem"],
-}
-
-game:GetService("ReplicatedStorage").RE:FireServer(unpack(args))
-
-        end
-    else
-        _G.h = false
-    end
-end)
 HIT:CreateToggle("Auto Hit Rhino King", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.h8 = true 
@@ -359,11 +338,64 @@ game:GetService("ReplicatedStorage").RE:FireServer(unpack(args))
         _G.h8 = false
     end
 end)
+HIT:CreateToggle("Auto Hit Leprechaun", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.h8 = true 
+        while wait(0) and _G.h8 do
+
+local args = {
+    [1] = "HitBoss",
+    [2] = workspace.Boss["Leprechaun"],
+}
+
+game:GetService("ReplicatedStorage").RE:FireServer(unpack(args))
+
+        end
+    else
+        _G.h8 = false
+    end
+end)
+HIT:CreateToggle("Auto Hit Evil Bunny", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.h8 = true 
+        while wait(0) and _G.h8 do
+
+local args = {
+    [1] = "HitBoss",
+    [2] = workspace.Boss["Evil Bunny"],
+}
+
+game:GetService("ReplicatedStorage").RE:FireServer(unpack(args))
+
+        end
+    else
+        _G.h8 = false
+    end
+end)
+
+HIT:CreateToggle("Auto Hit Lava Golem", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.h = true 
+        while wait(0) and _G.h do
+
+local args = {
+    [1] = "HitBoss",
+    [2] = workspace.Boss["Lava Golem"],
+}
+
+game:GetService("ReplicatedStorage").RE:FireServer(unpack(args))
+
+        end
+    else
+        _G.h = false
+    end
+end)
+
 HIT:CreateButton("Tp To Boss Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(220.213577, -45.8314438, -772.90802)
 end)
-HIT:CreateButton("Tp To Zone 23 Boss", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(199.992081, 63743.5156, -740.05072)
+HIT:CreateButton("Tp To Boss 2", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(198.263016, 66021.4141, -736.933411)
 end)
 eggs:CreateToggle("Auto Buy Dirt Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
@@ -748,7 +780,7 @@ eggs2:CreateToggle("Auto Buy ToxicPotion Eggs", function(arg) --the (arg) is if 
 
 local args = {
     [1] = "BuyEgg",
-    [2] = "ToxicPotionEgg",
+    [2] = "ToxicPotion",
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
@@ -855,8 +887,49 @@ game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
         _G.zi = false
     end
 end)
+eggs2:CreateToggle("Auto Buy Money Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.ziy = true 
+        while wait(0) and _G.ziy do
+
+local args = {
+    [1] = "BuyEgg",
+    [2] = "MoneyBag",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
 
 
+
+        end
+    else
+        _G.ziy = false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Money Egg2", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zio = true 
+        while wait(0) and _G.zio do
+
+local args = {
+    [1] = "BuyEgg",
+    [2] = "MoneyBag2",
+}
+
+game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
+
+
+
+        end
+    else
+        _G.zio = false
+    end
+end)
+
+
+teleports:CreateButton("Zone 24", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(270.572357, 65973.3672, -470.686066)
+end)
 teleports:CreateButton("Zone 23", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(169.715515, 63692.0273, -443.743317)
 end)
