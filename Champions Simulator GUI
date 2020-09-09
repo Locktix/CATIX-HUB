@@ -93,6 +93,11 @@ end
         _G.a = false
     end
 end)
+
+AutoTab:CreateButton("Sell x10", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-22.9144306, 48.9636803, -5422.31543)
+end)
+
 AutoTab:CreateToggle("Auto Buy Gloves", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.b = true 
@@ -428,29 +433,16 @@ end
         _G.lol = false
     end
 end)
-MISC:CreateToggle("Inf Double Jump", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
+MISC:CreateButton("Inf Double Jump", function() --you dont need "arg" for a button
         _G.e = true 
         while wait(0) and _G.e do
  game.Players.LocalPlayer.Others.DoubleJumps.Value = 9999999999999
-
 end
-
-    else
-        _G.e = false
-    end
 end)
-MISC:CreateToggle("Unlock Rebirths Islands", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
+MISC:CreateToggle("Unlock Rebirths Islands", function() --the (arg) is if the checkbox is toggled or not
         _G.f = true 
         while wait(0) and _G.f do
-game:GetService("Players").LocalPlayer.Others.Rebirths.Value = 10
-
-
-end
-
-    else
-        _G.f = false
+game:GetService("Players").LocalPlayer.Others.Rebirths.Value = 99999999999
     end
 end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
@@ -470,6 +462,18 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(94.38800
 end)
 teleports:CreateButton("Zone 5", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(116.226425, 5811.93896, 112.466423)
+end)
+teleports:CreateButton("Zone 6", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(109.099342, 8541.31934, 107.222359)
+end)
+teleports:CreateButton("Zone 7", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(110.836037, 13323.1016, 131.407364)
+end)
+teleports:CreateButton("Zone 8", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(97.5960236, 20372.7871, 120.699013)
+end)
+teleports:CreateButton("Eternal Zone", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-93.8420258, 52.5833778, -5336.04932)
 end)
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
