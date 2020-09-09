@@ -241,7 +241,7 @@ end)
 teleports:CreateButton("Shurikens Reinforcement", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-22.8163586, 4.54502439, -19.8480854)
 end)
-teleports:CreateButton("", function() --you dont need "arg" for a button
+teleports:CreateButton("Last Islands", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3625.43457, 1388.9884, 383.514282)
 end)
 --| Anti AFK | By Altix#3395
