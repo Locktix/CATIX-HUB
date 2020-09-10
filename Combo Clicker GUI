@@ -174,7 +174,7 @@ rebirths3:CreateToggle("Rebirth X1N", function(arg) --the (arg) is if the checkb
         while wait(0) and _G.afe do
             local args = {
                 [1] = {
-                    ["Option"] = 100000000000000000000000000000,
+                    ["Option"] = 1000000000000000000000000000000,
                     ["RequestType"] = "RequestRebirth",
                 },
             }
@@ -190,8 +190,8 @@ rebirths3:CreateToggle("Rebirth X100O", function(arg) --the (arg) is if the chec
         _G.ae = true 
         while wait(0) and _G.ae do
             local args = {
-                [1] = {
-                    ["Option"] = 10000000000000000000000000000,
+                [1] = {          
+                    ["Option"] = 100000000000000000000000000000,
                     ["RequestType"] = "RequestRebirth",
                 },
             }
@@ -207,8 +207,8 @@ rebirths3:CreateToggle("Rebirth X10O", function(arg) --the (arg) is if the check
         _G.ad = true 
         while wait(0) and _G.ad do
             local args = {
-                [1] = {
-                    ["Option"] = 1000000000000000000000000000,
+                [1] = {          
+                    ["Option"] = 10000000000000000000000000000,
                     ["RequestType"] = "RequestRebirth",
                 },
             }
@@ -224,8 +224,8 @@ rebirths3:CreateToggle("Rebirth X1O", function(arg) --the (arg) is if the checkb
         _G.ac = true 
         while wait(0) and _G.ac do
             local args = {
-                [1] = {
-                    ["Option"] = 100000000000000000000000000,
+                [1] = {         
+                    ["Option"] = 1000000000000000000000000000,
                     ["RequestType"] = "RequestRebirth",
                 },
             }
@@ -241,8 +241,8 @@ rebirths3:CreateToggle("Rebirth X100Se", function(arg) --the (arg) is if the che
         _G.ab = true 
         while wait(0) and _G.ab do
             local args = {
-                [1] = {
-                    ["Option"] = 10000000000000000000000000,
+                [1] = = {       
+                    ["Option"] = 100000000000000000000000000,
                     ["RequestType"] = "RequestRebirth",
                 },
             }
@@ -258,8 +258,8 @@ rebirths3:CreateToggle("Rebirth X10Se", function(arg) --the (arg) is if the chec
         _G.a = true 
         while wait(0) and _G.a do
             local args = {
-                [1] = {
-                    ["Option"] = 1000000000000000000000000,
+                [1] = {          
+                    ["Option"] = 10000000000000000000000000,
                     ["RequestType"] = "RequestRebirth",
                 },
             }
@@ -294,7 +294,7 @@ rebirths3:CreateToggle("Rebirth X100S", function(arg) --the (arg) is if the chec
         _G.a = true 
         while wait(0) and _G.a do
             local args = {
-                [1] = {
+                [1] = {          
                     ["Option"] = 100000000000000000000000,
                     ["RequestType"] = "RequestRebirth",
                 },
@@ -2646,11 +2646,14 @@ AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a bu
 game:GetService("CoreGui").uiui:Destroy()
 end)
 
---| Anti AFK | By Altix#3395
-    local Virtual = game:service'VirtualUser'
-    game:service'Players'.LocalPlayer.Idled:connect(function()
-        Virtual:CaptureController()
-        Virtual:ClickButton2(Vector2.new())
-        wait(2)
-    end)
+   local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
 
+setfflag("DFStringCrashPadUploadToBacktraceToBacktraceBaseUrl", "")
+setfflag("DFIntCrashUploadToBacktracePercentage", "0")
+setfflag("DFStringCrashUploadToBacktraceBlackholeToken", "")
+setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
