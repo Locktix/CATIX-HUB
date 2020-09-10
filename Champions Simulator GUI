@@ -96,7 +96,25 @@ end
         _G.a = false
     end
 end)
-
+AutoTab:CreateToggle("Auto Equip Gloves", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bcc = true 
+        while wait(0) and _G.bcc do
+         local toolname = "Punch" -- replace with the name of the tool
+local Plr = game:GetService("Players").LocalPlayer
+while wait() do
+    pcall(function()
+        if Plr.Backpack:FindFirstChild(toolname) and Plr.Character:FindFirstChild(toolname) == nil then
+            local tool = Plr.Backpack:FindFirstChild(toolname)
+            Plr.Character.Humanoid:EquipTool(tool)
+        end
+    end)
+end	
+        end
+    else
+        _G.bcc = false
+    end
+end)
 teleports:CreateButton("Sell x10", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-22.9144306, 48.9636803, -5422.31543)
 end)
@@ -1344,6 +1362,26 @@ end
     else
         _G.lol = false
     end
+end)
+MISC:CreateToggle("Tp To Pirate Boss", function() --you dont need "arg" for a button
+        _G.e222 = true 
+        while wait(0) and _G.e22 do
+local me = game.Players.LocalPlayer.Character
+local pboss = game:GetService("Workspace")["Pirate Boss"].LeftLowerLeg
+
+me.HumanoidRootPart.CFrame = CFrame.new(pboss.Position.X, pboss.Position.Y, pboss.Position.Z)
+   
+end
+end)
+MISC:CreateToggle("Tp To Champion Boss", function() --you dont need "arg" for a button
+        _G.e22 = true 
+        while wait(0) and _G.e22 do
+ local me = game.Players.LocalPlayer.Character
+local pboss = game:GetService("Workspace")["Basic Boss"].LeftLowerLeg
+
+me.HumanoidRootPart.CFrame = CFrame.new(pboss.Position.X, pboss.Position.Y, pboss.Position.Z)
+
+end
 end)
 MISC:CreateButton("Inf Double Jump", function() --you dont need "arg" for a button
         _G.e = true 
