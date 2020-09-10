@@ -242,6 +242,21 @@ game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(
         _G.f= false
     end
 end)
+eggs:CreateToggle("Auto Buy 100 Gems Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f5 = true 
+        while wait(0) and _G.f5 do
+local args = {
+    [1] = "Good",
+    [2] = "Triple",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
+        end
+    else
+        _G.f5= false
+    end
+end)
 eggs:CreateToggle("Auto Buy 3B Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.f2 = true 
@@ -285,6 +300,21 @@ game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(
         end
     else
         _G.f4= false
+    end
+end)
+eggs:CreateToggle("Auto Buy 30Sx Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f6 = true 
+        while wait(0) and _G.f6 do
+local args = {
+    [1] = "Future",
+    [2] = "Triple",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
+        end
+    else
+        _G.f6= false
     end
 end)
 eggs1:CreateToggle("Auto Buy Rebirths x1", function(arg) --the (arg) is if the checkbox is toggled or not
@@ -763,10 +793,9 @@ game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
         _G.zn= false
     end
 end)
-teleports:CreateButton("Sppawn", function() --you dont need "arg" for a button
+teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-716.227356, 11.0765419, -955.934143)
 end)
-
 teleports:CreateButton("Zone 1", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-785.043884, 10.826539, -522.039063)
 end)
@@ -777,7 +806,9 @@ end)
 teleports:CreateButton("Zone 3", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-838.72229, 8.08687782, 205.466354)
 end)
-
+teleports:CreateButton("Zone 4", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-398.13443, 7.92594671, 207.533737)
+end)
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
     game:service'Players'.LocalPlayer.Idled:connect(function()
