@@ -1,0 +1,363 @@
+--https://www.roblox.com/games/5516928515/RELEASE-Mining-Champions#!/game-instances
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
+
+local AutoTab = Library:CreateTab("Mining-Champions GUI","things", true)
+local teleports = Library:CreateTab("Teleports","things", true)
+local eggs = Library:CreateTab("Auto Buy Eggs X3","things", true)
+local MISC = Library:CreateTab("MISC","things", true)
+local credits = Library:CreateTab("Credits","things", true)
+
+
+credits:CreateButton("Our Discords", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("masterkyllian#1723", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("bsoleil31FR#7202", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("https://discord.gg/m9Nn3qd", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("Bebo Mods#1110", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+
+AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:Destroy()
+end)
+
+
+MISC:CreateToggle("NO CLIP Press(E)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.NO = true 
+  noclip = false
+game:GetService('RunService').Stepped:connect(function()
+if noclip then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+plr = game.Players.LocalPlayer
+mouse = plr:GetMouse()
+mouse.KeyDown:connect(function(key)
+
+if key == "e" then
+noclip = not noclip
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+print('Created by FileExplorer')
+print('Credits to Peyton for the ChangeState part of this script')
+
+         
+else
+_G.NO = false
+end
+end)
+
+MISC:CreateToggle("Speed Hack 100", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.Speed = true 
+        while wait() and _G.Speed do
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+        end
+    else
+        _G.Speed = false
+           game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
+         end
+end)
+
+AutoTab:CreateToggle("Mine Center Ore Spawn", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b = true 
+        while wait(0) and _G.b do
+
+local args = {
+    [1] = workspace.Resources.Ores["World_1"]["Center_Ores"]["Ore_1"],
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestSwing:InvokeServer(unpack(args))
+        end
+    else
+        _G.b= false
+    end
+end)
+AutoTab:CreateToggle("Mine Center Ore zone 1 ", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b2 = true 
+        while wait(0) and _G.b2 do
+
+local args = {
+    [1] = workspace.Resources.Ores["World_1"]["Center_Ores"]["Ore_2"],
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestSwing:InvokeServer(unpack(args))
+        end
+    else
+        _G.b2= false
+    end
+end)
+AutoTab:CreateToggle("Mine Center Ore zone 2 ", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b3 = true 
+        while wait(0) and _G.b3 do
+
+local args = {
+    [1] = workspace.Resources.Ores["World_1"]["Center_Ores"]["Ore_3"],
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestSwing:InvokeServer(unpack(args))
+        end
+    else
+        _G.b3= false
+    end
+end)
+AutoTab:CreateToggle("Mine Center Ore zone 3 ", function(arg) --the (arg) is if the checkbox is toggled or not 
+    if arg then
+        _G.b5 = true 
+        while wait(0) and _G.b5 do
+
+local args = {
+    [1] = workspace.Resources.Ores["World_1"]["Center_Ores"]["Ore_4"],
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestSwing:InvokeServer(unpack(args))
+        end
+    else
+        _G.b5= false
+    end
+end)
+AutoTab:CreateToggle("Mine Gems Ore Spawn ", function(arg) --the (arg) is if the checkbox is toggled or not 
+    if arg then
+        _G.b6 = true 
+        while wait(0) and _G.b6 do
+
+local args = {
+    [1] = workspace.Resources.Ores["World_1"]["Island_1"]["Gem_1"],
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestSwing:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.b6= false
+    end
+end)
+AutoTab:CreateToggle("Mine Gems Ore zone 1 ", function(arg) --the (arg) is if the checkbox is toggled or not 
+    if arg then
+        _G.b7 = true 
+        while wait(0) and _G.b7 do
+
+
+local args = {
+    [1] = workspace.Resources.Ores["World_1"]["Island_2"]["Gem_2"],
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestSwing:InvokeServer(unpack(args))
+        end
+    else
+        _G.b7= false
+    end
+end)
+AutoTab:CreateToggle("Mine Gems Ore zone 2 ", function(arg) --the (arg) is if the checkbox is toggled or not 
+    if arg then
+        _G.b8 = true 
+        while wait(0) and _G.b8 do
+
+local args = {
+    [1] = workspace.Resources.Ores["World_1"]["Island_3"]["Gem_3"],
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestSwing:InvokeServer(unpack(args))
+        end
+    else
+        _G.b8= false
+    end
+end)
+AutoTab:CreateToggle("Mine Gems Ore zone 3 ", function(arg) --the (arg) is if the checkbox is toggled or not 
+    if arg then
+        _G.b9 = true 
+        while wait(0) and _G.b9 do
+
+local args = {
+    [1] = workspace.Resources.Ores["World_1"]["Island_4"]["Gem_4"],
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestSwing:InvokeServer(unpack(args))
+        end
+    else
+        _G.b9= false
+    end
+end)
+AutoTab:CreateToggle("Auto Sell", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.c = true 
+        while wait() and _G.c do
+game:GetService("ReplicatedStorage").Events.Server.RequestSell:InvokeServer()
+           end
+  else
+    
+        _G.c = false
+    end
+end)
+AutoTab:CreateToggle("Auto Multi Delete All", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.cd = true 
+        while wait(0.5) and _G.cd do
+game:GetService("ReplicatedStorage").Events.Server.RequestMultiDeleteAll:InvokeServer()
+           end
+  else
+    
+        _G.cd = false
+    end
+end)
+AutoTab:CreateToggle("Auto Equip Best Coins", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.d = true 
+        while wait() and _G.d do
+game:GetService("ReplicatedStorage").Events.Server.BestCoin:InvokeServer()
+           end
+  else
+    
+        _G.d = false
+    end
+end)
+AutoTab:CreateToggle("Auto Equip Best Gems", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.e = true 
+        while wait() and _G.e do
+game:GetService("ReplicatedStorage").Events.Server.BestGem:InvokeServer()
+           end
+  else
+    
+        _G.e = false
+    end
+end)
+AutoTab:CreateToggle("Auto Equip Best Ore", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.f = true 
+        while wait() and _G.f do
+game:GetService("ReplicatedStorage").Events.Server.BestOre:InvokeServer()
+           end
+  else
+    
+        _G.f = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Starter Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.za = true 
+        while wait() and _G.za do
+local args = {
+    [1] = "1",
+    [2] = 3,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.za = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Gold Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.zb = true 
+        while wait() and _G.zb do
+local args = {
+    [1] = "2",
+    [2] = 3,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.zb = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Grass Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.zc = true 
+        while wait() and _G.zc do
+local args = {
+    [1] = "3",
+    [2] = 3,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.zc = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Desert Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.zd = true 
+        while wait() and _G.zd do
+local args = {
+    [1] = "4",
+    [2] = 3,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.zd = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Jungle Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.ze = true 
+        while wait() and _G.ze do
+local args = {
+    [1] = "5",
+    [2] = 3,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.ze = false
+    end
+end)
+teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-693.377869, 28.2390366, 371.22583)
+end)
+teleports:CreateButton("Zone 1", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-729.277832, 42.5908661, -351.347076)
+end)
+teleports:CreateButton("Zone 2", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(82.3862762, 82.8040085, -399.409637)
+end)
+teleports:CreateButton("Zone 3", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(749.316284, 15.2230415, -347.603119)
+end)
+--| Anti AFK | By Altix#3395
+    local Virtual = game:service'VirtualUser'
+    game:service'Players'.LocalPlayer.Idled:connect(function()
+        Virtual:CaptureController()
+        Virtual:ClickButton2(Vector2.new())
+        wait(2)
+    end)
+    
+    local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
