@@ -339,7 +339,7 @@ teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-693.377869, 28.2390366, 371.22583)
 end)
 teleports:CreateButton("Sell", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-646.462952, 28.4387436, 362.564117)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-646.548035, 35.514267, 362.693115)
 end)
 teleports:CreateButton("Zone 1", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-729.277832, 42.5908661, -351.347076)
