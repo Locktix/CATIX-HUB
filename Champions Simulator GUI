@@ -8,6 +8,7 @@ local eggs = Library:CreateTab("Eggs","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
 local class1 = Library:CreateTab("Classes 1-15","things", true)
 local class2 = Library:CreateTab("Classes 16-31","things", true)
+local boss = Library:CreateTab("HIT BOSS","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
@@ -80,6 +81,56 @@ _G.Speed = true
            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
          end
 end)
+AutoTab:CreateToggle("Auto Equip Gloves", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bcc = true 
+        while wait(0) and _G.bcc do
+local toolname = "Punch" -- replace with the name of the tool
+local Plr = game:GetService("Players").LocalPlayer
+while wait() do
+    pcall(function()
+        if game:GetService("StarterPack"):FindFirstChild(toolname) and Plr.Character:FindFirstChild(toolname) == nil then
+            local tool = Plr.Backpack:FindFirstChild(toolname)
+            Plr.Character.Humanoid:EquipTool(tool)
+        end
+    end)
+end	
+        end
+    else
+        _G.bcc = false
+    end
+end)
+
+boss:CreateToggle("Champion Boss", function(arg)
+if arg then
+_G.bossc = true
+ while wait() and _G.bossc do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace")["Basic Boss"].LeftLowerLeg
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X, pbosd.Position.Y, pbosd.Position.Z)
+end
+else
+_G.bossc = false
+end
+end)
+
+
+boss:CreateToggle("Pirate Boss", function(arg)
+if arg then
+_G.bossp = true
+ while wait() and _G.bossp do
+ 
+local me = game.Players.LocalPlayer.Character
+local pboss = game:GetService("Workspace")["Pirate Boss"].LeftLowerLeg
+
+me.HumanoidRootPart.CFrame = CFrame.new(pboss.Position.X, pboss.Position.Y, pboss.Position.Z)
+end
+else
+_G.bossp = false
+end
+end)
 
 
 
@@ -96,25 +147,7 @@ end
         _G.a = false
     end
 end)
-AutoTab:CreateToggle("Auto Equip Gloves", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.bcc = true 
-        while wait(0) and _G.bcc do
-         local toolname = "Punch" -- replace with the name of the tool
-local Plr = game:GetService("Players").LocalPlayer
-while wait() do
-    pcall(function()
-        if Plr.Backpack:FindFirstChild(toolname) and Plr.Character:FindFirstChild(toolname) == nil then
-            local tool = Plr.Backpack:FindFirstChild(toolname)
-            Plr.Character.Humanoid:EquipTool(tool)
-        end
-    end)
-end	
-        end
-    else
-        _G.bcc = false
-    end
-end)
+
 teleports:CreateButton("Sell x10", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-22.9144306, 48.9636803, -5422.31543)
 end)
@@ -1363,26 +1396,6 @@ end
         _G.lol = false
     end
 end)
-MISC:CreateToggle("Tp To Pirate Boss", function() --you dont need "arg" for a button
-        _G.e222 = true 
-        while wait(0) and _G.e22 do
-local me = game.Players.LocalPlayer.Character
-local pboss = game:GetService("Workspace")["Pirate Boss"].LeftLowerLeg
-
-me.HumanoidRootPart.CFrame = CFrame.new(pboss.Position.X, pboss.Position.Y, pboss.Position.Z)
-   
-end
-end)
-MISC:CreateToggle("Tp To Champion Boss", function() --you dont need "arg" for a button
-        _G.e22 = true 
-        while wait(0) and _G.e22 do
- local me = game.Players.LocalPlayer.Character
-local pboss = game:GetService("Workspace")["Basic Boss"].LeftLowerLeg
-
-me.HumanoidRootPart.CFrame = CFrame.new(pboss.Position.X, pboss.Position.Y, pboss.Position.Z)
-
-end
-end)
 MISC:CreateButton("Inf Double Jump", function() --you dont need "arg" for a button
         _G.e = true 
         while wait(0) and _G.e do
@@ -1425,7 +1438,17 @@ end)
 teleports:CreateButton("Eternal Zone", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-93.8420258, 52.5833778, -5336.04932)
 end)
+---- auto equip gloves -----
+_G.equip = true
+
+while wait() and _G.equip do
+
+local tool = game:GetService("StarterPack").Punch
+Character.Humanoid:EquipTool(tool)
+
+end
 --| Anti AFK | By Altix#3395
+
     local Virtual = game:service'VirtualUser'
     game:service'Players'.LocalPlayer.Idled:connect(function()
         Virtual:CaptureController()
