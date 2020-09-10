@@ -315,6 +315,7 @@ local args = {
 
 game:GetService("ReplicatedStorage").RE:FireServer(unpack(args))
 
+
         end
     else
         _G.g = false
@@ -333,6 +334,7 @@ local args = {
 
 game:GetService("ReplicatedStorage").RE:FireServer(unpack(args))
 
+
         end
     else
         _G.h8 = false
@@ -342,7 +344,6 @@ HIT:CreateToggle("Auto Hit Leprechaun", function(arg) --the (arg) is if the chec
     if arg then
         _G.h8 = true 
         while wait(0) and _G.h8 do
-
 local args = {
     [1] = "HitBoss",
     [2] = workspace.Boss["Leprechaun"],
@@ -1003,13 +1004,6 @@ teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(152.85643, -96.194046, -635.704041)
 end)
 
-    local vu = game:GetService("VirtualUser")
-game:GetService("Players").LocalPlayer.Idled:connect(function()
-   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-   wait(1)
-   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-end)
-
 local ot = mt.__namecall
 mt.__namecall = function(self, ...)
    local args = {...}
@@ -1020,3 +1014,15 @@ mt.__namecall = function(self, ...)
    end
    return ot(self, ...)
 end
+
+   local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+
+setfflag("DFStringCrashPadUploadToBacktraceToBacktraceBaseUrl", "")
+setfflag("DFIntCrashUploadToBacktracePercentage", "0")
+setfflag("DFStringCrashUploadToBacktraceBlackholeToken", "")
+setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
