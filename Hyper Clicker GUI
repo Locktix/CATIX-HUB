@@ -104,34 +104,7 @@ game:GetService("ReplicatedStorage").Remotes.HyperClick:FireServer()
         _G.c= false
     end
 end)
-AutoTab:CreateToggle("Auto Equip Best", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.c2 = true 
-        while wait(0) and _G.c2 do
-local args = {
-    [1] = "EquipBest",
-}
 
-game:GetService("ReplicatedStorage").RemoteEvents.PetActionRequest:InvokeServer(unpack(args))
-        end
-    else
-        _G.c2= false
-    end
-end)
-AutoTab:CreateToggle("Auto Craft All", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.c3 = true 
-        while wait(0) and _G.c3 do
-local args = {
-    [1] = "CraftAll",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.PetActionRequest:InvokeServer(unpack(args))
-        end
-    else
-        _G.c3= false
-    end
-end)
 AutoTab:CreateToggle("Auto Buy Upgrades", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.d = true 
