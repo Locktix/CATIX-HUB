@@ -358,22 +358,22 @@ game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
         _G.l= false
     end
 end)
-eggs:CreateToggle("Auto Buy FrozenEggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Auto Buy CrystalEggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.l = true 
-        while wait(0) and _G.l do
+        _G.m = true 
+        while wait(0) and _G.m do
    
 
 
 local args = {
     [1] = 1,
-    [2] = workspace["Pet Eggs"]["Frozen Egg"].Data,
+    [2] = workspace["Pet Eggs"]["Crystal Egg"].Data,
 }
 
 game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
         end
     else
-        _G.l= false
+        _G.m= false
     end
 end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
@@ -387,7 +387,9 @@ end)
 teleports:CreateButton("Zone 2", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-748.103149, 162.528778, -639.707764)
 end)
-
+teleports:CreateButton("Zone 2", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-720.48822, 139.802246, -1296.81348)
+end)
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
     game:service'Players'.LocalPlayer.Idled:connect(function()
