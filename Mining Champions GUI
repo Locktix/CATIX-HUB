@@ -4,6 +4,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/prezt
 
 local AutoTab = Library:CreateTab("Mining-Champions GUI","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
+local FORVIP = Library:CreateTab("For VIP","things", true)
 local eggs = Library:CreateTab("Auto Buy Eggs X3","things", true)
 local eggs2 = Library:CreateTab("Auto Buy Eggs X1","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
@@ -78,7 +79,21 @@ _G.Speed = true
            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
          end
 end)
+FORVIP:CreateToggle("Mine VIP Ore", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.aa = true 
+        while wait(0) and _G.aa do
 
+local args = {
+    [1] = workspace.Resources.Ores["World_1"]["Center_Ores"].VIP,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestSwing:InvokeServer(unpack(args))
+        end
+    else
+        _G.aa= false
+    end
+end)
 AutoTab:CreateToggle("Mine Center Ore Spawn", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.b = true 
