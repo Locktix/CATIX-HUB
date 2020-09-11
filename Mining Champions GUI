@@ -5,6 +5,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/prezt
 local AutoTab = Library:CreateTab("Mining-Champions GUI","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
 local eggs = Library:CreateTab("Auto Buy Eggs X3","things", true)
+local eggs2 = Library:CreateTab("Auto Buy Eggs X1","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
@@ -379,6 +380,102 @@ game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(ar
   else
     
         _G.zf = false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Starter Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.za2 = true 
+        while wait() and _G.za2 do
+local args = {
+    [1] = "1",
+    [2] = 1,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.za2 = false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Gold Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.zb2 = true 
+        while wait() and _G.zb2 do
+local args = {
+    [1] = "2",
+    [2] = 1,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.zb2 = false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Grass Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.zc2 = true 
+        while wait() and _G.zc2 do
+local args = {
+    [1] = "3",
+    [2] = 1,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.zc2 = false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Desert Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.zd = true 
+        while wait() and _G.zd do
+local args = {
+    [1] = "4",
+    [2] = 1,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.zd = false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Jungle Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.ze2 = true 
+        while wait() and _G.ze2 do
+local args = {
+    [1] = "5",
+    [2] = 1,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.ze2 = false
+    end
+end)
+eggs2:CreateToggle("Auto Buy ice Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.zf2 = true 
+        while wait() and _G.zf2 do
+local args = {
+    [1] = "6",
+    [2] = 1,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.zf2 = false
     end
 end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
