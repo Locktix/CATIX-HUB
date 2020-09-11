@@ -1,0 +1,924 @@
+--https://www.roblox.com/games/5043740115/V2-SOON-Slamming-Simulator
+
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
+
+local AutoTab = Library:CreateTab("Slamming-Simulator GUI","things", true)
+local teleports = Library:CreateTab("Teleports","things", true)
+local eggs = Library:CreateTab("Auto Buy Eggs X1","things", true)
+local MISC = Library:CreateTab("MISC","things", true)
+local credits = Library:CreateTab("Credits","things", true)
+
+
+credits:CreateButton("Our Discords", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("masterkyllian#1723", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("bsoleil31FR#7202", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("https://discord.gg/m9Nn3qd", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("Bebo Mods#1110", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+
+AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:Destroy()
+end)
+
+
+MISC:CreateToggle("NO CLIP Press(E)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.NO = true 
+  noclip = false
+game:GetService('RunService').Stepped:connect(function()
+if noclip then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+plr = game.Players.LocalPlayer
+mouse = plr:GetMouse()
+mouse.KeyDown:connect(function(key)
+
+if key == "e" then
+noclip = not noclip
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+print('Created by FileExplorer')
+print('Credits to Peyton for the ChangeState part of this script')
+
+         
+else
+_G.NO = false
+end
+end)
+
+AutoTab:CreateToggle("Auto Collect Spawn", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.c1 = true 
+        while wait(0) and _G.c1 do
+           for _, v in pairs(game:GetService("Workspace").Collectibles.Client.Spawn:GetChildren()) do
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame =  v.Main.CFrame
+end
+end
+    else
+        _G.c1 = false
+          
+         end
+end)
+
+AutoTab:CreateToggle("Auto Collect Desert Zone", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.c2= true 
+        while wait(0) and _G.c2 do
+        for _, v in pairs(game:GetService("Workspace").Collectibles.Client.Desert:GetChildren()) do
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame =  v.Main.CFrame
+        end
+        end
+    else
+        _G.c2 = false
+        
+         end
+end)
+
+AutoTab:CreateToggle("Auto Collect Mama Zone", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.c3 = true 
+        while wait(0) and _G.c3 do
+            for _, v in pairs(game:GetService("Workspace").Collectibles.Client.Magma:GetChildren()) do
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame =  v.Main.CFrame
+end
+
+        end
+    else
+        _G.c3 = false
+           
+         end
+end)
+
+MISC:CreateToggle("Speed Hack 100", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.Speed = true 
+        while wait() and _G.Speed do
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+        end
+    else
+        _G.Speed = false
+           game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
+         end
+end)
+
+AutoTab:CreateToggle("Auto Click Fast", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b = true 
+        while wait(0) and _G.b do
+
+local args = {
+    [1] = "ActivateEffect",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateTools:FireServer(unpack(args))
+local args = {
+    [1] = "ActivateEffect",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateTools:FireServer(unpack(args))
+local args = {
+    [1] = "ActivateEffect",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateTools:FireServer(unpack(args))
+local args = {
+    [1] = "ActivateEffect",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateTools:FireServer(unpack(args))
+local args = {
+    [1] = "ActivateEffect",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateTools:FireServer(unpack(args))
+local args = {
+    [1] = "ActivateEffect",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateTools:FireServer(unpack(args))
+local args = {
+    [1] = "ActivateEffect",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateTools:FireServer(unpack(args))
+local args = {
+    [1] = "ActivateEffect",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateTools:FireServer(unpack(args))
+        end
+    else
+        _G.b= false
+    end
+end)
+
+AutoTab:CreateToggle("Auto Magma Bosses", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c = true 
+        while wait(0) and _G.c do
+
+
+wait(0.1) --change time if you want
+local boss = game.workspace.Bosses:FindFirstChildOfClass("Model").Head
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = boss.CFrame
+        end
+    else
+        _G.c= false
+    end
+end)
+AutoTab:CreateToggle("Auto Sell X1", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c = true 
+        while wait(0) and _G.c do
+
+local args = {
+    [1] = "SellStrength",
+    [2] = "Spawn",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateDNA:FireServer(unpack(args))
+        end
+    else
+        _G.c= false
+    end
+end)
+AutoTab:CreateToggle("Auto Sell X2", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.d = true 
+        while wait(0) and _G.d do
+
+local args = {
+    [1] = "SellStrength",
+    [2] = "Desert",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateDNA:FireServer(unpack(args))
+        end
+    else
+        _G.d= false
+    end
+end)
+AutoTab:CreateToggle("Auto Sell X3", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e = true 
+        while wait(0) and _G.e do
+local args = {
+    [1] = "SellStrength",
+    [2] = "Magma",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateDNA:FireServer(unpack(args))
+        end
+    else
+        _G.e= false
+    end
+end)
+AutoTab:CreateToggle("Auto Buy Tools", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f = true 
+        while wait(0) and _G.f do
+
+local args = {
+    [1] = "BuyAllTools",
+    [2] = "Spawn",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateTools:FireServer(unpack(args))
+local args = {
+    [1] = "BuyAllTools",
+    [2] = "Magma",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateTools:FireServer(unpack(args))
+local args = {
+    [1] = "BuyAllTools",
+    [2] = "Desert",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateTools:FireServer(unpack(args))
+        end
+    else
+        _G.f= false
+    end
+end)
+AutoTab:CreateToggle("Auto Buy DNA", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.g = true 
+        while wait(0) and _G.g do
+
+local args = {
+    [1] = "BuyAllDNA",
+    [2] = "Spawn",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateDNA:FireServer(unpack(args))
+local args = {
+    [1] = "BuyAllDNA",
+    [2] = "Desert",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateDNA:FireServer(unpack(args))
+local args = {
+    [1] = "BuyAllDNA",
+    [2] = "Magma",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateDNA:FireServer(unpack(args))
+        end
+    else
+        _G.g= false
+    end
+end)
+AutoTab:CreateToggle("Auto Buy RANKs ⚠️Ping", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.h = true 
+        while wait(0) and _G.h do
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Spawn",
+    [3] = "Bronze I",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Spawn",
+    [3] = "Bronze II",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Spawn",
+    [3] = "Bronze III",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Spawn",
+    [3] = "Silver I",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Spawn",
+    [3] = "Silver II",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Spawn",
+    [3] = "Silver III",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Spawn",
+    [3] = " Gold I",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Spawn",
+    [3] = "Gold II",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Spawn",
+    [3] = "Gold III",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Spawn",
+    [3] = "Diamond I",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Spawn",
+    [3] = "Diamond II",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Spawn",
+    [3] = "Diamond III",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Spawn",
+    [3] = "Platinum Premium",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Desert",
+    [3] = "Clay I",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Desert",
+    [3] = "Clay II",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Desert",
+    [3] = "Clay III",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Desert",
+    [3] = "Coral I",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Desert",
+    [3] = "Coral II",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Desert",
+    [3] = "Coral III",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Desert",
+    [3] = "Desert I",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Desert",
+    [3] = "Desert II",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Desert",
+    [3] = "Desert III",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Desert",
+    [3] = "Master Clay I",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Desert",
+    [3] = "Master Clay II",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Desert",
+    [3] = "Master Clay III",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Desert",
+    [3] = "Master Coral I",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Desert",
+    [3] = "Master Coral II",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Desert",
+    [3] = "Master Coral III",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Desert",
+    [3] = "Master Desert I",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Desert",
+    [3] = "Master Desert II",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Desert",
+    [3] = "Master Desert III",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Desert",
+    [3] = "Sand I",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Desert",
+    [3] = "Sand II",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Desert",
+    [3] = "Sand III",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Desert",
+    [3] = "Master Sand I",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Desert",
+    [3] = "Master Sand II",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Desert",
+    [3] = "Master Sand III",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Magma",
+    [3] = "Lava I",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Magma",
+    [3] = "Lava II",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Magma",
+    [3] = "Lava III",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Magma",
+    [3] = "Magma I",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Magma",
+    [3] = "Magma II",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Magma",
+    [3] = "Magma III",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Magma",
+    [3] = "Charcoal I",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Magma",
+    [3] = "Charcoal II",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Magma",
+    [3] = "Charcoal III",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Magma",
+    [3] = "Rocker I",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Magma",
+    [3] = "Rocker II",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Magma",
+    [3] = "Rocker III",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Magma",
+    [3] = "Master Lava I",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Magma",
+    [3] = "Master Lava II",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Magma",
+    [3] = "Master Lava III",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Magma",
+    [3] = "Master Magma I",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Magma",
+    [3] = "Master Magma II",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Magma",
+    [3] = "Master Magma III",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Magma",
+    [3] = "Master Charcoal I",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Magma",
+    [3] = "Master Charcoal II",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Magma",
+    [3] = "Master Charcoal III",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Magma",
+    [3] = "Master Rocker I",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Magma",
+    [3] = "Master Rocker II",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+local args = {
+    [1] = "BuyRanks",
+    [2] = "Magma",
+    [3] = "Master Rocker III",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRanks:FireServer(unpack(args))
+        end
+    else
+        _G.h= false
+    end
+end)
+AutoTab:CreateToggle("Auto Redem Chests", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.i = true 
+        while wait(0) and _G.i do
+local args = {
+    [1] = "RedeemChests",
+    [2] = "Magma",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRewards:FireServer(unpack(args))
+local args = {
+    [1] = "RedeemChests",
+    [2] = "Spawn",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRewards:FireServer(unpack(args))
+local args = {
+    [1] = "RedeemChests",
+    [2] = "Desert",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRewards:FireServer(unpack(args))
+        end
+    else
+        _G.i= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Regular Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.j = true 
+        while wait(0) and _G.j do
+
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "Regular",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+        end
+    else
+        _G.j= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Spotted Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.k = true 
+        while wait(0) and _G.k do
+
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "Spotted",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+        end
+    else
+        _G.k= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Spikey Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l = true 
+        while wait(0) and _G.l do
+
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "Spikey",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+        end
+    else
+        _G.l= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Cactus Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.m = true 
+        while wait(0) and _G.m do
+
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "Cactus",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+        end
+    else
+        _G.m= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Rocky Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.n = true 
+        while wait(0) and _G.n do
+
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "Rocky",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+        end
+    else
+        _G.n= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Magma Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.o = true 
+        while wait(0) and _G.o do
+
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "Magma",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+        end
+    else
+        _G.o= false
+    end
+end)
+teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(211.461121, 176.775879, -153.747971)
+end)
+
+teleports:CreateButton("Desert Zone", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1745.599, -134.491943, -306.100006)
+end)
+
+teleports:CreateButton("Magma Zone", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(538.317017, 243.129364, -1611.11804)
+end)
+
+--| Anti KICK |
+local mt = getrawmetatable(game)
+local old = mt.__namecall
+local protect = newcclosure or protect_function
+
+if not protect then
+protect = function(f) return f end
+end
+
+setreadonly(mt, false)
+mt.__namecall = protect(function(self, ...)
+local method = getnamecallmethod()
+if method == "Kick" then
+wait(9e9)
+return
+end
+return old(self, ...)
+end)
+hookfunction(game:GetService("Players").LocalPlayer.Kick,protect(function() wait(9e9)
+ end))
+
+--| Anti AFK |
+   local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+
+--| Anti Ban |
+setfflag("DFStringCrashPadUploadToBacktraceToBacktraceBaseUrl", "")
+setfflag("DFIntCrashUploadToBacktracePercentage", "0")
+setfflag("DFStringCrashUploadToBacktraceBlackholeToken", "")
+setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
+
+--| Anti AFK | By Altix#3395
+    local Virtual = game:service'VirtualUser'
+    game:service'Players'.LocalPlayer.Idled:connect(function()
+        Virtual:CaptureController()
+        Virtual:ClickButton2(Vector2.new())
+        wait(2)
+    end)
+
+--| Anti Chat Logs |
+local CloneFunction = clonefunction
+local CheckCaller = CloneFunction(checkcaller)
+local HookFunction = CloneFunction(hookfunction)
+local LocalPlayer = game.Players.PlayerAdded:wait()
+
+local PostMessage = require(LocalPlayer:WaitForChild("PlayerScripts", 1/0):WaitForChild("ChatScript", 1/0):WaitForChild("ChatMain", 1/0)).MessagePosted
+getgenv().MessageEvent = Instance.new("BindableEvent")
+
+local OldFunctionHook
+local PostMessageHook = function(self, msg)
+   if not CheckCaller() and self == PostMessage then
+       MessageEvent:Fire(msg)
+       return
+   end
+   return OldFunctionHook(self, msg)
+end
+OldFunctionHook = HookFunction(PostMessage.fire, PostMessageHook)
