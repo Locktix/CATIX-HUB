@@ -703,7 +703,7 @@ game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
         _G.x4= false
     end
 end)
-eggs1:CreateToggle("Auto Buy Rebirths x1B", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs2:CreateToggle("Auto Buy Rebirths x1B", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.z = true 
         while wait(0) and _G.z do
