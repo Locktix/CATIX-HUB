@@ -138,6 +138,21 @@ game:GetService("ReplicatedStorage").Events.Server.RequestSwing:InvokeServer(unp
         _G.b5= false
     end
 end)
+AutoTab:CreateToggle("Mine Center Ore zone 4 ", function(arg) --the (arg) is if the checkbox is toggled or not 
+    if arg then
+        _G.b52 = true 
+        while wait(0) and _G.b52 do
+
+local args = {
+    [1] = workspace.Resources.Ores["World_1"]["Center_Ores"]["Ore_5"],
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestSwing:InvokeServer(unpack(args))
+        end
+    else
+        _G.b52= false
+    end
+end)
 AutoTab:CreateToggle("Mine Gems Ore Spawn ", function(arg) --the (arg) is if the checkbox is toggled or not 
     if arg then
         _G.b6 = true 
@@ -198,6 +213,21 @@ game:GetService("ReplicatedStorage").Events.Server.RequestSwing:InvokeServer(unp
         end
     else
         _G.b9= false
+    end
+end)
+AutoTab:CreateToggle("Mine Gems Ore zone 4 ", function(arg) --the (arg) is if the checkbox is toggled or not 
+    if arg then
+        _G.b92 = true 
+        while wait(0) and _G.b92 do
+
+local args = {
+    [1] = workspace.Resources.Ores["World_1"]["Island_4"]["Gem_5"],
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestSwing:InvokeServer(unpack(args))
+        end
+    else
+        _G.b92= false
     end
 end)
 AutoTab:CreateToggle("Auto Sell", function(arg) --the (arg) is if the checkbox is toggled or not
@@ -335,6 +365,22 @@ game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(ar
         _G.ze = false
     end
 end)
+eggs:CreateToggle("Auto Buy ice Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.zf = true 
+        while wait() and _G.zf do
+local args = {
+    [1] = "6",
+    [2] = 3,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.zf = false
+    end
+end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-693.377869, 28.2390366, 371.22583)
 end)
@@ -350,6 +396,44 @@ end)
 teleports:CreateButton("Zone 3", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(749.316284, 15.2230415, -347.603119)
 end)
+teleports:CreateButton("Zone 4", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1632.89258, -40.6574631, -274.565613)
+end)
+--| Anti KICK |
+local mt = getrawmetatable(game)
+local old = mt.__namecall
+local protect = newcclosure or protect_function
+
+if not protect then
+protect = function(f) return f end
+end
+
+setreadonly(mt, false)
+mt.__namecall = protect(function(self, ...)
+local method = getnamecallmethod()
+if method == "Kick" then
+wait(9e9)
+return
+end
+return old(self, ...)
+end)
+hookfunction(game:GetService("Players").LocalPlayer.Kick,protect(function() wait(9e9)
+ end))
+
+--| Anti AFK |
+   local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+
+--| Anti Ban |
+setfflag("DFStringCrashPadUploadToBacktraceToBacktraceBaseUrl", "")
+setfflag("DFIntCrashUploadToBacktracePercentage", "0")
+setfflag("DFStringCrashUploadToBacktraceBlackholeToken", "")
+setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
+
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
     game:service'Players'.LocalPlayer.Idled:connect(function()
@@ -357,10 +441,22 @@ end)
         Virtual:ClickButton2(Vector2.new())
         wait(2)
     end)
-    
-    local vu = game:GetService("VirtualUser")
-game:GetService("Players").LocalPlayer.Idled:connect(function()
-   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-   wait(1)
-   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-end)
+
+--| Anti Chat Logs |
+local CloneFunction = clonefunction
+local CheckCaller = CloneFunction(checkcaller)
+local HookFunction = CloneFunction(hookfunction)
+local LocalPlayer = game.Players.PlayerAdded:wait()
+
+local PostMessage = require(LocalPlayer:WaitForChild("PlayerScripts", 1/0):WaitForChild("ChatScript", 1/0):WaitForChild("ChatMain", 1/0)).MessagePosted
+getgenv().MessageEvent = Instance.new("BindableEvent")
+
+local OldFunctionHook
+local PostMessageHook = function(self, msg)
+   if not CheckCaller() and self == PostMessage then
+       MessageEvent:Fire(msg)
+       return
+   end
+   return OldFunctionHook(self, msg)
+end
+OldFunctionHook = HookFunction(PostMessage.fire, PostMessageHook)
