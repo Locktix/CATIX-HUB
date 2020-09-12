@@ -25,15 +25,15 @@ credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "a
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("bsoleil31FR[inchala ptn]#9001", function() --you dont need "arg" for a button
+credits:CreateButton("bsoleil31FR#7202", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("https://discord.gg/PdUTrVG", function() --you dont need "arg" for a button
+credits:CreateButton("https://discord.gg/m9Nn3qd", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("Bebo Mods#9619", function() --you dont need "arg" for a button
+credits:CreateButton("Bebo Mods#1110", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
@@ -154,39 +154,54 @@ end)
 AutoTab:CreateButton("At The Same Time", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
-
 AutoTab:CreateToggle("Auto Candies Starter World", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.c = true 
-        while wait(1) and _G.c do
-local children = game.Workspace:GetChildren()
-    for _, child in pairs(children) do
-        for _, child in pairs(child:GetChildren()) do
-            table.insert(children, child)
-         end
-         if child:IsA("BasePart") and child.Name == "Ring Pop" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
-else
- if child:IsA("BasePart") and child.Name == "M&Ms" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
-else
- if child:IsA("BasePart") and child.Name == "Candy Bracelet" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
-else
- if child:IsA("BasePart") and child.Name == "Skittles" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
-else
- if child:IsA("BasePart") and child.Name == "Chocolate Bar" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame 
-else
- if child:IsA("BasePart") and child.Name == "Heart Candies" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame 
-end
-end    
+        while wait(0) and _G.c do
+local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
 
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Ring Pop' then
+     v.CFrame = root.CFrame
+       wait()
+   
+  
+    
+local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'M&Ms' then
+     v.CFrame = root.CFrame
+       wait()
+   end
 end
+  local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Candy Bracelet' then
+     v.CFrame = root.CFrame
+       wait()
+ 
+  local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Skittles' then
+     v.CFrame = root.CFrame
+       wait()
+  local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Chocolate Bar' then
+     v.CFrame = root.CFrame
+       wait()
+  local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Heart Candies' then
+     v.CFrame = root.CFrame
+       wait()
+   end
 end
-end       
         end
     end
     end
@@ -198,35 +213,51 @@ end)
 AutoTab:CreateToggle("Auto Candies Candy World", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.c2 = true 
-        while wait(1) and _G.c2 do
-local children = game.Workspace:GetChildren()
-    for _, child in pairs(children) do
-        for _, child in pairs(child:GetChildren()) do
-            table.insert(children, child)
-         end
-         if child:IsA("BasePart") and child.Name == "Smarties" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
-else
- if child:IsA("BasePart") and child.Name == "Starburst" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
-else
- if child:IsA("BasePart") and child.Name == "Candy Cane" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
-else
- if child:IsA("BasePart") and child.Name == "Jaw Breaker" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
-else
- if child:IsA("BasePart") and child.Name == "Lollipop" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame 
-else
- if child:IsA("BasePart") and child.Name == "Jelly Beans" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame 
-end
-end    
+        while wait(0) and _G.c2 do
+local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
 
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Smarties' then
+     v.CFrame = root.CFrame
+       wait()
+   
+  
+    
+local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Starburst' then
+     v.CFrame = root.CFrame
+       wait()
+   end
 end
+  local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Candy Cane' then
+     v.CFrame = root.CFrame
+       wait()
+ 
+  local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Jaw Breaker' then
+     v.CFrame = root.CFrame
+       wait()
+  local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Lollipop' then
+     v.CFrame = root.CFrame
+       wait()
+  local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Jelly Beans' then
+     v.CFrame = root.CFrame
+       wait()
+   end
 end
-end       
         end
     end
     end
@@ -234,38 +265,53 @@ end
         _G.c2 = false
     end
 end)
-
 AutoTab:CreateToggle("Auto Candies Beach World", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.c3 = true 
-        while wait(1) and _G.c3 do
-local children = game.Workspace:GetChildren()
-    for _, child in pairs(children) do
-        for _, child in pairs(child:GetChildren()) do
-            table.insert(children, child)
-         end
-         if child:IsA("BasePart") and child.Name == "Gummy Worms" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
-else
- if child:IsA("BasePart") and child.Name == "Chocolate Egg" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
-else
- if child:IsA("BasePart") and child.Name == "Starburst" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
-else
- if child:IsA("BasePart") and child.Name == "Chocolate Coin" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
-else
- if child:IsA("BasePart") and child.Name == "Twizzlers" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame 
-else
- if child:IsA("BasePart") and child.Name == "Jaw Breaker" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame 
-end    
+        while wait(0) and _G.c3 do
+local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
 
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Gummy Worms' then
+     v.CFrame = root.CFrame
+       wait()
+   
+  
+    
+local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Chocolate Egg' then
+     v.CFrame = root.CFrame
+       wait()
+   end
 end
-end
-end    
+  local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Starburst' then
+     v.CFrame = root.CFrame
+       wait()
+ 
+  local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Chocolate Coin' then
+     v.CFrame = root.CFrame
+       wait()
+  local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Twizzlers' then
+     v.CFrame = root.CFrame
+       wait()
+  local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Jaw Breaker' then
+     v.CFrame = root.CFrame
+       wait()
+   end
 end
         end
     end
@@ -274,38 +320,53 @@ end
         _G.c3 = false
     end
 end)
-
 AutoTab:CreateToggle("Auto Candies SnowTime World", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.c4 = true 
-        while wait(1) and _G.c4 do
-local children = game.Workspace:GetChildren()
-    for _, child in pairs(children) do
-        for _, child in pairs(child:GetChildren()) do
-            table.insert(children, child)
-         end
-         if child:IsA("BasePart") and child.Name == "Mike n' Ikes" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
-else
- if child:IsA("BasePart") and child.Name == "Chocolate Egg" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
-else
- if child:IsA("BasePart") and child.Name == "Chocolate Raisins" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
-else
- if child:IsA("BasePart") and child.Name == "Rockets" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
-else
- if child:IsA("BasePart") and child.Name == "Twizzlers" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame 
-else
- if child:IsA("BasePart") and child.Name == "Nerds" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame 
-end    
+        while wait(0) and _G.c4 do
+local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
 
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Mike n' Ikes' then
+     v.CFrame = root.CFrame
+       wait()
+   
+  
+    
+local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Chocolate Egg' then
+     v.CFrame = root.CFrame
+       wait()
+   end
 end
-end
-end    
+  local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Chocolate Raisins' then
+     v.CFrame = root.CFrame
+       wait()
+ 
+  local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Rockets' then
+     v.CFrame = root.CFrame
+       wait()
+  local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Twizzlers' then
+     v.CFrame = root.CFrame
+       wait()
+  local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Nerds' then
+     v.CFrame = root.CFrame
+       wait()
+   end
 end
         end
     end
@@ -314,38 +375,53 @@ end
         _G.c4 = false
     end
 end)
-
 AutoTab:CreateToggle("Auto Candies Forest World", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.c5 = true 
-        while wait(1) and _G.c5 do
-local children = game.Workspace:GetChildren()
-    for _, child in pairs(children) do
-        for _, child in pairs(child:GetChildren()) do
-            table.insert(children, child)
-         end
-         if child:IsA("BasePart") and child.Name == "Candy Corn" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
-else
- if child:IsA("BasePart") and child.Name == "Cake Pop" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
-else
- if child:IsA("BasePart") and child.Name == "Gushers" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
-else
- if child:IsA("BasePart") and child.Name == "Rockets" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
-else
- if child:IsA("BasePart") and child.Name == "Mike n' Ikes" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame 
-else
- if child:IsA("BasePart") and child.Name == "Caramel" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame 
-end    
+        while wait(0) and _G.c5 do
+local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
 
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Candy Corn' then
+     v.CFrame = root.CFrame
+       wait()
+   
+  
+    
+local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Rockets' then
+     v.CFrame = root.CFrame
+       wait()
+   end
 end
-end
-end    
+  local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Mike n' Ikes' then
+     v.CFrame = root.CFrame
+       wait()
+ 
+  local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Caramel' then
+     v.CFrame = root.CFrame
+       wait()
+  local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Gushers' then
+     v.CFrame = root.CFrame
+       wait()
+  local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Cake Pop' then
+     v.CFrame = root.CFrame
+       wait()
+   end
 end
         end
     end
@@ -354,35 +430,47 @@ end
         _G.c5 = false
     end
 end)
-
 AutoTab:CreateToggle("Auto Candies Desert World", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.c6 = true 
-        while wait(1) and _G.c6 do
-local children = game.Workspace:GetChildren()
-    for _, child in pairs(children) do
-        for _, child in pairs(child:GetChildren()) do
-            table.insert(children, child)
-         end
-         if child:IsA("BasePart") and child.Name == "Honey" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
-else
- if child:IsA("BasePart") and child.Name == "Butterscotch" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
-else
- if child:IsA("BasePart") and child.Name == "Gushers" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
-else
- if child:IsA("BasePart") and child.Name == "Sour Balls" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
-else
- if child:IsA("BasePart") and child.Name == "Toblerone" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame 
+        while wait(0) and _G.c6 do
+local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
 
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Toblerone' then
+     v.CFrame = root.CFrame
+       wait()
+   
+  
+    
+local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Honey' then
+     v.CFrame = root.CFrame
+       wait()
+   end
 end
-end
-end    
-end
+  local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Butterscotch' then
+     v.CFrame = root.CFrame
+       wait()
+ 
+  local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Gushers' then
+     v.CFrame = root.CFrame
+       wait()
+  local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Sour Balls' then
+     v.CFrame = root.CFrame
+       wait()
+
         end
     end
     end
@@ -394,35 +482,44 @@ end)
 AutoTab:CreateToggle("Auto Candies Cloud World", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.c7 = true 
-        while wait(1) and _G.c7 do
-local children = game.Workspace:GetChildren()
-    for _, child in pairs(children) do
-        for _, child in pairs(child:GetChildren()) do
-            table.insert(children, child)
-         end
-         if child:IsA("BasePart") and child.Name == "Mike n' Ikes" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
-else
- if child:IsA("BasePart") and child.Name == "Honey" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
-else
- if child:IsA("BasePart") and child.Name == "Gushers" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
-else
- if child:IsA("BasePart") and child.Name == "Cake Pop" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame     
-else
- if child:IsA("BasePart") and child.Name == "Honey" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame 
-else
- if child:IsA("BasePart") and child.Name == "Sour Balls" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame 
-end    
+        while wait(0) and _G.c7 do
+local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
 
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Mike n' Ikes' then
+     v.CFrame = root.CFrame
+       wait()
+   
+  
+    
+local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Honey' then
+     v.CFrame = root.CFrame
+       wait()
+   end
 end
-end
-end    
-end
+  local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Sour Balls' then
+     v.CFrame = root.CFrame
+       wait()
+ 
+  local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Gushers' then
+     v.CFrame = root.CFrame
+       wait()
+  local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Cake Pop' then
+     v.CFrame = root.CFrame
+       wait()
+
         end
     end
     end
@@ -430,6 +527,8 @@ end
         _G.c7 = false
     end
 end)
+
+
 
 eggs:CreateToggle("Auto Buy Normal Eggs (1)", function(arg) --the (arg) is if the checkbox is toggled or not)
     if arg then
@@ -993,6 +1092,43 @@ teleports:CreateButton("sell x5", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-908.823425, 23.1520271, -1262.09644)
 end)
 
+
+
+--| Anti KICK |
+local mt = getrawmetatable(game)
+local old = mt.__namecall
+local protect = newcclosure or protect_function
+
+if not protect then
+protect = function(f) return f end
+end
+
+setreadonly(mt, false)
+mt.__namecall = protect(function(self, ...)
+local method = getnamecallmethod()
+if method == "Kick" then
+wait(9e9)
+return
+end
+return old(self, ...)
+end)
+hookfunction(game:GetService("Players").LocalPlayer.Kick,protect(function() wait(9e9)
+ end))
+
+--| Anti AFK |
+   local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+
+--| Anti Ban |
+setfflag("DFStringCrashPadUploadToBacktraceToBacktraceBaseUrl", "")
+setfflag("DFIntCrashUploadToBacktracePercentage", "0")
+setfflag("DFStringCrashUploadToBacktraceBlackholeToken", "")
+setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
+
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
     game:service'Players'.LocalPlayer.Idled:connect(function()
@@ -1000,3 +1136,22 @@ end)
         Virtual:ClickButton2(Vector2.new())
         wait(2)
     end)
+
+--| Anti Chat Logs |
+local CloneFunction = clonefunction
+local CheckCaller = CloneFunction(checkcaller)
+local HookFunction = CloneFunction(hookfunction)
+local LocalPlayer = game.Players.PlayerAdded:wait()
+
+local PostMessage = require(LocalPlayer:WaitForChild("PlayerScripts", 1/0):WaitForChild("ChatScript", 1/0):WaitForChild("ChatMain", 1/0)).MessagePosted
+getgenv().MessageEvent = Instance.new("BindableEvent")
+
+local OldFunctionHook
+local PostMessageHook = function(self, msg)
+   if not CheckCaller() and self == PostMessage then
+       MessageEvent:Fire(msg)
+       return
+   end
+   return OldFunctionHook(self, msg)
+end
+OldFunctionHook = HookFunction(PostMessage.fire, PostMessageHook)
