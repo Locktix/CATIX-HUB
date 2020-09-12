@@ -250,6 +250,23 @@ game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(
         _G.i2= false
     end
 end)
+eggs1:CreateToggle("Auto Buy Winter Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.j2 = true 
+        while wait(0) and _G.j2 do
+
+
+local args = {
+    [1] = "WinterEgg",
+    [2] = "Single",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
+        end
+    else
+        _G.j2= false
+    end
+end)
 eggs2:CreateToggle("Auto Buy Common Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.c = true 
@@ -357,6 +374,23 @@ game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(
         _G.i= false
     end
 end)
+eggs2:CreateToggle("Auto Buy Winter Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.j = true 
+        while wait(0) and _G.j do
+
+
+local args = {
+    [1] = "WinterEgg",
+    [2] = "Triple",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
+        end
+    else
+        _G.j= false
+    end
+end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-5.09807253, 11.807601, 575.974487)
 end)
@@ -373,6 +407,9 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1504.372
 end)
 teleports:CreateButton("Area Boost x3", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-121.929405, 16.6337032, -1405.86011)
+end)
+teleports:CreateButton("Area Boost x3,5", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(742.126282, 17.2005157, -132.680466)
 end)
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
