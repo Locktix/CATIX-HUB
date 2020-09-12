@@ -829,8 +829,8 @@ end)
 
 MISC:CreateToggle("Bring Players", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.g = true 
-        while wait(0) and _G.g do
+        _G.Kill = true 
+        while wait(0) and _G.Kill do
 _G.Kill = true
 while _G.Kill do
 wait()
@@ -845,7 +845,7 @@ end
 end
 
     else
-        _G.g = false
+        _G.Kill = false
     end
 end)
 eggs:CreateToggle("1", function(arg) --the (arg) is if the checkbox is toggled or not
