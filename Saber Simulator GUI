@@ -1,0 +1,672 @@
+--https://www.roblox.com/games/refer?IsLargeGameTile=true&LocalTimestamp=2020-09-12T19%3A31%3A35.919Z&PageType=GameSearch&PlaceId=3823781113&Position=1
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
+
+local AutoTab = Library:CreateTab("Saber Simulator GUI","things", true)
+local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
+local teleports = Library:CreateTab("Teleports","things", true)
+local MISC = Library:CreateTab("MISC","things", true)
+local credits = Library:CreateTab("Credits","things", true)
+
+
+credits:CreateButton("Our Discords", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("masterkyllian#1723", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("bsoleil31FR#7202", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("https://discord.gg/m9Nn3qd", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("Bebo Mods#1110", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+
+AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:Destroy()
+end)
+
+
+MISC:CreateToggle("NO CLIP Press(E)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.NO = true 
+  noclip = false
+game:GetService('RunService').Stepped:connect(function()
+if noclip then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+plr = game.Players.LocalPlayer
+mouse = plr:GetMouse()
+mouse.KeyDown:connect(function(key)
+
+if key == "e" then
+noclip = not noclip
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+print('Created by FileExplorer')
+print('Credits to Peyton for the ChangeState part of this script')
+
+         
+else
+_G.NO = false
+end
+end)
+
+MISC:CreateToggle("Speed Hack 100", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.Speed = true 
+        while wait() and _G.Speed do
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+        end
+    else
+        _G.Speed = false
+           game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
+         end
+end)
+
+
+
+eggs:CreateToggle("Auto Buy Last Eggs X3", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b = true 
+        while wait(0) and _G.b do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["F Egg"],
+    [2] = 3,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Basic Eggs X3", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b = true 
+        while wait(0) and _G.b do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Basic Egg"],
+    [2] = 3,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b= false
+    end
+end)
+AutoTab:CreateToggle("Auto Click", function(arg)
+    if arg then
+        _G.AutoSwing = true
+        local BladeName = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name
+        while _G.AutoSwing do
+            if BladeName then
+                game.ReplicatedStorage.Events.Clicked:FireServer()
+                game.Players.LocalPlayer.Character[BladeName].RemoteClick:FireServer()
+            else
+                EquipTool()
+            end
+            wait()
+        end
+    else
+        _G.AutoSwing = false
+    end
+end)
+
+AutoTab:CreateToggle("Auto Buy All Sword", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.d = true 
+while wait(0) and _G.d do
+local args = {
+    [1] = "Swords",
+}
+
+game:GetService("ReplicatedStorage").Events.BuyAll:FireServer(unpack(args))
+end
+else
+  _G.d = false
+end
+end)
+
+AutoTab:CreateToggle("Auto Buy All Adn", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.e = true 
+while wait(0) and _G.e do
+local args = {
+    [1] = "Backpacks",
+}
+
+game:GetService("ReplicatedStorage").Events.BuyAll:FireServer(unpack(args))
+end
+else
+  _G.e = false
+end
+end)
+AutoTab:CreateToggle("Auto Buy All Skills", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.Skills = true 
+while wait(0) and _G.Skills do
+local args = {
+    [1] = "JumpBoosts",
+}
+
+game:GetService("ReplicatedStorage").Events.BuyAll:FireServer(unpack(args))
+end
+else
+  _G.Skills = false
+end
+end)
+AutoTab:CreateToggle("Auto Buy All Boss Hits", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.Skills2 = true 
+while wait(0) and _G.Skills2 do
+local args = {
+    [1] = "BossBoosts",
+}
+
+game:GetService("ReplicatedStorage").Events.BuyAll:FireServer(unpack(args))
+end
+else
+  _G.Skills2 = false
+end
+end)
+AutoTab:CreateToggle("Auto Buy All Auras", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.Skills3= true 
+while wait(0) and _G.Skills3 do
+local args = {
+    [1] = "Auras",
+}
+
+game:GetService("ReplicatedStorage").Events.BuyAll:FireServer(unpack(args))
+end
+else
+  _G.Skills3 = false
+end
+end)
+AutoTab:CreateToggle("Auto Buy All Pets Auras", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.Skills4= true 
+while wait(0) and _G.Skills4 do
+local args = {
+    [1] = "PetAuras",
+}
+
+game:GetService("ReplicatedStorage").Events.BuyAll:FireServer(unpack(args))
+end
+else
+  _G.Skills4 = false
+end
+end)
+
+
+AutoTab:CreateToggle("Auto Buy All Ranks", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.g = true 
+while wait(0.1) and _G.g do
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Noob,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Apprentice,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Soldier,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Paladin,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Assassin,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Warrior,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Warlord,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Berserker,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Saber,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Cyborg,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Master,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Titan,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Phantom,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Shadow,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Ghoul,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Tempest,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Elementalist,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Beast,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes["Dark Ninja"],
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Warlock,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Overlord,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Demigod,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.ArchAngel,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Wraith,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Deity,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Nemesis,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Executioner,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Terminator,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Colossus,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Zeus,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Elf,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Santa,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Corruptor,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Prestige,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Caster,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Cyclops,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.King,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Hacker,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Angel,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Minotaur,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+ wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Cerberus,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Yeti,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Samurai,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Baron,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Detective,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes["Red Baron"],
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Witch,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Gladiator,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes["Purple Baron"],
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Guard,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes["Shadow Titan"],
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+wait(0.1)
+local args = {
+    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Superhuman,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+end
+else
+  _G.g = false
+end
+end)
+AutoTab:CreateToggle("Auto Combine All Pets", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.f = true 
+while wait(0) and _G.f do
+game:GetService("ReplicatedStorage").Events.CombineAll:FireServer()
+end
+else
+  _G.f = false
+end
+end)
+AutoTab:CreateToggle("Auto Boss", function(arg)
+if arg then
+_G.bossc = true
+ while wait() and _G.bossc do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Boss.LeftLowerLeg
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X, pbosd.Position.Y, pbosd.Position.Z)
+end
+else
+_G.bossc = false
+end
+end)
+teleports:CreateToggle("Auto Flags", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.f2 = true 
+while wait(0) and _G.f2 do
+while wait() do
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(640, 221, 144)
+wait(24)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(713, 173, 465)
+wait(24)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(438, 246, -259)
+wait(24)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-31, 215, 80)
+wait(24)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(627, 437, -107)
+wait(24)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(605, 1427, 64)
+wait(24)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(255, 2127, -68)
+wait(24)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(596, 3147, -16)
+wait(24)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(791, 4430, -61)
+wait(24)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(602, 5404, -138)
+wait(24)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(665, 6320, -149)
+wait(24)
+end
+end
+else
+  _G.f2 = false
+end
+end)
+teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(543.14386, 184.468475, 14.3797617)
+end)
+teleports:CreateButton("Sell", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(535.757507, 183.845337, 151.620239)
+end)
+teleports:CreateButton("Palier Zone 1", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(543.564575, 67087.8203, -62.6866531)
+end)
+teleports:CreateButton("Palier Zone 2", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(626.306335, 131088.859, -52.2765007)
+end)
+teleports:CreateButton("Palier Zone 3", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(630.680359, 213009.391, -303.533386)
+end)
+teleports:CreateButton("Palier Zone 4", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(630.988159, 248004.688, -303.145996)
+end)
+teleports:CreateToggle("KOTH", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(793.609009, 249.786087, 33.3503723)
+end)
+
+--| Anti KICK |
+local mt = getrawmetatable(game)
+local old = mt.__namecall
+local protect = newcclosure or protect_function
+
+if not protect then
+protect = function(f) return f end
+end
+
+setreadonly(mt, false)
+mt.__namecall = protect(function(self, ...)
+local method = getnamecallmethod()
+if method == "Kick" then
+wait(9e9)
+return
+end
+return old(self, ...)
+end)
+hookfunction(game:GetService("Players").LocalPlayer.Kick,protect(function() wait(9e9)
+ end))
+
+--| Anti AFK |
+   local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+
+--| Anti Ban |
+setfflag("DFStringCrashPadUploadToBacktraceToBacktraceBaseUrl", "")
+setfflag("DFIntCrashUploadToBacktracePercentage", "0")
+setfflag("DFStringCrashUploadToBacktraceBlackholeToken", "")
+setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
+
+
+--| Anti Chat Logs |
+local CloneFunction = clonefunction
+local CheckCaller = CloneFunction(checkcaller)
+local HookFunction = CloneFunction(hookfunction)
+local LocalPlayer = game.Players.PlayerAdded:wait()
+
+local PostMessage = require(LocalPlayer:WaitForChild("PlayerScripts", 1/0):WaitForChild("ChatScript", 1/0):WaitForChild("ChatMain", 1/0)).MessagePosted
+getgenv().MessageEvent = Instance.new("BindableEvent")
+
+local OldFunctionHook
+local PostMessageHook = function(self, msg)
+   if not CheckCaller() and self == PostMessage then
+       MessageEvent:Fire(msg)
+       return
+   end
+   return OldFunctionHook(self, msg)
+end
+OldFunctionHook = HookFunction(PostMessage.fire, PostMessageHook)
