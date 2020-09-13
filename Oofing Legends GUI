@@ -85,7 +85,7 @@ AutoTab:CreateToggle("Auto Jump", function(arg) --the (arg) is if the checkbox i
         while wait(0) and _G.b2 do
 game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end
-        end
+       
     else
         _G.b2= false
     end
