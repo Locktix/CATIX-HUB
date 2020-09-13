@@ -6,6 +6,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/prezt
 local AutoTab = Library:CreateTab("Oofing Legends GUI","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
 local rebirths = Library:CreateTab("Auto Rebirth","things", true)
+local eggs = Library:CreateTab("Auto Buy Eggs x3","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
@@ -285,6 +286,111 @@ game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(a
         end
     else
         _G.o= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Common Eggs X3", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.p= true 
+        while wait(0) and _G.p do
+local args = {
+    [1] = "Common",
+    [2] = "R",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpen:FireServer(unpack(args))
+        end
+    else
+        _G.p= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Common Eggs X3", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.q= true 
+        while wait(0) and _G.q do
+local args = {
+    [1] = "Rare",
+    [2] = "R",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpen:FireServer(unpack(args))
+        end
+    else
+        _G.q= false
+    end
+end)
+eggs:CreateToggle("Auto Buy 1M Eggs X3", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.R= true 
+        while wait(0) and _G.R do
+local args = {
+    [1] = "1M",
+    [2] = "R",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpen:FireServer(unpack(args))
+        end
+    else
+        _G.R= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Candy Eggs X3", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.s= true 
+        while wait(0) and _G.s do
+local args = {
+    [1] = "Candy",
+    [2] = "R",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpen:FireServer(unpack(args))
+        end
+    else
+        _G.s= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Snow Eggs X3", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.t= true 
+        while wait(0) and _G.t do
+local args = {
+    [1] = "Snow",
+    [2] = "R",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpen:FireServer(unpack(args))
+        end
+    else
+        _G.t= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Lava Eggs X3", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.u= true 
+        while wait(0) and _G.u do
+local args = {
+    [1] = "Lava",
+    [2] = "R",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpen:FireServer(unpack(args))
+        end
+    else
+        _G.u= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Ocean Eggs X3", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.v= true 
+        while wait(0) and _G.v do
+local args = {
+    [1] = "Ocean",
+    [2] = "R",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpen:FireServer(unpack(args))
+        end
+    else
+        _G.v= false
     end
 end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
