@@ -319,6 +319,36 @@ game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(
         _G.f6= false
     end
 end)
+eggs:CreateToggle("Auto Buy Hell Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f7 = true 
+        while wait(0) and _G.f7 do
+local args = {
+    [1] = "Hell",
+    [2] = "Triple",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
+        end
+    else
+        _G.f7= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Atlantis Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f64 = true 
+        while wait(0) and _G.f64 do
+local args = {
+    [1] = "Atlantis",
+    [2] = "Triple",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
+        end
+    else
+        _G.f64= false
+    end
+end)
 eggs3:CreateToggle("Auto Buy 1K Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.f2 = true 
@@ -407,6 +437,36 @@ game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(
         end
     else
         _G.f62= false
+    end
+end)
+eggs3:CreateToggle("Auto Buy Hell Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f63 = true 
+        while wait(0) and _G.f63 do
+local args = {
+    [1] = "Hell",
+    [2] = "Single",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
+        end
+    else
+        _G.f63= false
+    end
+end)
+eggs3:CreateToggle("Auto Buy Atlantis Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f64 = true 
+        while wait(0) and _G.f64 do
+local args = {
+    [1] = "Atlantis",
+    [2] = "Single",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
+        end
+    else
+        _G.f64= false
     end
 end)
 eggs1:CreateToggle("Auto Buy Rebirths x1", function(arg) --the (arg) is if the checkbox is toggled or not
