@@ -154,6 +154,11 @@ _G.re = true
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.Upgrade:FireServer(unpack(args))
+local args = {
+    [1] = "JumpPower",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Upgrade:FireServer(unpack(args))
 
 local args = {
     [1] = "AutoClick"
@@ -958,7 +963,32 @@ game:GetService("ReplicatedStorage").RemoteEvents.Eclicked:FireServer(unpack(arg
         _G.g = false
     end
 end)
+eggs:CreateToggle("Auto Buy Frost Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.i= true 
+        while wait() and _G.i do
+local args = {
+    [1] = "Frost Egg",
+}
 
+game:GetService("ReplicatedStorage").RemoteEvents.Eclicked:FireServer(unpack(args))
+ end
+        _G.i = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Candy Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.h= true 
+        while wait() and _G.h do
+local args = {
+    [1] = "Candy Egg",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Eclicked:FireServer(unpack(args))
+ end
+        _G.h = false
+    end
+end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(71.7898483, 3.66993809, 83.2115402)
 end)
