@@ -81,14 +81,14 @@ end)
 
 
 
-eggs:CreateToggle("Auto Buy Last Eggs X3", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Auto Buy Last Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.b = true 
         while wait(0) and _G.b do
 
 local args = {
     [1] = game:GetService("ReplicatedStorage").Eggs["F Egg"],
-    [2] = 3,
+    [2] = 1,
 }
 
 game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
@@ -97,14 +97,14 @@ game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
         _G.b= false
     end
 end)
-eggs:CreateToggle("Auto Buy Basic Eggs X3", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Auto Buy Basic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.b = true 
         while wait(0) and _G.b do
 
 local args = {
     [1] = game:GetService("ReplicatedStorage").Eggs["Basic Egg"],
-    [2] = 3,
+    [2] = 1,
 }
 
 game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
