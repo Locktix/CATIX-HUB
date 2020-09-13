@@ -79,6 +79,44 @@ AutoTab:CreateToggle("Auto click fast", function(arg) --the (arg) is if the chec
         while wait(0) and _G.a do
             local Event = game:GetService("ReplicatedStorage").Events.GetSwing
            Event:FireServer()
+    local Event = game:GetService("ReplicatedStorage").Events.GetSwing
+           Event:FireServer()
+    local Event = game:GetService("ReplicatedStorage").Events.GetSwing
+           Event:FireServer()
+    local Event = game:GetService("ReplicatedStorage").Events.GetSwing
+           Event:FireServer()
+    local Event = game:GetService("ReplicatedStorage").Events.GetSwing
+           Event:FireServer()
+    local Event = game:GetService("ReplicatedStorage").Events.GetSwing
+           Event:FireServer()
+    local Event = game:GetService("ReplicatedStorage").Events.GetSwing
+           Event:FireServer()
+    local Event = game:GetService("ReplicatedStorage").Events.GetSwing
+           Event:FireServer()
+  local Event = game:GetService("ReplicatedStorage").Events.GetSwing
+           Event:FireServer()
+    local Event = game:GetService("ReplicatedStorage").Events.GetSwing
+           Event:FireServer()
+    local Event = game:GetService("ReplicatedStorage").Events.GetSwing
+           Event:FireServer()
+    local Event = game:GetService("ReplicatedStorage").Events.GetSwing
+           Event:FireServer()
+  local Event = game:GetService("ReplicatedStorage").Events.GetSwing
+           Event:FireServer()
+    local Event = game:GetService("ReplicatedStorage").Events.GetSwing
+           Event:FireServer()
+    local Event = game:GetService("ReplicatedStorage").Events.GetSwing
+           Event:FireServer()
+    local Event = game:GetService("ReplicatedStorage").Events.GetSwing
+           Event:FireServer()
+  local Event = game:GetService("ReplicatedStorage").Events.GetSwing
+           Event:FireServer()
+    local Event = game:GetService("ReplicatedStorage").Events.GetSwing
+           Event:FireServer()
+    local Event = game:GetService("ReplicatedStorage").Events.GetSwing
+           Event:FireServer()
+    local Event = game:GetService("ReplicatedStorage").Events.GetSwing
+           Event:FireServer()
 
         end
     else
