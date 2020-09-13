@@ -4,6 +4,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/prezt
 
 local AutoTab = Library:CreateTab("Saber Simulator GUI","things", true)
 local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
+local Boss = Library:CreateTab("Auto Boss","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
@@ -112,7 +113,7 @@ game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
         _G.b= false
     end
 end)
-AutoTab:CreateToggle("Auto Click ", function(arg)
+AutoTab:CreateToggle("Auto Click", function(arg)
     if arg then
         _G.AutoSwing2 = true
       
@@ -127,16 +128,16 @@ AutoTab:CreateToggle("Auto Click ", function(arg)
         _G.AutoSwing2 = false
     end
 end)
-AutoTab:CreateButton("⚠️use this when⚠️", function() --you dont need "arg" for a button
+Boss:CreateButton("⚠️use this when⚠️", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(793.609009, 249.786087, 33.3503723)
 end)
-AutoTab:CreateButton("⚠️you hit the boss⚠️", function() --you dont need "arg" for a button
+Boss:CreateButton("⚠️you hit the boss⚠️", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(793.609009, 249.786087, 33.3503723)
 end)
-AutoTab:CreateButton("(⚠️Auto Click (animation)⚠️)", function() --you dont need "arg" for a button
+Boss:CreateButton("(⚠️Auto Click (animation)⚠️)", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(793.609009, 249.786087, 33.3503723)
 end)
-AutoTab:CreateToggle("Auto Click (animation) ", function(arg)
+Boss:CreateToggle("Auto Click (animation) ", function(arg)
     if arg then
         _G.AutoSwing = true
         local BladeName = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name
@@ -571,7 +572,7 @@ else
   _G.f = false
 end
 end)
-AutoTab:CreateToggle("Auto Boss", function(arg)
+Boss:CreateToggle("Auto Boss", function(arg)
 if arg then
 _G.bossc = true
  while wait() and _G.bossc do
