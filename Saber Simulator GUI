@@ -640,15 +640,18 @@ end)
 teleports:CreateToggle("KOTH", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(793.609009, 249.786087, 33.3503723)
 end)
-teleports:CreateToggle("Auto Sell IMPOSSIBLE Arrest", function() --you dont need "arg" for a button
+AutoTab:CreateToggle("Auto Sell", function(arg)
+      if arg then--you dont need "arg" for a button
 _G.f3= true 
 while wait(0) and _G.f3 do
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(532.235901, 214.493591, 149.810486)
 wait(0.5)
 end
-  _G.f2 = false
-
+else
+  _G.f3 = false
+end
 end)
+
 --| Anti KICK |
 local mt = getrawmetatable(game)
 local old = mt.__namecall
