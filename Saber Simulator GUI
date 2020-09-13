@@ -112,7 +112,31 @@ game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
         _G.b= false
     end
 end)
-AutoTab:CreateToggle("Auto Click", function(arg)
+AutoTab:CreateToggle("Auto Click ", function(arg)
+    if arg then
+        _G.AutoSwing2 = true
+      
+      while wait(0) and _G.AutoSwing2 do
+            
+                game:GetService("ReplicatedStorage").Events.Clicked:FireServer()
+               
+         
+           
+        end
+    else
+        _G.AutoSwing2 = false
+    end
+end)
+AutoTab:CreateButton("⚠️use this when⚠️", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(793.609009, 249.786087, 33.3503723)
+end)
+AutoTab:CreateButton("⚠️you hit the boss⚠️", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(793.609009, 249.786087, 33.3503723)
+end)
+AutoTab:CreateButton("(⚠️Auto Click (animation)⚠️)", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(793.609009, 249.786087, 33.3503723)
+end)
+AutoTab:CreateToggle("Auto Click (animation) ", function(arg)
     if arg then
         _G.AutoSwing = true
         local BladeName = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name
