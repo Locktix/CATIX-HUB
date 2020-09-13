@@ -958,7 +958,7 @@ local args = {
     [1] = "Heaven Egg",
 }
 
-game:GetService("ReplicatedStorage").RemoteEvents.Eclicked:FireServer(unpack(args))
+game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
  end
         _G.g = false
     end
@@ -971,7 +971,7 @@ local args = {
     [1] = "Frost Egg",
 }
 
-game:GetService("ReplicatedStorage").RemoteEvents.Eclicked:FireServer(unpack(args))
+game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
  end
         _G.i = false
     end
@@ -984,7 +984,7 @@ local args = {
     [1] = "Candy Egg",
 }
 
-game:GetService("ReplicatedStorage").RemoteEvents.Eclicked:FireServer(unpack(args))
+game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
  end
         _G.h = false
     end
