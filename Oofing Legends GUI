@@ -5,7 +5,8 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/prezt
 
 local AutoTab = Library:CreateTab("Oofing Legends GUI","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
-local rebirths = Library:CreateTab("Auto Rebirth","things", true)
+local rebirths = Library:CreateTab("Auto Rebirth 1","things", true)
+local rebirths2 = Library:CreateTab("Auto Rebirth,2","things", true)
 local eggs = Library:CreateTab("Auto Buy Eggs x3","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
@@ -382,7 +383,7 @@ game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(a
         _G.o7= false
     end
 end)
-rebirths:CreateToggle("Auto Rebirths x250B", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirths2:CreateToggle("Auto Rebirths x250B", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.o8= true 
         while wait(0) and _G.o8 do
@@ -396,7 +397,7 @@ game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(a
         _G.o8= false
     end
 end)
-rebirths:CreateToggle("Auto Rebirths x1T", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirths2:CreateToggle("Auto Rebirths x1T", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.o9= true 
         while wait(0) and _G.o9 do
@@ -410,7 +411,7 @@ game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(a
         _G.o9= false
     end
 end)
-rebirths:CreateToggle("Auto Rebirths x5T", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirths2:CreateToggle("Auto Rebirths x5T", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.o10= true 
         while wait(0) and _G.o10 do
@@ -424,7 +425,7 @@ game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(a
         _G.o10= false
     end
 end)
-rebirths:CreateToggle("Auto Rebirths x45T", function(arg) --the (arg) is if the checkbox is toggled or not
+rebirths2:CreateToggle("Auto Rebirths x45T", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.o11= true 
         while wait(0) and _G.o11 do
