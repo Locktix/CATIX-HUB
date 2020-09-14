@@ -159,9 +159,41 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes.Potions:FireServer(unpack(args))
+local args = {
+    [1] = "100x Clicks",
+    [2] = "1 MIN",
+}
+
+game:GetService("ReplicatedStorage").Remotes.Potions:FireServer(unpack(args))
+
+local args = {
+    [1] = "100x Clicks",
+    [2] = "10 MIN",
+}
+
+game:GetService("ReplicatedStorage").Remotes.Potions:FireServer(unpack(args))
+
+local args = {
+    [1] = "100x Clicks",
+    [2] = "1 HOUR",
+}
+
+game:GetService("ReplicatedStorage").Remotes.Potions:FireServer(unpack(args))
 
 local args = {
     [1] = "2x Gems",
+    [2] = "10 MIN",
+}
+
+game:GetService("ReplicatedStorage").Remotes.Potions:FireServer(unpack(args))
+local args = {
+    [1] = "2x Rebirths",
+    [2] = "10 MIN",
+}
+
+game:GetService("ReplicatedStorage").Remotes.Potions:FireServer(unpack(args))
+local args = {
+    [1] = "2x Luck",
     [2] = "10 MIN",
 }
 
