@@ -106,11 +106,14 @@ game:GetService("ReplicatedStorage").GetOof:FireServer(unpack(args))
         _G.b= false
     end
 end)
-AutoTab:CreateToggle("Sell X3", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-777.169312, 80.1189575, 843.605652)
+AutoTab:CreateToggle("Sell X3", function(arg) --you dont need "arg" for a button
+      if arg then
+        _G.dd = true 
+        while wait(0) and _G.dd do
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-776.154419, 87.553688, 845.50116)
  end
     else
-        _G.b= false
+        _G.dd= false
     end
 end)
 rebirths:CreateToggle("Auto Rebirths x1", function(arg) --the (arg) is if the checkbox is toggled or not
