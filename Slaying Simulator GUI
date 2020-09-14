@@ -25,15 +25,15 @@ credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "a
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("bsoleil31FR[inchala ptn]#9001", function() --you dont need "arg" for a button
+credits:CreateButton("bsoleil31FR#7202", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("https://discord.gg/PdUTrVG", function() --you dont need "arg" for a button
+credits:CreateButton("https://discord.gg/m9Nn3qd", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("Bebo Mods#9619", function() --you dont need "arg" for a button
+credits:CreateButton("Bebo Mods#1110", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
@@ -592,128 +592,217 @@ Remote:InvokeServer(unpack(Arguments))
         _G.zc = false
     end
 end)
-
-teleboss:CreateToggle("Tp to Boss 1", function(arg) --the (arg) is if the checkbox is toggled or not
+teleboss:CreateButton("😎Bosses Normal Zone😎", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(n)
+end)
+teleboss:CreateToggle("Auto Kill Overlord", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zd = true 
         while wait(0) and _G.zd do
-            game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(305.458618, 32.35532, 45.1282539)
+       local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies.Overlord[" "].LeftUpperLeg
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
         end
     else
         _G.zd = false
     end
 end)
 
-teleboss:CreateToggle("Tp to Boss 2", function(arg) --the (arg) is if the checkbox is toggled or not
+teleboss:CreateToggle("Auto Kill Werewolf", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.ze = true 
         while wait(0) and _G.ze do
-            game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(307.998779, 4.23155975, 379.949402)
+         local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies.Werewolf[" "].LeftUpperLeg
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
         end
     else
         _G.ze = false
     end
 end)
 
-teleboss:CreateToggle("Tp to Boss 3", function(arg) --the (arg) is if the checkbox is toggled or not
+teleboss:CreateToggle("Auto Kill Cactus King", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zf = true 
         while wait(0) and _G.zf do
-            game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(299.836731, 39.3205032, 720.140198)
+              local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Cactus King"][" "].LeftUpperLeg
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
         end
     else
         _G.zf = false
     end
 end)
 
-teleboss:CreateToggle("Tp to Boss 4", function(arg) --the (arg) is if the checkbox is toggled or not
+teleboss:CreateToggle("Auto Kill Guest", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zg = true 
         while wait(0) and _G.zg do
-            game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(315.777832, 3.66993737, 1051.15869)
+           local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies.Guest[" "].LeftUpperLeg
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
         end
     else
         _G.zg = false
     end
 end)
 
-teleboss:CreateToggle("Tp to Boss 5", function(arg) --the (arg) is if the checkbox is toggled or not
+teleboss:CreateToggle("Auto Kill Gingerbread Man", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zh = true 
         while wait(0) and _G.zh do
-            game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(318.711182, 3.66993737, 1380.13013)
+                 local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Gingerbread Man"][" "].LeftUpperLeg
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
         end
     else
         _G.zh = false
     end
 end)
 
-teleboss:CreateToggle("Tp to Boss 6", function(arg) --the (arg) is if the checkbox is toggled or not
+teleboss:CreateToggle("Auto Kill Frost Guard", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zi = true 
         while wait(0) and _G.zi do
-            game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(322.233307, 3.66993737, 1715.58618)
+                          local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Frost Guard"][" "].LeftUpperLeg
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
         end
     else
         _G.zi = false
     end
 end)
 
-teleboss:CreateToggle("Tp to Boss 7", function(arg) --the (arg) is if the checkbox is toggled or not
+teleboss:CreateToggle("Auto Kill Flame Guard", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zj = true 
         while wait(0) and _G.zj do
-            game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(323.681458, 3.66993833, 2037.65222)
+                       local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Flame Guard"][" "].LeftUpperLeg
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
         end
     else
         _G.zj = false
     end
 end)
 
-teleboss:CreateToggle("Tp to Boss 8", function(arg) --the (arg) is if the checkbox is toggled or not
+teleboss:CreateToggle("Auto Kill Deathspeaker", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zk = true 
         while wait(0) and _G.zk do
-            game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(329.13092, 3.66993737, 2379.9563)
+                  local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies.Deathspeaker[" "].LeftUpperLeg
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
         end
     else
         _G.zk = false
     end
 end)
 
-teleboss:CreateToggle("Tp to Boss 9", function(arg) --the (arg) is if the checkbox is toggled or not
+teleboss:CreateToggle("Auto Kill Redcliff Emperor", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zl = true 
         while wait(0) and _G.zl do
-            game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-167.896286, 7.40707064, 2730.71582)
+                  local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Redcliff Emperor"][" "].LeftUpperLeg
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
         end
     else
         _G.zl = false
     end
 end)
 
-teleboss:CreateToggle("Tp to Boss 10", function(arg) --the (arg) is if the checkbox is toggled or not
+teleboss:CreateToggle("Auto Kil Yeti", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zm = true 
         while wait(0) and _G.zm do
-            game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-153.645447, 39.7551155, 3079.5769)
+          local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies.Yeti[" "].LeftUpperLeg
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
         end
     else
         _G.zm = false
     end
 end)
 
-teleboss:CreateToggle("Tp to Boss 11", function(arg) --the (arg) is if the checkbox is toggled or not
+teleboss:CreateToggle("Auto Kill Crackop", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zn = true 
         while wait(0) and _G.zn do
-          game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(272.920837, 3.66993737, 3332.96704)
+     
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies.Crackop[" "].LeftUpperLeg
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+
         end
     else
         _G.zn = false
     end
 end)
 
+teleboss:CreateButton("☸️Bosses Rebirths Zone☸️", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(n)
+end)
+teleboss:CreateToggle("Auto Kill Mech Golem", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zo = true 
+        while wait(0) and _G.zo do
+     
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Mech Golem"][" "].LeftUpperLeg
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+
+        end
+    else
+        _G.zo = false
+    end
+end)
+teleboss:CreateToggle("Auto Kill Dark Wizard", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zp = true 
+        while wait(0) and _G.zp do
+     
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Dark Wizard"][" "].LeftUpperLeg
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+
+        end
+    else
+        _G.zp = false
+    end
+end)
+teleboss:CreateToggle("Auto Kill Dragon Lord", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zq = true 
+        while wait(0) and _G.zq do
+     
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Dragon Lord"][" "].LeftUpperLeg
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+
+        end
+    else
+        _G.zq = false
+    end
+end)
 AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:Destroy()
 end)
@@ -781,6 +870,40 @@ end)
 teleports:CreateButton("Rebirth", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-576.784973, 3.67250776, 195.895569)
 end)
+--| Anti KICK |
+local mt = getrawmetatable(game)
+local old = mt.__namecall
+local protect = newcclosure or protect_function
+
+if not protect then
+protect = function(f) return f end
+end
+
+setreadonly(mt, false)
+mt.__namecall = protect(function(self, ...)
+local method = getnamecallmethod()
+if method == "Kick" then
+wait(9e9)
+return
+end
+return old(self, ...)
+end)
+hookfunction(game:GetService("Players").LocalPlayer.Kick,protect(function() wait(9e9)
+ end))
+
+--| Anti AFK |
+   local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+
+--| Anti Ban |
+setfflag("DFStringCrashPadUploadToBacktraceToBacktraceBaseUrl", "")
+setfflag("DFIntCrashUploadToBacktracePercentage", "0")
+setfflag("DFStringCrashUploadToBacktraceBlackholeToken", "")
+setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
 
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
@@ -789,3 +912,22 @@ end)
         Virtual:ClickButton2(Vector2.new())
         wait(2)
     end)
+
+--| Anti Chat Logs |
+local CloneFunction = clonefunction
+local CheckCaller = CloneFunction(checkcaller)
+local HookFunction = CloneFunction(hookfunction)
+local LocalPlayer = game.Players.PlayerAdded:wait()
+
+local PostMessage = require(LocalPlayer:WaitForChild("PlayerScripts", 1/0):WaitForChild("ChatScript", 1/0):WaitForChild("ChatMain", 1/0)).MessagePosted
+getgenv().MessageEvent = Instance.new("BindableEvent")
+
+local OldFunctionHook
+local PostMessageHook = function(self, msg)
+   if not CheckCaller() and self == PostMessage then
+       MessageEvent:Fire(msg)
+       return
+   end
+   return OldFunctionHook(self, msg)
+end
+OldFunctionHook = HookFunction(PostMessage.fire, PostMessageHook)
