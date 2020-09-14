@@ -5,6 +5,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/prezt
 
 local AutoTab = Library:CreateTab("Slamming-Simulator GUI","things", true)
 local eggs = Library:CreateTab("Auto Buy Eggs X1","things", true)
+local Bosses = Library:CreateTab("Auto Kill Bosses","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
@@ -210,6 +211,21 @@ game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Eve
         _G.e= false
     end
 end)
+AutoTab:CreateToggle("Auto Sell X4", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e = true 
+        while wait(0) and _G.e do
+local args = {
+    [1] = "SellStrength",
+    [2] = "Autumn",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateDNA:FireServer(unpack(args))
+        end
+    else
+        _G.e= false
+    end
+end)
 AutoTab:CreateToggle("Auto Buy Tools", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.f = true 
@@ -233,37 +249,82 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateTools:FireServer(unpack(args))
+local args = {
+    [1] = "BuyAllTools",
+    [2] = "Autumn",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateTools:FireServer(unpack(args))
         end
     else
         _G.f= false
     end
 end)
-AutoTab:CreateToggle("Auto Buy DNA", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateToggle("Auto Buy Dnas", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.g = true 
-        while wait(0) and _G.g do
+        _G.f = true 
+        while wait(0) and _G.f do
 
 local args = {
     [1] = "BuyAllDNA",
     [2] = "Home",
 }
 
-game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateDNA:FireServer(unpack(args))
-local args = {
-    [1] = "BuyAllDNA",
-    [2] = "Desert",
-}
-
-game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateDNA:FireServer(unpack(args))
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateTools:FireServer(unpack(args))
 local args = {
     [1] = "BuyAllDNA",
     [2] = "Magma",
 }
 
-game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateDNA:FireServer(unpack(args))
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateTools:FireServer(unpack(args))
+local args = {
+    [1] = "BuyAllDNA",
+    [2] = "Desert",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateTools:FireServer(unpack(args))
+local args = {
+    [1] = "BuyAllDNA",
+    [2] = "Autumn",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateTools:FireServer(unpack(args))
         end
     else
-        _G.g= false
+        _G.f= false
+    end
+end)
+AutoTab:CreateToggle("Auto Buy Bosses Hits", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.g2 = true 
+        while wait(0) and _G.g2 do
+local args = {
+    [1] = "BuyAllBossHits",
+    [2] = "Home",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateBossHits:FireServer(unpack(args))
+local args = {
+    [1] = "BuyAllBossHits",
+    [2] = "Mamma",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateBossHits:FireServer(unpack(args))
+local args = {
+    [1] = "BuyAllBossHits",
+    [2] = "Desert",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateBossHits:FireServer(unpack(args))
+local args = {
+    [1] = "BuyAllBossHits",
+    [2] = "Autumn",
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateBossHits:FireServer(unpack(args))
+        end
+    else
+        _G.g2= false
     end
 end)
 
@@ -361,6 +422,19 @@ game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Eve
         end
     else
         _G.o= false
+    end
+end)
+Bosses:CreateToggle("Auto Kill Boss Spawn", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.p = true 
+        while wait(0) and _G.p do
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Worlds.Home.Boss["5b3c1b4d-5f98-4d60-a6c5-a8794883de1b"].Torso
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+        end
+    else
+        _G.p= false
     end
 end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
