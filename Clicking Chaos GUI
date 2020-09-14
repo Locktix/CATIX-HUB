@@ -36,6 +36,42 @@ game:GetService("CoreGui").uiui:nothing()
 end)
 
 
+teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-196.585602, 36.2450066, 7.58795643)
+end)
+
+
+teleports:CreateButton("Desert Island", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-4659.53516, -164.634216, 116.461639)
+end)
+teleports:CreateButton("Snow Island", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3296.2583, -164.120377, 121.481377)
+end)
+teleports:CreateButton("Volcano land", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1716.2583, -164.253632, 81.4813766)
+end)
+teleports:CreateButton("Beach land", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-626.705078, -295.796082, 1520.94714)
+end)
+
+teleports:CreateButton("Atlantis land", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(586.399109, -299.555908, 1541.36682)
+end)
+teleports:CreateButton("Candy land", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1815.56982, -298.64444, 1557.1189)
+end)
+teleports:CreateButton("Wild West", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-621.424194, -298.77356, 3032.49243)
+end)
+teleports:CreateButton("Golden Kingdoms", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(971.733337, -299.555908, 3345.86353)
+end)
+teleports:CreateButton("Void Dimension", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2437.2959, -299.042084, 3356.53467)
+end)
+teleports:CreateButton("Samurai Temple", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2404.30493, -299.555908, 2208.99902)
+end)
 MISC:CreateToggle("NO CLIP Press(E)", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
 _G.NO = true 
@@ -239,6 +275,9 @@ game:GetService("ReplicatedStorage").Remotes.Upgrades:FireServer(unpack(args))
     else
         _G.up = false
     end
+end)
+AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:Destroy()
 end)
 
 
@@ -460,7 +499,7 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-117.166
         _G.c11 = false
     end
 end)
-Rebirths:CreateToggle("Rebirths x1 ", function(arg) --the (arg) is if the checkbox is toggled or not
+Rebirths:CreateToggle("Rebirths x1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.r = true 
         while wait(0) and _G.r do
@@ -478,7 +517,7 @@ game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
     end
 end)
 
-Rebirths:CreateToggle("Rebirths x10 ", function(arg) --the (arg) is if the checkbox is toggled or not
+Rebirths:CreateToggle("Rebirths x10", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.r10 = true 
         while wait(0) and _G.r10 do
@@ -496,7 +535,7 @@ game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
     end
 end)
 
-Rebirths:CreateToggle("Rebirths x25 ", function(arg) --the (arg) is if the checkbox is toggled or not
+Rebirths:CreateToggle("Rebirths x25", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.r25 = true 
         while wait(0) and _G.r25 do
@@ -514,7 +553,7 @@ game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
     end
 end)
 
-Rebirths:CreateToggle("Rebirths x50 ", function(arg) --the (arg) is if the checkbox is toggled or not
+Rebirths:CreateToggle("Rebirths x50", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.r50 = true 
         while wait(0) and _G.r50 do
@@ -693,48 +732,42 @@ game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
 end)
 
 
-teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-196.585602, 36.2450066, 7.58795643)
+
+
+--| Anti KICK |
+local mt = getrawmetatable(game)
+local old = mt.__namecall
+local protect = newcclosure or protect_function
+
+if not protect then
+protect = function(f) return f end
+end
+
+setreadonly(mt, false)
+mt.__namecall = protect(function(self, ...)
+local method = getnamecallmethod()
+if method == "Kick" then
+wait(9e9)
+return
+end
+return old(self, ...)
+end)
+hookfunction(game:GetService("Players").LocalPlayer.Kick,protect(function() wait(9e9)
+ end))
+
+--| Anti AFK |
+   local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end)
 
-teleports:CreateButton("Upgrades", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-46.0443878, 36.2450027, -15.8361883)
-end)
-
-teleports:CreateButton("Desert Island", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-4659.53516, -164.634216, 116.461639)
-end)
-teleports:CreateButton("Snow Island", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3296.2583, -164.120377, 121.481377)
-end)
-teleports:CreateButton("Volcano land", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1716.2583, -164.253632, 81.4813766)
-end)
-teleports:CreateButton("Beach land", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-626.705078, -295.796082, 1520.94714)
-end)
-
-teleports:CreateButton("Atlantis land", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(586.399109, -299.555908, 1541.36682)
-end)
-teleports:CreateButton("Candy land", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1815.56982, -298.64444, 1557.1189)
-end)
-teleports:CreateButton("Wild West", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-621.424194, -298.77356, 3032.49243)
-end)
-teleports:CreateButton("Golden Kingdoms", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(971.733337, -299.555908, 3345.86353)
-end)
-teleports:CreateButton("Void Dimension", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2437.2959, -299.042084, 3356.53467)
-end)
-teleports:CreateButton("Samurai Temple", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2404.30493, -299.555908, 2208.99902)
-end)
-AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:Destroy()
-end)
+--| Anti Ban |
+setfflag("DFStringCrashPadUploadToBacktraceToBacktraceBaseUrl", "")
+setfflag("DFIntCrashUploadToBacktracePercentage", "0")
+setfflag("DFStringCrashUploadToBacktraceBlackholeToken", "")
+setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
 
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
@@ -743,3 +776,22 @@ end)
         Virtual:ClickButton2(Vector2.new())
         wait(2)
     end)
+
+--| Anti Chat Logs |
+local CloneFunction = clonefunction
+local CheckCaller = CloneFunction(checkcaller)
+local HookFunction = CloneFunction(hookfunction)
+local LocalPlayer = game.Players.PlayerAdded:wait()
+
+local PostMessage = require(LocalPlayer:WaitForChild("PlayerScripts", 1/0):WaitForChild("ChatScript", 1/0):WaitForChild("ChatMain", 1/0)).MessagePosted
+getgenv().MessageEvent = Instance.new("BindableEvent")
+
+local OldFunctionHook
+local PostMessageHook = function(self, msg)
+   if not CheckCaller() and self == PostMessage then
+       MessageEvent:Fire(msg)
+       return
+   end
+   return OldFunctionHook(self, msg)
+end
+OldFunctionHook = HookFunction(PostMessage.fire, PostMessageHook)
