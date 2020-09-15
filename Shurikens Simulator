@@ -110,45 +110,53 @@ game:GetService("Players")["LocalPlayer"].PlayerGui.MainGui.AbilityShop.Interact
         _G.c= false
     end
 end)
-AutoTab:CreateToggle("Auto Sell X1", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.dd = true 
-        while wait(0) and _G.dd do
-local children = game.Workspace:GetChildren()
-    for _, child in pairs(children) do
-        for _, child in pairs(child:GetChildren()) do
-            table.insert(children, child)
-         end
-         if child:IsA("BasePart") and child.Name == "Sell" then
-            child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-        end
-    end
-        end
-    else
-        _G.dd= false
-    end
+
+
+AutoTab:CreateButton("auto CLick Software", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(nothing)
 end)
-AutoTab:CreateToggle("Auto Jump Arrest impossible", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateToggle("Auto kill Boss", function(arg)
     if arg then
-_G.za = true 
-        while wait(0) and _G.za do
-while true do wait(0)
-game.Players.LocalPlayer.Character.Humanoid.Jump = true
+  _G.bo = true 
+        while wait(0) and _G.bo do
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3649.34302, 1405.11243, 440.703186)
+
+   end
+    else
+        _G.bo= false
+ end
+end)
+AutoTab:CreateToggle("Sell x2", function(arg) --you dont need "arg" for a button
+    if arg then
+  _G.bo2 = true 
+        while wait(0) and _G.bo2 do
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3736.99976, 353.451599, -1346.58679)
+wait(0)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3723.06055, 353.45163, -1359.41016)
+   end
+    else
+        _G.bo2= false
+ end
+end)
+AutoTab:CreateToggle("Auto Run Script", function(arg) --you dont need "arg" for a button
+    if arg then
+  _G.bo2 = true 
+        while wait(0) and _G.bo2 do
+
 end
-           end
-  else
-    
-        _G.za = false
-    end
+   end
+    else
+        _G.bo2= false
+ end
 end)
 eggs:CreateToggle("Eggs 1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.d = true 
-        while wait(0) and _G.d do
+        _G.c2 = true 
+        while wait(0) and _G.c2 do
 game:GetService("Players")["LocalPlayer"].PlayerGui["machine1"].ReceivePet:InvokeServer()
         end
     else
-        _G.d= false
+        _G.c2= false
     end
 end)
 
@@ -257,10 +265,6 @@ teleports:CreateButton("VIP zONE", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-172.820267, 9.21469307, 108.442383)
 end)
 
-teleports:CreateButton("Sell x2", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3733.61646, 353.209534, -1341.34241)
-end)
-
 teleports:CreateButton("Shurikens Shop 1", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(79.0844803, 2.23011112, -73.435997)
 end)
@@ -271,15 +275,6 @@ end)
 
 teleports:CreateButton("Shurikens Reinforcement", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-22.8163586, 4.54502439, -19.8480854)
-end)
-teleports:CreateButton("Last Islands", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3646.82764, 1414.93005, 420.575806)
-end)
-teleports:CreateButton("Just Tp to And Use", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(nothing)
-end)
-teleports:CreateButton("auto CLick Software", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(nothing)
 end)
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
