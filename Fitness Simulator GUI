@@ -11419,21 +11419,17 @@ AutoTab:CreateToggle("Auto Magma Boss Kill Aura ", function(arg) --the (arg) is 
         _G.j  =false
     end
 end)
-AutoTab:CreateToggle("Disable Pop Ups ", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.j2= true 
-        while wait(0) and _G.j2 do
-  local function rebuild(text)
-                box:FindFirstChild('Box').Container.ScrollBarThickness = 0
-                for i, child in next, box:FindFirstChild('Box').Container:GetChildren() do
-                    if (not child:IsA('UIListLayout')) then
-                        child:Destroy();
-                    end
-                end
-        end
-    else
-        _G.j2  =false
-    end
+AutoTab:CreateButton("Disable Pop Ups ", function() --the (arg) is if the checkbox is toggled or not
+ for i,v in pairs(game:GetService("ReplicatedStorage").Assets.UI:GetChildren()) do
+
+       if v.Name == "Sell Effect" or v.Name == "Effect" then
+
+           v:Destroy()
+
+       end
+
+   end
+
 end)
 eggs:CreateButton("Auto Buy Normal Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
@@ -11626,7 +11622,7 @@ end
     end
 end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1691.21399, 27.4616146, -5681.1333)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-70.135849, 40.6160431, -8.74903297)
 end)
 
 
@@ -11635,7 +11631,7 @@ teleports:CreateToggle("Best Zone", function(arg) --you dont need "arg" for a bu
    if arg then
 _G.zd= true 
         while wait(0) and _G.zd do
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1689.25916, 27.4623146, -3887.64136)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1970.37158, 1801.73694, 1426.20056)
 end
     else
         _G.zd  =false
