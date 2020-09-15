@@ -239,6 +239,20 @@ else
 _G.bo2 = false
 end
 end)
+Kill3:CreateToggle("Hit Box Extender 100", function(arg)
+if arg then
+_G.bo3 = true
+ while wait() and _G.bo3 do
+ 
+for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+    v.HumanoidRootPart.Size = Vector3.new(35, 35, 35)
+    v.HumanoidRootPart.Transparency = 0.5
+end
+end
+else
+_G.bo3 = false
+end
+end)
 Kill1:CreateToggle("Kill Military Soldier [Lv. 300]", function(arg)
 if arg then
 _G.bossc22 = true
