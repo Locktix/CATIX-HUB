@@ -11365,34 +11365,6 @@ me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, 
         _G.d= false
     end
 end)
-AutoTab:CreateToggle("Auto Rebirths IDK WORK", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.d22 = true 
-         while wait(0) and _G.d22 do
-local args = {
-    [1] = 1,
-}
-
-game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.GameService.RebirthRequest
-        end
-    else
-        _G.d22= false
-    end
-end)
-AutoTab:CreateToggle("Auto Mass Skills IDK WORK", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.d23 = true 
-         while wait(0) and _G.d23 do
-local args = {
-    [1] = 1,
-}
-
-game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.GameService.MassUpgradeSkills
-        end
-    else
-        _G.d23= false
-    end
-end)
 crates:CreateToggle("Auto Buy Crate 1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e = true 
