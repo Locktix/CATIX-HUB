@@ -369,7 +369,21 @@ game:GetService("ReplicatedStorage").Remotes.OpenEgg:InvokeServer(unpack(args))
         _G.s = false
     end
 end)
+eggs:CreateToggle("Auto Buy 500Qdc Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.m18 = true 
+        while wait(0) and _G.m18 do
+            local args = {
+    [1] = "Volcanic Egg",
+    [2] = 1,
+}
 
+game:GetService("ReplicatedStorage").Remotes.OpenEgg:InvokeServer(unpack(args))
+        end
+    else
+        _G.m18 = false
+    end
+end)
 eggs2:CreateToggle("Auto Buy 500 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.b1 = true 
@@ -662,7 +676,21 @@ game:GetService("ReplicatedStorage").Remotes.OpenEgg:InvokeServer(unpack(args))
         _G.m3 = false
     end
 end)
+eggs2:CreateToggle("Auto Buy 500Qdc Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.m4 = true 
+        while wait(0) and _G.m4 do
+            local args = {
+    [1] = "Volcanic Egg",
+    [2] = 3,
+}
 
+game:GetService("ReplicatedStorage").Remotes.OpenEgg:InvokeServer(unpack(args))
+        end
+    else
+        _G.m4 = false
+    end
+end)
 Rebirth:CreateToggle("Auto Rebirth x1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.p = true 
@@ -1444,7 +1472,9 @@ end)
 teleports:CreateButton("Fate World", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1343.25354, -54.1499481, -11820.9287)
 end)
-
+teleports:CreateButton("Volcanic World", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1553.34338, -195.605164, -13214.4844)
+end)
 eggs2:CreateToggle("BEST Eggs x200 by sec", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.m3 = true 
