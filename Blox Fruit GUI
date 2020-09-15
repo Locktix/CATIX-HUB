@@ -1,0 +1,1540 @@
+--https://www.roblox.com/games/2753915549/UPDATE-11-Blox-Fruits#
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
+
+local AutoTab = Library:CreateTab("Blox-Fruits GUI","things", true)
+local Kill1 = Library:CreateTab("Auto Tp To Mobs 1","things", true)
+local Kill2 = Library:CreateTab("Auto Tp To Mobs 2","things", true)
+local Kill3 = Library:CreateTab("Auto Tp To Mobs 3","things", true)
+local quest = Library:CreateTab("Auto Quests 1","things", true)
+local quest2 = Library:CreateTab("Auto Quests 2","things", true)
+local MISC = Library:CreateTab("MISC","things", true)
+local credits = Library:CreateTab("Credits","things", true)
+
+
+credits:CreateButton("Our Discords", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("masterkyllian#1723", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("bsoleil31FR#7202", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("https://discord.gg/m9Nn3qd", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("Bebo Mods#1110", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+
+AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:Destroy()
+end)
+
+
+MISC:CreateToggle("NO CLIP Press(E)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.NO = true 
+  noclip = false
+game:GetService('RunService').Stepped:connect(function()
+if noclip then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+plr = game.Players.LocalPlayer
+mouse = plr:GetMouse()
+mouse.KeyDown:connect(function(key)
+
+if key == "e" then
+noclip = not noclip
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+print('Created by FileExplorer')
+print('Credits to Peyton for the ChangeState part of this script')
+
+         
+else
+_G.NO = false
+end
+end)
+
+MISC:CreateToggle("Speed Hack 100", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.Speed = true 
+        while wait() and _G.Speed do
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+        end
+    else
+        _G.Speed = false
+           game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
+         end
+end)
+AutoTab:CreateButton("Use Auto Click", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(n)
+end)
+AutoTab:CreateToggle("TP to Chest", function(arg)
+if arg then
+_G.cc = true
+ while wait(0) and _G.cc do
+local hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
+for i , v in pairs (workspace:GetDescendants()) do
+  local obj = v
+  if string.find(obj.Name, "Chest") then
+      hrp.CFrame = obj.CFrame + Vector3.new(0,4,0)
+      wait(0.5)
+  end
+end
+
+
+end
+else
+_G.cc = false
+end
+end)
+
+AutoTab:CreateToggle("Auto Add Melee Points", function(arg)
+if arg then
+_G.b = true
+ while wait() and _G.b do
+local args = {
+    [1] = "AddPoint",
+    [2] = "Melee",
+    [3] = 1,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+
+end
+else
+_G.b = false
+end
+end)
+AutoTab:CreateToggle("Auto Add Defense Points", function(arg)
+if arg then
+_G.c = true
+ while wait() and _G.c do
+
+local args = {
+    [1] = "AddPoint",
+    [2] = "Defense",
+    [3] = 1,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+
+end
+else
+_G.c = false
+end
+end)
+AutoTab:CreateToggle("Auto Add Sword Points", function(arg)
+if arg then
+_G.d= true
+ while wait() and _G.d do
+
+local args = {
+    [1] = "AddPoint",
+    [2] = "Sword",
+    [3] = 1,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+
+end
+else
+_G.d = false
+end
+end)
+
+AutoTab:CreateToggle("Auto Add Blox Fruits Points", function(arg)
+if arg then
+_G.f = true
+ while wait() and _G.f do
+local args = {
+    [1] = "AddPoint",
+    [2] = "Demon Fruit",
+    [3] = 1,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+
+end
+else
+_G.f = false
+end
+end)
+AutoTab:CreateButton("IDK WORK", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(m)
+end)
+AutoTab:CreateButton("Tp To Demon Fruit", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1027.58875, 19.3245106, 1367.28564, -0.987686276, 0, -0.156449571, 0, 1, 0, 0.156449571, 0, -0.987686276)
+wait()
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-582.941345, 6.70024586, 1713.93726, 0.965929627, 0, 0.258804798, 0, 1, 0, -0.258804798, 0, 0.965929627)
+wait()
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1094.14587, 5.28642607, 4192.88721, -0.499959469, 0, -0.866048813, 0, 1, 0, 0.866048813, 0, -0.499959469)
+wait()
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(3905.573, 12.0511103, -1941.39319, -0.731321454, 0, 0.682033002, 0, 1, 0, -0.682033002, 0, -0.731321454)
+wait()
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1120.14856, 4.60001373, 3855.31763, 0.965929627, -0, -0.258804798, 0, 1, -0, 0.258804798, 0, 0.965929627)
+wait()
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1255.14795, 11.7000084, 349.906677, -0.173624277, 0, 0.984811902, 0, 1, 0, -0.984811902, 0, -0.173624277)
+wait()
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-4967.83691, 718.535278, -2623.84326, 0.499959469, -0, -0.866048813, 0, 1, -0, 0.866048813, 0, 0.499959469)
+wait()
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-7946.89844, 5546.35449, -318.856445, 0.998631775, -0, -0.0522932447, 0, 1, -0, 0.0522932447, 0, 0.998631775)
+wait()
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-5193.35498, 5.43863821, 8569.56348, 0.951068401, 0, 0.308980465, 0, 1, 0, -0.308980465, 0, 0.951068401)
+wait()
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2850.20068, 7.39224768, 5354.99268, -0.954083323, -1.9546686e-08, 0.299541265, -6.63746391e-09, 1, 4.41140955e-08, -0.299541265, 4.01003284e-08, -0.954083323)
+wait()
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1332.94006, 6.35386896, -2896.56055, -0.66911006, 0, 0.743163466, 0, 1, 0, -0.743163466, 0, -0.66911006)
+wait()
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-4828.9751, 20.6520367, 4374.35791, -0.921316385, 5.66178571e-09, 0.388813794, -1.90244229e-08, 1, -5.96411383e-08, -0.388813794, -6.23453147e-08, -0.921316385)
+wait()
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(5136.59277, 3.53421545, 785.520813, 0.392495215, 1.79353155e-08, -0.919754028, 5.72389602e-09, 1, 2.19427321e-08, 0.919754028, -1.38769947e-08, 0.392495215)
+wait()
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2573.3374, 6.88881826, 2046.99817, 0.0315897427, -3.02629779e-08, 0.99950093, -1.61048472e-08, 1, 3.0787092e-08, -0.99950093, -1.70693664e-08, 0.0315897427)
+for _,v in pairs (game:GetService("Workspace"):GetChildren()) do
+if v.Name:match('Fruit') and not v:IsA('Folder') and (v:IsA("Model") or v:IsA("Part")) then
+local stri = game:GetService("Players").LocalPlayer.Name
+        game:GetService("Workspace").Characters[stri].HumanoidRootPart.CFrame = v.Handle.CFrame
+    end
+end
+end)
+Kill1:CreateToggle("Hit Box Extender 100", function(arg)
+if arg then
+_G.bo = true
+ while wait() and _G.bo do
+ 
+for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+    v.HumanoidRootPart.Size = Vector3.new(35, 35, 35)
+    v.HumanoidRootPart.Transparency = 0.5
+end
+end
+else
+_G.bo = false
+end
+end)
+Kill2:CreateToggle("Hit Box Extender 100", function(arg)
+if arg then
+_G.bo2 = true
+ while wait() and _G.bo2 do
+ 
+for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+    v.HumanoidRootPart.Size = Vector3.new(35, 35, 35)
+    v.HumanoidRootPart.Transparency = 0.5
+end
+end
+else
+_G.bo2 = false
+end
+end)
+Kill1:CreateToggle("Kill Military Soldier [Lv. 300]", function(arg)
+if arg then
+_G.bossc22 = true
+ while wait() and _G.bossc22 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Military Soldier [Lv. 300]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc22 = false
+end
+end)
+Kill1:CreateButton("Magma Village", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-5237.16943, 8.62531281, 8472.05957)
+end)
+Kill1:CreateToggle("Kill Military Soldier [Lv. 300]", function(arg)
+if arg then
+_G.bossc22 = true
+ while wait() and _G.bossc22 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Military Soldier [Lv. 300]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc22 = false
+end
+end)
+Kill1:CreateToggle("Kill Military Spy [Lv. 330]", function(arg)
+if arg then
+_G.bossc23 = true
+ while wait() and _G.bossc23 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Military Spy [Lv. 330]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc23 = false
+end
+end)
+Kill1:CreateToggle("Kill Magma Admiral [Lv. 350] ", function(arg)
+if arg then
+_G.bossc24 = true
+ while wait() and _G.bossc24 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Magma Admiral [Lv. 350] [Boss]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc24 = false
+end
+end)
+
+Kill1:CreateButton("Prison", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(4852.48779, 5.68654585, 719.716919)
+end)
+Kill1:CreateToggle("Kill Chief Warden [Lv. 200]", function(arg)
+if arg then
+_G.bossc25 = true
+ while wait() and _G.bossc25 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Chief Warden [Lv. 200] [Boss]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc25 = false
+end
+end)
+Kill1:CreateToggle("Kill Warden[Lv. 175]", function(arg)
+if arg then
+_G.bossc26 = true
+ while wait() and _G.bossc26 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Warden [Lv. 175] [Boss]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc26 = false
+end
+end)
+Kill1:CreateToggle("Kill Swan [Lv. 250]", function(arg)
+if arg then
+_G.bossc27 = true
+ while wait() and _G.bossc27 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Swan [Lv. 250] [Boss]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc27 = false
+end
+end)
+Kill1:CreateButton("Windmill", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(974.048828, 16.3085976, 1411.89954)
+end)
+Kill1:CreateToggle("Kill Bandit [Lv. 5]", function(arg)
+if arg then
+_G.bossc28 = true
+ while wait() and _G.bossc28 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Bandit [Lv. 5]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+10, pbosd.Position.Z+15)
+end
+else
+_G.bossc28 = false
+end
+end)
+Kill1:CreateButton("Sea", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2614.55322, 6.92385769, 2040.5354)
+end)
+Kill1:CreateToggle("Kill Trainee [Lv. 5]", function(arg)
+if arg then
+_G.bossc29 = true
+ while wait() and _G.bossc29 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Trainee [Lv. 5]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc29 = false
+end
+end)
+Kill1:CreateButton("Jungle", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1337.63599, 11.8878908, 496.964142)
+end)
+Kill1:CreateToggle("Kill Monkey [Lv. 14]", function(arg)
+if arg then
+_G.bossc30 = true
+ while wait() and _G.bossc30 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Monkey [Lv. 14]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc30 = false
+end
+end)
+
+Kill1:CreateToggle("Kill Gorrilas [Lv. 20]", function(arg)
+if arg then
+_G.bossc32 = true
+ while wait() and _G.bossc32 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Gorilla [Lv. 20]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc32 = false
+end
+end)
+Kill1:CreateToggle("Kill Gorrila King [Lv. 25]", function(arg)
+if arg then
+_G.bossc31 = true
+ while wait() and _G.bossc31 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["The Gorilla King [Lv. 25] [Boss]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc31 = false
+end
+end)
+Kill1:CreateButton("Frozen Village", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1106.32483, 7.33856344, -1170.64136)
+end)
+Kill1:CreateToggle("Kill Snow Bandit [Lv. 90]", function(arg)
+if arg then
+_G.bossc32 = true
+ while wait() and _G.bossc32 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Snow Bandit [Lv. 90]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc32 = false
+end
+end)
+Kill1:CreateToggle("Kill Snowman [Lv. 100]", function(arg)
+if arg then
+_G.bossc33 = true
+ while wait() and _G.bossc33 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Snowman [Lv. 100]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc33 = false
+end
+end)
+Kill1:CreateToggle("Kill Ice Admiral [Lv. 700]", function(arg)
+if arg then
+_G.bossc34 = true
+ while wait() and _G.bossc34 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Ice Admiral [Lv. 700] [Boss]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc34 = false
+end
+end)
+Kill1:CreateToggle("Kill Gorrila Yeti [Lv. 110]", function(arg)
+if arg then
+_G.bossc35 = true
+ while wait() and _G.bossc35 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Yeti [Lv. 110] [Boss]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc35 = false
+end
+end)
+Kill2:CreateButton("Skylands", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-4920.31201, 717.706238, -2638.7002)
+end)
+Kill2:CreateToggle("Kill Dark Master [Lv. 175]", function(arg)
+if arg then
+_G.bossc36 = true
+ while wait() and _G.bossc36 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Dark Master [Lv. 175]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc36 = false
+end
+end)
+Kill2:CreateToggle("Kill Sky Bandit [Lv. 150]", function(arg)
+if arg then
+_G.bossc37 = true
+ while wait() and _G.bossc37 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Sky Bandit [Lv. 150]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc37 = false
+end
+end)
+Kill2:CreateToggle("Kill Thunder God [Lv. 575]", function(arg)
+if arg then
+_G.bossc38 = true
+ while wait() and _G.bossc38 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Thunder God [Lv. 575] [Boss]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc38 = false
+end
+end)
+Kill2:CreateButton("Skylands Zone 2", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-7909.51807, 5648.7832, -1361.01123)
+end)
+Kill2:CreateToggle("Kill Royal Squad [Lv. 525]", function(arg)
+if arg then
+_G.bossc39 = true
+ while wait() and _G.bossc39 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Royal Squad [Lv. 525]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc39 = false
+end
+end)
+
+Kill2:CreateToggle("Kill Royal Soldier [Lv. 550]", function(arg)
+if arg then
+_G.bossc40 = true
+ while wait() and _G.bossc40 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Royal Soldier [Lv. 550]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc40 = false
+end
+end)
+Kill2:CreateToggle("Kill Thunder God [Lv. 450]", function(arg)
+if arg then
+_G.bossc41 = true
+ while wait() and _G.bossc41 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Thunder God [Lv. 450]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc41 = false
+end
+end)
+Kill2:CreateButton("Fontain", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(5191.5542, 38.5011406, 4146.34082)
+end)
+Kill2:CreateToggle("Kill Galley Pirate [Lv. 625]", function(arg)
+if arg then
+_G.bossc42 = true
+ while wait() and _G.bossc42 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Galley Pirate [Lv. 625]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc42 = false
+end
+end)
+Kill2:CreateToggle("Kill Cyborg [Lv. 675]", function(arg)
+if arg then
+_G.bossc43 = true
+ while wait() and _G.bossc43 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Cyborg [Lv. 675] [Boss]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc43 = false
+end
+end)
+Kill2:CreateToggle("Kill Galley Captain [Lv. 650]", function(arg)
+if arg then
+_G.bossc44 = true
+ while wait() and _G.bossc44 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Galley Captain [Lv. 650]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc44 = false
+end
+end)
+Kill2:CreateButton("Pirate Village", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1188.1532, 4.75155973, 3815.63574)
+end)
+Kill2:CreateToggle("Kill Pirate [Lv. 35]", function(arg)
+if arg then
+_G.bossc46 = true
+ while wait() and _G.bossc46 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Pirate [Lv. 35]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc46 = false
+end
+end)
+Kill2:CreateToggle("Kill Galley Brute [Lv. 45]", function(arg)
+if arg then
+_G.bossc45 = true
+ while wait() and _G.bossc45 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Brute [Lv. 45]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc45 = false
+end
+end)
+Kill2:CreateToggle("Kill Bobby [Lv. 55]", function(arg)
+if arg then
+_G.bossc47 = true
+ while wait() and _G.bossc47 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Bobby [Lv. 55] [Boss]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc47 = false
+end
+end)
+Kill2:CreateButton("MobBoss", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2912.36865, 52.3454781, 5415.4126)
+end)
+Kill2:CreateToggle("Kill Mob Leader [Lv. 120]", function(arg)
+if arg then
+_G.bossc48 = true
+ while wait() and _G.bossc48 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Mob Leader [Lv. 120] [Boss]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc48 = false
+end
+end)
+Kill3:CreateButton("Marine Fortress", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-4926.86475, 41.2520409, 4426.45166)
+end)
+Kill3:CreateToggle("Kill Chief Petty Officer [Lv. 120]", function(arg)
+if arg then
+_G.bossc49 = true
+ while wait() and _G.bossc49 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Chief Petty Officer [Lv. 120]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc49 = false
+end
+end)
+Kill3:CreateToggle("Kill Vice Admiral [Lv. 130]", function(arg)
+if arg then
+_G.bossc50 = true
+ while wait() and _G.bossc50 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Vice Admiral [Lv. 130] [Boss]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc50 = false
+end
+end)
+Kill3:CreateButton("UnderWater City", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(61881.8359, 18.4716396, 1449.68555)
+end)
+Kill3:CreateToggle("Kill Fishman Lord [Lv. 425]", function(arg)
+if arg then
+_G.bossc51 = true
+ while wait() and _G.bossc51 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Fishman Lord [Lv. 425] [Boss]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc51 = false
+end
+end)
+Kill3:CreateToggle("Kill Fishman Warrior [Lv. 375]", function(arg)
+if arg then
+_G.bossc52 = true
+ while wait() and _G.bossc52 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Fishman Warrior [Lv. 375]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc52 = false
+end
+end)
+Kill3:CreateToggle("Kill Fishman Commando [Lv. 400]", function(arg)
+if arg then
+_G.bossc53 = true
+ while wait() and _G.bossc53 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Fishman Commando [Lv. 400]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc53 = false
+end
+end)
+Kill3:CreateButton("Desert City", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(911.504333, 3.37921715, 4112.37207)
+end)
+Kill3:CreateToggle("Kill Desert Officer [Lv. 70]", function(arg)
+if arg then
+_G.bossc54 = true
+ while wait() and _G.bossc54 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Desert Officer [Lv. 70]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc54 = false
+end
+end)
+Kill3:CreateToggle("Kill Desert Bandit [Lv. 60]", function(arg)
+if arg then
+_G.bossc55 = true
+ while wait() and _G.bossc55 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Desert Bandit [Lv. 60]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc55 = false
+end
+end)
+Kill3:CreateButton("Colosseum", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1392.67188, 7.2893939, -2838.57471)
+end)
+Kill3:CreateToggle("Kill Gladiator [Lv. 275]", function(arg)
+if arg then
+_G.bossc56 = true
+ while wait() and _G.bossc56 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Gladiator [Lv. 275]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc56 = false
+end
+end)
+Kill3:CreateToggle("Kill Toga Warrior [Lv. 225]", function(arg)
+if arg then
+_G.bossc57 = true
+ while wait() and _G.bossc57 do
+ 
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Enemies["Toga Warrior [Lv. 225]"].RightUpperArm
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-15, pbosd.Position.Z+1)
+end
+else
+_G.bossc57 = false
+end
+end)
+quest:CreateToggle("Auto Warden Quests", function(arg)
+if arg then
+_G.q1 = true
+ while wait() and _G.q1 do
+ 
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "ImpelQuest",
+    [3] = 1,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q1 = false
+end
+end)
+quest:CreateToggle("Auto Chief Warden Quests", function(arg)
+if arg then
+_G.q2 = true
+ while wait() and _G.q2 do
+ 
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "ImpelQuest",
+    [3] = 2,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q2 = false
+end
+end)
+quest:CreateToggle("Auto Swan Quests", function(arg)
+if arg then
+_G.q3 = true
+ while wait() and _G.q3 do
+ 
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "ImpelQuest",
+    [3] = 3,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q3 = false
+end
+end)
+quest:CreateToggle("Auto Military Soldier Quests", function(arg)
+if arg then
+_G.q6 = true
+ while wait() and _G.q6 do
+ 
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "MagmaQuest",
+    [3] = 1,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q6 = false
+end
+end)
+quest:CreateToggle("Auto Military Spy Quests", function(arg)
+if arg then
+_G.q5 = true
+ while wait() and _G.q5 do
+ 
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "MagmaQuest",
+    [3] = 2,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q5 = false
+end
+end)
+quest:CreateToggle("Auto Magma Admiral Quests", function(arg)
+if arg then
+_G.q4 = true
+ while wait() and _G.q4 do
+ 
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "MagmaQuest",
+    [3] = 3,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q4 = false
+end
+end)
+quest:CreateToggle("Auto Trainee Quests", function(arg)
+if arg then
+_G.q8 = true
+ while wait() and _G.q8 do
+ 
+
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "MarineQuest",
+    [3] = 1,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q8 = false
+end
+end)
+quest:CreateToggle("Auto Bandit Quests", function(arg)
+if arg then
+_G.q9 = true
+ while wait() and _G.q9 do
+ 
+
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "BanditQuest1",
+    [3] = 1,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q9 = false
+end
+end)
+quest:CreateToggle("Auto Monkeys Quests", function(arg)
+if arg then
+_G.q10 = true
+ while wait() and _G.q10 do
+ 
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "JungleQuest",
+    [3] = 1,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q10 = false
+end
+end)
+quest:CreateToggle("Auto Gorrilas Quests", function(arg)
+if arg then
+_G.q11 = true
+ while wait() and _G.q11 do
+ 
+
+
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "JungleQuest",
+    [3] = 2,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q11 = false
+end
+end)
+quest:CreateToggle("Auto Gorrila King Quests", function(arg)
+if arg then
+_G.q12 = true
+ while wait() and _G.q12 do
+ 
+
+
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "JungleQuest",
+    [3] = 3,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q12 = false
+end
+end)
+quest:CreateToggle("Auto Snow Bandit Quests", function(arg)
+if arg then
+_G.q13 = true
+ while wait() and _G.q13 do
+ 
+
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "SnowQuest",
+    [3] = 1,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q13 = false
+end
+end)
+quest:CreateToggle("Auto Snowman Quests", function(arg)
+if arg then
+_G.q14 = true
+ while wait() and _G.q14 do
+ 
+
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "SnowQuest",
+    [3] = 2,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q14 = false
+end
+end)
+quest:CreateToggle("Auto Yeti Quests", function(arg)
+if arg then
+_G.q15 = true
+ while wait() and _G.q15 do
+ 
+
+
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "SnowQuest",
+    [3] = 3,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q15 = false
+end
+end)
+quest:CreateToggle("Auto Sky Bandit Quests", function(arg)
+if arg then
+_G.q16 = true
+ while wait() and _G.q16 do
+ 
+
+
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "SkyQuest",
+    [3] = 1,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q16 = false
+end
+end)
+quest:CreateToggle("Auto Dark Master Quests", function(arg)
+if arg then
+_G.q17 = true
+ while wait() and _G.q17 do
+ 
+
+
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "SkyQuest",
+    [3] = 2,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q17 = false
+end
+end)
+quest:CreateToggle("Auto Royal Squad Quests", function(arg)
+if arg then
+_G.q18 = true
+ while wait() and _G.q18 do
+ 
+
+
+
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "SkyExp2Quest",
+    [3] = 1,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q18 = false
+end
+end)
+quest:CreateToggle("Auto Royal Soldier Quests", function(arg)
+if arg then
+_G.q19 = true
+ while wait() and _G.q19 do
+ 
+
+
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "SkyExp2Quest",
+    [3] = 2,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q19 = false
+end
+end)
+quest:CreateToggle("Auto Thunder God Quests", function(arg)
+if arg then
+_G.q20 = true
+ while wait() and _G.q20 do
+ 
+
+
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "SkyExp2Quest",
+    [3] = 3,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q20 = false
+end
+end)
+quest2:CreateToggle("Auto Galley Pirate Quests", function(arg)
+if arg then
+_G.q21 = true
+ while wait() and _G.q21 do
+ 
+
+
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "FountainQuest",
+    [3] = 1,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q21 = false
+end
+end)
+quest2:CreateToggle("Auto Galley Captain Quests", function(arg)
+if arg then
+_G.q22 = true
+ while wait() and _G.q22 do
+ 
+
+
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "FountainQuest",
+    [3] = 2,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q22 = false
+end
+end)
+quest2:CreateToggle("Auto Cyborg Quests", function(arg)
+if arg then
+_G.q23 = true
+ while wait() and _G.q23 do
+ 
+
+
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "FountainQuest",
+    [3] = 3,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q23 = false
+end
+end)
+quest2:CreateToggle("Auto Pirates Quests", function(arg)
+if arg then
+_G.q24 = true
+ while wait() and _G.q24 do
+ 
+
+
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "BuggyQuest1",
+    [3] = 1,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q24 = false
+end
+end)
+quest2:CreateToggle("Auto Brutes Quests", function(arg)
+if arg then
+_G.q25 = true
+ while wait() and _G.q25 do
+ 
+
+
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "BuggyQuest1",
+    [3] = 2,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q25 = false
+end
+end)
+quest2:CreateToggle("Auto Bobby Quests", function(arg)
+if arg then
+_G.q26 = true
+ while wait() and _G.q26 do
+ 
+
+
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "BuggyQuest1",
+    [3] = 3,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q26 = false
+end
+end)
+quest2:CreateToggle("Auto Chief Petty Officer Quests", function(arg)
+if arg then
+_G.q27 = true
+ while wait() and _G.q27 do
+ 
+
+
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "MarineQuest2",
+    [3] = 1,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q27 = false
+end
+end)
+quest2:CreateToggle("Auto Vice Admiral Quests", function(arg)
+if arg then
+_G.q28 = true
+ while wait() and _G.q28 do
+ 
+
+
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "MarineQuest2",
+    [3] = 2,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q28 = false
+end
+end)
+quest2:CreateToggle("Auto Fishman Warrior Quests", function(arg)
+if arg then
+_G.q29 = true
+ while wait() and _G.q29 do
+ 
+
+
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "FishmanQuest",
+    [3] = 1,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q29 = false
+end
+end)
+quest2:CreateToggle("Auto Fishman Commando Quests", function(arg)
+if arg then
+_G.q30 = true
+ while wait() and _G.q30 do
+ 
+
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "FishmanQuest",
+    [3] = 2,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q30 = false
+end
+end)
+quest2:CreateToggle("Auto Fishman Lord Quests", function(arg)
+if arg then
+_G.q31 = true
+ while wait() and _G.q31 do
+ 
+
+
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "FishmanQuest",
+    [3] = 3,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q31 = false
+end
+end)
+quest2:CreateToggle("Auto Desert Bandit Quests", function(arg)
+if arg then
+_G.q32 = true
+ while wait() and _G.q32 do
+ 
+
+
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "DesertQuest",
+    [3] = 1,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q32 = false
+end
+end)
+quest2:CreateToggle("Auto Desert Officer Quest", function(arg)
+if arg then
+_G.q33 = true
+ while wait() and _G.q33 do
+ 
+
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "DesertQuest",
+    [3] = 2,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q33 = false
+end
+end)
+quest2:CreateToggle("Auto Toga Warrior Quest", function(arg)
+if arg then
+_G.q34 = true
+ while wait() and _G.q34 do
+ 
+
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "ColosseumQuest",
+    [3] = 1,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q34 = false
+end
+end)
+quest2:CreateToggle("Auto Gladiator Quest", function(arg)
+if arg then
+_G.q35 = true
+ while wait() and _G.q35 do
+ 
+
+local args = {
+    [1] = "StartQuest",
+    [2] = "ColosseumQuest",
+    [3] = 2,
+}
+
+game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
+end
+else
+_G.q35 = false
+end
+end)
+--| Anti KICK |
+local mt = getrawmetatable(game)
+local old = mt.__namecall
+local protect = newcclosure or protect_function
+
+if not protect then
+protect = function(f) return f end
+end
+
+setreadonly(mt, false)
+mt.__namecall = protect(function(self, ...)
+local method = getnamecallmethod()
+if method == "Kick" then
+wait(9e9)
+return
+end
+return old(self, ...)
+end)
+hookfunction(game:GetService("Players").LocalPlayer.Kick,protect(function() wait(9e9)
+ end))
+
+--| Anti AFK |
+   local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+
+--| Anti Ban |
+setfflag("DFStringCrashPadUploadToBacktraceToBacktraceBaseUrl", "")
+setfflag("DFIntCrashUploadToBacktracePercentage", "0")
+setfflag("DFStringCrashUploadToBacktraceBlackholeToken", "")
+setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
+
+--| Anti AFK | By Altix#3395
+    local Virtual = game:service'VirtualUser'
+    game:service'Players'.LocalPlayer.Idled:connect(function()
+        Virtual:CaptureController()
+        Virtual:ClickButton2(Vector2.new())
+        wait(2)
+    end)
+
+--| Anti Chat Logs |
+local CloneFunction = clonefunction
+local CheckCaller = CloneFunction(checkcaller)
+local HookFunction = CloneFunction(hookfunction)
+local LocalPlayer = game.Players.PlayerAdded:wait()
+
+local PostMessage = require(LocalPlayer:WaitForChild("PlayerScripts", 1/0):WaitForChild("ChatScript", 1/0):WaitForChild("ChatMain", 1/0)).MessagePosted
+getgenv().MessageEvent = Instance.new("BindableEvent")
+
+local OldFunctionHook
+local PostMessageHook = function(self, msg)
+   if not CheckCaller() and self == PostMessage then
+       MessageEvent:Fire(msg)
+       return
+   end
+   return OldFunctionHook(self, msg)
+end
+OldFunctionHook = HookFunction(PostMessage.fire, PostMessageHook)
