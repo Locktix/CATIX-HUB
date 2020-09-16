@@ -11488,22 +11488,7 @@ game:GetService("ReplicatedStorage").Remotes.BuyIncEgg:InvokeServer(unpack(args)
         _G.l = false
     end
 end)
-eggs:CreateToggle("Auto Buy Super Hero Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.m = true 
-        while wait(0) and _G.m do
-            local args = {
-    [1] = 1,
-    [2] = workspace.Incubators.SuperHeroEgg.Data,
-}
 
-game:GetService("ReplicatedStorage").Remotes.BuyIncEgg:InvokeServer(unpack(args))
-
-        end
-    else
-        _G.m = false
-    end
-end)
 AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:Destroy()
 end)
