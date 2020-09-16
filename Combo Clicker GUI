@@ -10,6 +10,7 @@ local eggs3 = Library:CreateTab("Auto Buy Eggs 3","things", true)
 local rebirths = Library:CreateTab("Auto Rebirths","things", true)
 local rebirths2 = Library:CreateTab("Auto Rebirths 2","things", true)
 local rebirths3 = Library:CreateTab("Auto Rebirths 3","things", true)
+local rebirths4 = Library:CreateTab("Auto Rebirths 4","things", true)
 local crates = Library:CreateTab("Auto Buy Crates","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
@@ -166,6 +167,108 @@ Event:FireServer(A_1)
         end
     else
         _G.p = false
+    end
+end)
+rebirths4:CreateToggle("Rebirth X1Nd", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.afe214 = true 
+        while wait(0) and _G.afe214 do
+            local args = {
+                [1] = {
+                    ["Option"] = 1000000000000000000000000000000000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.afe214 = false
+    end
+end)
+rebirths4:CreateToggle("Rebirth X100D", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.afe213 = true 
+        while wait(0) and _G.afe213 do
+            local args = {
+                [1] = {
+                    ["Option"] = 100000000000000000000000000000000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.afe213 = false
+    end
+end)
+rebirths4:CreateToggle("Rebirth X10D", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.afe212 = true 
+        while wait(0) and _G.afe212 do
+            local args = {
+                [1] = {
+                    ["Option"] = 10000000000000000000000000000000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.afe212 = false
+    end
+end)
+rebirths4:CreateToggle("Rebirth X1D", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.afe21 = true 
+        while wait(0) and _G.afe21 do
+            local args = {
+                [1] = {
+                    ["Option"] = 1000000000000000000000000000000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.afe21 = false
+    end
+end)
+rebirths4:CreateToggle("Rebirth X100N", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.afe20 = true 
+        while wait(0) and _G.afe20 do
+            local args = {
+                [1] = {
+                    ["Option"] = 100000000000000000000000000000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.afe20 = false
+    end
+end)
+rebirths4:CreateToggle("Rebirth X10N", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.afe2 = true 
+        while wait(0) and _G.afe2 do
+            local args = {
+                [1] = {
+                    ["Option"] = 10000000000000000000000000000000,
+                    ["RequestType"] = "RequestRebirth",
+                },
+            }
+            
+            game:GetService("ReplicatedStorage").Functions.RebirthFunction:InvokeServer(unpack(args))            
+        end
+    else
+        _G.afe2 = false
     end
 end)
 rebirths3:CreateToggle("Rebirth X1N", function(arg) --the (arg) is if the checkbox is toggled or not
