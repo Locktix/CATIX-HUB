@@ -12064,7 +12064,7 @@ else
 _G.bossc57 = false
 end
 end)
-quest:CreateButton("Auto Warden Quests", function(arg)
+quest:CreateToggle("Auto Warden Quests", function(arg)
 if arg then
 _G.q1 = true
  while wait() and _G.q1 do
@@ -12082,7 +12082,7 @@ else
 _G.q1 = false
 end
 end)
-quest:CreateButton("Auto Chief Warden Quests", function(arg)
+quest:CreateToggle("Auto Chief Warden Quests", function(arg)
 if arg then
 _G.q2 = true
  while wait() and _G.q2 do
@@ -12100,7 +12100,7 @@ else
 _G.q2 = false
 end
 end)
-quest:CreateButton("Auto Swan Quests", function(arg)
+quest:CreateToggle("Auto Swan Quests", function(arg)
 if arg then
 _G.q3 = true
  while wait() and _G.q3 do
@@ -12118,7 +12118,7 @@ else
 _G.q3 = false
 end
 end)
-quest:CreateButton("Auto Military Soldier Quests", function(arg)
+quest:CreateToggle("Auto Military Soldier Quests", function(arg)
 if arg then
 _G.q6 = true
  while wait() and _G.q6 do
@@ -12136,7 +12136,7 @@ else
 _G.q6 = false
 end
 end)
-quest:CreateButton("Auto Military Spy Quests", function(arg)
+quest:CreateToggle("Auto Military Spy Quests", function(arg)
 if arg then
 _G.q5 = true
  while wait() and _G.q5 do
@@ -12154,7 +12154,7 @@ else
 _G.q5 = false
 end
 end)
-quest:CreateButton("Auto Magma Admiral Quests", function(arg)
+quest:CreateToggle("Auto Magma Admiral Quests", function(arg)
 if arg then
 _G.q4 = true
  while wait() and _G.q4 do
@@ -12172,7 +12172,7 @@ else
 _G.q4 = false
 end
 end)
-quest:CreateButton("Auto Trainee Quests", function(arg)
+quest:CreateToggle("Auto Trainee Quests", function(arg)
 if arg then
 _G.q8 = true
  while wait() and _G.q8 do
@@ -12191,7 +12191,7 @@ else
 _G.q8 = false
 end
 end)
-quest:CreateButton("Auto Bandit Quests", function(arg)
+quest:CreateToggle("Auto Bandit Quests", function(arg)
 if arg then
 _G.q9 = true
  while wait() and _G.q9 do
@@ -12210,7 +12210,7 @@ else
 _G.q9 = false
 end
 end)
-quest:CreateButton("Auto Monkeys Quests", function(arg)
+quest:CreateToggle("Auto Monkeys Quests", function(arg)
 if arg then
 _G.q10 = true
  while wait() and _G.q10 do
@@ -12228,7 +12228,7 @@ else
 _G.q10 = false
 end
 end)
-quest:CreateButton("Auto Gorrilas Quests", function(arg)
+quest:CreateToggle("Auto Gorrilas Quests", function(arg)
 if arg then
 _G.q11 = true
  while wait() and _G.q11 do
@@ -12248,7 +12248,7 @@ else
 _G.q11 = false
 end
 end)
-quest:CreateButton("Auto Gorrila King Quests", function(arg)
+quest:CreateToggle("Auto Gorrila King Quests", function(arg)
 if arg then
 _G.q12 = true
  while wait() and _G.q12 do
@@ -12268,7 +12268,7 @@ else
 _G.q12 = false
 end
 end)
-quest:CreateButton("Auto Snow Bandit Quests", function(arg)
+quest:CreateToggle("Auto Snow Bandit Quests", function(arg)
 if arg then
 _G.q13 = true
  while wait() and _G.q13 do
@@ -12287,7 +12287,7 @@ else
 _G.q13 = false
 end
 end)
-quest:CreateButton("Auto Snowman Quests", function(arg)
+quest:CreateToggle("Auto Snowman Quests", function(arg)
 if arg then
 _G.q14 = true
  while wait() and _G.q14 do
@@ -12306,7 +12306,7 @@ else
 _G.q14 = false
 end
 end)
-quest:CreateButton("Auto Yeti Quests", function(arg)
+quest:CreateToggle("Auto Yeti Quests", function(arg)
 if arg then
 _G.q15 = true
  while wait() and _G.q15 do
@@ -12326,7 +12326,7 @@ else
 _G.q15 = false
 end
 end)
-quest:CreateButton("Auto Sky Bandit Quests", function(arg)
+quest:CreateToggle("Auto Sky Bandit Quests", function(arg)
 if arg then
 _G.q16 = true
  while wait() and _G.q16 do
@@ -12346,7 +12346,7 @@ else
 _G.q16 = false
 end
 end)
-quest:CreateButton("Auto Dark Master Quests", function(arg)
+quest:CreateToggle("Auto Dark Master Quests", function(arg)
 if arg then
 _G.q17 = true
  while wait() and _G.q17 do
@@ -12366,7 +12366,7 @@ else
 _G.q17 = false
 end
 end)
-quest:CreateButton("Auto Royal Squad Quests", function(arg)
+quest:CreateToggle("Auto Royal Squad Quests", function(arg)
 if arg then
 _G.q18 = true
  while wait() and _G.q18 do
@@ -12387,7 +12387,7 @@ else
 _G.q18 = false
 end
 end)
-quest:CreateButton("Auto Royal Soldier Quests", function(arg)
+quest:CreateToggle("Auto Royal Soldier Quests", function(arg)
 if arg then
 _G.q19 = true
  while wait() and _G.q19 do
@@ -12407,7 +12407,7 @@ else
 _G.q19 = false
 end
 end)
-quest:CreateButton("Auto Thunder God Quests", function(arg)
+quest:CreateToggle("Auto Thunder God Quests", function(arg)
 if arg then
 _G.q20 = true
  while wait() and _G.q20 do
@@ -12427,7 +12427,7 @@ else
 _G.q20 = false
 end
 end)
-quest2:CreateButton("Auto Galley Pirate Quests", function(arg)
+quest2:CreateToggle("Auto Galley Pirate Quests", function(arg)
 if arg then
 _G.q21 = true
  while wait() and _G.q21 do
@@ -12447,7 +12447,7 @@ else
 _G.q21 = false
 end
 end)
-quest2:CreateButton("Auto Galley Captain Quests", function(arg)
+quest2:CreateToggle("Auto Galley Captain Quests", function(arg)
 if arg then
 _G.q22 = true
  while wait() and _G.q22 do
@@ -12467,7 +12467,7 @@ else
 _G.q22 = false
 end
 end)
-quest2:CreateButton("Auto Cyborg Quests", function(arg)
+quest2:CreateToggle("Auto Cyborg Quests", function(arg)
 if arg then
 _G.q23 = true
  while wait() and _G.q23 do
@@ -12487,7 +12487,7 @@ else
 _G.q23 = false
 end
 end)
-quest2:CreateButton("Auto Pirates Quests", function(arg)
+quest2:CreateToggle("Auto Pirates Quests", function(arg)
 if arg then
 _G.q24 = true
  while wait() and _G.q24 do
@@ -12507,7 +12507,7 @@ else
 _G.q24 = false
 end
 end)
-quest2:CreateButton("Auto Brutes Quests", function(arg)
+quest2:CreateToggle("Auto Brutes Quests", function(arg)
 if arg then
 _G.q25 = true
  while wait() and _G.q25 do
@@ -12527,7 +12527,7 @@ else
 _G.q25 = false
 end
 end)
-quest2:CreateButton("Auto Bobby Quests", function(arg)
+quest2:CreateToggle("Auto Bobby Quests", function(arg)
 if arg then
 _G.q26 = true
  while wait() and _G.q26 do
@@ -12547,7 +12547,7 @@ else
 _G.q26 = false
 end
 end)
-quest2:CreateButton("Auto Chief Petty Officer Quests", function(arg)
+quest2:CreateToggle("Auto Chief Petty Officer Quests", function(arg)
 if arg then
 _G.q27 = true
  while wait() and _G.q27 do
@@ -12567,7 +12567,7 @@ else
 _G.q27 = false
 end
 end)
-quest2:CreateButton("Auto Vice Admiral Quests", function(arg)
+quest2:CreateToggle("Auto Vice Admiral Quests", function(arg)
 if arg then
 _G.q28 = true
  while wait() and _G.q28 do
@@ -12587,7 +12587,7 @@ else
 _G.q28 = false
 end
 end)
-quest2:CreateButton("Auto Fishman Warrior Quests", function(arg)
+quest2:CreateToggle("Auto Fishman Warrior Quests", function(arg)
 if arg then
 _G.q29 = true
  while wait() and _G.q29 do
@@ -12607,7 +12607,7 @@ else
 _G.q29 = false
 end
 end)
-quest2:CreateButton("Auto Fishman Commando Quests", function(arg)
+quest2:CreateToggle("Auto Fishman Commando Quests", function(arg)
 if arg then
 _G.q30 = true
  while wait() and _G.q30 do
@@ -12626,7 +12626,7 @@ else
 _G.q30 = false
 end
 end)
-quest2:CreateButton("Auto Fishman Lord Quests", function(arg)
+quest2:CreateToggle("Auto Fishman Lord Quests", function(arg)
 if arg then
 _G.q31 = true
  while wait() and _G.q31 do
@@ -12646,7 +12646,7 @@ else
 _G.q31 = false
 end
 end)
-quest2:CreateButton("Auto Desert Bandit Quests", function(arg)
+quest2:CreateToggle("Auto Desert Bandit Quests", function(arg)
 if arg then
 _G.q32 = true
  while wait() and _G.q32 do
@@ -12666,7 +12666,7 @@ else
 _G.q32 = false
 end
 end)
-quest2:CreateButton("Auto Desert Officer Quest", function(arg)
+quest2:CreateToggle("Auto Desert Officer Quest", function(arg)
 if arg then
 _G.q33 = true
  while wait() and _G.q33 do
@@ -12685,7 +12685,7 @@ else
 _G.q33 = false
 end
 end)
-quest2:CreateButton("Auto Toga Warrior Quest", function(arg)
+quest2:CreateToggle("Auto Toga Warrior Quest", function(arg)
 if arg then
 _G.q34 = true
  while wait() and _G.q34 do
@@ -12704,7 +12704,7 @@ else
 _G.q34 = false
 end
 end)
-quest2:CreateButton("Auto Gladiator Quest", function(arg)
+quest2:CreateToggle("Auto Gladiator Quest", function(arg)
 if arg then
 _G.q35 = true
  while wait() and _G.q35 do
