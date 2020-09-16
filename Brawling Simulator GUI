@@ -85,6 +85,19 @@ Event:FireServer(A_1)
     end
 end)
 
+AutoTab:CreateToggle("Auto Tp To Boss", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c = true 
+        while wait(0) and _G.c do
+         local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").BossRing.Boss.LowerTorso
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+        end
+    else
+        _G.c = false
+    end
+end)
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
     game:service'Players'.LocalPlayer.Idled:connect(function()
