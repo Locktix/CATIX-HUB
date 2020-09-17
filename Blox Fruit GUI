@@ -42,7 +42,7 @@ end)
 
 
 
-MISC:CreateButton("NO CLIP Press(E)", function() --the (arg) is if the checkbox is toggled or not
+MISC:CreateButton("🎬NO CLIP Press(E)🎬", function() --the (arg) is if the checkbox is toggled or not
     _G.NO2 = true 
   noclip = false
 game:GetService('RunService').Stepped:connect(function()
@@ -63,12 +63,12 @@ print('Created by FileExplorer')
 print('Credits to Peyton for the ChangeState part of this script')
 end)
 
-MISC:CreateButton("Inf Jump", function() --the (arg) is if the checkbox is toggled or not
+MISC:CreateButton("🤸‍♀️Inf Jump🤸‍♀️", function() --the (arg) is if the checkbox is toggled or not
 game:GetService("UserInputService").JumpRequest:connect(function()
     game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
 end)
 end)
-MISC:CreateButton("Ctrl + Click = TP", function() --the (arg) is if the checkbox is toggled or not
+MISC:CreateButton("🕹️Ctrl + Click = TP🕹️", function() --the (arg) is if the checkbox is toggled or not
 local Plr = game:GetService("Players").LocalPlayer
 local Mouse = Plr:GetMouse()
 
@@ -78,7 +78,7 @@ if not Mouse.Target then return end
 Plr.Character:MoveTo(Mouse.Hit.p)
 end)
 end)
-MISC:CreateButton("Fly Press (F)", function() --the (arg) is if the checkbox is toggled or not
+MISC:CreateButton("🪰Fly Press (F)🪰", function() --the (arg) is if the checkbox is toggled or not
      repeat wait() 
 	until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Head") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid") 
 local mouse = game.Players.LocalPlayer:GetMouse() 
@@ -162,7 +162,7 @@ Fly()
 
           
 end)
-MISC:CreateButton("Infinite Yield", function() --the (arg) is if the checkbox is toggled or not
+MISC:CreateButton("🛡️Infinite Yield🛡️", function() --the (arg) is if the checkbox is toggled or not
     
          if IY_LOADED and not _G.IY_DEBUG == true then
 	error("Infinite Yield is already running!",0)
@@ -7202,7 +7202,7 @@ function(args, speaker)
 	if speaker.Character then
 		for i,_ in pairs(WayPoints) do
 			local x = WayPoints[i].COORD[1]
-			local y = WayPoints[i].COORD[2]
+			local y = Ways[i].COORD[2]
 			local z = WayPoints[i].COORD[3]
 			if tostring(WayPoints[i].NAME):lower() == tostring(WPName):lower() then
 				game:GetService("TweenService"):Create(getRoot(speaker.Character), TweenInfo.new(1, Enum.EasingStyle.Linear), {CFrame = CFrame.new(x,y,z)}):Play()
@@ -11305,16 +11305,62 @@ Credits:Destroy()
 IntroBackground:Destroy()
 minimizeHolder()
 end)
-MISC:CreateButton("Speed Hack 100 Press(A)Or(E)", function() --the (arg) is if the checkbox is toggled or not
-      game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
-      if key == "A" then
-          end
+MISC:CreateButton("💨Speed Hack 200 PRESS (R)💨", function() --the (arg) is if the checkbox is toggled or not
+   
+local walkspeedplayer = game:GetService("Players").LocalPlayer
+local walkspeedmouse = walkspeedplayer:GetMouse()
+
+local walkspeedenabled = false
+
+function x_walkspeed(key)
+if (key == "r") then
+if walkspeedenabled == false then
+_G.WS = 200;
+local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+Humanoid.WalkSpeed = _G.WS;
+end)
+Humanoid.WalkSpeed = _G.WS;
+
+walkspeedenabled = true
+elseif walkspeedenabled == true then
+_G.WS = 20;
+local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+Humanoid.WalkSpeed = _G.WS;
+end)
+Humanoid.WalkSpeed = _G.WS;
+
+walkspeedenabled = false
+end
+end
+end
+
+walkspeedmouse.KeyDown:connect(x_walkspeed)
+
+end)
+
+
+
+
+AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.LULU = true 
+        while wait(0) and _G.LULU do
+            if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
+            game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool"):Activate()
+    end
+end
+
+    else
+        _G.LULU = false
+    end
 end)
 
 AutoTab:CreateButton("Use Auto Click", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(n)
 end)
-AutoTab:CreateToggle("TP to Chest", function(arg)
+AutoTab:CreateToggle("🧰TP to Chest🧰", function(arg)
 if arg then
 _G.cc = true
  while wait(0) and _G.cc do
@@ -11334,7 +11380,7 @@ _G.cc = false
 end
 end)
 
-AutoTab:CreateToggle("Auto Add Melee Points", function(arg)
+AutoTab:CreateToggle("Add Melee Points 📈", function(arg)
 if arg then
 _G.b = true
  while wait() and _G.b do
@@ -11351,7 +11397,7 @@ else
 _G.b = false
 end
 end)
-AutoTab:CreateToggle("Auto Add Defense Points", function(arg)
+AutoTab:CreateToggle("Add Defense Points 📈", function(arg)
 if arg then
 _G.c = true
  while wait() and _G.c do
@@ -11369,7 +11415,7 @@ else
 _G.c = false
 end
 end)
-AutoTab:CreateToggle("Auto Add Sword Points", function(arg)
+AutoTab:CreateToggle("Add Sword Points 📈", function(arg)
 if arg then
 _G.d= true
  while wait() and _G.d do
@@ -11388,7 +11434,7 @@ _G.d = false
 end
 end)
 
-AutoTab:CreateToggle("Auto Add Blox Fruits Points", function(arg)
+AutoTab:CreateToggle("Add Blox Fruits Points 📈", function(arg)
 if arg then
 _G.f = true
  while wait() and _G.f do
@@ -11405,10 +11451,10 @@ else
 _G.f = false
 end
 end)
-AutoTab:CreateButton("IDK WORK", function() --you dont need "arg" for a button
+AutoTab:CreateButton("🤔IDK WORK🤔", function()--you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(m)
 end)
-AutoTab:CreateButton("Tp To Demon Fruit", function() --you dont need "arg" for a button
+AutoTab:CreateButton("🍇Tp To Demon Fruit🍇", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1027.58875, 19.3245106, 1367.28564, -0.987686276, 0, -0.156449571, 0, 1, 0, 0.156449571, 0, -0.987686276)
 wait()
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-582.941345, 6.70024586, 1713.93726, 0.965929627, 0, 0.258804798, 0, 1, 0, -0.258804798, 0, 0.965929627)
