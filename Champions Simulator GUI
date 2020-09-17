@@ -81,7 +81,7 @@ _G.Speed = true
            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
          end
 end)
-AutoTab:CreateToggle("Auto Equip Gloves", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateButton("Auto Equip Gloves", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.bcc = true 
         while wait(0) and _G.bcc do
