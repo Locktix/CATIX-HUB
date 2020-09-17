@@ -93,20 +93,6 @@ end
     end
 end)
 
-AutoTab:CreateToggle("Auto Oof", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.b = true 
-        while wait(0) and _G.b do
- local args = {
-    [1] = game:GetService("Players")["LocalPlayer"],
-}
-
-game:GetService("ReplicatedStorage").GetOof:FireServer(unpack(args))
-        end
-    else
-        _G.b= false
-    end
-end)
 AutoTab:CreateToggle("Sell X3", function(arg) --you dont need "arg" for a button
       if arg then
         _G.dd = true 
