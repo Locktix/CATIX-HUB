@@ -397,6 +397,22 @@ game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(ar
         _G.zf = false
     end
 end)
+eggs:CreateToggle("Auto Buy 1M Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.zf4 = true 
+        while wait() and _G.zf4 do
+local args = {
+    [1] = "1M",
+    [2] = 1,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.zf4 = false
+    end
+end)
 eggs2:CreateToggle("Auto Buy Starter Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
 _G.za2 = true 
@@ -491,6 +507,22 @@ game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(ar
   else
     
         _G.zf2 = false
+    end
+end)
+eggs2:CreateToggle("Auto Buy 1M Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.zf3 = true 
+        while wait() and _G.zf3 do
+local args = {
+    [1] = "1M",
+    [2] = 1,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.zf3 = false
     end
 end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
