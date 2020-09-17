@@ -376,6 +376,24 @@ game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
         _G.m= false
     end
 end)
+eggs:CreateToggle("Auto Buy CelebrationEgg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.n = true 
+        while wait(0) and _G.n do
+   
+
+
+local args = {
+    [1] = 1,
+    [2] = workspace["Pet Eggs"]["Celebration Egg"].Data,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
+        end
+    else
+        _G.n= false
+    end
+end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-116.557777, 140.149994, -29.0575809)
 end)
