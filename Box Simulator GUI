@@ -11416,12 +11416,48 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").PopUpy.UpgradeClick:FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players")["LocalPlayer"].leaderstats["Upgrade1"],
+}
+
+game:GetService("ReplicatedStorage").PopUpy["Upgrade1Click"]:FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players")["LocalPlayer"].leaderstats["Upgrade1"],
+}
+
+game:GetService("ReplicatedStorage").PopUpy["Upgrade2Click"]:FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players")["LocalPlayer"].leaderstats["Upgrade1"],
+}
+
+game:GetService("ReplicatedStorage").PopUpy["Upgrade3Click"]:FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players")["LocalPlayer"].leaderstats["Upgrade1"],
+}
+
+game:GetService("ReplicatedStorage").PopUpy["Upgrade4Click"]:FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players")["LocalPlayer"].leaderstats["Upgrade1"],
+}
+
+game:GetService("ReplicatedStorage").PopUpy["Upgrade5Click"]:FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players")["LocalPlayer"].leaderstats["Upgrade1"],
+}
+
+game:GetService("ReplicatedStorage").PopUpy["Upgrade6Click"]:FireServer(unpack(args))
     end
 
 
     else
         _G.e = false
     end
+end)
+crates:CreateButton("Auto Buy Not Work", function() --the (arg) is if the checkbox is toggled or not
+
+end)
+crates:CreateButton("Just Restart Game", function() --the (arg) is if the checkbox is toggled or not
+ 
 end)
 crates:CreateToggle("Auto Buy Crates 1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
