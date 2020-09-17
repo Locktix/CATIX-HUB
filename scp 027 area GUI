@@ -11407,7 +11407,7 @@ setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
         wait(2)
     end)
 
---| Anti Chat Logs |
+
 local CloneFunction = clonefunction
 local CheckCaller = CloneFunction(checkcaller)
 local HookFunction = CloneFunction(hookfunction)
