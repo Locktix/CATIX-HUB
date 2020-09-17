@@ -11305,9 +11305,10 @@ Credits:Destroy()
 IntroBackground:Destroy()
 minimizeHolder()
 end)
-MISC:CreateButton("Speed Hack 200 ", function() --the (arg) is if the checkbox is toggled or not
-     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 300
-         
+MISC:CreateButton("Speed Hack 100 Press(A)Or(E)", function() --the (arg) is if the checkbox is toggled or not
+      game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+      if key == "A" then
+          end
 end)
 
 AutoTab:CreateButton("Use Auto Click", function() --you dont need "arg" for a button
@@ -12064,12 +12065,7 @@ else
 _G.bossc57 = false
 end
 end)
-quest:CreateToggle("Auto Warden Quests", function(arg)
-if arg then
-_G.q1 = true
- while wait() and _G.q1 do
- 
-
+quest:CreateButton(" Warden Quests", function()
 local args = {
     [1] = "StartQuest",
     [2] = "ImpelQuest",
@@ -12077,17 +12073,8 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q1 = false
-end
 end)
-quest:CreateToggle("Auto Chief Warden Quests", function(arg)
-if arg then
-_G.q2 = true
- while wait() and _G.q2 do
- 
-
+quest:CreateButton(" Chief Warden Quests", function()
 local args = {
     [1] = "StartQuest",
     [2] = "ImpelQuest",
@@ -12095,16 +12082,9 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q2 = false
-end
 end)
-quest:CreateToggle("Auto Swan Quests", function(arg)
-if arg then
-_G.q3 = true
- while wait() and _G.q3 do
- 
+quest:CreateButton(" Swan Quests", function()
+
 
 local args = {
     [1] = "StartQuest",
@@ -12113,15 +12093,10 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q3 = false
-end
+
 end)
-quest:CreateToggle("Auto Military Soldier Quests", function(arg)
-if arg then
-_G.q6 = true
- while wait() and _G.q6 do
+quest:CreateButton(" Military Soldier Quests", function()
+
  
 
 local args = {
@@ -12131,15 +12106,10 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q6 = false
-end
+
 end)
-quest:CreateToggle("Auto Military Spy Quests", function(arg)
-if arg then
-_G.q5 = true
- while wait() and _G.q5 do
+quest:CreateButton(" Military Spy Quests", function()
+
  
 
 local args = {
@@ -12149,16 +12119,11 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q5 = false
-end
+
+
 end)
-quest:CreateToggle("Auto Magma Admiral Quests", function(arg)
-if arg then
-_G.q4 = true
- while wait() and _G.q4 do
- 
+quest:CreateButton(" Magma Admiral Quests", function()
+
 
 local args = {
     [1] = "StartQuest",
@@ -12167,15 +12132,10 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q4 = false
-end
+
 end)
-quest:CreateToggle("Auto Trainee Quests", function(arg)
-if arg then
-_G.q8 = true
- while wait() and _G.q8 do
+quest:CreateButton(" Trainee Quests", function()
+
  
 
 
@@ -12186,15 +12146,10 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q8 = false
-end
+
 end)
-quest:CreateToggle("Auto Bandit Quests", function(arg)
-if arg then
-_G.q9 = true
- while wait() and _G.q9 do
+quest:CreateButton(" Bandit Quests", function()
+
  
 
 
@@ -12205,15 +12160,10 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q9 = false
-end
+
 end)
-quest:CreateToggle("Auto Monkeys Quests", function(arg)
-if arg then
-_G.q10 = true
- while wait() and _G.q10 do
+quest:CreateButton(" Monkeys Quests", function()
+
  
 
 local args = {
@@ -12223,15 +12173,9 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q10 = false
-end
 end)
-quest:CreateToggle("Auto Gorrilas Quests", function(arg)
-if arg then
-_G.q11 = true
- while wait() and _G.q11 do
+quest:CreateButton(" Gorrilas Quests", function()
+
  
 
 
@@ -12243,16 +12187,10 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q11 = false
-end
+
 end)
-quest:CreateToggle("Auto Gorrila King Quests", function(arg)
-if arg then
-_G.q12 = true
- while wait() and _G.q12 do
- 
+quest:CreateButton(" Gorrila King Quests", function()
+
 
 
 
@@ -12263,15 +12201,10 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q12 = false
-end
+
 end)
-quest:CreateToggle("Auto Snow Bandit Quests", function(arg)
-if arg then
-_G.q13 = true
- while wait() and _G.q13 do
+quest:CreateButton(" Snow Bandit Quests", function()
+
  
 
 
@@ -12282,16 +12215,10 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q13 = false
-end
+
 end)
-quest:CreateToggle("Auto Snowman Quests", function(arg)
-if arg then
-_G.q14 = true
- while wait() and _G.q14 do
- 
+quest:CreateButton(" Snowman Quests", function()
+
 
 
 local args = {
@@ -12301,16 +12228,10 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q14 = false
-end
+
 end)
-quest:CreateToggle("Auto Yeti Quests", function(arg)
-if arg then
-_G.q15 = true
- while wait() and _G.q15 do
- 
+quest:CreateButton(" Yeti Quests", function()
+
 
 
 
@@ -12321,16 +12242,10 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q15 = false
-end
+
 end)
-quest:CreateToggle("Auto Sky Bandit Quests", function(arg)
-if arg then
-_G.q16 = true
- while wait() and _G.q16 do
- 
+quest:CreateButton(" Sky Bandit Quests", function()
+
 
 
 
@@ -12341,16 +12256,9 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q16 = false
-end
+
 end)
-quest:CreateToggle("Auto Dark Master Quests", function(arg)
-if arg then
-_G.q17 = true
- while wait() and _G.q17 do
- 
+quest:CreateButton(" Dark Master Quests", function()
 
 
 
@@ -12361,16 +12269,10 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q17 = false
-end
+
 end)
-quest:CreateToggle("Auto Royal Squad Quests", function(arg)
-if arg then
-_G.q18 = true
- while wait() and _G.q18 do
- 
+quest:CreateButton(" Royal Squad Quests", function()
+
 
 
 
@@ -12382,16 +12284,10 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q18 = false
-end
+
 end)
-quest:CreateToggle("Auto Royal Soldier Quests", function(arg)
-if arg then
-_G.q19 = true
- while wait() and _G.q19 do
- 
+quest:CreateButton(" Royal Soldier Quests", function()
+
 
 
 
@@ -12402,16 +12298,10 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q19 = false
-end
+
 end)
-quest:CreateToggle("Auto Thunder God Quests", function(arg)
-if arg then
-_G.q20 = true
- while wait() and _G.q20 do
- 
+quest:CreateButton(" Thunder God Quests", function()
+
 
 
 
@@ -12422,16 +12312,10 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q20 = false
-end
+
 end)
-quest2:CreateToggle("Auto Galley Pirate Quests", function(arg)
-if arg then
-_G.q21 = true
- while wait() and _G.q21 do
- 
+quest2:CreateButton(" Galley Pirate Quests", function()
+
 
 
 
@@ -12442,15 +12326,10 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q21 = false
-end
+
 end)
-quest2:CreateToggle("Auto Galley Captain Quests", function(arg)
-if arg then
-_G.q22 = true
- while wait() and _G.q22 do
+quest2:CreateButton(" Galley Captain Quests", function()
+
  
 
 
@@ -12462,16 +12341,10 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q22 = false
-end
+
 end)
-quest2:CreateToggle("Auto Cyborg Quests", function(arg)
-if arg then
-_G.q23 = true
- while wait() and _G.q23 do
- 
+quest2:CreateButton(" Cyborg Quests", function()
+
 
 
 
@@ -12482,16 +12355,10 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q23 = false
-end
+
 end)
-quest2:CreateToggle("Auto Pirates Quests", function(arg)
-if arg then
-_G.q24 = true
- while wait() and _G.q24 do
- 
+quest2:CreateButton(" Pirates Quests", function()
+
 
 
 
@@ -12502,15 +12369,10 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q24 = false
-end
+
 end)
-quest2:CreateToggle("Auto Brutes Quests", function(arg)
-if arg then
-_G.q25 = true
- while wait() and _G.q25 do
+quest2:CreateButton(" Brutes Quests", function()
+
  
 
 
@@ -12522,16 +12384,10 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q25 = false
-end
+
 end)
-quest2:CreateToggle("Auto Bobby Quests", function(arg)
-if arg then
-_G.q26 = true
- while wait() and _G.q26 do
- 
+quest2:CreateButton(" Bobby Quests", function()
+
 
 
 
@@ -12542,16 +12398,10 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q26 = false
-end
+
 end)
-quest2:CreateToggle("Auto Chief Petty Officer Quests", function(arg)
-if arg then
-_G.q27 = true
- while wait() and _G.q27 do
- 
+quest2:CreateButton(" Chief Petty Officer Quests", function()
+
 
 
 
@@ -12562,16 +12412,10 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q27 = false
-end
+
 end)
-quest2:CreateToggle("Auto Vice Admiral Quests", function(arg)
-if arg then
-_G.q28 = true
- while wait() and _G.q28 do
- 
+quest2:CreateButton(" Vice Admiral Quests", function()
+
 
 
 
@@ -12582,16 +12426,10 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q28 = false
-end
+
 end)
-quest2:CreateToggle("Auto Fishman Warrior Quests", function(arg)
-if arg then
-_G.q29 = true
- while wait() and _G.q29 do
- 
+quest2:CreateButton(" Fishman Warrior Quests", function()
+
 
 
 
@@ -12602,16 +12440,10 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q29 = false
-end
+
 end)
-quest2:CreateToggle("Auto Fishman Commando Quests", function(arg)
-if arg then
-_G.q30 = true
- while wait() and _G.q30 do
- 
+quest2:CreateButton(" Fishman Commando Quests", function()
+
 
 
 local args = {
@@ -12621,16 +12453,10 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q30 = false
-end
+
 end)
-quest2:CreateToggle("Auto Fishman Lord Quests", function(arg)
-if arg then
-_G.q31 = true
- while wait() and _G.q31 do
- 
+quest2:CreateButton(" Fishman Lord Quests", function()
+
 
 
 
@@ -12641,16 +12467,10 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q31 = false
-end
+
 end)
-quest2:CreateToggle("Auto Desert Bandit Quests", function(arg)
-if arg then
-_G.q32 = true
- while wait() and _G.q32 do
- 
+quest2:CreateButton(" Desert Bandit Quests", function()
+
 
 
 
@@ -12661,18 +12481,9 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q32 = false
-end
+
 end)
-quest2:CreateToggle("Auto Desert Officer Quest", function(arg)
-if arg then
-_G.q33 = true
- while wait() and _G.q33 do
- 
-
-
+quest2:CreateButton(" Desert Officer Quest", function()
 local args = {
     [1] = "StartQuest",
     [2] = "DesertQuest",
@@ -12680,18 +12491,8 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q33 = false
-end
 end)
-quest2:CreateToggle("Auto Toga Warrior Quest", function(arg)
-if arg then
-_G.q34 = true
- while wait() and _G.q34 do
- 
-
-
+quest2:CreateButton(" Toga Warrior Quest", function()
 local args = {
     [1] = "StartQuest",
     [2] = "ColosseumQuest",
@@ -12699,17 +12500,8 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q34 = false
-end
 end)
-quest2:CreateToggle("Auto Gladiator Quest", function(arg)
-if arg then
-_G.q35 = true
- while wait() and _G.q35 do
- 
-
+quest2:CreateButton(" Gladiator Quest", function()
 local args = {
     [1] = "StartQuest",
     [2] = "ColosseumQuest",
@@ -12717,10 +12509,6 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer(unpack(args))
-end
-else
-_G.q35 = false
-end
 end)
 --| Anti KICK |
 local mt = getrawmetatable(game)
