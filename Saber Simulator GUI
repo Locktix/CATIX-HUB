@@ -586,11 +586,8 @@ else
 _G.bossc = false
 end
 end)
-teleports:CreateToggle("Auto Flags", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-_G.f2 = true 
-while wait(0) and _G.f2 do
-while wait() do
+teleports:CreateButton("Auto Flags", function() --the (arg) is if the checkbox is toggled or not
+   
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(640, 221, 144)
 wait(24)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(713, 173, 465)
@@ -613,10 +610,7 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(602, 540
 wait(24)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(665, 6320, -149)
 wait(24)
-end
-end
-else
-  _G.f2 = false
+
 end
 end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
