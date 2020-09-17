@@ -5,7 +5,7 @@
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
-local AutoTab = Library:CreateTab("SCP-Area-27 GUI","things", true)
+local AutoTab = Library:CreateTab("SCP_Area_27v2 GUI","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
@@ -11349,45 +11349,9 @@ end)
 
 
 
-AutoTab:CreateToggle("Auto TP TO SCP-966-2", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.o = true 
-        while wait(0) and _G.o do
-local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace")["SCP-966"]["SCP-966-2"].HumanoidRootPart
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+20, pbosd.Position.Z+1)
-    end
-    else
-        _G.o = false
-    end
-end)
-AutoTab:CreateToggle("Auto TP TO SCP-049", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.o2 = true 
-        while wait(0) and _G.o2 do
-local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace")["SCP-049"].RightHand
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+10, pbosd.Position.Z+1)
-    end
-    else
-        _G.o2 = false
-    end
-end)
-AutoTab:CreateToggle("Auto TP TO SCP-023", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.o3 = true 
-        while wait(0) and _G.o3 do
-local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace")["SCP-023"].RightHand
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+10, pbosd.Position.Z+1)
-    end
-    else
-        _G.o3 = false
-    end
-end)
 AutoTab:CreateButton("Tp To CI box", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-679.02478, -304.895325, -4789.354)
 end)
@@ -11460,4 +11424,1846 @@ local PostMessageHook = function(self, msg)
    end
    return OldFunctionHook(self, msg)
 end
-OldFunctionHook = HookFunction(PostMessage.fire, PostMessageHook)
+OldFunctionHook = HookFunction(PostMessage.fire, PostMessageHook))'}
+CMDs[#CMDs + 1] = {NAME = 'teleport / tp [plr] [plr] (TOOL)', DESC = 'Teleports a player to another player (YOU NEED A TOOL)'}
+CMDs[#CMDs + 1] = {NAME = 'fastteleport / fasttp [plr] [plr] (TOOL)', DESC = 'Teleports a player to another player (less reliable) (YOU NEED A TOOL)'}
+CMDs[#CMDs + 1] = {NAME = 'fling', DESC = 'Flings anyone you touch'}
+CMDs[#CMDs + 1] = {NAME = 'unfling', DESC = 'Disables the fling command'}
+CMDs[#CMDs + 1] = {NAME = 'invisfling', DESC = 'Enables invisible fling'}
+CMDs[#CMDs + 1] = {NAME = 'loopoof', DESC = 'Loops everyones character sounds (everyone can hear)'}
+CMDs[#CMDs + 1] = {NAME = 'unloopoof', DESC = 'Stops the oof chaos'}
+CMDs[#CMDs + 1] = {NAME = 'muteboombox [plr]', DESC = 'Mutes someones boombox'}
+CMDs[#CMDs + 1] = {NAME = 'unmuteboombox [plr]', DESC = 'Unmutes someones boombox'}
+CMDs[#CMDs + 1] = {NAME = 'unloopoof', DESC = 'Stops the oof chaos'}
+CMDs[#CMDs + 1] = {NAME = 'hitbox [plr] [size]', DESC = 'Expands the hitbox for players heads (default is 1)'}
+CMDs[#CMDs + 1] = {NAME = '', DESC = ''}
+CMDs[#CMDs + 1] = {NAME = 'reset', DESC = 'Resets your character normally'}
+CMDs[#CMDs + 1] = {NAME = 'respawn', DESC = 'Respawns you'}
+CMDs[#CMDs + 1] = {NAME = 'refresh / re', DESC = 'Respawns and brings you back to the same position'}
+CMDs[#CMDs + 1] = {NAME = 'invisible / invis', DESC = 'Makes you invisible to other players'}
+CMDs[#CMDs + 1] = {NAME = 'visible / vis', DESC = 'Makes you visible to other players'}
+CMDs[#CMDs + 1] = {NAME = 'speed / ws [num]', DESC = 'Change your walkspeed'}
+CMDs[#CMDs + 1] = {NAME = 'loopspeed / loopws [num]', DESC = 'Loops your walkspeed'}
+CMDs[#CMDs + 1] = {NAME = 'unloopspeed / unloopws', DESC = 'Turns off loopspeed'}
+CMDs[#CMDs + 1] = {NAME = 'hipheight / hheight [num]', DESC = 'Adjusts hip height'}
+CMDs[#CMDs + 1] = {NAME = 'jumppower / jpower [num]', DESC = 'Change a players jump height'}
+CMDs[#CMDs + 1] = {NAME = 'maxslopeangle / msa [num]', DESC = 'Adjusts MaxSlopeAngle'}
+CMDs[#CMDs + 1] = {NAME = 'gravity / grav [num] (CLIENT)', DESC = 'Change your gravity'}
+CMDs[#CMDs + 1] = {NAME = 'sit', DESC = 'Makes your character sit'}
+CMDs[#CMDs + 1] = {NAME = 'sitwalk', DESC = 'Makes your character sit while still being able to walk'}
+CMDs[#CMDs + 1] = {NAME = 'nosit', DESC = 'Prevents your character from sitting'}
+CMDs[#CMDs + 1] = {NAME = 'unnosit', DESC = 'Disables nosit'}
+CMDs[#CMDs + 1] = {NAME = 'jump', DESC = 'Makes your character jump'}
+CMDs[#CMDs + 1] = {NAME = 'infinitejump / infjump', DESC = 'Allows you to jump before hitting the ground'}
+CMDs[#CMDs + 1] = {NAME = 'uninfinitejump / uninfjump', DESC = 'Disables infjump'}
+CMDs[#CMDs + 1] = {NAME = 'platformstand / stun', DESC = 'Enables PlatformStand'}
+CMDs[#CMDs + 1] = {NAME = 'unplatformstand / unstun', DESC = 'Disables PlatformStand'}
+CMDs[#CMDs + 1] = {NAME = 'norotate / noautorotate', DESC = 'Disables AutoRotate'}
+CMDs[#CMDs + 1] = {NAME = 'unnorotate / autorotate', DESC = 'Enables AutoRotate'}
+CMDs[#CMDs + 1] = {NAME = 'team [team name] (CLIENT)', DESC = 'Changes your team. Sometimes fools localscripts.'}
+CMDs[#CMDs + 1] = {NAME = 'nobillboardgui / nobgui / noname', DESC = 'Removes billboard and surface guis from your players (i.e. name guis at cafes)'}
+CMDs[#CMDs + 1] = {NAME = 'loopnobgui / loopnoname', DESC = 'Loop removes billboard and surface guis from your players (i.e. name guis at cafes)'}
+CMDs[#CMDs + 1] = {NAME = 'unloopnobgui / unloopnoname', DESC = 'Disables loopnobgui'}
+CMDs[#CMDs + 1] = {NAME = 'noarms', DESC = 'Removes your arms'}
+CMDs[#CMDs + 1] = {NAME = 'nolegs', DESC = 'Removes your legs'}
+CMDs[#CMDs + 1] = {NAME = 'nolimbs', DESC = 'Removes your limbs'}
+CMDs[#CMDs + 1] = {NAME = 'naked', DESC = 'Removes your clothing'}
+CMDs[#CMDs + 1] = {NAME = 'noface / removeface', DESC = 'Removes your face'}
+CMDs[#CMDs + 1] = {NAME = 'blockhead', DESC = 'Turns your head into a block'}
+CMDs[#CMDs + 1] = {NAME = 'blockhats', DESC = 'Turns your hats into blocks'}
+CMDs[#CMDs + 1] = {NAME = 'blocktool', DESC = 'Turns the currently selected tool into a block'}
+CMDs[#CMDs + 1] = {NAME = 'creeper', DESC = 'Makes you look like a creeper'}
+CMDs[#CMDs + 1] = {NAME = 'drophats', DESC = 'Drops your hats'}
+CMDs[#CMDs + 1] = {NAME = 'nohats / deletehats / rhats', DESC = 'Deletes your hats'}
+CMDs[#CMDs + 1] = {NAME = 'chardelete / cd [instance name]', DESC = 'Removes any part with a certain name from your character'}
+CMDs[#CMDs + 1] = {NAME = 'chardeleteclass / cdc [class name]', DESC = 'Removes any part with a certain classname from your character'}
+CMDs[#CMDs + 1] = {NAME = 'deletevelocity / dv / removeforces', DESC = 'Removes any velocity / force instances in your character'}
+CMDs[#CMDs + 1] = {NAME = 'weaken [num]', DESC = 'Makes your character less dense'}
+CMDs[#CMDs + 1] = {NAME = 'unweaken', DESC = 'Sets your characters CustomPhysicalProperties to default'}
+CMDs[#CMDs + 1] = {NAME = 'strengthen [num]', DESC = 'Makes your character more dense (CustomPhysicalProperties)'}
+CMDs[#CMDs + 1] = {NAME = 'unstrengthen', DESC = 'Sets your characters CustomPhysicalProperties to default'}
+CMDs[#CMDs + 1] = {NAME = 'breakvelocity', DESC = 'Sets your characters velocity to 0'}
+CMDs[#CMDs + 1] = {NAME = 'spin [speed]', DESC = 'Spins your character'}
+CMDs[#CMDs + 1] = {NAME = 'unspin', DESC = 'Disables spin'}
+CMDs[#CMDs + 1] = {NAME = 'hatspin / spinhats', DESC = 'Spins your characters accessories'}
+CMDs[#CMDs + 1] = {NAME = 'unhatspin / unspinhats', DESC = 'Undoes spinhats'}
+CMDs[#CMDs + 1] = {NAME = 'vr', DESC = 'Loads CLOVR by Abacaxl'}
+CMDs[#CMDs + 1] = {NAME = 'split', DESC = 'Splits your character in half'}
+CMDs[#CMDs + 1] = {NAME = 'nilchar', DESC = 'Sets your characters parent to nil'}
+CMDs[#CMDs + 1] = {NAME = 'unnilchar / nonilchar', DESC = 'Sets your characters parent to workspace'}
+CMDs[#CMDs + 1] = {NAME = 'noroot / removeroot / rroot', DESC = 'Removes your characters HumanoidRootPart'}
+CMDs[#CMDs + 1] = {NAME = '', DESC = ''}
+CMDs[#CMDs + 1] = {NAME = 'animation / anim [ID] [speed]', DESC = 'Makes your character perform an animation (must be by roblox to replicate)'}
+CMDs[#CMDs + 1] = {NAME = 'dance', DESC = 'Makes you  d a n c e'}
+CMDs[#CMDs + 1] = {NAME = 'undance', DESC = 'Stops dance animations'}
+CMDs[#CMDs + 1] = {NAME = 'spasm', DESC = 'Makes you  c r a z y'}
+CMDs[#CMDs + 1] = {NAME = 'unspasm', DESC = 'Stops spasm'}
+CMDs[#CMDs + 1] = {NAME = 'headthrow', DESC = 'Simply makes you throw your head'}
+CMDs[#CMDs + 1] = {NAME = 'noanim', DESC = 'Disables your animations'}
+CMDs[#CMDs + 1] = {NAME = 'reanim', DESC = 'Restores your animations'}
+CMDs[#CMDs + 1] = {NAME = 'animspeed [num]', DESC = 'Changes the speed of your current animation'}
+CMDs[#CMDs + 1] = {NAME = 'stopanimations / stopanims', DESC = 'Stops running animations'}
+CMDs[#CMDs + 1] = {NAME = '', DESC = ''}
+CMDs[#CMDs + 1] = {NAME = 'autoclick [click delay] [release delay]', DESC = 'Automatically clicks your mouse with a set delay'}
+CMDs[#CMDs + 1] = {NAME = 'unautoclick / noautoclick', DESC = 'Turns off autoclick'}
+CMDs[#CMDs + 1] = {NAME = 'autokeypress [key] [down delay] [up delay]', DESC = 'Automatically presses a key with a set delay'}
+CMDs[#CMDs + 1] = {NAME = 'unautokeypress', DESC = 'Stops autokeypress'}
+CMDs[#CMDs + 1] = {NAME = 'hovername', DESC = 'Shows a players username when your mouse is hovered over them'}
+CMDs[#CMDs + 1] = {NAME = 'unhovername / nohovername', DESC = 'Turns off hovername'}
+CMDs[#CMDs + 1] = {NAME = 'mousesensitivity / ms [0-10]', DESC = 'Sets your mouse sensitivity (affects first person and right click drag) (default is 1)'}
+CMDs[#CMDs + 1] = {NAME = 'clickdelete', DESC = 'Go to settings>Keybinds>Add for clicktp'}
+CMDs[#CMDs + 1] = {NAME = 'clickteleport', DESC = 'Go to settings>Keybinds>Add for click tp'}
+CMDs[#CMDs + 1] = {NAME = '', DESC = ''}
+CMDs[#CMDs + 1] = {NAME = 'tools', DESC = 'Copies tools from ReplicatedStorage and Lighting'}
+CMDs[#CMDs + 1] = {NAME = 'notools / removetools / deletetools', DESC = 'Removes tools from character and backpack'}
+CMDs[#CMDs + 1] = {NAME = 'deleteselectedtool / dst', DESC = 'Removes any currently selected tools'}
+CMDs[#CMDs + 1] = {NAME = 'grabtools', DESC = 'Automatically get tools that are dropped'}
+CMDs[#CMDs + 1] = {NAME = 'ungrabtools / nograbtools', DESC = 'Disables grabtools'}
+CMDs[#CMDs + 1] = {NAME = 'copytools [plr] (CLIENT)', DESC = 'Copies a players tools'}
+CMDs[#CMDs + 1] = {NAME = 'dupetools / clonetools [num]', DESC = 'Duplicates your inventory tools a set ammount of times'}
+CMDs[#CMDs + 1] = {NAME = 'droptools', DESC = 'Drops your tools'}
+CMDs[#CMDs + 1] = {NAME = 'droppabletools', DESC = 'Makes your tools droppable'}
+CMDs[#CMDs + 1] = {NAME = 'equiptools', DESC = 'Equips every tool in your inventory at once'}
+CMDs[#CMDs + 1] = {NAME = 'reach [num]', DESC = 'Increases the hitbox of your held tool'}
+CMDs[#CMDs + 1] = {NAME = 'unreach / noreach', DESC = 'Turns off reach'}
+CMDs[#CMDs + 1] = {NAME = 'grippos [X Y Z]', DESC = 'Changes your current tools grip position'}
+CMDs[#CMDs + 1] = {NAME = 'usetools', DESC = 'Activates all tools in your backpack at the same time'}
+CMDs[#CMDs + 1] = {NAME = '', DESC = ''}
+CMDs[#CMDs + 1] = {NAME = 'addalias [cmd] [alias]', DESC = 'Adds an alias to a command'}
+CMDs[#CMDs + 1] = {NAME = 'removealias [alias]', DESC = 'Removes a custom alias'}
+CMDs[#CMDs + 1] = {NAME = 'clraliases', DESC = 'Removes all custom aliases'}
+CMDs[#CMDs + 1] = {NAME = '', DESC = ''}
+CMDs[#CMDs + 1] = {NAME = 'addplugin / plugin [name]', DESC = 'Add a plugin via command'}
+CMDs[#CMDs + 1] = {NAME = 'removeplugin / deleteplugin [name]', DESC = 'Remove a plugin via command'}
+CMDs[#CMDs + 1] = {NAME = 'reloadplugin [name]', DESC = 'Reloads a plugin'}
+CMDs[#CMDs + 1] = {NAME = '', DESC = ''}
+CMDs[#CMDs + 1] = {NAME = 'breakloops / break (cmd loops)', DESC = 'Stops any cmd loops (;100^1^cmd)'}
+CMDs[#CMDs + 1] = {NAME = 'removecmd / deletecmd', DESC = 'Removes a command until the admin is reloaded'}
+wait()
+
+for i = 1, #CMDs do
+	local newcmd = Example:Clone()
+	newcmd.Parent = CMDsF
+	newcmd.Visible = false
+	newcmd.Text = CMDs[i].NAME
+	newcmd.Name = 'CMD'
+	table.insert(text1,newcmd)
+	if CMDs[i].DESC ~= '' then
+		local title = Instance.new("StringValue",newcmd)
+		title.Name = "Title"
+		title.Value = CMDs[i].NAME
+		local desc = Instance.new("StringValue",newcmd)
+		desc.Name = "Desc"
+		desc.Value = CMDs[i].DESC
+		newcmd.MouseButton1Down:Connect(function()
+			if newcmd.Visible and newcmd.TextTransparency == 0 then
+				local currentText = Cmdbar.Text
+				Cmdbar:CaptureFocus()
+				autoComplete(newcmd.Text,currentText)
+				maximizeHolder()
+			end
+		end)
+	end
+end
+
+IndexContents('',true)
+
+function getText(object)
+	if object ~= nil then
+		if object:FindFirstChild('Desc') ~= nil then
+			return {object.Desc.Value, object:FindFirstChild('Title')}
+		elseif object.Parent:FindFirstChild('Desc') ~= nil then
+			return {object.Parent.Desc.Value, object.Parent:FindFirstChild('Title')}
+		end
+	end
+	return nil
+end
+
+function checkTT()
+	local t
+	local guisAtPosition = game:GetService("CoreGui"):GetGuiObjectsAtPosition(IYMouse.X, IYMouse.Y)
+	
+	for _, gui in pairs(guisAtPosition) do
+		if gui.Parent == CMDsF then
+			t = gui
+		end
+	end
+	
+	if t ~= nil then
+		local gt = getText(t)
+		if gt ~= nil then
+			local x = IYMouse.X
+			local y = IYMouse.Y
+			local xP
+			local yP
+			if IYMouse.X > 200 then
+				xP = x - 201
+			else
+				xP = x + 21
+			end
+			if IYMouse.Y > (IYMouse.ViewSizeY-96) then
+				yP = y - 97
+			else
+				yP = y
+			end
+			Tooltip.Position = UDim2.new(0, xP, 0, yP)
+			Description.Text = gt[1]
+			if gt[2] ~= nil then
+				Title_3.Text = gt[2].Value
+			else
+				Title_3.Text = ''
+			end
+			Tooltip.Visible = true
+		else
+			Tooltip.Visible = false
+		end
+	else
+		Tooltip.Visible = false
+	end
+end
+
+function FindInTable(Table, Name)
+	for i,v in pairs(Table) do
+		if v == Name then
+			return true
+		end
+	end
+	return false
+end
+
+function GetInTable(Table, Name)
+	for i = 1, #Table do
+		if Table[i] == Name then
+			return i
+		end
+	end
+	return false
+end
+
+function respawn(plr)
+	if invisRunning then TurnVisible() end
+	local char = plr.Character
+	char:ClearAllChildren()
+	local newChar = Instance.new("Model",workspace)
+	plr.Character = newChar
+	wait()
+	plr.Character = char
+	newChar:Destroy()
+end
+
+local refreshCmd = false
+function refresh(plr)
+	spawn(function()
+		refreshCmd = true
+		local rpos = getRoot(plr.Character).Position
+		wait()
+		respawn(plr)
+		wait()
+		repeat wait() until plr.Character and getRoot(plr.Character)
+		wait(.1)
+		if rpos then
+			plr.Character:MoveTo(rpos)
+			wait()
+		end
+		refreshCmd = false
+	end)
+end
+
+local lastDeath
+
+function onDied()
+	spawn(function()
+		if pcall(function() Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid') end) and Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid') then
+			Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid').Died:connect(function()
+				if getRoot(Players.LocalPlayer.Character) then
+					lastDeath = getRoot(Players.LocalPlayer.Character).CFrame
+				end
+			end)
+		else
+			wait(2)
+			onDied()
+		end
+	end)
+end
+
+Clip = true
+spDelay = 0.1
+Players.LocalPlayer.CharacterAdded:Connect(function()
+	FLYING = false
+	Floating = false
+	
+	if not Clip then
+		execCmd('clip nonotify')
+	end
+	
+	repeat wait() until getRoot(Players.LocalPlayer.Character)
+	
+	pcall(function()
+		if spawnpoint and not refreshCmd and spawnpos ~= nil then
+			wait(spDelay)
+			getRoot(Players.LocalPlayer.Character).CFrame = spawnpos
+		end
+	end)
+	
+	onDied()
+end)
+
+onDied()
+
+std={}
+std.inTable=function(tbl,val)
+	if tbl==nil then return false end
+	for _,v in pairs(tbl)do
+		if v==val then return true end
+	end 
+	return false
+end
+
+function getstring(begin)
+	local start = begin-1
+	local AA = '' for i,v in pairs(cargs) do
+		if i > start then
+			if AA ~= '' then
+				AA = AA .. ' ' .. v
+			else
+				AA = AA .. v
+			end
+		end
+	end
+	return AA
+end
+
+findCmd=function(cmd_name)
+	for i,v in pairs(cmds)do
+		if v.NAME:lower()==cmd_name:lower() or std.inTable(v.ALIAS,cmd_name:lower()) then
+			return v
+		end
+	end
+	return customAlias[cmd_name:lower()]
+end
+
+function splitString(str,delim)
+	local broken = {}
+	if delim == nil then delim = "," end
+	for w in string.gmatch(str,"[^"..delim.."]+") do
+		table.insert(broken,w)
+	end
+	return broken
+end
+
+cmdHistory = {}
+local lastCmds = {}
+local historyCount = 0
+local split=" "
+local lastBreakTime = 0
+function execCmd(cmdStr,speaker,store)
+	cmdStr = cmdStr:gsub("%s+$","")
+	spawn(function()
+		local rawCmdStr = cmdStr
+		cmdStr = string.gsub(cmdStr,"\\\\","%%BackSlash%%")
+		local commandsToRun = splitString(cmdStr,"\\")
+		for i,v in pairs(commandsToRun) do
+			v = string.gsub(v,"%%BackSlash%%","\\")
+			local x,y,num = v:find("^(%d+)%^")
+			local cmdDelay = 0
+			local infTimes = false
+			if num then
+				v = v:sub(y+1)
+				local x,y,del = v:find("^([%d%.]+)%^")
+				if del then
+					v = v:sub(y+1)
+					cmdDelay = tonumber(del) or 0
+				end
+			else
+				local x,y = v:find("^inf%^")
+				if x then
+					infTimes = true
+					v = v:sub(y+1)
+					local x,y,del = v:find("^([%d%.]+)%^")
+					if del then
+						v = v:sub(y+1)
+						del = tonumber(del) or 1
+						cmdDelay = (del > 0 and del or 1)
+					else
+						cmdDelay = 1
+					end
+				end
+			end
+			num = tonumber(num or 1)
+			
+			if v:sub(1,1) == "!" then
+				local chunks = splitString(v:sub(2),split)
+				if chunks[1] and lastCmds[chunks[1]] then v = lastCmds[chunks[1]] end
+			end
+			
+			local args = splitString(v,split)
+			local cmdName = args[1]
+			local cmd = findCmd(cmdName)
+			if cmd then
+				table.remove(args,1)
+				cargs = args
+				if not speaker then speaker = Players.LocalPlayer end
+				if store then
+					if speaker == Players.LocalPlayer then
+						if cmdHistory[1] ~= rawCmdStr then table.insert(cmdHistory,1,rawCmdStr) end
+					end
+					if #cmdHistory > 30 then table.remove(cmdHistory) end
+					
+					lastCmds[cmdName] = v
+				end
+				local cmdStartTime = tick()
+				if infTimes then
+					while lastBreakTime < cmdStartTime do
+						local success,err = pcall(cmd.FUNC,args, speaker)
+						if not success and _G.IY_DEBUG then
+							warn("Command Error:", cmdName, err)
+						end
+						wait(cmdDelay)
+					end
+				else
+					for rep = 1,num do
+						if lastBreakTime > cmdStartTime then break end
+						local success,err = pcall(function()
+							cmd.FUNC(args, speaker)
+						end)
+						if not success and _G.IY_DEBUG then
+							warn("Command Error:", cmdName, err)
+						end
+						if cmdDelay ~= 0 then wait(cmdDelay) end
+					end
+				end
+			end
+		end
+	end)
+end	
+
+function addcmd(name,alias,func,plgn)
+	cmds[#cmds+1]=
+	{
+		NAME=name;
+		ALIAS=alias or {};
+		FUNC=func;
+		PLUGIN=plgn;
+	}
+end
+
+function removecmd(cmd)
+	if cmd ~= " " then
+		for i = #cmds,1,-1 do
+			if cmds[i].NAME == cmd or FindInTable(cmds[i].ALIAS,cmd) then
+				table.remove(cmds, i)
+				for a,c in pairs(CMDsF:GetChildren()) do
+					if string.find(c.Text, "^"..cmd.."$") or string.find(c.Text, "^"..cmd.." ") or string.find(c.Text, " "..cmd.."$") or string.find(c.Text, " "..cmd.." ") then
+						c.TextTransparency = 0.7
+						c.MouseButton1Click:Connect(function()
+							notify(c.Text, "Command has been disabled by you or a plugin")
+						end)
+					end
+				end
+			end
+		end
+	end
+end
+
+function addbind(cmd,key,iskeyup)
+	binds[#binds+1]=
+	{
+		COMMAND=cmd;
+		KEY=key;
+		ISKEYUP=iskeyup;
+	}
+end
+
+function addcmdtext(text,name,desc)
+	local newcmd = Example:Clone()
+	local tooltipText = tostring(text)
+	local tooltipDesc = tostring(desc)
+	newcmd.Parent = CMDsF
+	newcmd.Visible = false
+	newcmd.Text = text
+	newcmd.Name = 'PLUGIN_'..name
+	table.insert(text1,newcmd)
+	if desc and desc ~= '' then
+		local title = Instance.new("StringValue",newcmd)
+		title.Name = "Title"
+		title.Value = tooltipText
+		local desc = Instance.new("StringValue",newcmd)
+		desc.Name = "Desc"
+		desc.Value = tooltipDesc
+		newcmd.MouseButton1Down:Connect(function()
+			if newcmd.Visible and newcmd.TextTransparency == 0 then
+				Cmdbar:CaptureFocus()
+				autoComplete(newcmd.Text)
+				maximizeHolder()
+			end
+		end)
+	end
+end
+
+SpecialPlayerCases = {
+	["all"] = function(speaker)return Players:GetPlayers() end,
+	["others"] = function(speaker)
+		local plrs = {}
+		for i,v in pairs(Players:GetPlayers()) do
+			if v ~= speaker then
+				table.insert(plrs,v)
+			end
+		end
+		return plrs
+	end,
+	["me"] = function(speaker)return {speaker} end,
+	["#(%d+)"] = function(speaker,args,currentList)
+		local returns = {}
+		local randAmount = tonumber(args[1])
+		local players = {unpack(currentList)}
+		for i = 1,randAmount do
+			if #players == 0 then break end
+			local randIndex = math.random(1,#players)
+			table.insert(returns,players[randIndex])
+			table.remove(players,randIndex)
+		end
+		return returns
+	end,
+	["random"] = function(speaker,args,currentList)
+		local players = currentList
+		return {players[math.random(1,#players)]}
+	end,
+	["%%(.+)"] = function(speaker,args)
+		local returns = {}
+		local team = args[1]
+		for _,plr in pairs(Players:GetPlayers()) do
+			if plr.Team and string.sub(string.lower(plr.Team.Name),1,#team) == string.lower(team) then
+				table.insert(returns,plr)
+			end
+		end
+		return returns
+	end,
+	["allies"] = function(speaker)
+		local returns = {}
+		local team = speaker.Team
+		for _,plr in pairs(Players:GetPlayers()) do
+			if plr.Team == team then
+				table.insert(returns,plr)
+			end
+		end
+		return returns
+	end,
+	["enemies"] = function(speaker)
+		local returns = {}
+		local team = speaker.Team
+		for _,plr in pairs(Players:GetPlayers()) do
+			if plr.Team ~= team then
+				table.insert(returns,plr)
+			end
+		end
+		return returns
+	end,
+	["team"] = function(speaker)
+		local returns = {}
+		local team = speaker.Team
+		for _,plr in pairs(Players:GetPlayers()) do
+			if plr.Team == team then
+				table.insert(returns,plr)
+			end
+		end
+		return returns
+	end,
+	["nonteam"] = function(speaker)
+		local returns = {}
+		local team = speaker.Team
+		for _,plr in pairs(Players:GetPlayers()) do
+			if plr.Team ~= team then
+				table.insert(returns,plr)
+			end
+		end
+		return returns
+	end,
+	["friends"] = function(speaker,args)
+		local returns = {}
+		for _,plr in pairs(Players:GetPlayers()) do
+			if plr:IsFriendsWith(speaker.UserId) and plr ~= speaker then
+				table.insert(returns,plr)
+			end
+		end
+		return returns
+	end,
+	["nonfriends"] = function(speaker,args)
+		local returns = {}
+		for _,plr in pairs(Players:GetPlayers()) do
+			if not plr:IsFriendsWith(speaker.UserId) and plr ~= speaker then
+				table.insert(returns,plr)
+			end
+		end
+		return returns
+	end,
+	["guests"] = function(speaker,args)
+		local returns = {}
+		for _,plr in pairs(Players:GetPlayers()) do
+			if plr.Guest then
+				table.insert(returns,plr)
+			end
+		end
+		return returns
+	end,
+	["bacons"] = function(speaker,args)
+		local returns = {}
+		for _,plr in pairs(Players:GetPlayers()) do
+			if plr.Character:FindFirstChild('Pal Hair') or plr.Character:FindFirstChild('Kate Hair') then
+				table.insert(returns,plr)
+			end
+		end
+		return returns
+	end,
+	["age(%d+)"] = function(speaker,args)
+		local returns = {}
+		local age = tonumber(args[1])
+		if not age == nil then return end
+		for _,plr in pairs(Players:GetPlayers()) do
+			if plr.AccountAge <= age then
+				table.insert(returns,plr)
+			end
+		end
+		return returns
+	end,
+	["nearest"] = function(speaker,args)
+		local speakerChar = speaker.Character
+		if not speakerChar or not getRoot(speakerChar) then return end
+		local lowest = math.huge
+		local NearestPlayer = nil
+		for _,plr in pairs(Players:GetPlayers()) do
+			if plr ~= speaker and plr.Character then
+				local distance = plr:DistanceFromCharacter(getRoot(speakerChar).Position)
+				if distance < lowest then
+					lowest = distance
+					NearestPlayer = {plr}
+				end
+			end
+		end
+		return NearestPlayer
+	end,
+	["farthest"] = function(speaker,args)
+		local speakerChar = speaker.Character
+		if not speakerChar or not getRoot(speakerChar) then return end
+		local highest = math.huge
+		local FarthestPlayer = nil
+		for _,plr in pairs(Players:GetPlayers()) do
+			if plr ~= speaker and plr.Character then
+				local distance = plr:DistanceFromCharacter(getRoot(speakerChar).Position)
+				if distance > highest then
+					highest = distance
+					FarthestPlayer = {plr}
+				end
+			end
+		end
+		return FarthestPlayer
+	end,
+	["group(%d+)"] = function(speaker,args)
+		local returns = {}
+		local groupID = tonumber(args[1])
+		for _,plr in pairs(Players:GetPlayers()) do
+			if plr:IsInGroup(groupID) then  
+				table.insert(returns,plr)
+			end
+		end
+		return returns
+	end,
+	["alive"] = function(speaker,args)
+		local returns = {}
+		for _,plr in pairs(Players:GetPlayers()) do
+			if plr.Character and plr.Character:FindFirstChildOfClass("Humanoid") and plr.Character:FindFirstChildOfClass("Humanoid").Health > 0 then
+				table.insert(returns,plr)
+			end
+		end
+		return returns
+	end,
+	["dead"] = function(speaker,args)
+		local returns = {}
+		for _,plr in pairs(Players:GetPlayers()) do
+			if (not plr.Character or not plr.Character:FindFirstChildOfClass("Humanoid")) or plr.Character:FindFirstChildOfClass("Humanoid").Health <= 0 then
+				table.insert(returns,plr)
+			end
+		end
+		return returns
+	end,
+	["rad(%d+)"] = function(speaker,args)
+		local returns = {}
+		local radius = tonumber(args[1])
+		local speakerChar = speaker.Character
+		if not speakerChar or not getRoot(speakerChar) then return end
+		for _,plr in pairs(Players:GetPlayers()) do
+			if plr.Character and getRoot(plr.Character) then
+				local magnitude = (getRoot(plr.Character).Position-getRoot(speakerChar).Position).magnitude
+				if magnitude <= radius then table.insert(returns,plr) end
+			end
+		end
+		return returns
+	end
+}
+
+function toTokens(str)
+	local tokens = {}
+	for op,name in string.gmatch(str,"([+-])([^+-]+)") do
+		table.insert(tokens,{Operator = op,Name = name})
+	end
+	return tokens
+end
+
+function onlyIncludeInTable(tab,matches)
+	local matchTable = {}
+	local resultTable = {}
+	for i,v in pairs(matches) do matchTable[v.Name] = true end
+	for i,v in pairs(tab) do if matchTable[v.Name] then table.insert(resultTable,v) end end
+	return resultTable
+end
+
+function removeTableMatches(tab,matches)
+	local matchTable = {}
+	local resultTable = {}
+	for i,v in pairs(matches) do matchTable[v.Name] = true end
+	for i,v in pairs(tab) do if not matchTable[v.Name] then table.insert(resultTable,v) end end
+	return resultTable
+end
+
+function getPlayersByName(name)
+	local found = {}
+	for i,v in pairs(Players:GetChildren()) do
+		if string.sub(string.lower(v.Name),1,#name) == string.lower(name) then
+			table.insert(found,v)
+		end
+	end
+	return found
+end
+
+function getPlayer(list,speaker)
+	if list == nil then return {speaker.Name} end
+	local nameList = splitString(list,",")
+	
+	local foundList = {}
+	
+	for _,name in pairs(nameList) do
+		if string.sub(name,1,1) ~= "+" and string.sub(name,1,1) ~= "-" then name = "+"..name end
+		local tokens = toTokens(name)
+		local initialPlayers = Players:GetPlayers()
+		
+		for i,v in pairs(tokens) do
+			if v.Operator == "+" then
+				local tokenContent = v.Name
+				local foundCase = false
+				for regex,case in pairs(SpecialPlayerCases) do
+					local matches = {string.match(tokenContent,"^"..regex.."$")}
+					if #matches > 0 then
+						foundCase = true
+						initialPlayers = onlyIncludeInTable(initialPlayers,case(speaker,matches,initialPlayers))
+					end
+				end
+				if not foundCase then
+					initialPlayers = onlyIncludeInTable(initialPlayers,getPlayersByName(tokenContent))
+				end
+			else
+				local tokenContent = v.Name
+				local foundCase = false
+				for regex,case in pairs(SpecialPlayerCases) do
+					local matches = {string.match(tokenContent,"^"..regex.."$")}
+					if #matches > 0 then
+						foundCase = true
+						initialPlayers = removeTableMatches(initialPlayers,case(speaker,matches,initialPlayers))
+					end
+				end
+				if not foundCase then
+					initialPlayers = removeTableMatches(initialPlayers,getPlayersByName(tokenContent))
+				end
+			end
+		end
+		
+		for i,v in pairs(initialPlayers) do table.insert(foundList,v) end
+	end
+	
+	local foundNames = {}
+	for i,v in pairs(foundList) do table.insert(foundNames,v.Name) end
+	
+	return foundNames
+end
+
+getprfx=function(strn)
+	if strn:sub(1,string.len(prefix))==prefix then return{'cmd',string.len(prefix)+1}
+	end return
+end
+
+function do_exec(str, plr)
+	str = str:gsub('/e ', '')
+	local t = getprfx(str)
+	if not t then return end
+	str = str:sub(t[2])
+	if t[1]=='cmd' then
+		execCmd(str, plr, true)
+		IndexContents('',true,false,true)
+		CMDsF.CanvasPosition = canvasPos
+	end
+end
+
+lastTextBoxString,lastTextBoxCon,lastEnteredString = nil,nil,nil
+
+UserInputService.TextBoxFocused:Connect(function(obj)
+	if lastTextBoxCon then lastTextBoxCon:Disconnect() end
+	if obj == Cmdbar then lastTextBoxString = nil return end
+	lastTextBoxString = obj.Text
+	lastTextBoxCon = obj:GetPropertyChangedSignal("Text"):Connect(function()
+		if not (UserInputService:IsKeyDown(Enum.KeyCode.Return) or UserInputService:IsKeyDown(Enum.KeyCode.KeypadEnter)) then
+			lastTextBoxString = obj.Text
+		end
+	end)
+end)
+
+UserInputService.InputBegan:Connect(function(input,gameProcessed)
+	if gameProcessed then
+		if Cmdbar and Cmdbar:IsFocused() then
+			if input.KeyCode == Enum.KeyCode.Up then
+				historyCount = historyCount + 1
+				if historyCount > #cmdHistory then historyCount = #cmdHistory end
+				Cmdbar.Text = cmdHistory[historyCount] or ""
+				Cmdbar.CursorPosition = 1020
+			elseif input.KeyCode == Enum.KeyCode.Down then
+				historyCount = historyCount - 1
+				if historyCount < 0 then historyCount = 0 end
+				Cmdbar.Text = cmdHistory[historyCount] or ""
+				Cmdbar.CursorPosition = 1020
+			end
+		elseif input.KeyCode == Enum.KeyCode.Return or input.KeyCode == Enum.KeyCode.KeypadEnter then
+			lastEnteredString = lastTextBoxString
+		end
+	end
+end)
+
+Players.LocalPlayer.Chatted:connect(function()
+	wait()
+	if lastEnteredString then
+		local message = lastEnteredString
+		lastEnteredString = nil
+		do_exec(message, Players.LocalPlayer)
+	end
+end)
+
+Cmdbar.PlaceholderText = "Command Bar ("..prefix..")"
+Cmdbar:GetPropertyChangedSignal("Text"):connect(function()
+	if Cmdbar:IsFocused() then
+		IndexContents(Cmdbar.Text,true,true)
+	end
+end)
+
+local tabComplete = nil
+Cmdbar.FocusLost:connect(function(enterpressed)
+	if enterpressed then
+		local cmdbarText = Cmdbar.Text:gsub("^"..'%'..prefix,"")
+		execCmd(cmdbarText,Players.LocalPlayer,true)
+	end
+	if tabComplete then tabComplete:Disconnect() end
+	wait()
+	if not Cmdbar:IsFocused() then
+		Cmdbar.Text = ""
+		IndexContents('',true,false,true)
+		if SettingsOpen == true then
+			wait(0.2)
+			Settings:TweenPosition(UDim2.new(0, 0, 0, 45), "InOut", "Quart", 0.2, true, nil)
+			CMDsF.Visible = false
+		end
+	end
+	CMDsF.CanvasPosition = canvasPos
+end)
+
+Cmdbar.Focused:Connect(function()
+	historyCount = 0
+	canvasPos = CMDsF.CanvasPosition
+	if SettingsOpen == true then
+		wait(0.2)
+		CMDsF.Visible = true
+		Settings:TweenPosition(UDim2.new(0, 0, 0, 220), "InOut", "Quart", 0.2, true, nil)
+	end
+	tabComplete = UserInputService.InputBegan:Connect(function(input,gameProcessed)
+		if Cmdbar:IsFocused() then
+			if input.KeyCode == Enum.KeyCode.Tab and topCommand ~= nil then
+				autoComplete(topCommand)
+			end
+		else
+			tabComplete:Disconnect()
+		end
+	end)
+end)
+
+ESPenabled = false
+CHMSenabled = false
+
+function round(num, numDecimalPlaces)
+	local mult = 10^(numDecimalPlaces or 0)
+	return math.floor(num * mult + 0.5) / mult
+end
+
+function ESP(plr)
+	spawn(function()
+		for i,v in pairs(PARENT:GetChildren()) do
+			if v.Name == plr.Name..'_ESP' then
+				v:Destroy()
+			end
+		end
+		wait()
+		if plr.Character and plr.Name ~= Players.LocalPlayer.Name and not PARENT:FindFirstChild(plr.Name..'_ESP') then
+			local ESPholder = Instance.new("Folder", PARENT)
+			ESPholder.Name = plr.Name..'_ESP'
+			repeat wait(1) until plr.Character and getRoot(plr.Character) and plr.Character:FindFirstChild('Humanoid')
+			for b,n in pairs (plr.Character:GetChildren()) do
+				if (n:IsA("BasePart")) then
+					local a = Instance.new("BoxHandleAdornment", ESPholder)
+					a.Name = plr.Name
+					a.Adornee = n
+					a.AlwaysOnTop = true
+					a.ZIndex = 10
+					a.Size = n.Size
+					a.Transparency = 0.3
+					a.Color = plr.TeamColor
+				end
+			end
+			if plr.Character and plr.Character:FindFirstChild('Head') then
+				local BillboardGui = Instance.new("BillboardGui", ESPholder)
+				local TextLabel = Instance.new("TextLabel")
+				BillboardGui.Adornee = plr.Character.Head
+				BillboardGui.Name = plr.Name
+				BillboardGui.Size = UDim2.new(0, 100, 0, 150)
+				BillboardGui.StudsOffset = Vector3.new(0, 1, 0)
+				BillboardGui.AlwaysOnTop = true
+				TextLabel.Parent = BillboardGui
+				TextLabel.BackgroundTransparency = 1
+				TextLabel.Position = UDim2.new(0, 0, 0, -50)
+				TextLabel.Size = UDim2.new(0, 100, 0, 100)
+				TextLabel.Font = Enum.Font.SourceSansSemibold
+				TextLabel.TextSize = 20
+				TextLabel.TextColor3 = Color3.new(1, 1, 1)
+				TextLabel.TextStrokeTransparency = 0
+				TextLabel.TextYAlignment = Enum.TextYAlignment.Bottom
+				TextLabel.Text = 'Name: '..plr.Name
+				local espLoopFunc
+				local teamChange
+				local addedFunc
+				addedFunc = plr.CharacterAdded:Connect(function()
+					if ESPenabled then
+						espLoopFunc:Disconnect()
+						teamChange:Disconnect()
+						ESPholder:Destroy()
+						repeat wait(1) until getRoot(plr.Character) and plr.Character:FindFirstChild('Humanoid')
+						ESP(plr)
+						addedFunc:Disconnect()
+					else
+						teamChange:Disconnect()
+						addedFunc:Disconnect()
+					end
+				end)
+				teamChange = plr:GetPropertyChangedSignal("TeamColor"):connect(function()
+					if ESPenabled then
+						espLoopFunc:Disconnect()
+						addedFunc:Disconnect()
+						ESPholder:Destroy()
+						repeat wait(1) until getRoot(plr.Character) and plr.Character:FindFirstChild('Humanoid')
+						ESP(plr)
+						teamChange:Disconnect()
+					else
+						teamChange:Disconnect()
+					end
+				end)
+				local function espLoop()
+					if PARENT:FindFirstChild(plr.Name..'_ESP') then
+						if plr.Character and getRoot(plr.Character) and plr.Character:FindFirstChild('Humanoid') and Players.LocalPlayer.Character and getRoot(Players.LocalPlayer.Character) and Players.LocalPlayer.Character:FindFirstChild('Humanoid') then
+							local pos = math.floor((getRoot(Players.LocalPlayer.Character).Position - getRoot(plr.Character).Position).magnitude)
+							TextLabel.Text = 'Name: '..plr.Name..' | Health: '..round(plr.Character:FindFirstChildOfClass('Humanoid').Health, 1)..' | Studs: '..pos
+						end
+					else
+						teamChange:Disconnect()
+						addedFunc:Disconnect()
+						espLoopFunc:Disconnect()
+					end
+				end
+				espLoopFunc = game:GetService("RunService").RenderStepped:Connect(espLoop)
+			end
+		end
+	end)
+end
+
+function CHMS(plr)
+	spawn(function()
+		for i,v in pairs(PARENT:GetChildren()) do
+			if v.Name == plr.Name..'_CHMS' then
+				v:Destroy()
+			end
+		end
+		wait()
+		if plr.Character and plr.Name ~= Players.LocalPlayer.Name and not PARENT:FindFirstChild(plr.Name..'_CHMS') then
+			local ESPholder = Instance.new("Folder", PARENT)
+			ESPholder.Name = plr.Name..'_CHMS'
+			repeat wait(1) until plr.Character and getRoot(plr.Character) and plr.Character:FindFirstChild('Humanoid')
+			for b,n in pairs (plr.Character:GetChildren()) do
+				if (n:IsA("BasePart")) then
+					local a = Instance.new("BoxHandleAdornment", ESPholder)
+					a.Name = plr.Name
+					a.Adornee = n
+					a.AlwaysOnTop = true
+					a.ZIndex = 10
+					a.Size = n.Size
+					a.Transparency = 0.3
+					a.Color = plr.TeamColor
+				end
+			end
+			local addedFunc
+			local teamChange
+			local CHMSremoved
+			addedFunc = plr.CharacterAdded:Connect(function()
+				if CHMSenabled then
+					ESPholder:Destroy()
+					teamChange:Disconnect()
+					repeat wait(1) until getRoot(plr.Character) and plr.Character:FindFirstChild('Humanoid')
+					CHMS(plr)
+					addedFunc:Disconnect()
+				else
+					teamChange:Disconnect()
+					addedFunc:Disconnect()
+				end
+			end)
+			teamChange = plr:GetPropertyChangedSignal("TeamColor"):connect(function()
+				if CHMSenabled then
+					ESPholder:Destroy()
+					addedFunc:Disconnect()
+					repeat wait(1) until getRoot(plr.Character) and plr.Character:FindFirstChild('Humanoid')
+					CHMS(plr)
+					teamChange:Disconnect()
+				else
+					teamChange:Disconnect()
+				end
+			end)
+			CHMSremoved = ESPholder.AncestryChanged:connect(function()
+				teamChange:Disconnect()
+				addedFunc:Disconnect()
+				CHMSremoved:Disconnect()
+			end)
+		end
+	end)
+end
+
+function Locate(plr)
+	spawn(function()
+		for i,v in pairs(PARENT:GetChildren()) do
+			if v.Name == plr.Name..'_LC' then
+				v:Destroy()
+			end
+		end
+		wait()
+		if plr.Character and plr.Name ~= Players.LocalPlayer.Name and not PARENT:FindFirstChild(plr.Name..'_LC') then
+			local ESPholder = Instance.new("Folder", PARENT)
+			ESPholder.Name = plr.Name..'_LC'
+			repeat wait(1) until plr.Character and getRoot(plr.Character) and plr.Character:FindFirstChild('Humanoid')
+			for b,n in pairs (plr.Character:GetChildren()) do
+				if (n:IsA("BasePart")) then
+					local a = Instance.new("BoxHandleAdornment", ESPholder)
+					a.Name = plr.Name
+					a.Adornee = n
+					a.AlwaysOnTop = true
+					a.ZIndex = 10
+					a.Size = n.Size
+					a.Transparency = 0.3
+					a.Color = plr.TeamColor
+				end
+			end
+			if plr.Character and plr.Character:FindFirstChild('Head') then
+				local BillboardGui = Instance.new("BillboardGui", ESPholder)
+				local TextLabel = Instance.new("TextLabel")
+				BillboardGui.Adornee = plr.Character.Head
+				BillboardGui.Name = plr.Name
+				BillboardGui.Size = UDim2.new(0, 100, 0, 150)
+				BillboardGui.StudsOffset = Vector3.new(0, 1, 0)
+				BillboardGui.AlwaysOnTop = true
+				TextLabel.Parent = BillboardGui
+				TextLabel.BackgroundTransparency = 1
+				TextLabel.Position = UDim2.new(0, 0, 0, -50)
+				TextLabel.Size = UDim2.new(0, 100, 0, 100)
+				TextLabel.Font = Enum.Font.SourceSansSemibold
+				TextLabel.TextSize = 20
+				TextLabel.TextColor3 = Color3.new(1, 1, 1)
+				TextLabel.TextStrokeTransparency = 0
+				TextLabel.TextYAlignment = Enum.TextYAlignment.Bottom
+				TextLabel.Text = 'Name: '..plr.Name
+				local lcLoopFunc
+				local addedFunc
+				local teamChange
+				addedFunc = plr.CharacterAdded:Connect(function()
+					if ESPholder ~= nil and ESPholder.Parent ~= nil then
+						lcLoopFunc:Disconnect()
+						teamChange:Disconnect()
+						ESPholder:Destroy()
+						repeat wait(1) until getRoot(plr.Character) and plr.Character:FindFirstChild('Humanoid')
+						Locate(plr)
+						addedFunc:Disconnect()
+					else
+						teamChange:Disconnect()
+						addedFunc:Disconnect()
+					end
+				end)
+				teamChange = plr:GetPropertyChangedSignal("TeamColor"):connect(function()
+					if ESPholder ~= nil and ESPholder.Parent ~= nil then
+						lcLoopFunc:Disconnect()
+						addedFunc:Disconnect()
+						ESPholder:Destroy()
+						repeat wait(1) until getRoot(plr.Character) and plr.Character:FindFirstChild('Humanoid')
+						Locate(plr)
+						teamChange:Disconnect()
+					else
+						teamChange:Disconnect()
+					end
+				end)
+				local function lcLoop()
+					if PARENT:FindFirstChild(plr.Name..'_LC') then
+						if plr.Character and getRoot(plr.Character) and plr.Character:FindFirstChild('Humanoid') and Players.LocalPlayer.Character and getRoot(Players.LocalPlayer.Character) and Players.LocalPlayer.Character:FindFirstChild('Humanoid') then
+							local pos = math.floor((getRoot(Players.LocalPlayer.Character).Position - getRoot(plr.Character).Position).magnitude)
+							TextLabel.Text = 'Name: '..plr.Name..' | Health: '..round(plr.Character:FindFirstChildOfClass('Humanoid').Health, 1)..' | Studs: '..pos
+						end
+					else
+						teamChange:Disconnect()
+						addedFunc:Disconnect()
+						lcLoopFunc:Disconnect()
+					end
+				end
+				lcLoopFunc = game:GetService("RunService").RenderStepped:Connect(lcLoop)
+			end
+		end
+	end)
+end
+
+local bindsGUI = KeybindEditor
+local awaitingInput = false
+local keySelected = false
+
+function unkeybind(cmd,key)
+	for i = #binds,1,-1 do
+		if binds[i].COMMAND == cmd and binds[i].KEY == key then
+			table.remove(binds, i)
+		end
+	end
+	refreshbinds()
+	updatesaves()
+	if key == 'RightClick' or key == 'LeftClick' then
+		notify('Keybinds Updated','Unbinded '..key..' from '..cmd)
+	else
+		notify('Keybinds Updated','Unbinded '..key:sub(14)..' from '..cmd)
+	end
+end
+
+function refreshbinds()
+	if Holder_2 then
+		Holder_2:ClearAllChildren()
+		Holder_2.CanvasSize = UDim2.new(0, 0, 0, 10)
+		for i = 1, #binds do
+			local YSize = 25
+			local Position = ((i * YSize) - YSize)
+			local newbind = Example_2:Clone()
+			newbind.Parent = Holder_2
+			newbind.Visible = true
+			newbind.Position = UDim2.new(0,0,0, Position + 5)
+			table.insert(shade2,newbind)
+			table.insert(shade2,newbind.Text)
+			table.insert(text1,newbind.Text)
+			table.insert(shade3,newbind.Text.Delete)
+			table.insert(text2,newbind.Text.Delete)
+			local input = tostring(binds[i].KEY)
+			local key
+			if input == 'RightClick' or input == 'LeftClick' then
+				key = input
+			else
+				key = input:sub(14)
+			end
+			newbind.Text.Text = key.." > "..binds[i].COMMAND.."  "..(binds[i].ISKEYUP and "(keyup)" or "(keydown)")
+			Holder_2.CanvasSize = UDim2.new(0,0,0, Position + 30)
+			newbind.Text.Delete.MouseButton1Click:Connect(function()
+				unkeybind(binds[i].COMMAND,binds[i].KEY)
+			end)
+		end
+	end
+end
+
+refreshbinds()
+
+PositionsFrame.Delete.MouseButton1Click:Connect(function()
+	execCmd('cpos')
+end)
+
+function refreshwaypoints()
+	if #WayPoints > 0 or #pWayPoints > 0 then
+		PositionsHint:Destroy()
+	end
+	if Holder_4 then
+		Holder_4:ClearAllChildren()
+		Holder_4.CanvasSize = UDim2.new(0, 0, 0, 10)
+		local YSize = 25
+		local num = 1
+		for i = 1, #WayPoints do
+			local Position = ((num * YSize) - YSize)
+			local newpoint = Example_4:Clone()
+			newpoint.Parent = Holder_4
+			newpoint.Visible = true
+			newpoint.Position = UDim2.new(0,0,0, Position + 5)
+			newpoint.Text.Text = WayPoints[i].NAME
+			table.insert(shade2,newpoint)
+			table.insert(shade2,newpoint.Text)
+			table.insert(text1,newpoint.Text)
+			table.insert(shade3,newpoint.Text.Delete)
+			table.insert(text2,newpoint.Text.Delete)
+			table.insert(shade3,newpoint.Text.TP)
+			table.insert(text2,newpoint.Text.TP)
+			Holder_4.CanvasSize = UDim2.new(0,0,0, Position + 30)
+			newpoint.Text.Delete.MouseButton1Click:Connect(function()
+				execCmd('dpos '..WayPoints[i].NAME)
+			end)
+			newpoint.Text.TP.MouseButton1Click:Connect(function()
+				execCmd("loadpos "..WayPoints[i].NAME)
+			end)
+			num = num+1
+		end
+		for i = 1, #pWayPoints do
+			local Position = ((num * YSize) - YSize)
+			local newpoint = Example_4:Clone()
+			newpoint.Parent = Holder_4
+			newpoint.Visible = true
+			newpoint.Position = UDim2.new(0,0,0, Position + 5)
+			newpoint.Text.Text = pWayPoints[i].NAME
+			table.insert(shade2,newpoint)
+			table.insert(shade2,newpoint.Text)
+			table.insert(text1,newpoint.Text)
+			table.insert(shade3,newpoint.Text.Delete)
+			table.insert(text2,newpoint.Text.Delete)
+			table.insert(shade3,newpoint.Text.TP)
+			table.insert(text2,newpoint.Text.TP)
+			Holder_4.CanvasSize = UDim2.new(0,0,0, Position + 30)
+			newpoint.Text.Delete.MouseButton1Click:Connect(function()
+				execCmd('dpos '..pWayPoints[i].NAME)
+			end)
+			newpoint.Text.TP.MouseButton1Click:Connect(function()
+				execCmd("loadpos "..pWayPoints[i].NAME)
+			end)
+			num = num+1
+		end
+	end
+end
+
+refreshwaypoints()
+
+function refreshaliases()
+	if #aliases > 0 then
+		AliasHint:Destroy()
+	end
+	if Holder_3 then
+		Holder_3:ClearAllChildren()
+		Holder_3.CanvasSize = UDim2.new(0, 0, 0, 10)
+		for i = 1, #aliases do
+			local YSize = 25
+			local Position = ((i * YSize) - YSize)
+			local newalias = Example_3:Clone()
+			newalias.Parent = Holder_3
+			newalias.Visible = true
+			newalias.Position = UDim2.new(0,0,0, Position + 5)
+			newalias.Text.Text = aliases[i].CMD.." > "..aliases[i].ALIAS
+			table.insert(shade2,newalias)
+			table.insert(shade2,newalias.Text)
+			table.insert(text1,newalias.Text)
+			table.insert(shade3,newalias.Text.Delete)
+			table.insert(text2,newalias.Text.Delete)
+			Holder_3.CanvasSize = UDim2.new(0,0,0, Position + 30)
+			newalias.Text.Delete.MouseButton1Click:Connect(function()
+				execCmd('removealias '..aliases[i].ALIAS)
+			end)
+		end
+	end
+end
+
+local bindChosenKeyUp = false
+
+BindTo.MouseButton1Click:Connect(function()
+	awaitingInput = true
+	BindTo.Text = 'Press something'
+end)
+
+BindTriggerSelect.MouseButton1Click:Connect(function()
+	bindChosenKeyUp = not bindChosenKeyUp
+	BindTriggerSelect.Text = bindChosenKeyUp and "KeyUp" or "KeyDown"
+end)
+
+Add_2.MouseButton1Click:Connect(function()
+	if keySelected then
+		if string.find(Cmdbar_2.Text, "\\\\") then
+			notify('Keybind Error','Only use one backslash to keybind multiple commands into one keybind or command')
+		else
+			addbind(Cmdbar_2.Text,keyPressed,bindChosenKeyUp)
+			refreshbinds()
+			updatesaves()
+			if keyPressed == 'RightClick' or keyPressed == 'LeftClick' then
+				notify('Keybinds Updated','Binded '..keyPressed..' to '..Cmdbar_2.Text)
+			else
+				notify('Keybinds Updated','Binded '..keyPressed:sub(14)..' to '..Cmdbar_2.Text)
+			end
+		end
+	end
+end)
+
+Exit_2.MouseButton1Click:Connect(function()
+	Cmdbar_2.Text = 'Command'
+	BindTo.Text = 'Click to bind'
+	bindChosenKeyUp = false
+	BindTriggerSelect.Text = "KeyDown"
+	keySelected = false
+	KeybindEditor:TweenPosition(UDim2.new(0.5, -180, 0, -500), "InOut", "Quart", 0.5, true, nil)
+end)
+
+function onInputBegan(input,gameProcessed)
+	if awaitingInput then
+		if input.UserInputType == Enum.UserInputType.Keyboard then
+			keyPressed = tostring(input.KeyCode)
+			BindTo.Text = keyPressed:sub(14)
+		elseif input.UserInputType == Enum.UserInputType.MouseButton1 then
+			keyPressed = 'LeftClick'
+			BindTo.Text = 'LeftClick'
+		elseif input.UserInputType == Enum.UserInputType.MouseButton2 then
+			keyPressed = 'RightClick'
+			BindTo.Text = 'RightClick'
+		end
+		awaitingInput = false
+		keySelected = true
+	end
+	if not gameProcessed and #binds > 0 then
+		for i,v in pairs(binds) do
+			if not v.ISKEYUP then
+				if input.UserInputType == Enum.UserInputType.Keyboard and v.KEY:lower()==tostring(input.KeyCode):lower() then
+					execCmd(v.COMMAND,Players.LocalPlayer)
+				elseif input.UserInputType == Enum.UserInputType.MouseButton1 and v.KEY:lower()=='leftclick' then
+					execCmd(v.COMMAND,Players.LocalPlayer)
+				elseif input.UserInputType == Enum.UserInputType.MouseButton2 and v.KEY:lower()=='rightclick' then
+					execCmd(v.COMMAND,Players.LocalPlayer)
+				end
+			end
+		end
+	end
+end
+
+function onInputEnded(input,gameProcessed)
+	if not gameProcessed and #binds > 0 then
+		for i,v in pairs(binds) do
+			if v.ISKEYUP then
+				if input.UserInputType == Enum.UserInputType.Keyboard and v.KEY:lower()==tostring(input.KeyCode):lower() then
+					execCmd(v.COMMAND,Players.LocalPlayer)
+				elseif input.UserInputType == Enum.UserInputType.MouseButton1 and v.KEY:lower()=='leftclick' then
+					execCmd(v.COMMAND,Players.LocalPlayer)
+				elseif input.UserInputType == Enum.UserInputType.MouseButton2 and v.KEY:lower()=='rightclick' then
+					execCmd(v.COMMAND,Players.LocalPlayer)
+				end
+			end
+		end
+	end
+end
+
+UserInputService.InputBegan:connect(onInputBegan)
+UserInputService.InputEnded:connect(onInputEnded)
+
+Fly.Select.MouseButton1Click:Connect(function()
+	if keySelected then
+		addbind('togglefly',keyPressed,bindChosenKeyUp)
+		refreshbinds()
+		updatesaves()
+		if keyPressed == 'RightClick' or keyPressed == 'LeftClick' then
+			notify('Keybinds Updated','Binded '..keyPressed..' to toggle fly')
+		else
+			notify('Keybinds Updated','Binded '..keyPressed:sub(14)..' to toggle fly')
+		end
+	end
+end)
+
+Noclip.Select.MouseButton1Click:Connect(function()
+	if keySelected then
+		addbind('togglenoclip',keyPressed,bindChosenKeyUp)
+		refreshbinds()
+		updatesaves()
+		if keyPressed == 'RightClick' or keyPressed == 'LeftClick' then
+			notify('Keybinds Updated','Binded '..keyPressed..' to toggle noclip')
+		else
+			notify('Keybinds Updated','Binded '..keyPressed:sub(14)..' to toggle noclip')
+		end
+	end
+end)
+
+Float.Select.MouseButton1Click:Connect(function()
+	if keySelected then
+		addbind('togglefloat',keyPressed,bindChosenKeyUp)
+		refreshbinds()
+		updatesaves()
+		if keyPressed == 'RightClick' or keyPressed == 'LeftClick' then
+			notify('Keybinds Updated','Binded '..keyPressed..' to toggle float')
+		else
+			notify('Keybinds Updated','Binded '..keyPressed:sub(14)..' to toggle float')
+		end
+	end
+end)
+
+ClickTP.Select.MouseButton1Click:Connect(function()
+	if keySelected then
+		addbind('clicktp',keyPressed,bindChosenKeyUp)
+		refreshbinds()
+		updatesaves()
+		if keyPressed == 'RightClick' or keyPressed == 'LeftClick' then
+			notify('Keybinds Updated','Binded '..keyPressed..' to click tp')
+		else
+			notify('Keybinds Updated','Binded '..keyPressed:sub(14)..' to click tp')
+		end
+	end
+end)
+
+ClickDelete.Select.MouseButton1Click:Connect(function()
+	if keySelected then
+		addbind('clickdel',keyPressed,bindChosenKeyUp)
+		refreshbinds()
+		updatesaves()
+		if keyPressed == 'RightClick' or keyPressed == 'LeftClick' then
+			notify('Keybinds Updated','Binded '..keyPressed..' to click delete')
+		else
+			notify('Keybinds Updated','Binded '..keyPressed:sub(14)..' to click delete')
+		end
+	end
+end)
+
+Xray.Select.MouseButton1Click:Connect(function()
+	if keySelected then
+		addbind('togglexray',keyPressed,bindChosenKeyUp)
+		refreshbinds()
+		updatesaves()
+		if keyPressed == 'RightClick' or keyPressed == 'LeftClick' then
+			notify('Keybinds Updated','Binded '..keyPressed..' to toggle xray')
+		else
+			notify('Keybinds Updated','Binded '..keyPressed:sub(14)..' to toggle xray')
+		end
+	end
+end)
+
+Swim.Select.MouseButton1Click:Connect(function()
+	if keySelected then
+		addbind('toggleswim',keyPressed,bindChosenKeyUp)
+		refreshbinds()
+		updatesaves()
+		if keyPressed == 'RightClick' or keyPressed == 'LeftClick' then
+			notify('Keybinds Updated','Binded '..keyPressed..' to toggle swim')
+		else
+			notify('Keybinds Updated','Binded '..keyPressed:sub(14)..' to toggle swim')
+		end
+	end
+end)
+
+Fling.Select.MouseButton1Click:Connect(function()
+	if keySelected then
+		addbind('togglefling',keyPressed,bindChosenKeyUp)
+		refreshbinds()
+		updatesaves()
+		if keyPressed == 'RightClick' or keyPressed == 'LeftClick' then
+			notify('Keybinds Updated','Binded '..keyPressed..' to toggle fling')
+		else
+			notify('Keybinds Updated','Binded '..keyPressed:sub(14)..' to toggle fling')
+		end
+	end
+end)
+
+Invisible.Select.MouseButton1Click:Connect(function()
+	if keySelected then
+		addbind('toggleinvis',keyPressed,bindChosenKeyUp)
+		refreshbinds()
+		updatesaves()
+		if keyPressed == 'RightClick' or keyPressed == 'LeftClick' then
+			notify('Keybinds Updated','Binded '..keyPressed..' to toggle invisible')
+		else
+			notify('Keybinds Updated','Binded '..keyPressed:sub(14)..' to toggle invisible')
+		end
+	end
+end)
+
+IYMouse.Button1Down:connect(function()
+	for i,v in pairs(binds) do
+		if v.COMMAND == 'clicktp' then
+			local input = v.KEY
+			if input == 'RightClick' and UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton2) and Players.LocalPlayer.Character then
+				pcall(function() getRoot(Players.LocalPlayer.Character).CFrame = IYMouse.Hit + Vector3.new(0,7,0) end)
+			elseif input == 'LeftClick' and UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1) and Players.LocalPlayer.Character then
+				pcall(function() getRoot(Players.LocalPlayer.Character).CFrame = IYMouse.Hit + Vector3.new(0,7,0) end)
+			elseif UserInputService:IsKeyDown(Enum.KeyCode[input:sub(14)]) and Players.LocalPlayer.Character then
+				pcall(function() getRoot(Players.LocalPlayer.Character).CFrame = IYMouse.Hit + Vector3.new(0,7,0) end)
+			end
+		elseif v.COMMAND == 'clickdel' then
+			local input = v.KEY
+			if input == 'RightClick' and UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton2) then
+				pcall(function() IYMouse.Target:Destroy() end)
+			elseif input == 'LeftClick' and UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1) then
+				pcall(function() IYMouse.Target:Destroy() end)
+			elseif UserInputService:IsKeyDown(Enum.KeyCode[input:sub(14)]) then
+				pcall(function() IYMouse.Target:Destroy() end)
+			end
+		end
+	end
+end)
+
+PluginsGUI = PluginEditor.background
+
+function addPlugin(name)
+	if name:lower() == 'plugin file name' or name:lower() == 'iy_fe.iy' or name == 'iy_fe' then
+		notify('Plugin Error','Please enter a valid plugin')
+	else
+		local file
+		local fileName
+		if name:sub(-3) == '.iy' then
+			pcall(function() file = readfile(name) end)
+			fileName = name
+		else
+			pcall(function() file = readfile(name..'.iy') end)
+			fileName = name..'.iy'
+		end
+		if file then
+			if not FindInTable(PluginsTable, fileName) then
+				table.insert(PluginsTable, fileName)
+				LoadPlugin(fileName)
+				refreshplugins()
+				pcall(eventEditor.Refresh)
+			else
+				notify('Plugin Error','This plugin is already added')
+			end
+		else
+			notify('Plugin Error','Cannot locate file "'..fileName..'". Is the file in the correct folder?')
+		end
+	end
+end
+
+function deletePlugin(name)
+	local pName = name..'.iy'
+	if name:sub(-3) == '.iy' then
+		pName = name
+	end
+	for i = #cmds,1,-1 do
+		if cmds[i].PLUGIN == pName then
+			table.remove(cmds, i)
+		end
+	end
+	for i,v in pairs(CMDsF:GetChildren()) do
+		if v.Name == 'PLUGIN_'..pName then
+			v:Destroy()
+		end
+	end
+	for i,v in pairs(PluginsTable) do
+		if v == pName then
+			table.remove(PluginsTable, i)
+			notify('Removed Plugin',pName..' was removed')
+		end
+	end
+	IndexContents('',true)
+	refreshplugins()
+end
+
+function refreshplugins(dontSave)
+	if #PluginsTable > 0 then
+		PluginsHint:Destroy()
+	end
+	if Holder_5 then
+		Holder_5:ClearAllChildren()
+		Holder_5.CanvasSize = UDim2.new(0, 0, 0, 10)
+		for i,v in pairs(PluginsTable) do
+			local pName = v
+			local YSize = 25
+			local Position = ((i * YSize) - YSize)
+			local newplugin = Example_5:Clone()
+			newplugin.Parent = Holder_5
+			newplugin.Visible = true
+			newplugin.Position = UDim2.new(0,0,0, Position + 5)
+			newplugin.Text.Text = pName
+			table.insert(shade2,newplugin)
+			table.insert(shade2,newplugin.Text)
+			table.insert(text1,newplugin.Text)
+			table.insert(shade3,newplugin.Text.Delete)
+			table.insert(text2,newplugin.Text.Delete)
+			Holder_5.CanvasSize = UDim2.new(0,0,0, Position + 30)
+			newplugin.Text.Delete.MouseButton1Click:Connect(function()
+				deletePlugin(pName)
+			end)
+		end
+		if not dontSave then
+			updatesaves()
+		end
+	end
+end
+
+local PluginCache
+function LoadPlugin(val,startup)
+	local plugin
+	
+	function CatchedPluginLoad()
+		plugin = loadfile(val)()
+	end
+	
+	function handlePluginError(plerror)
+		notify('Plugin Error','An error occurred with the plugin, "'..val..'" and it could not be loaded')
+		if FindInTable(PluginsTable,val) then
+			for i,v in pairs(PluginsTable) do
+				if v == val then
+					table.remove(PluginsTable,i)
+				end
+			end
+		end
+		updatesaves()
+		
+		print("Original Error: "..tostring(plerror))
+		print("Plugin Error, stack traceback: "..tostring(debug.traceback()))
+		
+		plugin = nil
+		
+		return false
+	end
+	
+	xpcall(CatchedPluginLoad, handlePluginError)
+	
+	if plugin ~= nil then
+		if not startup then
+			notify('Loaded Plugin',"Name: "..plugin["PluginName"].."\n".."Description: "..plugin["PluginDescription"])
+		end
+		addcmdtext('',val)
+		addcmdtext(string.upper('--'..plugin["PluginName"]),val,plugin["PluginDescription"])
+		for i,v in pairs(plugin["Commands"]) do 
+			local cmdExt = ''
+			local cmdName = i
+			local function handleNames()
+				cmdName = i
+				if findCmd(cmdName..cmdExt) then
+					if isNumber(cmdExt) then
+						cmdExt = cmdExt+1
+					else
+						cmdExt = 1
+					end
+					handleNames()
+				else
+					cmdName = cmdName..cmdExt
+				end
+			end
+			handleNames()
+			addcmd(cmdName, v["Aliases"], v["Function"], val)
+			if v["ListName"] then
+				local newName = v.ListName
+				local cmdNames = {i,unpack(v.Aliases)}
+				for i,v in pairs(cmdNames) do
+					newName = newName:gsub(v,v..cmdExt)
+				end
+				addcmdtext(newName,val,v["Description"])
+			else
+				addcmdtext(cmdName,val,v["Description"])
+			end
+		end
+		IndexContents('',true)
+	elseif plugin == nil then
+		plugin = nil
+	end
+end
+
+function FindPlugins()
+	if PluginsTable ~= nil and type(PluginsTable) == "table" then
+		for i,v in pairs(PluginsTable) do
+			LoadPlugin(v,true)
+		end
+		refreshplugins(true)
+	end
+end
+
+AddPlugin.MouseButton1Click:connect(function()
+	addPlugin(PluginsGUI.FileName.Text)
+end)
+
+Exit_3.MouseButton1Click:connect(function()
+	PluginEditor:TweenPosition(UDim2.new(0.5, -180, 0, -500), "InOut", "Quart", 0.5, true, nil)
+	FileName.Text = 'Plugin File Name'
+end)
+
+Add_3.MouseButton1Click:Connect(function()
+	PluginEditor:TweenPosition(UDim2.new(0.5, -180, 0, 310), "InOut", "Quart", 0.5, true, nil)
+end)
+
+Plugins.MouseButton1Click:Connect(function()
+	if writefileExploit() then
+		PluginsFrame:TweenPosition(UDim2.new(0, 0, 0, 0), "InOut", "Quart", 0.5, true, nil)
+		wait(0.5)
+		SettingsHolder.Visible = false
+	else
+		notify('Incompatible Exploit','Your exploit is unable to use plugins (missing read/writefile)')
+	end
+end)
+
+Close_4.MouseButton1Click:Connect(function()
+	SettingsHolder.Visible = true
+	PluginsFrame:TweenPosition(UDim2.new(0, 0, 0, 175), "InOut", "Quart", 0.5, true, nil)
+end)
+
+addcmd('addalias',{},
+function(args, speaker)
+	if #args < 2 then return end
+	local cmd = string.lower(args[1])
+	local alias = string.lower(args[2])
+	for i,v in pairs(cmds) do
+		if v.NAME:lower()==cmd or std.inTable(v.ALIAS,cmd) then
+			customAlias[alias] = v
+			aliases[#aliases + 1] = {CMD = cmd, ALIAS = alias}
+			notify('Aliases Modified',"Added "..alias.." as an alias to "..cmd)
+			updatesaves()
+			refreshaliases()
+			break
+		end
+	end
+end)
+
+addcmd('removealias',{},
+function(args, speaker)
+	if #args < 1 then return end
+	local alias = string.lower(args[1])
+	if customAlias[alias] then
+		local cmd = customAlias[alias].NAME
+		customAlias[alias] = nil
+		for i = #aliases,1,-1 do
+			if aliases[i].ALIAS == tostring(alias) then
+				table.remove(aliases, i)
+			end
+		end
+		notify('Aliases Modified',"Removed the alias "..alias.." from "..cmd)
+		updatesaves()
+		refreshaliases()
+	end
+end)
+
+addcmd('clraliases',{},
+function(args, speaker)
+	customAlias = {}
+	aliases = {}
+	notify('Aliases Modified','Removed all aliases')
+	updatesaves()
+	refreshaliases()
+end)
+
+addcmd('serverinfo',{'info','sinfo'},
+function(args, speaker)
+	spawn(function()
+		local FRAME = Instance.new("Frame")
+		local shadow = Instance.new("Frame")
+		local PopupText = Instance.new("TextLabel")
+		local Exit = Instance.new("TextButton")
+		local ExitImage = Instance.new("ImageLabel")
+		local background = Instance.new("Frame")
+		local TextLabel = Instance.new("TextLabel")
+		local TextLabel2 = Instance.new("TextLabel")
+		local TextLabel3 = Instance.new("TextLabel")
+		local Time = Instance.new("TextLabel")
+		local appearance = Instance.new("TextLabel")
+		local maxplayers = Instance.new("TextLabel")
+		local name = Instance.new("TextLabel")
+		local placeid = Instance.new("TextLabel")
+		local playerid = Instance.new("TextLabel")
+		local players = Instance.new("TextLabel")
+		local CopyApp = Instance.new("TextButton")
+		local CopyPlrID = Instance.new("TextButton")
+		local CopyPlcID = Instance.new("TextButton")
+		
+		FRAME.Name = randomString()
+		FRAME.Parent = PARENT
+		FRAME.Active = true
+		FRAME.BackgroundTransparency = 1
+		FRAME.Position = UDim2.new(0.5, -130, 0, -500)
+		FRAME.Size = UDim2.new(0, 250, 0, 20)
+		FRAME.ZIndex = 10
+		dragGUI(FRAME)
+		
+		shadow.Name = "shadow"
+		shadow.Parent = FRAME
+		shadow.BackgroundColor3 = currentShade2
+		shadow.BorderSizePixel = 0
+		shadow.Size = UDim2.new(0, 250, 0, 20)
+		shadow.ZIndex = 10
+		table.insert(shade2,shadow)
+		
+		PopupText.Name = "PopupText"
+		PopupText.Parent = shadow
+		PopupText.BackgroundTransparency = 1
+		PopupText.Size = UDim2.new(1, 0, 0.95, 0)
+		PopupText.ZIndex = 10
+		PopupText.Font = Enum.Font.SourceSans
+		PopupText.TextSize = 14
+		PopupText.Text = "Server"
+		PopupText.TextColor3 = currentText1
+		PopupText.TextWrapped = true
+		table.insert(text1,PopupText)
+		
+		Exit.Name = "Exit"
+		Exit.Parent = shadow
+		Exit.BackgroundTransparency = 1
+		Exit.Position = UDim2.new(1, -20, 0, 0)
+		Exit.Size = UDim2.new(0, 20, 0, 20)
+		Exit.Text = ""
+		Exit.ZIndex = 10
+		
+		ExitImage.Parent = Exit
+		ExitImage.BackgroundColor3 = Color3.new(1, 1, 1)
+		ExitImage.BackgroundTransparency = 1
+		ExitImage.Position = UDim2.new(0, 5, 0, 5)
+		ExitImage.Size = UDim2.new(0, 10, 0, 10)
+		ExitImage.Image = "rbxassetid://5054663650"
+		ExitImage.ZIndex = 10
+		
+		background.Name = "background"
+		background.Parent = FRAME
+		background.Active = true
+		background.BackgroundColor3 = currentShade1
+		background.BorderSizePixel = 0
+		background.Position = UDim2.new(0, 0, 1, 0)
+		background.Size = UDim2.new(0, 250, 0, 250)
+		background.ZIndex = 10
+		table.insert(shade1,background)
+		
+		TextLabel.Name = "Text Label"
+		TextLabel.Parent = background
+		TextLabel.BackgroundTransparency = 1
+		TextLabel.BorderSizePixel = 0
+		TextLabel.Position = UDim2.new(0, 5, 0, 80)
+		TextLabel.Size = UDim2.new(0, 100, 0, 20)
+		TextLabel.ZIndex = 10
+		TextLabel.Font = Enum.Font.SourceSansLight
+		TextLabel.TextSize = 20
+		TextLabel.Text = "Run Time:"
+		TextLabel.TextColor3 = currentText1
+		TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+		table.insert(text1,TextLabel)
+		
+		TextLabel2.Name = "Text Label2"
+		TextLabel2.Parent = background
+		TextLabel2.BackgroundTransparency = 1
+		TextLabel2.BorderSizePixel = 0
+		TextLabel2.Position = UDim2.new(0, 5, 0, 130)
+		TextLabel2.Size = UDim2.new(0, 100, 0, 20)
+		TextLabel2.ZIndex = 10
+		TextLabel2.Font = Enum.Font.SourceSansLight
+		TextLabel2.TextSize = 20
+		TextLabel2.Text = "Statistics:"
+		TextLabel2.TextColor3 = currentText1
+		TextLabel2.TextXAlignment = Enum.TextXAlignment.Left
+		table.insert(text1,TextLabel2)
+		
+		TextLabel3.Name = "Text Label3"
+		TextLabel3.Parent = background
+		TextLabel3.BackgroundTransparency = 1
+		TextLabel3.BorderSizePixel = 0
+		TextLabel3.Position = UDim2.new(0, 5, 0, 10)
+		TextLabel3.Size = UDim2.new(0, 100, 0, 20)
+		TextLabel3.ZIndex = 10
+		TextLabel3.Font = Enum.Font.SourceSansLight
+		TextLabel3.TextSize = 20
+		TextLabel3.Text = "Local Player:"
+		TextLabel3.TextColor3 = currentText1
+		TextLabel3.TextXAlignment = Enum.TextXAlignment.Left
+		table.insert(text1,TextLabel3)
+		
+		Time.Name = "Time"
+		Time.Parent = background
+		Time.BackgroundTransparency = 1
+		Time.BorderSi
