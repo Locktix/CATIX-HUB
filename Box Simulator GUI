@@ -11407,52 +11407,7 @@ me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, 
         _G.b = false
     end
 end)
-AutoTab:CreateToggle("Auto Buy Upgrades", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.e = true 
-        while wait(0) and _G.e do
-local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].leaderstats.Upgrade,
-}
 
-game:GetService("ReplicatedStorage").PopUpy.UpgradeClick:FireServer(unpack(args))
-local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].leaderstats["Upgrade1"],
-}
-
-game:GetService("ReplicatedStorage").PopUpy["Upgrade1Click"]:FireServer(unpack(args))
-local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].leaderstats["Upgrade1"],
-}
-
-game:GetService("ReplicatedStorage").PopUpy["Upgrade2Click"]:FireServer(unpack(args))
-local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].leaderstats["Upgrade1"],
-}
-
-game:GetService("ReplicatedStorage").PopUpy["Upgrade3Click"]:FireServer(unpack(args))
-local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].leaderstats["Upgrade1"],
-}
-
-game:GetService("ReplicatedStorage").PopUpy["Upgrade4Click"]:FireServer(unpack(args))
-local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].leaderstats["Upgrade1"],
-}
-
-game:GetService("ReplicatedStorage").PopUpy["Upgrade5Click"]:FireServer(unpack(args))
-local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].leaderstats["Upgrade1"],
-}
-
-game:GetService("ReplicatedStorage").PopUpy["Upgrade6Click"]:FireServer(unpack(args))
-    end
-
-
-    else
-        _G.e = false
-    end
-end)
 crates:CreateButton("Auto Buy Not Work", function() --the (arg) is if the checkbox is toggled or not
 
 end)
