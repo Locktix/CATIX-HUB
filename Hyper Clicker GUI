@@ -12273,6 +12273,12 @@ end)
 teleports:CreateButton("Zone 4", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-398.13443, 7.92594671, 207.533737)
 end)
+teleports:CreateButton("Zone 5", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-228.822708, 9.77014732, -266.712891, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end)
+teleports:CreateButton("Zone 6", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-683.760681, 10.0784931, -931.656738, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+end)
 local mt = getrawmetatable(game)
 local old = mt.__namecall
 local protect = newcclosure or protect_function
