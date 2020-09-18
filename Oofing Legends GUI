@@ -11361,7 +11361,7 @@ end)
 AutoTab:CreateToggle("Sell X3,5", function(arg) --you dont need "arg" for a button
       if arg then
         _G.dd = true 
-        while wait(0) and _G.dd do
+        while wait(0.5) and _G.dd do
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1160.80701, 77.317131, -220.06517)
  end
     else
