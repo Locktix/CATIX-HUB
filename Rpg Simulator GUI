@@ -159,9 +159,9 @@ _G.bossc1 = true
  while wait() and _G.bossc1 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.Starter.NPCs.Villager.RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.Starter.NPCs.Villager.UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc1 = false
@@ -176,9 +176,9 @@ _G.bossc2 = true
  while wait() and _G.bossc2 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.Starter.NPCs["Village Chief"].RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.Starter.NPCs["Village Chief"].UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc2 = false
@@ -190,9 +190,9 @@ _G.bossc3 = true
  while wait() and _G.bossc3 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.City.NPCs.Criminal.RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.City.NPCs.Criminal.UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc3 = false
@@ -204,9 +204,9 @@ _G.bossc4 = true
  while wait() and _G.bossc4 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.City.NPCs.Officer.RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.City.NPCs.Officer.UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc4 = false
@@ -218,9 +218,9 @@ _G.bossc5 = true
  while wait() and _G.bossc5 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas["Ice Land"].NPCs["Ice Golem"].RightUpperArm
+local pbosd = game:GetService("Workspace").Areas["Ice Land"].NPCs["Ice Golem"].UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc5 = false
@@ -232,9 +232,9 @@ _G.bossc6 = true
  while wait() and _G.bossc6 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas["Ice Land"].NPCs["Frost General"].RightUpperArm
+local pbosd = game:GetService("Workspace").Areas["Ice Land"].NPCs["Frost General"].UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc6 = false
@@ -246,9 +246,9 @@ _G.bossc7 = true
  while wait() and _G.bossc7 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas["Fire World"].NPCs["Lava Monster"].RightUpperArm
+local pbosd = game:GetService("Workspace").Areas["Fire World"].NPCs["Lava Monster"].UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc7 = false
@@ -260,9 +260,9 @@ _G.bossc8 = true
  while wait() and _G.bossc8 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas["Fire World"].NPCs["Fire Guard"].RightUpperArm
+local pbosd = game:GetService("Workspace").Areas["Fire World"].NPCs["Fire Guard"].UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc8 = false
@@ -274,9 +274,9 @@ _G.bossc9 = true
  while wait() and _G.bossc9 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.Desert.NPCs.Mummy.RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.Desert.NPCs.Mummy.UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc9 = false
@@ -288,9 +288,9 @@ _G.bossc10 = true
  while wait() and _G.bossc10 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.Desert.NPCs.Anubis.RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.Desert.NPCs.Anubis.UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc10 = false
@@ -302,9 +302,9 @@ _G.bossc11 = true
  while wait() and _G.bossc11 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.Nightmare.NPCs.Assassin.RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.Nightmare.NPCs.Assassin.UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc11 = false
@@ -316,9 +316,9 @@ _G.bossc13 = true
  while wait() and _G.bossc13 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.Space.NPCs["Alien Guard"].RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.Space.NPCs["Alien Guard"].UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc13 = false
@@ -330,9 +330,9 @@ _G.bossc12 = true
  while wait() and _G.bossc12 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.Space.NPCs.Warlord.RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.Space.NPCs.Warlord.UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc12 = false
@@ -344,9 +344,9 @@ _G.bossc14 = true
  while wait() and _G.bossc14 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.Jungle.NPCs["Jungle Assassin"].RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.Jungle.NPCs["Jungle Assassin"].UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc14 = false
@@ -358,9 +358,9 @@ _G.bossc15 = true
  while wait() and _G.bossc15 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.Jungle.NPCs["Lion King"].RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.Jungle.NPCs["Lion King"].UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc15 = false
@@ -372,9 +372,9 @@ _G.bossc16 = true
  while wait() and _G.bossc16 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.Time.NPCs["Time Sheriff"].RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.Time.NPCs["Time Sheriff"].UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc16 = false
@@ -386,9 +386,9 @@ _G.bossc17 = true
  while wait() and _G.bossc17 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.Time.NPCs.Timekeeper.RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.Time.NPCs.Timekeeper.UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc17 = false
@@ -400,9 +400,9 @@ _G.bossc18 = true
  while wait() and _G.bossc18 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.Robots.NPCs["Circuit Breaker"].RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.Robots.NPCs["Circuit Breaker"].UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc18 = false
@@ -414,9 +414,9 @@ _G.bossc19 = true
  while wait() and _G.bossc19 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.Robots.NPCs.EmberBOT.RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.Robots.NPCs.EmberBOT.UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc19 = false
@@ -428,9 +428,9 @@ _G.bossc20 = true
  while wait() and _G.bossc20 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.Meme.NPCs["Sir Moews a LOT"].RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.Meme.NPCs["Sir Moews a LOT"].UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc20 = false
@@ -442,9 +442,9 @@ _G.bossc21 = true
  while wait() and _G.bossc21 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.Meme.NPCs["President Dog"].RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.Meme.NPCs["President Dog"].UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc21 = false
@@ -456,9 +456,9 @@ _G.bossc22 = true
  while wait() and _G.bossc22 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.Wizard.NPCs.Wizard.RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.Wizard.NPCs.Wizard.UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc22 = false
@@ -470,9 +470,9 @@ _G.bossc23 = true
  while wait() and _G.bossc23 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.Wizard.NPCs["Dark Apprentice"].RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.Wizard.NPCs["Dark Apprentice"].UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc23 = false
@@ -484,9 +484,9 @@ _G.bossc24 = true
  while wait() and _G.bossc24 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.Cavemen.NPCs.Lizard.RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.Cavemen.NPCs.Lizard.UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc24 = false
@@ -498,9 +498,9 @@ _G.bossc25 = true
  while wait() and _G.bossc25 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.Cavemen.NPCs["T-Rex Mom"].RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.Cavemen.NPCs["T-Rex Mom"].UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc25 = false
@@ -512,9 +512,9 @@ _G.bossc26 = true
  while wait() and _G.bossc26 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas["Rebirth Zone"].NPCs.SinisterBot.RightUpperArm
+local pbosd = game:GetService("Workspace").Areas["Rebirth Zone"].NPCs.SinisterBot.UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc26 = false
@@ -526,9 +526,9 @@ _G.bossc28 = true
  while wait() and _G.bossc28 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas["Rebirth Zone"].NPCs.Apprentice.RightUpperArm
+local pbosd = game:GetService("Workspace").Areas["Rebirth Zone"].NPCs.Apprentice.UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc28 = false
@@ -540,9 +540,9 @@ _G.bossc27 = true
  while wait() and _G.bossc27 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.Undead.NPCs.Zombie.RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.Undead.NPCs.Zombie.UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc27 = false
@@ -554,9 +554,9 @@ _G.bossc29 = true
  while wait() and _G.bossc29 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.Undead.NPCs.Skeleton.RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.Undead.NPCs.Skeleton.UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc29 = false
@@ -568,9 +568,9 @@ _G.bossc30 = true
  while wait() and _G.bossc30 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.Carnival.NPCs.Jester.RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.Carnival.NPCs.Jester.UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc30= false
@@ -582,9 +582,9 @@ _G.bossc31= true
  while wait() and _G.bossc31 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.Carnival.NPCs.Unicorn.RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.Carnival.NPCs.Unicorn.UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc31 = false
@@ -596,9 +596,9 @@ _G.bossc32= true
  while wait() and _G.bossc32 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.Medieval.NPCs.King.RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.Medieval.NPCs.King.UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc32 = false
@@ -610,9 +610,9 @@ _G.bossc33= true
  while wait() and _G.bossc33 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.Medieval.NPCs.Knight.RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.Medieval.NPCs.Knight.UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc33 = false
@@ -624,9 +624,9 @@ _G.bossc34= true
  while wait() and _G.bossc34 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.Hacker.NPCs.Hacker.RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.Hacker.NPCs.Hacker.UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc34 = false
@@ -638,9 +638,9 @@ _G.bossc35= true
  while wait() and _G.bossc35 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.Hacker.NPCs["Advanced Intelligence"].RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.Hacker.NPCs["Advanced Intelligence"].UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc35 = false
@@ -652,9 +652,9 @@ _G.bossc36= true
  while wait() and _G.bossc36 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.Atlantis.NPCs["Atlantis Guard"].RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.Atlantis.NPCs["Atlantis Guard"].UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc36 = false
@@ -669,9 +669,9 @@ _G.bossc37= true
  while wait() and _G.bossc37 do
  
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Areas.Atlantis.NPCs["Squid Lord"].RightUpperArm
+local pbosd = game:GetService("Workspace").Areas.Atlantis.NPCs["Squid Lord"].UpperTorso
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 end
 else
 _G.bossc37 = false
