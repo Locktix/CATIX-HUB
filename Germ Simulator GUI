@@ -4,6 +4,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/prezt
 
 local AutoTab = Library:CreateTab("Germ-Simulator GUI","things", true)
 local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
+local crates = Library:CreateTab("Auto Buy Crates","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
@@ -11305,7 +11306,7 @@ Credits:Destroy()
 IntroBackground:Destroy()
 minimizeHolder()
 end)
-MISC:CreateButton("Speed Hack 200 press(r)", function() --the (arg) is if the checkbox is toggled or not
+MISC:CreateButton("💨Speed Hack 200 PRESS (R)💨", function() --the (arg) is if the checkbox is toggled or not
 
 
 
@@ -11564,7 +11565,7 @@ eggs:CreateToggle("Auto Buy 12K PlayButton Eggs", function(arg) --the (arg) is i
         while wait(0) and _G.h4 do     
 
 local args = {
-    [1] = "ElevenForest",
+    [1] = "ElvenForest",
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.Eclicked:FireServer(unpack(args))
@@ -11573,9 +11574,53 @@ end
         _G.h4 = false
     end
 end)
+crates:CreateToggle("Auto Buy 1K Coins Crates", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+         _G.h5 = true 
+        while wait(0) and _G.h5 do     
 
-teleports:CreateButton("Zone 18", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1691.21399, 27.4616146, -5681.1333)
+local args = {
+    [1] = "Coin1",
+}
+
+game:GetService("ReplicatedStorage").HatRemoteEvents.HatEclicked:FireServer(unpack(args))
+end
+  else
+        _G.h5 = false
+    end
+end)
+crates:CreateToggle("Auto Buy 10K Coins Crates", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+         _G.h6 = true 
+        while wait(0) and _G.h6 do     
+
+local args = {
+    [1] = "Coin2",
+}
+
+game:GetService("ReplicatedStorage").HatRemoteEvents.HatEclicked:FireServer(unpack(args))
+end
+  else
+        _G.h6 = false
+    end
+end)
+crates:CreateToggle("Auto Buy 55K Coins Crate", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+         _G.h7 = true 
+        while wait(0) and _G.h7 do     
+
+local args = {
+    [1] = "Coin3",
+}
+
+game:GetService("ReplicatedStorage").HatRemoteEvents.HatEclicked:FireServer(unpack(args))
+end
+  else
+        _G.h7 = false
+    end
+end)
+AutoTab:CreateButton("Sell", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(69.9238052, 38.3765182, 113.186668)
 end)
 
 teleports:CreateButton("Zone 19", function() --you dont need "arg" for a button
