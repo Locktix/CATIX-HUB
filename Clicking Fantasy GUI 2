@@ -11396,6 +11396,36 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Events.Upgrade:InvokeServer(unpack(args))
+local args = {
+    [1] = "FreeAutoClicker",
+}
+
+game:GetService("ReplicatedStorage").Events.Upgrade:InvokeServer(unpack(args))
+local args = {
+    [1] = "FreeAutoRebirths",
+}
+
+game:GetService("ReplicatedStorage").Events.Upgrade:InvokeServer(unpack(args))
+local args = {
+    [1] = "FasterEggOpen",
+}
+
+game:GetService("ReplicatedStorage").Events.Upgrade:InvokeServer(unpack(args))
+local args = {
+    [1] = "ClicksX2",
+}
+
+game:GetService("ReplicatedStorage").Events.Upgrade:InvokeServer(unpack(args))
+local args = {
+    [1] = "ClicksX5",
+}
+
+game:GetService("ReplicatedStorage").Events.Upgrade:InvokeServer(unpack(args))
+local args = {
+    [1] = "PetEquip",
+}
+
+game:GetService("ReplicatedStorage").Events.Upgrade:InvokeServer(unpack(args))
 end
 
     else
