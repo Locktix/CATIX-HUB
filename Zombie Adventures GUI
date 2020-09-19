@@ -11304,7 +11304,7 @@ Credits:Destroy()
 IntroBackground:Destroy()
 minimizeHolder()
 end)
-MISC:CreateButton("💨Speed Hack 200 PRESS (R)💨", function() --the (arg) is if the checkbox is toggled or not
+MISC:CreateButton("💨Speed Hack 200 PRESS (f)💨", function() --the (arg) is if the checkbox is toggled or not
    
 local walkspeedplayer = game:GetService("Players").LocalPlayer
 local walkspeedmouse = walkspeedplayer:GetMouse()
@@ -11312,7 +11312,7 @@ local walkspeedmouse = walkspeedplayer:GetMouse()
 local walkspeedenabled = false
 
 function x_walkspeed(key)
-if (key == "r") then
+if (key == "f") then
 if walkspeedenabled == false then
 _G.WS = 200;
 local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
@@ -11550,14 +11550,12 @@ AutoTab:CreateButton("Impossible To Get Damage", function() --you dont need "arg
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(n)
 end)
 AutoTab:CreateButton("Tp TO Mobs zone 1", function() --the (arg) is if the checkbox is toggled or not
- game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1694.50903, 11.154664, -1047.6001)
+ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2017.71301, 14.5461264, -919.176697)
 end)
 AutoTab:CreateButton("Tp TO Mobs zone 2", function() --the (arg) is if the checkbox is toggled or not
  game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1694.50903, 11.154664, -1047.6001)
 end)
-AutoTab:CreateButton("Tp TO Mobs zone 3", function() --the (arg) is if the checkbox is toggled or not
- game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1694.50903, 11.154664, -1047.6001)
-end)
+
 AutoTab:CreateButton("Tp TO Mobs zone 4", function() --the (arg) is if the checkbox is toggled or not
  game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(386.554932, 15.9193649, -1049.07422)
 end)
@@ -11573,6 +11571,9 @@ teleports:CreateButton("Zone 2", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-742.328186, 11.3860302, -1180.93579)
 end)
 
+teleports:CreateButton("Zone 3", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-156.623871, 4.07750654, -1214.87744)
+end)
 
 teleports:CreateButton("Zone 4", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(301.77478, 12.6525459, -1126.16272)
