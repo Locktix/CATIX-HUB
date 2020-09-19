@@ -77,7 +77,25 @@ _G.Speed = true
            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
          end
 end)
-
+AutoTab:CreateToggle("Auto Equip Coffees", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b = true 
+        while wait(0) and _G.b do
+         local toolname = "Diamond Coffee" -- replace with the name of the tool
+local Plr = game:GetService("Players").LocalPlayer
+while wait() do
+    pcall(function()
+        if Plr.Backpack:FindFirstChild(toolname) and Plr.Character:FindFirstChild(toolname) == nil then
+            local tool = Plr.Backpack:FindFirstChild(toolname)
+            Plr.Character.Humanoid:EquipTool(tool)
+        end
+    end)
+end	
+        end
+    else
+        _G.b = false
+    end
+end)
 AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.a = true 
@@ -91,7 +109,25 @@ end
         _G.a = false
     end
 end)
-
+AutoTab:CreateToggle("Not WorkAuto Equip Coffee", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b2 = true 
+        while wait(0) and _G.b2 do
+         local toolname = "Coffee Plastic" -- replace with the name of the tool
+local Plr = game:GetService("Players").LocalPlayer
+while wait() do
+    pcall(function()
+        if Plr.Backpack:FindFirstChild(toolname) and Plr.Character:FindFirstChild(toolname) == nil then
+            local tool = Plr.Backpack:FindFirstChild(toolname)
+            Plr.Character.Humanoid:EquipTool(tool)
+        end
+    end)
+end	
+        end
+    else
+        _G.b2 = false
+    end
+end)
 
 AutoTab:CreateToggle("Auto Buy Coffes", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
@@ -177,7 +213,7 @@ end)
 eggs:CreateToggle("Auto Buy Common Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.f = true 
-        while wait(0) and _G.f do
+        while wait(5) and _G.f do
 
 
 local args = {
@@ -196,7 +232,7 @@ end)
 eggs:CreateToggle("Auto Buy Uncommon Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.g = true 
-        while wait(0) and _G.g do
+        while wait(5) and _G.g do
 
 local args = {
     [1] = "UNCOMMON",
@@ -214,7 +250,7 @@ end)
 eggs:CreateToggle("Auto Buy RARE Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.h = true 
-        while wait(0) and _G.h do
+        while wait(5) and _G.h do
 
 local args = {
     [1] = "RARE",
@@ -232,7 +268,7 @@ end)
 eggs:CreateToggle("Auto Buy Epic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.i = true 
-        while wait(0) and _G.i do
+        while wait(5) and _G.i do
 
 local args = {
     [1] = "EPIC",
@@ -250,7 +286,7 @@ end)
 eggs:CreateToggle("Auto Buy Legendary Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.j = true 
-        while wait(0) and _G.j do
+        while wait(5) and _G.j do
 
 local args = {
     [1] = "LEGENDARY",
@@ -268,7 +304,7 @@ end)
 eggs:CreateToggle("Auto Buy Impossible Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.k = true 
-        while wait(0) and _G.k do
+        while wait(5) and _G.k do
 
 local args = {
     [1] = "IMPOSSIBLE",
@@ -286,7 +322,7 @@ end)
 eggs:CreateToggle("Auto Buy Immortal Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.l = true 
-        while wait(0) and _G.l do
+        while wait(5) and _G.l do
 
 local args = {
     [1] = "IMMORTAL",
@@ -304,7 +340,7 @@ end)
 eggs:CreateToggle("Auto Buy lightning Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.m = true 
-        while wait(0) and _G.m do
+        while wait(5) and _G.m do
 
 local args = {
     [1] = "LIGHTNING",
@@ -322,7 +358,7 @@ end)
 eggs:CreateToggle("Auto Buy Godness Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.n = true 
-        while wait(0) and _G.n do
+        while wait(5) and _G.n do
 
 local args = {
     [1] = "GODNESS",
@@ -340,7 +376,7 @@ end)
 eggs:CreateToggle("Auto Buy Cybernetic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.o = true 
-        while wait(0) and _G.o do
+        while wait(5) and _G.o do
 
 local args = {
     [1] = "CYBERNETIC",
@@ -358,7 +394,7 @@ end)
 eggs:CreateToggle("Auto Buy Powerful Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.p = true 
-        while wait(0) and _G.p do
+        while wait(5) and _G.p do
 
 local args = {
     [1] = "POWERFUL",
@@ -376,7 +412,7 @@ end)
 eggs:CreateToggle("Auto Buy Corrupted Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.q = true 
-        while wait(0) and _G.q do
+        while wait(5) and _G.q do
 
 local args = {
     [1] = "CORRUPTED",
@@ -394,7 +430,7 @@ end)
 eggs:CreateToggle("Auto Buy Blaster Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.r = true 
-        while wait(0) and _G.r do
+        while wait(5) and _G.r do
 
 local args = {
     [1] = "BLASTER",
