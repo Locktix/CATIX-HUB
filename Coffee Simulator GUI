@@ -214,7 +214,7 @@ end)
 eggs:CreateToggle("Auto Buy Common Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.f = true 
-        while wait(2) and _G.f do
+        while wait(0) and _G.f do
 
 
 local args = {
@@ -224,6 +224,9 @@ local args = {
 
 game:GetService("ReplicatedStorage").Resources.RemoteEvents.OpenEgg:FireServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(79.2577209, 21.3038902, -149.345459)
+wait(1)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(40.3062363, 117150.063, 241.201065)
+wait(1)
 end
 
     else
@@ -233,7 +236,7 @@ end)
 eggs:CreateToggle("Auto Buy Uncommon Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.g = true 
-        while wait(2) and _G.g do
+        while wait(0) and _G.g do
 
 local args = {
     [1] = "UNCOMMON",
@@ -242,6 +245,9 @@ local args = {
 
 game:GetService("ReplicatedStorage").Resources.RemoteEvents.OpenEgg:FireServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(48.1290207, 21.3043137, -144.513138)
+wait(1)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(40.3062363, 117150.063, 241.201065)
+wait(1)
 end
 
     else
@@ -251,7 +257,7 @@ end)
 eggs:CreateToggle("Auto Buy RARE Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.h = true 
-        while wait(2) and _G.h do
+        while wait(0) and _G.h do
 
 local args = {
     [1] = "RARE",
@@ -260,6 +266,9 @@ local args = {
 
 game:GetService("ReplicatedStorage").Resources.RemoteEvents.OpenEgg:FireServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-29.3938465, 685.694702, -632.950195)
+wait(1)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(40.3062363, 117150.063, 241.201065)
+wait(1)
 end
 
     else
@@ -269,7 +278,7 @@ end)
 eggs:CreateToggle("Auto Buy Epic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.i = true 
-        while wait() and _G.i do
+        while wait(0) and _G.i do
 
 local args = {
     [1] = "EPIC",
@@ -278,6 +287,9 @@ local args = {
 
 game:GetService("ReplicatedStorage").Resources.RemoteEvents.OpenEgg:FireServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(244.267242, 3039.92358, -597.244812)
+wait(1)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(40.3062363, 117150.063, 241.201065)
+wait(1)
 end
 
     else
@@ -287,7 +299,7 @@ end)
 eggs:CreateToggle("Auto Buy Legendary Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.j = true 
-        while wait() and _G.j do
+        while wait(0) and _G.j do
 
 local args = {
     [1] = "LEGENDARY",
@@ -296,6 +308,9 @@ local args = {
 
 game:GetService("ReplicatedStorage").Resources.RemoteEvents.OpenEgg:FireServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(352.199249, 5790.30859, -1006.61163)
+wait(1)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(40.3062363, 117150.063, 241.201065)
+wait(1)
 end
 
     else
@@ -305,7 +320,7 @@ end)
 eggs:CreateToggle("Auto Buy Impossible Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.k = true 
-        while wait(2) and _G.k do
+        while wait(0) and _G.k do
 
 local args = {
     [1] = "IMPOSSIBLE",
@@ -314,6 +329,9 @@ local args = {
 
 game:GetService("ReplicatedStorage").Resources.RemoteEvents.OpenEgg:FireServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(346.401703, 10270.2861, -940.604919)
+wait(1)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(40.3062363, 117150.063, 241.201065)
+wait(1)
 end
 
     else
@@ -323,7 +341,7 @@ end)
 eggs:CreateToggle("Auto Buy Immortal Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.l = true 
-        while wait(2) and _G.l do
+        while wait(0) and _G.l do
 
 local args = {
     [1] = "IMMORTAL",
@@ -332,6 +350,9 @@ local args = {
 
 game:GetService("ReplicatedStorage").Resources.RemoteEvents.OpenEgg:FireServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(545.997925, 17397.9258, -820.934082)
+wait(1)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(40.3062363, 117150.063, 241.201065)
+wait(1)
 end
 
     else
@@ -341,7 +362,7 @@ end)
 eggs:CreateToggle("Auto Buy lightning Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.m = true 
-        while wait(2) and _G.m do
+        while wait(0) and _G.m do
 
 local args = {
     [1] = "LIGHTNING",
@@ -350,6 +371,9 @@ local args = {
 
 game:GetService("ReplicatedStorage").Resources.RemoteEvents.OpenEgg:FireServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(577.447144, 21959.9355, -947.44043)
+wait(1)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(40.3062363, 117150.063, 241.201065)
+wait(1)
 end
 
     else
@@ -359,7 +383,7 @@ end)
 eggs:CreateToggle("Auto Buy Godness Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.n = true 
-        while wait(2) and _G.n do
+        while wait(0) and _G.n do
 
 local args = {
     [1] = "GODNESS",
@@ -368,6 +392,9 @@ local args = {
 
 game:GetService("ReplicatedStorage").Resources.RemoteEvents.OpenEgg:FireServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1119.81506, 30157.6211, -907.059204)
+wait(1)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(40.3062363, 117150.063, 241.201065)
+wait(1)
 end
 
     else
@@ -377,7 +404,7 @@ end)
 eggs:CreateToggle("Auto Buy Cybernetic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.o = true 
-        while wait(2) and _G.o do
+        while wait(0) and _G.o do
 
 local args = {
     [1] = "CYBERNETIC",
@@ -386,6 +413,9 @@ local args = {
 
 game:GetService("ReplicatedStorage").Resources.RemoteEvents.OpenEgg:FireServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-607.368225, 60728.457, -58.5984077)
+wait(1)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(40.3062363, 117150.063, 241.201065)
+wait(1)
 end
 
     else
@@ -395,7 +425,7 @@ end)
 eggs:CreateToggle("Auto Buy Powerful Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.p = true 
-        while wait(2) and _G.p do
+        while wait(0) and _G.p do
 
 local args = {
     [1] = "POWERFUL",
@@ -404,6 +434,9 @@ local args = {
 
 game:GetService("ReplicatedStorage").Resources.RemoteEvents.OpenEgg:FireServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-64.1758575, 48000.1367, -226.724442)
+wait(1)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(40.3062363, 117150.063, 241.201065)
+wait(1)
 end
 
     else
@@ -413,7 +446,7 @@ end)
 eggs:CreateToggle("Auto Buy Corrupted Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.q = true 
-        while wait(2) and _G.q do
+        while wait(0) and _G.q do
 
 local args = {
     [1] = "CORRUPTED",
@@ -422,6 +455,9 @@ local args = {
 
 game:GetService("ReplicatedStorage").Resources.RemoteEvents.OpenEgg:FireServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-226.741714, 83700.6328, 520.610962)
+wait(1)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(40.3062363, 117150.063, 241.201065)
+wait(1)
 end
 
     else
@@ -431,7 +467,7 @@ end)
 eggs:CreateToggle("Auto Buy Blaster Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.r = true 
-        while wait(2) and _G.r do
+        while wait(0) and _G.r do
 
 local args = {
     [1] = "BLASTER",
@@ -442,6 +478,7 @@ game:GetService("ReplicatedStorage").Resources.RemoteEvents.OpenEgg:FireServer(u
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(128.557281, 117149.133, 147.247681)
 wait(1)
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(40.3062363, 117150.063, 241.201065)
+wait(1)
 end
 
     else
