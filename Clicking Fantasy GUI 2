@@ -11956,7 +11956,7 @@ end
 end)
 Rebirths:CreateToggle("Aut Buy Rebirths x1K", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.f8 = true 
+        _G.f9 = true 
         while wait(0) and _G.f9 do
 local args = {
     [1] = 1000,
