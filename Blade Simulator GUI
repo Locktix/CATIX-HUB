@@ -11381,26 +11381,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Swing:FireServer(unpack(args))
-local args = {
-    [1] = 999999999999999999999999999999999,
-}
 
-game:GetService("ReplicatedStorage").Swing:FireServer(unpack(args))
-local args = {
-    [1] = 999999999999999999999999999999999,
-}
-
-game:GetService("ReplicatedStorage").Swing:FireServer(unpack(args))
-local args = {
-    [1] = 999999999999999999999999999999999,
-}
-
-game:GetService("ReplicatedStorage").Swing:FireServer(unpack(args))
-local args = {
-    [1] = 999999999999999999999999999999999,
-}
-
-game:GetService("ReplicatedStorage").Swing:FireServer(unpack(args))
 end
 
     else
