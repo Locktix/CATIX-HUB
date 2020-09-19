@@ -11474,12 +11474,21 @@ end
         _G.d2 = false
     end
 end)
+AutoTab:CreateButton("Dont Use Auto Sell", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(d)
+end)
+AutoTab:CreateButton("Whit Tp TO BOSS", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(d)
+end)
+AutoTab:CreateButton("Because Problem", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(d)
+end)
 AutoTab:CreateToggle("Auto Sell", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.f = true 
         while wait(0) and _G.f do
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-78.3977203, 51.0256691, -92.4315948)
-wait(0.5)
+wait(1)
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-78.3492737, 51.0256729, -63.1771126)
 end
 
@@ -11487,7 +11496,7 @@ end
         _G.f = false
     end
 end)
-AutoTab:CreateToggle("Tp To Boss ", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateToggle("Tp To Boss", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.f = true 
         while wait(0) and _G.f do
