@@ -11487,7 +11487,7 @@ end
         _G.f = false
     end
 end)
-AutoTab:CreateToggle("Tp To Boss wait(4) ForSell", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateToggle("Tp To Boss ", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.f = true 
         while wait(0) and _G.f do
@@ -11495,8 +11495,7 @@ local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace")["Boss One"].UpperTorso
 
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
-wait(4)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-78.3977203, 51.0256691, -92.4315948)
+
 end
 
     else
