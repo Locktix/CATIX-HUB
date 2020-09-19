@@ -210,6 +210,7 @@ end
         _G.e2 = false
     end
 end)
+
 eggs:CreateToggle("Auto Buy Common Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.f = true 
@@ -268,7 +269,7 @@ end)
 eggs:CreateToggle("Auto Buy Epic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.i = true 
-        while wait(5) and _G.i do
+        while wait() and _G.i do
 
 local args = {
     [1] = "EPIC",
@@ -286,7 +287,7 @@ end)
 eggs:CreateToggle("Auto Buy Legendary Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.j = true 
-        while wait(5) and _G.j do
+        while wait() and _G.j do
 
 local args = {
     [1] = "LEGENDARY",
@@ -322,7 +323,7 @@ end)
 eggs:CreateToggle("Auto Buy Immortal Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.l = true 
-        while wait(5) and _G.l do
+        while wait() and _G.l do
 
 local args = {
     [1] = "IMMORTAL",
@@ -340,7 +341,7 @@ end)
 eggs:CreateToggle("Auto Buy lightning Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.m = true 
-        while wait(5) and _G.m do
+        while wait() and _G.m do
 
 local args = {
     [1] = "LIGHTNING",
@@ -358,7 +359,7 @@ end)
 eggs:CreateToggle("Auto Buy Godness Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.n = true 
-        while wait(5) and _G.n do
+        while wait() and _G.n do
 
 local args = {
     [1] = "GODNESS",
@@ -376,7 +377,7 @@ end)
 eggs:CreateToggle("Auto Buy Cybernetic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.o = true 
-        while wait(5) and _G.o do
+        while wait() and _G.o do
 
 local args = {
     [1] = "CYBERNETIC",
@@ -394,7 +395,7 @@ end)
 eggs:CreateToggle("Auto Buy Powerful Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.p = true 
-        while wait(5) and _G.p do
+        while wait() and _G.p do
 
 local args = {
     [1] = "POWERFUL",
@@ -412,7 +413,7 @@ end)
 eggs:CreateToggle("Auto Buy Corrupted Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.q = true 
-        while wait(5) and _G.q do
+        while wait() and _G.q do
 
 local args = {
     [1] = "CORRUPTED",
@@ -430,7 +431,7 @@ end)
 eggs:CreateToggle("Auto Buy Blaster Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.r = true 
-        while wait(5) and _G.r do
+        while wait() and _G.r do
 
 local args = {
     [1] = "BLASTER",
@@ -439,6 +440,8 @@ local args = {
 
 game:GetService("ReplicatedStorage").Resources.RemoteEvents.OpenEgg:FireServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(128.557281, 117149.133, 147.247681)
+wait(1)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(40.3062363, 117150.063, 241.201065)
 end
 
     else
