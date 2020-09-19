@@ -445,44 +445,37 @@ end
         _G.r = false
     end
 end)
-teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
+teleports:CreateButton("Tp To All Islands", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(215.231522, 14.4342747, -336.547668)
-end)
-
-teleports:CreateButton("Zone 1", function() --you dont need "arg" for a button
+wait(1)
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(70.3246002, 685.608582, -594.333191)
-end)
-
-teleports:CreateButton("Zone 2", function() --you dont need "arg" for a button
+wait(1)
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(295.68515, 3040.58447, -610.816528)
-end)
-teleports:CreateButton("Zone 3", function() --you dont need "arg" for a button
+wait(1)
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(347.187927, 5790.11865, -956.081482)
-end)
-teleports:CreateButton("Zone 4", function() --you dont need "arg" for a button
+wait(1)
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(383.351166, 10270.4688, -960.55249)
-end)
-teleports:CreateButton("Zone 5", function() --you dont need "arg" for a button
+wait(1)
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(594.774475, 17399.5859, -821.366516)
-end)
-teleports:CreateButton("Zone 6", function() --you dont need "arg" for a button
+wait(1)
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(560.994873, 21961.623, -993.799316)
-end)
-teleports:CreateButton("Zone 7", function() --you dont need "arg" for a button
+wait(1)
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1191.9386, 30158.6387, -854.797485)
-end)
-teleports:CreateButton("Zone 8", function() --you dont need "arg" for a button
+wait(1)
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-20.6797028, 48001.1445, -194.61673)
-end)
-teleports:CreateButton("Zone 9", function() --you dont need "arg" for a button
+wait(1)
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-662.16626, 60728.8398, -5.32310438)
-end)
-teleports:CreateButton("Zone 10", function() --you dont need "arg" for a button
+wait(1)
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-193.540451, 83700.6563, 455.014008)
-end)
-teleports:CreateButton("Zone 11", function() --you dont need "arg" for a button
+wait(1)
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(106.173271, 117148.063, 188.798737)
 end)
+
+
+
+
+
+
 teleports:CreateButton("Sell X150", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(40.3062363, 117150.063, 241.201065)
 end)
