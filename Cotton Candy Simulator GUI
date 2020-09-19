@@ -104,7 +104,7 @@ end)
 eggs:CreateToggle("Auto Buy Bronze Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.d = true 
-        while wait(0) and _G.d do
+        while wait(0.1) and _G.d do
            local args = {
     [1] = "Starter World Bronze",
     [2] = 1
@@ -121,7 +121,7 @@ end)
 eggs:CreateToggle("Auto Buy Silver Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e = true 
-        while wait(0) and _G.e do
+        while wait(0.1) and _G.e do
            local args = {
     [1] = "Starter World Silver",
     [2] = 1
@@ -138,7 +138,7 @@ end)
 eggs:CreateToggle("Auto Buy Gold Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.f = true 
-        while wait(0) and _G.f do
+        while wait(0.1) and _G.f do
            local args = {
     [1] = "Starter World Gold",
     [2] = 1
@@ -155,7 +155,7 @@ end)
 eggs:CreateToggle("Auto Buy Diamond Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.g = true 
-        while wait(0) and _G.g do
+        while wait(0.1) and _G.g do
            local args = {
     [1] = "Starter World Diamond",
     [2] = 1
@@ -172,7 +172,7 @@ end)
 eggs:CreateToggle("Auto Buy Super Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.h = true 
-        while wait(0) and _G.h do
+        while wait(0.1) and _G.h do
            local args = {
     [1] = "Starter World Super",
     [2] = 1
@@ -189,7 +189,7 @@ end)
 eggs:CreateToggle("Auto Buy Platinum Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.i = true 
-        while wait(0) and _G.i do
+        while wait(0.1) and _G.i do
   local args = {
     [1] = "Starter World Diamond",
     [2] = 1
@@ -218,7 +218,7 @@ end)
 eggs:CreateToggle("Auto Buy Bronze Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.k = true 
-        while wait(0) and _G.k do
+        while wait(0.1) and _G.k do
            local args = {
     [1] = "Sugar Beach Bronze",
     [2] = 1
@@ -235,7 +235,7 @@ end)
 eggs:CreateToggle("Auto Buy Silver Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.l = true 
-        while wait(0) and _G.l do
+        while wait(0.1) and _G.l do
            local args = {
     [1] = "Sugar Beach Silver",
     [2] = 1
@@ -252,7 +252,7 @@ end)
 eggs:CreateToggle("Auto Buy Gold Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.m = true 
-        while wait(0) and _G.m do
+        while wait(0.1) and _G.m do
            local args = {
     [1] = "Sugar Beach Gold",
     [2] = 1
@@ -269,7 +269,7 @@ end)
 eggs:CreateToggle("Auto Buy Diamond Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.n = true 
-        while wait(0) and _G.n do
+        while wait(0.1) and _G.n do
            local args = {
     [1] = "Sugar Beach Diamond",
     [2] = 1
@@ -479,14 +479,14 @@ end)
 teleports:CreateButton("Safe Zone", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1156.63147, 71.4762573, -283.506531)
 end)
-
-teleports:CreateButton("Sell Impossible to Arrest", function() --you dont need "arg" for a button
+teleports:CreateButton("Sell Impossible To Arres", function() 
+    
 for x = 1,2000000000000000000000000 do
 wait(0)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(948.780518, -163.19249, 32830.0586)
 end
-end)
 
+end)
 AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:Destroy()
 end)
