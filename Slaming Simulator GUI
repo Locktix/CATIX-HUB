@@ -5,7 +5,6 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/prezt
 
 local AutoTab = Library:CreateTab("Slamming-Simulator GUI","things", true)
 local eggs = Library:CreateTab("Auto Buy Eggs X1","things", true)
-local Bosses = Library:CreateTab("Auto Kill Bosses","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
@@ -423,20 +422,8 @@ game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Eve
     else
         _G.o= false
     end
-end)
-Bosses:CreateToggle("Auto Kill Boss Spawn", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.p = true 
-        while wait(0) and _G.p do
-local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Worlds.Home.Boss["5b3c1b4d-5f98-4d60-a6c5-a8794883de1b"].Torso
+end)C
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-        end
-    else
-        _G.p= false
-    end
-end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(211.461121, 176.775879, -153.747971)
 end)
