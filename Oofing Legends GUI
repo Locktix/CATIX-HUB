@@ -11794,7 +11794,7 @@ Rebirth:AddToggle("Auto Rebirths x1Qn", function(arg) --the (arg) is if the chec
         _G.rrd = true 
         while wait(0) and _G.rrd do
 local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M29"],
+    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M30"],
 }
  
 game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
@@ -11809,7 +11809,7 @@ Rebirth:AddToggle("Auto Rebirths x5Qn", function(arg) --the (arg) is if the chec
         _G.rre = true 
         while wait(0) and _G.rre do
 local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M29"],
+    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M31"],
 }
  
 game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
@@ -11824,7 +11824,7 @@ Rebirth:AddToggle("Auto Rebirths x35Qn", function(arg) --the (arg) is if the che
         _G.rrf = true 
         while wait(0) and _G.rrf do
 local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M29"],
+    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M32"],
 }
  
 game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
