@@ -6,6 +6,7 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
 local AutoTab = Library:CreateTab("Ninja Clicker GUI","things", true)
+local eggs = Library:CreateTab("Auto Buy Eggs X3","things", true)
 local reb = Library:CreateTab("Auto Rebirths","things", true)
 local reb2 = Library:CreateTab("Auto Rebirths2","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
@@ -57,12 +58,13 @@ eggs:CreateToggle("Auto Buy 1K Shurikens eggs", function(arg) --the (arg) is if 
     if arg then
         _G.a = true 
         while wait(0) and _G.a do
-         local args = {
-    [1] = " Egg",
-    [2] = false
+local args = {
+    [1] = "Basic Egg",
+    [2] = true
 }
 
 workspace.Debris.Events.OpenEgg:FireServer(unpack(args))
+
 
 
         end
