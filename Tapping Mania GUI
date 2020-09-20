@@ -533,6 +533,21 @@ game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args
         _G.e9= false
     end
 end)
+eggs:CreateToggle("Auto Buy Angelic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e10 = true 
+        while wait(0) and _G.e10 do
+
+local args = {
+    [1] = "Angelic Egg",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
+        end
+    else
+        _G.e10= false
+    end
+end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1.12185335, 3.26842809, 15.6704302)
 end)
@@ -555,6 +570,9 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2355.00
 end)
 teleports:CreateButton("Zone 6", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2827.05615, 3.34477949, 19.8399887, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end)
+teleports:CreateButton("Zone 7", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3323.87598, -4.50110769, 85.9650497, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 end)
 --| Anti KICK |
 local mt = getrawmetatable(game)
