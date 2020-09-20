@@ -99,8 +99,8 @@ game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
 end)
 eggs:CreateToggle("Auto Buy Basic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.b = true 
-        while wait(0) and _G.b do
+        _G.c = true 
+        while wait(0) and _G.c do
 
 local args = {
     [1] = game:GetService("ReplicatedStorage").Eggs["Basic Egg"],
@@ -110,7 +110,7 @@ local args = {
 game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
         end
     else
-        _G.b= false
+        _G.c= false
     end
 end)
 AutoTab:CreateToggle("Auto Click", function(arg)
@@ -586,7 +586,7 @@ else
 _G.bossc = false
 end
 end)
-teleports:CreateButton("Auto Flags", function() --the (arg) is if the checkbox is toggled or not
+teleports:CreateButton("Flags", function() --the (arg) is if the checkbox is toggled or not
    
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(640, 221, 144)
 wait(24)
@@ -611,7 +611,7 @@ wait(24)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(665, 6320, -149)
 wait(24)
 
-end
+
 end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(543.14386, 184.468475, 14.3797617)
