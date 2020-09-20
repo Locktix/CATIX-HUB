@@ -2,7 +2,7 @@
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
-local AutoTab = Library:CreateTab("PATCHED","things", true)
+local AutoTab = Library:CreateTab("SAITAMA GUI","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
@@ -11311,11 +11311,11 @@ if arg then
 _G.spin = true
 while wait(0) and _G.spin do 
 
-function getNil(name,class) for _,v in pairs(getnilinstances())do if v.ClassName==class and v.Name==name then return v;end end end
+local args = {
+    [1] = "PurchaseSpin",
+}
 
-game:GetService("ReplicatedStorage").RemoteFunction:InvokeServer()
-
-
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
 end
 else
 _G.spin = false
@@ -11326,7 +11326,12 @@ AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox 
     if arg then
         _G.b = true 
         while wait(0) and _G.b do
-game:GetService("Workspace").fwa4srm5l5.LeftHand.Hitbox:InvokeServer()
+local args = {
+    [1] = "Punch",
+    [2] = "Left",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
 
 end
     else
@@ -11339,58 +11344,11 @@ AutoTab:CreateToggle("Auto Kill Criminals", function(arg) --the (arg) is if the 
         _G.autofarm = true
 while wait(0)and _G.autofarm do
 
-local players = game:GetService("Players");
-local player = players.LocalPlayer;
-local remote = game.ReplicatedStorage.RemoteEvent;
-local questsM = game.ReplicatedStorage.Modules.Quests;
-local Tween = game:GetService'TweenService';
-local spawns = workspace.Spawns;
-local questParts = workspace.QuestParts;
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Spawns.Criminal.Criminal.UpperTorso
 
-local target = "Criminal";
-local spawnsT =  {};
-local quests = {};
-
-for i, v in next, require(questsM) do
-    quests[v.Target] = i;
-end;
-  
-for i, v in next, spawns:GetChildren() do
-    if v.Name == target then
-        table.insert(spawnsT, v);
-    end;
-end;
-
-spawn(function()
-    while wait() do
-        remote:FireServer("Punch", "Right");
-    end
-end)
-
-    if player.Character then
-        for i, spawn in next, spawnsT do
-            local npc = spawn:FindFirstChild(target);
-            -- if npc then
-                -- repeat wait(1)
-                    local char;
-                    if player.Character then
-                        char = player.Character;
-                    end
-                    if char and char:WaitForChild("HumanoidRootPart") and npc then
-                        Tween:Create(char.HumanoidRootPart, TweenInfo.new(1), {CFrame = npc.HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)}):Play();
-                    end
-                    local questId = quests[target];
-                    if not player.PlayerGui.ScreenGui:WaitForChild("QuestBackground").Visible and questId then
-                        Tween:Create(char.HumanoidRootPart, TweenInfo.new(1), {CFrame = questParts["QuestPart"..questId].CFrame}):Play();
-                        wait(1);
-                        remote:FireServer("GetQuest", questId);
-                                   --until not npc.Parent or npc.Humanoid.Health <= 0
-              end
-        end
-                
-                  
-            end
-        end
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+end
        else
 	   _G.autofarm = false 
     end
@@ -12251,63 +12209,16 @@ end)
      end)
 AutoTab:CreateToggle("Auto Kill Saitama", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.autofarm2 = true
-while wait(0)and _G.autofarm2 do
+        _G.autofarm17 = true
+while wait(0)and _G.autofarm17 do
 
-local players = game:GetService("Players");
-local player = players.LocalPlayer;
-local remote = game.ReplicatedStorage.RemoteEvent;
-local questsM = game.ReplicatedStorage.Modules.Quests;
-local Tween = game:GetService'TweenService';
-local spawns = workspace.Spawns;
-local questParts = workspace.QuestParts;
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Spawns.Saitama.Saitama.UpperTorso
 
-local target = "Saitama";
-local spawnsT =  {};
-local quests = {};
-
-for i, v in next, require(questsM) do
-    quests[v.Target] = i;
-end;
-  
-for i, v in next, spawns:GetChildren() do
-    if v.Name == target then
-        table.insert(spawnsT, v);
-    end;
-end;
-
-spawn(function()
-    while wait() do
-        remote:FireServer("Punch", "Right");
-    end
-end)
-
-    if player.Character then
-        for i, spawn in next, spawnsT do
-            local npc = spawn:FindFirstChild(target);
-            -- if npc then
-                -- repeat wait(1)
-                    local char;
-                    if player.Character then
-                        char = player.Character;
-                    end
-                    if char and char:WaitForChild("HumanoidRootPart") and npc then
-                        Tween:Create(char.HumanoidRootPart, TweenInfo.new(1), {CFrame = npc.HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)}):Play();
-                    end
-                    local questId = quests[target];
-                    if not player.PlayerGui.ScreenGui:WaitForChild("QuestBackground").Visible and questId then
-                        Tween:Create(char.HumanoidRootPart, TweenInfo.new(1), {CFrame = questParts["QuestPart"..questId].CFrame}):Play();
-                        wait(1);
-                        remote:FireServer("GetQuest", questId);
-                                   --until not npc.Parent or npc.Humanoid.Health <= 0
-              end
-        end
-                
-                  
-            end
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
         end
        else
-	   _G.autofarm2 = false 
+	   _G.autofarm17 = false 
     end
      end)
 
