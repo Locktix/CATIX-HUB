@@ -11346,7 +11346,7 @@ end)
 AutoTab:CreateToggle("Auto Craft Pets", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.b3 = true 
-        while wait(0) and _G.b3 do
+        while wait(10) and _G.b3 do
 game:GetService("ReplicatedStorage").Remotes.CraftAll:FireServer()
 end
        
