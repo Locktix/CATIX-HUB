@@ -499,6 +499,25 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-117.166
         _G.c11 = false
     end
 end)
+eggs:CreateToggle("Auto Buy 3M Event Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c12 = true 
+        while wait(0) and _G.c12 do
+         
+local args = {
+    [1] = "ThreeMEvent",
+    [2] = "Single",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-117.166588, 43.897377, -9.93335438)
+
+        end
+    else
+        _G.c12 = false
+    end
+end)
 Rebirths:CreateToggle("Rebirths x1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.r = true 
