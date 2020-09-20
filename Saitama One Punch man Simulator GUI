@@ -11311,11 +11311,9 @@ if arg then
 _G.spin = true
 while wait(0) and _G.spin do 
 
-local args = {
-    [1] = "PurchaseSpin",
-}
+function getNil(name,class) for _,v in pairs(getnilinstances())do if v.ClassName==class and v.Name==name then return v;end end end
 
-game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+game:GetService("ReplicatedStorage").RemoteFunction:InvokeServer()
 end
 else
 _G.spin = false
