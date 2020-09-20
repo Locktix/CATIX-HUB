@@ -11350,7 +11350,7 @@ end)
 
 AutoTab:CreateButton("Inf Range", function() --the (arg) is if the checkbox is toggled or not
    
-      game.Players.LocalPlayer.Range.Value = 999999999999
+      game.Players.LocalPlayer.Range.Value = 1000000
 
  
 end)
@@ -11382,7 +11382,7 @@ end)
 eggs:CreateToggle("Auto Buy Clown Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e1 = true 
-        while wait(0) and _G.e1 do
+        while wait(1) and _G.e1 do
 
          local args = {
     [1] = "OpenEgg",
