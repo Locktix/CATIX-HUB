@@ -3,11 +3,10 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
 local AutoTab = Library:CreateTab("Hyper-Clickers GUI","things", true)
-local teleports = Library:CreateTab("Teleports","things", true)
-local eggs = Library:CreateTab("Auto Buy Eggs X3","things", true)
-local eggs3 = Library:CreateTab("Auto Buy Eggs X1","things", true)
 local eggs1 = Library:CreateTab("Auto Rebirth","things", true)
 local eggs2 = Library:CreateTab("Auto Rebirth 2","things", true)
+local eggs = Library:CreateTab("Auto Buy Eggs X3","things", true)
+local eggs3 = Library:CreateTab("Auto Buy Eggs X1","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
@@ -11640,6 +11639,22 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-709.154
         _G.f75= false
     end
 end)
+eggs:CreateToggle("Auto Buy Galaxy Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f84 = true 
+        while wait(0) and _G.f84 do
+local args = {
+    [1] = "Galaxy",
+    [2] = "Triple",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-347.27533, -100.625458, -1266.29639, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        end
+    else
+        _G.f84= false
+    end
+end)
 eggs3:CreateToggle("Auto Buy 1K Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.f2 = true 
@@ -11783,6 +11798,22 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-709.154
         end
     else
         _G.f74= false
+    end
+end)
+eggs3:CreateToggle("Auto Buy Galaxy Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f85 = true 
+        while wait(0) and _G.f85 do
+local args = {
+    [1] = "Galaxy",
+    [2] = "Single",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-347.27533, -100.625458, -1266.29639, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        end
+    else
+        _G.f85= false
     end
 end)
 eggs1:CreateToggle("Auto Buy Rebirths x1", function(arg) --the (arg) is if the checkbox is toggled or not
