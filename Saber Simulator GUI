@@ -3,7 +3,10 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
 local AutoTab = Library:CreateTab("Saber Simulator GUI","things", true)
-local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
+local eggs = Library:CreateTab("Auto Buy Eggs 1","things", true)
+local eggs2 = Library:CreateTab("Auto Buy Eggs 2","things", true)
+local eggs3 = Library:CreateTab("Auto Buy Eggs 3","things", true)
+local eggs4 = Library:CreateTab("Auto Buy Eggs 4","things", true)
 local Boss = Library:CreateTab("Auto Boss","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
@@ -11344,7 +11347,22 @@ end)
 
 
 
+eggs:CreateToggle("Auto Buy Island 65 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b1 = true 
+        while wait(0) and _G.b1 do
 
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["G Egg"],
+    [2] = 9999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b1= false
+    end
+end)
 eggs:CreateToggle("Auto Buy Island 64 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.b = true 
@@ -11352,7 +11370,7 @@ eggs:CreateToggle("Auto Buy Island 64 Eggs", function(arg) --the (arg) is if the
 
 local args = {
     [1] = game:GetService("ReplicatedStorage").Eggs["F Egg"],
-    [2] = 1,
+    [2] = 9999,
 }
 
 game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
@@ -11361,20 +11379,1146 @@ game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
         _G.b= false
     end
 end)
-eggs:CreateToggle("Auto Buy Basic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Auto Buy Island 63 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.b = true 
-        while wait(0) and _G.b do
+        _G.b3 = true 
+        while wait(0) and _G.b3 do
 
 local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Basic Egg"],
-    [2] = 1,
+    [1] = game:GetService("ReplicatedStorage").Eggs["E Egg"],
+    [2] = 9999,
 }
 
 game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
         end
     else
-        _G.b= false
+        _G.b3= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Island 62 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b4 = true 
+        while wait(0) and _G.b4 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["D Egg"],
+    [2] = 9999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b4= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Island 61 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b5 = true 
+        while wait(0) and _G.b5 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["C Egg"],
+    [2] = 9999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b5= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Island 60 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b6 = true 
+        while wait(0) and _G.b6 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["B Egg"],
+    [2] = 9999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b66= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Island 59 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b7 = true 
+        while wait(0) and _G.b7 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["A Egg"],
+    [2] = 9999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b7= false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy Island 65 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b9 = true 
+        while wait(0) and _G.b9 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["G Egg"],
+    [2] = 9999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b9= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Island 64 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b10 = true 
+        while wait(0) and _G.b10 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["F Egg"],
+    [2] = 9999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b10 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Island 63 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b11 = true 
+        while wait(0) and _G.b11 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["E Egg"],
+    [2] = 9999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b11= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Island 62 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b12 = true 
+        while wait(0) and _G.b12 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["D Egg"],
+    [2] = 9999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b12= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Island 61 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b13 = true 
+        while wait(0) and _G.b13 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["C Egg"],
+    [2] = 9999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b13= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Island 60 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b14 = true 
+        while wait(0) and _G.b14 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["B Egg"],
+    [2] = 9999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b14= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Island 59 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b15 = true 
+        while wait(0) and _G.b15 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["A Egg"],
+    [2] = 9999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b15= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Island 58 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b16 = true 
+        while wait(0) and _G.b16 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["M Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b16= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Island 57 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b17 = true 
+        while wait(0) and _G.b17 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Bingo Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b17= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Island 56s Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b18 = true 
+        while wait(0) and _G.b18 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Dog Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b18= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Island 55 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b19 = true 
+        while wait(0) and _G.b19 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Pippin Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b19= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Island 53 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b20 = true 
+        while wait(0) and _G.b20 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Casca Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b20= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Island 52 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b21 = true 
+        while wait(0) and _G.b21 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Griffith Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b21= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Island 51 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b22 = true 
+        while wait(0) and _G.b22 do
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Guts Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b22= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Island 50 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b23 = true 
+        while wait(0) and _G.b23 do
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Bruh Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b23= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Island 49 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b24 = true 
+        while wait(0) and _G.b24 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Easy Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b24= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Island 48 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b25 = true 
+        while wait(0) and _G.b25 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Piggy Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b25= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Island 47 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b26 = true 
+        while wait(0) and _G.b26 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Puppet Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b26= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Island 46 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b27 = true 
+        while wait(0) and _G.b27 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Lazy Dev Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b27= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Island 45 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b28 = true 
+        while wait(0) and _G.b28 do
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Henry Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b28= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Island 44 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b29 = true 
+        while wait(0) and _G.b29 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Erick Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b29= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Island 43 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b30 = true 
+        while wait(0) and _G.b30 do
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["British Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b30= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Island 42 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b31 = true 
+        while wait(0) and _G.b31 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["America Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b31= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Island 41 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b23 = true 
+        while wait(0) and _G.b32 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Switch Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b32= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Island 40 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b33 = true 
+        while wait(0) and _G.b33 do
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Birthday Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b33= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Island 39 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b34 = true 
+        while wait(0) and _G.b34 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Egg Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b34= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Island 38 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b35 = true 
+        while wait(0) and _G.b35 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Business Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b35= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Island 37 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b36 = true 
+        while wait(0) and _G.b36 do
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Phantom Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b36= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Island 36 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b37 = true 
+        while wait(0) and _G.b37 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Boris Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b37= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Island 35 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b38 = true 
+        while wait(0) and _G.b38 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Cringe Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b38= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Island 34 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b39 = true 
+        while wait(0) and _G.b39 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Square Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b39= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Island 33 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b40 = true 
+        while wait(0) and _G.b40 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Triangle Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b40= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Island 32 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b41 = true 
+        while wait(0) and _G.b41 do
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Swag Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b41= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Island 31 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b42 = true 
+        while wait(0) and _G.b42 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Onetap Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b42= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Island 29 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b43 = true 
+        while wait(0) and _G.b43 do
+
+-- Script generated by SimpleSpy - credits to exxtremewa#9394
+-- This generator is IN DEVELOPMENT, not compatible with all types/classes yet
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Candy Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b43= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Island 28 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b44 = true 
+        while wait(0) and _G.b44 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Pink Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b44= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Island 27 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b45 = true 
+        while wait(0) and _G.b45 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Shadow Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b45= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Island 26 eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b46 = true 
+        while wait(0) and _G.b46 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Matrix Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b46= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Island 25 eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b47 = true 
+        while wait(0) and _G.b47 do
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Heart Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b47= false
+    end
+end)
+eggs3:CreateToggle("Auto Buy Island 24 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b48 = true 
+        while wait(0) and _G.b48 do
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Round Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b48= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Island 23 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b49 = true 
+        while wait(0) and _G.b49 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Ooga Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b49= false
+    end
+end)
+eggs3:CreateToggle("Auto Buy Island 22 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b50 = true 
+        while wait(0) and _G.b50 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Water Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b50= false
+    end
+end)
+eggs3:CreateToggle("Auto Buy Island 22 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b51 = true 
+        while wait(0) and _G.b51 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Valk Egg"],
+    [2] = 9999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b51= false
+    end
+end)
+eggs3:CreateToggle("Auto Buy Island 21 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b52 = true 
+        while wait(0) and _G.b52 do
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Flame Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b52= false
+    end
+end)
+eggs3:CreateToggle("Auto Buy Island 20 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b53 = true 
+        while wait(0) and _G.b53 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Cow Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b53= false
+    end
+end)
+eggs3:CreateToggle("Auto Buy Island 19 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b54 = true 
+        while wait(0) and _G.b54 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Star Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b54= false
+    end
+end)
+eggs3:CreateToggle("Auto Buy Island 18 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b55 = true 
+        while wait(0) and _G.b55 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Dragon Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b55= false
+    end
+end)
+eggs3:CreateToggle("Auto Buy Island 17 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b56 = true 
+        while wait(0) and _G.b56 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Valk Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b56= false
+    end
+end)
+eggs3:CreateToggle("Auto Buy Island 16 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b57 = true 
+        while wait(0) and _G.b57 do
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Fire Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b57= false
+    end
+end)
+eggs3:CreateToggle("Auto Buy Island 14 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b58 = true 
+        while wait(0) and _G.b58 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Winter Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b58= false
+    end
+end)
+eggs3:CreateToggle("Auto Buy Island 13 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b59 = true 
+        while wait(0) and _G.b59 do
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Nature Egg"],
+    [2] = 9999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b59= false
+    end
+end)
+eggs3:CreateToggle("Auto Buy Island 12 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b60 = true 
+        while wait(0) and _G.b60 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Reaper Egg"],
+    [2] = 9999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b60= false
+    end
+end)
+eggs3:CreateToggle("Auto Buy Island 11 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b61 = true 
+        while wait(0) and _G.b61 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Snow Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b61= false
+    end
+end)
+eggs3:CreateToggle("Auto Buy Island 10 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b62 = true 
+        while wait(0) and _G.b62 do
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Alpha Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b62= false
+    end
+end)
+eggs3:CreateToggle("Auto Buy Island 9 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b63 = true 
+        while wait(0) and _G.b63 do
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Ruby Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b63= false
+    end
+end)
+eggs3:CreateToggle("Auto Buy Island 8 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b64 = true 
+        while wait(0) and _G.b64 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Diamond Egg"],
+      [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b64= false
+    end
+end)
+eggs3:CreateToggle("Auto Buy Island 7 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b65 = true 
+        while wait(0) and _G.b65 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Class Egg"],
+    [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b65= false
+    end
+end)
+eggs3:CreateToggle("Auto Buy Island 6 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b66 = true 
+        while wait(0) and _G.b66 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Premium Egg"],
+    [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b66= false
+    end
+end)
+eggs3:CreateToggle("Auto Buy Island 5 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b67 = true 
+        while wait(0) and _G.b67 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Golden Egg"],
+    [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b67= false
+    end
+end)
+eggs3:CreateToggle("Auto Buy Island 4 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b68 = true 
+        while wait(0) and _G.b68 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Silver Egg"],
+    [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b68= false
+    end
+end)
+eggs4:CreateToggle("Auto Buy Island 3 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b69 = true 
+        while wait(0) and _G.b69 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Dominus Egg"],
+    [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b69= false
+    end
+end)
+eggs4:CreateToggle("Auto Buy Island 2 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b70 = true 
+        while wait(0) and _G.b70 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Glory Egg"],
+    [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b70= false
+    end
+end)
+eggs4:CreateToggle("Auto Buy Island 1 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b71 = true 
+        while wait(0) and _G.b71 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Egg of life"],
+    [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b71= false
+    end
+end)
+eggs4:CreateToggle("Auto Buy spawn 4 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b222 = true 
+        while wait(0) and _G.b222 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs.Ancient,
+    [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b222= false
+    end
+end)
+eggs4:CreateToggle("Auto Buy spawn 3 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b223 = true 
+        while wait(0) and _G.b223 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Reinforced Egg"],
+    [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b223= false
+    end
+end)
+eggs4:CreateToggle("Auto Buy spawn 2 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b224 = true 
+        while wait(0) and _G.b224 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Wooden Egg"],
+    [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b224= false
+    end
+end)
+eggs4:CreateToggle("Auto Buy spawn 1 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b225 = true 
+        while wait(0) and _G.b225 do
+
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["Basic Egg"],
+    [2] = 999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+        end
+    else
+        _G.b225= false
     end
 end)
 AutoTab:CreateToggle("Auto Click", function(arg)
@@ -12025,7 +13169,7 @@ teleports:CreateButton("Palier Zone 3", function() --you dont need "arg" for a b
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(630.680359, 213009.391, -303.533386)
 end)
 teleports:CreateButton("Palier Zone 4", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(630.988159, 248004.688, -303.145996)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(631.945435, 213007.031, -187.223587)
 end)
 teleports:CreateToggle("KOTH", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(793.609009, 249.786087, 33.3503723)
