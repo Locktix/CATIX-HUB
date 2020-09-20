@@ -11311,35 +11311,35 @@ if arg then
 _G.spin = true
 while wait(0) and _G.spin do 
 
-_G.Autoclass = true
+_G.spin = true
 
-while _G.Autoclass do
+while _G.spin do
 game:GetService("ReplicatedStorage").RemoteFunction:InvokeServer()
 wait()
 if game:GetService("Players").LocalPlayer.Stats.Class.Value  == "Phoenix"  
  
-   then _G.Autoclass = false
+   then _G.spin = false
 wait()
 end
 end
 game:GetService("ReplicatedStorage").RemoteFunction:InvokeServer()
 wait()
 if game:GetService("Players").LocalPlayer.Stats.Class.Value  == "Alien"  
- then  _G.Autoclass = false
+ then  _G.spin = false
  end
  game:GetService("ReplicatedStorage").RemoteFunction:InvokeServer()
 wait()
 if game:GetService("Players").LocalPlayer.Stats.Class.Value  == "Esper"  
- then  _G.Autoclass = false
+ then  _G.spin = false
  end
  if game:GetService("Players").LocalPlayer.Stats.Class.Value  == "Superhuman"  
- then  _G.Autoclass = false
+ then  _G.spin = false
  end
   if game:GetService("Players").LocalPlayer.Stats.Class.Value  == "Cyborg"  
- then  _G.Autoclass = false
+ then  _G.spin = false
  end
    if game:GetService("Players").LocalPlayer.Stats.Class.Value  == "Watchdog"  
- then  _G.Autoclass = false
+ then  _G.spin = false
  end
  
 end
