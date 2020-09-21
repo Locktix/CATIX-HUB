@@ -11492,6 +11492,21 @@ me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, 
         _G.e7= false
     end
 end)
+AutoTab:CreateToggle("Auto Tp To Sandy chest", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e8 = true 
+        while wait(0) and _G.e8 do
+   
+
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").ChestSpawns.Sandy
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+        end
+    else
+        _G.e8= false
+    end
+end)
 rebirths:CreateToggle("Auto Buy Rebirths x1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e = true 
@@ -11764,6 +11779,24 @@ game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
         _G.o= false
     end
 end)
+eggs:CreateToggle("Auto Buy SandEgg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.p = true 
+        while wait(0) and _G.p do
+   
+
+
+local args = {
+    [1] = 1,
+    [2] = workspace["Pet Eggs"]["Sand Egg"].Data,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
+        end
+    else
+        _G.p= false
+    end
+end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-116.557777, 140.149994, -29.0575809)
 end)
@@ -11780,6 +11813,9 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-720.488
 end)
 teleports:CreateButton("Zone 4", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(145.147858, 229.457977, -1202.83606)
+end)
+teleports:CreateButton("Zone 5", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(704.197388, 211.060577, -804.918518)
 end)
 --| Anti KICK |
 local mt = getrawmetatable(game)
