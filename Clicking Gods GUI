@@ -12153,7 +12153,7 @@ eggs:CreateToggle("Auto Buy 25B Click Eggs", function(arg) --the (arg) is if the
         _G.zx = true 
         while wait(0) and _G.zx do
 local args = {
-    [1] = "Desert",
+    [1] = "Dessert",
     [2] = "Triple",
 }
 
