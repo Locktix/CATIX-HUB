@@ -11812,7 +11812,7 @@ game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
         _G.p= false
     end
 end)
-eggs:CreateToggle("Auto Buy ToxicEgg"", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Auto Buy ToxicEgg", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.q = true 
         while wait(0) and _G.q do
