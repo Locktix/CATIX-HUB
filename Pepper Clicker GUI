@@ -11507,6 +11507,21 @@ me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, 
         _G.e8= false
     end
 end)
+AutoTab:CreateToggle("Auto Tp To Toxic chest", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e9 = true 
+        while wait(0) and _G.e9 do
+   
+
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").ChestSpawns.Toxic
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+        end
+    else
+        _G.e9= false
+    end
+end)
 rebirths:CreateToggle("Auto Buy Rebirths x1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e = true 
@@ -11797,6 +11812,24 @@ game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
         _G.p= false
     end
 end)
+eggs:CreateToggle("Auto Buy ToxicEgg"", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.q = true 
+        while wait(0) and _G.q do
+   
+
+
+local args = {
+    [1] = 1,
+    [2] = workspace["Pet Eggs"]["Toxic Egg"].Data,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
+        end
+    else
+        _G.q= false
+    end
+end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-116.557777, 140.149994, -29.0575809)
 end)
@@ -11816,6 +11849,9 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(145.1478
 end)
 teleports:CreateButton("Zone 5", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(704.197388, 211.060577, -804.918518)
+end)
+teleports:CreateButton("Zone 6", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1084.11951, 160.816147, 425.903534)
 end)
 --| Anti KICK |
 local mt = getrawmetatable(game)
