@@ -11380,6 +11380,21 @@ Event:FireServer(A_1)
         _G.e = false
     end
 end)
+AutoTab:CreateToggle("Auto  Tp To Thanos", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e2 = true 
+        while wait(0) and _G.e2 do
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").NPCSpawns.Thanos.Thanos.Head
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-25, pbosd.Position.Z+0)        
+
+
+        end
+    else
+        _G.e2 = false
+    end
+end)
 
 eggs:CreateToggle("Auto Buy Common Egg", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
