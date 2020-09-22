@@ -12148,23 +12148,6 @@ end
         _G.zv  = false
     end
 end)
-eggs:CreateToggle("Auto Buy 500M Click Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zw = true 
-        while wait(0) and _G.zw do
-local args = {
-    [1] = "Forest",
-    [2] = "Triple",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
-end
-
-
-    else
-        _G.zw  = false
-    end
-end)
 eggs:CreateToggle("Auto Buy 25B Click Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zx = true 
@@ -12211,7 +12194,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(231.182602, -33.9703293, -1328.28845, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-671.720947, -75.1381531, -1521.64734)
 end
 
 
