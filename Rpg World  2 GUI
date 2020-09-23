@@ -23,15 +23,12 @@ credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "a
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("bsoleil31FR#7202", function() --you dont need "arg" for a button
+credits:CreateButton("Im A Cat#7202", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("https://discord.gg/m9Nn3qd", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
-end)
 
-credits:CreateButton("https://discord.gg/PdUTrVG", function() --you dont need "arg" for a button
+credits:CreateButton("https://discord.gg/PKWXQae", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
@@ -10700,6 +10697,1503 @@ addcmd('hovername',{},
 function(args, speaker)
 	execCmd('unhovername')
 	wait()
+	nameBox = Instance.new("TextLabel")
+	nameBox.Name = randomString()
+	nameBox.Parent = PARENT
+	nameBox.BackgroundTransparency = 1
+	nameBox.Size = UDim2.new(0,200,0,30)
+	nameBox.Font = Enum.Font.Code
+	nameBox.TextSize = 16
+	nameBox.Text = ""
+	nameBox.TextColor3 = Color3.new(1, 1, 1)
+	nameBox.TextStrokeTransparency = 0
+	nameBox.TextXAlignment = Enum.TextXAlignment.Left
+	nameBox.ZIndex = 10
+	nbSelection = Instance.new('SelectionBox')
+	nbSelection.Name = randomString()
+	nbSelection.LineThickness = 0.03
+	nbSelection.Color3 = Color3.new(1, 1, 1)
+	local function updateNameBox()
+		local t
+		local target = IYMouse.Target
+		
+		if target then
+			local humanoid = target.Parent:FindFirstChild('Humanoid') or target.Parent.Parent:FindFirstChild('Humanoid')
+			if humanoid then
+				t = humanoid.Parent
+			end
+		end
+		
+		if t ~= nil then
+			local x = IYMouse.X
+			local y = IYMouse.Y
+			local xP
+			local yP
+			if IYMouse.X > 200 then
+				xP = x - 205
+				nameBox.TextXAlignment = Enum.TextXAlignment.Right
+			else
+				xP = x + 25
+				nameBox.TextXAlignment = Enum.TextXAlignment.Left
+			end
+			nameBox.Position = UDim2.new(0, xP, 0, y)
+			nameBox.Text = t.Name
+			nameBox.Visible = true
+			nbSelection.Parent = t
+			nbSelection.Adornee = t
+		else
+			nameBox.Visible = false
+			nbSelection.Parent = nil
+			nbSelection.Adornee = nil
+		end
+	end
+	nbUpdateFunc = IYMouse.Move:connect(updateNameBox)
+end)
+
+addcmd('unhovername',{'nohovername'},
+function(args, speaker)
+	if nbUpdateFunc then
+		nbUpdateFunc:Disconnect()
+		nameBox:Destroy()
+		nbSelection:Destroy()
+	end
+end)
+
+addcmd('hitbox',{},
+function(args, speaker)
+	local players = getPlayer(args[1], speaker)
+	for i,v in pairs(players) do
+		if Players[v]~= speaker and Players[v].Character:FindFirstChild('Head') then
+			local sizeArg = tonumber(args[2])
+			local Size = Vector3.new(sizeArg,sizeArg,sizeArg)
+			local Head = Players[v].Character:FindFirstChild('Head')
+			if Head:IsA("BasePart") then
+				if not args[2] or sizeArg == 1 then
+					Head.Size = Vector3.new(2,1,1)
+				else
+					Head.Size = Size
+				end
+			end
+		end
+	end
+end)
+
+addcmd('stareat',{'stare'},
+function(args, speaker)
+	local players = getPlayer(args[1], speaker)
+	for i,v in pairs(players) do
+		if stareLoop then
+			stareLoop:Disconnect()
+		end
+		if not Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and Players[v].Character:FindFirstChild("HumanoidRootPart") then return end
+		local function stareFunc()
+			if Players.LocalPlayer.Character.PrimaryPart and Players:FindFirstChild(v) and Players[v].Character ~= nil and Players[v].Character:FindFirstChild("HumanoidRootPart") then
+				local chrPos=Players.LocalPlayer.Character.PrimaryPart.Position
+				local tPos=Players[v].Character:FindFirstChild("HumanoidRootPart").Position
+				local modTPos=Vector3.new(tPos.X,chrPos.Y,tPos.Z)
+				local newCF=CFrame.new(chrPos,modTPos)
+				Players.LocalPlayer.Character:SetPrimaryPartCFrame(newCF)
+			elseif not Players:FindFirstChild(v) then
+				stareLoop:Disconnect()
+			end
+		end
+		
+		stareLoop = game:GetService("RunService").RenderStepped:Connect(stareFunc)
+	end
+end)
+
+addcmd('unstareat',{'unstare','nostare','nostareat'},
+function(args, speaker)
+	if stareLoop then
+		stareLoop:Disconnect()
+	end
+end)
+
+addcmd('removeterrain',{'rterrain','noterrain'},
+function(args, speaker)
+	workspace:FindFirstChildOfClass('Terrain'):Clear()
+end)
+
+addcmd('clearnilinstances',{'nonilinstances','cni'},
+function(args, speaker)
+	if getnilinstances then
+		for i,v in pairs(getnilinstances()) do
+			v:Destroy()
+		end
+	else
+		notify('Incompatible Exploit','Your exploit does not support this command (missing getnilinstances)')
+	end
+end)
+
+addcmd('destroyheight',{'dh'},
+function(args, speaker)
+	local dh = args[1] or -500
+	if isNumber(dh) then
+		workspace.FallenPartsDestroyHeight = dh
+	end
+end)
+
+local freezingua = nil
+frozenParts = {}
+addcmd('freezeunanchored',{'freezeua'},
+function(args, speaker)
+	if sethidden then
+		local badnames = {
+			"Head",
+			"UpperTorso",
+			"LowerTorso",
+			"RightUpperArm",
+			"LeftUpperArm",
+			"RightLowerArm",
+			"LeftLowerArm",
+			"RightHand",
+			"LeftHand",
+			"RightUpperLeg",
+			"LeftUpperLeg",
+			"RightLowerLeg",
+			"LeftLowerLeg",
+			"RightFoot",
+			"LeftFoot",
+			"Torso",
+			"Right Arm",
+			"Left Arm",
+			"Right Leg",
+			"Left Leg",
+			"HumanoidRootPart"
+		}
+		local function FREEZENOOB(v)
+			if v:IsA("BasePart" or "UnionOperation") and v.Anchored == false then
+				local BADD = false
+				for i = 1,#badnames do
+					if v.Name == badnames[i] then
+						BADD = true
+					end
+				end
+				if speaker.Character and v:IsDescendantOf(speaker.Character) then
+					BADD = true
+				end
+				if BADD == false then
+					for i,c in pairs(v:GetChildren()) do
+						if c:IsA("BodyPosition") or c:IsA("BodyGyro") then
+							c:Destroy()
+						end
+					end
+					sethidden(speaker,"MaximumSimulationRadius",1/0)
+					if setsimulation then
+						setsimulation(1e308)
+					else
+						sethidden(speaker,"SimulationRadius", 1e308)
+					end
+					local bodypos = Instance.new("BodyPosition",v)
+					bodypos.Position = v.Position
+					bodypos.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+					local bodygyro = Instance.new("BodyGyro",v)
+					bodygyro.CFrame = v.CFrame
+					bodygyro.MaxTorque = Vector3.new(math.huge,math.huge,math.huge)
+					if not table.find(frozenParts,v) then
+						table.insert(frozenParts,v)
+					end
+				end
+			end
+		end
+		for i,v in pairs(workspace:GetDescendants()) do
+			FREEZENOOB(v)
+		end
+		freezingua = workspace.DescendantAdded:Connect(FREEZENOOB)
+	else
+		notify('Incompatible Exploit','Your exploit does not support this command (missing sethiddenproperty)')
+	end
+end)
+
+addcmd('thawunanchored',{'thawua','unfreezeunanchored','unfreezeua'},
+function(args, speaker)
+	if sethidden then
+		if freezingua then
+			freezingua:Disconnect()
+		end
+		sethidden(speaker,"MaximumSimulationRadius",1/0)
+		if setsimulation then
+			setsimulation(1e308)
+		else
+			sethidden(speaker,"SimulationRadius", 1e308)
+		end
+		for i,v in pairs(frozenParts) do
+			for i,c in pairs(v:GetChildren()) do
+				if c:IsA("BodyPosition") or c:IsA("BodyGyro") then
+					c:Destroy()
+				end
+			end
+		end
+		frozenParts = {}
+	else
+		notify('Incompatible Exploit','Your exploit does not support this command (missing sethiddenproperty)')
+	end
+end)
+
+addcmd('tpunanchored',{'tpua'},
+function(args, speaker)
+	if sethidden then
+		local players = getPlayer(args[1], speaker)
+		for i,v in pairs(players) do
+			local Forces = {}
+			for _,part in pairs(workspace:GetDescendants()) do
+				if Players[v].Character:FindFirstChild('Head') and part:IsA("BasePart" or "UnionOperation" or "Model") and part.Anchored == false and not part:IsDescendantOf(speaker.Character) and part.Name == "Torso" == false and part.Name == "Head" == false and part.Name == "Right Arm" == false and part.Name == "Left Arm" == false and part.Name == "Right Leg" == false and part.Name == "Left Leg" == false and part.Name == "HumanoidRootPart" == false then
+					for i,c in pairs(part:GetChildren()) do
+						if c:IsA("BodyPosition") or c:IsA("BodyGyro") then
+							c:Destroy()
+						end
+					end
+					local ForceInstance = Instance.new("BodyPosition", part)
+					ForceInstance.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
+					table.insert(Forces, ForceInstance)
+					if not table.find(frozenParts,part) then
+						table.insert(frozenParts,part)
+					end
+				end
+			end
+			sethidden(speaker,"MaximumSimulationRadius",1/0)
+			if setsimulation then
+				setsimulation(1e308)
+			else
+				sethidden(speaker,"SimulationRadius", 1e308)
+			end
+			for i,c in pairs(Forces) do
+				c.Position = Players[v].Character.Head.Position
+			end
+		end
+	else
+		notify('Incompatible Exploit','Your exploit does not support this command (missing sethiddenproperty)')
+	end
+end)
+
+keycodeMap = {
+	["0"] = 0x30,
+	["1"] = 0x31,
+	["2"] = 0x32,
+	["3"] = 0x33,
+	["4"] = 0x34,
+	["5"] = 0x35,
+	["6"] = 0x36,
+	["7"] = 0x37,
+	["8"] = 0x38,
+	["9"] = 0x39,
+	["a"] = 0x41,
+	["b"] = 0x42,
+	["c"] = 0x43,
+	["d"] = 0x44,
+	["e"] = 0x45,
+	["f"] = 0x46,
+	["g"] = 0x47,
+	["h"] = 0x48,
+	["i"] = 0x49,
+	["j"] = 0x4A,
+	["k"] = 0x4B,
+	["l"] = 0x4C,
+	["m"] = 0x4D,
+	["n"] = 0x4E,
+	["o"] = 0x4F,
+	["p"] = 0x50,
+	["q"] = 0x51,
+	["r"] = 0x52,
+	["s"] = 0x53,
+	["t"] = 0x54,
+	["u"] = 0x55,
+	["v"] = 0x56,
+	["w"] = 0x57,
+	["x"] = 0x58,
+	["y"] = 0x59,
+	["z"] = 0x5A,
+	["enter"] = 0x0D,
+	["shift"] = 0x10,
+	["ctrl"] = 0x11,
+	["alt"] = 0x12,
+	["pause"] = 0x13,
+	["capslock"] = 0x14,
+	["spacebar"] = 0x20,
+	["pageup"] = 0x21,
+	["pagedown"] = 0x22,
+	["end"] = 0x23,
+	["home"] = 0x24,
+	["left"] = 0x25,
+	["up"] = 0x26,
+	["right"] = 0x27,
+	["down"] = 0x28,
+	["insert"] = 0x2D,
+	["delete"] = 0x2E,
+	["f1"] = 0x70,
+	["f2"] = 0x71,
+	["f3"] = 0x72,
+	["f4"] = 0x73,
+	["f5"] = 0x74,
+	["f6"] = 0x75,
+	["f7"] = 0x76,
+	["f8"] = 0x77,
+	["f9"] = 0x78,
+	["f10"] = 0x79,
+	["f11"] = 0x7A,
+	["f12"] = 0x7B,
+}
+autoKeyPressing = false
+cancelAutoKeyPress = nil
+
+addcmd('autokeypress',{'keypress'},
+function(args, speaker)
+	if keypress and keyrelease and args[1] then
+		local code = keycodeMap[args[1]:lower()]
+		if not code then notify('Auto Key Press',"Invalid key") return end
+		execCmd('unautokeypress')
+		wait()
+		local clickDelay = 0.1
+		local releaseDelay = 0.1
+		if args[2] and isNumber(args[2]) then clickDelay = args[2] end
+		if args[3] and isNumber(args[3]) then releaseDelay = args[3] end
+		autoKeyPressing = true
+		cancelAutoKeyPress = UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+			if not gameProcessedEvent then
+				if (input.KeyCode == Enum.KeyCode.Backspace and UserInputService:IsKeyDown(Enum.KeyCode.Equals)) or (input.KeyCode == Enum.KeyCode.Equals and UserInputService:IsKeyDown(Enum.KeyCode.Backspace)) then
+					autoKeyPressing = false
+					cancelAutoKeyPress:Disconnect()
+				end
+			end
+		end)
+		notify('Auto Key Press',"Press [backspace] and [=] at the same time to stop")
+		repeat wait(clickDelay)
+			keypress(code)
+			wait(releaseDelay)
+			keyrelease(code)
+		until autoKeyPressing == false
+		if cancelAutoKeyPress then cancelAutoKeyPress:Disconnect() keyrelease(code) end
+	else
+		notify('Auto Key Press',"Your exploit doesn't have the ability to use auto key press")
+	end
+end)
+
+addcmd('unautokeypress',{'noautokeypress','unkeypress','nokeypress'},
+function(args, speaker)
+	autoKeyPressing = false
+	if cancelAutoKeyPress then cancelAutoKeyPress:Disconnect() end
+end)
+
+addcmd('addplugin',{'plugin'},
+function(args, speaker)
+	addPlugin(getstring(1))
+end)
+
+addcmd('removeplugin',{'deleteplugin'},
+function(args, speaker)
+	deletePlugin(getstring(1))
+end)
+
+addcmd('reloadplugin',{},
+function(args, speaker)
+	local pluginName = getstring(1)
+	deletePlugin(pluginName)
+	wait(1)
+	addPlugin(pluginName)
+end)
+
+addcmd('removecmd',{'deletecmd'},
+function(args, speaker)
+	removecmd(args[1])
+end)
+
+updateColors(currentShade1,shade1)
+updateColors(currentShade2,shade2)
+updateColors(currentShade3,shade3)
+updateColors(currentText1,text1)
+updateColors(currentText2,text2)
+updateColors(currentScroll,scroll)
+
+if PluginsTable ~= nil or PluginsTable ~= {} then
+	FindPlugins(PluginsTable)
+end
+
+-- Events
+eventEditor.RegisterEvent("OnExecute")
+eventEditor.RegisterEvent("OnSpawn",{
+	{Type="Player",Name="Player Filter ($1)"}
+})
+eventEditor.RegisterEvent("OnDied",{
+	{Type="Player",Name="Player Filter ($1)"}
+})
+eventEditor.RegisterEvent("OnKilled",{
+	{Type="Player",Name="Victim Player ($1)"},
+	{Type="Player",Name="Killer Player ($2)",Default = 1}
+})
+eventEditor.RegisterEvent("OnJoin",{
+	{Type="Player",Name="Player Filter ($1)",Default = 1}
+})
+eventEditor.RegisterEvent("OnChatted",{
+	{Type="Player",Name="Player Filter ($1)",Default = 1},
+	{Type="String",Name="Message Filter ($2)"}
+})
+
+function hookCharEvents(plr,instant)
+	local char = plr.Character
+	if not char then return end
+	
+	local humanoid = char:WaitForChild("Humanoid",10)
+	if not humanoid then return end
+	
+	humanoid.Died:Connect(function()
+		eventEditor.FireEvent("OnDied",plr.Name)
+		
+		local killedBy = humanoid:FindFirstChild("creator")
+		if killedBy and killedBy.Value and killedBy.Value.Parent then
+			eventEditor.FireEvent("OnKilled",plr.Name,killedBy.Name)
+		end
+	end)
+end
+
+game:GetService("Players").PlayerAdded:Connect(function(plr)
+	eventEditor.FireEvent("OnJoin",plr.Name)
+	plr.Chatted:Connect(function(msg) eventEditor.FireEvent("OnChatted",tostring(plr),msg) end)
+	plr.CharacterAdded:Connect(function() eventEditor.FireEvent("OnSpawn",tostring(plr)) hookCharEvents(plr) end)
+	JoinLog(plr)
+	ChatLog(plr)
+	if ESPenabled then
+		repeat wait(1) until plr.Character and getRoot(plr.Character)
+		ESP(plr)
+	end
+	if CHMSenabled then
+		repeat wait(1) until plr.Character and getRoot(plr.Character)
+		CHMS(plr)
+	end
+end)
+
+for _,plr in pairs(game:GetService("Players"):GetPlayers()) do
+	pcall(function()
+		plr.Chatted:Connect(function(msg) eventEditor.FireEvent("OnChatted",tostring(plr),msg) end)
+		plr.CharacterAdded:Connect(function() eventEditor.FireEvent("OnSpawn",tostring(plr)) hookCharEvents(plr) end)
+		hookCharEvents(plr)
+	end)
+end
+
+if spawnCmds and #spawnCmds > 0 then
+	for i,v in pairs(spawnCmds) do
+		eventEditor.AddCmd("OnSpawn",{v.COMMAND or "",{0},v.DELAY or 0})
+	end
+	updatesaves()
+end
+
+if loadedEventData then eventEditor.LoadData(loadedEventData) end
+eventEditor.Refresh()
+
+eventEditor.FireEvent("OnExecute")
+
+if aliases and #aliases > 0 then
+	local cmdMap = {}
+	for i,v in pairs(cmds) do
+		cmdMap[v.NAME:lower()] = v
+		for _,alias in pairs(v.ALIAS) do
+			cmdMap[alias:lower()] = v
+		end
+	end
+	for i = 1, #aliases do
+		local cmd = string.lower(aliases[i].CMD)
+		local alias = string.lower(aliases[i].ALIAS)
+		if cmdMap[cmd] then
+			customAlias[alias] = cmdMap[cmd]
+		end
+	end
+	refreshaliases()
+end
+
+IYMouse.Move:connect(checkTT)
+
+if pcall(function() loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/version'))() end) then
+	if ver ~= Version then
+		notify('Outdated','Get the new version at infyield.yolasite.com')
+	end
+	if Announcement and Announcement ~= '' then
+		local AnnGUI = Instance.new("Frame")
+		local background = Instance.new("Frame")
+		local TextBox = Instance.new("TextLabel")
+		local shadow = Instance.new("Frame")
+		local PopupText = Instance.new("TextLabel")
+		local Exit = Instance.new("TextButton")
+		local ExitImage = Instance.new("ImageLabel")
+		
+		AnnGUI.Name = randomString()
+		AnnGUI.Parent = PARENT
+		AnnGUI.Active = true
+		AnnGUI.BackgroundTransparency = 1
+		AnnGUI.Position = UDim2.new(0.5, -180, 0, -500)
+		AnnGUI.Size = UDim2.new(0, 360, 0, 20)
+		AnnGUI.ZIndex = 10
+		
+		background.Name = "background"
+		background.Parent = AnnGUI
+		background.Active = true
+		background.BackgroundColor3 = currentShade1
+		background.BorderSizePixel = 0
+		background.Position = UDim2.new(0, 0, 0, 20)
+		background.Size = UDim2.new(0, 360, 0, 150)
+		background.ZIndex = 10
+		
+		TextBox.Parent = background
+		TextBox.BackgroundTransparency = 1
+		TextBox.Position = UDim2.new(0, 5, 0, 5)
+		TextBox.Size = UDim2.new(0, 350, 0, 140)
+		TextBox.Font = Enum.Font.SourceSans
+		TextBox.TextSize = 18
+		TextBox.TextWrapped = true
+		TextBox.Text = Announcement
+		TextBox.TextColor3 = currentText1
+		TextBox.TextXAlignment = Enum.TextXAlignment.Left
+		TextBox.TextYAlignment = Enum.TextYAlignment.Top
+		TextBox.ZIndex = 10
+		
+		shadow.Name = "shadow"
+		shadow.Parent = AnnGUI
+		shadow.BackgroundColor3 = currentShade2
+		shadow.BorderSizePixel = 0
+		shadow.Size = UDim2.new(0, 360, 0, 20)
+		shadow.ZIndex = 10
+		
+		PopupText.Name = "PopupText"
+		PopupText.Parent = shadow
+		PopupText.BackgroundTransparency = 1
+		PopupText.Size = UDim2.new(1, 0, 0.95, 0)
+		PopupText.ZIndex = 10
+		PopupText.Font = Enum.Font.SourceSans
+		PopupText.TextSize = 14
+		PopupText.Text = "Server Announcement"
+		PopupText.TextColor3 = currentText1
+		PopupText.TextWrapped = true
+		
+		Exit.Name = "Exit"
+		Exit.Parent = shadow
+		Exit.BackgroundTransparency = 1
+		Exit.Position = UDim2.new(1, -20, 0, 0)
+		Exit.Size = UDim2.new(0, 20, 0, 20)
+		Exit.Text = ""
+		Exit.ZIndex = 10
+		
+		ExitImage.Parent = Exit
+		ExitImage.BackgroundColor3 = Color3.new(1, 1, 1)
+		ExitImage.BackgroundTransparency = 1
+		ExitImage.Position = UDim2.new(0, 5, 0, 5)
+		ExitImage.Size = UDim2.new(0, 10, 0, 10)
+		ExitImage.Image = "rbxassetid://5054663650"
+		ExitImage.ZIndex = 10
+		
+		wait(1)
+		AnnGUI:TweenPosition(UDim2.new(0.5, -180, 0, 150), "InOut", "Quart", 0.5, true, nil)
+		
+		Exit.MouseButton1Click:Connect(function()
+			AnnGUI:TweenPosition(UDim2.new(0.5, -180, 0, -500), "InOut", "Quart", 0.5, true, nil)
+			wait(0.6)
+			AnnGUI:Destroy()
+		end)
+	end
+end
+
+wait()
+Credits:TweenPosition(UDim2.new(0,0,0.9,0), "Out", "Quart", 0.2)
+Logo:TweenSizeAndPosition(UDim2.new(0,175,0,175),UDim2.new(0,37,0,45), "Out", "Quart", 0.3)
+wait(1)
+for i=0,1,0.1 do
+	Logo.ImageTransparency = i
+	IntroBackground.BackgroundTransparency = i
+	wait()
+end
+Credits:TweenPosition(UDim2.new(0,0,0.9,30), "Out", "Quart", 0.2)
+wait(0.2)
+Logo:Destroy()
+Credits:Destroy()
+IntroBackground:Destroy()
+minimizeHolder()
+end)
+MISC:CreateButton("💨Speed Hack 200 PRESS (R)💨", function() --the (arg) is if the checkbox is toggled or not
+   
+local walkspeedplayer = game:GetService("Players").LocalPlayer
+local walkspeedmouse = walkspeedplayer:GetMouse()
+
+local walkspeedenabled = false
+
+function x_walkspeed(key)
+if (key == "r") then
+if walkspeedenabled == false then
+_G.WS = 200;
+local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+Humanoid.WalkSpeed = _G.WS;
+end)
+Humanoid.WalkSpeed = _G.WS;
+
+walkspeedenabled = true
+elseif walkspeedenabled == true then
+_G.WS = 20;
+local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+Humanoid.WalkSpeed = _G.WS;
+end)
+Humanoid.WalkSpeed = _G.WS;
+
+walkspeedenabled = false
+end
+end
+end
+
+walkspeedmouse.KeyDown:connect(x_walkspeed)
+
+end)
+
+
+
+
+
+
+AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.LULU = true 
+        while wait(0) and _G.LULU do
+game:GetService("ReplicatedStorage").Events.Click:FireServer()
+end
+
+    else
+        _G.LULU = false
+    end
+end)
+AutoTab:CreateToggle("Auto Collect Rewards Bags", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.LULU2 = true 
+        while wait(1) and _G.LULU2 do
+local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Reward Bag' then
+     v.CFrame = root.CFrame
+       wait()
+   
+  
+        end
+    end
+end
+
+    else
+        _G.LULU2 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Teddy Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e1 = true 
+        while wait(0) and _G.e1 do
+local args = {
+    [1] = {
+        [1] = "Toy",
+        [2] = "Teddy",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.Buy:FireServer(unpack(args))
+end
+
+    else
+        _G.e1 = false
+    end
+end)
+
+eggs:CreateToggle("Auto Buy Tweety Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e2 = true 
+        while wait(0) and _G.e2 do
+
+local args = {
+    [1] = {
+        [1] = "Toy",
+        [2] = "Tweety",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.Buy:FireServer(unpack(args))
+end
+
+    else
+        _G.e2 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Freddy Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e3 = true 
+        while wait(0) and _G.e3 do
+
+local args = {
+    [1] = {
+        [1] = "Toy",
+        [2] = "Freddy",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.Buy:FireServer(unpack(args))
+end
+
+    else
+        _G.e3 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Rat Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e4 = true 
+        while wait(0) and _G.e4 do
+
+local args = {
+    [1] = {
+        [1] = "Toy",
+        [2] = "Rat",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.Buy:FireServer(unpack(args))
+end
+
+    else
+        _G.e4 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Eagle Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e5= true 
+        while wait(0) and _G.e5 do
+
+local args = {
+    [1] = {
+        [1] = "Toy",
+        [2] = "Eagle",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.Buy:FireServer(unpack(args))
+end
+
+    else
+        _G.e5 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Bear Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e6= true 
+        while wait(0) and _G.e6 do
+local args = {
+    [1] = {
+        [1] = "Toy",
+        [2] = "Bear",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.Buy:FireServer(unpack(args))
+
+end
+
+    else
+        _G.e6 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Grenade Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e7= true 
+        while wait(0) and _G.e7 do
+
+
+local args = {
+    [1] = {
+        [1] = "Toy",
+        [2] = "Grenade",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.Buy:FireServer(unpack(args))
+end
+
+    else
+        _G.e7 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Bunny Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e8= true 
+        while wait(0) and _G.e8 do
+
+
+local args = {
+    [1] = {
+        [1] = "Toy",
+        [2] = "Bunny",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.Buy:FireServer(unpack(args))
+end
+
+    else
+        _G.e8 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Skelly Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e9= true 
+        while wait(0) and _G.e9 do
+
+
+local args = {
+    [1] = {
+        [1] = "Toy",
+        [2] = "Skelly",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.Buy:FireServer(unpack(args))
+end
+
+    else
+        _G.e9 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Fish Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e10= true 
+        while wait(0) and _G.e10 do
+
+
+local args = {
+    [1] = {
+        [1] = "Toy",
+        [2] = "Fish",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.Buy:FireServer(unpack(args))
+end
+
+    else
+        _G.e10 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Shark Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e11= true 
+        while wait(0) and _G.e11 do
+
+
+local args = {
+    [1] = {
+        [1] = "Toy",
+        [2] = "Shark",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.Buy:FireServer(unpack(args))
+end
+
+    else
+        _G.e11 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Turtle Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e12= true 
+        while wait(0) and _G.e12 do
+
+
+local args = {
+    [1] = {
+        [1] = "Toy",
+        [2] = "Turtle",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.Buy:FireServer(unpack(args))
+end
+
+    else
+        _G.e12 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Snake Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e13= true 
+        while wait(0) and _G.e13 do
+
+
+local args = {
+    [1] = {
+        [1] = "Toy",
+        [2] = "Snake",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.Buy:FireServer(unpack(args))
+end
+
+    else
+        _G.e13 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Snowflake Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e14= true 
+        while wait(0) and _G.e14 do
+
+
+local args = {
+    [1] = {
+        [1] = "Toy",
+        [2] = "Snowflake",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.Buy:FireServer(unpack(args))
+end
+
+    else
+        _G.e14 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Snowman Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e15= true 
+        while wait(0) and _G.e15 do
+
+
+local args = {
+    [1] = {
+        [1] = "Toy",
+        [2] = "Snowman",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.Buy:FireServer(unpack(args))
+end
+
+    else
+        _G.e15 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Rodog Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e16= true 
+        while wait(0) and _G.e16 do
+
+
+local args = {
+    [1] = {
+        [1] = "Toy",
+        [2] = "Rodog",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.Buy:FireServer(unpack(args))
+end
+
+    else
+        _G.e16 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Robot Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e17= true 
+        while wait(0) and _G.e17 do
+
+
+local args = {
+    [1] = {
+        [1] = "Toy",
+        [2] = "Robot",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.Buy:FireServer(unpack(args))
+end
+
+    else
+        _G.e17 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Horns Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e18= true 
+        while wait(0) and _G.e18 do
+
+
+local args = {
+    [1] = {
+        [1] = "Toy",
+        [2] = "Horns",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.Buy:FireServer(unpack(args))
+end
+
+    else
+        _G.e18 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Dragon Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e19= true 
+        while wait(0) and _G.e19 do
+
+
+local args = {
+    [1] = {
+        [1] = "Toy",
+        [2] = "Dragon",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.Buy:FireServer(unpack(args))
+end
+
+    else
+        _G.e19 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Halo Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e20= true 
+        while wait(0) and _G.e20 do
+
+
+local args = {
+    [1] = {
+        [1] = "Toy",
+        [2] = "Halo",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.Buy:FireServer(unpack(args))
+end
+
+    else
+        _G.e20 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Angel Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e21= true 
+        while wait(0) and _G.e21 do
+
+
+local args = {
+    [1] = {
+        [1] = "Toy",
+        [2] = "Angel",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.Buy:FireServer(unpack(args))
+end
+
+    else
+        _G.e21 = false
+    end
+end)
+
+
+mobs:CreateToggle("Tp To Rusty Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f = true 
+        while wait(0) and _G.f do
+
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Areas.Mainland.Enemies.Normal.Rusty.LowerTorso
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+end
+
+    else
+        _G.f = false
+    end
+end)
+
+mobs:CreateToggle("Tp To Prisonner Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.g = true 
+        while wait(0) and _G.g do
+
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Areas.Prison.Enemies.Normal.Prisonner.LowerTorso
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+end
+
+    else
+        _G.g = false
+    end
+end)
+
+mobs:CreateToggle("Tp To Soldier Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.h = true 
+        while wait(0) and _G.h do
+
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Areas.War.Enemies.Normal.Soldier.LowerTorso
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+end
+
+    else
+        _G.h = false
+    end
+end)
+
+mobs:CreateToggle("Tp To Stone Monster Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.i = true 
+        while wait(0) and _G.i do
+
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Areas.Maze.Enemies.Normal["Stone Monster"].LowerTorso
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+end
+
+    else
+        _G.i = false
+    end
+end)
+
+mobs:CreateToggle("Tp To Diver King Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.j = true 
+        while wait(0) and _G.j do
+
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Areas.Ocean.Enemies.Normal.Diver.LowerTorso
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+end
+
+    else
+        _G.j = false
+    end
+end)
+
+mobs:CreateToggle("Tp To Diver Guy Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.k = true 
+        while wait(0) and _G.k do
+
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Areas.Desert.Enemies.Normal.Guy.LowerTorso
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+end
+
+    else
+        _G.k = false
+    end
+end)
+mobs:CreateToggle("Tp To Snowman Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l = true 
+        while wait(0) and _G.l do
+
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Areas.Winter.Enemies.Normal.Snowman.LowerTorso
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+end
+
+    else
+        _G.l = false
+    end
+end)
+mobs:CreateToggle("Tp To Junkbot Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.m = true 
+        while wait(0) and _G.m do
+
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Areas.Robots.Enemies.Normal.Junkbot.LowerTorso
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+end
+
+    else
+        _G.m = false
+    end
+end)
+mobs:CreateToggle("Tp To Demon Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.n = true 
+        while wait(0) and _G.n do
+
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Areas.Hell.Enemies.Normal.Demon.LowerTorso
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+end
+
+    else
+        _G.n = false
+    end
+end)
+mobs:CreateToggle("Tp To Angel Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.o = true 
+        while wait(0) and _G.o do
+
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Areas.Heaven.Enemies.Normal.Angel.LowerTorso
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+end
+
+    else
+        _G.o = false
+    end
+end)
+mobs2:CreateToggle("Tp To Davy Boss", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f2 = true 
+        while wait(0) and _G.f2 do
+
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Areas.Mainland.Enemies.Boss.Davy.LowerTorso
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+end
+
+    else
+        _G.f2 = false
+    end
+end)
+
+mobs2:CreateToggle("Tp To Guard Boss", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.g2 = true 
+        while wait(0) and _G.g2 do
+
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Areas.Prison.Boss.Normal.General.LowerTorso
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+end
+
+    else
+        _G.g2 = false
+    end
+end)
+
+mobs2:CreateToggle("Tp To General Boss", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.h2 = true 
+        while wait(0) and _G.h2 do
+
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Areas.War.Enemies.Boss.General.LowerTorso
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+end
+
+    else
+        _G.h2 = false
+    end
+end)
+
+mobs2:CreateToggle("Tp To Darkness Boss", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.i2 = true 
+        while wait(0) and _G.i2 do
+
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Areas.Maze.Enemies.Boss.Darkness.LowerTorso
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+end
+
+    else
+        _G.i2 = false
+    end
+end)
+
+mobs2:CreateToggle(" Tp To Ocean King Boss", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.j2 = true 
+        while wait(0) and _G.j2 do
+
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Areas.Ocean.Enemies.Boss["Ocean King"].LowerTorso
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+end
+
+    else
+        _G.j2 = false
+    end
+end)
+mobs2:CreateToggle(" Tp To Mummy Boss", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.k2 = true 
+        while wait(0) and _G.k2 do
+
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Areas.Desert.Enemies.Boss.Mummy.LowerTorso
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+end
+
+    else
+        _G.k2 = false
+    end
+end)
+mobs2:CreateToggle(" Tp To Polar Bear Boss", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l2 = true 
+        while wait(0) and _G.l2 do
+
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Areas.Winter.Enemies.Boss["Polar Bear"].LowerTorso
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+end
+
+    else
+        _G.l2 = false
+    end
+end)
+mobs2:CreateToggle(" Tp To Polar Bigboy Boss", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.m2 = true 
+        while wait(0) and _G.m2 do
+
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Areas.Robots.Enemies.Boss.Bigboy.LowerTorso
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+end
+
+    else
+        _G.m2 = false
+    end
+end)
+mobs2:CreateToggle(" Tp To Polar Devil Boss", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.n2 = true 
+        while wait(0) and _G.n2 do
+
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Areas.Hell.Enemies.Boss.Devil.LowerTorso
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+end
+
+    else
+        _G.n2 = false
+    end
+end)
+mobs2:CreateToggle(" Tp To Polar God Boss", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.o2 = true 
+        while wait(0) and _G.o2 do
+
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Areas.Heaven.Enemies.Boss.God.LowerTorso
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+end
+
+    else
+        _G.o2 = false
+    end
+end)
+teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(123.649162, 4.50753164, -7.65779114)
+end)
+
+teleports:CreateButton("Zone 1", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(363.679932, 4.7375288, -38.5846062)
+end)
+
+teleports:CreateButton("Zone 2", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(783.540649, 22.9075279, -42.2404022)
+end)
+teleports:CreateButton("Zone 3", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1038.51563, 49.5075188, -68.9829712)
+end)
+teleports:CreateButton("Zone 4", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1601.80383, 91.1075134, -26.0192337)
+end)
+teleports:CreateButton("Zone 5", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1678.48047, 102.50753, 370.351379)
+end)
+teleports:CreateButton("Zone 6", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1651.96399, 116.50753, 658.605164)
+end)
+teleports:CreateButton("Zone 7", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1304.88489, 155.107498, 848.579224)
+end)
+teleports:CreateButton("Zone 8", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(886.302856, 195.107483, 847.245056)
+end)
+teleports:CreateButton("Zone 9", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(509.169128, 250.007492, 829.589905)
+end)
+--| Anti KICK |
+local mt = getrawmetatable(game)
+local old = mt.__namecall
+local protect = newcclosure or protect_function
+
+if not protect then
+protect = function(f) return f end
+end
+
+setreadonly(mt, false)
+mt.__namecall = protect(function(self, ...)
+local method = getnamecallmethod()
+if method == "Kick" then
+wait(9e9)
+return
+end
+return old(self, ...)
+end)
+hookfunction(game:GetService("Players").LocalPlayer.Kick,protect(function() wait(9e9)
+ end))
+
+--| Anti AFK |
+   local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+
+--| Anti Ban |
+setfflag("DFStringCrashPadUploadToBacktraceToBacktraceBaseUrl", "")
+setfflag("DFIntCrashUploadToBacktracePercentage", "0")
+setfflag("DFStringCrashUploadToBacktraceBlackholeToken", "")
+setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
+
+--| Anti AFK | By Altix#3395
+    local Virtual = game:service'VirtualUser'
+    game:service'Players'.LocalPlayer.Idled:connect(function()
+        Virtual:CaptureController()
+        Virtual:ClickButton2(Vector2.new())
+        wait(2)
+    end)
+
+--| Anti Chat Logs |
+local CloneFunction = clonefunction
+local CheckCaller = CloneFunction(checkcaller)
+local HookFunction = CloneFunction(hookfunction)
+local LocalPlayer = game.Players.PlayerAdded:wait()
+
+local PostMessage = require(LocalPlayer:WaitForChild("PlayerScripts", 1/0):WaitForChild("ChatScript", 1/0):WaitForChild("ChatMain", 1/0)).MessagePosted
+getgenv().MessageEvent = Instance.new("BindableEvent")
+
+local OldFunctionHook
+local PostMessageHook = function(self, msg)
+   if not CheckCaller() and self == PostMessage then
+       MessageEvent:Fire(msg)
+       return
+   end
+   return OldFunctionHook(self, msg)
+end
+OldFunctionHook = HookFunction(PostMessage.fire, PostMessageHook)
 	nameBox = Instance.new("TextLabel")
 	nameBox.Name = randomString()
 	nameBox.Parent = PARENT
