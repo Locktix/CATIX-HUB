@@ -23,14 +23,14 @@ credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "a
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("bsoleil31FR#7202", function() --you dont need "arg" for a button
+credits:CreateButton("Im A Cat#7202", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("https://discord.gg/m9Nn3qd", function() --you dont need "arg" for a button
+
+credits:CreateButton("https://discord.gg/PKWXQae", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
-
 credits:CreateButton("Bebo Mods#1110", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
@@ -11655,6 +11655,22 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-347.275
         _G.f84= false
     end
 end)
+eggs:CreateToggle("Auto Buy Graveyard Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f96 = true 
+        while wait(0) and _G.f96 do
+local args = {
+    [1] = "Graveyard",
+    [2] = "Triple",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-260.155334, 26.5245438, -1639.29651, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        end
+    else
+        _G.f96= false
+    end
+end)
 eggs3:CreateToggle("Auto Buy 1K Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.f2 = true 
@@ -11814,6 +11830,22 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-347.275
         end
     else
         _G.f85= false
+    end
+end)
+eggs3:CreateToggle("Auto Buy Graveyard Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f95 = true 
+        while wait(0) and _G.f95 do
+local args = {
+    [1] = "Graveyard",
+    [2] = "Single",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-260.155334, 26.5245438, -1639.29651, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        end
+    else
+        _G.f95= false
     end
 end)
 eggs1:CreateToggle("Auto Buy Rebirths x1", function(arg) --the (arg) is if the checkbox is toggled or not
