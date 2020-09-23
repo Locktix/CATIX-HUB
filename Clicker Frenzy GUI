@@ -11401,6 +11401,2129 @@ end
         _G.b4= false
     end
 end)
+AutoTab:CreateToggle("Some Gamepasses", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b5 = true 
+        while wait(0) and _G.b5 do
+
+game:GetService("Players").LocalPlayer.Gamepasses.ExplosiveCursors.Value = true
+game:GetService("Players").LocalPlayer.Gamepasses.VIP.Value = true
+game:GetService("Players").LocalPlayer.Gamepasses.DoubleGems.Value = true
+game:GetService("Players").LocalPlayer.Gamepasses.TripleHatch.Value = true
+game:GetService("Players").LocalPlayer.Gamepasses.AutoRebirth.Value = true
+game:GetService("Players").LocalPlayer.Gamepasses.DoubleClicks.Value = true
+game:GetService("Players").LocalPlayer.Gamepasses.Luck.Value = true
+game:GetService("Players").LocalPlayer.Gamepasses.UnlimitedPets.Value = true
+
+
+end
+       
+    else
+        _G.b5= false
+    end
+end)
+AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b = true 
+        while wait(0) and _G.b do
+
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999)  
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999)  
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999)  
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999)  
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999)  
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999)  
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999)  
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999)  
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999)  
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999)  
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999)  
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999)  
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999)  
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999)  
+
+ end
+    
+    else
+        _G.b= false
+    end
+end)
+AutoTab:CreateToggle("Auto Buy Upgrades", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bd = true 
+        while wait(0) and _G.bd do
+     local args = {
+    [1] = "JumpPower",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.UpgradeService.BuyUpgrade:FireServer(unpack(args))
+local args = {
+    [1] = "Health",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.UpgradeService.BuyUpgrade:FireServer(unpack(args))
+local args = {
+    [1] = "CursorDamage",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.UpgradeService.BuyUpgrade:FireServer(unpack(args))
+local args = {
+    [1] = "ClickMultiply",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.UpgradeService.BuyUpgrade:FireServer(unpack(args))
+local args = {
+    [1] = "PetStorage",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.UpgradeService.BuyUpgrade:FireServer(unpack(args))
+local args = {
+    [1] = "RebirthTokens",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.UpgradeService.BuyUpgrade:FireServer(unpack(args))
+local args = {
+    [1] = "WalkSpeed",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.UpgradeService.BuyUpgrade:FireServer(unpack(args))
+        end
+    else
+        _G.bd= false
+    end
+end)
+rebirths:CreateToggle("Auto Rebirths x1", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c = true 
+        while wait(0) and _G.c do
+     local args = {
+    [1] = 1,
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+        end
+    else
+        _G.c= false
+    end
+end)
+rebirths:CreateToggle("Auto Rebirths x10", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.d = true 
+        while wait(0) and _G.d do
+     local args = {
+    [1] = 10,
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+        end
+    else
+        _G.d= false
+    end
+end)
+rebirths:CreateToggle("Auto Rebirths x100", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e = true 
+        while wait(0) and _G.e do
+     local args = {
+    [1] = 100,
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+        end
+    else
+        _G.e= false
+    end
+end)
+rebirths:CreateToggle("Auto Rebirths x1k", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f = true 
+        while wait(0) and _G.f do
+     local args = {
+    [1] = 1000,
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+        end
+    else
+        _G.f= false
+    end
+end)
+rebirths:CreateToggle("Auto Rebirths x10k", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.g = true 
+        while wait(0) and _G.g do
+     local args = {
+    [1] = 10000,
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+        end
+    else
+        _G.g= false
+    end
+end)
+rebirths:CreateToggle("Auto Rebirths x100k", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.h = true 
+        while wait(0) and _G.h do
+     local args = {
+    [1] = 100000,
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+        end
+    else
+        _G.h= false
+    end
+end)
+rebirths:CreateToggle("Auto Rebirths x1M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.i = true 
+        while wait(0) and _G.i do
+     local args = {
+    [1] = 1000000,
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+        end
+    else
+        _G.i= false
+    end
+end)
+rebirths:CreateToggle("Auto Rebirths x10M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.j = true 
+        while wait(0) and _G.j do
+     local args = {
+    [1] = 10000000,
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+        end
+    else
+        _G.j= false
+    end
+end)
+rebirths2:CreateToggle("Auto Sr Rebirths x1", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.j2 = true 
+        while wait(0) and _G.j2 do
+local args = {
+    [1] = 1,
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuySuperRebirths:FireServer(unpack(args))
+        end
+    else
+        _G.j2= false
+    end
+end)
+rebirths2:CreateToggle("Auto Sr Rebirths x10", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.j3 = true 
+        while wait(0) and _G.j3 do
+local args = {
+    [1] = 10,
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuySuperRebirths:FireServer(unpack(args))
+        end
+    else
+        _G.j3= false
+    end
+end)
+rebirths2:CreateToggle("Auto Sr Rebirths x100", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.j4 = true 
+        while wait(0) and _G.j4 do
+local args = {
+    [1] = 100,
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuySuperRebirths:FireServer(unpack(args))
+        end
+    else
+        _G.j4= false
+    end
+end)
+rebirths2:CreateToggle("Auto Sr Rebirths x1K", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.j5 = true 
+        while wait(0) and _G.j5 do
+local args = {
+    [1] = 1000,
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuySuperRebirths:FireServer(unpack(args))
+        end
+    else
+        _G.j5= false
+    end
+end)
+rebirths2:CreateToggle("Auto Sr Rebirths x10K", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.j6 = true 
+        while wait(0) and _G.j6 do
+local args = {
+    [1] = 10000,
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuySuperRebirths:FireServer(unpack(args))
+        end
+    else
+        _G.j6= false
+    end
+end)
+rebirths2:CreateToggle("Auto Sr Rebirths x100K", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.j7 = true 
+        while wait(0) and _G.j7 do
+local args = {
+    [1] = 100000,
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuySuperRebirths:FireServer(unpack(args))
+        end
+    else
+        _G.j7= false
+    end
+end)
+rebirths2:CreateToggle("Auto Sr Rebirths x1M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.j8 = true 
+        while wait(0) and _G.j8 do
+local args = {
+    [1] = 1000000,
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuySuperRebirths:FireServer(unpack(args))
+        end
+    else
+        _G.j8= false
+    end
+end)
+rebirths2:CreateToggle("Auto Sr Rebirths x10M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.j9 = true 
+        while wait(0) and _G.j9 do
+local args = {
+    [1] = 10000000,
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuySuperRebirths:FireServer(unpack(args))
+        end
+    else
+        _G.j9= false
+    end
+end)
+rebirths2:CreateToggle("Auto Sr Rebirths x100M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.j10 = true 
+        while wait(0) and _G.j10 do
+local args = {
+    [1] = 100000000,
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuySuperRebirths:FireServer(unpack(args))
+        end
+    else
+        _G.j10= false
+    end
+end)
+rebirths2:CreateToggle("Auto Sr Rebirths x1B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.j11 = true 
+        while wait(0) and _G.j11 do
+local args = {
+    [1] = 1000000000,
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuySuperRebirths:FireServer(unpack(args))
+        end
+    else
+        _G.j11= false
+    end
+end)
+rebirths2:CreateToggle("Auto Sr Rebirths x10B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.j12 = true 
+        while wait(0) and _G.j12 do
+local args = {
+    [1] = 10000000000,
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuySuperRebirths:FireServer(unpack(args))
+        end
+    else
+        _G.j12= false
+    end
+end)
+rebirths:CreateToggle("Auto Rebirths x100M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.k = true 
+        while wait(0) and _G.k do
+     local args = {
+    [1] = 100000000,
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+        end
+    else
+        _G.k= false
+    end
+end)
+rebirths:CreateToggle("Auto Rebirths x1B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l = true 
+        while wait(0) and _G.l do
+     local args = {
+    [1] = 1000000000,
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+        end
+    else
+        _G.l= false
+    end
+end)
+rebirths:CreateToggle("Auto Rebirths x10B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.m = true 
+        while wait(0) and _G.m do
+     local args = {
+    [1] = 1000000000,
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+        end
+    else
+        _G.m= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Basic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e1 = true 
+        while wait(0) and _G.e1 do
+ local args = {
+    [1] = "basic",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+        end
+    else
+        _G.e1= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Lava Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e2 = true 
+        while wait(0) and _G.e2 do
+local args = {
+    [1] = "lava",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+        end
+    else
+        _G.e2= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Desert Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e3 = true 
+        while wait(0) and _G.e3 do
+local args = {
+    [1] = "desert",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+        end
+    else
+        _G.e3= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Ocean Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e4 = true 
+        while wait(0) and _G.e4 do
+local args = {
+    [1] = "ocean",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+        end
+    else
+        _G.e4= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Winter Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e5 = true 
+        while wait(0) and _G.e5 do
+local args = {
+    [1] = "winter",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+        end
+    else
+        _G.e5= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Toxic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e6 = true 
+        while wait(0) and _G.e6 do
+local args = {
+    [1] = "toxic",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+        end
+    else
+        _G.e6= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Candy Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e7 = true 
+        while wait(0) and _G.e7 do
+local args = {
+    [1] = "candy",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+        end
+    else
+        _G.e7= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Forest Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e8 = true 
+        while wait(0) and _G.e8 do
+local args = {
+    [1] = "forest",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+        end
+    else
+        _G.e8= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Storm Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e9 = true 
+        while wait(0) and _G.e9 do
+local args = {
+    [1] = "storm",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+        end
+    else
+        _G.e9= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Blocks Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e10 = true 
+        while wait(0) and _G.e10 do
+local args = {
+    [1] = "blocks",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+        end
+    else
+        _G.e10= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Space Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e11 = true 
+        while wait(0) and _G.e11 do
+local args = {
+    [1] = "space",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+        end
+    else
+        _G.e11= false
+    end
+end)
+teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(620.58606, 8.32451057, -332.265503)
+end)
+
+teleports:CreateButton("Lava", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1690.38525, 5.8908062, -734.648865)
+end)
+
+teleports:CreateButton("Desert", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2270.08838, 5.87775421, 1089.28369)
+end)
+teleports:CreateButton("Ocean", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-256.202271, 8.64087296, 2112.47168)
+end)
+teleports:CreateButton("Winter", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2258.11475, 5.68095112, 417.679688)
+end)
+teleports:CreateButton("Toxic", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1761.69824, 6.88934517, -1974.85535)
+end)
+teleports:CreateButton("Candy", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1343.92896, 5.56475258, -2245.98535)
+end)
+teleports:CreateButton("Forest", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1779.8855, 8.59431648, 3235.16626)
+end)
+teleports:CreateButton("Storm", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-354.06073, 6.24753475, -2728.17334)
+end)
+teleports:CreateButton("Blocks", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2926.38696, 7.93753624, -793.677612)
+end)
+teleports:CreateButton("Space", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2448.99121, 5.32753468, 2872.22144)
+end)
+--| Anti KICK |
+local mt = getrawmetatable(game)
+local old = mt.__namecall
+local protect = newcclosure or protect_function
+
+if not protect then
+protect = function(f) return f end
+end
+
+setreadonly(mt, false)
+mt.__namecall = protect(function(self, ...)
+local method = getnamecallmethod()
+if method == "Kick" then
+wait(9e9)
+return
+end
+return old(self, ...)
+end)
+hookfunction(game:GetService("Players").LocalPlayer.Kick,protect(function() wait(9e9)
+ end))
+
+--| Anti AFK |
+   local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+
+--| Anti Ban |
+setfflag("DFStringCrashPadUploadToBacktraceToBacktraceBaseUrl", "")
+setfflag("DFIntCrashUploadToBacktracePercentage", "0")
+setfflag("DFStringCrashUploadToBacktraceBlackholeToken", "")
+setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
+
+--| Anti AFK | By Altix#3395
+    local Virtual = game:service'VirtualUser'
+    game:service'Players'.LocalPlayer.Idled:connect(function()
+        Virtual:CaptureController()
+        Virtual:ClickButton2(Vector2.new())
+        wait(2)
+    end)
+
+--| Anti Chat Logs |
+local CloneFunction = clonefunction
+local CheckCaller = CloneFunction(checkcaller)
+local HookFunction = CloneFunction(hookfunction)
+local LocalPlayer = game.Players.PlayerAdded:wait()
+
+local PostMessage = require(LocalPlayer:WaitForChild("PlayerScripts", 1/0):WaitForChild("ChatScript", 1/0):WaitForChild("ChatMain", 1/0)).MessagePosted
+getgenv().MessageEvent = Instance.new("BindableEvent")
+
+local OldFunctionHook
+local PostMessageHook = function(self, msg)
+   if not CheckCaller() and self == PostMessage then
+       MessageEvent:Fire(msg)
+       return
+   end
+   return OldFunctionHook(self, msg)
+end
+OldFunctionHook = HookFunction(PostMessage.fire, PostMessageHook)er)
+	-- Full credit to Abacaxl @V3rmillion
+	-- Free for all thanks to Zinnia
+	loadstring(game:HttpGet('https://ghostbin.co/paste/yb288/raw'))()
+end)
+
+addcmd('split',{},
+function(args, speaker)
+	if r15(speaker) then
+		speaker.Character.UpperTorso.Waist:Destroy()
+	else
+		notify('R15 Required','This command requires the r15 rig type')
+	end
+end)
+
+addcmd('nilchar',{},
+function(args, speaker)
+	if speaker.Character ~= nil then
+		speaker.Character.Parent = nil
+	end
+end)
+
+addcmd('unnilchar',{'nonilchar'},
+function(args, speaker)
+	if speaker.Character ~= nil then
+		speaker.Character.Parent = workspace
+	end
+end)
+
+addcmd('noroot',{'removeroot','rroot'},
+function(args, speaker)
+	if speaker.Character ~= nil then
+		local char = Players.LocalPlayer.Character
+		char.Parent = nil
+		char.HumanoidRootPart:Destroy()
+		char.Parent = workspace
+	end
+end)
+
+addcmd('equiptools',{},
+function(args, speaker)
+	for i,v in pairs(speaker:FindFirstChildOfClass("Backpack"):GetChildren()) do
+		if v:IsA("Tool") or v:IsA("HopperBin") then
+			v.Parent = speaker.Character
+		end
+	end
+end)
+
+addcmd('dupetools',{'clonetools'},
+function(args, speaker)
+	local ME = speaker
+	local LOOP_NUM = args[1] or 1
+	local tools, pos, pos1 = {}, ME.Character.HumanoidRootPart.CFrame, CFrame.new(math.random(-2e5, 2e5), 2e5, math.random(-2e5, 2e5))
+	for _ = 1, tonumber(tonumber(LOOP_NUM) or 1) do
+		ME.Character.HumanoidRootPart.CFrame = pos1
+		wait(.2)
+		ME.Character.HumanoidRootPart.Anchored = true
+		wait(.2)
+		ME.Character.Humanoid:UnequipTools()
+		for _, v in pairs(ME:FindFirstChildOfClass("Backpack"):GetChildren()) do
+			if v:IsA("Tool") and v:FindFirstChild("Handle") then
+				v.Parent = ME.Character
+				v.Handle.Anchored = true
+				v.Parent = workspace
+				table.insert(tools, v)
+			end
+		end
+		ME.Character:FindFirstChildOfClass("Humanoid"):ChangeState(15)
+		ME.CharacterAdded:Wait():WaitForChild("HumanoidRootPart").CFrame = pos
+	end
+	if type(firetouchinterest) == "function" then
+		for _, v in pairs(tools) do
+			pcall(coroutine.wrap(function()
+				v.Handle.Anchored = false
+				firetouchinterest(v.Handle, ME.Character:WaitForChild("HumanoidRootPart"), 0)
+				repeat
+					wait()
+				until v.Parent == ME.Character
+				firetouchinterest(v.Handle, ME.Character.HumanoidRootPart, 1)
+			end))
+		end
+	else
+		ME.Character.HumanoidRootPart.Anchored = true
+		wait(.15)
+		for _, v in pairs(tools) do
+			spawn(function()
+				v.Handle.Anchored = false
+				while v.Parent ~= ME.Character and game:GetService("RunService").RenderStepped:Wait() do
+					v.Handle.CFrame = ME.Character:WaitForChild("HumanoidRootPart").CFrame
+				end
+			end)
+		end
+		wait((function(num)
+			local e = 0
+			for _ = 1, num do
+				e = e + .1
+			end
+			return e
+		end)(#tools))
+		ME.Character.HumanoidRootPart.Anchored = false
+	end
+end)
+
+addcmd('touchinterests',{'touchinterest','firetouchinterests','firetouchinterest'},
+function(args, speaker)
+	if type(firetouchinterest) == "function" then
+		for i,v in pairs(workspace:GetDescendants()) do
+			if v:IsA("TouchTransmitter") then
+				firetouchinterest(v.Parent, Players.LocalPlayer.Character.HumanoidRootPart.CFrame, 0)
+			end
+		end
+	else
+		for i,v in pairs(workspace:GetDescendants()) do
+			if v:IsA("TouchTransmitter") then
+				v.Parent.CFrame = Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			end
+		end
+	end
+end)
+
+addcmd('fullbright',{'fb','fullbrightness'},
+function(args, speaker)
+	game:GetService("Lighting").Brightness = 2
+	game:GetService("Lighting").ClockTime = 14
+	game:GetService("Lighting").FogEnd = 100000
+	game:GetService("Lighting").GlobalShadows = false
+	game:GetService("Lighting").OutdoorAmbient = Color3.fromRGB(128, 128, 128)
+end)
+
+addcmd('ambient',{},
+function(args, speaker)
+	game:GetService("Lighting").Ambient = Color3.new(args[1],args[2],args[3])
+	game:GetService("Lighting").OutdoorAmbient = Color3.new(args[1],args[2],args[3])
+end)
+
+addcmd('day',{},
+function(args, speaker)
+	game:GetService("Lighting").ClockTime = 14
+end)
+
+addcmd('night',{},
+function(args, speaker)
+	game:GetService("Lighting").ClockTime = 0
+end)
+
+addcmd('nofog',{},
+function(args, speaker)
+	game:GetService("Lighting").FogEnd = 100000
+end)
+
+addcmd('brightness',{},
+function(args, speaker)
+	game:GetService("Lighting").Brightness = args[1]
+end)
+
+addcmd('globalshadows',{'gshadows'},
+function(args, speaker)
+	game:GetService("Lighting").GlobalShadows = true
+end)
+
+addcmd('unglobalshadows',{'nogshadows','ungshadows','noglobalshadows'},
+function(args, speaker)
+	game:GetService("Lighting").GlobalShadows = false
+end)
+
+origsettings = {abt = game:GetService("Lighting").Ambient, oabt = game:GetService("Lighting").OutdoorAmbient, brt = game:GetService("Lighting").Brightness, time = game:GetService("Lighting").ClockTime, fe = game:GetService("Lighting").FogEnd, fs = game:GetService("Lighting").FogStart, gs = game:GetService("Lighting").GlobalShadows}
+
+addcmd('restorelighting',{'rlighting'},
+function(args, speaker)
+	game:GetService("Lighting").Ambient = origsettings.abt
+	game:GetService("Lighting").OutdoorAmbient = origsettings.oabt
+	game:GetService("Lighting").Brightness = origsettings.brt
+	game:GetService("Lighting").ClockTime = origsettings.time
+	game:GetService("Lighting").FogEnd = origsettings.fe
+	game:GetService("Lighting").FogStart = origsettings.fs
+	game:GetService("Lighting").GlobalShadows = origsettings.gs
+end)
+
+addcmd('stun',{'platformstand'},
+function(args, speaker)
+	speaker.Character:FindFirstChildOfClass('Humanoid').PlatformStand = true
+end)
+
+addcmd('unstun',{'nostun','unplatformstand','noplatformstand'},
+function(args, speaker)
+	speaker.Character:FindFirstChildOfClass('Humanoid').PlatformStand = false
+end)
+
+addcmd('norotate',{'noautorotate'},
+function(args, speaker)
+	speaker.Character:FindFirstChildOfClass('Humanoid').AutoRotate  = false
+end)
+
+addcmd('unnorotate',{'autorotate'},
+function(args, speaker)
+	speaker.Character:FindFirstChildOfClass('Humanoid').AutoRotate  = true
+end)
+
+addcmd('drophats',{'drophat'},
+function(args, speaker)
+	if speaker.Character then
+		for _,v in pairs(speaker.Character.Humanoid:GetAccessories()) do
+			v.Parent = workspace
+		end
+	end
+end)
+
+addcmd('deletehats',{'nohats','rhats'},
+function(args, speaker)
+	if speaker.Character then
+		speaker.Character:FindFirstChildOfClass("Humanoid"):RemoveAccessories()
+	end
+end)
+
+addcmd('droptools',{'droptool'},
+function(args, speaker)
+	if speaker.Character then
+		for _,obj in pairs(speaker.Character:GetChildren()) do
+			if obj:IsA("Tool") then
+				obj.Parent = workspace
+			end
+		end
+	end
+	if speaker:FindFirstChildOfClass("Backpack") then
+		for _,obj in pairs(speaker:FindFirstChildOfClass("Backpack"):GetChildren()) do
+			if obj:IsA("Tool") then
+				obj.Parent = workspace
+			end
+		end
+	end
+end)
+
+addcmd('droppabletools',{},
+function(args, speaker)
+	if speaker.Character then
+		for _,obj in pairs(speaker.Character:GetChildren()) do
+			if obj:IsA("Tool") then
+				obj.CanBeDropped = true
+			end
+		end
+	end
+	if speaker:FindFirstChildOfClass("Backpack") then
+		for _,obj in pairs(speaker:FindFirstChildOfClass("Backpack"):GetChildren()) do
+			if obj:IsA("Tool") then
+				obj.CanBeDropped = true
+			end
+		end
+	end
+end)
+
+local currentToolSize = ""
+local currentGripPos = ""
+addcmd('reach',{},
+function(args, speaker)
+	execCmd('unreach')
+	wait()
+	for i,v in pairs(speaker.Character:GetDescendants()) do
+		if v:IsA("Tool") then
+			if args[1] then
+				currentToolSize = v.Handle.Size
+				currentGripPos = v.GripPos
+				local a = Instance.new("SelectionBox",v.Handle)
+				a.Name = "SelectionBoxCreated"
+				a.Adornee = v.Handle
+				v.Handle.Massless = true
+				v.Handle.Size = Vector3.new(0.5,0.5,args[1])
+				v.GripPos = Vector3.new(0,0,0)
+				speaker.Character.Humanoid:UnequipTools()
+			else
+				currentToolSize = v.Handle.Size
+				currentGripPos = v.GripPos
+				local a = Instance.new("SelectionBox",v.Handle)
+				a.Name = "SelectionBoxCreated"
+				a.Adornee = v.Handle
+				v.Handle.Massless = true
+				v.Handle.Size = Vector3.new(0.5,0.5,60)
+				v.GripPos = Vector3.new(0,0,0)
+				speaker.Character.Humanoid:UnequipTools()
+			end
+		end
+	end
+end)
+
+addcmd('unreach',{'noreach'},
+function(args, speaker)
+	for i,v in pairs(speaker.Character:GetDescendants()) do
+		if v:IsA("Tool") then
+			v.Handle.Size = currentToolSize
+			v.GripPos = currentGripPos
+			v.Handle.SelectionBoxCreated:Destroy()
+		end
+	end
+end)
+
+addcmd('grippos',{},
+function(args, speaker)
+	for i,v in pairs(speaker.Character:GetDescendants()) do
+		if v:IsA("Tool") then
+			v.Parent = speaker:FindFirstChildOfClass("Backpack")
+			v.GripPos = Vector3.new(args[1],args[2],args[3])
+			v.Parent = speaker.Character
+		end
+	end
+end)
+
+addcmd('usetools',{},
+function(args, speaker)
+	for _, v in pairs(speaker:FindFirstChildOfClass("Backpack"):GetChildren()) do
+		v.Parent = game.Players.LocalPlayer.Character
+		v:Activate()
+		v.Parent = speaker:FindFirstChildOfClass("Backpack")
+	end
+end)
+
+addcmd('logs',{},
+function(args, speaker)
+	logs:TweenPosition(UDim2.new(0, 0, 1, -265), "InOut", "Quart", 0.3, true, nil)
+end)
+
+addcmd('chatlogs',{'clogs'},
+function(args, speaker)
+	join.Visible = false
+	chat.Visible = true
+	table.remove(shade3,table.find(shade3,selectChat))
+	table.remove(shade2,table.find(shade2,selectJoin))
+	table.insert(shade2,selectChat)
+	table.insert(shade3,selectJoin)
+	selectJoin.BackgroundColor3 = currentShade3
+	selectChat.BackgroundColor3 = currentShade2
+	logs:TweenPosition(UDim2.new(0, 0, 1, -265), "InOut", "Quart", 0.3, true, nil)
+end)
+
+addcmd('joinlogs',{'jlogs'},
+function(args, speaker)
+	chat.Visible = false
+	join.Visible = true	
+	table.remove(shade3,table.find(shade3,selectJoin))
+	table.remove(shade2,table.find(shade2,selectChat))
+	table.insert(shade2,selectJoin)
+	table.insert(shade3,selectChat)
+	selectChat.BackgroundColor3 = currentShade3
+	selectJoin.BackgroundColor3 = currentShade2
+	logs:TweenPosition(UDim2.new(0, 0, 1, -265), "InOut", "Quart", 0.3, true, nil)
+end)
+
+flinging = false
+addcmd('fling',{},
+function(args, speaker)
+	for _, child in pairs(speaker.Character:GetDescendants()) do
+		if child:IsA("BasePart") then
+			child.CustomPhysicalProperties = PhysicalProperties.new(2, 0.3, 0.5)
+		end
+	end
+	execCmd('noclip nonotify')
+	wait(.1)
+	local bambam = Instance.new("BodyAngularVelocity", getRoot(speaker.Character))
+	bambam.Name = randomString()
+	bambam.AngularVelocity = Vector3.new(0,311111,0)
+	bambam.MaxTorque = Vector3.new(0,311111,0)
+	bambam.P = math.huge
+	local function PauseFling()
+		if speaker.Character:FindFirstChildOfClass("Humanoid") then
+			if speaker.Character:FindFirstChildOfClass("Humanoid").FloorMaterial == Enum.Material.Air then
+				bambam.AngularVelocity = Vector3.new(0,0,0)
+			else
+				bambam.AngularVelocity = Vector3.new(0,311111,0)
+			end
+		end
+	end
+	if TouchingFloor then
+		TouchingFloor:Disconnect()
+	end
+	if TouchingFloorReset then
+		TouchingFloorReset:Disconnect()
+	end
+	TouchingFloor = speaker.Character:FindFirstChildOfClass("Humanoid"):GetPropertyChangedSignal("FloorMaterial"):connect(PauseFling)
+	flinging = true
+	local function flingDied()
+		execCmd('unfling')
+	end
+	TouchingFloorReset = speaker.Character:FindFirstChildOfClass('Humanoid').Died:connect(flingDied)
+end)
+
+addcmd('unfling',{'nofling'},
+function(args, speaker)
+	execCmd('clip nonotify')
+	if TouchingFloor then
+		TouchingFloor:Disconnect()
+	end
+	if TouchingFloorReset then
+		TouchingFloorReset:Disconnect()
+	end
+	flinging = false
+	wait(.1)
+	local speakerChar = speaker.Character
+	if not speakerChar or not getRoot(speakerChar) then return end
+	for i,v in pairs(getRoot(speakerChar):GetChildren()) do
+		if v.ClassName == 'BodyAngularVelocity' then
+			v:Destroy()
+		end
+	end
+	for _, child in pairs(speakerChar:GetDescendants()) do
+		if child.ClassName == "Part" or child.ClassName == "MeshPart" then
+			child.CustomPhysicalProperties = PhysicalProperties.new(0.7, 0.3, 0.5)
+		end
+	end
+end)
+
+addcmd('togglefling',{},
+function(args, speaker)
+	if flinging then
+		execCmd('unfling')
+	else
+		execCmd('fling')
+	end
+end)
+
+addcmd('invisfling',{},
+function(args, speaker)
+	local ch = speaker.Character
+	local prt=Instance.new("Model", speaker.Character)
+	local z1 = Instance.new("Part")
+	z1.Name="Torso"
+	z1.CanCollide = false
+	z1.Anchored = true
+	local z2 = Instance.new("Part", prt)
+	z2.Name="Head"
+	z2.Anchored = true
+	z2.CanCollide = false
+	local z3 =Instance.new("Humanoid", prt)
+	z3.Name="Humanoid"
+	z1.Position = Vector3.new(0,9999,0)
+	speaker.Character=prt
+	wait(3)
+	speaker.Character=ch
+	wait(3)
+	local Hum = Instance.new("Humanoid")
+	z2:Clone()
+	Hum.Parent = speaker.Character
+	local root =  getRoot(speaker.Character)
+	for i,v in pairs(speaker.Character:GetChildren()) do
+		if v ~= root and  v.Name ~= "Humanoid" then
+			v:Destroy()
+		end
+	end
+	root.Transparency = 0
+	root.Color = Color3.new(1, 1, 1)
+	local invisflingStepped
+	invisflingStepped = game:GetService('RunService').Stepped:connect(function()
+		if speaker.Character and getRoot(speaker.Character) then
+			getRoot(speaker.Character).CanCollide = false
+		else
+			invisflingStepped:Disconnect()
+		end
+	end)
+	sFLY()
+	workspace.CurrentCamera.CameraSubject = root
+	local bambam = Instance.new("BodyThrust")
+	bambam.Parent = getRoot(speaker.Character)
+	bambam.Force = Vector3.new(99999,99999*10,99999)
+	bambam.Location = getRoot(speaker.Character).Position
+end)
+
+function attach(speaker,target)
+	if tools(speaker) then
+		local char = speaker.Character
+		local tchar = target.Character
+		local hum = speaker.Character:FindFirstChildOfClass("Humanoid")
+		local hrp = getRoot(speaker.Character)
+		local hrp2 = getRoot(target.Character)
+		hum.Name = "1"
+		local newHum = hum:Clone()
+		newHum.Parent = char
+		newHum.Name = "Humanoid"
+		wait()
+		hum:Destroy()
+		workspace.CurrentCamera.CameraSubject = char
+		newHum.DisplayDistanceType = "None"
+		local tool = speaker:FindFirstChildOfClass("Backpack"):FindFirstChildOfClass("Tool") or speaker.Character:FindFirstChildOfClass("Tool")
+		tool.Parent = char
+		hrp.CFrame = hrp2.CFrame * CFrame.new(0, 0, 0) * CFrame.new(math.random(-100, 100)/200,math.random(-100, 100)/200,math.random(-100, 100)/200)
+		local n = 0
+		repeat
+			wait(.1)
+			n = n + 1
+			hrp.CFrame = hrp2.CFrame
+		until (tool.Parent ~= char or not hrp or not hrp2 or not hrp.Parent or not hrp2.Parent or n > 250) and n > 2
+	else
+		notify('Tool Required','You need to have an item in your inventory to use this command')
+	end
+end
+
+addcmd('attach',{},
+function(args, speaker)
+	local players = getPlayer(args[1], speaker)
+	for i,v in pairs(players) do
+		attach(speaker,Players[v])
+	end
+end)
+
+function kill(speaker,target,fast)
+	if tools(speaker) then
+		if target ~= nil then
+			local NormPos = getRoot(speaker.Character).CFrame
+			if not fast then
+				refresh(speaker)
+				wait()
+				repeat wait() until speaker.Character ~= nil and getRoot(speaker.Character)
+				wait(0.3)
+			end
+			local hrp = getRoot(speaker.Character)
+			attach(speaker,target)
+			repeat
+				wait()
+				hrp.CFrame = CFrame.new(999999, workspace.FallenPartsDestroyHeight + 5,999999)
+			until not getRoot(target.Character) or not getRoot(speaker.Character)
+			wait(1)
+			speaker.CharacterAdded:Wait():WaitForChild("HumanoidRootPart").CFrame = NormPos
+		end
+	else
+		notify('Tool Required','You need to have an item in your inventory to use this command')
+	end
+end
+
+addcmd('kill',{'fekill'},
+function(args, speaker)
+	local players = getPlayer(args[1], speaker)
+	for i,v in pairs(players) do
+		kill(speaker,Players[v])
+	end
+end)
+
+addcmd('fastkill',{'fastfekill'},
+function(args, speaker)
+	local players = getPlayer(args[1], speaker)
+	for i,v in pairs(players) do
+		kill(speaker,Players[v],true)
+	end
+end)
+
+function bring(speaker,target,fast)
+	if tools(speaker) then
+		if target ~= nil then
+			local NormPos = getRoot(speaker.Character).CFrame
+			if not fast then
+				refresh(speaker)
+				wait()
+				repeat wait() until speaker.Character ~= nil and getRoot(speaker.Character)
+				wait(0.3)
+			end
+			local hrp = getRoot(speaker.Character)
+			attach(speaker,target)
+			repeat
+				wait()
+				hrp.CFrame = NormPos
+			until not getRoot(target.Character) or not getRoot(speaker.Character)
+			wait(1)
+			speaker.CharacterAdded:Wait():WaitForChild("HumanoidRootPart").CFrame = NormPos
+		end
+	else
+		notify('Tool Required','You need to have an item in your inventory to use this command')
+	end
+end
+
+addcmd('bring',{'febring'},
+function(args, speaker)
+	local players = getPlayer(args[1], speaker)
+	for i,v in pairs(players) do
+		bring(speaker,Players[v])
+	end
+end)
+
+addcmd('fastbring',{'fastfebring'},
+function(args, speaker)
+	local players = getPlayer(args[1], speaker)
+	for i,v in pairs(players) do
+		bring(speaker,Players[v],true)
+	end
+end)
+
+function teleport(speaker,target,target2,fast)
+	if tools(speaker) then
+		if target ~= nil then
+			local NormPos = getRoot(speaker.Character).CFrame
+			if not fast then
+				refresh(speaker)
+				wait()
+				repeat wait() until speaker.Character ~= nil and getRoot(speaker.Character)
+				wait(0.3)
+			end
+			local hrp = getRoot(speaker.Character)
+			local hrp2 = getRoot(target2.Character)
+			attach(speaker,target)
+			repeat
+				wait()
+				hrp.CFrame = hrp2.CFrame
+			until not getRoot(target.Character) or not getRoot(speaker.Character)
+			wait(1)
+			speaker.CharacterAdded:Wait():WaitForChild("HumanoidRootPart").CFrame = NormPos
+		end
+	else
+		notify('Tool Required','You need to have an item in your inventory to use this command')
+	end
+end
+
+addcmd('tp',{'teleport'},
+function(args, speaker)
+	local players1=getPlayer(args[1], speaker)
+	local players2=getPlayer(args[2], speaker)
+	for i,v in pairs(players1)do
+		if getRoot(Players[v].Character) and getRoot(Players[players2[1]].Character) then
+			if speaker.Character:FindFirstChild("Humanoid") then
+				speaker.Character:FindFirstChildOfClass('Humanoid').Sit = false
+			end
+			wait(0.1)
+			teleport(speaker,Players[v],Players[players2[1]])
+		end
+	end
+end)
+
+addcmd('fasttp',{'fastteleport'},
+function(args, speaker)
+	local players1=getPlayer(args[1], speaker)
+	local players2=getPlayer(args[2], speaker)
+	for i,v in pairs(players1)do
+		if getRoot(Players[v].Character) and getRoot(Players[players2[1]].Character) then
+			if speaker.Character:FindFirstChild("Humanoid") then
+				speaker.Character:FindFirstChildOfClass('Humanoid').Sit = false
+			end
+			wait(0.1)
+			teleport(speaker,Players[v],Players[players2[1]],true)
+		end
+	end
+end)
+
+addcmd('spin',{},
+function(args, speaker)
+	local spinSpeed = 20
+	if args[1] and isNumber(args[1]) then
+		spinSpeed = args[1]
+	end
+	for i,v in pairs(getRoot(speaker.Character):GetChildren()) do
+		if v.Name == "Spinning" then
+			v:Destroy()
+		end
+	end
+	local Spin = Instance.new("BodyAngularVelocity", getRoot(speaker.Character))
+	Spin.Name = "Spinning"
+	Spin.MaxTorque = Vector3.new(0, math.huge, 0)
+	Spin.AngularVelocity = Vector3.new(0,spinSpeed,0)
+end)
+
+addcmd('unspin',{},
+function(args, speaker)
+	for i,v in pairs(getRoot(speaker.Character):GetChildren()) do
+		if v.Name == "Spinning" then
+			v:Destroy()
+		end
+	end
+end)
+
+local transparent = false
+function x(v)
+	if v then
+		for _,i in pairs(workspace:GetDescendants()) do
+			if i:IsA("BasePart") and not i.Parent:FindFirstChild("Humanoid") and not i.Parent.Parent:FindFirstChild("Humanoid") then
+				i.LocalTransparencyModifier = 0.5
+			end
+		end
+	else
+		for _,i in pairs(workspace:GetDescendants()) do
+			if i:IsA("BasePart") and not i.Parent:FindFirstChild("Humanoid") and not i.Parent.Parent:FindFirstChild("Humanoid") then
+				i.LocalTransparencyModifier = 0
+			end
+		end
+	end
+end
+
+addcmd('xray',{},
+function(args, speaker)
+	transparent = true
+	x(transparent)
+end)
+
+addcmd('unxray',{'noxray'},
+function(args, speaker)
+	transparent = false
+	x(transparent)
+end)
+
+addcmd('togglexray',{},
+function(args, speaker)
+	transparent=not transparent
+	x(transparent)
+end)
+
+local walltpTouch = nil
+addcmd('walltp',{},
+function(args, speaker)
+	local torso
+	if r15(speaker) then
+		torso = speaker.Character.UpperTorso
+	else
+		torso = speaker.Character.Torso
+	end
+	local function touchedFunc(hit)
+		local Root = getRoot(speaker.Character)
+		if hit:IsA("BasePart") and hit.Position.Y > Root.Position.Y - speaker.Character.Humanoid.HipHeight then
+			local hitP = getRoot(hit.Parent)
+			if hitP ~= nil then
+				Root.CFrame = hit.CFrame * CFrame.new(Root.CFrame.lookVector.X,hitP.Size.Z/2 + speaker.Character.Humanoid.HipHeight,Root.CFrame.lookVector.Z)
+			elseif hitP == nil then
+				Root.CFrame = hit.CFrame * CFrame.new(Root.CFrame.lookVector.X,hit.Size.Y/2 + speaker.Character.Humanoid.HipHeight,Root.CFrame.lookVector.Z)
+			end
+		end
+	end
+	walltpTouch = torso.Touched:Connect(touchedFunc)
+end)
+
+addcmd('unwalltp',{'nowalltp'},
+function(args, speaker)
+	if walltpTouch then
+		walltpTouch:Disconnect()
+	end
+end)
+
+autoclicking = false
+addcmd('autoclick',{},
+function(args, speaker)
+	if mouse1press and mouse1release then
+		execCmd('unautoclick')
+		wait()
+		local clickDelay = 0.1
+		local releaseDelay = 0.1
+		if args[1] and isNumber(args[1]) then clickDelay = args[1] end
+		if args[2] and isNumber(args[2]) then releaseDelay = args[2] end
+		autoclicking = true
+		cancelAutoClick = UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+			if not gameProcessedEvent then
+				if (input.KeyCode == Enum.KeyCode.Backspace and UserInputService:IsKeyDown(Enum.KeyCode.Equals)) or (input.KeyCode == Enum.KeyCode.Equals and UserInputService:IsKeyDown(Enum.KeyCode.Backspace)) then
+					autoclicking = false
+					cancelAutoClick:Disconnect()
+				end
+			end
+		end)
+		notify('Auto Clicker',"Press [backspace] and [=] at the same time to stop")
+		repeat wait(clickDelay)
+			mouse1press()
+			wait(releaseDelay)
+			mouse1release()
+		until autoclicking == false
+	else
+		notify('Auto Clicker',"Your exploit doesn't have the ability to use the autoclick")
+	end
+end)
+
+addcmd('unautoclick',{'noautoclick'},
+function(args, speaker)
+	autoclicking = false
+	if cancelAutoClick then cancelAutoClick:Disconnect() end
+end)
+
+addcmd('mousesensitivity',{'ms'},
+function(args, speaker)
+	UserInputService.MouseDeltaSensitivity = args[1]
+end)
+
+local nameBox = nil
+local nbSelection = nil
+addcmd('hovername',{},
+function(args, speaker)
+	execCmd('unhovername')
+	wait()
+	nameBox = Instance.new("TextLabel")
+	nameBox.Name = randomString()
+	nameBox.Parent = PARENT
+	nameBox.BackgroundTransparency = 1
+	nameBox.Size = UDim2.new(0,200,0,30)
+	nameBox.Font = Enum.Font.Code
+	nameBox.TextSize = 16
+	nameBox.Text = ""
+	nameBox.TextColor3 = Color3.new(1, 1, 1)
+	nameBox.TextStrokeTransparency = 0
+	nameBox.TextXAlignment = Enum.TextXAlignment.Left
+	nameBox.ZIndex = 10
+	nbSelection = Instance.new('SelectionBox')
+	nbSelection.Name = randomString()
+	nbSelection.LineThickness = 0.03
+	nbSelection.Color3 = Color3.new(1, 1, 1)
+	local function updateNameBox()
+		local t
+		local target = IYMouse.Target
+		
+		if target then
+			local humanoid = target.Parent:FindFirstChild('Humanoid') or target.Parent.Parent:FindFirstChild('Humanoid')
+			if humanoid then
+				t = humanoid.Parent
+			end
+		end
+		
+		if t ~= nil then
+			local x = IYMouse.X
+			local y = IYMouse.Y
+			local xP
+			local yP
+			if IYMouse.X > 200 then
+				xP = x - 205
+				nameBox.TextXAlignment = Enum.TextXAlignment.Right
+			else
+				xP = x + 25
+				nameBox.TextXAlignment = Enum.TextXAlignment.Left
+			end
+			nameBox.Position = UDim2.new(0, xP, 0, y)
+			nameBox.Text = t.Name
+			nameBox.Visible = true
+			nbSelection.Parent = t
+			nbSelection.Adornee = t
+		else
+			nameBox.Visible = false
+			nbSelection.Parent = nil
+			nbSelection.Adornee = nil
+		end
+	end
+	nbUpdateFunc = IYMouse.Move:connect(updateNameBox)
+end)
+
+addcmd('unhovername',{'nohovername'},
+function(args, speaker)
+	if nbUpdateFunc then
+		nbUpdateFunc:Disconnect()
+		nameBox:Destroy()
+		nbSelection:Destroy()
+	end
+end)
+
+addcmd('hitbox',{},
+function(args, speaker)
+	local players = getPlayer(args[1], speaker)
+	for i,v in pairs(players) do
+		if Players[v]~= speaker and Players[v].Character:FindFirstChild('Head') then
+			local sizeArg = tonumber(args[2])
+			local Size = Vector3.new(sizeArg,sizeArg,sizeArg)
+			local Head = Players[v].Character:FindFirstChild('Head')
+			if Head:IsA("BasePart") then
+				if not args[2] or sizeArg == 1 then
+					Head.Size = Vector3.new(2,1,1)
+				else
+					Head.Size = Size
+				end
+			end
+		end
+	end
+end)
+
+addcmd('stareat',{'stare'},
+function(args, speaker)
+	local players = getPlayer(args[1], speaker)
+	for i,v in pairs(players) do
+		if stareLoop then
+			stareLoop:Disconnect()
+		end
+		if not Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and Players[v].Character:FindFirstChild("HumanoidRootPart") then return end
+		local function stareFunc()
+			if Players.LocalPlayer.Character.PrimaryPart and Players:FindFirstChild(v) and Players[v].Character ~= nil and Players[v].Character:FindFirstChild("HumanoidRootPart") then
+				local chrPos=Players.LocalPlayer.Character.PrimaryPart.Position
+				local tPos=Players[v].Character:FindFirstChild("HumanoidRootPart").Position
+				local modTPos=Vector3.new(tPos.X,chrPos.Y,tPos.Z)
+				local newCF=CFrame.new(chrPos,modTPos)
+				Players.LocalPlayer.Character:SetPrimaryPartCFrame(newCF)
+			elseif not Players:FindFirstChild(v) then
+				stareLoop:Disconnect()
+			end
+		end
+		
+		stareLoop = game:GetService("RunService").RenderStepped:Connect(stareFunc)
+	end
+end)
+
+addcmd('unstareat',{'unstare','nostare','nostareat'},
+function(args, speaker)
+	if stareLoop then
+		stareLoop:Disconnect()
+	end
+end)
+
+addcmd('removeterrain',{'rterrain','noterrain'},
+function(args, speaker)
+	workspace:FindFirstChildOfClass('Terrain'):Clear()
+end)
+
+addcmd('clearnilinstances',{'nonilinstances','cni'},
+function(args, speaker)
+	if getnilinstances then
+		for i,v in pairs(getnilinstances()) do
+			v:Destroy()
+		end
+	else
+		notify('Incompatible Exploit','Your exploit does not support this command (missing getnilinstances)')
+	end
+end)
+
+addcmd('destroyheight',{'dh'},
+function(args, speaker)
+	local dh = args[1] or -500
+	if isNumber(dh) then
+		workspace.FallenPartsDestroyHeight = dh
+	end
+end)
+
+local freezingua = nil
+frozenParts = {}
+addcmd('freezeunanchored',{'freezeua'},
+function(args, speaker)
+	if sethidden then
+		local badnames = {
+			"Head",
+			"UpperTorso",
+			"LowerTorso",
+			"RightUpperArm",
+			"LeftUpperArm",
+			"RightLowerArm",
+			"LeftLowerArm",
+			"RightHand",
+			"LeftHand",
+			"RightUpperLeg",
+			"LeftUpperLeg",
+			"RightLowerLeg",
+			"LeftLowerLeg",
+			"RightFoot",
+			"LeftFoot",
+			"Torso",
+			"Right Arm",
+			"Left Arm",
+			"Right Leg",
+			"Left Leg",
+			"HumanoidRootPart"
+		}
+		local function FREEZENOOB(v)
+			if v:IsA("BasePart" or "UnionOperation") and v.Anchored == false then
+				local BADD = false
+				for i = 1,#badnames do
+					if v.Name == badnames[i] then
+						BADD = true
+					end
+				end
+				if speaker.Character and v:IsDescendantOf(speaker.Character) then
+					BADD = true
+				end
+				if BADD == false then
+					for i,c in pairs(v:GetChildren()) do
+						if c:IsA("BodyPosition") or c:IsA("BodyGyro") then
+							c:Destroy()
+						end
+					end
+					sethidden(speaker,"MaximumSimulationRadius",1/0)
+					if setsimulation then
+						setsimulation(1e308)
+					else
+						sethidden(speaker,"SimulationRadius", 1e308)
+					end
+					local bodypos = Instance.new("BodyPosition",v)
+					bodypos.Position = v.Position
+					bodypos.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+					local bodygyro = Instance.new("BodyGyro",v)
+					bodygyro.CFrame = v.CFrame
+					bodygyro.MaxTorque = Vector3.new(math.huge,math.huge,math.huge)
+					if not table.find(frozenParts,v) then
+						table.insert(frozenParts,v)
+					end
+				end
+			end
+		end
+		for i,v in pairs(workspace:GetDescendants()) do
+			FREEZENOOB(v)
+		end
+		freezingua = workspace.DescendantAdded:Connect(FREEZENOOB)
+	else
+		notify('Incompatible Exploit','Your exploit does not support this command (missing sethiddenproperty)')
+	end
+end)
+
+addcmd('thawunanchored',{'thawua','unfreezeunanchored','unfreezeua'},
+function(args, speaker)
+	if sethidden then
+		if freezingua then
+			freezingua:Disconnect()
+		end
+		sethidden(speaker,"MaximumSimulationRadius",1/0)
+		if setsimulation then
+			setsimulation(1e308)
+		else
+			sethidden(speaker,"SimulationRadius", 1e308)
+		end
+		for i,v in pairs(frozenParts) do
+			for i,c in pairs(v:GetChildren()) do
+				if c:IsA("BodyPosition") or c:IsA("BodyGyro") then
+					c:Destroy()
+				end
+			end
+		end
+		frozenParts = {}
+	else
+		notify('Incompatible Exploit','Your exploit does not support this command (missing sethiddenproperty)')
+	end
+end)
+
+addcmd('tpunanchored',{'tpua'},
+function(args, speaker)
+	if sethidden then
+		local players = getPlayer(args[1], speaker)
+		for i,v in pairs(players) do
+			local Forces = {}
+			for _,part in pairs(workspace:GetDescendants()) do
+				if Players[v].Character:FindFirstChild('Head') and part:IsA("BasePart" or "UnionOperation" or "Model") and part.Anchored == false and not part:IsDescendantOf(speaker.Character) and part.Name == "Torso" == false and part.Name == "Head" == false and part.Name == "Right Arm" == false and part.Name == "Left Arm" == false and part.Name == "Right Leg" == false and part.Name == "Left Leg" == false and part.Name == "HumanoidRootPart" == false then
+					for i,c in pairs(part:GetChildren()) do
+						if c:IsA("BodyPosition") or c:IsA("BodyGyro") then
+							c:Destroy()
+						end
+					end
+					local ForceInstance = Instance.new("BodyPosition", part)
+					ForceInstance.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
+					table.insert(Forces, ForceInstance)
+					if not table.find(frozenParts,part) then
+						table.insert(frozenParts,part)
+					end
+				end
+			end
+			sethidden(speaker,"MaximumSimulationRadius",1/0)
+			if setsimulation then
+				setsimulation(1e308)
+			else
+				sethidden(speaker,"SimulationRadius", 1e308)
+			end
+			for i,c in pairs(Forces) do
+				c.Position = Players[v].Character.Head.Position
+			end
+		end
+	else
+		notify('Incompatible Exploit','Your exploit does not support this command (missing sethiddenproperty)')
+	end
+end)
+
+keycodeMap = {
+	["0"] = 0x30,
+	["1"] = 0x31,
+	["2"] = 0x32,
+	["3"] = 0x33,
+	["4"] = 0x34,
+	["5"] = 0x35,
+	["6"] = 0x36,
+	["7"] = 0x37,
+	["8"] = 0x38,
+	["9"] = 0x39,
+	["a"] = 0x41,
+	["b"] = 0x42,
+	["c"] = 0x43,
+	["d"] = 0x44,
+	["e"] = 0x45,
+	["f"] = 0x46,
+	["g"] = 0x47,
+	["h"] = 0x48,
+	["i"] = 0x49,
+	["j"] = 0x4A,
+	["k"] = 0x4B,
+	["l"] = 0x4C,
+	["m"] = 0x4D,
+	["n"] = 0x4E,
+	["o"] = 0x4F,
+	["p"] = 0x50,
+	["q"] = 0x51,
+	["r"] = 0x52,
+	["s"] = 0x53,
+	["t"] = 0x54,
+	["u"] = 0x55,
+	["v"] = 0x56,
+	["w"] = 0x57,
+	["x"] = 0x58,
+	["y"] = 0x59,
+	["z"] = 0x5A,
+	["enter"] = 0x0D,
+	["shift"] = 0x10,
+	["ctrl"] = 0x11,
+	["alt"] = 0x12,
+	["pause"] = 0x13,
+	["capslock"] = 0x14,
+	["spacebar"] = 0x20,
+	["pageup"] = 0x21,
+	["pagedown"] = 0x22,
+	["end"] = 0x23,
+	["home"] = 0x24,
+	["left"] = 0x25,
+	["up"] = 0x26,
+	["right"] = 0x27,
+	["down"] = 0x28,
+	["insert"] = 0x2D,
+	["delete"] = 0x2E,
+	["f1"] = 0x70,
+	["f2"] = 0x71,
+	["f3"] = 0x72,
+	["f4"] = 0x73,
+	["f5"] = 0x74,
+	["f6"] = 0x75,
+	["f7"] = 0x76,
+	["f8"] = 0x77,
+	["f9"] = 0x78,
+	["f10"] = 0x79,
+	["f11"] = 0x7A,
+	["f12"] = 0x7B,
+}
+autoKeyPressing = false
+cancelAutoKeyPress = nil
+
+addcmd('autokeypress',{'keypress'},
+function(args, speaker)
+	if keypress and keyrelease and args[1] then
+		local code = keycodeMap[args[1]:lower()]
+		if not code then notify('Auto Key Press',"Invalid key") return end
+		execCmd('unautokeypress')
+		wait()
+		local clickDelay = 0.1
+		local releaseDelay = 0.1
+		if args[2] and isNumber(args[2]) then clickDelay = args[2] end
+		if args[3] and isNumber(args[3]) then releaseDelay = args[3] end
+		autoKeyPressing = true
+		cancelAutoKeyPress = UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+			if not gameProcessedEvent then
+				if (input.KeyCode == Enum.KeyCode.Backspace and UserInputService:IsKeyDown(Enum.KeyCode.Equals)) or (input.KeyCode == Enum.KeyCode.Equals and UserInputService:IsKeyDown(Enum.KeyCode.Backspace)) then
+					autoKeyPressing = false
+					cancelAutoKeyPress:Disconnect()
+				end
+			end
+		end)
+		notify('Auto Key Press',"Press [backspace] and [=] at the same time to stop")
+		repeat wait(clickDelay)
+			keypress(code)
+			wait(releaseDelay)
+			keyrelease(code)
+		until autoKeyPressing == false
+		if cancelAutoKeyPress then cancelAutoKeyPress:Disconnect() keyrelease(code) end
+	else
+		notify('Auto Key Press',"Your exploit doesn't have the ability to use auto key press")
+	end
+end)
+
+addcmd('unautokeypress',{'noautokeypress','unkeypress','nokeypress'},
+function(args, speaker)
+	autoKeyPressing = false
+	if cancelAutoKeyPress then cancelAutoKeyPress:Disconnect() end
+end)
+
+addcmd('addplugin',{'plugin'},
+function(args, speaker)
+	addPlugin(getstring(1))
+end)
+
+addcmd('removeplugin',{'deleteplugin'},
+function(args, speaker)
+	deletePlugin(getstring(1))
+end)
+
+addcmd('reloadplugin',{},
+function(args, speaker)
+	local pluginName = getstring(1)
+	deletePlugin(pluginName)
+	wait(1)
+	addPlugin(pluginName)
+end)
+
+addcmd('removecmd',{'deletecmd'},
+function(args, speaker)
+	removecmd(args[1])
+end)
+
+updateColors(currentShade1,shade1)
+updateColors(currentShade2,shade2)
+updateColors(currentShade3,shade3)
+updateColors(currentText1,text1)
+updateColors(currentText2,text2)
+updateColors(currentScroll,scroll)
+
+if PluginsTable ~= nil or PluginsTable ~= {} then
+	FindPlugins(PluginsTable)
+end
+
+-- Events
+eventEditor.RegisterEvent("OnExecute")
+eventEditor.RegisterEvent("OnSpawn",{
+	{Type="Player",Name="Player Filter ($1)"}
+})
+eventEditor.RegisterEvent("OnDied",{
+	{Type="Player",Name="Player Filter ($1)"}
+})
+eventEditor.RegisterEvent("OnKilled",{
+	{Type="Player",Name="Victim Player ($1)"},
+	{Type="Player",Name="Killer Player ($2)",Default = 1}
+})
+eventEditor.RegisterEvent("OnJoin",{
+	{Type="Player",Name="Player Filter ($1)",Default = 1}
+})
+eventEditor.RegisterEvent("OnChatted",{
+	{Type="Player",Name="Player Filter ($1)",Default = 1},
+	{Type="String",Name="Message Filter ($2)"}
+})
+
+function hookCharEvents(plr,instant)
+	local char = plr.Character
+	if not char then return end
+	
+	local humanoid = char:WaitForChild("Humanoid",10)
+	if not humanoid then return end
+	
+	humanoid.Died:Connect(function()
+		eventEditor.FireEvent("OnDied",plr.Name)
+		
+		local killedBy = humanoid:FindFirstChild("creator")
+		if killedBy and killedBy.Value and killedBy.Value.Parent then
+			eventEditor.FireEvent("OnKilled",plr.Name,killedBy.Name)
+		end
+	end)
+end
+
+game:GetService("Players").PlayerAdded:Connect(function(plr)
+	eventEditor.FireEvent("OnJoin",plr.Name)
+	plr.Chatted:Connect(function(msg) eventEditor.FireEvent("OnChatted",tostring(plr),msg) end)
+	plr.CharacterAdded:Connect(function() eventEditor.FireEvent("OnSpawn",tostring(plr)) hookCharEvents(plr) end)
+	JoinLog(plr)
+	ChatLog(plr)
+	if ESPenabled then
+		repeat wait(1) until plr.Character and getRoot(plr.Character)
+		ESP(plr)
+	end
+	if CHMSenabled then
+		repeat wait(1) until plr.Character and getRoot(plr.Character)
+		CHMS(plr)
+	end
+end)
+
+for _,plr in pairs(game:GetService("Players"):GetPlayers()) do
+	pcall(function()
+		plr.Chatted:Connect(function(msg) eventEditor.FireEvent("OnChatted",tostring(plr),msg) end)
+		plr.CharacterAdded:Connect(function() eventEditor.FireEvent("OnSpawn",tostring(plr)) hookCharEvents(plr) end)
+		hookCharEvents(plr)
+	end)
+end
+
+if spawnCmds and #spawnCmds > 0 then
+	for i,v in pairs(spawnCmds) do
+		eventEditor.AddCmd("OnSpawn",{v.COMMAND or "",{0},v.DELAY or 0})
+	end
+	updatesaves()
+end
+
+if loadedEventData then eventEditor.LoadData(loadedEventData) end
+eventEditor.Refresh()
+
+eventEditor.FireEvent("OnExecute")
+
+if aliases and #aliases > 0 then
+	local cmdMap = {}
+	for i,v in pairs(cmds) do
+		cmdMap[v.NAME:lower()] = v
+		for _,alias in pairs(v.ALIAS) do
+			cmdMap[alias:lower()] = v
+		end
+	end
+	for i = 1, #aliases do
+		local cmd = string.lower(aliases[i].CMD)
+		local alias = string.lower(aliases[i].ALIAS)
+		if cmdMap[cmd] then
+			customAlias[alias] = cmdMap[cmd]
+		end
+	end
+	refreshaliases()
+end
+
+IYMouse.Move:connect(checkTT)
+
+if pcall(function() loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/version'))() end) then
+	if ver ~= Version then
+		notify('Outdated','Get the new version at infyield.yolasite.com')
+	end
+	if Announcement and Announcement ~= '' then
+		local AnnGUI = Instance.new("Frame")
+		local background = Instance.new("Frame")
+		local TextBox = Instance.new("TextLabel")
+		local shadow = Instance.new("Frame")
+		local PopupText = Instance.new("TextLabel")
+		local Exit = Instance.new("TextButton")
+		local ExitImage = Instance.new("ImageLabel")
+		
+		AnnGUI.Name = randomString()
+		AnnGUI.Parent = PARENT
+		AnnGUI.Active = true
+		AnnGUI.BackgroundTransparency = 1
+		AnnGUI.Position = UDim2.new(0.5, -180, 0, -500)
+		AnnGUI.Size = UDim2.new(0, 360, 0, 20)
+		AnnGUI.ZIndex = 10
+		
+		background.Name = "background"
+		background.Parent = AnnGUI
+		background.Active = true
+		background.BackgroundColor3 = currentShade1
+		background.BorderSizePixel = 0
+		background.Position = UDim2.new(0, 0, 0, 20)
+		background.Size = UDim2.new(0, 360, 0, 150)
+		background.ZIndex = 10
+		
+		TextBox.Parent = background
+		TextBox.BackgroundTransparency = 1
+		TextBox.Position = UDim2.new(0, 5, 0, 5)
+		TextBox.Size = UDim2.new(0, 350, 0, 140)
+		TextBox.Font = Enum.Font.SourceSans
+		TextBox.TextSize = 18
+		TextBox.TextWrapped = true
+		TextBox.Text = Announcement
+		TextBox.TextColor3 = currentText1
+		TextBox.TextXAlignment = Enum.TextXAlignment.Left
+		TextBox.TextYAlignment = Enum.TextYAlignment.Top
+		TextBox.ZIndex = 10
+		
+		shadow.Name = "shadow"
+		shadow.Parent = AnnGUI
+		shadow.BackgroundColor3 = currentShade2
+		shadow.BorderSizePixel = 0
+		shadow.Size = UDim2.new(0, 360, 0, 20)
+		shadow.ZIndex = 10
+		
+		PopupText.Name = "PopupText"
+		PopupText.Parent = shadow
+		PopupText.BackgroundTransparency = 1
+		PopupText.Size = UDim2.new(1, 0, 0.95, 0)
+		PopupText.ZIndex = 10
+		PopupText.Font = Enum.Font.SourceSans
+		PopupText.TextSize = 14
+		PopupText.Text = "Server Announcement"
+		PopupText.TextColor3 = currentText1
+		PopupText.TextWrapped = true
+		
+		Exit.Name = "Exit"
+		Exit.Parent = shadow
+		Exit.BackgroundTransparency = 1
+		Exit.Position = UDim2.new(1, -20, 0, 0)
+		Exit.Size = UDim2.new(0, 20, 0, 20)
+		Exit.Text = ""
+		Exit.ZIndex = 10
+		
+		ExitImage.Parent = Exit
+		ExitImage.BackgroundColor3 = Color3.new(1, 1, 1)
+		ExitImage.BackgroundTransparency = 1
+		ExitImage.Position = UDim2.new(0, 5, 0, 5)
+		ExitImage.Size = UDim2.new(0, 10, 0, 10)
+		ExitImage.Image = "rbxassetid://5054663650"
+		ExitImage.ZIndex = 10
+		
+		wait(1)
+		AnnGUI:TweenPosition(UDim2.new(0.5, -180, 0, 150), "InOut", "Quart", 0.5, true, nil)
+		
+		Exit.MouseButton1Click:Connect(function()
+			AnnGUI:TweenPosition(UDim2.new(0.5, -180, 0, -500), "InOut", "Quart", 0.5, true, nil)
+			wait(0.6)
+			AnnGUI:Destroy()
+		end)
+	end
+end
+
+wait()
+Credits:TweenPosition(UDim2.new(0,0,0.9,0), "Out", "Quart", 0.2)
+Logo:TweenSizeAndPosition(UDim2.new(0,175,0,175),UDim2.new(0,37,0,45), "Out", "Quart", 0.3)
+wait(1)
+for i=0,1,0.1 do
+	Logo.ImageTransparency = i
+	IntroBackground.BackgroundTransparency = i
+	wait()
+end
+Credits:TweenPosition(UDim2.new(0,0,0.9,30), "Out", "Quart", 0.2)
+wait(0.2)
+Logo:Destroy()
+Credits:Destroy()
+IntroBackground:Destroy()
+minimizeHolder()
+end)
+MISC:CreateButton("💨Speed Hack 200 PRESS (R)💨", function() --the (arg) is if the checkbox is toggled or not
+   
+local walkspeedplayer = game:GetService("Players").LocalPlayer
+local walkspeedmouse = walkspeedplayer:GetMouse()
+
+local walkspeedenabled = false
+
+function x_walkspeed(key)
+if (key == "r") then
+if walkspeedenabled == false then
+_G.WS = 200;
+local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+Humanoid.WalkSpeed = _G.WS;
+end)
+Humanoid.WalkSpeed = _G.WS;
+
+walkspeedenabled = true
+elseif walkspeedenabled == true then
+_G.WS = 20;
+local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+Humanoid.WalkSpeed = _G.WS;
+end)
+Humanoid.WalkSpeed = _G.WS;
+
+walkspeedenabled = false
+end
+end
+end
+
+walkspeedmouse.KeyDown:connect(x_walkspeed)
+
+end)
+
+
+
+
+
+AutoTab:CreateButton("Disable pop ups", function() --the (arg) is if the checkbox is toggled or not
+   
+          game:GetService("ReplicatedStorage").Storage.PopupTemplate.Visible = false
+    
+end)
+
+AutoTab:CreateToggle("Auto Jump", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b2 = true 
+        while wait(0) and _G.b2 do
+game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end
+       
+    else
+        _G.b2= false
+    end
+end)
+AutoTab:CreateToggle("Auto Collect Gems,Gold Gems,Click", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b3 = true 
+        while wait(0) and _G.b3 do
+local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'HumanoidRootPart' then
+     v.CFrame = root.CFrame
+       wait()
+   
+  
+        end
+    end
+end
+       
+    else
+        _G.b3= false
+    end
+end)
+AutoTab:CreateToggle("Auto Tp To Gems,Gold Gems,Click", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b4 = true 
+        while wait(0) and _G.b4 do
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").ScriptObjects.BasePickup.HumanoidRootPart
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+
+
+
+end
+       
+    else
+        _G.b4= false
+    end
+end)
 AutoTab:CreateToggle("All Gamepasses", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.b5 = true 
