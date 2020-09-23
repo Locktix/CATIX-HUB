@@ -12354,8 +12354,8 @@ game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
 end)
 eggs2:CreateToggle("Auto Buy Rebirths x1Sx", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.zq = true 
-        while wait(0) and _G.zq do
+        _G.zn = true 
+        while wait(0) and _G.zn do
 local args = {
 [1] =    1000000000000000000000,
 }
@@ -12363,13 +12363,13 @@ local args = {
 game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
         end
     else
-        _G.zq= false
+        _G.zn= false
     end
 end)
 eggs2:CreateToggle("Auto Buy Rebirths x10Sx", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.zo = true 
-        while wait(0) and _G.zo do
+        _G.zn = true 
+        while wait(0) and _G.zn do
 local args = {
 [1] =    10000000000000000000000,
 }
@@ -12377,13 +12377,13 @@ local args = {
 game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
         end
     else
-        _G.zo= false
+        _G.zn= false
     end
 end)
 eggs2:CreateToggle("Auto Buy Rebirths x49Sx", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.zp = true 
-        while wait(0) and _G.zp do
+        _G.zn = true 
+        while wait(0) and _G.zn do
 local args = {
 [1] =    49999999999999999999999,
 }
@@ -12391,7 +12391,51 @@ local args = {
 game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
         end
     else
-        _G.zp= false
+        _G.zn= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Rebirths x99Sx", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zn = true 
+        while wait(0) and _G.zn do
+local args = {
+[1] =    99999999999999999999999,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
+        end
+    else
+        _G.zn= false
+    end
+end)
+
+eggs2:CreateToggle("Auto Buy Rebirths x250Sx", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zn = true 
+        while wait(0) and _G.zn do
+local args = {
+[1] =    250000000000000000000000,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
+        end
+    else
+        _G.zn= false
+    end
+end)
+
+eggs2:CreateToggle("Auto Buy Rebirths x750Sx", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zn = true 
+        while wait(0) and _G.zn do
+local args = {
+[1] =    750000000000000000000000,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
+        end
+    else
+        _G.zn= false
     end
 end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
