@@ -7,7 +7,8 @@ local AutoTab = Library:CreateTab("Clicker-Madness GUI","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
 local rebirths = Library:CreateTab("Auto Rebirth","things", true)
 local rebirths2 = Library:CreateTab("Auto Sr Rebirth","things", true)
-local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
+local eggs = Library:CreateTab("Auto Buy Eggs X1","things", true)
+local eggs2 = Library:CreateTab("Auto Buy Eggs X3","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
@@ -11401,10 +11402,8 @@ end
         _G.b4= false
     end
 end)
-AutoTab:CreateToggle("All Gamepasses certain not work", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.b5 = true 
-        while wait(0) and _G.b5 do
+AutoTab:CreateButton("All Gamepasses certain not work", function() --the (arg) is if the checkbox is toggled or not
+  
 game:GetService("Players").LocalPlayer.Gamepasses.Sprint.Value = true
 game:GetService("Players").LocalPlayer.Gamepasses.AutoClick.Value = true
 game:GetService("Players").LocalPlayer.Gamepasses.ExplosiveCursors.Value = true
@@ -11417,11 +11416,7 @@ game:GetService("Players").LocalPlayer.Gamepasses.Luck.Value = true
 game:GetService("Players").LocalPlayer.Gamepasses.UnlimitedPets.Value = true
 
 
-end
-       
-    else
-        _G.b5= false
-    end
+
 end)
 AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
@@ -11954,6 +11949,160 @@ game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
         end
     else
         _G.e11= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Basic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e12 = true 
+        while wait(0) and _G.e12 do
+ local args = {
+    [1] = "basic",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.PurchaseTriple:FireServer(unpack(args))
+        end
+    else
+        _G.e12= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Lava Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e13 = true 
+        while wait(0) and _G.e13 do
+local args = {
+    [1] = "lava",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.PurchaseTriple:FireServer(unpack(args))
+        end
+    else
+        _G.e13= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Desert Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e14 = true 
+        while wait(0) and _G.e14 do
+local args = {
+    [1] = "desert",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.PurchaseTriple:FireServer(unpack(args))
+        end
+    else
+        _G.e14= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Ocean Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e15 = true 
+        while wait(0) and _G.e15 do
+local args = {
+    [1] = "ocean",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.PurchaseTriple:FireServer(unpack(args))
+        end
+    else
+        _G.e15= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Winter Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e16 = true 
+        while wait(0) and _G.e16 do
+local args = {
+    [1] = "winter",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.PurchaseTriple:FireServer(unpack(args))
+        end
+    else
+        _G.e16= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Toxic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e17 = true 
+        while wait(0) and _G.e17 do
+local args = {
+    [1] = "toxic",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.PurchaseTriple:FireServer(unpack(args))
+        end
+    else
+        _G.e17= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Candy Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e18 = true 
+        while wait(0) and _G.e18 do
+local args = {
+    [1] = "candy",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.PurchaseTriple:FireServer(unpack(args))
+        end
+    else
+        _G.e18= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Forest Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e19 = true 
+        while wait(0) and _G.e19 do
+local args = {
+    [1] = "forest",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.PurchaseTriple:FireServer(unpack(args))
+        end
+    else
+        _G.e19= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Storm Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e20 = true 
+        while wait(0) and _G.e20 do
+local args = {
+    [1] = "storm",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.PurchaseTriple:FireServer(unpack(args))
+        end
+    else
+        _G.e20= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Blocks Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e21 = true 
+        while wait(0) and _G.e21 do
+local args = {
+    [1] = "blocks",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.PurchaseTriple:FireServer(unpack(args))
+        end
+    else
+        _G.e21= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Space Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e22 = true 
+        while wait(0) and _G.e22 do
+local args = {
+    [1] = "space",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.PurchaseTriple:FireServer(unpack(args))
+        end
+    else
+        _G.e2= false
     end
 end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
