@@ -393,6 +393,95 @@ game:GetService("ReplicatedStorage").Events.Server.BestCoin:InvokeServer()
         _G.d = false
     end
 end)
+AutoTab:CreateToggle("Auto Quests", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.d22 = true 
+        while wait() and _G.d2 do
+
+
+local args = {
+    [1] = "Eggs",
+    [2] = "2",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.Quest:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "Eggs",
+    [2] = "3",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.Quest:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "Eggs",
+    [2] = "4",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.Quest:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "Eggs",
+    [2] = "5",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.Quest:InvokeServer(unpack(args))
+local args = {
+    [1] = "Eggs",
+    [2] = "6",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.Quest:InvokeServer(unpack(args))
+local args = {
+    [1] = "Eggs",
+    [2] = "7",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.Quest:InvokeServer(unpack(args))
+local args = {
+    [1] = "Eggs",
+    [2] = "8",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.Quest:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "Eggs",
+    [2] = "9",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.Quest:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "Eggs",
+    [2] = "10",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.Quest:InvokeServer(unpack(args))
+local args = {
+    [1] = "Eggs",
+    [2] = "11",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.Quest:InvokeServer(unpack(args))
+local args = {
+    [1] = "Eggs",
+    [2] = "12",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.Quest:InvokeServer(unpack(args))
+local args = {
+    [1] = "Eggs",
+    [2] = "13",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.Quest:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.d22 = false
+    end
+end)
 AutoTab:CreateToggle("Auto Equip Best Gems", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
 _G.e = true 
