@@ -11384,6 +11384,23 @@ end
         _G.b3= false
     end
 end)
+AutoTab:CreateToggle("Auto Tp To Gems,Gold Gems,Click", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b4 = true 
+        while wait(0) and _G.b4 do
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").ScriptObjects.BasePickup.HumanoidRootPart
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+
+
+
+end
+       
+    else
+        _G.b4= false
+    end
+end)
 AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.b = true 
