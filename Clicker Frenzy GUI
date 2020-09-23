@@ -11401,6 +11401,27 @@ end
         _G.b4= false
     end
 end)
+AutoTab:CreateToggle("All Gamepasses", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b5 = true 
+        while wait(0) and _G.b5 do
+
+game:GetService("Players").LocalPlayer.Gamepasses.ExplosiveCursors.Value = true
+game:GetService("Players").LocalPlayer.Gamepasses.VIP.Value = true
+game:GetService("Players").LocalPlayer.Gamepasses.DoubleGems.Value = true
+game:GetService("Players").LocalPlayer.Gamepasses.TripleHatch.Value = true
+game:GetService("Players").LocalPlayer.Gamepasses.AutoRebirth.Value = true
+game:GetService("Players").LocalPlayer.Gamepasses.DoubleClicks.Value = true
+game:GetService("Players").LocalPlayer.Gamepasses.Luck.Value = true
+game:GetService("Players").LocalPlayer.Gamepasses.UnlimitedPets.Value = true
+
+
+end
+       
+    else
+        _G.b5= false
+    end
+end)
 AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.b = true 
