@@ -23,11 +23,12 @@ credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "a
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("bsoleil31FR#7202", function() --you dont need "arg" for a button
+credits:CreateButton("Im A Cat#7202", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("https://discord.gg/m9Nn3qd", function() --you dont need "arg" for a button
+
+credits:CreateButton("https://discord.gg/PKWXQae", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
@@ -11342,20 +11343,6 @@ end)
 
 
 
-
-AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.LULU = true 
-        while wait(0) and _G.LULU do
-            if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
-            game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool"):Activate()
-    end
-end
-
-    else
-        _G.LULU = false
-    end
-end)
 
 AutoTab:CreateButton("Use Auto Click", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(n)
