@@ -11364,7 +11364,26 @@ end
         _G.b2= false
     end
 end)
+AutoTab:CreateToggle("Auto Collect Gems,Gold Gems,Click", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b3 = true 
+        while wait(0) and _G.b3 do
+local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
 
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'HumanoidRootPart' then
+     v.CFrame = root.CFrame
+       wait()
+   
+  
+        end
+    end
+end
+       
+    else
+        _G.b3= false
+    end
+end)
 AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.b = true 
