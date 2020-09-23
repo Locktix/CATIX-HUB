@@ -11349,7 +11349,7 @@ end)
 
 AutoTab:CreateButton("Disable pop ups", function() --the (arg) is if the checkbox is toggled or not
    
-          game:GetService("ReplicatedStorage").Storage.PopupTemplate:Destroy()  
+          game:GetService("ReplicatedStorage").Storage.PopupTemplate.Visible = false
     
 end)
 
