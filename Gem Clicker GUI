@@ -11966,7 +11966,7 @@ eggs:CreateToggle("Auto Buy Common Eggs", function(arg) --the (arg) is if the ch
 local args = {
     [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Common",
-    [3] = true,
+    [3] = false,
 }
 
 game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
@@ -11984,7 +11984,7 @@ eggs:CreateToggle("Auto Buy Rare Eggs", function(arg) --the (arg) is if the chec
 local args = {
     [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Rare",
-    [3] = true,
+    [3] = false,
 }
 
 game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
@@ -12002,7 +12002,7 @@ eggs:CreateToggle("Auto Buy Epic Eggs", function(arg) --the (arg) is if the chec
 local args = {
     [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Epic",
-    [3] = true,
+    [3] = false,
 }
 
 game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
@@ -12020,7 +12020,7 @@ eggs:CreateToggle("Auto Buy Ocean Eggs", function(arg) --the (arg) is if the che
 local args = {
     [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Rebirth10",
-    [3] = true,
+    [3] = false,
 }
 
 game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
@@ -12038,7 +12038,7 @@ eggs:CreateToggle("Auto Buy Ultimate 5B Eggs", function(arg) --the (arg) is if t
 local args = {
     [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Legendary",
-    [3] = true,
+    [3] = false,
 }
 
 game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
@@ -12056,7 +12056,7 @@ eggs:CreateToggle("Auto Buy Ultimate 1T Eggs", function(arg) --the (arg) is if t
 local args = {
     [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Ultimate",
-    [3] = true,
+    [3] = false,
 }
 
 game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
@@ -12074,7 +12074,7 @@ eggs:CreateToggle("Auto Buy Poison Eggs", function(arg) --the (arg) is if the ch
 local args = {
     [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Future",
-    [3] = true,
+    [3] = false,
 }
 
 game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
@@ -12092,7 +12092,7 @@ eggs:CreateToggle("Auto Buy Robotic Eggs", function(arg) --the (arg) is if the c
 local args = {
     [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Robotic",
-    [3] = true,
+    [3] = false,
 }
 
 game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
@@ -12110,7 +12110,7 @@ eggs:CreateToggle("Auto Buy Shiny Eggs", function(arg) --the (arg) is if the che
 local args = {
     [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Shiny",
-    [3] = true,
+    [3] = false,
 }
 
 game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
@@ -12127,7 +12127,7 @@ eggs:CreateToggle("Auto Buy toxic Eggs", function(arg) --the (arg) is if the che
 local args = {
     [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Toxic",
-    [3] = true,
+    [3] = false,
 }
 
 game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
@@ -12144,7 +12144,7 @@ eggs:CreateToggle("Auto Buy Cost 1O Eggs", function(arg) --the (arg) is if the c
 local args = {
     [1] = game:GetService("Players")["LocalPlayer"],
     [2] = "Atlantis",
-    [3] = true,
+    [3] = false,
 }
 
 game:GetService("ReplicatedStorage").KeyBind:InvokeServer(unpack(args))
