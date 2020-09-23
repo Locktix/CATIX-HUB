@@ -12352,6 +12352,48 @@ game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
         _G.zn= false
     end
 end)
+eggs2:CreateToggle("Auto Buy Rebirths x1Sx", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zq = true 
+        while wait(0) and _G.zq do
+local args = {
+[1] =    1000000000000000000000,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
+        end
+    else
+        _G.zq= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Rebirths x10Sx", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zo = true 
+        while wait(0) and _G.zo do
+local args = {
+[1] =    10000000000000000000000,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
+        end
+    else
+        _G.zo= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Rebirths x49Sx", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zp = true 
+        while wait(0) and _G.zp do
+local args = {
+[1] =    49999999999999999999999,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
+        end
+    else
+        _G.zp= false
+    end
+end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-716.227356, 11.0765419, -955.934143)
 end)
