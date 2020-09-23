@@ -11346,16 +11346,10 @@ end)
 
 
 
-AutoTab:CreateToggle("Disable all pop ups", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.l22 = true 
-        while wait(0) and _G.l22 do
-     
+AutoTab:CreateButton("Disable pop ups", function() --the (arg) is if the checkbox is toggled or not
+   
           game:GetService("ReplicatedStorage").Storage.PopupTemplate:Destroy()  
-        end
-    else
-        _G.l22 = false
-    end
+    
 end)
 
 
