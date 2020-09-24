@@ -19,18 +19,14 @@ credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "a
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("bsoleil31FR#7202", function() --you dont need "arg" for a button
+credits:CreateButton("Im A Cat#7202", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("https://discord.gg/m9Nn3qd", function() --you dont need "arg" for a button
+
+credits:CreateButton("https://discord.gg/PKWXQae", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
-
-credits:CreateButton("https://discord.gg/PdUTrVG", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
-end)
-
 credits:CreateButton("Bebo Mods#1110", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
@@ -11315,7 +11311,7 @@ end)
 AutoTab:CreateToggle("Auto Finish", function(arg) --the (arg) is if the checkbox is toggled or not
       if arg then
         _G.b = true 
-        while wait(1.5) and _G.b do
+        while wait(3) and _G.b do
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-339.443726, 20.6003094, 6124.35352) --2
 wait(0.15)
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-270.536316, 20.6004009, 6077.49951)
@@ -11715,7 +11711,7 @@ wait(0.15)
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(11781.707, 394.35202, 7149.4834) --200
 wait(0.15) 
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(11717.584, 392.808685, 7008.95068) --201
-wait(1.5) 
+wait(3) 
      end
     else
         _G.b= false
