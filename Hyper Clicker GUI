@@ -11342,29 +11342,43 @@ end
 walkspeedmouse.KeyDown:connect(x_walkspeed)
 
 end)
+AutoTab:CreateToggle("Auto Craft All", function(arg) --the (arg) is if the checkbox is toggled or not
+      if arg then
+_G.LULU2 = true 
+        while wait(0) and _G.LULU2 do
+            
 
-AutoTab:CreateToggle("Auto Equip Best ,Craft All", function(arg) --the (arg) is if the checkbox is toggled or not
-_G.LULU = true 
-        while wait(1) and _G.LULU do
-local args = {
-    [1] = "EquipBest",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.PetActionRequest:InvokeServer(unpack(args))
-wait(1)
 local args = {
     [1] = "CraftAll",
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.PetActionRequest:InvokeServer(unpack(args))
-wait(1)
 
-        end
+      
+     end
+    else
+        _G.LULU2= false
+    end
+end)
+AutoTab:CreateToggle("Auto Equip Best", function(arg) --the (arg) is if the checkbox is toggled or not
+      if arg then
+_G.LULU = true 
+        while wait(0) and _G.LULU do
+            
+local args = {
+    [1] = "EquipBest",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.PetActionRequest:InvokeServer(unpack(args))
+
+
+      
+end
+    
     else
         _G.LULU= false
     end
 end)
-
 
 AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
