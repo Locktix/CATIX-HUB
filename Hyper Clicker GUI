@@ -11346,7 +11346,7 @@ end)
 AutoTab:CreateToggle("Auto Craft All", function(arg) --the (arg) is if the checkbox is toggled or not
       if arg then
 _G.LULU2 = true 
-        while wait(0) and _G.LULU2 do
+        while wait(1) and _G.LULU2 do
             
 
 local args = {
@@ -11364,7 +11364,7 @@ end)
 AutoTab:CreateToggle("Auto Equip Best", function(arg) --the (arg) is if the checkbox is toggled or not
       if arg then
 _G.LULU = true 
-        while wait(0) and _G.LULU do
+        while wait(1) and _G.LULU do
             
 local args = {
     [1] = "EquipBest",
