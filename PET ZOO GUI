@@ -11588,16 +11588,34 @@ end
         _G.a7 = false
     end
 end)
-teleports:CreateButton("Zone 18", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1691.21399, 27.4616146, -5681.1333)
+teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(239.129196, 116.41774, -357.642151)
 end)
 
-teleports:CreateButton("Zone 19", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1525.88171, 27.4269829, -5677.54443)
+teleports:CreateButton("Atlantis", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(172.117676, 196.533661, -1311.62903)
 end)
 
-teleports:CreateButton("Zone 20", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1689.25916, 27.4623146, -3887.64136)
+teleports:CreateButton("AETHER", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-368.96167, 223.054123, 235.364304)
+end)
+teleports:CreateButton("VOLCANO", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-14.2621422, 248.473831, 476.422119)
+end)
+teleports:CreateButton("POWER PLANT", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(803.944153, 166.400192, -1223.48132)
+end)
+teleports:CreateButton("GRAVEYARD", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1210.31116, 171.434082, -552.448486)
+end)
+teleports:CreateButton("FOREST", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1194.96387, 186.436371, 259.236969)
+end)
+teleports:CreateButton("ICELAND", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(657.901062, 141.465164, 621.574585)
+end)
+teleports:CreateButton("PALACE", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-554.311279, 191.527344, -1020.09222)
 end)
 
 --| Anti KICK |
