@@ -11725,6 +11725,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(93.1490097, 3.36304426, 58.6208076)
         end
     else
         _G.e1= false
@@ -11741,6 +11742,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(83.9310913, 3.36303806, 71.1419296)
         end
     else
         _G.e2= false
@@ -11757,6 +11759,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(76.2316818, 3.3630178, 81.6016541)
         end
     else
         _G.e3= false
@@ -11773,6 +11776,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-718.329468, 3.3967154, -75.3348007)
         end
     else
         _G.e4= false
@@ -11789,6 +11793,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1134.74268, 3.39671254, -72.1943741)
         end
     else
         _G.e5= false
@@ -11805,6 +11810,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1554.38501, 3.3967135, -71.8432388)
         end
     else
         _G.e6= false
@@ -11821,6 +11827,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1940.9071, 3.39671016, -67.8372421)
         end
     else
         _G.e7= false
@@ -11837,6 +11844,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2355.80493, 15.3462706, -77.0591812)
         end
     else
         _G.e8= false
@@ -11853,6 +11861,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2826.77271, 14.9708261, -79.6561279)
         end
     else
         _G.e9= false
@@ -11868,6 +11877,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3322.56177, 17.1527386, -80.8138275)
         end
     else
         _G.e10= false
@@ -11883,6 +11893,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3794.28491, 15.135829, -79.4711761)
         end
     else
         _G.e11= false
