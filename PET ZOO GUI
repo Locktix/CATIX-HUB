@@ -11352,8 +11352,21 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").AeroRemoteServices.IncomeButtonService.OnClick:InvokeServer(unpack(args))
+local args = {
+    [1] = false,
+}
 
+game:GetService("ReplicatedStorage").AeroRemoteServices.IncomeButtonService.OnClick:InvokeServer(unpack(args))
+local args = {
+    [1] = false,
+}
 
+game:GetService("ReplicatedStorage").AeroRemoteServices.IncomeButtonService.OnClick:InvokeServer(unpack(args))
+local args = {
+    [1] = false,
+}
+
+game:GetService("ReplicatedStorage").AeroRemoteServices.IncomeButtonService.OnClick:InvokeServer(unpack(args))
 end
 
     else
