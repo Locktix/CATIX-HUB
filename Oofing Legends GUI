@@ -10,7 +10,29 @@ local rebirths2 = Library:CreateTab("Auto Rebirth,2","things", true)
 local eggs = Library:CreateTab("Auto Buy Eggs x3","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
+teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(13.7033892, 3.05753112, -5.15251207)
+end)
 
+teleports:CreateButton("Candy", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(849.81012, 3.06754398, -1298.12146)
+end)
+
+teleports:CreateButton("Winter", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1376.04321, 18.6675701, 236.40567)
+end)
+teleports:CreateButton("Lava", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(459.045166, 65.8413162, 1162.56348)
+end)
+teleports:CreateButton("Ocean", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-841.086487, 80.0658875, 906.202881)
+end)
+teleports:CreateButton("Moon", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-841.086487, 80.0658875, 906.202881)
+end)
+teleports:CreateButton("Desert", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-713.725952, 126.952835, -881.977722)
+end)
 
 credits:CreateButton("Our Discords", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
@@ -11357,7 +11379,7 @@ game:GetService("ReplicatedStorage").RemoteEvents.EggOpen:FireServer(unpack(args
         _G.p= false
     end
 end)
-eggs:CreateToggle("Auto Buy Common Eggs X3", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Auto Buy Rare Eggs X3", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.q= true 
         while wait(0) and _G.q do
@@ -11477,6 +11499,21 @@ game:GetService("ReplicatedStorage").RemoteEvents.EggOpen:FireServer(unpack(args
         _G.x= false
     end
 end)
+eggs:CreateToggle("Auto Buy Sand Eggs X3", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.x2= true 
+        while wait(0) and _G.x2 do
+local args = {
+    [1] = "Sand",
+    [2] = "R",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpen:FireServer(unpack(args))
+        end
+    else
+        _G.x2= false
+    end
+end)
 
 AutoTab:CreateToggle("Auto Craft Pets", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
@@ -11503,11 +11540,11 @@ end
     end
 end)
 
-AutoTab:CreateToggle("Sell X3,5", function(arg) --you dont need "arg" for a button
+AutoTab:CreateToggle("Sell X4", function(arg) --you dont need "arg" for a button
       if arg then
         _G.dd = true 
         while wait(0.5) and _G.dd do
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1160.80701, 77.317131, -220.06517)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-677.453247, 134.102203, -889.735962)
  end
     else
         _G.dd= false
@@ -11969,29 +12006,7 @@ game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(a
     end
 end)
 
-teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(13.7033892, 3.05753112, -5.15251207)
-end)
 
-teleports:CreateButton("Candy", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(849.81012, 3.06754398, -1298.12146)
-end)
-
-teleports:CreateButton("Winter", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1376.04321, 18.6675701, 236.40567)
-end)
-teleports:CreateButton("Lava", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(459.045166, 65.8413162, 1162.56348)
-end)
-teleports:CreateButton("Ocean", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-841.086487, 80.0658875, 906.202881)
-end)
-teleports:CreateButton("Moon", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-841.086487, 80.0658875, 906.202881)
-end)
-teleports:CreateButton("Sell X3,5", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1160.80701, 77.317131, -220.06517)
-end)
 --| Anti KICK |
 local mt = getrawmetatable(game)
 local old = mt.__namecall
