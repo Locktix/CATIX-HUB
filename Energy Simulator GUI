@@ -11354,7 +11354,10 @@ local args = {
 game:GetService("ReplicatedStorage")["RF_AddPet"]:InvokeServer(unpack(args))    
       
 end)
+AutoTab:CreateButton("ATTENTION PING", function() --the (arg) is if the checkbox is toggled or not
 
+      
+end)
 
 AutoTab:CreateToggle("Auto Kill For Gems", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
@@ -11498,62 +11501,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage")["RE_DamageHumanoidNPC_DungeonGem"]:FireServer(unpack(args))
-local args = {
-    [1] = workspace.GemCaveNPC.GemLava.Humanoid,
-    [2] = 30,
-    [3] = "Gem",
-    [4] = 125000,
-}
 
-game:GetService("ReplicatedStorage")["RE_DamageHumanoidNPC_DungeonGem"]:FireServer(unpack(args))
-local args = {
-    [1] = workspace.GemCaveNPC.GemLava.Humanoid,
-    [2] = 30,
-    [3] = "Gem",
-    [4] = 125000,
-}
-
-game:GetService("ReplicatedStorage")["RE_DamageHumanoidNPC_DungeonGem"]:FireServer(unpack(args))
-local args = {
-    [1] = workspace.GemCaveNPC.GemLava.Humanoid,
-    [2] = 30,
-    [3] = "Gem",
-    [4] = 125000,
-}
-
-game:GetService("ReplicatedStorage")["RE_DamageHumanoidNPC_DungeonGem"]:FireServer(unpack(args))
-local args = {
-    [1] = workspace.GemCaveNPC.GemLava.Humanoid,
-    [2] = 30,
-    [3] = "Gem",
-    [4] = 125000,
-}
-
-game:GetService("ReplicatedStorage")["RE_DamageHumanoidNPC_DungeonGem"]:FireServer(unpack(args))
-local args = {
-    [1] = workspace.GemCaveNPC.GemLava.Humanoid,
-    [2] = 30,
-    [3] = "Gem",
-    [4] = 125000,
-}
-
-game:GetService("ReplicatedStorage")["RE_DamageHumanoidNPC_DungeonGem"]:FireServer(unpack(args))
-local args = {
-    [1] = workspace.GemCaveNPC.GemLava.Humanoid,
-    [2] = 30,
-    [3] = "Gem",
-    [4] = 125000,
-}
-
-game:GetService("ReplicatedStorage")["RE_DamageHumanoidNPC_DungeonGem"]:FireServer(unpack(args))
-local args = {
-    [1] = workspace.GemCaveNPC.GemLava.Humanoid,
-    [2] = 30,
-    [3] = "Gem",
-    [4] = 125000,
-}
-
-game:GetService("ReplicatedStorage")["RE_DamageHumanoidNPC_DungeonGem"]:FireServer(unpack(args))
         end
     else
         _G.l = false
@@ -11566,86 +11514,7 @@ AutoTab:CreateToggle("Auto Kill For Candy", function(arg) --the (arg) is if the 
     if arg then
         _G.l = true 
         while wait(0) and _G.l do
-local args = {
-    [1] = workspace.CandyCaveNPC.LavaKiller.Humanoid,
-    [2] = 45,
-    [3] = "Candy",
-    [4] = 20,
-}
 
-game:GetService("ReplicatedStorage")["RE_DamageHumanoidNPC_Dungeon"]:FireServer(unpack(args))
-local args = {
-    [1] = workspace.CandyCaveNPC.LavaKiller.Humanoid,
-    [2] = 45,
-    [3] = "Candy",
-    [4] = 20,
-}
-
-game:GetService("ReplicatedStorage")["RE_DamageHumanoidNPC_Dungeon"]:FireServer(unpack(args))
-local args = {
-    [1] = workspace.CandyCaveNPC.LavaKiller.Humanoid,
-    [2] = 45,
-    [3] = "Candy",
-    [4] = 20,
-}
-
-game:GetService("ReplicatedStorage")["RE_DamageHumanoidNPC_Dungeon"]:FireServer(unpack(args))
-local args = {
-    [1] = workspace.CandyCaveNPC.LavaKiller.Humanoid,
-    [2] = 45,
-    [3] = "Candy",
-    [4] = 20,
-}
-
-game:GetService("ReplicatedStorage")["RE_DamageHumanoidNPC_Dungeon"]:FireServer(unpack(args))
-local args = {
-    [1] = workspace.CandyCaveNPC.LavaKiller.Humanoid,
-    [2] = 45,
-    [3] = "Candy",
-    [4] = 20,
-}
-
-game:GetService("ReplicatedStorage")["RE_DamageHumanoidNPC_Dungeon"]:FireServer(unpack(args))
-local args = {
-    [1] = workspace.CandyCaveNPC.LavaKiller.Humanoid,
-    [2] = 45,
-    [3] = "Candy",
-    [4] = 20,
-}
-
-game:GetService("ReplicatedStorage")["RE_DamageHumanoidNPC_Dungeon"]:FireServer(unpack(args))
-local args = {
-    [1] = workspace.CandyCaveNPC.LavaKiller.Humanoid,
-    [2] = 45,
-    [3] = "Candy",
-    [4] = 20,
-}
-
-game:GetService("ReplicatedStorage")["RE_DamageHumanoidNPC_Dungeon"]:FireServer(unpack(args))
-local args = {
-    [1] = workspace.CandyCaveNPC.LavaKiller.Humanoid,
-    [2] = 45,
-    [3] = "Candy",
-    [4] = 20,
-}
-
-game:GetService("ReplicatedStorage")["RE_DamageHumanoidNPC_Dungeon"]:FireServer(unpack(args))
-local args = {
-    [1] = workspace.CandyCaveNPC.LavaKiller.Humanoid,
-    [2] = 45,
-    [3] = "Candy",
-    [4] = 20,
-}
-
-game:GetService("ReplicatedStorage")["RE_DamageHumanoidNPC_Dungeon"]:FireServer(unpack(args))
-local args = {
-    [1] = workspace.CandyCaveNPC.LavaKiller.Humanoid,
-    [2] = 45,
-    [3] = "Candy",
-    [4] = 20,
-}
-
-game:GetService("ReplicatedStorage")["RE_DamageHumanoidNPC_Dungeon"]:FireServer(unpack(args))
 local args = {
     [1] = workspace.CandyCaveNPC.LavaKiller.Humanoid,
     [2] = 45,
@@ -11683,6 +11552,11 @@ game:GetService("ReplicatedStorage")["RE_DamageHumanoidNPC_Dungeon"]:FireServer(
         _G.l = false
     end
 end)
+AutoTab:CreateButton("ATTENTION PING", function() --the (arg) is if the checkbox is toggled or not
+
+      
+end)
+
 AutoTab:CreateToggle("Auto Sell", function(arg) --the (arg) is if the checkbox is toggled or not
 if arg then
         _G.l = true 
