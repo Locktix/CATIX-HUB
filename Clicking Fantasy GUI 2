@@ -11611,7 +11611,7 @@ end
         _G.e60= false
     end
 end)
-eggs2:CreateToggle("Aut Buy 750T Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs2:CreateToggle("Aut Buy 500T Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e70 = true 
         while wait(0) and _G.e70 do
@@ -11869,7 +11869,7 @@ end
         _G.e6= false
     end
 end)
-eggs:CreateToggle("Aut Buy 750T Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Aut Buy 500T Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e7 = true 
         while wait(0) and _G.e7 do
