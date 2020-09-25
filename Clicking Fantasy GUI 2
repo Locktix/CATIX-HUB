@@ -11630,7 +11630,7 @@ end
         _G.e70= false
     end
 end)
-eggs2:CreateToggle("Aut Buy 25Qd Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs2:CreateToggle("Aut Buy 10Qd Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e80 = true 
         while wait(0) and _G.e80 do
@@ -11888,7 +11888,7 @@ end
         _G.e7= false
     end
 end)
-eggs:CreateToggle("Aut Buy 25Qd Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Aut Buy 10Qd Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e8 = true 
         while wait(0) and _G.e8 do
