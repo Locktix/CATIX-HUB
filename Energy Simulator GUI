@@ -11684,22 +11684,15 @@ game:GetService("ReplicatedStorage")["RE_DamageHumanoidNPC_Dungeon"]:FireServer(
     end
 end)
 AutoTab:CreateToggle("Auto Sell", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.m = true 
-        while wait(0) and _G.m do
-   local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
-
-for i, v in next, Workspace:GetDescendants() do
-   if v.Name == 'SellArea2' then
-     v.CFrame = root.CFrame
-       wait()
-   
-  
-        end
-    end
+if arg then
+        _G.l = true 
+        while wait(0) and _G.l do
+            game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-147.101166, 10727.2861, -9.61042595)
+            wait(0)
+            game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-161.258835, 10727.2861, -33.8806152)
         end
     else
-        _G.m = false
+        _G.l = false
     end
 end)
 
