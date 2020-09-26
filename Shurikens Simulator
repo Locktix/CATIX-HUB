@@ -21,14 +21,14 @@ credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "a
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("bsoleil31FR#7202", function() --you dont need "arg" for a button
+credits:CreateButton("Im A Cat#7202", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("https://discord.gg/m9Nn3qd", function() --you dont need "arg" for a button
+
+credits:CreateButton("https://discord.gg/PKWXQae", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
-
 credits:CreateButton("Bebo Mods#1110", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
@@ -11375,6 +11375,22 @@ game:GetService("Players")["LocalPlayer"].PlayerGui.MainGui.AbilityShop.Interact
     end
 end)
 
+AutoTab:CreateToggle("All Exange Egg Blue To Orange", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c2 = true 
+        while wait(0) and _G.c2 do
+
+local args = {
+    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.PopUp.exchangeask.ok,
+}
+
+game:GetService("ReplicatedStorage").Exchangegogo:FireServer(unpack(args))
+        end
+    else
+        _G.c2= false
+    end
+end)
+
 
 AutoTab:CreateButton("auto CLick Software", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(nothing)
@@ -11405,17 +11421,7 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3723.06
         _G.bo2= false
  end
 end)
-AutoTab:CreateToggle("Auto Run Script", function(arg) --you dont need "arg" for a button
-    if arg then
-  _G.bo2 = true 
-        while wait(0) and _G.bo2 do
 
-end
-   
-    else
-        _G.bo2= false
- end
-end)
 eggs:CreateToggle("Eggs 1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.c2 = true 
@@ -11528,7 +11534,26 @@ game:GetService("Players")["LocalPlayer"].PlayerGui["machine13"].ReceivePet:Invo
         _G.n = false
     end
 end)
-
+eggs:CreateToggle("Eggs 14", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.o = true 
+        while wait(0) and _G.o do
+game:GetService("Players")["LocalPlayer"].PlayerGui["machine14"].ReceivePet:InvokeServer()
+        end
+    else
+        _G.o = false
+    end
+end)
+eggs:CreateToggle("Eggs 15", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.p = true 
+        while wait(0) and _G.p do
+game:GetService("Players")["LocalPlayer"].PlayerGui["machine15"].ReceivePet:InvokeServer()
+        end
+    else
+        _G.p = false
+    end
+end)
 teleports:CreateButton("VIP zONE", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-172.820267, 9.21469307, 108.442383)
 end)
@@ -11540,9 +11565,14 @@ end)
 teleports:CreateButton("Shurikens Shop 2", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3582.5603, -59.8264809, -25.9774284)
 end)
-
+teleports:CreateButton("Shurikens Shop 3", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3611.94922, 2541.17773, -3053.35645)
+end)
 teleports:CreateButton("Shurikens Reinforcement", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-22.8163586, 4.54502439, -19.8480854)
+end)
+teleports:CreateButton("Exange IsLAND", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2933.44189, 1849.24731, -157.39444)
 end)
 --| Anti KICK |
 local mt = getrawmetatable(game)
