@@ -25,14 +25,14 @@ credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "a
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("bsoleil31FR#7202", function() --you dont need "arg" for a button
+credits:CreateButton("Im A Cat#7202", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("https://discord.gg/m9Nn3qd", function() --you dont need "arg" for a button
+
+credits:CreateButton("https://discord.gg/PKWXQae", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
-
 credits:CreateButton("Bebo Mods#1110", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
@@ -11347,119 +11347,23 @@ end)
 
 
 
-eggs:CreateToggle("Auto Buy Island 65 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+
+eggs:CreateToggle("Auto Buy Island 66 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.b1 = true 
-        while wait(0) and _G.b1 do
+        _G.b90 = true 
+        while wait(0) and _G.b90 do
 
 local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["G Egg"],
+    [1] = game:GetService("ReplicatedStorage").Eggs["H Egg"],
     [2] = 9999,
 }
 
 game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
         end
     else
-        _G.b1= false
+        _G.b90= false
     end
 end)
-eggs:CreateToggle("Auto Buy Island 64 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.b = true 
-        while wait(0) and _G.b do
-
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["F Egg"],
-    [2] = 9999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-        end
-    else
-        _G.b= false
-    end
-end)
-eggs:CreateToggle("Auto Buy Island 63 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.b3 = true 
-        while wait(0) and _G.b3 do
-
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["E Egg"],
-    [2] = 9999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-        end
-    else
-        _G.b3= false
-    end
-end)
-eggs:CreateToggle("Auto Buy Island 62 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.b4 = true 
-        while wait(0) and _G.b4 do
-
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["D Egg"],
-    [2] = 9999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-        end
-    else
-        _G.b4= false
-    end
-end)
-eggs:CreateToggle("Auto Buy Island 61 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.b5 = true 
-        while wait(0) and _G.b5 do
-
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["C Egg"],
-    [2] = 9999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-        end
-    else
-        _G.b5= false
-    end
-end)
-eggs:CreateToggle("Auto Buy Island 60 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.b6 = true 
-        while wait(0) and _G.b6 do
-
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["B Egg"],
-    [2] = 9999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-        end
-    else
-        _G.b66= false
-    end
-end)
-eggs:CreateToggle("Auto Buy Island 59 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.b7 = true 
-        while wait(0) and _G.b7 do
-
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["A Egg"],
-    [2] = 9999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-        end
-    else
-        _G.b7= false
-    end
-end)
-
 eggs:CreateToggle("Auto Buy Island 65 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.b9 = true 
@@ -13022,6 +12926,8 @@ wait(24)
 
 end)
 teleports:CreateButton("Tp To All Islands", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(632.413513, 255097.563, -226.424744)
+wait(1)
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(640.958679, 248002.531, -204.051392)
 wait(1)
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(636.386597, 251554.75, -212.339081)
