@@ -11445,8 +11445,8 @@ end
 end)
 AutoTab:CreateToggle("Auto Buy Endurances", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.c = true 
-        while wait(0) and _G.c do
+        _G.c22 = true 
+        while wait(0) and _G.c22 do
 
 local args = {
     [1] = "PurchaseAll",
@@ -11457,13 +11457,13 @@ game:GetService("ReplicatedStorage").Network["Port1"]:FireServer(unpack(args))
 end
 
     else
-        _G.c = false
+        _G.c22 = false
     end
 end)
 AutoTab:CreateToggle("Auto Buy Ranks", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.c2 = true 
-        while wait(0) and _G.c2 do
+        _G.c33 = true 
+        while wait(0) and _G.c33 do
 local args = {
     [1] = "Purchase",
     [2] = "Rank",
@@ -11473,13 +11473,13 @@ game:GetService("ReplicatedStorage").Network["Port1"]:FireServer(unpack(args))
 end
 
     else
-        _G.c2 = false
+        _G.c33 = false
     end
 end)
 AutoTab:CreateToggle("Auto Buy Areas", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.c3 = true 
-        while wait(0) and _G.c3 do
+        _G.c44 = true 
+        while wait(0) and _G.c44 do
 local args = {
     [1] = "Area",
     [2] = workspace.Area2
@@ -11496,13 +11496,13 @@ game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
 end
 
     else
-        _G.c3 = false
+        _G.c44 = false
     end
 end)
 AutoTab:CreateToggle("Auto Collect Rewards", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.c33 = true 
- while wait(0) and _G.c33 do
+        _G.c43 = true 
+ while wait(0) and _G.c43 do
 local args = {
     [1] = "GroupReward",
 }
@@ -11518,7 +11518,7 @@ game:GetService("ReplicatedStorage").Network["Port1"]:FireServer(unpack(args))
 end
 
     else
-        _G.c33 = false
+        _G.c43 = false
     end
 end)
 
