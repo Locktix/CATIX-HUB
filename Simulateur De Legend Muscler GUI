@@ -11450,6 +11450,28 @@ end
         _G.c3 = false
     end
 end)
+AutoTab:CreateToggle("Auto Collect Rewards", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c33 = true 
+ while wait(0) and _G.c33 do
+local args = {
+    [1] = "GroupReward",
+}
+
+game:GetService("ReplicatedStorage").Network["Port1"]:FireServer(unpack(args))
+
+local args = {
+    [1] = "DailyReward",
+}
+
+game:GetService("ReplicatedStorage").Network["Port1"]:FireServer(unpack(args))
+
+end
+
+    else
+        _G.c33 = false
+    end
+end)
 
 AutoTab:CreateButton("Get All Gamepass", function() --the (arg) is if the checkbox is toggled or not
    
