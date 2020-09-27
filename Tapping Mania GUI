@@ -11899,6 +11899,22 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3794.28
         _G.e11= false
     end
 end)
+eggs:CreateToggle("Auto Buy Void Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e12 = true 
+        while wait(0) and _G.e12 do
+
+local args = {
+    [1] = "Void Egg",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-4345.12256, 15.0122156, -81.2337799)
+        end
+    else
+        _G.e12= false
+    end
+end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1.12185335, 3.26842809, 15.6704302)
 end)
@@ -11927,6 +11943,9 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3323.87
 end)
 teleports:CreateButton("Zone 8", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3795.34619, -4.37525606, 86.0550537, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end)
+teleports:CreateButton("Zone 9", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-4345.8374, 3.14858937, 114.848801)
 end)
 --| Anti KICK |
 local mt = getrawmetatable(game)
