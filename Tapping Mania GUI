@@ -5,7 +5,8 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/prezt
 local AutoTab = Library:CreateTab("Tapping-Mania GUI","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
 local eggs = Library:CreateTab("Auto Buy Eggs X3 FAST","things", true)
-local AutoTab1 = Library:CreateTab("Auto Rebirth","things", true)
+local AutoTab1 = Library:CreateTab("Auto Rebirth 1","things", true)
+local AutoTab2 = Library:CreateTab("Auto Rebirth 2","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
@@ -3471,7 +3472,100 @@ ColorsButton.MouseButton1Click:Connect(function()
 				local customColorsFrame = pickerFrame.CustomColors
 				local defaultButton = pickerFrame.Default
 				local cancelButton = pickerFrame.Cancel
-				local shade1Button = pickerFrame.Shade1
+				local shade
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+utton = pickerFrame.Shade1
 				local shade2Button = pickerFrame.Shade2
 				local shade3Button = pickerFrame.Shade3
 				local text1Button = pickerFrame.Text1
@@ -11712,6 +11806,51 @@ game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args
         end
     else
         _G.u= false
+    end
+end)
+AutoTab2:CreateToggle("Auto Rebirths X1B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.v = true 
+        while wait(0) and _G.v do
+
+local args = {
+    [1] = 1000000000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+        end
+    else
+        _G.v= false
+    end
+end)
+AutoTab2:CreateToggle("Auto Rebirths X5B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.w = true 
+        while wait(0) and _G.w do
+
+local args = {
+    [1] = 5000000000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+        end
+    else
+        _G.w= false
+    end
+end)
+AutoTab2:CreateToggle("Auto Rebirths X10B", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.x = true 
+        while wait(0) and _G.x do
+
+local args = {
+    [1] = 10000000000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+        end
+    else
+        _G.x= false
     end
 end)
 eggs:CreateToggle("Auto Buy Basic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
