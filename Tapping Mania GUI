@@ -12013,6 +12013,7 @@ eggs:CreateToggle("Auto Buy Angelic Eggs", function(arg) --the (arg) is if the c
 
 local args = {
     [1] = "Angelic Egg",
+    [2] = true,
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
@@ -12029,6 +12030,7 @@ eggs:CreateToggle("Auto Buy Galactic Egg", function(arg) --the (arg) is if the c
 
 local args = {
     [1] = "Galactic Egg",
+    [2] = true,
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
@@ -12045,6 +12047,7 @@ eggs:CreateToggle("Auto Buy Void Egg", function(arg) --the (arg) is if the check
 
 local args = {
     [1] = "Void Egg",
+    [2] = true,
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
