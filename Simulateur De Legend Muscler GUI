@@ -11492,7 +11492,24 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
+local args = {
+    [1] = "Area",
+    [2] = workspace.Area4
+}
 
+game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
+local args = {
+    [1] = "Area",
+    [2] = workspace.Area5
+}
+
+game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
+local args = {
+    [1] = "Area",
+    [2] = workspace.Area6
+}
+
+game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
 end
 
     else
