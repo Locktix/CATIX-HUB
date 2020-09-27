@@ -37,6 +37,54 @@ AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a bu
 game:GetService("CoreGui").uiui:Destroy()
 end)
 
+AutoTab:CreateToggle("Auto Farm Speed", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c = true 
+        while wait(0) and _G.c do
+            local args = {
+    [1] = "Running"
+}
+
+game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
+end
+
+    else
+        _G.c = false
+    end
+end)
+
+AutoTab:CreateToggle("Auto Farm Vitality", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c = true 
+        while wait(0) and _G.c do
+            local args = {
+    [1] = "Vitality"
+}
+
+game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
+end
+
+    else
+        _G.c = false
+    end
+end)
+
+AutoTab:CreateToggle("Auto Farm Punching", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c = true 
+        while wait(0) and _G.c do
+            local args = {
+    [1] = "Punching",
+    [2] = workspace.PowerTrainingFolder.Model
+}
+
+game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
+end
+
+    else
+        _G.c = false
+    end
+end)
 
 MISC:CreateButton("🎬NO CLIP Press(E)🎬", function() --the (arg) is if the checkbox is toggled or not
     _G.NO2 = true 
