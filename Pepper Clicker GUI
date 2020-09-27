@@ -11846,7 +11846,22 @@ game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
         _G.r= false
     end
 end)
+eggs:CreateToggle("Auto Buy Monochrome Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.s = true 
+        while wait(0) and _G.s do
+   
+local args = {
+    [1] = 1,
+    [2] = workspace["Pet Eggs"]["Monochrome Egg"].Data,
+}
 
+game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
+end
+    else
+        _G.s= false
+    end
+end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-116.557777, 140.149994, -29.0575809)
 end)
@@ -11869,6 +11884,9 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(704.1973
 end)
 teleports:CreateButton("Zone 6", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1084.11951, 160.816147, 425.903534)
+end)
+teleports:CreateButton("Zone 7", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1256.67371, 189.978806, -123.864616)
 end)
 --| Anti KICK |
 local mt = getrawmetatable(game)
