@@ -11689,8 +11689,8 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-347.275
 end)
 eggs:CreateToggle("Auto Buy Graveyard Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.f96 = true 
-        while wait(0) and _G.f96 do
+        _G.f967 = true 
+        while wait(0) and _G.f967 do
 local args = {
     [1] = "Graveyard",
     [2] = "Triple",
@@ -11700,7 +11700,23 @@ game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-260.155334, 26.5245438, -1639.29651, 1, 0, 0, 0, 1, 0, 0, 0, 1)
         end
     else
-        _G.f96= false
+        _G.f967= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Crystal Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f97 = true 
+        while wait(0) and _G.f97 do
+local args = {
+    [1] = "Crystal",
+    [2] = "Triple",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-308.080322, 30.8745441, -2079.42139, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        end
+    else
+        _G.f97= false
     end
 end)
 eggs3:CreateToggle("Auto Buy 1K Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
@@ -11878,6 +11894,22 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-260.155
         end
     else
         _G.f95= false
+    end
+end)
+eggs3:CreateToggle("Auto Buy Crystal Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f96 = true 
+        while wait(0) and _G.f96 do
+local args = {
+    [1] = "Crystal",
+    [2] = "Single",
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-308.080322, 30.8745441, -2079.42139, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        end
+    else
+        _G.f96= false
     end
 end)
 eggs1:CreateToggle("Auto Buy Rebirths x1", function(arg) --the (arg) is if the checkbox is toggled or not
@@ -12491,6 +12523,9 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-228.822
 end)
 teleports:CreateButton("Zone 6", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-683.760681, 10.0784931, -931.656738, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+end)
+teleports:CreateButton("Zone 7", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-265.378296, 28.8387814, -2081.08447, -1, 0, 0, 0, 1, 0, 0, 0, -1)
 end)
 local mt = getrawmetatable(game)
 local old = mt.__namecall
