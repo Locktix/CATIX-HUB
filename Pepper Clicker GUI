@@ -11522,6 +11522,21 @@ me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, 
         _G.e9= false
     end
 end)
+AutoTab:CreateToggle("Auto Tp To Dark chest", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e10 = true 
+        while wait(0) and _G.e10 do
+   
+
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").ChestSpawns.Dark
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+        end
+    else
+        _G.e10= false
+    end
+end)
 rebirths:CreateToggle("Auto Buy Rebirths x1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e = true 
