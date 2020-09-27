@@ -3,10 +3,11 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
 local AutoTab = Library:CreateTab("Clicking-Fantasy GUI","things", true)
+local Rebirths = Library:CreateTab("Auto Buy Rebirths 1","things", true)
+local Rebirths2 = Library:CreateTab("Auto Buy Rebirths 2","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
 local eggs2 = Library:CreateTab("Auto Buy Eggs X1","things", true)
 local eggs = Library:CreateTab("Auto Buy Eggs X3","things", true)
-local Rebirths = Library:CreateTab("Auto Buy Rebirths","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
@@ -11503,6 +11504,25 @@ end
         _G.d2= false
     end
 end)
+eggs2:CreateToggle("Aut Buy 100K Eggs (Limited)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e999 = true 
+        while wait(0) and _G.e999 do
+
+
+local args = {
+    [1] = "100K Egg",
+    [2] = "Buy1",
+}
+
+game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-244.710327, 56.6359177, -16.3020763)
+end
+
+    else
+        _G.e999= false
+    end
+end)
 eggs2:CreateToggle("Aut Buy 300K Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e99 = true 
@@ -11696,7 +11716,7 @@ eggs2:CreateToggle("Aut Buy 200Qnt Eggs", function(arg) --the (arg) is if the ch
 
 local args = {
     [1] = "Gumdrop Egg",
-    [2] = "Buy3",
+    [2] = "Buy1",
 }
 
 game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
@@ -11716,7 +11736,7 @@ eggs2:CreateToggle("Aut Buy 2Sx Eggs", function(arg) --the (arg) is if the check
 
 local args = {
     [1] = "Candy Craver Egg",
-    [2] = "Buy3",
+    [2] = "Buy1",
 }
 
 game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
@@ -11725,6 +11745,43 @@ end
 
     else
         _G.e120= false
+    end
+end)
+eggs2:CreateToggle("Aut Buy 25Sx Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e13 = true 
+        while wait(0) and _G.e13 do
+
+local args = {
+    [1] = "Geary Egg",
+    [2] = "Buy1",
+}
+
+game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-493.98822, 2133.36084, 641.495178)
+end
+
+    else
+        _G.e13= false
+    end
+end)
+eggs2:CreateToggle("Aut Buy 450Sx Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e14 = true 
+        while wait(0) and _G.e14 do
+
+
+local args = {
+    [1] = "Robotic Egg",
+    [2] = "Buy1",
+}
+
+game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-501.77948, 2133.36011, 660.258179)
+end
+
+    else
+        _G.e14= false
     end
 end)
 eggs:CreateToggle("Aut Buy 500 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
@@ -11759,6 +11816,25 @@ end
 
     else
         _G.d= false
+    end
+end)
+eggs:CreateToggle("Aut Buy 100K Eggs (Limited)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e100 = true 
+        while wait(0) and _G.e100 do
+
+
+local args = {
+    [1] = "100K Egg",
+    [2] = "Buy3",
+}
+
+game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-244.710327, 56.6359177, -16.3020763)
+end
+
+    else
+        _G.e100= false
     end
 end)
 eggs:CreateToggle("Aut Buy 300K Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
@@ -11985,7 +12061,43 @@ end
         _G.e12= false
     end
 end)
+eggs:CreateToggle("Aut Buy 25Sx Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e13 = true 
+        while wait(0) and _G.e13 do
 
+local args = {
+    [1] = "Geary Egg",
+    [2] = "Buy3",
+}
+
+game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-493.98822, 2133.36084, 641.495178)
+end
+
+    else
+        _G.e13= false
+    end
+end)
+eggs:CreateToggle("Aut Buy 450Sx Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e14 = true 
+        while wait(0) and _G.e14 do
+
+
+local args = {
+    [1] = "Robotic Egg",
+    [2] = "Buy3",
+}
+
+game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-501.77948, 2133.36011, 660.258179)
+end
+
+    else
+        _G.e14= false
+    end
+end)
 Rebirths:CreateToggle("Auto Super Rebirths", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.f2 = true 
@@ -12302,7 +12414,7 @@ end
         _G.f19 = false
     end
 end)
-Rebirths:CreateToggle("Aut Buy Rebirths x10M", function(arg) --the (arg) is if the checkbox is toggled or not
+Rebirths2:CreateToggle("Aut Buy Rebirths x10M", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.f20 = true 
         while wait(0) and _G.f20 do
@@ -12316,6 +12428,86 @@ end
 
     else
         _G.f20 = false
+    end
+end)
+Rebirths2:CreateToggle("Aut Buy Rebirths x20M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f21 = true 
+        while wait(0) and _G.f21 do
+local args = {
+    [1] = 20000000,
+}
+
+game:GetService("ReplicatedStorage").Events.Rebirth:InvokeServer(unpack(args))
+
+end
+
+    else
+        _G.f21 = false
+    end
+end)
+Rebirths2:CreateToggle("Aut Buy Rebirths x50M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f22 = true 
+        while wait(0) and _G.f22 do
+local args = {
+    [1] = 50000000,
+}
+
+game:GetService("ReplicatedStorage").Events.Rebirth:InvokeServer(unpack(args))
+
+end
+
+    else
+        _G.f22 = false
+    end
+end)
+Rebirths2:CreateToggle("Aut Buy Rebirths x100M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f23 = true 
+        while wait(0) and _G.f23 do
+local args = {
+    [1] = 100000000,
+}
+
+game:GetService("ReplicatedStorage").Events.Rebirth:InvokeServer(unpack(args))
+
+end
+
+    else
+        _G.f23 = false
+    end
+end)
+Rebirths2:CreateToggle("Aut Buy Rebirths x250M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f24 = true 
+        while wait(0) and _G.f24 do
+local args = {
+    [1] = 250000000,
+}
+
+game:GetService("ReplicatedStorage").Events.Rebirth:InvokeServer(unpack(args))
+
+end
+
+    else
+        _G.f24 = false
+    end
+end)
+Rebirths2:CreateToggle("Aut Buy Rebirths x500M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f25 = true 
+        while wait(0) and _G.f25 do
+local args = {
+    [1] = 500000000,
+}
+
+game:GetService("ReplicatedStorage").Events.Rebirth:InvokeServer(unpack(args))
+
+end
+
+    else
+        _G.f25 = false
     end
 end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
@@ -12341,6 +12533,10 @@ end)
 teleports:CreateButton("Candy", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1824, 4501.94189, -6.3001461)
 end)
+teleports:CreateButton("Robot", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-489.961731, 2133.36084, 621.61792)
+end)
+
 --| Anti KICK |
 local mt = getrawmetatable(game)
 local old = mt.__namecall
