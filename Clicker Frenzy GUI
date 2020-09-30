@@ -25,14 +25,14 @@ credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "a
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("bsoleil31FR#7202", function() --you dont need "arg" for a button
+credits:CreateButton("Im A Cat#7202", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("https://discord.gg/m9Nn3qd", function() --you dont need "arg" for a button
+
+credits:CreateButton("https://discord.gg/PKWXQae", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
-
 credits:CreateButton("Bebo Mods#1110", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
@@ -11951,6 +11951,20 @@ game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
         _G.e11= false
     end
 end)
+eggs:CreateToggle("Auto Buy Dominus Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e12 = true 
+        while wait(0) and _G.e12 do
+local args = {
+    [1] = "dominus",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+        end
+    else
+        _G.e12= false
+    end
+end)
 eggs2:CreateToggle("Auto Buy Basic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e12 = true 
@@ -12102,7 +12116,21 @@ local args = {
 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.PurchaseTriple:FireServer(unpack(args))
         end
     else
-        _G.e2= false
+        _G.e22= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Dominus Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e23 = true 
+        while wait(0) and _G.e23 do
+local args = {
+    [1] = "dominus",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.PurchaseTriple:FireServer(unpack(args))
+        end
+    else
+        _G.e23= false
     end
 end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
