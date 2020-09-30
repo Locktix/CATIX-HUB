@@ -11831,6 +11831,22 @@ game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(ar
         _G.zf77 = false
     end
 end)
+eggs:CreateToggle("Auto Buy Alien Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.zf55 = true 
+        while wait() and _G.zf55 do
+local args = {
+    [1] = "8",
+    [2] = 3,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.zf55 = false
+    end
+end)
 eggs:CreateToggle("Auto Buy 1M Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
 _G.zf4 = true 
