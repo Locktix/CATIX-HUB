@@ -12028,7 +12028,9 @@ end)
 teleports:CreateButton("Zone 5", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2407.52832, -110.756927, -213.819214)
 end)
-
+teleports:CreateButton("Zone 6", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(3460.11597, -107.792664, -176.395325)
+end)
 --| Anti KICK |
 local mt = getrawmetatable(game)
 local old = mt.__namecall
