@@ -3,9 +3,9 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
 local AutoTab = Library:CreateTab("RPG-World-2 GUI","things", true)
+local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
 local mobs = Library:CreateTab("Auto Kill Mobs","things", true)
 local mobs2 = Library:CreateTab("Auto Kill Bosses","things", true)
-local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
@@ -11801,7 +11801,46 @@ end
     end
 end)
 
+eggs:CreateToggle("Auto Buy Sonic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e22= true 
+        while wait(0) and _G.e22 do
 
+
+local args = {
+    [1] = {
+        [1] = "Toy",
+        [2] = "Sonic",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.Buy:FireServer(unpack(args))
+end
+
+    else
+        _G.e22 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Tofi Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e23= true 
+        while wait(0) and _G.e23 do
+
+
+local args = {
+    [1] = {
+        [1] = "Toy",
+        [2] = "Tofi",
+    },
+}
+
+game:GetService("ReplicatedStorage").Events.Buy:FireServer(unpack(args))
+end
+
+    else
+        _G.e23 = false
+    end
+end)
 mobs:CreateToggle("Tp To Rusty Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.f = true 
