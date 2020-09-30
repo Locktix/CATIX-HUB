@@ -4,6 +4,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/prezt
 
 local AutoTab = Library:CreateTab("Simulateur de légende muscler GUI","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
+local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
@@ -11510,6 +11511,48 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
+local args = {
+    [1] = "Area",
+    [2] = workspace.Area7
+}
+
+game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
+local args = {
+    [1] = "Area",
+    [2] = workspace.Area8
+}
+
+game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
+local args = {
+    [1] = "Area",
+    [2] = workspace.Area9
+}
+
+game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
+local args = {
+    [1] = "Area",
+    [2] = workspace.Area10
+}
+
+game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
+local args = {
+    [1] = "Area",
+    [2] = workspace.Area11
+}
+
+game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
+local args = {
+    [1] = "Area",
+    [2] = workspace.Area12
+}
+
+game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
+local args = {
+    [1] = "Area",
+    [2] = workspace.Area13
+}
+
+game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
 end
 
     else
@@ -11538,7 +11581,187 @@ end
         _G.c43 = false
     end
 end)
+eggs:CreateToggle("Auto Delete Common Pets", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.dd9 = true 
+ while wait(0) and _G.dd9 do
 
+local args = {
+    [1] = "DeleteRarity",
+    [2] = "Common"
+}
+
+game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
+
+
+
+end
+
+    else
+        _G.dd9 = false
+    end
+end)
+eggs:CreateToggle("Auto Delete Uncommon Pets", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.dd8 = true 
+ while wait(0) and _G.dd8 do
+
+local args = {
+    [1] = "DeleteRarity",
+    [2] = "Uncommon"
+}
+
+game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
+
+
+
+
+end
+
+    else
+        _G.dd8 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Tier 1 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.dd = true 
+ while wait(0) and _G.dd do
+
+local args = {
+    [1] = "PurchaseCrate",
+    [2] = "Tier1",
+    [3] = 1
+}
+
+game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
+
+
+end
+
+    else
+        _G.dd = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Tier 2 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.dd2 = true 
+ while wait(0) and _G.dd2 do
+
+local args = {
+    [1] = "PurchaseCrate",
+    [2] = "Tier2",
+    [3] = 1
+}
+
+game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
+
+
+end
+
+    else
+        _G.dd2 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Tier 3 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.dd3 = true 
+ while wait(0) and _G.dd3 do
+
+local args = {
+    [1] = "PurchaseCrate",
+    [2] = "Tier3",
+    [3] = 1
+}
+
+game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
+
+
+end
+
+    else
+        _G.dd3 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Tier 4 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.dd4 = true 
+ while wait(0) and _G.dd4 do
+
+local args = {
+    [1] = "PurchaseCrate",
+    [2] = "Tier4",
+    [3] = 1
+}
+
+game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
+
+
+end
+
+    else
+        _G.dd4 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Tier 5 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.dd5 = true 
+ while wait(0) and _G.dd5 do
+
+local args = {
+    [1] = "PurchaseCrate",
+    [2] = "Tier5",
+    [3] = 1
+}
+
+game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
+
+
+end
+
+    else
+        _G.dd5 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Tier 6 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.dd6 = true 
+ while wait(0) and _G.dd6 do
+
+local args = {
+    [1] = "PurchaseCrate",
+    [2] = "Tier6",
+    [3] = 1
+}
+
+game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
+
+
+end
+
+    else
+        _G.dd6 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Tier 7 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.dd7 = true 
+ while wait(0) and _G.dd7 do
+
+local args = {
+    [1] = "PurchaseCrate",
+    [2] = "Tier7",
+    [3] = 1
+}
+
+game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
+
+
+end
+
+    else
+        _G.dd7 = false
+    end
+end)
 AutoTab:CreateButton("Get All Gamepass", function() --the (arg) is if the checkbox is toggled or not
    
 local gamepass1 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.InfiniteEnergy
