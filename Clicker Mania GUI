@@ -8,7 +8,17 @@ local teleports = Library:CreateTab("Teleports","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
+teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(22.0029011, 34.0935287, 52.2247543)
+end)
 
+teleports:CreateButton("Zone 1", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-166.130981, 572.966125, 233.588089)
+end)
+
+teleports:CreateButton("Zone 2", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-162.220505, 1656.36621, 253.88739)
+end)
 credits:CreateButton("Our Discords", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
@@ -11360,7 +11370,7 @@ end)
 AutoTab:CreateToggle("Auto Buy Upgrades", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.a = true 
-        while wait(0.1) and _G.a do
+        while wait(0) and _G.a do
 
 
 local args = {
@@ -11654,17 +11664,7 @@ end
     end
 end)
 
-teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(22.0029011, 34.0935287, 52.2247543)
-end)
 
-teleports:CreateButton("Zone 19", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1525.88171, 27.4269829, -5677.54443)
-end)
-
-teleports:CreateButton("Zone 20", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1689.25916, 27.4623146, -3887.64136)
-end)
 
 --| Anti KICK |
 local mt = getrawmetatable(game)
