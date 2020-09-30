@@ -11637,7 +11637,10 @@ end
         _G.m = false
     end
 end)
-eggs:CreateToggle("Auto Buy 10K Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Go To Eggs To Work", function(arg) --the (arg) is if the checkbox is toggled or not
+
+end)
+eggs:CreateToggle("Auto Buy Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.n = true 
         while wait(0.1) and _G.n do
@@ -11651,34 +11654,7 @@ end
         _G.n = false
     end
 end)
-eggs:CreateToggle("Auto Buy 300K Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.o = true 
-        while wait(0.1) and _G.o do
 
-
-workspace.Tiers.Model.RemoteEvent:FireServer()
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(4.66455841, 34.7041779, 7.18527079)
-end
-
-    else
-        _G.o = false
-    end
-end)
-eggs:CreateToggle("Auto Buy 4M Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.p = true 
-        while wait(0.1) and _G.p do
-
-
-workspace.Tiers.Model.RemoteEvent:FireServer()
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(71.8049164, 34.0575485, 29.1164608)
-end
-
-    else
-        _G.p= false
-    end
-end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(22.0029011, 34.0935287, 52.2247543)
 end)
