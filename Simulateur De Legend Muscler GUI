@@ -38,6 +38,22 @@ AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a bu
 game:GetService("CoreGui").uiui:Destroy()
 end)
 
+eggs:CreateToggle("Auto Evolve Pets", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c333= true 
+        while wait(0) and _G.c333 do
+
+local args = {
+    [1] = "Evolve",
+}
+
+game:GetService("ReplicatedStorage").Network["Port1"]:FireServer(unpack(args))
+end
+
+    else
+        _G.c333 = false
+    end
+end)
 AutoTab:CreateToggle("Auto Farm Speed", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.c1= true 
