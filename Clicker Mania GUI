@@ -4,21 +4,10 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/prezt
 
 local AutoTab = Library:CreateTab("Clicker-Mania GUI","things", true)
 local rebirths = Library:CreateTab("Auto Buy Rebirths","things", true)
-local teleports = Library:CreateTab("Teleports","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
-teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(22.0029011, 34.0935287, 52.2247543)
-end)
 
-teleports:CreateButton("Zone 1", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-166.130981, 572.966125, 233.588089)
-end)
-
-teleports:CreateButton("Zone 2", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-162.220505, 1656.36621, 253.88739)
-end)
 credits:CreateButton("Our Discords", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
