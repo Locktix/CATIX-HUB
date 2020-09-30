@@ -4,7 +4,6 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/prezt
 
 local AutoTab = Library:CreateTab("Clicker-Mania GUI","things", true)
 local rebirths = Library:CreateTab("Auto Buy Rebirths","things", true)
-local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
