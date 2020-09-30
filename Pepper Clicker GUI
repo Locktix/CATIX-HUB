@@ -11537,6 +11537,21 @@ me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, 
         _G.e10= false
     end
 end)
+AutoTab:CreateToggle("Auto Tp To Heaven chest", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e11 = true 
+        while wait(0) and _G.e11 do
+   
+
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").ChestSpawns.Heaven
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+        end
+    else
+        _G.e11= false
+    end
+end)
 rebirths:CreateToggle("Auto Buy Rebirths x1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e = true 
@@ -11877,6 +11892,22 @@ end
         _G.s= false
     end
 end)
+eggs:CreateToggle("Auto Buy Heaven Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.t = true 
+        while wait(0) and _G.t do
+
+local args = {
+    [1] = 1,
+    [2] = workspace["Pet Eggs"]["Heavenly Egg"].Data,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
+end
+    else
+        _G.t= false
+    end
+end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-116.557777, 140.149994, -29.0575809)
 end)
@@ -11902,6 +11933,9 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1084.11
 end)
 teleports:CreateButton("Zone 7", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1256.67371, 189.978806, -123.864616)
+end)
+teleports:CreateButton("Zone 8", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-116.547157, 222.748901, 696.697754)
 end)
 --| Anti KICK |
 local mt = getrawmetatable(game)
