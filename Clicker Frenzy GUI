@@ -12095,11 +12095,12 @@ eggs2:CreateToggle("Auto Buy Blocks Eggs", function(arg) --the (arg) is if the c
     if arg then
         _G.e21 = true 
         while wait(0) and _G.e21 do
+
 local args = {
-    [1] = "blocks",
+    [1] = "blocky",
 }
 
-game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.PurchaseTriple:FireServer(unpack(args))
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
         end
     else
         _G.e21= false
