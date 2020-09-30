@@ -11441,7 +11441,23 @@ end
         _G.a = false
     end
 end)
+AutoTab:CreateToggle("Auto Ascensions", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.a22 = true 
+        while wait(0) and _G.a22 do
 
+local args = {
+    [1] = "Ascension"
+}
+
+game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
+
+end
+
+    else
+        _G.a22 = false
+    end
+end)
 AutoTab:CreateToggle("Auto Buy Strenghts", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.b = true 
@@ -11545,30 +11561,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
-local args = {
-    [1] = "Area",
-    [2] = workspace.Area10
-}
-
-game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
-local args = {
-    [1] = "Area",
-    [2] = workspace.Area11
-}
-
-game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
-local args = {
-    [1] = "Area",
-    [2] = workspace.Area12
-}
-
-game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
-local args = {
-    [1] = "Area",
-    [2] = workspace.Area13
-}
-
-game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
+wait(0)
 end
 
     else
