@@ -11730,7 +11730,7 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-752.678
         _G.f98= false
     end
 end)
-eggs3:CreateToggle("Auto Buy Wizard Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Auto Buy Wizard Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.f97 = true 
         while wait(0) and _G.f97 do
@@ -11741,7 +11741,7 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(421.5137
         _G.f97= false
     end
 end)
-eggs3:CreateToggle("Auto Buy Rainbow Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Auto Buy Rainbow Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.f97 = true 
         while wait(0) and _G.f97 do
