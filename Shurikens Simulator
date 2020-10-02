@@ -11409,13 +11409,13 @@ end)
 
 
 
-AutoTab:CreateToggle("Sell x2", function(arg) --you dont need "arg" for a button
+AutoTab:CreateToggle("Auto Sell VIP", function(arg) --you dont need "arg" for a button
     if arg then
   _G.bo2 = true 
         while wait(0) and _G.bo2 do
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3736.99976, 353.451599, -1346.58679)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-73.7772217, 46.7321625, -290.477722)
 wait(0)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3723.06055, 353.45163, -1359.41016)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-68.8837357, 32.9820442, -230.32016)
    end
     else
         _G.bo2= false
@@ -11555,7 +11555,7 @@ game:GetService("Players")["LocalPlayer"].PlayerGui["machine15"].ReceivePet:Invo
     end
 end)
 teleports:CreateButton("VIP zONE", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-172.820267, 9.21469307, 108.442383)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-74.621254, 39.6498089, -210.927582)
 end)
 
 teleports:CreateButton("Shurikens Shop 1", function() --you dont need "arg" for a button
@@ -11567,6 +11567,9 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3582.56
 end)
 teleports:CreateButton("Shurikens Shop 3", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3611.94922, 2541.17773, -3053.35645)
+end)
+teleports:CreateButton("Shurikens Shop 4", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1023.30035, 3404.86987, -2138.3313)
 end)
 teleports:CreateButton("Shurikens Reinforcement", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-22.8163586, 4.54502439, -19.8480854)
