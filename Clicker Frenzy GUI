@@ -11489,6 +11489,29 @@ game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.UpgradeService.BuyU
         _G.bd= false
     end
 end)
+AutoTab:CreateToggle("Auto Kill Boss", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bdc = true 
+        while wait(0) and _G.bdc do
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.CursorCannonService.FireBoss:FireServer("Karen Keyboard")
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.CursorCannonService.FireBoss:FireServer("Karen Keyboard")
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.CursorCannonService.FireBoss:FireServer("Karen Keyboard")
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.CursorCannonService.FireBoss:FireServer("Karen Keyboard")
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.CursorCannonService.FireBoss:FireServer("Karen Keyboard")
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.CursorCannonService.FireBoss:FireServer("Karen Keyboard")
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.CursorCannonService.FireBoss:FireServer("Karen Keyboard")
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.CursorCannonService.FireBoss:FireServer("Karen Keyboard")
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.CursorCannonService.FireBoss:FireServer("Karen Keyboard")
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.CursorCannonService.FireBoss:FireServer("Karen Keyboard")
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.CursorCannonService.FireBoss:FireServer("Karen Keyboard")
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.CursorCannonService.FireBoss:FireServer("Karen Keyboard")
+
+        end
+    else
+        _G.bdc= false
+    end
+end)
 rebirths:CreateToggle("Auto Rebirths x1", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.c = true 
