@@ -11730,6 +11730,17 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-752.678
         _G.f98= false
     end
 end)
+eggs3:CreateToggle("Auto Buy Wizard Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f97 = true 
+        while wait(0) and _G.f97 do
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Wizard","Triple")
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(421.513702, 13.1108227, -2978.21558, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        end
+    else
+        _G.f97= false
+    end
+end)
 eggs3:CreateToggle("Auto Buy Rainbow Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.f97 = true 
@@ -11951,6 +11962,17 @@ eggs3:CreateToggle("Auto Buy Rainbow Eggs", function(arg) --the (arg) is if the 
         while wait(0) and _G.f97 do
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Rainbow","Single")
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-273.986237, 5.1108222, -2499.21558, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        end
+    else
+        _G.f97= false
+    end
+end)
+eggs3:CreateToggle("Auto Buy Wizard Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f97 = true 
+        while wait(0) and _G.f97 do
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Wizard","Single")
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(421.513702, 13.1108227, -2978.21558, 1, 0, 0, 0, 1, 0, 0, 0, 1)
         end
     else
         _G.f97= false
