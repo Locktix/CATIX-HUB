@@ -11924,7 +11924,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new-260.155334, 26.5245438, -1639.29651, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-260.155334, 26.5245438, -1639.29651, 1, 0, 0, 0, 1, 0, 0, 0, 1)
         end
     else
         _G.f95= false
