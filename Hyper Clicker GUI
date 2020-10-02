@@ -11522,6 +11522,12 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes.BuyPotion:FireServer(unpack(args))
+game:GetService("ReplicatedStorage").Remotes.BuyPotion:FireServer("QuintupleClicks",1)
+game:GetService("ReplicatedStorage").Remotes.BuyPotion:FireServer("QuintupleClicks",10)
+game:GetService("ReplicatedStorage").Remotes.BuyPotion:FireServer("QuintupleClicks",100)
+game:GetService("ReplicatedStorage").Remotes.BuyPotion:FireServer("DoubleRebirths",1)
+game:GetService("ReplicatedStorage").Remotes.BuyPotion:FireServer("DoubleRebirths",10)
+game:GetService("ReplicatedStorage").Remotes.BuyPotion:FireServer("DoubleRebirths",100)
         end
     else
         _G.e= false
