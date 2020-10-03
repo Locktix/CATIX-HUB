@@ -11988,6 +11988,34 @@ game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
         _G.e12= false
     end
 end)
+eggs:CreateToggle("Auto Buy Infinity Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e24 = true 
+        while wait(0) and _G.e24 do
+local args = {
+    [1] = "infinity",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+        end
+    else
+        _G.e24= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Future Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e25 = true 
+        while wait(0) and _G.e25 do
+local args = {
+    [1] = "future",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+        end
+    else
+        _G.e25= false
+    end
+end)
 eggs2:CreateToggle("Auto Buy Basic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e12 = true 
@@ -12157,6 +12185,34 @@ game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
         _G.e23= false
     end
 end)
+eggs2:CreateToggle("Auto Buy Infinity Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e24 = true 
+        while wait(0) and _G.e24 do
+local args = {
+    [1] = "infinity",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.PurchaseTriple:FireServer(unpack(args))
+        end
+    else
+        _G.e24= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Future Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e25 = true 
+        while wait(0) and _G.e25 do
+local args = {
+    [1] = "future",
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.PurchaseTriple:FireServer(unpack(args))
+        end
+    else
+        _G.e25= false
+    end
+end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(620.58606, 8.32451057, -332.265503)
 end)
@@ -12191,6 +12247,15 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2926.386
 end)
 teleports:CreateButton("Space", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2448.99121, 5.32753468, 2872.22144)
+end)
+teleports:CreateButton("Dominus", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1023.47998, 6.72286177, 2254.02856)
+end)
+teleports:CreateButton("Infinity", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2274.23096, 7.05264902, -1765.9126)
+end)
+teleports:CreateButton("Future", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1055.64624, 6.59449387, 519.587219)
 end)
 --| Anti KICK |
 local mt = getrawmetatable(game)
