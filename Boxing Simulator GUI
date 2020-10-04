@@ -11815,6 +11815,46 @@ game:GetService("ReplicatedStorage").Events.BuyEgg:FireServer(unpack(args))
         _G.i= false
     end
 end)
+AutoTab:CreateToggle("Auto Tp To Flags", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.h22 = true 
+        while wait(0) and _G.h22 do
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(16592.4922, 856.384277, -35246.2578)
+wait(8)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(16582.7676, 1635.49744, -35272.9727)
+wait(8)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(16433.5859, 3068.29565, -35392.6758)
+wait(8)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(16660.6504, 2093.39795, -35011.707)
+wait(8)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(16286.1934, 855.118164, -35090.2695)
+wait(8)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(16594.5918, 855.139099, -35240.7031)
+wait(8)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(16369.2998, 855.118103, -35477.2695)
+wait(8)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(16114.2422, 856.023132, -35352.5508)
+wait(8)
+        end
+    else
+        _G.h22= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Basic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.i = true 
+        while wait(0) and _G.i do
+ local args = {
+    [1] = "basic",
+    [2] = false,
+}
+
+game:GetService("ReplicatedStorage").Events.BuyEgg:FireServer(unpack(args))
+        end
+    else
+        _G.i= false
+    end
+end)
 eggs:CreateToggle("Auto Buy Uncommon Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.i2 = true 
