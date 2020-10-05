@@ -7,7 +7,7 @@ local AutoTab = Library:CreateTab("Oofing Legends GUI","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
 local rebirths = Library:CreateTab("Auto Rebirth 1","things", true)
 local rebirths2 = Library:CreateTab("Auto Rebirth,2","things", true)
-local eggs = Library:CreateTab("Auto Buy Eggs x3","things", true)
+local eggs = Library:CreateTab("Autof Buy Eggs x3","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
@@ -11514,7 +11514,21 @@ game:GetService("ReplicatedStorage").RemoteEvents.EggOpen:FireServer(unpack(args
         _G.x2= false
     end
 end)
+eggs:CreateToggle("Auto Buy Halloween Eggs X3", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.x3= true 
+        while wait(0) and _G.x3 do
+local args = {
+    [1] = "Halloween",
+    [2] = "R",
+}
 
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpen:FireServer(unpack(args))
+        end
+    else
+        _G.x3= false
+    end
+end)
 AutoTab:CreateToggle("Auto Craft Pets", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.b3 = true 
