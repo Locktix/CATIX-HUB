@@ -11522,6 +11522,12 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes.BuyPotion:FireServer(unpack(args))
+game:GetService("ReplicatedStorage").Remotes.BuyPotion:FireServer("QuintupleClicks",1)
+game:GetService("ReplicatedStorage").Remotes.BuyPotion:FireServer("QuintupleClicks",10)
+game:GetService("ReplicatedStorage").Remotes.BuyPotion:FireServer("QuintupleClicks",100)
+game:GetService("ReplicatedStorage").Remotes.BuyPotion:FireServer("DoubleRebirths",1)
+game:GetService("ReplicatedStorage").Remotes.BuyPotion:FireServer("DoubleRebirths",10)
+game:GetService("ReplicatedStorage").Remotes.BuyPotion:FireServer("DoubleRebirths",100)
         end
     else
         _G.e= false
@@ -11537,7 +11543,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-723.669678, 11.7282162, -931.755554)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-975.710266, 155.156464, -930.710876)
         end
     else
         _G.f= false
@@ -11553,7 +11559,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-749.064758, 11.6513672, -929.939209)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-997.323547, 155.179626, -931.932617)
         end
     else
         _G.f5= false
@@ -11569,7 +11575,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-832.969971, 11.3529062, -514.380554)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1252.4762, 11.4743624, -162.063385)
         end
     else
         _G.f2= false
@@ -11585,7 +11591,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-860.276855, 11.5903826, -150.357697)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-860.320313, 11.5903826, -152.795593)
         end
     else
         _G.f3= false
@@ -11601,7 +11607,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-838.726379, 7.9368763, 204.809021)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-838.942383, 8.08688164, 204.764618)
         end
     else
         _G.f4= false
@@ -11617,7 +11623,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-398.13443, 7.97594833, 207.533737)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-399.403259, 8.12589836, 209.55629)
         end
     else
         _G.f6= false
@@ -11633,7 +11639,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-326.803711, 30.8711147, -952.537659, -0.999533415, 0, -0.0305544306, 0, 1, 0, 0.0305544306, 0, -0.999533415)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-185.759079, 26.5750217, -952.016846, 0.999988317, -8.63217574e-05, -0.00483401865, 8.63217574e-05, 1, -2.08641708e-07, 0.00483401865, -2.08641708e-07, 0.999988317)
         end
     else
         _G.f7= false
@@ -11649,7 +11655,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-345.075653, 12.8789139, -261.072327, -0.999533415, 0, -0.0305544306, 0, 1, 0, 0.0305544306, 0, -0.999533415)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-345.000824, 8.57055855, -261.22757, 0.999988317, -8.63217574e-05, -0.00483401865, 8.63217574e-05, 1, -2.08641708e-07, 0.00483401865, -2.08641708e-07, 0.999988317)
         end
     else
         _G.f64= false
@@ -11665,7 +11671,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-642.319702, 25.62187, -1647.80896)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-648.180664, 22.2206612, -1648.97644, -0.999919891, -8.63202877e-05, -0.0126890838, -8.63202877e-05, 1, -5.47684635e-07, 0.0126890838, 5.47684635e-07, -0.999919891)
         end
     else
         _G.f75= false
@@ -11681,8 +11687,9 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-347.27533, -100.625458, -1266.29639, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-153.695328, -100.625458, -1275.42639, 1, 0, 0, 0, 1, 0, 0, 0, 1)
         end
+
     else
         _G.f84= false
     end
@@ -11730,23 +11737,23 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-644.438
         _G.f98= false
     end
 end)
-eggs:CreateToggle("Auto Buy Rainbow Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Auto Buy Wizard Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.f97 = true 
         while wait(0) and _G.f97 do
-game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Rainbow","Triple")
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-273.986237, 5.1108222, -2499.21558, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Wizard","Triple")
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(421.513702, 13.1108227, -2978.21558, 1, 0, 0, 0, 1, 0, 0, 0, 1)
         end
     else
         _G.f97= false
     end
 end)
-eggs:CreateToggle("Auto Buy Void Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs3:CreateToggle("Auto Buy Rainbow Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.f97 = true 
         while wait(0) and _G.f97 do
-game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Void","Triple")
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(173.983673, 17.2808228, -2995.19556, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Rainbow","Triple")
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-273.986237, 5.1108222, -2499.21558, 1, 0, 0, 0, 1, 0, 0, 0, 1)
         end
     else
         _G.f97= false
@@ -11762,7 +11769,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-723.669678, 11.7282162, -931.755554)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-975.710266, 155.156464, -930.710876)
 
         end
     else
@@ -11779,7 +11786,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-749.064758, 11.6513672, -929.939209)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-997.323547, 155.179626, -931.932617)
         end
     else
         _G.f52= false
@@ -11795,7 +11802,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-832.969971, 11.3529062, -514.380554)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1252.4762, 11.4743624, -162.063385)
         end
     else
         _G.f22= false
@@ -11827,7 +11834,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-838.726379, 7.9368763, 204.809021)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-838.942383, 8.08688164, 204.764618)
         end
     else
         _G.f42= false
@@ -11843,7 +11850,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-398.13443, 7.97594833, 207.533737)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-399.403259, 8.12589836, 209.55629)
         end
     else
         _G.f62= false
@@ -11859,7 +11866,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-326.803711, 30.8711147, -952.537659, -0.999533415, 0, -0.0305544306, 0, 1, 0, 0.0305544306, 0, -0.999533415)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-185.759079, 26.5750217, -952.016846, 0.999988317, -8.63217574e-05, -0.00483401865, 8.63217574e-05, 1, -2.08641708e-07, 0.00483401865, -2.08641708e-07, 0.999988317)
         end
     else
         _G.f63= false
@@ -11875,7 +11882,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-345.075653, 12.8789139, -261.072327, -0.999533415, 0, -0.0305544306, 0, 1, 0, 0.0305544306, 0, -0.999533415)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-345.000824, 8.57055855, -261.22757, 0.999988317, -8.63217574e-05, -0.00483401865, 8.63217574e-05, 1, -2.08641708e-07, 0.00483401865, -2.08641708e-07, 0.999988317)
         end
     else
         _G.f64= false
@@ -11891,7 +11898,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-642.319702, 25.62187, -1647.80896)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-648.180664, 22.2206612, -1648.97644, -0.999919891, -8.63202877e-05, -0.0126890838, -8.63202877e-05, 1, -5.47684635e-07, 0.0126890838, 5.47684635e-07, -0.999919891)
         end
     else
         _G.f74= false
@@ -11907,7 +11914,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-347.27533, -100.625458, -1266.29639, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-153.695328, -100.625458, -1275.42639, 1, 0, 0, 0, 1, 0, 0, 0, 1)
         end
     else
         _G.f85= false
@@ -11947,13 +11954,13 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-308.080
 end)
 eggs3:CreateToggle("Auto Buy Event 2.5M Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.f97 = true 
-        while wait(0) and _G.f97 do
-game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Event2","Single")
+        _G.f98 = true 
+        while wait(0) and _G.f98 do
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Event2","Simple")
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-644.438599, 26.0351887, -1637.92627)
         end
     else
-        _G.f97= false
+        _G.f98= false
     end
 end)
 eggs3:CreateToggle("Auto Buy Rainbow Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
@@ -11967,12 +11974,12 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-273.986
         _G.f97= false
     end
 end)
-eggs3:CreateToggle("Auto Buy Void Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs3:CreateToggle("Auto Buy Wizard Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.f97 = true 
         while wait(0) and _G.f97 do
-game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Void","Single")
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(173.983673, 17.2808228, -2995.19556, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Wizard","Single")
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(421.513702, 13.1108227, -2978.21558, 1, 0, 0, 0, 1, 0, 0, 0, 1)
         end
     else
         _G.f97= false
