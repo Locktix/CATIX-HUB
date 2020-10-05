@@ -11730,12 +11730,23 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-644.438
         _G.f98= false
     end
 end)
-eggs3:CreateToggle("Auto Buy Rainbow Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Auto Buy Rainbow Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.f97 = true 
         while wait(0) and _G.f97 do
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Rainbow","Triple")
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-273.986237, 5.1108222, -2499.21558, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        end
+    else
+        _G.f97= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Void Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f97 = true 
+        while wait(0) and _G.f97 do
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Void","Triple")
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(173.983673, 17.2808228, -2995.19556, 1, 0, 0, 0, 1, 0, 0, 0, 1)
         end
     else
         _G.f97= false
@@ -11951,6 +11962,17 @@ eggs3:CreateToggle("Auto Buy Rainbow Eggs", function(arg) --the (arg) is if the 
         while wait(0) and _G.f97 do
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Rainbow","Single")
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-273.986237, 5.1108222, -2499.21558, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        end
+    else
+        _G.f97= false
+    end
+end)
+eggs3:CreateToggle("Auto Buy Void Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f97 = true 
+        while wait(0) and _G.f97 do
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Void","Single")
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(173.983673, 17.2808228, -2995.19556, 1, 0, 0, 0, 1, 0, 0, 0, 1)
         end
     else
         _G.f97= false
