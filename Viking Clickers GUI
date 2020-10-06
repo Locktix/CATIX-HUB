@@ -11356,6 +11356,24 @@ end
         _G.LULU = false
     end
 end)
+AutoTab:CreateToggle("Auto Buy Potions", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.LULU2 = true 
+        while wait(0.2) and _G.LULU2 do
+game:GetService("ReplicatedStorage").Boosts:FireServer("x5Plunder15Minutesgold","Gold",1000)
+game:GetService("ReplicatedStorage").Boosts:FireServer("x3Gold1Hourgold","Gold",15000)
+game:GetService("ReplicatedStorage").Boosts:FireServer("x3Gold15Minutesgold","Gold",4000)
+game:GetService("ReplicatedStorage").Boosts:FireServer("x2Gold1Hourgold","Gold",3000)
+game:GetService("ReplicatedStorage").Boosts:FireServer("x2Gold15Minutesgold","Gold",1000)
+game:GetService("ReplicatedStorage").Boosts:FireServer("x10Plunder1Hourgold","Gold",12000)
+game:GetService("ReplicatedStorage").Boosts:FireServer("x10Plunder15Minutesgold","Gold",4000)
+game:GetService("ReplicatedStorage").Boosts:FireServer("x5Plunder1Hourgold","Gold",3000)
+end
+
+    else
+        _G.LULU2 = false
+    end
+end)
 AutoTab:CreateToggle("Auto Ranks", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.LULU1 = true 
@@ -11370,7 +11388,7 @@ end)
 AutoTab:CreateToggle("Auto Buy Upgrades", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.LULU2 = true 
-        while wait(0) and _G.LULU2 do
+        while wait(0.1) and _G.LULU2 do
 game:GetService("ReplicatedStorage").MainEvent:FireServer("FasterEggOpen")
 game:GetService("ReplicatedStorage").MainEvent:FireServer("SkillMultiplier")
 game:GetService("ReplicatedStorage").MainEvent:FireServer("Speed")
