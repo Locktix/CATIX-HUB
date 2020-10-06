@@ -11459,6 +11459,28 @@ end
         _G.E = false
     end
 end)
+Rebirth:CreateToggle("Auto Rebirths X100K", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f = true 
+        while wait(0) and _G.f do
+game:GetService("ReplicatedStorage").Rebirth:FireServer(100000)
+end
+
+    else
+        _G.f = false
+    end
+end)
+Rebirth:CreateToggle("Auto Rebirths X1M", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.g = true 
+        while wait(0) and _G.g do
+game:GetService("ReplicatedStorage").Rebirth:FireServer(1000000)
+end
+
+    else
+        _G.g = false
+    end
+end)
 eggs:CreateButton("Go To Egg", function() --the (arg) is if the checkbox is toggled or not
 end)
 eggs:CreateToggle("Auto Buy All Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
