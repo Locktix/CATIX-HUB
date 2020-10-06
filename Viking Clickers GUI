@@ -11358,8 +11358,8 @@ end
 end)
 AutoTab:CreateToggle("Auto Buy Potions", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.LULU2 = true 
-        while wait(0.2) and _G.LULU2 do
+        _G.LULU3 = true 
+        while wait(0.2) and _G.LULU3 do
 game:GetService("ReplicatedStorage").Boosts:FireServer("x5Plunder15Minutesgold","Gold",1000)
 game:GetService("ReplicatedStorage").Boosts:FireServer("x3Gold1Hourgold","Gold",15000)
 game:GetService("ReplicatedStorage").Boosts:FireServer("x3Gold15Minutesgold","Gold",4000)
@@ -11371,7 +11371,7 @@ game:GetService("ReplicatedStorage").Boosts:FireServer("x5Plunder1Hourgold","Gol
 end
 
     else
-        _G.LULU2 = false
+        _G.LULU3 = false
     end
 end)
 AutoTab:CreateToggle("Auto Ranks", function(arg) --the (arg) is if the checkbox is toggled or not
