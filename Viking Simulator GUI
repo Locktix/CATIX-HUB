@@ -1,15 +1,11 @@
----https://www.roblox.com/games/4330397559/GODS-Viking-Simulator
-
-
-
-
+--https://www.roblox.com/games/5444465912/Update-1-Viking-Clickers
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
-local AutoTab = Library:CreateTab("Viking Simulator GUI","things", true)
-local buy = Library:CreateTab("Auto Buy","things", true)
-local teleports = Library:CreateTab("Teleports","things", true)
+local AutoTab = Library:CreateTab("Viking-Clickers GUI","things", true)
+local Rebirth = Library:CreateTab("Auto Buy Rebirths","things", true)
 local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
+local teleports = Library:CreateTab("Teleports","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
@@ -26,20 +22,26 @@ credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "a
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("bsoleil31FR[inchala ptn]#9001", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
-end)
-
-credits:CreateButton("https://discord.gg/PdUTrVG", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
-end)
-
-credits:CreateButton("Bebo Mods#9619", function() --you dont need "arg" for a button
+credits:CreateButton("Im A Cat#7202", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
 
-MISC:CreateButton("NO CLIP Press(E)", function() --the (arg) is if the checkbox is toggled or not
+credits:CreateButton("https://discord.gg/PKWXQae", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+credits:CreateButton("Bebo Mods#1110", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:nothing()
+end)
+
+
+AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
+game:GetService("CoreGui").uiui:Destroy()
+end)
+
+
+MISC:CreateButton("🎬NO CLIP Press(E)🎬", function() --the (arg) is if the checkbox is toggled or not
     _G.NO2 = true 
   noclip = false
 game:GetService('RunService').Stepped:connect(function()
@@ -60,12 +62,12 @@ print('Created by FileExplorer')
 print('Credits to Peyton for the ChangeState part of this script')
 end)
 
-MISC:CreateButton("Inf Jump", function() --the (arg) is if the checkbox is toggled or not
+MISC:CreateButton("‍♀️Inf Jump🤸‍", function() --the (arg) is if the checkbox is toggled or not
 game:GetService("UserInputService").JumpRequest:connect(function()
     game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
 end)
 end)
-MISC:CreateButton("Ctrl + Click = TP", function() --the (arg) is if the checkbox is toggled or not
+MISC:CreateButton("🕹️Ctrl + Click = TP🕹️", function() --the (arg) is if the checkbox is toggled or not
 local Plr = game:GetService("Players").LocalPlayer
 local Mouse = Plr:GetMouse()
 
@@ -75,7 +77,7 @@ if not Mouse.Target then return end
 Plr.Character:MoveTo(Mouse.Hit.p)
 end)
 end)
-MISC:CreateButton("Fly Press (F)", function() --the (arg) is if the checkbox is toggled or not
+MISC:CreateButton("🪰Fly Press (F)🪰", function() --the (arg) is if the checkbox is toggled or not
      repeat wait() 
 	until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Head") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid") 
 local mouse = game.Players.LocalPlayer:GetMouse() 
@@ -159,7 +161,7 @@ Fly()
 
           
 end)
-MISC:CreateButton("Infinite Yield", function() --the (arg) is if the checkbox is toggled or not
+MISC:CreateButton("🛡️Infinite Yield🛡️", function() --the (arg) is if the checkbox is toggled or not
     
          if IY_LOADED and not _G.IY_DEBUG == true then
 	error("Infinite Yield is already running!",0)
@@ -11302,312 +11304,256 @@ Credits:Destroy()
 IntroBackground:Destroy()
 minimizeHolder()
 end)
-MISC:CreateButton("Speed Hack 100 Press(A)Or(E)", function() --the (arg) is if the checkbox is toggled or not
-      game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
-      if key == "A" then
-          end
+MISC:CreateButton("💨Speed Hack 200 PRESS (R)💨", function() --the (arg) is if the checkbox is toggled or not
+   
+local walkspeedplayer = game:GetService("Players").LocalPlayer
+local walkspeedmouse = walkspeedplayer:GetMouse()
+
+local walkspeedenabled = false
+
+function x_walkspeed(key)
+if (key == "r") then
+if walkspeedenabled == false then
+_G.WS = 200;
+local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+Humanoid.WalkSpeed = _G.WS;
 end)
+Humanoid.WalkSpeed = _G.WS;
+
+walkspeedenabled = true
+elseif walkspeedenabled == true then
+_G.WS = 20;
+local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+Humanoid.WalkSpeed = _G.WS;
+end)
+Humanoid.WalkSpeed = _G.WS;
+
+walkspeedenabled = false
+end
+end
+end
+
+walkspeedmouse.KeyDown:connect(x_walkspeed)
+
+end)
+
+
+
+
+
+
 AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.b = true 
-        while wait(0) and _G.b do
-local args = {
-    [1] = Vector3.new(162181.5, 9.36534405, -96.6194),
-}
+        _G.LULU = true 
+        while wait(0) and _G.LULU do
+game:GetService("ReplicatedStorage").MainEvent:FireServer("ClickedButton")
 
-game:GetService("ReplicatedStorage").Swing:FireServer(unpack(args))
+end
 
-        end
     else
-        _G.b = false
+        _G.LULU = false
+    end
+end)
+AutoTab:CreateToggle("Auto Buy Potions", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.LULU3 = true 
+        while wait(0.3) and _G.LULU3 do
+game:GetService("ReplicatedStorage").Boosts:FireServer("x5Plunder15Minutesgold","Gold",1000)
+game:GetService("ReplicatedStorage").Boosts:FireServer("x3Gold1Hourgold","Gold",15000)
+game:GetService("ReplicatedStorage").Boosts:FireServer("x3Gold15Minutesgold","Gold",4000)
+game:GetService("ReplicatedStorage").Boosts:FireServer("x2Gold1Hourgold","Gold",3000)
+game:GetService("ReplicatedStorage").Boosts:FireServer("x2Gold15Minutesgold","Gold",1000)
+game:GetService("ReplicatedStorage").Boosts:FireServer("x10Plunder1Hourgold","Gold",12000)
+game:GetService("ReplicatedStorage").Boosts:FireServer("x10Plunder15Minutesgold","Gold",4000)
+game:GetService("ReplicatedStorage").Boosts:FireServer("x5Plunder1Hourgold","Gold",3000)
+end
+
+    else
+        _G.LULU3 = false
+    end
+end)
+AutoTab:CreateToggle("Auto Ranks", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.LULU1 = true 
+        while wait(0) and _G.LULU1 do
+game:GetService("ReplicatedStorage").MainEvent:FireServer("Ranks")
+end
+
+    else
+        _G.LULU1 = false
+    end
+end)
+AutoTab:CreateToggle("Auto Buy Upgrades", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.LULU2 = true 
+        while wait(0.2) and _G.LULU2 do
+game:GetService("ReplicatedStorage").MainEvent:FireServer("FasterEggOpen")
+game:GetService("ReplicatedStorage").MainEvent:FireServer("SkillMultiplier")
+game:GetService("ReplicatedStorage").MainEvent:FireServer("Speed")
+game:GetService("ReplicatedStorage").MainEvent:FireServer("GoldMultiplier")
+game:GetService("ReplicatedStorage").MainEvent:FireServer("AutoClick")
+game:GetService("ReplicatedStorage").MainEvent:FireServer("RebirthButton")
+end
+
+    else
+        _G.LULU2 = false
+    end
+end)
+Rebirth:CreateToggle("Auto Rebirths X1", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.a = true 
+        while wait(0) and _G.a do
+game:GetService("ReplicatedStorage").Rebirth:FireServer(1)
+end
+
+    else
+        _G.a = false
     end
 end)
 
-buy:CreateToggle("Auto Buy Sword", function(arg) --the (arg) is if the checkbox is toggled or not
+Rebirth:CreateToggle("Auto Rebirths X10", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.b = true 
         while wait(0) and _G.b do
-            local A_1 = 1
-local A_2 = true
-local Event = game:GetService("ReplicatedStorage").Shop
-Event:FireServer(A_1, A_2)
+game:GetService("ReplicatedStorage").Rebirth:FireServer(10)
+end
 
-        end
     else
         _G.b = false
     end
 end)
 
-buy:CreateToggle("Auto Buy Sheild", function(arg) --the (arg) is if the checkbox is toggled or not
+Rebirth:CreateToggle("Auto Rebirths X100", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.c = true 
         while wait(0) and _G.c do
-           local A_1 = 2
-local A_2 = true
-local Event = game:GetService("ReplicatedStorage").Shop
-Event:FireServer(A_1, A_2)
-        end
+game:GetService("ReplicatedStorage").Rebirth:FireServer(100)
+end
+
     else
         _G.c = false
     end
 end)
 
-buy:CreateToggle("Auto Buy Bags", function(arg) --the (arg) is if the checkbox is toggled or not
+Rebirth:CreateToggle("Auto Rebirths X1K", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.d = true 
-        while wait(0) and _G.d do
-           local A_1 = 3
-local A_2 = true
-local Event = game:GetService("ReplicatedStorage").Shop
-Event:FireServer(A_1, A_2)
-        end
+        _G.D = true 
+        while wait(0) and _G.D do
+game:GetService("ReplicatedStorage").Rebirth:FireServer(1000)
+end
+
     else
-        _G.d = false
+        _G.D = false
     end
 end)
-
-buy:CreateToggle("Auto Buy Bows", function(arg) --the (arg) is if the checkbox is toggled or not
+Rebirth:CreateToggle("Auto Rebirths X10K", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.e = true 
-        while wait(0) and _G.e do
-            local A_1 = 4
-local A_2 = true
-local Event = game:GetService("ReplicatedStorage").Shop
-Event:FireServer(A_1, A_2)
-        end
+        _G.E = true 
+        while wait(0) and _G.E do
+game:GetService("ReplicatedStorage").Rebirth:FireServer(10000)
+end
+
     else
-        _G.e = false
+        _G.E = false
     end
 end)
-
-buy:CreateToggle("Auto Buy Ranks", function(arg) --the (arg) is if the checkbox is toggled or not
+Rebirth:CreateToggle("Auto Rebirths X100K", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.f = true 
         while wait(0) and _G.f do
-           local A_1 = 5
-local A_2 = true
-local Event = game:GetService("ReplicatedStorage").Shop
-Event:FireServer(A_1, A_2)
-        end
+game:GetService("ReplicatedStorage").Rebirth:FireServer(100000)
+end
+
     else
         _G.f = false
     end
 end)
-
-buy:CreateToggle("Auto Buy Gods", function(arg) --the (arg) is if the checkbox is toggled or not
+Rebirth:CreateToggle("Auto Rebirths X1M", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.g = true 
         while wait(0) and _G.g do
-           local A_1 = "Interact"
-local A_2 = "Thor"
-local Event = game:GetService("ReplicatedStorage").Gods
-Event:FireServer(A_1, A_2)
+game:GetService("ReplicatedStorage").Rebirth:FireServer(1000000)
+end
 
-local A_1 = "Interact"
-local A_2 = "Odin"
-local Event = game:GetService("ReplicatedStorage").Gods
-Event:FireServer(A_1, A_2)
-
-local A_1 = "Interact"
-local A_2 = "Loki"
-local Event = game:GetService("ReplicatedStorage").Gods
-Event:FireServer(A_1, A_2)
-
-local A_1 = "Interact"
-local A_2 = "Heimdall"
-local Event = game:GetService("ReplicatedStorage").Gods
-Event:FireServer(A_1, A_2)
-
-local A_1 = "Interact"
-local A_2 = "Freya"
-local Event = game:GetService("ReplicatedStorage").Gods
-Event:FireServer(A_1, A_2)
-
-local A_1 = "Interact"
-local A_2 = "Surtur"
-local Event = game:GetService("ReplicatedStorage").Gods
-Event:FireServer(A_1, A_2)
-
-        end
     else
         _G.g = false
     end
 end)
-
-eggs:CreateToggle("Auto Buy Tier1 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+Rebirth:CreateToggle("Auto Rebirths X10M", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.h = true 
         while wait(0) and _G.h do
-          local A_1 = "Buy"
-local A_2 = 1
-local A_3 = game:GetService("Workspace").PetBuyers["Peaceful Keep"]
-local Event = game:GetService("ReplicatedStorage").UpdatePets
-Event:FireServer(A_1, A_2, A_3)
+game:GetService("ReplicatedStorage").Rebirth:FireServer(10000000)
+end
 
-        end
     else
         _G.h = false
     end
 end)
-
-eggs:CreateToggle("Auto Buy Tier2 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+Rebirth:CreateToggle("Auto Rebirths X100M", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.i = true 
         while wait(0) and _G.i do
-          local A_1 = "Buy"
-local A_1 = "Buy"
-local A_2 = 1
-local A_3 = game:GetService("Workspace").PetBuyers["Fearsome Fortress"]
-local Event = game:GetService("ReplicatedStorage").UpdatePets
-Event:FireServer(A_1, A_2, A_3)
+game:GetService("ReplicatedStorage").Rebirth:FireServer(100000000)
+end
 
-
-        end
     else
         _G.i = false
     end
 end)
-
-eggs:CreateToggle("Auto Buy Tier3 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+Rebirth:CreateToggle("Auto Rebirths X1B", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.j = true 
         while wait(0) and _G.j do
-          local A_1 = "Buy"
-local A_1 = "Buy"
-local A_2 = 1
-local A_3 = game:GetService("Workspace").PetBuyers["Enemy Jarldom"]
-local Event = game:GetService("ReplicatedStorage").UpdatePets
-Event:FireServer(A_1, A_2, A_3)
+game:GetService("ReplicatedStorage").Rebirth:FireServer(1000000000)
+end
 
-
-        end
     else
         _G.j = false
     end
 end)
-
-eggs:CreateToggle("Auto Buy Tier4 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+Rebirth:CreateToggle("Auto Rebirths X10B", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.k = true 
         while wait(0) and _G.k do
-         local A_1 = "Buy"
-local A_2 = 1
-local A_3 = game:GetService("Workspace").PetBuyers["Desert Stronghold"]
-local Event = game:GetService("ReplicatedStorage").UpdatePets
-Event:FireServer(A_1, A_2, A_3)
+game:GetService("ReplicatedStorage").Rebirth:FireServer(10000000000)
+end
 
-
-        end
     else
         _G.k = false
     end
 end)
-
-eggs:CreateToggle("Auto Buy Tier5 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateButton("Go To Egg", function() --the (arg) is if the checkbox is toggled or not
+end)
+eggs:CreateToggle("Auto Buy All Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.l = true 
-        while wait(0) and _G.l do
-      local A_1 = "Buy"
-local A_2 = 1
-local A_3 = game:GetService("Workspace").PetBuyers["Mysterious Orient"]
-local Event = game:GetService("ReplicatedStorage").UpdatePets
-Event:FireServer(A_1, A_2, A_3)
+        _G.b = true 
+        while wait(0) and _G.b do
+game:GetService("ReplicatedStorage").MainEvent:FireServer("Eggff","Spoil")
+end
 
-
-        end
     else
-        _G.l = false
+        _G.b = false
     end
 end)
 
-eggs:CreateToggle("Auto Buy Tier6 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.m = true 
-        while wait(0) and _G.m do
-local A_1 = "Buy"
-local A_2 = 1
-local A_3 = game:GetService("Workspace").PetBuyers["Deadly Deadlands"]
-local Event = game:GetService("ReplicatedStorage").UpdatePets
-Event:FireServer(A_1, A_2, A_3)
-
-
-        end
-    else
-        _G.m = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Tier7 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.n = true 
-        while wait(0) and _G.n do
-          local A_1 = "Buy"
-local A_1 = "Buy"
-local A_2 = 1
-local A_3 = game:GetService("Workspace").PetBuyers["Atlantis Ruins"]
-local Event = game:GetService("ReplicatedStorage").UpdatePets
-Event:FireServer(A_1, A_2, A_3)
-
-
-        end
-    else
-        _G.n = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Tier8 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.o = true 
-        while wait(0) and _G.o do
-    local A_1 = "Buy"
-local A_2 = 1
-local A_3 = game:GetService("Workspace").PetBuyers["Floating Isles"]
-local Event = game:GetService("ReplicatedStorage").UpdatePets
-Event:FireServer(A_1, A_2, A_3)
-
-
-
-        end
-    else
-        _G.o = false
-    end
-end)
-
-AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:Destroy()
+teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-5.02133322, 4.10752678, 13234.9111)
 end)
 
 teleports:CreateButton("Zone 1", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-338.436218, 8.00754261, -91.157608)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2584.60229, 4.10751629, 13276.1768)
 end)
 
 teleports:CreateButton("Zone 2", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(43583.0117, 8.00754261, -67.2682953)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-5394.22607, 8.50753212, 13185.5723)
 end)
-
 teleports:CreateButton("Zone 3", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(77181.9688, 8.00754356, -64.9859467)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-7966.20117, 3.95351887, 13264.6553)
 end)
 
-teleports:CreateButton("Zone 4", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-283.9617, 8.00754261, 42293.2852)
-end)
-
-teleports:CreateButton("Zone 5", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(57771.1133, 8.00754261, 42308.832)
-end)
-
-teleports:CreateButton("Zone 6", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(87387.1172, 8.00754261, -85.7651901)
-end)
-
-teleports:CreateButton("Zone 7", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(124737.883, 8.00758076, -76.1513748)
-end)
-
-teleports:CreateButton("Zone 8", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(162247.703, 8.00594044, -19.0590839)
-end)
 --| Anti KICK |
 local mt = getrawmetatable(game)
 local old = mt.__namecall
