@@ -69,7 +69,17 @@ end
         _G.c1 = false
     end
 end)
+AutoTab:CreateToggle("Auto Ascensions", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c22 = true 
+        while wait(0) and _G.c22 do
+game:GetService("ReplicatedStorage").Network.Port1:FireServer("Purchase","Ascension")
+end
 
+    else
+        _G.c22 = false
+    end
+end)
 AutoTab:CreateToggle("Auto Farm Vitality", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.c2 = true 
@@ -11771,7 +11781,12 @@ local gamepass11 = game:GetService"ReplicatedStorage".Players[game.Players.Local
 local gamepass12 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.AutoRank
 local gamepass13 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.AutoClick
 local gamepass14 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.FastLifting
-gamepass1.Value = true
+local gamepass15 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.PetEquip5
+local gamepass16 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.PetStorage250
+local gamepass17 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.PetStorage500
+local gamepass18 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.TripleCrate
+local gamepass19 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.Souls5
+local gamepass20 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.Luck
 wait(0)
 gamepass2.Value = true
 wait(0)
@@ -11798,7 +11813,18 @@ wait(0)
 gamepass13.Value = true
 wait(0)
 gamepass14.Value = true
-
+wait(0)
+gamepass15.Value = true
+wait(0)
+gamepass16.Value = true
+wait(0)
+gamepass17.Value = true
+wait(0)
+gamepass18.Value = true
+wait(0)
+gamepass19.Value = true
+wait(0)
+gamepass20.Value = true
 end)
 teleports:CreateButton("Zone 1", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-51.8832245, -37.2599869, -198.486206)
