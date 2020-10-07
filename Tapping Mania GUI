@@ -12056,7 +12056,7 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-4345.12
     else
         _G.e12= false
     end
-en
+end)
 eggs:CreateToggle("Auto Buy Chaotic Egg", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e13 = true 
