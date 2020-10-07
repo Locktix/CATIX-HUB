@@ -11788,6 +11788,8 @@ local gamepass18 = game:GetService"ReplicatedStorage".Players[game.Players.Local
 local gamepass19 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.Souls5
 local gamepass20 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.Luck
 wait(0)
+gamepass1.Value = true
+wait(0)
 gamepass2.Value = true
 wait(0)
 gamepass3.Value = true
