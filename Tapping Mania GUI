@@ -12074,6 +12074,23 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-5009.48
         _G.e13= false
     end
 end)
+eggs:CreateToggle("Auto Buy 2M Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e14 = true 
+        while wait(0) and _G.e14 do
+
+local args = {
+    [1] = "2M Egg",
+    [2] = true,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-79.5649948, 3.4382956, -18.3578758)
+        end
+    else
+        _G.e14= false
+    end
+end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1.12185335, 3.26842809, 15.6704302)
 end)
