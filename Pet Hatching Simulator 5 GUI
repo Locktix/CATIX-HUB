@@ -11358,6 +11358,18 @@ end
 end)
 
 
+AutoTab:CreateToggle("Auto Lock Legendary,Secrets Pets", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.aU = true 
+        while wait(0) and _G.aU do
+
+game:GetService("ReplicatedStorage").RemoteEvents.PetActionRequest:InvokeServer("LockAllRarity")
+end
+
+    else
+        _G.aU = false
+    end
+end)
 
 eggs:CreateToggle("Auto Buy Common Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
@@ -11615,6 +11627,37 @@ end
         _G.p = false
     end
 end)
+eggs:CreateToggle("Auto Buy Frost Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.q = true 
+        while wait(0) and _G.q do
+
+
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Frost","Single")
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1288.90857, 4.52121544, -834.233582)
+end
+
+    else
+        _G.q = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Light Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.r = true 
+        while wait(0) and _G.r do
+
+
+
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Light","Single")
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1286.953, 4.36094189, -808.776489)
+end
+
+    else
+        _G.r = false
+    end
+end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(31.7384644, 6.22448683, 35.9957504)
 end)
@@ -11629,7 +11672,9 @@ end)
 teleports:CreateButton("Halloween Event", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1199.64294, 4.17068434, 59.9018288)
 end)
-
+teleports:CreateButton("Frost", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1269.32312, 4.17094135, -831.520935)
+end)
 --| Anti KICK |
 local mt = getrawmetatable(game)
 local old = mt.__namecall
