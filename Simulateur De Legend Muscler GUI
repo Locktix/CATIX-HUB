@@ -11604,30 +11604,8 @@ end
         _G.c44 = false
     end
 end)
-AutoTab:CreateButton("Kill Bosses 13", function(arg) --the (arg) is if the checkbox is toggled or not
 
-local args = {
-    [1] = "Swing",
-    [2] = {
-        [1] = workspace.BossFolder.Boss13
-    }
-}
 
-game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
-
-end)
-AutoTab:CreateButton("Use Auto Click Software", function(arg) --the (arg) is if the checkbox is toggled or not
-
-local args = {
-    [1] = "Swing",
-    [2] = {
-        [1] = workspace.BossFolder.Boss13
-    }
-}
-
-game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
-
-end)
 eggs:CreateToggle("Auto Delete Common Pets", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.dd9 = true 
