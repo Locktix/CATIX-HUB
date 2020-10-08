@@ -11405,16 +11405,14 @@ end)
 AutoTab:CreateButton("All Gamepasses certain not work", function() --the (arg) is if the checkbox is toggled or not
   
 game:GetService("Players").LocalPlayer.Gamepasses.Sprint.Value = true
-game:GetService("Players").LocalPlayer.Gamepasses.AutoClick.Value = true
 game:GetService("Players").LocalPlayer.Gamepasses.ExplosiveCursors.Value = true
 game:GetService("Players").LocalPlayer.Gamepasses.VIP.Value = true
 game:GetService("Players").LocalPlayer.Gamepasses.DoubleGems.Value = true
 game:GetService("Players").LocalPlayer.Gamepasses.TripleHatch.Value = true
 game:GetService("Players").LocalPlayer.Gamepasses.AutoRebirth.Value = true
-game:GetService("Players").LocalPlayer.Gamepasses.DoubleClicks.Value = true
 game:GetService("Players").LocalPlayer.Gamepasses.Luck.Value = true
+game:GetService("Players").LocalPlayer.Gamepasses.DoubleClicks.Value = true
 game:GetService("Players").LocalPlayer.Gamepasses.UnlimitedPets.Value = true
-
 
 
 end)
