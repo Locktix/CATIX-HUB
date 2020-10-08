@@ -11548,6 +11548,73 @@ end
         _G.k = false
     end
 end)
+eggs:CreateToggle("Auto Buy 200k Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l = true 
+        while wait(0) and _G.l do
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Gold","Triple")
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(90.6623688, 6.30052948, 12.8416052)
+end
+
+    else
+        _G.l = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Candycorn Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.m = true 
+        while wait(0) and _G.m do
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Candycorn","Single")
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1237.83142, 4.36098957, -44.6364059)
+end
+
+    else
+        _G.m = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Pumpkin Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.n = true 
+        while wait(0) and _G.n do
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Pumpkin","Single")
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1252.74353, 4.36098957, -45.4724159)
+end
+
+    else
+        _G.n = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Zombie Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.o = true 
+        while wait(0) and _G.o do
+
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Zombie","Single")
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1271.81982, 4.36098957, -45.015255)
+end
+
+    else
+        _G.o = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Cauldron Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.p = true 
+        while wait(0) and _G.p do
+
+
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Cauldron","Single")
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1289.87585, 4.36098957, -44.2626648)
+end
+
+    else
+        _G.p = false
+    end
+end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(31.7384644, 6.22448683, 35.9957504)
 end)
@@ -11558,6 +11625,9 @@ end)
 
 teleports:CreateButton("Beach", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1791.63, 15.29743, 1232.42188)
+end)
+teleports:CreateButton("Halloween Event", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1199.64294, 4.17068434, 59.9018288)
 end)
 
 --| Anti KICK |
