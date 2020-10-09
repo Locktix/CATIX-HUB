@@ -11848,7 +11848,7 @@ wait(0)
 gamepass19.Value = true
 wait(0)
 gamepass20.Value = true
-end)
+wait(0)
 gamepass21.Value = true
 end)
 teleports:CreateButton("Zone 1", function() --you dont need "arg" for a button
