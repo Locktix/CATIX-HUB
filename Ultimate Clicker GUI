@@ -11697,6 +11697,7 @@ eggs:CreateToggle("Auto Buy 1T Egg", function(arg) --the (arg) is if the checkbo
 
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Cave","Triple")
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(5703.59326, -8.32058239, 256.979645)
+
         end
     else
         _G.v= false
