@@ -12042,6 +12042,11 @@ end)
 teleports:CreateButton("Zone 6", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(3460.11597, -107.792664, -176.395325)
 end)
+LocalPlayer.Idled:connect(function()
+  VirtualUser:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+  wait(1)
+  VirtualUser:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
 --| Anti KICK |
 local mt = getrawmetatable(game)
 local old = mt.__namecall
