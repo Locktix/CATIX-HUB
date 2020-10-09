@@ -11498,6 +11498,13 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.Upgrade:FireServer(unpack(args))
+
+local args = {
+    [1] = "PetStorage"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Upgrade:FireServer(unpack(args))
+
         end
     else
         _G.b2= false
@@ -12057,23 +12064,76 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-4345.12
         _G.e12= false
     end
 end)
-eggs:CreateToggle("Auto Buy Chaotic Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Auto Buy Nuclear Egg", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e13 = true 
         while wait(0) and _G.e13 do
 
 local args = {
-    [1] = "Chaotic Egg",
+    [1] = "Nuclear Egg",
     [2] = true,
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-5767.54102, 14.2633114, -81.0355072)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-5009.48096, 12.9152613, -81.8570099, -0.999988317, 0, -0.00483401865, 0, 1, 0, 0.00483401865, 0, -0.999988317)
         end
     else
         _G.e13= false
     end
 end)
+eggs:CreateToggle("Auto Buy 2M Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e14 = true 
+        while wait(0) and _G.e14 do
+
+local args = {
+    [1] = "2M Egg",
+    [2] = true,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-79.5649948, 3.4382956, -18.3578758)
+        end
+    else
+        _G.e14= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Deadly Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e15 = true 
+        while wait(0) and _G.e15 do
+
+local args = {
+    [1] = "Deadly Egg",
+    [2] = true,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-17.0179958, 0.577152014, 720.93396)
+        end
+    else
+        _G.e15= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Spooky Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e16 = true 
+        while wait(0) and _G.e16 do
+
+local args = {
+    [1] = "Spooky Egg",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-0.0246056989, 0.686957836, 720.455811)
+        end
+    else
+        _G.e16= false
+    end
+end)
+
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1.12185335, 3.26842809, 15.6704302)
 end)
@@ -12107,7 +12167,10 @@ teleports:CreateButton("Zone 9", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-4345.8374, 3.14858937, 114.848801)
 end)
 teleports:CreateButton("Zone 10", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-5767.80713, 1.54227114, 14.172368)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-5009.48096, 12.9152613, -81.8570099, -0.999988317, 0, -0.00483401865, 0, 1, 0, 0.00483401865, 0, -0.999988317)
+end)
+teleports:CreateButton("Event Haloween", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-4.03854727e-11, 0.773301125, 819.139954)
 end)
 --| Anti KICK |
 local mt = getrawmetatable(game)
