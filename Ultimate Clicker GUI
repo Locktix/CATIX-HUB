@@ -11726,7 +11726,7 @@ teleports:CreateButton("MushRoom", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(4870.5376, -8.32057953, 96.2779388)
 end)
 teleports:CreateButton("Cave", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(735.325806, 6.32635593, 124.297791)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(5683.05811, -8.32058048, 242.896545)
 end)
 LocalPlayer.Idled:connect(function()
   VirtualUser:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
