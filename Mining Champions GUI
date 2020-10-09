@@ -11346,8 +11346,19 @@ end)
 
 
 
+AutoTab:CreateToggle("INF Multiplier", function(arg) --the (arg) is if the checkbox is toggled or not
+      if arg then
+        _G.aa2 = true 
+        while wait(0) and _G.aa2 do 
+local value = tostring(9e99) -- change to any value // math.huge
+game:GetService("ReplicatedStorage").Events.Server.RequestIslandTeleport:InvokeServer("1", value, 
+game:GetService("Workspace").Resources.Interaction.Worlds["1"].Islands["2"].Exit)
 
-
+      end
+    else
+        _G.aa2= false
+    end
+end)
 FORVIP:CreateToggle("Mine VIP Ore", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.aa = true 
