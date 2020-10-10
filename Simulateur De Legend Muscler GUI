@@ -3,7 +3,7 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
 local AutoTab = Library:CreateTab("Simulateur de légende muscler GUI","things", true)
-local teleports = Library:CreateTab("Teleports","things", true)
+local Kill = Library:CreateTab("(SPAM CLICK)Kill Bosses","things", true)
 local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
@@ -11590,6 +11590,65 @@ end
         _G.c43 = false
     end
 end)
+AutoTab:CreateToggle("Auto Tp To Bosses", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c45 = true 
+ while wait(0.1) and _G.c45 do
+
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(3.23107147, -12.7165165, 819.350891)
+wait(0.1)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-9.11474419, -12.7165165, 535.076782)
+wait(0.1)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(4.57413244, -12.7165146, 1113.02734)
+wait(0.1)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(5.19087315, -12.7165146, 1407.09045)
+wait(0.1)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3.58674169, -12.7165165, 1730.36902)
+wait(0.1)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-0.797964573, -12.7520237, 2155.17554)
+wait(0.1)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(13.1697464, -12.7165165, 2681.2063)
+wait(0.1)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(12.7092981, -12.7165108, 2989.81226)
+wait(0.1)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(7.71046686, -12.7165165, 3264.04468)
+wait(0.1)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(8.79852486, -12.7165165, 3578.06665)
+wait(0.1)
+
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(26.0901527, -12.7165585, 3885.59106)
+wait(0.1)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(12.1697702, -12.7165146, 4162.25684)
+wait(0.1)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(12.2964563, -12.7520237, 4810.53955)
+wait(0.1)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(7.54875755, -12.7165146, 5251.68311)
+wait(0.1)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(11.0293522, -12.7165108, 5703.66064)
+wait(0.1)
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-8.79776955, -12.7165146, 6206.69727)
+end
+
+    else
+        _G.c45 = false
+    end
+end)
 AutoTab:CreateToggle("Auto Buy Upgrades Betes", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.c44 = true 
@@ -11597,7 +11656,7 @@ AutoTab:CreateToggle("Auto Buy Upgrades Betes", function(arg) --the (arg) is if 
 game:GetService("ReplicatedStorage").Network.Port1:FireServer("Purchase","BossVitality")
 
 game:GetService("ReplicatedStorage").Network.Port1:FireServer("Purchase","BossPower")
-
+wait(0)
 end
 
     else
@@ -11784,6 +11843,71 @@ end
     else
         _G.dd7 = false
     end
+end)
+Kill:CreateButton("Kill Boss 1", function() --the (arg) is if the checkbox is toggled or not
+game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss1})
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(3.23107147, -12.7165165, 819.350891)
+end)
+Kill:CreateButton("Kill Boss 2", function() --the (arg) is if the checkbox is toggled or not
+game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss2})
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-9.11474419, -12.7165165, 535.076782)
+end)
+Kill:CreateButton("Kill Boss 3", function() --the (arg) is if the checkbox is toggled or not
+game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss3})
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(4.57413244, -12.7165146, 1113.02734)
+end)
+Kill:CreateButton("Kill Boss 4", function() --the (arg) is if the checkbox is toggled or not
+game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss4})
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(5.19087315, -12.7165146, 1407.09045)
+end)
+Kill:CreateButton("Kill Boss 5", function() --the (arg) is if the checkbox is toggled or not
+game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss5})
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3.58674169, -12.7165165, 1730.36902)
+end)
+Kill:CreateButton("Kill Boss 6", function() --the (arg) is if the checkbox is toggled or not
+game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss6})
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-0.797964573, -12.7520237, 2155.17554)
+end)
+Kill:CreateButton("Kill Boss 7", function() --the (arg) is if the checkbox is toggled or not
+game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss7})
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(13.1697464, -12.7165165, 2681.2063)
+end)
+Kill:CreateButton("Kill Boss 8", function() --the (arg) is if the checkbox is toggled or not
+game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss8})
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(12.7092981, -12.7165108, 2989.81226)
+end)
+Kill:CreateButton("Kill Boss 9", function() --the (arg) is if the checkbox is toggled or not
+game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss9})
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(7.71046686, -12.7165165, 3264.04468)
+end)
+Kill:CreateButton("Kill Boss 10", function() --the (arg) is if the checkbox is toggled or not
+game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss10})
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(8.79852486, -12.7165165, 3578.06665)
+end)
+Kill:CreateButton("Kill Boss 11", function() --the (arg) is if the checkbox is toggled or not
+game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss11})
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(26.0901527, -12.7165585, 3885.59106)
+end)
+Kill:CreateButton("Kill Boss 12", function() --the (arg) is if the checkbox is toggled or not
+game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss12})
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(12.1697702, -12.7165146, 4162.25684)
+end)
+Kill:CreateButton("Kill Boss 13", function() --the (arg) is if the checkbox is toggled or not
+game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss13})
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(12.2964563, -12.7520237, 4810.53955)
+end)
+Kill:CreateButton("Kill Boss 14", function() --the (arg) is if the checkbox is toggled or not
+game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss14})
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(7.54875755, -12.7165146, 5251.68311)
+end)
+Kill:CreateButton("Kill Boss 15", function() --the (arg) is if the checkbox is toggled or not
+game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss15})
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(11.0293522, -12.7165108, 5703.66064)
+end)
+Kill:CreateButton("Kill Boss 16", function() --the (arg) is if the checkbox is toggled or not
+game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss16})
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-8.79776955, -12.7165146, 6206.69727)
 end)
 AutoTab:CreateButton("Get All Gamepass", function() --the (arg) is if the checkbox is toggled or not
    
