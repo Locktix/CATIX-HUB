@@ -6,6 +6,7 @@ local w2 = library:CreateWindow("Combo Clicker GUI")
 local w3 = library:CreateWindow("Buy Eggs")
 local w4 = library:CreateWindow("Buy Crates")
 local w5 = library:CreateWindow("Buy Rebirths")
+local w6 = library:CreateWindow("Teleporters")
 
 --================== Things =======================--
 local b = w2:CreateFolder("Things")
@@ -353,16 +354,12 @@ end)
 --================== Eggs =======================--
 local c = w3:CreateFolder("Eggs")
 
-c:Label("Attention Buy Eggs",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
-
+c:Toggle("Buy Eggs",function(bool)
+	    shared.Eggs = bool
+	end)
 	c:Dropdown("Choose Eggs",{"Basic","Spotted","Tropical","Emoji","Carnival","Ancient","Ocean","Alien","Villian","Dragon","Arcade","Russo","Frost","Mystic","Spirit","Music","Abyssal","Minion","Minion 2","Frozen","Pirate","Dragon","11M Event"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
 	    _G.EggsSelected = mob
 	end)
-
-	c:Toggle("Buy Eggs",function(bool)
-	    shared.Eggs = bool
-	end)
-
 spawn(function()
 	while wait(0) do
 		if shared.Eggs then
@@ -1783,7 +1780,97 @@ spawn(function()
 		end
 	end
 end)
+--================== Eggs =======================--
+local c2 = w6:CreateFolder("Teleports  1")
 
+
+
+
+  c2:Button("Spawn",function(bool)
+	   	 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-27.2958336, 54.7868347, -880.203003)  
+	end)
+  c2:Button("SpinWheel",function(bool)
+	   	game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1.59071529, 53.6350098, -919.411987) 
+  end)
+ c2:Button("LeaderBoards",function(bool)
+	 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-56.2045021, 54.7868347, -883.298218)
+	end)
+	 c2:Button("Shop1",function(bool)
+	game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-39.3278999, 54.5634804, -831.109619)
+	 end)
+ c2:Button("Shop2",function(bool)
+		game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-32.12286, 53.8192062, -936.877014)
+	end)
+	 c2:Button("Island1",function(bool)
+	   game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(79.8636856, 329.71756, -819.814636)
+	 end)
+ c2:Button("Island2",function(bool)
+	       game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(15.2678299, 550.582336, -916.540649)
+	end)
+	 c2:Button("Island3",function(bool)
+	   game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(95.4841232, 940.433105, -1056.80762)
+	 end)
+ c2:Button("Island4",function(bool)
+	game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(240.661774, 1319.08423, -940.158447)
+	end)
+	 c2:Button("Island5",function(bool)
+	 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(272.899475, 1939.27087, -849.953796)  
+	 end)
+	 c2:Button("Island6",function(bool)
+	   game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(332.89212, 2250.11816, -774.391113) 
+	 end)
+ c2:Button("Island7",function(bool)
+		   game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(571.006042, 2561.78735, -695.975281) 
+	end)
+	 c2:Button("Island8",function(bool)
+	  game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(500.847748, 3100.41943, -700.950012) 
+	 end)
+ c2:Button("Island9",function(bool)
+		game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(661.645447, 3390.95605, -887.30365)
+	end)
+	 c2:Button("Island10",function(bool)
+	 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(640.169922, 3614.15576, -972.179993)
+	 end)
+	 c2:Button("Island11",function(bool)
+ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(501.038361, 3856.90454, -915.60907)
+	 end)
+ c2:Button("Island12",function(bool)
+	  game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(501.506683, 4092.29517, -918.616943)
+	end)
+	 c2:Button("Island13",function(bool)
+		   game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(428.418457, 4502.57715, -868.273926)
+	 end)
+
+
+
+
+local c3 = w6:CreateFolder("Teleports 2")
+
+ c3:Button("Island14",function(bool)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(397.543274, 4684.89551, -888.318359)
+	end)
+	 c3:Button("Island15",function(bool)
+	game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(355.653839, 5035.20654, -762.790894)
+	 end)
+	 c3:Button("Island16",function(bool)
+	game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(422.989746, 5346.68945, -732.380737)
+	 end)
+ c3:Button("Island17",function(bool)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(400.194427, 5717.6709, -859.416016)
+	end)
+	 c3:Button("Island18",function(bool)
+	game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(435.302246, 6019.95898, -874.264465)
+	 end)
+ c3:Button("Island19",function(bool)
+	game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(427.123047, 6393.72217, -858.323059)
+	end)
+	 c3:Button("Island20",function(bool)
+	game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(384.235504, 6712.52051, -857.059998)
+	 end)
+	 c3:Button("Island21",function(bool)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(414.405029, 7160.31543, -1003.33319)
+	 end)
+	 
 --================== Player Settings =======================--
 
 local PLR = w2:CreateFolder("Player")
