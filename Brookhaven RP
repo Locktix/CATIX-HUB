@@ -1,11 +1,11 @@
 --https://www.roblox.com/games/4924922222/Brookhaven-RP?refPageId=3cddb9e4-9fcc-4cd6-8514-610e58856b77
 local library = loadstring(game:HttpGet(('https://pastebin.com/raw/FsJak6AT')))()
 
-local w2 = library:CreateWindow("Spawn Cars")
+local w = library:CreateWindow("Spawn Cars")
 
 
 --================== Spawn Cars =======================--
-local w2 = w2:CreateFolder("Spawn Cars")
+local w2 = w:CreateFolder("Spawn Cars")
 
 
 
@@ -193,6 +193,7 @@ game:GetService("ReplicatedStorage").RemoteEvents.NoMotorVehicles:FireServer("Sc
 
 --================== Player Settings =======================--
 
+
 local PLR = w:CreateFolder("Player")
 
 	PLR:Slider("Speed Hack",10,250,true,function(value)
@@ -223,6 +224,38 @@ local PLR = w:CreateFolder("Player")
 	PLR:Button("Fly (Press E)",function()
 		loadstring(game:HttpGet("https://pastebin.com/raw/G1yWQbeU", true))()
 	end)
+	PLR:Button("Inf Jump",function()
+	game:GetService("UserInputService").JumpRequest:connect(function()
+    game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
+end)
+end)
+
+	PLR:Button("Crl + Click = TP",function()
+local Plr = game:GetService("Players").LocalPlayer
+local Mouse = Plr:GetMouse()
+
+Mouse.Button1Down:connect(function()
+if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end
+if not Mouse.Target then return end
+Plr.Character:MoveTo(Mouse.Hit.p)
+end)
+end)
+	PLR:Button("Extreme Light",function()
+	local s = Instance.new("PointLight", game.Players.LocalPlayer.Character.Head)
+s.Brightness = 0.3
+s.Range = 100
+game.Lighting.Changed:connect(function()
+game.Lighting.TimeOfDay = "14:00:00"
+game.Lighting.FogEnd = 300
+game.Lighting.Brightness = 10
+game.Lighting.ColorCorrection.Brightness = 0.1
+game.Lighting.ColorCorrection.Saturation = 0.1
+game.Lighting.Bloom.Intensity = 0.1
+end)
+end)
+	PLR:Button("Inf Yield",function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
 
 --================== Misc =======================--
 
