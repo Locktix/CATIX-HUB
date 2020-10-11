@@ -434,71 +434,102 @@ wait(0.3)
 	end)
    
        
-	c:Button("Kill Boss 1",function()
-		game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss1})
-		game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(8.00203133, -12.7165165, 507.297119)
-	end)
-	c:Button("Kill Boss 2",function()
-		game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss2})
-	game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-6.04493189, -12.7165155, 818.224854)
-	end)
-c:Button("Kill Boss 3",function()
-		game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss3})
-		game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1.63735569, -12.7165155, 1117.41638)
+c:Dropdown("Choose Boss",{"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+    _G.BossSelected = mob
 end)
-c:Button("Kill Boss 4",function()
-		game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss4})
-		game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1.66396797, -12.7165155, 1417.53198)
-end)
-c:Button("Kill Boss 5",function()
-		game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss5})
-		game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-20.2678909, -12.7165155, 1722.10242)
-end)
-c:Button("Kill Boss 6",function()
-		game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss6})
-		game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1.08977032, -12.7520227, 2158.84351)
-end)
-c:Button("Kill Boss 7",function()
-		game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss7})
-		game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(0.391081333, -12.7165155, 2663.63916)
-end)
-c:Button("Kill Boss 8",function()
-		game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss8})
-		game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-0.00960983336, -12.7165174, 2954.08423)
-end)
-	c:Button("Kill Boss 9",function()
-		game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss9})
-		game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(28.6499119, -12.7165098, 3265.70264)
-	end)
-	c:Button("Kill Boss 10",function()
-		game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss10})
-		game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-11.1925201, -12.7165155, 3543.76221)
-	end)
-c:Button("Kill Boss 11",function()
-		game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss11})
-		game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2.15835333, -12.7165327, 3856.87036)
-end)
-c:Button("Kill Boss 12",function()
-		game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss12})
-		game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(8.27923775, -12.7165136, 4150.24756)
-end)
-c:Button("Kill Boss 13",function()
-		game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss13})
-		game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(9.93039322, -12.7520227, 4839.87012)
-end)
-c:Button("Kill Boss 14",function()
-		game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss14})
-		game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(3.32383966, -12.7165136, 5251.31885)
-end)
-c:Button("Kill Boss 15",function()
-		game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss15})
-		game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(12.7103138, -12.7165155, 5707.521)
-end)
-c:Button("Kill Boss 16",function()
-		game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss16})
-		game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(11.1585464, -12.7165136, 6213.05225)
 
-	end)
+c:Toggle("Start",function(bool)
+    shared.toggle1 = bool
+end)
+_G.time = 0.3
+
+spawn(function()
+	while wait(_G.time) do
+		if shared.toggle1 then
+			if _G.BossSelected == "1" then
+				if game:GetService("Workspace").BossFolder:WaitForChild("Boss1") then
+					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss1})
+					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss1.Head.CFrame
+				end
+			elseif _G.BossSelected == "2" then
+				if game:GetService("Workspace").BossFolder:WaitForChild("Boss2") then
+					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss2})
+					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss2.Head.CFrame
+				end
+			elseif _G.BossSelected == "3" then
+				if game:GetService("Workspace").BossFolder:WaitForChild("Boss3") then
+					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss3})
+					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss3.Head.CFrame
+				end
+			elseif _G.BossSelected == "4" then
+	if game:GetService("Workspace").BossFolder:WaitForChild("Boss4") then
+					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss4})
+					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss4.Head.CFrame
+	end
+				elseif _G.BossSelected == "5" then
+	if game:GetService("Workspace").BossFolder:WaitForChild("Boss5") then
+					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss5})
+					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss5.Head.CFrame
+	end
+				elseif _G.BossSelected == "6" then
+	if game:GetService("Workspace").BossFolder:WaitForChild("Boss6") then
+					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss6})
+					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss6.Head.CFrame
+	end
+				elseif _G.BossSelected == "7" then
+	if game:GetService("Workspace").BossFolder:WaitForChild("Boss7") then
+					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss7})
+					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss7.Head.CFrame
+	end
+				elseif _G.BossSelected == "8" then
+	if game:GetService("Workspace").BossFolder:WaitForChild("Boss8") then
+					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss8})
+					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss8.Head.CFrame
+	end
+				elseif _G.BossSelected == "9" then
+	if game:GetService("Workspace").BossFolder:WaitForChild("Boss9") then
+					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss9})
+					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss9.Head.CFrame
+	end
+				elseif _G.BossSelected == "10" then
+	if game:GetService("Workspace").BossFolder:WaitForChild("Boss10") then
+					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss10})
+					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss10.Head.CFrame
+	end
+				elseif _G.BossSelected == "11" then
+	if game:GetService("Workspace").BossFolder:WaitForChild("Boss11") then
+					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss11})
+					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss11.Head.CFrame
+	end
+						elseif _G.BossSelected == "12" then
+	if game:GetService("Workspace").BossFolder:WaitForChild("Boss12") then
+					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss12})
+					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss12.Head.CFrame
+	end
+						elseif _G.BossSelected == "13" then
+	if game:GetService("Workspace").BossFolder:WaitForChild("Boss13") then
+					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss13})
+					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss13.Head.CFrame
+	end
+						elseif _G.BossSelected == "14" then
+	if game:GetService("Workspace").BossFolder:WaitForChild("Boss14") then
+					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss14})
+					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss14.Head.CFrame
+	end
+						elseif _G.BossSelected == "15" then
+	if game:GetService("Workspace").BossFolder:WaitForChild("Boss15") then
+					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss15})
+					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss15.Head.CFrame
+	end
+						elseif _G.BossSelected == "16" then
+	if game:GetService("Workspace").BossFolder:WaitForChild("Boss16") then
+					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss16})
+					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss16.Head.CFrame
+				end
+			end
+		end
+	end
+end)
 
 
 
