@@ -1,3 +1,4 @@
+--https://www.roblox.com/games/5709572883/Lift-Legends-Simulator
 local library = loadstring(game:HttpGet(('https://pastebin.com/raw/FsJak6AT')))()
 
 local w = library:CreateWindow("Simulateur de légende muscler GUI")
@@ -12,9 +13,7 @@ local b = w:CreateFolder("Auto Farm")
 		b:Toggle("Auto Sell",function(bool)
 		shared.toggle2 = bool
 	end)
-	b:Toggle("Auto Evolve Pets",function(bool)
-		shared.toggle3 = bool
-	end)
+
 
 	b:Toggle("Auto Farm Speed",function(bool)
 		shared.toggle4 = bool
@@ -64,13 +63,8 @@ game:GetService("ReplicatedStorage").Network["Port1"]:FireServer(unpack(args))
 
 game:GetService("ReplicatedStorage").Network["Port1"]:FireServer(unpack(args))
 			end
-	if shared.toggle3 then
-				local args = {
-					[1] = "Evolve",
-				}
-				game:GetService("ReplicatedStorage").Network["Port1"]:FireServer(unpack(args))
-			end
-			if shared.toggle4 then
+
+if shared.toggle4 then
 				local args = {
 					[1] = "Running",
 				}
@@ -265,7 +259,7 @@ gamepass21.Value = true
 end)
 
 
-	b:GuiSettings()
+
 
 
 --================== Player Settings =======================--
@@ -435,7 +429,8 @@ wait(0.3)
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-8.79776955, -12.7165146, 6206.69727)
 wait(0.3)
 		       end
-		end
+		       end
+		
 	end)
    
        
@@ -502,7 +497,12 @@ end)
 c:Button("Kill Boss 16",function()
 		game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss16})
 		game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(11.1585464, -12.7165136, 6213.05225)
+
 	end)
+
+
+
+
 --================== Eggs Hatch =======================--
 
 local w2 = library:CreateWindow("Eggs")
