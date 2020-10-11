@@ -121,69 +121,68 @@ spawn(function()
 		       if shared.toggle1 then
 	  game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","Horse")
 
-        game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","Horse")
+  
         end
      if shared.toggle2 then     
      game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","Ambulance")
      
-game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","Ambulance")
  end
    if shared.toggle4 then   
              game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","Bus")
-game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","Bus")
+
 
 
        end
  
       if shared.toggle5 then   
         game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","Van")
-game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","Van")
+
       end
       if shared.toggle6 then   
         game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","FireTruck")
-game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","FireTruck")
+
       end
       if shared.toggle7 then   
          
 game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","CopUnderCoverSUV")
-game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","CopUnderCoverSUV")
+
       end
       if shared.toggle8 then   
-       game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","QuadStock")
+
 game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","QuadStock")
       end
       if shared.toggle9 then   
        game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","Challenger")
-game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","Challenger")
+
       end
       if shared.toggle10 then   
-       game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","CopChallenger")
+ 
       game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","CopChallenger")
       end
       if shared.toggle11 then   
        
 game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","Jeep")
-game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","Jeep")
+
 
       end
       if shared.toggle12 then   
-       game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","GolfCart")
+
 game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","GolfCart")
       end
       if shared.toggle13 then   
        
-game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","Cadillac")
+
 game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","Cadillac")
       end
       if shared.toggle14 then   
-       game:GetService("ReplicatedStorage").RemoteEvents.NoMotorVehicles:FireServer("SkateBoard")
+
 
 game:GetService("ReplicatedStorage").RemoteEvents.NoMotorVehicles:FireServer("SkateBoard")
       end
       if shared.toggle15 then   
        
       
-game:GetService("ReplicatedStorage").RemoteEvents.NoMotorVehicles:FireServer("Scooter")
+
 
 game:GetService("ReplicatedStorage").RemoteEvents.NoMotorVehicles:FireServer("Scooter")
 			end
