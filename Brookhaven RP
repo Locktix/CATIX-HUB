@@ -125,8 +125,9 @@ spawn(function()
         end
      if shared.toggle2 then     
      game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","Ambulance")
-     end
+     
 game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","Ambulance")
+ end
    if shared.toggle4 then   
              game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","Bus")
 game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","Bus")
@@ -193,18 +194,48 @@ game:GetService("ReplicatedStorage").RemoteEvents.NoMotorVehicles:FireServer("Sc
 
 --================== Player Settings =======================--
 
+local PLR = w3:CreateFolder("Player")
 
-local PLR = w:CreateFolder("Player")
-
-	PLR:Slider("Speed Hack",10,250,true,function(value)
-	    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
-	end)
+	
 	
 	PLR:Slider("Jump Hack",10,250,true,function(value)
 	    game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
 	end)
+	PLR:Button("Speed Hack (press R)",function(bool)
+	    
+local walkspeedplayer = game:GetService("Players").LocalPlayer
+local walkspeedmouse = walkspeedplayer:GetMouse()
 
-	PLR:Button("No Clip (Press N)",function()
+local walkspeedenabled = false
+
+function x_walkspeed(key)
+if (key == "r") then
+if walkspeedenabled == false then
+_G.WS = 200;
+local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+Humanoid.WalkSpeed = _G.WS;
+end)
+Humanoid.WalkSpeed = _G.WS;
+
+walkspeedenabled = true
+elseif walkspeedenabled == true then
+_G.WS = 20;
+local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+Humanoid.WalkSpeed = _G.WS;
+end)
+Humanoid.WalkSpeed = _G.WS;
+
+walkspeedenabled = false
+end
+end
+end
+
+walkspeedmouse.KeyDown:connect(x_walkspeed)
+
+end)
+	PLR:Button("No Clip (Press E)",function()
 		noclip = false
 		game:GetService('RunService').Stepped:connect(function()
 			if noclip then
@@ -214,16 +245,99 @@ local PLR = w:CreateFolder("Player")
 		local plr = game.Players.LocalPlayer
 		local mouse = plr:GetMouse()
 		mouse.KeyDown:connect(function(key)
-			if key == "n" then
+			if key == "e" then
 				noclip = not noclip
 				game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
 			end
 		end)
 	end)
 
-	PLR:Button("Fly (Press E)",function()
-		loadstring(game:HttpGet("https://pastebin.com/raw/G1yWQbeU", true))()
+	PLR:Button("Fly (Press F)",function()
+   repeat wait() 
+	until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Head") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid") 
+local mouse = game.Players.LocalPlayer:GetMouse() 
+repeat wait() until mouse
+local plr = game.Players.LocalPlayer 
+local torso = plr.Character.Head 
+local flying = false
+local deb = true 
+local ctrl = {f = 0, b = 0, l = 0, r = 0} 
+local lastctrl = {f = 0, b = 0, l = 0, r = 0} 
+local maxspeed = 400 
+local speed = 5000 
+
+function Fly() 
+local bg = Instance.new("BodyGyro", torso) 
+bg.P = 9e4 
+bg.maxTorque = Vector3.new(9e9, 9e9, 9e9) 
+bg.cframe = torso.CFrame 
+local bv = Instance.new("BodyVelocity", torso) 
+bv.velocity = Vector3.new(0,0.1,0) 
+bv.maxForce = Vector3.new(9e9, 9e9, 9e9) 
+repeat wait() 
+plr.Character.Humanoid.PlatformStand = true 
+if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then 
+speed = speed+.5+(speed/maxspeed) 
+if speed > maxspeed then 
+speed = maxspeed 
+end 
+elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then 
+speed = speed-1 
+if speed < 0 then 
+speed = 0 
+end 
+end 
+if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then 
+bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
+lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r} 
+elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then 
+bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
+else 
+bv.velocity = Vector3.new(0,0.1,0) 
+end 
+bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0) 
+until not flying 
+ctrl = {f = 0, b = 0, l = 0, r = 0} 
+lastctrl = {f = 0, b = 0, l = 0, r = 0} 
+speed = 100
+bg:Destroy() 
+bv:Destroy() 
+plr.Character.Humanoid.PlatformStand = false 
+end 
+mouse.KeyDown:connect(function(key) 
+if key:lower() == "f" then 
+if flying then flying = false 
+else 
+flying = true 
+Fly() 
+end 
+elseif key:lower() == "w" then 
+ctrl.f = 1 
+elseif key:lower() == "s" then 
+ctrl.b = -1 
+elseif key:lower() == "a" then 
+ctrl.l = -1 
+elseif key:lower() == "d" then 
+ctrl.r = 1 
+end 
+end) 
+mouse.KeyUp:connect(function(key) 
+if key:lower() == "w" then 
+ctrl.f = 0 
+elseif key:lower() == "s" then 
+ctrl.b = 0 
+elseif key:lower() == "a" then 
+ctrl.l = 0 
+elseif key:lower() == "d" then 
+ctrl.r = 0 
+end 
+end)
+Fly()
+
+          
+
 	end)
+
 	PLR:Button("Inf Jump",function()
 	game:GetService("UserInputService").JumpRequest:connect(function()
     game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
