@@ -7,269 +7,293 @@ local y = library:CreateWindow("Rebirths")
 
 
 --================== Rebirths =======================--
-local y = y:CreateFolder("Things")
+	local y = y:CreateFolder("Things")
 
-	y:Dropdown("Choose Rebirths",{"X1","X5","X25","X100","X400","X1,2K","X4K","X15K","X30K","X78K","X300K","X1M","X12M","X100M","X500M","X2B","X10B","X25B","X100B","X250B","X1T","X45T","X100T","X1Qd","X5Qd","X25Qd","X85Qd","X250Qd","X1Qn","X5Qn","X35Qn","X100Qn","X250Qn","X500Qn","X2Sx","X5Sx","X15Sx","X50Sx","X250Sx"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
-	    _G.RebirthsSelected = mob
-	end)
+		y:Dropdown("Choose Rebirths",{"X1","X5","X25","X100","X400","X1,2K","X4K","X15K","X30K","X78K","X300K","X1M","X12M","X100M","X500M","X2B","X10B","X25B","X100B","X250B","X1T","X45T","X100T","X1Qd","X5Qd","X25Qd","X85Qd","X250Qd","X1Qn","X5Qn","X35Qn","X100Qn","X250Qn","X500Qn","X2Sx","X5Sx","X15Sx","X50Sx","X250Sx"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+			_G.RebirthsSelected = mob
+		end)
 
-	y:Toggle("Buy Rebirths",function(bool)
-	    shared.Eggs = bool
-	end)
+		y:Toggle("Buy Rebirths",function(bool)
+			shared.Eggs = bool
+		end)
 
-spawn(function()
-	while wait(0) do
-		if shared.Eggs then
-			if _G.RebirthsSelected == "X1" then
-		local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M1"],
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-			elseif _G.RebirthsSelected == "X5" then
+	spawn(function()
+		while wait(0) do
+			if shared.Eggs then
+				if _G.RebirthsSelected == "X1" then
 			local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M2"],
-}
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M1"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+				elseif _G.RebirthsSelected == "X5" then
+				local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M2"],
+	}
 
-			elseif _G.RebirthsSelected == "X25" then
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+
+				elseif _G.RebirthsSelected == "X25" then
+				local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M3"],
+	}
+
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+				elseif _G.RebirthsSelected == "X100" then
 			local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M3"],
-}
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M4"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-			elseif _G.RebirthsSelected == "X100" then
-		local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M4"],
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-			elseif _G.RebirthsSelected == "X400" then
-		local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M5"],
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-			elseif _G.RebirthsSelected == "X1,2K" then
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+				elseif _G.RebirthsSelected == "X400" then
 			local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M6"],
-}
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M5"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-			elseif _G.RebirthsSelected == "X4K" then
-		local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M7"],
-}
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+				elseif _G.RebirthsSelected == "X1,2K" then
+				local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M6"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-			elseif _G.RebirthsSelected == "X15K" then
-		local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M8"],
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-			elseif _G.RebirthsSelected == "X30K" then
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+				elseif _G.RebirthsSelected == "X4K" then
 			local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M9"],
-}
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M7"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-			elseif _G.RebirthsSelected == "X78K" then
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+				elseif _G.RebirthsSelected == "X15K" then
+			local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M8"],
+	}
+
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+				elseif _G.RebirthsSelected == "X30K" then
+				local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M9"],
+	}
+
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+				elseif _G.RebirthsSelected == "X78K" then
+			local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M10"],
+	}
+
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+				elseif _G.RebirthsSelected == "X300K" then
+					local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M11"],
+	}
+
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+				elseif _G.RebirthsSelected == "X1M" then
 		local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M10"],
-}
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M12"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-			elseif _G.RebirthsSelected == "X300K" then
-			    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M11"],
-}
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+				elseif _G.RebirthsSelected == "X12M" then
+		local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M13"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-			elseif _G.RebirthsSelected == "X1M" then
-    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M12"],
-}
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+				elseif _G.RebirthsSelected == "X100M" then
+		local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M14"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-			elseif _G.RebirthsSelected == "X12M" then
-    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M13"],
-}
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+				elseif _G.RebirthsSelected == "X500M" then
+		local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M15"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-			elseif _G.RebirthsSelected == "X100M" then
-    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M14"],
-}
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+				elseif _G.RebirthsSelected == "X2B" then
+		local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M16"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-			elseif _G.RebirthsSelected == "X500M" then
-    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M15"],
-}
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+				elseif _G.RebirthsSelected == "X10B" then
+		local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M17"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-			elseif _G.RebirthsSelected == "X2B" then
-    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M16"],
-}
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+				elseif _G.RebirthsSelected == "X25B" then
+		local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M18"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-			elseif _G.RebirthsSelected == "X10B" then
-    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M17"],
-}
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+				elseif _G.RebirthsSelected == "X100B" then
+		local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M19"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-			elseif _G.RebirthsSelected == "X25B" then
-    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M18"],
-}
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+				elseif _G.RebirthsSelected == "X250B" then
+		local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M20"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-			elseif _G.RebirthsSelected == "X100B" then
-    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M19"],
-}
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+				elseif _G.RebirthsSelected == "X1T" then
+		local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M21"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-			elseif _G.RebirthsSelected == "X250B" then
-    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M20"],
-}
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+		elseif _G.RebirthsSelected == "X5T" then
+		local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M22"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-			elseif _G.RebirthsSelected == "X1T" then
-    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M21"],
-}
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+		elseif _G.RebirthsSelected == "X45T" then
+		local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M23"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-	elseif _G.RebirthsSelected == "X5T" then
-    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M22"],
-}
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+		elseif _G.RebirthsSelected == "X100T" then
+		local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M24"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-	elseif _G.RebirthsSelected == "X45T" then
-    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M23"],
-}
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+		elseif _G.RebirthsSelected == "X1Qd" then
+		local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M25"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-	elseif _G.RebirthsSelected == "X100T" then
-    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M24"],
-}
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+		elseif _G.RebirthsSelected == "X5Qd" then
+		local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M26"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-	elseif _G.RebirthsSelected == "X1Qd" then
-    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M25"],
-}
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+		elseif _G.RebirthsSelected == "X25Qd" then
+		local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M27"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-	elseif _G.RebirthsSelected == "X5Qd" then
-    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M26"],
-}
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+		elseif _G.RebirthsSelected == "X85Qd" then
+		local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M28"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-	elseif _G.RebirthsSelected == "X25Qd" then
-    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M27"],
-}
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+		elseif _G.RebirthsSelected == "X250Qd" then
+		local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M29"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-	elseif _G.RebirthsSelected == "X85Qd" then
-    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M28"],
-}
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+		elseif _G.RebirthsSelected == "X1Qn" then
+		local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M30"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-	elseif _G.RebirthsSelected == "X250Qd" then
-    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M29"],
-}
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+		elseif _G.RebirthsSelected == "X5Qn" then
+		local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M31"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-	elseif _G.RebirthsSelected == "X1Qn" then
-    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M30"],
-}
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+		elseif _G.RebirthsSelected == "X35Qn" then
+		local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M32"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-	elseif _G.RebirthsSelected == "X5Qn" then
-    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M31"],
-}
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+		elseif _G.RebirthsSelected == "X100Qn" then
+		local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M33"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-	elseif _G.RebirthsSelected == "X35Qn" then
-    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M32"],
-}
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+		elseif _G.RebirthsSelected == "X250Qn" then
+		local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M34"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-	elseif _G.RebirthsSelected == "X100Qn" then
-    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M33"],
-}
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+		elseif _G.RebirthsSelected == "X500Qn" then
+		local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M35"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-	elseif _G.RebirthsSelected == "X250Qn" then
-    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M34"],
-}
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+		elseif _G.RebirthsSelected == "X2Sx" then
+		local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M36"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-	elseif _G.RebirthsSelected == "X500Qn" then
-    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M35"],
-}
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+		elseif _G.RebirthsSelected == "X5Sx" then
+		local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M37"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-	elseif _G.RebirthsSelected == "X2Sx" then
-    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M36"],
-}
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+		elseif _G.RebirthsSelected == "X15Sx" then
+		local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M38"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-	elseif _G.RebirthsSelected == "X5Sx" then
-    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M37"],
-}
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+		elseif _G.RebirthsSelected == "X50Sx" then
+		local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M39"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-	elseif _G.RebirthsSelected == "X15Sx" then
-    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M38"],
-}
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+		elseif _G.RebirthsSelected == "X250Sx" then
+		local args = {
+		[1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M40"],
+	}
 
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-	elseif _G.RebirthsSelected == "X50Sx" then
-    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M39"],
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
-	elseif _G.RebirthsSelected == "X250Sx" then
-    local args = {
-    [1] = game:GetService("Players")["LocalPlayer"].PlayerGui.Main.RebirthMenu.Shop.MultiplierShop["M40"],
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+	game:GetService("ReplicatedStorage").RemoteEvents.Rebirthing:FireServer(unpack(args))
+				end
 			end
 		end
-	end
-end)
+	end)
 
 --================== Things =======================--
 
-
 local w2 = w:CreateFolder("Things")
+
+
+w2:Dropdown("Choose",{"Candy"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	_G.TpSelected = mob
+end)
+
+w2:Toggle("Tp To...",function(bool)
+	shared.Teleports = bool
+end)
+_G.time = 0.3
+
+spawn(function()
+	while wait(0) do
+		if shared.Teleports then
+			if _G.TpSelected == "Candy" then
+				local me = game.Players.LocalPlayer.Character
+				local pbosd = game:GetService("Workspace").Event.CandyCorn
+
+				
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+			end
+		end
+	end
+	end)
+
 
 	w2:Toggle("Auto Craft Pets",function(bool)
 		shared.toggle1 = bool
@@ -284,7 +308,7 @@ local w2 = w:CreateFolder("Things")
 
 	spawn(function()
 		while wait() do
-		    if shared.toggle1 then
+			if shared.toggle1 then
 				game:GetService("ReplicatedStorage").Remotes.CraftAll:FireServer()
 			end
 			if shared.toggle2 then
@@ -292,18 +316,18 @@ local w2 = w:CreateFolder("Things")
 			end
 			if shared.toggle3 then
 				game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-677.453247, 134.102203, -889.735962)
-    
+	
 		
 			end
 	end
 	end)
 local w3 = x:CreateFolder("Eggs")
 	w3:Dropdown("Choose Eggs",{"Common","Rare","1M","Candy","Snow","Lava","Ocean","Moon","Fall","Sand","Dark","Halloween"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
-	    _G.BossSelected = mob
+		_G.BossSelected = mob
 	end)
 
 	w3:Toggle("Buy Eggs",function(bool)
-	    shared.Eggs = bool
+		shared.Eggs = bool
 	end)
 
 spawn(function()
@@ -311,76 +335,76 @@ spawn(function()
 		if shared.Eggs then
 			if _G.BossSelected == "Common" then
 				local args = {
-				    [1] = "Common",
-				    [2] = "R",
+					[1] = "Common",
+					[2] = "R",
 				}
 				game:GetService("ReplicatedStorage").RemoteEvents.EggOpen:FireServer(unpack(args))
 			elseif _G.BossSelected == "Rare" then
 				local args = {
-				    [1] = "Rare",
-				    [2] = "R",
+					[1] = "Rare",
+					[2] = "R",
 				}
 				game:GetService("ReplicatedStorage").RemoteEvents.EggOpen:FireServer(unpack(args))
 
 			elseif _G.BossSelected == "1M" then
 				local args = {
-				    [1] = "1M",
-				    [2] = "R",
+					[1] = "1M",
+					[2] = "R",
 				}
 				game:GetService("ReplicatedStorage").RemoteEvents.EggOpen:FireServer(unpack(args))
 			elseif _G.BossSelected == "Candy" then
 				local args = {
-				    [1] = "Candy",
-				    [2] = "R",
+					[1] = "Candy",
+					[2] = "R",
 				}
 				game:GetService("ReplicatedStorage").RemoteEvents.EggOpen:FireServer(unpack(args))
 			elseif _G.BossSelected == "Snow" then
 				local args = {
-				    [1] = "Snow",
-				    [2] = "R",
+					[1] = "Snow",
+					[2] = "R",
 				}
 				game:GetService("ReplicatedStorage").RemoteEvents.EggOpen:FireServer(unpack(args))
 			elseif _G.BossSelected == "Lava" then
 				local args = {
-				    [1] = "Lava",
-				    [2] = "R",
+					[1] = "Lava",
+					[2] = "R",
 				}
 				game:GetService("ReplicatedStorage").RemoteEvents.EggOpen:FireServer(unpack(args))
 			elseif _G.BossSelected == "Ocean" then
 				local args = {
-				    [1] = "Ocean",
-				    [2] = "R",
+					[1] = "Ocean",
+					[2] = "R",
 				}
 				game:GetService("ReplicatedStorage").RemoteEvents.EggOpen:FireServer(unpack(args))
 			elseif _G.BossSelected == "Moon" then
 				local args = {
-				    [1] = "Moon",
-				    [2] = "R",
+					[1] = "Moon",
+					[2] = "R",
 				}
 
 				game:GetService("ReplicatedStorage").RemoteEvents.EggOpen:FireServer(unpack(args))
 			elseif _G.BossSelected == "Fall" then
 				local args = {
-				    [1] = "Fall",
-				    [2] = "R",
+					[1] = "Fall",
+					[2] = "R",
 				}
 				game:GetService("ReplicatedStorage").RemoteEvents.EggOpen:FireServer(unpack(args))
 			elseif _G.BossSelected == "Sand" then
 				local args = {
-				    [1] = "Sand",
-				    [2] = "R",
+					[1] = "Sand",
+					[2] = "R",
 				}
 				game:GetService("ReplicatedStorage").RemoteEvents.EggOpen:FireServer(unpack(args))
 			elseif _G.BossSelected == "Dark" then
-			    	local args = {
-				    [1] = "Dark",
-				    [2] = "R",
+					local args = {
+					[1] = "Dark",
+					[2] = "R",
 				}
 				game:GetService("ReplicatedStorage").RemoteEvents.EggOpen:FireServer(unpack(args))
 					elseif _G.BossSelected == "Halloween" then
-			    	local args = {
-				    [1] = "Halloween",
-				    [2] = "R",
+					local args = {
+					[1] = "Halloween",
+					[2] = "R",
 				}
 				game:GetService("ReplicatedStorage").RemoteEvents.EggOpen:FireServer(unpack(args))
 			end
@@ -393,11 +417,11 @@ end)
 local PLR = w:CreateFolder("Player")
 
 	PLR:Slider("Speed Hack",10,250,true,function(value)
-	    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
 	end)
 	
 	PLR:Slider("Jump Hack",10,250,true,function(value)
-	    game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
 	end)
 
 	PLR:Button("No Clip (Press N)",function()
@@ -423,7 +447,7 @@ local PLR = w:CreateFolder("Player")
 
 	PLR:Button("Inf Jump",function()
 	game:GetService("UserInputService").JumpRequest:connect(function()
-    game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
+	game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
 end)
 end)
 
@@ -497,12 +521,12 @@ setfflag("DFStringCrashUploadToBacktraceBlackholeToken", "")
 setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
 
 --| Anti AFK | By Altix#3395
-    local Virtual = game:service'VirtualUser'
-    game:service'Players'.LocalPlayer.Idled:connect(function()
-        Virtual:CaptureController()
-        Virtual:ClickButton2(Vector2.new())
-        wait(2)
-    end)
+	local Virtual = game:service'VirtualUser'
+	game:service'Players'.LocalPlayer.Idled:connect(function()
+		Virtual:CaptureController()
+		Virtual:ClickButton2(Vector2.new())
+		wait(2)
+	end)
 
 --| Anti Chat Logs |
 local CloneFunction = clonefunction
@@ -516,8 +540,8 @@ getgenv().MessageEvent = Instance.new("BindableEvent")
 local OldFunctionHook
 local PostMessageHook = function(self, msg)
    if not CheckCaller() and self == PostMessage then
-       MessageEvent:Fire(msg)
-       return
+	   MessageEvent:Fire(msg)
+	   return
    end
    return OldFunctionHook(self, msg)
 end
