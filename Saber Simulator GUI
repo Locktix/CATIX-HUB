@@ -12425,6 +12425,35 @@ game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
         _G.b225= false
     end
 end)
+AutoTab:CreateButton("Arrest Impossible", function()
+
+end)
+AutoTab:CreateToggle("Auto Tp To Candys", function(arg)
+    if arg then
+        _G.AutoSwing222 = true
+      
+      while wait(0) and _G.AutoSwing222 do
+            
+        if game.Players.LocalPlayer.Character.AntiPort and game.Players.LocalPlayer.Character.AntiPortNew  then
+game.Players.LocalPlayer.Character.AntiPort:Destroy()
+game.Players.LocalPlayer.Character.AntiPortNew:Destroy()
+wait(0.1)
+end
+while wait() do
+local plrh = game.Players.LocalPlayer.Character.HumanoidRootPart
+for i,v in pairs(game:GetService("Workspace").CandyHolder:GetChildren()) do
+  plrh.CFrame = v.CFrame
+wait(0.2)
+  end
+end
+               
+         
+           
+        end
+    else
+        _G.AutoSwing222 = false
+    end
+end)
 AutoTab:CreateToggle("Auto Click", function(arg)
     if arg then
         _G.AutoSwing2 = true
