@@ -194,7 +194,7 @@ game:GetService("ReplicatedStorage").RemoteEvents.NoMotorVehicles:FireServer("Sc
 
 --================== Player Settings =======================--
 
-local PLR = w3:CreateFolder("Player")
+local PLR = w:CreateFolder("Player")
 
 	
 	
