@@ -35,6 +35,9 @@ end)
 TP:Button("Zone 6",function()
  game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(3460.11597, -107.792664, -176.395325)
 end)
+TP:Button("Zone Event",function()
+ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-863.656311, 29.7079811, 1837.49316)
+end)
 --================== Things =======================--
 local w77 = w4:CreateFolder("Things")
 
