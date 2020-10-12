@@ -1,206 +1,97 @@
 --https://www.roblox.com/games/2616498302/DRAGONS-Slaying-Simulator
 
+local library = loadstring(game:HttpGet(('https://pastebin.com/raw/FsJak6AT')))()
+
+local w3 = library:CreateWindow("Slaying Simulator GUI")
+local w2 = library:CreateWindow("Eggs")
+local w4 = library:CreateWindow("Tp To Mobs")
+
+--================== Model =======================--
+local w = w3:CreateFolder("Things")
 
 
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
-local AutoTab = Library:CreateTab("Slaying Simulator GUI","things", true)
-local teleports = Library:CreateTab("Teleports","things", true)
-local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
-local eggs2 = Library:CreateTab("Auto Buy Eggs 2","things", true)
-local teleboss = Library:CreateTab("Tp to Boss","things", true)
-local MISC = Library:CreateTab("MISC","things", true)
-local credits = Library:CreateTab("Credits","things", true)
-
-
-credits:CreateButton("Our Discords", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
+w:Button("Button",function()
+  game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss4})
 end)
 
-credits:CreateButton("masterkyllian#1723", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
-end)
-
-credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
-end)
-
-credits:CreateButton("bsoleil31FR#7202", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
-end)
-
-credits:CreateButton("https://discord.gg/m9Nn3qd", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
-end)
-
-credits:CreateButton("Bebo Mods#1110", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
-end)
-
-AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.LULU = true 
-        while wait(0) and _G.LULU do
-            if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
+	w:Toggle("Auto Click",function(bool)
+		shared.things1 = bool
+	
+	end)
+	
+		w:Toggle("Auto Rebirths",function(bool)
+		shared.things2 = bool
+end) 
+	spawn(function()
+		while wait() do
+		       if shared.things1 then
+		 if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
             game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool"):Activate()
-    end
+            end
 end
-
-    else
-        _G.LULU = false
-    end
-end)
-
-MISC:CreateToggle("NO CLIP Press(E)", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-_G.NO = true 
-  noclip = false
-game:GetService('RunService').Stepped:connect(function()
-if noclip then
-game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
-end
-end)
-plr = game.Players.LocalPlayer
-mouse = plr:GetMouse()
-mouse.KeyDown:connect(function(key)
-
-if key == "e" then
-noclip = not noclip
-game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
-end
-end)
-print('Created by FileExplorer')
-print('Credits to Peyton for the ChangeState part of this script')
-
-         
-else
-_G.NO = false
-end
-end)
-
-
-
-MISC:CreateToggle("Speed Hack 100", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-_G.Speed = true 
-        while wait() and _G.Speed do
-            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
-        end
-    else
-        _G.Speed = false
-           game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
-         end
-end)
-
-
-AutoTab:CreateToggle("Auto Rebirth", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.b = true 
-        while wait(0) and _G.b do
-            local Event = game:GetService("ReplicatedStorage").Events.PurchaseRebirth
+	if shared.things2 then
+    local Event = game:GetService("ReplicatedStorage").Events.PurchaseRebirth
 Event:FireServer()
-       
-       end
-    else
-        _G.b = false
-    end
+end
+end
 end)
 
-eggs:CreateToggle("Auto Buy Common Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.c = true 
-        while wait(0) and _G.c do
-            local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
+local w2 = w2:CreateFolder("Eggs")
+	w2:Dropdown("Choose Eggs",{"Common","Leafy","Ancient","Swampy","Crystal","Flaming","Sandy","Space","Evil","Candy","Chocolate","Frostbite","Aqua","Magma","Volcanic","Isotopic","Bionic","Medieval","Royal","Subzero","Power","Robot","Magical","Griffin","Phoenix","Ghostly"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	    _G.BossSelected = mob
+	end)
 
-local Arguments = {
+	w2:Toggle("Buy Eggs",function(bool)
+	    shared.Eggs = bool
+	end)
+
+spawn(function()
+	while wait(0) do
+		if shared.Eggs then
+			if _G.BossSelected == "Common" then
+local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
+				local Arguments = {
        [1] = "Common Egg",
        [2] = 1
 }
 
 Remote:InvokeServer(unpack(Arguments))
-        end
-    else
-        _G.c = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Leafy Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.d = true 
-        while wait(0) and _G.d do
-            local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
-
-local Arguments = {
+			elseif _G.BossSelected == "Leafy" then
+local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
+				local Arguments = {
        [1] = "Leafy Egg",
        [2] = 1
 }
 
 Remote:InvokeServer(unpack(Arguments))
-        end
-    else
-        _G.d = false
-    end
-end)
 
-eggs:CreateToggle("Auto Buy Ancient Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.e = true 
-        while wait(0) and _G.e do
-            local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
-
-local Arguments = {
+			elseif _G.BossSelected == "Ancient" then
+local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
+			local Arguments = {
        [1] = "Ancient Egg",
        [2] = 1
 }
 
 Remote:InvokeServer(unpack(Arguments))
-        end
-    else
-        _G.e = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Swampy Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.f = true 
-        while wait(0) and _G.f do
-            local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
-
-local Arguments = {
+			elseif _G.BossSelected == "Swampy" then
+local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
+			local Arguments = {
        [1] = "Swampy Egg",
        [2] = 1
 }
 
 Remote:InvokeServer(unpack(Arguments))
-        end
-    else
-        _G.f = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Crystal Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.g = true 
-        while wait(0) and _G.g do
-            local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
-
-local Arguments = {
+			elseif _G.BossSelected == "Crystal" then
+local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
+		local Arguments = {
        [1] = "Crystal Egg",
        [2] = 1
 }
 
 Remote:InvokeServer(unpack(Arguments))
-        end
-    else
-        _G.g = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Flaming Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.h = true 
-        while wait(0) and _G.h do
-            local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
+			elseif _G.BossSelected == "Flaming" then
+			           local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
 
 local Arguments = {
        [1] = "Flaming Egg",
@@ -208,17 +99,8 @@ local Arguments = {
 }
 
 Remote:InvokeServer(unpack(Arguments))
-        end
-    else
-        _G.h = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Sandy Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.i = true 
-        while wait(0) and _G.i do
-            local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
+			elseif _G.BossSelected == "Sandy" then
+				        local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
 
 local Arguments = {
        [1] = "Sandy Egg",
@@ -226,17 +108,8 @@ local Arguments = {
 }
 
 Remote:InvokeServer(unpack(Arguments))
-        end
-    else
-        _G.i = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Space Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.j = true 
-        while wait(0) and _G.j do
-            local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
+			elseif _G.BossSelected == "Space" then
+				       local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
 
 local Arguments = {
        [1] = "Space Egg",
@@ -244,17 +117,8 @@ local Arguments = {
 }
 
 Remote:InvokeServer(unpack(Arguments))
-        end
-    else
-        _G.j = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Evil Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.k = true 
-        while wait(0) and _G.k do
-            local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
+			elseif _G.BossSelected == "Evil" then
+				          local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
 
 local Arguments = {
        [1] = "Evil Egg",
@@ -262,17 +126,8 @@ local Arguments = {
 }
 
 Remote:InvokeServer(unpack(Arguments))
-        end
-    else
-        _G.k = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Candy Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.l = true 
-        while wait(0) and _G.l do
-            local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
+			elseif _G.BossSelected == "Candy" then
+				     local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
 
 local Arguments = {
        [1] = "Candy Egg",
@@ -280,17 +135,8 @@ local Arguments = {
 }
 
 Remote:InvokeServer(unpack(Arguments))
-        end
-    else
-        _G.l = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Chocolate Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.m = true 
-        while wait(0) and _G.m do
-            local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
+			elseif _G.BossSelected == "Chocolate" then
+  local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
 
 local Arguments = {
        [1] = "Chocolate Egg",
@@ -298,17 +144,9 @@ local Arguments = {
 }
 
 Remote:InvokeServer(unpack(Arguments))
-        end
-    else
-        _G.m = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Frostbite Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.n = true 
-        while wait(0) and _G.n do
-            local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
+			
+elseif _G.BossSelected == "Frostbite" then
+          local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
 
 local Arguments = {
        [1] = "Frostbite Egg",
@@ -316,17 +154,9 @@ local Arguments = {
 }
 
 Remote:InvokeServer(unpack(Arguments))
-        end
-    else
-        _G.n = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Aqua Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.o = true 
-        while wait(0) and _G.o do
-            local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
+      
+elseif _G.BossSelected == "Aqua" then
+          local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
 
 local Arguments = {
        [1] = "Aqua Egg",
@@ -334,17 +164,9 @@ local Arguments = {
 }
 
 Remote:InvokeServer(unpack(Arguments))
-        end
-    else
-        _G.o = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Magma Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.p = true 
-        while wait(0) and _G.p do
-            local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
+      
+elseif _G.BossSelected == "Magma" then
+          local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
 
 local Arguments = {
        [1] = "Magma Egg",
@@ -352,17 +174,9 @@ local Arguments = {
 }
 
 Remote:InvokeServer(unpack(Arguments))
-        end
-    else
-        _G.p = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Volcanic Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.q = true 
-        while wait(0) and _G.q do
-            local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
+       
+elseif _G.BossSelected == "Volcanic" then
+          local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
 
 local Arguments = {
        [1] = "Volcanic Egg",
@@ -370,17 +184,9 @@ local Arguments = {
 }
 
 Remote:InvokeServer(unpack(Arguments))
-        end
-    else
-        _G.q = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Isotopic Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.r = true 
-        while wait(0) and _G.r do
-            local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
+       
+elseif _G.BossSelected == "Isotopic" then
+          local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
 
 local Arguments = {
        [1] = "Isotopic Egg",
@@ -388,17 +194,9 @@ local Arguments = {
 }
 
 Remote:InvokeServer(unpack(Arguments))
-        end
-    else
-        _G.r = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Bionic Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.s = true 
-        while wait(0) and _G.s do
-            local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
+      
+elseif _G.BossSelected == "Bionic" then
+          local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
 
 local Arguments = {
        [1] = "Bionic Egg",
@@ -406,17 +204,9 @@ local Arguments = {
 }
 
 Remote:InvokeServer(unpack(Arguments))
-        end
-    else
-        _G.s = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Medieval Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.t = true 
-        while wait(0) and _G.t do
-            local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
+       
+elseif _G.BossSelected == "Medieval" then
+          local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
 
 local Arguments = {
        [1] = "Medieval Egg",
@@ -424,17 +214,9 @@ local Arguments = {
 }
 
 Remote:InvokeServer(unpack(Arguments))
-        end
-    else
-        _G.t = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Royal Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.u = true 
-        while wait(0) and _G.u do
-            local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
+       
+elseif _G.BossSelected == "Royal" then
+          local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
 
 local Arguments = {
        [1] = "Royal Egg",
@@ -442,17 +224,9 @@ local Arguments = {
 }
 
 Remote:InvokeServer(unpack(Arguments))
-        end
-    else
-        _G.u = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Subzero Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.v = true 
-        while wait(0) and _G.v do
-            local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
+       
+elseif _G.BossSelected == "Subzero" then
+          local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
 
 local Arguments = {
        [1] = "Subzero Egg",
@@ -460,35 +234,9 @@ local Arguments = {
 }
 
 Remote:InvokeServer(unpack(Arguments))
-        end
-    else
-        _G.v = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Subzero Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.w = true 
-        while wait(0) and _G.w do
-            local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
-
-local Arguments = {
-       [1] = "Subzero Egg",
-       [2] = 1
-}
-
-Remote:InvokeServer(unpack(Arguments))
-        end
-    else
-        _G.w = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Power Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.x = true 
-        while wait(0) and _G.x do
-            local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
+       
+elseif _G.BossSelected == "Power" then
+          local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
 
 local Arguments = {
        [1] = "Power Egg",
@@ -496,17 +244,9 @@ local Arguments = {
 }
 
 Remote:InvokeServer(unpack(Arguments))
-        end
-    else
-        _G.x = false
-    end
-end)
-
-eggs:CreateToggle("Auto Buy Robot Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.y = true 
-        while wait(0) and _G.y do
-            local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
+        
+elseif _G.BossSelected == "Robot" then
+          local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
 
 local Arguments = {
        [1] = "Robot Egg",
@@ -514,18 +254,9 @@ local Arguments = {
 }
 
 Remote:InvokeServer(unpack(Arguments))
-        end
-    else
-        _G.y = false
-    end
-end)
-
-
-eggs:CreateToggle("Auto Buy Magical Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.z = true 
-        while wait(0) and _G.z do
-            local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
+     
+elseif _G.BossSelected == "Magical" then
+          local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
 
 local Arguments = {
        [1] = "Magical Egg",
@@ -533,17 +264,9 @@ local Arguments = {
 }
 
 Remote:InvokeServer(unpack(Arguments))
-        end
-    else
-        _G.z = false
-    end
-end)
-
-eggs2:CreateToggle("Auto Buy Griffin Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.za = true 
-        while wait(0) and _G.za do
-            local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
+     
+elseif _G.BossSelected == "Griffin" then
+          local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
 
 local Arguments = {
        [1] = "Griffin Egg",
@@ -551,17 +274,9 @@ local Arguments = {
 }
 
 Remote:InvokeServer(unpack(Arguments))
-        end
-    else
-        _G.za = false
-    end
-end)
-
-eggs2:CreateToggle("Auto Buy Phoenix Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zb = true 
-        while wait(0) and _G.zb do
-            local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
+      
+elseif _G.BossSelected == "Phoenix" then
+          local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
 
 local Arguments = {
        [1] = "Phoenix Egg",
@@ -569,17 +284,9 @@ local Arguments = {
 }
 
 Remote:InvokeServer(unpack(Arguments))
-        end
-    else
-        _G.zb = false
-    end
-end)
-
-eggs2:CreateToggle("Auto Buy Ghostly Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zc = true 
-        while wait(0) and _G.zc do
-            local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
+        
+elseif _G.BossSelected == "Ghostly" then
+          local Remote = game.ReplicatedStorage.Events['PurchaseEgg']
 
 local Arguments = {
        [1] = "Ghostly Egg",
@@ -588,316 +295,312 @@ local Arguments = {
 
 Remote:InvokeServer(unpack(Arguments))
         end
-    else
-        _G.zc = false
-    end
+		end
+	end
 end)
-teleboss:CreateButton("😎Bosses Normal Zone😎", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(n)
-end)
-teleboss:CreateToggle("Auto Kill Overlord", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zd = true 
-        while wait(0) and _G.zd do
-       local me = game.Players.LocalPlayer.Character
+
+--================== Tp To Mobs =======================--
+
+
+local w33 = w4:CreateFolder("Tp To Mobs")
+
+w33:Label("Use Auto Click",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
+
+w33:Button("Tp To Overwolf",function()
+   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Enemies.Overlord[" "].LeftUpperLeg
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-        end
-    else
-        _G.zd = false
-    end
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)	
 end)
-
-teleboss:CreateToggle("Auto Kill Werewolf", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.ze = true 
-        while wait(0) and _G.ze do
-         local me = game.Players.LocalPlayer.Character
+w33:Button("Tp To Werewolf",function()
+   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Enemies.Werewolf[" "].LeftUpperLeg
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-        end
-    else
-        _G.ze = false
-    end
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)	
 end)
-
-teleboss:CreateToggle("Auto Kill Cactus King", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zf = true 
-        while wait(0) and _G.zf do
-              local me = game.Players.LocalPlayer.Character
+w33:Button("Tp To Cactus King",function()
+   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Enemies["Cactus King"][" "].LeftUpperLeg
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-        end
-    else
-        _G.zf = false
-    end
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)	
 end)
-
-teleboss:CreateToggle("Auto Kill Guest", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zg = true 
-        while wait(0) and _G.zg do
-           local me = game.Players.LocalPlayer.Character
+w33:Button("Tp To Guest",function()
+   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Enemies.Guest[" "].LeftUpperLeg
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-        end
-    else
-        _G.zg = false
-    end
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)	
 end)
-
-teleboss:CreateToggle("Auto Kill Gingerbread Man", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zh = true 
-        while wait(0) and _G.zh do
-                 local me = game.Players.LocalPlayer.Character
+w33:Button("Tp To Gingerbread Man",function()
+   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Enemies["Gingerbread Man"][" "].LeftUpperLeg
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-        end
-    else
-        _G.zh = false
-    end
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)	
 end)
-
-teleboss:CreateToggle("Auto Kill Frost Guard", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zi = true 
-        while wait(0) and _G.zi do
-                          local me = game.Players.LocalPlayer.Character
+w33:Button("Tp To Frost Guard",function()
+   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Enemies["Frost Guard"][" "].LeftUpperLeg
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-        end
-    else
-        _G.zi = false
-    end
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)	
 end)
-
-teleboss:CreateToggle("Auto Kill Flame Guard", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zj = true 
-        while wait(0) and _G.zj do
-                       local me = game.Players.LocalPlayer.Character
+w33:Button("Tp To Flame Guard",function()
+   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Enemies["Flame Guard"][" "].LeftUpperLeg
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-        end
-    else
-        _G.zj = false
-    end
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)	
 end)
-
-teleboss:CreateToggle("Auto Kill Deathspeaker", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zk = true 
-        while wait(0) and _G.zk do
-                  local me = game.Players.LocalPlayer.Character
+w33:Button("Tp To Deathspeaker",function()
+   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Enemies.Deathspeaker[" "].LeftUpperLeg
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-        end
-    else
-        _G.zk = false
-    end
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)	
 end)
-
-teleboss:CreateToggle("Auto Kill Redcliff Emperor", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zl = true 
-        while wait(0) and _G.zl do
-                  local me = game.Players.LocalPlayer.Character
+w33:Button("Tp To Redcliff Emperor",function()
+   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Enemies["Redcliff Emperor"][" "].LeftUpperLeg
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-        end
-    else
-        _G.zl = false
-    end
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)	
 end)
-
-teleboss:CreateToggle("Auto Kil Yeti", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zm = true 
-        while wait(0) and _G.zm do
-          local me = game.Players.LocalPlayer.Character
+w33:Button("Tp To Yeti",function()
+   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Enemies.Yeti[" "].LeftUpperLeg
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-        end
-    else
-        _G.zm = false
-    end
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)	
 end)
-
-teleboss:CreateToggle("Auto Kill Crackop", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zn = true 
-        while wait(0) and _G.zn do
-     
- 
-local me = game.Players.LocalPlayer.Character
+w33:Button("Tp To Crackop",function()
+   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Enemies.Crackop[" "].LeftUpperLeg
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-
-        end
-    else
-        _G.zn = false
-    end
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)	
 end)
-
-teleboss:CreateButton("☸️Bosses Rebirths Zone☸️", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(n)
-end)
-teleboss:CreateToggle("Auto Kill Mech Golem", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zo = true 
-        while wait(0) and _G.zo do
-     
- 
-local me = game.Players.LocalPlayer.Character
+w33:Button("Tp To Mech Golem",function()
+   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Enemies["Mech Golem"][" "].LeftUpperLeg
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-
-        end
-    else
-        _G.zo = false
-    end
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)	
 end)
-teleboss:CreateToggle("Auto Kill Dark Wizard", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zp = true 
-        while wait(0) and _G.zp do
-     
- 
-local me = game.Players.LocalPlayer.Character
+w33:Button("Tp To Dark Wizard",function()
+   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Enemies["Dark Wizard"][" "].LeftUpperLeg
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-
-        end
-    else
-        _G.zp = false
-    end
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)	
 end)
-teleboss:CreateToggle("Auto Kill Dragon Lord", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zq = true 
-        while wait(0) and _G.zq do
-     
- 
-local me = game.Players.LocalPlayer.Character
+w33:Button("Tp To Dragon Lord",function()
+   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Enemies["Dragon Lord"][" "].LeftUpperLeg
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-
-        end
-    else
-        _G.zq = false
-    end
-end)
-AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:Destroy()
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)	
 end)
 
-teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-89.1629868, 3.71193147, -12.2509155)
-end)
+--================== Player Settings =======================--
 
-teleports:CreateButton("Zone 1", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(65.7657471, 1.669976, 22.7775021)
-end)
 
-teleports:CreateButton("Zone 2", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(158.357727, 3.66798043, 339.484772)
-end)
+local PLR = w3:CreateFolder("Player")
 
-teleports:CreateButton("Zone 3", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(116.025871, 3.66993833, 689.540405)
-end)
+	
+	
+	PLR:Slider("Jump Hack",10,250,true,function(value)
+	    game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
+	end)
+	PLR:Button("Speed Hack (press R)",function()
+	    
+local walkspeedplayer = game:GetService("Players").LocalPlayer
+local walkspeedmouse = walkspeedplayer:GetMouse()
 
-teleports:CreateButton("Zone 4", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(117.953072, 3.66993737, 1016.83142)
-end)
+local walkspeedenabled = false
 
-teleports:CreateButton("Zone 5", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(108.355392, 3.66993809, 1350.73633)
+function x_walkspeed(key)
+if (key == "r") then
+if walkspeedenabled == false then
+_G.WS = 200;
+local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+Humanoid.WalkSpeed = _G.WS;
 end)
+Humanoid.WalkSpeed = _G.WS;
 
-teleports:CreateButton("Zone 6", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(122.041321, 3.66993785, 1752.09265)
+walkspeedenabled = true
+elseif walkspeedenabled == true then
+_G.WS = 20;
+local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+Humanoid.WalkSpeed = _G.WS;
 end)
+Humanoid.WalkSpeed = _G.WS;
 
-teleports:CreateButton("Zone 7", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(116.629776, 3.72101569, 1994.17883)
-end)
-
-teleports:CreateButton("Zone 8", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(80.94664, 3.66993737, 2305.02515)
-end)
-
-teleports:CreateButton("Zone 9", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(60.3827858, 3.66996837, 2615.74487)
-end)
-
-teleports:CreateButton("Zone 10", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(12.8137484, 9.17764378, 2976.35278)
-end)
-
-teleports:CreateButton("Zone 11", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(59.27808, 3.66993761, 3303.1167)
-end)
-
-teleports:CreateButton("Zone Rebirth 1", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-274.523193, 3.66993976, -273.299683)
-end)
-
-teleports:CreateButton("Zone Rebirth 2", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-90.998497, 3.66993713, -555.361572)
-end)
-
-teleports:CreateButton("Zone Rebirth 3", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-97.6996918, 3.66993737, -872.233887)
-end)
-
-teleports:CreateButton("Rebirth", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-576.784973, 3.67250776, 195.895569)
-end)
---| Anti KICK |
-local mt = getrawmetatable(game)
-local old = mt.__namecall
-local protect = newcclosure or protect_function
-
-if not protect then
-protect = function(f) return f end
+walkspeedenabled = false
+end
+end
 end
 
-setreadonly(mt, false)
-mt.__namecall = protect(function(self, ...)
-local method = getnamecallmethod()
-if method == "Kick" then
-wait(9e9)
-return
-end
-return old(self, ...)
-end)
-hookfunction(game:GetService("Players").LocalPlayer.Kick,protect(function() wait(9e9)
- end))
+walkspeedmouse.KeyDown:connect(x_walkspeed)
 
---| Anti AFK |
-   local vu = game:GetService("VirtualUser")
-game:GetService("Players").LocalPlayer.Idled:connect(function()
-   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-   wait(1)
-   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end)
+	PLR:Button("No Clip (Press E)",function()
+		noclip = false
+		game:GetService('RunService').Stepped:connect(function()
+			if noclip then
+				game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+			end
+		end)
+		local plr = game.Players.LocalPlayer
+		local mouse = plr:GetMouse()
+		mouse.KeyDown:connect(function(key)
+			if key == "e" then
+				noclip = not noclip
+				game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+			end
+		end)
+	end)
+
+	PLR:Button("Fly (Press F)",function()
+   repeat wait() 
+	until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Head") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid") 
+local mouse = game.Players.LocalPlayer:GetMouse() 
+repeat wait() until mouse
+local plr = game.Players.LocalPlayer 
+local torso = plr.Character.Head 
+local flying = false
+local deb = true 
+local ctrl = {f = 0, b = 0, l = 0, r = 0} 
+local lastctrl = {f = 0, b = 0, l = 0, r = 0} 
+local maxspeed = 400 
+local speed = 5000 
+
+function Fly() 
+local bg = Instance.new("BodyGyro", torso) 
+bg.P = 9e4 
+bg.maxTorque = Vector3.new(9e9, 9e9, 9e9) 
+bg.cframe = torso.CFrame 
+local bv = Instance.new("BodyVelocity", torso) 
+bv.velocity = Vector3.new(0,0.1,0) 
+bv.maxForce = Vector3.new(9e9, 9e9, 9e9) 
+repeat wait() 
+plr.Character.Humanoid.PlatformStand = true 
+if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then 
+speed = speed+.5+(speed/maxspeed) 
+if speed > maxspeed then 
+speed = maxspeed 
+end 
+elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then 
+speed = speed-1 
+if speed < 0 then 
+speed = 0 
+end 
+end 
+if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then 
+bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
+lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r} 
+elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then 
+bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
+else 
+bv.velocity = Vector3.new(0,0.1,0) 
+end 
+bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0) 
+until not flying 
+ctrl = {f = 0, b = 0, l = 0, r = 0} 
+lastctrl = {f = 0, b = 0, l = 0, r = 0} 
+speed = 100
+bg:Destroy() 
+bv:Destroy() 
+plr.Character.Humanoid.PlatformStand = false 
+end 
+mouse.KeyDown:connect(function(key) 
+if key:lower() == "f" then 
+if flying then flying = false 
+else 
+flying = true 
+Fly() 
+end 
+elseif key:lower() == "w" then 
+ctrl.f = 1 
+elseif key:lower() == "s" then 
+ctrl.b = -1 
+elseif key:lower() == "a" then 
+ctrl.l = -1 
+elseif key:lower() == "d" then 
+ctrl.r = 1 
+end 
+end) 
+mouse.KeyUp:connect(function(key) 
+if key:lower() == "w" then 
+ctrl.f = 0 
+elseif key:lower() == "s" then 
+ctrl.b = 0 
+elseif key:lower() == "a" then 
+ctrl.l = 0 
+elseif key:lower() == "d" then 
+ctrl.r = 0 
+end 
+end)
+Fly()
+
+          
+
+	end)
+
+	PLR:Button("Inf Jump",function()
+	game:GetService("UserInputService").JumpRequest:connect(function()
+    game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
+end)
+end)
+
+	PLR:Button("Crl + Click = TP",function()
+local Plr = game:GetService("Players").LocalPlayer
+local Mouse = Plr:GetMouse()
+
+Mouse.Button1Down:connect(function()
+if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end
+if not Mouse.Target then return end
+Plr.Character:MoveTo(Mouse.Hit.p)
+end)
+end)
+	PLR:Button("Extreme Light",function()
+	local s = Instance.new("PointLight", game.Players.LocalPlayer.Character.Head)
+s.Brightness = 0.3
+s.Range = 100
+game.Lighting.Changed:connect(function()
+game.Lighting.TimeOfDay = "14:00:00"
+game.Lighting.FogEnd = 300
+game.Lighting.Brightness = 10
+game.Lighting.ColorCorrection.Brightness = 0.1
+game.Lighting.ColorCorrection.Saturation = 0.1
+game.Lighting.Bloom.Intensity = 0.1
+end)
+end)
+	PLR:Button("Inf Yield",function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+--================== Misc =======================--
+
+local MISC = w3:CreateFolder("Misc")
+
+	MISC:Button("Rejoin",function()
+		local TeleportService = game:GetService("TeleportService")
+		local PlaceId = game.PlaceId
+		local player = game.Players.LocalPlayer
+		if player then
+		TeleportService:Teleport(PlaceId, player)
+		end
+	end)
+
+	MISC:GuiSettings()
+
+--================== Credits =======================--
+
+local CS = w3:CreateFolder("Credits")
+
+	CS:Button("Script: Im A Cat#7202",function()
+		setclipboard("Im A Cat#7202")
+	end)
+
+	CS:Button("Discord: PKWXQae",function()
+		setclipboard("https://discord.gg/PKWXQae")
+	end)
+
+	CS:DestroyGUI()
+
+--================== Autres =======================--
+
 
 --| Anti Ban |
 setfflag("DFStringCrashPadUploadToBacktraceToBacktraceBaseUrl", "")
