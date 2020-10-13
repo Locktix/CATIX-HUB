@@ -130,7 +130,7 @@ end
 end)
 
 local w2 = w2:CreateFolder("Eggs X3")
-	w2:Dropdown("Choose Eggs",{"500","45K","100K(Limited)","1M(Limited)","300K","1,25M","200M","1,5B","400B","10T","500T","10Qd","400Qd","3.5Qnt","200Qnt","2Sx","25Sx","450Sx"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	w2:Dropdown("Choose Eggs",{"500","45K","100K(Limited)","1M(Limited)","300K","1,25M","200M","1,5B","400B","10T","500T","10Qd","400Qd","3.5Qnt","200Qnt","2Sx","25Sx","450Sx","49.99oct","1No"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
 	    _G.BossSelected = mob
 	end)
 
@@ -287,6 +287,14 @@ local args = {
 
 game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-501.77948, 2133.36011, 660.258179)
+elseif _G.BossSelected == "49.99oct" then
+
+game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer("Pumpkin Egg","Buy3")
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-193.916321, 4972.31152, 179.69014)
+elseif _G.BossSelected == "1No" then
+
+game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer("Spiritual Egg","Buy3")
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-201.621002, 4972.31152, 199.158432)
 end
 		end
 	end
