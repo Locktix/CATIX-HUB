@@ -54,14 +54,7 @@ w2:Button("Spawn Cadillac",function()
 
 game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","Cadillac")
 end)
-w2:Button("Spawn Skate",function()
 
-
-game:GetService("ReplicatedStorage").RemoteEvents.NoMotorVehicles:FireServer("SkateBoard")
-end)
-w2:Button("Spawn Scooter",function() 
-game:GetService("ReplicatedStorage").RemoteEvents.NoMotorVehicles:FireServer("Scooter")
-end)
 w2:Label("No VIP CARs",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) 
 
 --================== Auto Spawn Cars =======================--
@@ -108,12 +101,7 @@ w4:Toggle("Auto Horse",function(bool)
 		w4:Toggle("Auto Cadillac",function(bool)
 		shared.toggle13 = bool
 		end)
-			w4:Toggle("Auto SkateBoard",function(bool)
-		shared.toggle14 = bool
-			end)
-		w4:Toggle("Auto Scooter",function(bool)
-		shared.toggle15 = bool
-		end)
+	
 		
 		
 spawn(function()
@@ -174,17 +162,7 @@ game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","G
 
 game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","Cadillac")
       end
-      if shared.toggle14 then   
-
-
-game:GetService("ReplicatedStorage").RemoteEvents.NoMotorVehicles:FireServer("SkateBoard")
-      end
-      if shared.toggle15 then   
-       
-      
-
-
-game:GetService("ReplicatedStorage").RemoteEvents.NoMotorVehicles:FireServer("Scooter")
+ 
 			end
       
 	end
