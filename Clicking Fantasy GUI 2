@@ -1,4 +1,4 @@
---https://www.roblox.com/games/5641449689/RELEASE-Clicking-Fantasy?refPageId=0419d06a-7d6b-427c-a1a3-41b3b9dc8e23
+--https://www.roblox.com/games/5641449689/
 
 local library = loadstring(game:HttpGet(('https://pastebin.com/raw/FsJak6AT')))()
 
