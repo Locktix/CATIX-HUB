@@ -1,7 +1,7 @@
 local library = loadstring(game:HttpGet(('https://pastebin.com/raw/FsJak6AT')))()
 
 local w3 = library:CreateWindow("Clicker-Legends GUI")
-local w2 = library:CreateWindow("Model2")
+local w2 = library:CreateWindow("Eggs X3")
 
 
 --================== Model =======================--
@@ -15,6 +15,9 @@ w:Label("HACKS",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,Te
 		shared.toggle1 = bool
 	end)
 	
+	w:Toggle("Auto Halloween Upgrades",function(bool)
+		shared.toggle2 = bool
+	end)
 	
 	spawn(function()
 		while wait() do
@@ -69,7 +72,10 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Assets.Events.PurchaseUpgrade:FireServer(unpack(args))
-
+end
+  if shared.toggle2 then
+game:GetService("ReplicatedStorage").Assets.Events.PurchaseUpgrade:FireServer("EventUpgrade1")
+game:GetService("ReplicatedStorage").Assets.Events.PurchaseUpgrade:FireServer("EventUpgrade2")
 end
 end
 end)
@@ -142,7 +148,7 @@ elseif _G.BossSelected == "Winter" then
     [2] = "Triple",
 }
 
-game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args)))	
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
 			elseif _G.BossSelected == "Eventm" then
 		local args = {
     [1] = "EventmEgg",
