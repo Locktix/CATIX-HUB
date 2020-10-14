@@ -8,6 +8,7 @@ local w3 = library:CreateWindow("Animal Simulator")
 local w = w3:CreateFolder("Things")
 
 
+w:Label("Active NO CLIP PLS",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
 
 	w:Toggle("Auto Tp To Dummy",function(bool)
 		shared.toggle1 = bool
