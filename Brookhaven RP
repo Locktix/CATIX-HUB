@@ -1,4 +1,4 @@
---https://www.roblox.com/games/4924922222/
+--https://www.roblox.com/games/4924922222/Brookhaven-RP?refPageId=3cddb9e4-9fcc-4cd6-8514-610e58856b77
 local library = loadstring(game:HttpGet(('https://pastebin.com/raw/FsJak6AT')))()
 
 local w = library:CreateWindow("Spawn Cars")
@@ -212,7 +212,7 @@ end
 walkspeedmouse.KeyDown:connect(x_walkspeed)
 
 end)
-	PLR:Button("No Clip (Press E)",function()
+	PLR:Button("No Clip (Press F)",function()
 		noclip = false
 		game:GetService('RunService').Stepped:connect(function()
 			if noclip then
@@ -229,7 +229,7 @@ end)
 		end)
 	end)
 
-	PLR:Button("Fly (Press A)",function()
+	PLR:Button("Fly (Press W)",function()
    repeat wait() 
 	until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Head") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid") 
 local mouse = game.Players.LocalPlayer:GetMouse() 
@@ -282,7 +282,7 @@ bv:Destroy()
 plr.Character.Humanoid.PlatformStand = false 
 end 
 mouse.KeyDown:connect(function(key) 
-if key:lower() == "a" then 
+if key:lower() == "f" then 
 if flying then flying = false 
 else 
 flying = true 
