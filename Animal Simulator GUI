@@ -22,7 +22,7 @@ end)
 	local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace")["training area"]["Training Dummy"].HumanoidRootPart
 
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y-5, pbosd.Position.Z+0)
 end
 	if shared.toggle2 then
 local args = {
@@ -30,7 +30,6 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").jdskhfsIIIllliiIIIdchgdIiIIIlIlIli:FireServer(unpack(args))
-
 end
 end
 end)
