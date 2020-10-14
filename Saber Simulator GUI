@@ -1123,13 +1123,13 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(793.6090
 end)
 
 	w22:Toggle("Auto Flags wait 24",function(bool)
-		shared.toggle1 = bool
+		shared.tp1 = bool
 	end)
 	
 	
 	spawn(function()
 		while wait(24) do
-	   
+	      if shared.tp1 then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(640, 221, 144)
 wait(24)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(713, 173, 465)
@@ -1151,9 +1151,9 @@ wait(24)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(602, 5404, -138)
 wait(24)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(665, 6320, -149)
-wait(24)
 
 
+end
 
 end
 end)
