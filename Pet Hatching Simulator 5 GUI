@@ -11593,6 +11593,19 @@ end
         _G.l = false
     end
 end)
+eggs:CreateToggle("Auto Buy Candycorn Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.m2 = true 
+        while wait(0) and _G.m2 do
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Candycorn","Single")
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1223.76355, 4.95983601, -46.9303665)
+end
+
+    else
+        _G.m2 = false
+    end
+end)
 eggs:CreateToggle("Auto Buy Pumpkin Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.m = true 
