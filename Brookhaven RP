@@ -171,7 +171,8 @@ game:GetService("ReplicatedStorage").RemoteEvents.Car:FireServer("PickingCar","C
 
 --================== Player Settings =======================--
 
-local PLR = w:CreateFolder("Player")
+--(alot not by me )--
+local PLR = w3:CreateFolder("Player")
 
 	
 	
@@ -413,10 +414,44 @@ c.BinType = Enum.BinType.Grab
 
 end)
 
+	PLR:Button("ESP UNIVERSAL",function()
+for i,v in pairs(game.Workspace:GetDescendants()) do
+if v.ClassName == "TouchTransmitter" then
+-- if v.ClassName == "TouchTransmitter" and v.Parent.Name == "Handle" then
+local BillboardGui = Instance.new("BillboardGui")
+local TextLabel = Instance.new("TextLabel")
+
+BillboardGui.Parent = v.Parent
+BillboardGui.AlwaysOnTop = true
+BillboardGui.LightInfluence = 1
+BillboardGui.Size = UDim2.new(0, 100, 0, 100)
+BillboardGui.StudsOffset = Vector3.new(0, 2, 0)
+
+TextLabel.Parent = BillboardGui
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Size = UDim2.new(1, 0, 1, 0)
+TextLabel.Text = v.Parent.Parent.Name
+TextLabel.TextColor3 = Color3.new(1, 0, 0)
+TextLabel.TextScaled = true
+end
+end
+end)
+
+	PLR:Button("Dark Dex",function()
+loadstring(game:HttpGetAsync("https://pastebin.com/raw/fPP8bZ8Z"))()
+end)
+
+PLR:Label("Work Whit Paid,KRNL AND SONA Exploit",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
+
+	PLR:Button("Remote Spy Universal GAME",function()
+loadstring(game:HttpGet("https://pastebin.com/raw/BDhSQqUU", true))()
+end)
+
 
 --================== Misc =======================--
 
-local MISC = w:CreateFolder("Misc")
+local MISC = w3:CreateFolder("Misc")
 
 	MISC:Button("Rejoin",function()
 		local TeleportService = game:GetService("TeleportService")
@@ -431,7 +466,7 @@ local MISC = w:CreateFolder("Misc")
 
 --================== Credits =======================--
 
-local CS = w:CreateFolder("Credits")
+local CS = w3:CreateFolder("Credits")
 
 	CS:Button("Script: Im A Cat#7202",function()
 		setclipboard("Im A Cat#7202")
@@ -440,6 +475,10 @@ local CS = w:CreateFolder("Credits")
 	CS:Button("Discord: PKWXQae",function()
 		setclipboard("https://discord.gg/PKWXQae")
 	end)
+
+CS:Button("Helped by: Altix#3395",function()
+		setclipboard("Altix#3395")
+end)
 
 	CS:DestroyGUI()
 
@@ -452,6 +491,7 @@ setfflag("DFIntCrashUploadToBacktracePercentage", "0")
 setfflag("DFStringCrashUploadToBacktraceBlackholeToken", "")
 setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
 
+
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
     game:service'Players'.LocalPlayer.Idled:connect(function()
@@ -459,6 +499,25 @@ setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
         Virtual:ClickButton2(Vector2.new())
         wait(2)
     end)
+
+
+--| Other Anti AFK |
+wait(10)
+    game.StarterGui:SetCore(
+        "ChatMakeSystemMessage",
+        {
+            Text = "[ANTI AFK] Started !",
+            Font = Enum.Font.SourceSansBold, 
+            FontSize = Enum.FontSize.Size24 
+        }
+    )
+while wait(30) do
+local VirtualUser=game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+VirtualUser:CaptureController()
+VirtualUser:ClickButton2(Vector2.new())
+end)
+end
 
 --| Anti Chat Logs |
 local CloneFunction = clonefunction
@@ -478,4 +537,3 @@ local PostMessageHook = function(self, msg)
    return OldFunctionHook(self, msg)
 end
 OldFunctionHook = HookFunction(PostMessage.fire, PostMessageHook)
-
