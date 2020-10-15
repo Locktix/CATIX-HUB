@@ -1,11 +1,11 @@
 --https://www.roblox.com/games/4924922222/Brookhaven-RP?refPageId=3cddb9e4-9fcc-4cd6-8514-610e58856b77
 local library = loadstring(game:HttpGet(('https://pastebin.com/raw/FsJak6AT')))()
 
-local w = library:CreateWindow("Spawn Cars")
+local w3 = library:CreateWindow("Spawn Cars")
 
 
 --================== Spawn Cars =======================--
-local w2 = w:CreateFolder("Spawn Cars")
+local w2 = w3:CreateFolder("Spawn Cars")
 
 
 
