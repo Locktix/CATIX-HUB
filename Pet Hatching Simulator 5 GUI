@@ -11356,7 +11356,33 @@ end
         _G.LULU = false
     end
 end)
+AutoTab:CreateToggle("Auto Collect Candy laggy", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.LULU22 = true 
+        while wait(0) and _G.LULU22 do
+                 _G.LULU = true 
+        while wait(0) and _G.LULU do
+for i,v in pairs (game:GetService("Workspace")["Candy Box"]:GetChildren()) do
+    v.CFrame = game.Players.LocalPlayer.character.HumanoidRootPart.CFrame
+    
+local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
 
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Meshes/candy' then
+     v.CFrame = root.CFrame
+       wait()
+   
+  
+        end
+    end
+end
+end
+end
+
+    else
+        _G.LULU22 = false
+    end
+end)
 
 AutoTab:CreateToggle("Auto Lock Legendary,Secrets Pets", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
