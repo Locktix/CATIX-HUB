@@ -373,13 +373,13 @@ c:Dropdown("Choose Boss",{"1","2","3","4","5","6","7","8","9","10","11","12","13
 end)
 
 c:Toggle("Start",function(bool)
-    shared.toggle1 = bool
+    shared.Boss = bool
 end)
 _G.time = 0.3
 
 spawn(function()
 	while wait(_G.time) do
-		if shared.toggle1 then
+		if shared.Boss then
 			if _G.BossSelected == "1" then
 				if game:GetService("Workspace").BossFolder:WaitForChild("Boss1") then
 					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss1})
