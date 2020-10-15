@@ -12,7 +12,19 @@ local w = w3:CreateFolder("HACKS")
 w:Label("THINGS",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
 
 
-
+w:Button("REDEEM CODES",function()
+game:GetService("ReplicatedStorage").Events.UseCode:FireServer("GameRelease")
+game:GetService("ReplicatedStorage").Events.UseCode:FireServer("Tofu")
+game:GetService("ReplicatedStorage").Events.UseCode:FireServer("MarcosDrumom")
+game:GetService("ReplicatedStorage").Events.UseCode:FireServer("JeffBlox")
+game:GetService("ReplicatedStorage").Events.UseCode:FireServer("xMarcelo")
+game:GetService("ReplicatedStorage").Events.UseCode:FireServer("RussoPlays")
+game:GetService("ReplicatedStorage").Events.UseCode:FireServer("Betero")
+game:GetService("ReplicatedStorage").Events.UseCode:FireServer("Sr_Rickofc")
+game:GetService("ReplicatedStorage").Events.UseCode:FireServer("uKingzaum")
+game:GetService("ReplicatedStorage").Events.UseCode:FireServer("yTowakGB")
+game:GetService("ReplicatedStorage").Events.UseCode:FireServer("ShadowHXD")
+end)
 	w:Toggle("Auto Upgrades",function(bool)
 		shared.toggle1 = bool
 	end)
