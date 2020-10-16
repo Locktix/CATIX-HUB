@@ -11585,7 +11585,7 @@ eggs:CreateToggle("Eggs 25 Rebirths", function(arg) --the (arg) is if the checkb
         _G.m = true 
         while wait(0) and _G.m do
 local args = {
-    [1] = "EggTweleve",
+    [1] = "EggEleven",
 }
 
 game:GetService("ReplicatedStorage").Remotes.CanBuyEgg:InvokeServer(unpack(args))
@@ -11600,7 +11600,7 @@ eggs:CreateToggle("Eggs 30 Rebirths", function(arg) --the (arg) is if the checkb
         _G.n = true 
         while wait(0) and _G.n do
 local args = {
-    [1] = "EggThirteen",
+    [1] = "EggTwelve",
 }
 
 game:GetService("ReplicatedStorage").Remotes.CanBuyEgg:InvokeServer(unpack(args))
@@ -11609,7 +11609,17 @@ game:GetService("ReplicatedStorage").Remotes.CanBuyEgg:InvokeServer(unpack(args)
         _G.n = false
     end
 end)
+eggs:CreateToggle("Haloween Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.n22 = true 
+        while wait(0) and _G.n22 do
 
+game:GetService("ReplicatedStorage").Remotes.CanBuyEgg:InvokeServer("CandyEgg")
+        end
+    else
+        _G.n22 = false
+    end
+end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1382.5249, 197.269852, -562.271484)
 end)
