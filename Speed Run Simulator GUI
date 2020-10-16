@@ -21,11 +21,12 @@ credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "a
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("bsoleil31FR#7202", function() --you dont need "arg" for a button
+credits:CreateButton("Im A Cat#7202", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("https://discord.gg/m9Nn3qd", function() --you dont need "arg" for a button
+
+credits:CreateButton("https://discord.gg/PKWXQae", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 credits:CreateButton("Bebo Mods#1110", function() --you dont need "arg" for a button
@@ -11396,6 +11397,27 @@ game:GetService("Players").LocalPlayer.InvSpace.Value = 9e18
         end
     else
         _G.Od = false
+    end
+end)
+AutoTab:CreateToggle("Auto Collect Candy", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.Od22 = true 
+        while wait(0) and _G.Od22 do
+     local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Candy' then
+     v.CFrame = root.CFrame
+       wait()
+   
+  
+        end
+    end
+ 
+
+        end
+    else
+        _G.Od22 = false
     end
 end)
 
