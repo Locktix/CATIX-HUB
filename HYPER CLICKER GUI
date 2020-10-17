@@ -8,11 +8,13 @@ local w4 = library:CreateWindow("Rebirths")
 
 
 --================== Model =======================--
-local w = w3:CreateFolder("Things")
+local w = w3:CreateFolder("Model2")
 
-w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
+w:Label("Model",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
 
-
+w:Button("Button",function()
+  game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss4})
+end)
 
 	w:Toggle("Auto Craft All",function(bool)
 		shared.toggle1 = bool
@@ -174,7 +176,7 @@ end
 end)
 
 local w2 = w2:CreateFolder("Eggs X3")
-	w2:Dropdown("Choose Eggs",{"1K","100 Gems","3B","25T","5Qa","3Sx","Hell","Atlantis","500K(event)","Galaxy","Graveyard","Crystal","2.5M(event)","Wizard","Rainbow","Halloween"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	w2:Dropdown("Choose Eggs",{"1K","100 Gems","3B","25T","5Qa","3Sx","Hell","Atlantis","500K(event)","Galaxy","Graveyard","Crystal","2.5M(event)","Wizard","Rainbow","Halloween","Energy"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
 	    _G.BossSelected = mob
 	end)
 
@@ -256,7 +258,7 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-345.000
 }
 
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(args))
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-644.398682, 25.8712711, -1658.00378)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-648.180664, 22.2206612, -1648.97644, -0.999919891, -8.63202877e-05, -0.0126890838, -8.63202877e-05, 1, -5.47684635e-07, 0.0126890838, 5.47684635e-07, -0.999919891)
 			elseif _G.BossSelected == "Galaxy" then
 			local args = {
     [1] = "Galaxy",
@@ -283,7 +285,7 @@ game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(unpack(
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-308.080322, 30.8745441, -2079.42139, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 			elseif _G.BossSelected == "2.5M(event)" then
 			    game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Event2","Triple")
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-642.791382, 25.8085957, -1639.09082)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1016.95734, 151.677887, -999.62616, -0.715985179, -7.99582558e-05, 0.698115587, -7.99582558e-05, 1, 3.25294823e-05, -0.698115587, -3.25294823e-05, -0.715985179)
 			elseif _G.BossSelected == "Wizard" then
                 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Wizard","Triple")
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(421.513702, 13.1108227, -2978.21558, 1, 0, 0, 0, 1, 0, 0, 0, 1)
@@ -293,6 +295,9 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-273.986
 			elseif _G.BossSelected == "Halloween" then
                   game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Halloween","Triple")
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-964.082336, 20.922472, -2212.02881)
+	elseif _G.BossSelected == "Energy" then
+                  game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Energy","Triple")
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-926.996033, 20.9630566, -2695.68042)
 			end
 		end
 	end
