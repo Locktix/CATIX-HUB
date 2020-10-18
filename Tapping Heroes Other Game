@@ -8,6 +8,7 @@ local w4 = library:CreateWindow("Eggs")
 --================== Model =======================--
 local w = w3:CreateFolder("Things")
 w:Button("Destroy Prompt Purchase",function()
+while true do
 -- Remove Purchase Prompt UI
 local WaitForCOre = game:FindFirstChild("CoreGui")
 if WaitForCOre then
@@ -30,6 +31,8 @@ end
 local checkforblur = game:GetService("Lighting"):FindFirstChild("InterfaceBlur")
 if checkforblur then
 checkforblur:Destroy()
+end
+wait(5)
 end
 end)
 w:Label("By MSDOS#8293",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
