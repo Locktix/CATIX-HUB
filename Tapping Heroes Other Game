@@ -7,16 +7,33 @@ local w4 = library:CreateWindow("Eggs")
 
 --================== Model =======================--
 local w = w3:CreateFolder("Things")
-
 w:Button("Destroy Prompt Purchase",function()
+-- Remove Purchase Prompt UI
 local WaitForCOre = game:FindFirstChild("CoreGui")
 if WaitForCOre then
 local checkforprAPP = WaitForCOre:FindFirstChild("PurchasePromptApp")
 if checkforprAPP then
-game:GetService("CoreGui").PurchasePromptApp:Destroy()
+checkforprAPP:Destroy()
 end
+end
+-- Remove Robux Store UI
+local checkforstore = game:GetService("Players")[game.Players.LocalPlayer.Name].PlayerGui:FindFirstChild("Store")
+if checkforstore then
+checkforstore:Destroy()
+end
+-- Remove Error message / You do not have enough.....
+local stramlook = game:GetService("Players")[game.Players.LocalPlayer.Name].PlayerGui.Feedback:FindFirstChild("Stream")
+if stramlook then
+stramlook:Destroy()
+end
+-- Remove BLUR bug from removed shop UI
+local checkforblur = game:GetService("Lighting"):FindFirstChild("InterfaceBlur")
+if checkforblur then
+checkforblur:Destroy()
 end
 end)
+w:Label("By MSDOS#8293",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
+
 
 	w:Toggle("Auto Click",function(bool)
 		shared.toggle1 = bool
