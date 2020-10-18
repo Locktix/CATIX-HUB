@@ -8,7 +8,12 @@ local w4 = library:CreateWindow("Eggs")
 --================== Model =======================--
 local w = w3:CreateFolder("Things")
 
-
+w:Button("Destroy Prompt Purchase",function()
+local WaitForCOre = game:FindFirstChild("CoreGui")
+if WaitForCOre then
+game:GetService("CoreGui").PurchasePromptApp:Destroy()
+end
+end)
 
 	w:Toggle("Auto Click",function(bool)
 		shared.toggle1 = bool
@@ -38,6 +43,7 @@ end)
 		w:Toggle("Auto Evolve Pets",function(bool)
 		shared.toggle5 = bool
 	end)
+
 	spawn(function()
 		while wait() do
 		       if shared.toggle1 then
