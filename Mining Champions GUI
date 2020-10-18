@@ -556,7 +556,7 @@ end)
 
 
 local w22 = w2:CreateFolder("Eggs X3")
-	w22:Dropdown("Choose Eggs X3",{"Starter","Gold","Grass","Desert","Jungle","Ice","Moon","Alien","1M","Pumpkin","Terror"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	w22:Dropdown("Choose Eggs X3",{"Starter","Gold","Grass","Desert","Jungle","Ice","Moon","Alien","1M","Pumpkin","Terror","Skeleton"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
 	    _G.EggsSelected = mob
 	end)
 
@@ -647,6 +647,15 @@ game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(ar
 
 local args = {
     [1] = "Terror",
+    [2] = 3
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+elseif _G.EggsSelected == "Skeleton" then
+
+
+local args = {
+    [1] = "Skeleton",
     [2] = 3
 }
 
