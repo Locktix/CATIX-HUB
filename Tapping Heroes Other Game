@@ -11,7 +11,10 @@ local w = w3:CreateFolder("Things")
 w:Button("Destroy Prompt Purchase",function()
 local WaitForCOre = game:FindFirstChild("CoreGui")
 if WaitForCOre then
+local checkforprAPP = WaitForCOre:FindFirstChild("PurchasePromptApp")
+if checkforprAPP then
 game:GetService("CoreGui").PurchasePromptApp:Destroy()
+end
 end
 end)
 
