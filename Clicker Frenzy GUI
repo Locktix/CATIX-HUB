@@ -12014,6 +12014,16 @@ game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
         _G.e25= false
     end
 end)
+eggs:CreateToggle("Auto Buy Haloween Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e25 = true 
+        while wait(0) and _G.e25 do
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer("halloween")
+        end
+    else
+        _G.e25= false
+    end
+end)
 eggs2:CreateToggle("Auto Buy Basic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.e12 = true 
@@ -12206,6 +12216,16 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.PurchaseTriple:FireServer(unpack(args))
+        end
+    else
+        _G.e25= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Haloween Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e25 = true 
+        while wait(0) and _G.e25 do
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.PurchaseTriple:FireServer("halloween")
         end
     else
         _G.e25= false
