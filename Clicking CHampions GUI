@@ -29,11 +29,12 @@ credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "a
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("bsoleil31FR#7202", function() --you dont need "arg" for a button
+credits:CreateButton("Im A Cat#7202", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("https://discord.gg/m9Nn3qd", function() --you dont need "arg" for a button
+
+credits:CreateButton("https://discord.gg/PKWXQae", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
@@ -526,6 +527,23 @@ eggs2:CreateToggle("Auto Buy Lava Eggs", function(arg) --the (arg) is if the che
       
 local args = {
     [1] = "52",
+    [2] = 1,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.OpenEgg:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.zbd = false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Ninja Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zbd = true 
+        while wait(0) and _G.zbd do
+      
+local args = {
+    [1] = "19",
     [2] = 1,
 }
 
@@ -1918,7 +1936,9 @@ end)
 teleports2:CreateButton("1Qid Zone", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1787.4563, 83.6966782, -697.044373)
 end)
-
+teleports2:CreateButton("Ninja Zone", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1322.51245, 94.2425308, 1068.89575)
+end)
 teleports2:CreateButton("World 2", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3047.7688, 288.309906, -4947.67383)
 end)
@@ -1929,6 +1949,7 @@ end)
 teleports2:CreateButton("Lava Zone", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3644.84814, 182.503952, -4046.03589)
 end)
+
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
     game:service'Players'.LocalPlayer.Idled:connect(function()
