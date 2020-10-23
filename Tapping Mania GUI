@@ -3,7 +3,6 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
 local AutoTab = Library:CreateTab("Tapping-Mania GUI","things", true)
-local teleports = Library:CreateTab("Teleports","things", true)
 local eggs = Library:CreateTab("Auto Buy Eggs X3 FAST","things", true)
 local AutoTab1 = Library:CreateTab("Auto Rebirth 1","things", true)
 local AutoTab2 = Library:CreateTab("Auto Rebirth 2","things", true)
@@ -12133,7 +12132,60 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-0.02460
         _G.e16= false
     end
 end)
+eggs:CreateToggle("Auto Buy Lava Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e17 = true 
+        while wait(0) and _G.e17 do
 
+local args = {
+    [1] = "Lava Egg",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-6468.35645, 0.927313268, 21.363327)
+        end
+    else
+        _G.e17= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Deadland Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e18 = true 
+        while wait(0) and _G.e18 do
+
+local args = {
+    [1] = "Deadland Egg",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-7194.75439, 2.35713005, -85.484375)
+        end
+    else
+        _G.e18= false
+    end
+end)
+eggs:CreateToggle("Auto Buy Frozen Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e19 = true 
+        while wait(0) and _G.e19 do
+
+local args = {
+    [1] = "Frozen Egg",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-8370.04688, 10.9440918, -82.1765823)
+        end
+    else
+        _G.e19= false
+    end
+end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1.12185335, 3.26842809, 15.6704302)
 end)
