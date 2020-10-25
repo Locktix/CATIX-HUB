@@ -176,7 +176,7 @@ end
 end)
 
 local w2 = w2:CreateFolder("Eggs X3")
-	w2:Dropdown("Choose Eggs",{"1K","100 Gems","3B","25T","5Qa","3Sx","Hell","Atlantis","500K(event)","Galaxy","Graveyard","Crystal","2.5M(event)","Wizard","Rainbow","Halloween","Energy","5M"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	w2:Dropdown("Choose Eggs",{"1K","100 Gems","3B","25T","5Qa","3Sx","Hell","Atlantis","500K(event)","Galaxy","Graveyard","Crystal","2.5M(event)","Wizard","Rainbow","Halloween","Energy","5M","Mine"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
 	    _G.BossSelected = mob
 	end)
 
@@ -301,6 +301,10 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-926.996
 elseif _G.BossSelected == "5M" then
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Event3","Triple")
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1013.67072, 155.897598, -995.941406)
+elseif _G.BossSelected == "Mine" then
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Mine","Triple")
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-926.214355, 19.8042946, -3066.99292)
+
 			end
 		end
 	end
