@@ -44,7 +44,9 @@ end)
 	w:Toggle("Auto Coins",function(bool)
 		shared.toggle1 = bool
 	end)
-	
+	w:Toggle("Buy Ranks",function(bool)
+		shared.toggle2 = bool
+	end)
 	spawn(function()
 		while wait() do
 		       if shared.toggle1 then
@@ -52,13 +54,13 @@ game:GetService("ReplicatedStorage").CoinToPlayer:FireServer()
 
 end
 	if shared.toggle2 then
-
+game:GetService("ReplicatedStorage").Remotes.Rank:InvokeServer()
 end
 end
 end)
 
 local w2 = w2:CreateFolder("Eggs")
-	w2:Dropdown("Choose Eggs",{"Chicken","Unicorn","Level 20","Level 30","Level 40","Ocean","Moon","Fall","Sand"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	w2:Dropdown("Choose Eggs",{"Chicken","Unicorn","Level 20","Level 30","Level 40","VIP EGGS"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
 	    _G.BossSelected = mob
 	end)
 
@@ -82,6 +84,8 @@ spawn(function()
 				game:GetService("ReplicatedStorage").Remotes.BuyPets:InvokeServer(4)
 			elseif _G.BossSelected == "Level 40" then
 		game:GetService("ReplicatedStorage").Remotes.BuyPets:InvokeServer(5)
+elseif _G.BossSelected == "VIP EGGS" then
+game:GetService("ReplicatedStorage").Remotes.BuyPets:InvokeServer("VIP")
 			end
 		end
 	end
