@@ -42,7 +42,9 @@ end)
 w:Button("Buy Ranks",function()
 game:GetService("ReplicatedStorage").Remotes.Rank:InvokeServer()
 end)
-
+w:Button("Inf Coins And Lvl 50(use it several times)",function()
+game:GetService("ReplicatedStorage").Remotes.Skill:FireServer("Cosmos",{1e+50,0,0,0})
+end)
 	w:Toggle("Auto Coins",function(bool)
 		shared.toggle1 = bool
 	end)
@@ -52,9 +54,7 @@ end)
 		       if shared.toggle1 then
 game:GetService("ReplicatedStorage").CoinToPlayer:FireServer()
 
-end
-	if shared.toggle2 then
-game:GetService("ReplicatedStorage").Remotes.Rank:InvokeServer()
+
 end
 end
 end)
