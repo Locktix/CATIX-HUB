@@ -11653,7 +11653,70 @@ end
         _G.r = false
     end
 end)
+eggs:CreateToggle("Auto Buy Gold Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.s = true 
+        while wait(0) and _G.s do
 
+
+
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Gold","Single")
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-6370.46533, -36.5174255, -13138.8184)
+end
+
+    else
+        _G.s = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Fall Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.t = true 
+        while wait(0) and _G.t do
+
+
+
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Fall","Single")
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-6374.30811, -35.3394699, -13123.4746)
+end
+
+    else
+        _G.t = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Coconut Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.t = true 
+        while wait(0) and _G.t do
+
+
+
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Coconut","Single")
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1853.81946, 34.2818222, -314.787231)
+end
+
+    else
+        _G.t = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Tropical Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.t = true 
+        while wait(0) and _G.t do
+
+
+
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Tropical","Single")
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1846.14392, 34.2884216, -302.1698)
+end
+
+    else
+        _G.t = false
+    end
+end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(31.7384644, 6.22448683, 35.9957504)
 end)
