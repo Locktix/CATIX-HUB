@@ -34,19 +34,19 @@ local w = w3:CreateFolder("Things")
 
 w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
 
-w:Button("Buy Skills(use auto click)",function()
+w:Button("Buy Skills",function()
  game:GetService("ReplicatedStorage").Remotes.BuySkill:InvokeServer("Cosmos")
 game:GetService("ReplicatedStorage").Remotes.BuySkill:InvokeServer("Speed")
 game:GetService("ReplicatedStorage").Remotes.BuySkill:InvokeServer("Thunder")
 end)
-
+w:Button("Buy Ranks",function()
+game:GetService("ReplicatedStorage").Remotes.Rank:InvokeServer()
+end)
 
 	w:Toggle("Auto Coins",function(bool)
 		shared.toggle1 = bool
 	end)
-	w:Toggle("Buy Ranks",function(bool)
-		shared.toggle2 = bool
-	end)
+
 	spawn(function()
 		while wait() do
 		       if shared.toggle1 then
