@@ -32,7 +32,7 @@ end
 end)
 
 local w2 = w2:CreateFolder("Eggs")
-	w2:Dropdown("Choose Eggs",{"VIP","Farm","Terrestrial","Little Animals","Unique","Crabstal","Sunny Crystal","Delicious Sodas","Mythical Avengers","Pac-Man Crystal","Lego Pets","Grumpy Pets","The Ninja Rangers","Robo Crystal","Ice Monsters","Ice Cubes"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	w2:Dropdown("Choose Eggs",{"VIP","Farm","Terrestrial","Little Animals","Unique","Crewmate","Crabstal","Sunny Crystal","Delicious Sodas","Mythical Avengers","Pac-Man Crystal","Lego Pets","Grumpy Pets","The Ninja Rangers","Robo Crystal","Ice Monsters","Ice Cubes"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
 	    _G.BossSelected = mob
 	end)
 
@@ -54,6 +54,9 @@ game:GetService("ReplicatedStorage").Remotes.Events.BuyCrystal:FireServer("Terre
 game:GetService("ReplicatedStorage").Remotes.Events.BuyCrystal:FireServer("Little Animals",1)
 			elseif _G.BossSelected == "Unique" then
 game:GetService("ReplicatedStorage").Remotes.Events.BuyCrystal:FireServer("Unique Crystal",1)
+			elseif _G.BossSelected == "Crewmate" then
+
+game:GetService("ReplicatedStorage").Remotes.Events.BuyCrystal:FireServer("Crewmate Crystal",1)
 			elseif _G.BossSelected == "Crabstal" then
 
 game:GetService("ReplicatedStorage").Remotes.Events.BuyCrystal:FireServer("Crabstal",1)
