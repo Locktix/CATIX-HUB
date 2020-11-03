@@ -11,9 +11,7 @@ local w = w3:CreateFolder("Things")
 w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
 
 
-	w:Toggle("Auto Click",function(bool)
-		shared.toggle1 = bool
-	end)
+
 	
 		w:Toggle("Auto Refill",function(bool)
 		shared.toggle2 = bool
@@ -38,11 +36,8 @@ end)
 end) 
 	spawn(function()
 		while wait() do
-		       if shared.toggle1 then
-	      if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
-            game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool"):Activate()
-    end		
-end
+	
+
 	if shared.toggle2 then
 	local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
 
