@@ -16,6 +16,7 @@ w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,Te
 		w:Toggle("Auto Refill",function(bool)
 		shared.toggle2 = bool
 end) 
+		
 	w:Toggle("Auto Buy Fire",function(bool)
 		shared.toggle3 = bool
 end) 
@@ -39,6 +40,7 @@ end)
 	
 
 	if shared.toggle2 then
+
 	local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
 
 for i, v in next, Workspace:GetDescendants() do
@@ -49,6 +51,9 @@ for i, v in next, Workspace:GetDescendants() do
   
         end
     end	
+end
+if shared.toggle2 then
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end
 	if shared.toggle3 then
 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ShopService.BuyAll:InvokeServer("Fires")
