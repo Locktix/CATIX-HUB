@@ -1,4 +1,4 @@
---https://www.roblox.com/games/5415903736/Update1-Runeblade-Simulator-BETA
+
 local library = loadstring(game:HttpGet(('https://pastebin.com/raw/FsJak6AT')))()
 
 local w3 = library:CreateWindow("Shuriken-Simulator GUI")
