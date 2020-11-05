@@ -3,9 +3,9 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
 local AutoTab = Library:CreateTab("Sword-Master-Simulator GUI","things", true)
+local teleports = Library:CreateTab("Teleports","things", true)
 local eggs = Library:CreateTab("Auto Buy Eggs","things", true)
 local eggs2 = Library:CreateTab("Auto Buy Hats","things", true)
-local teleports = Library:CreateTab("Teleports","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
@@ -11596,6 +11596,42 @@ end
         _G.i = false
     end
 end)
+eggs:CreateToggle("Auto Buy 1.3T Coins Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.i = true 
+        while wait(0) and _G.i do
+
+game:GetService("Players").LocalPlayer.PlayerGui.PetShopGui.PetShopRemote:FireServer("E","10")
+end
+
+    else
+        _G.i = false
+    end
+end)
+eggs:CreateToggle("Auto Buy 2.2Qa Coins Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.i = true 
+        while wait(0) and _G.i do
+
+game:GetService("Players").LocalPlayer.PlayerGui.PetShopGui.PetShopRemote:FireServer("E","11")
+end
+
+    else
+        _G.i = false
+    end
+end)
+eggs:CreateToggle("Auto Buy 3.9Qa Coins Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.i = true 
+        while wait(0) and _G.i do
+
+game:GetService("Players").LocalPlayer.PlayerGui.PetShopGui.PetShopRemote:FireServer("E","12")
+end
+
+    else
+        _G.i = false
+    end
+end)
 eggs:CreateToggle("Auto Buy 150 Gems Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.d = true 
@@ -11772,7 +11808,7 @@ end
         _G.s = false
     end
 end)
-eggs2:CreateToggle("Auto Buy 154,2K Gems Hats(other)", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs2:CreateToggle("Auto Buy 394,7K Gems Hats(other)", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.s2 = true 
         while wait(0) and _G.s2 do
@@ -11806,22 +11842,25 @@ teleports:CreateButton("Island 2", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(55.7326012, 2015.94214, 8.42726803)
 end)
 teleports:CreateButton("Island 3", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(109.958817, 4545.94092, 135.516235)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(91.1738815, 3985.87207, 109.788895)
 end)
 teleports:CreateButton("Island 4", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(74.0034637, 7920.44092, -106.599564)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(52.4297562, 6435.06104, -68.940773)
 end)
 teleports:CreateButton("Island 5", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(87.669899, 14134.9395, 71.1102753)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(150.262787, 14734.9004, 96.4903259)
 end)
 teleports:CreateButton("Island 6", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(162.074799, 21281.9375, 14.4338551)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(21.9193058, 20036.2383, 30.9613304)
 end)
 teleports:CreateButton("Island 7", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(65.525177, 28424.8965, -0.0576306656)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(16.7487984, 25245.5586, 57.9925842)
 end)
 teleports:CreateButton("Island 8", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(60.0234756, 35864.9219, -9.0055294)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(28.551075, 31772.7988, -14.377902)
+end)
+teleports:CreateButton("Island 9", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3.69108534, 38124.3359, 20.3873672)
 end)
 teleports:CreateButton("Zone 1", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-379.741241, -2.34246922, -12.6514053)
@@ -11852,6 +11891,18 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2076.93
 end)
 teleports:CreateButton("Zone 10", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2301.5769, -2.46246433, -16.8842258)
+end)
+teleports:CreateButton("Zone 11", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2786.12036, -2.124825, 59.9925842)
+end)
+teleports:CreateButton("Zone 12", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3165.96362, -2.124825, 86.8748322)
+end)
+teleports:CreateButton("Zone 13", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3597.50977, -5.74269485, 101.846436)
+end)
+teleports:CreateButton("Zone 14", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3920.97803, -2.124825, 105.4384)
 end)
 --| Anti KICK |
 local mt = getrawmetatable(game)
