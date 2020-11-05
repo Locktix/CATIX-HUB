@@ -12231,6 +12231,28 @@ game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
         _G.e25= false
     end
 end)
+eggs2:CreateToggle("Auto Buy City Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e25 = true 
+        while wait(0) and _G.e25 do
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.PurchaseTriple:FireServer("city")
+        end
+    else
+        _G.e25= false
+    end
+end)
+eggs:CreateToggle("Auto Buy City Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e25 = true 
+        while wait(0) and _G.e25 do
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer("city")
+        end
+    else
+        _G.e25= false
+    end
+end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(620.58606, 8.32451057, -332.265503)
 end)
