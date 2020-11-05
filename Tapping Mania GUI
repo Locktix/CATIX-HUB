@@ -279,7 +279,7 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-10608.6
 end)
 
 local w4 = w4:CreateFolder("Rebirths")
-	w4:Dropdown("Choose Rebirths",{"X1","X5","X10","X50","X100","X250","X1K","X5K","X8K","X10K","X25K","X69K","X100K","X400K","X1M","X5M","X10M","X50M","X100M","X1B","X5B","X10B"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	w4:Dropdown("Choose Rebirths",{"X1","X5","X10","X50","X100","X250","X1K","X5K","X8K","X10K","X25K","X69K","X100K","X400K","X1M","X5M","X10M","X50M","X100M","X1B","X5B","X10B","X30B","X70B","X100B","X200B"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
 	    _G.BossSelected = mob
 	end)
 
@@ -422,8 +422,31 @@ elseif _G.BossSelected == "X10B" then
     [1] = 10000000000,
 }
 
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
+elseif _G.BossSelected == "X30B" then
+	local args = {
+    [1] = 30000000000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))	
+elseif _G.BossSelected == "X70B" then
+	local args = {
+    [1] = 70000000000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))	
+elseif _G.BossSelected == "X100B" then
+	local args = {
+    [1] = 100000000000,
+}
+
 game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))		
-		
+		elseif _G.BossSelected == "X200B" then
+	local args = {
+    [1] = 200000000000,
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer(unpack(args))
 	
 			end
 		end
