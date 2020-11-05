@@ -9,7 +9,7 @@ local w = w3:CreateFolder("Things")
 
 w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
 
-w:Button("Auto Collect Orbs,Rings",function()
+w:Button("Auto Collect Orbs,Rings(use auto click software)",function()
   local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
 
 for i, v in next, Workspace:GetDescendants() do
