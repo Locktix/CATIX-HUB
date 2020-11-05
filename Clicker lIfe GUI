@@ -10,33 +10,7 @@ local w = w3:CreateFolder("Things")
 
 w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
 
-	w:Toggle("Auto Click",function(bool)
-		shared.toggle1 = bool
-	end)
-	
-	
-	spawn(function()
-		while wait() do
-		       if shared.toggle1 then
 
-
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
-
-end
-end
-end)
 
 local w2 = w2:CreateFolder("Eggs")
 	w2:Dropdown("Choose Eggs",{"Common","Rare","Uncommon","Evil","Frost","Gamer","Beach","Star Creator","Space"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
