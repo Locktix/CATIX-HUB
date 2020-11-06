@@ -86,7 +86,7 @@ end
 end)
 
 local w2 = w2:CreateFolder("Eggs")
-	w2:Dropdown("Choose Eggs",{"Basic","Rare","Epic","Desert","Forest","Winter","Candy","Volcano","Moon","Angelic","Galactic","Void","Nuclear","2M","Deadly","Spooky","Lava","Deadland","Frozen","Ghost","Devil","Exotic Gem"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	w2:Dropdown("Choose Eggs",{"Basic","Rare","Epic","Desert","Forest","Winter","Candy","Volcano","Moon","Angelic","Galactic","Void","Nuclear","2M","Deadly","Spooky","Lava","Deadland","Frozen","Ghost","Devil","Exotic Gem","Flaming Gem","Toxic Gem"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
 	    _G.BossSelected = mob
 	end)
 
@@ -282,6 +282,24 @@ elseif _G.BossSelected == "Exotic Gem" then
 game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
 
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(56.9116173, 3.47675467, -115.182838)
+elseif _G.BossSelected == "Flaming Gem" then
+	local args = {
+    [1] = "Flaming Gem Egg",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(60.4650459, 3.51579785, -117.152786)
+elseif _G.BossSelected == "Toxic Gem" then
+	local args = {
+    [1] = "Toxic Gem Egg",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(55.5407867, 3.55489206, -146.86055)
 			end
 		end
 	end
