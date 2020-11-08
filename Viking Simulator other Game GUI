@@ -24,13 +24,13 @@ end)
 	w:Toggle("Auto Collect Coins,Fury",function(bool)
 		shared.toggle4 = bool
 end) 
-	w:Toggle("Auto Buy Axes",function(bool)
+	w:Toggle("Buy Axes(bugged)",function(bool)
 		shared.toggle3 = bool
 end) 
-	w:Toggle("Auto Buy Helmet",function(bool)
+	w:Toggle("Buy Helmet(bugged)",function(bool)
 		shared.toggle5 = bool
 end) 
-	w:Toggle("Auto Buy Skills",function(bool)
+	w:Toggle("Buy Skills(bugged)",function(bool)
 		shared.toggle6 = bool
 end) 
 	spawn(function()
