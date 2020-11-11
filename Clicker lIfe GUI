@@ -13,7 +13,7 @@ w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,Te
 
 
 local w2 = w2:CreateFolder("Eggs")
-	w2:Dropdown("Choose Eggs",{"Common","Rare","Uncommon","Evil","Frost","Gamer","Beach","Star Creator","Space"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	w2:Dropdown("Choose Eggs",{"Common","Rare","Uncommon","Evil","Frost","Gamer","Beach","Star Creator","Space","Hacker"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
 	    _G.BossSelected = mob
 	end)
 
@@ -53,6 +53,9 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3240.17
 elseif _G.BossSelected == "Space" then
 game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Space Egg","Buy1")
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(120.670273, 17.2482433, -45.3331223)
+elseif _G.BossSelected == "Hacker" then
+game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Hacker Egg","Buy1")
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(60.9972076, 10.6935282, 324.074188)
 			end
 		end
 	end
