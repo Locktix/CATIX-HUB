@@ -143,7 +143,7 @@ end
 end)
 
 local w2 = w2:CreateFolder("Eggs")
-	w2:Dropdown("Choose Eggs",{"Common","Uncommon","Rare","Epic","Autumn","Legendary","Hydra","Mythic"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	w2:Dropdown("Choose Eggs",{"Common","Uncommon","Rare","Epic","Autumn","Legendary","Hydra","Mythic","1M"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
 	    _G.BossSelected = mob
 	end)
 
@@ -228,7 +228,15 @@ local args = {
 
 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Hatch:InvokeServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-23.1548252, 3006.7041, 44.2238312)
-		
+	elseif _G.BossSelected == "1M" then
+
+local args = {
+    [1] = "1M Egg",
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Hatch:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-18.833147, 9.11473274, 122.537102)	
 			end
 		end
 	end
