@@ -12253,6 +12253,28 @@ game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
         _G.e25= false
     end
 end)
+eggs:CreateToggle("Auto Buy Moon Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e25 = true 
+        while wait(0) and _G.e25 do
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer("moon")
+        end
+    else
+        _G.e25= false
+    end
+end)
+eggs2:CreateToggle("Auto Buy Moon Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e25 = true 
+        while wait(0) and _G.e25 do
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.PurchaseTriple:FireServer("moon")
+        end
+    else
+        _G.e25= false
+    end
+end)
 teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(620.58606, 8.32451057, -332.265503)
 end)
@@ -12295,6 +12317,9 @@ teleports:CreateButton("Infinity", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2274.23096, 7.05264902, -1765.9126)
 end)
 teleports:CreateButton("Future", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1055.64624, 6.59449387, 519.587219)
+end)
+teleports:CreateButton("Moon", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1055.64624, 6.59449387, 519.587219)
 end)
 --| Anti KICK |
