@@ -4,6 +4,7 @@ local library = loadstring(game:HttpGet(('https://pastebin.com/raw/FsJak6AT')))(
 local w3 = library:CreateWindow("Tapping Heroes Other Game")
 local w2 = library:CreateWindow("Rebirths")
 local w4 = library:CreateWindow("Eggs")
+local w5 = library:CreateWindow("Sell")
 
 --================== Model =======================--
 local w = w3:CreateFolder("Things")
@@ -48,22 +49,13 @@ end)
 	w:Toggle("Auto Potions",function(bool)
 		shared.toggle3 = bool
 end) 
-	w:Toggle("Auto SellX1",function(bool)
+	w:Toggle("Destroy Gems(ping)",function(bool)
 		shared.toggle4 = bool
-	end)
-	w:Toggle("Auto SellX2",function(bool)
-		shared.toggle42 = bool
-	end)
-		w:Toggle("Auto Sell Toy World",function(bool)
-		shared.toggle43 = bool
-	end)
-		w:Toggle("Auto Sell Candy World",function(bool)
+end) 
+w:Toggle("Destroy Gems Normal",function(bool)
 		shared.toggle44 = bool
-		end)
-	w:Toggle("Auto Sell Atlantis World",function(bool)
-		shared.toggle45 = bool
-	end)
-		w:Toggle("Auto Evolve Pets",function(bool)
+end) 
+w:Toggle("Auto Evolve Pets",function(bool)
 		shared.toggle5 = bool
 	end)
 
@@ -71,11 +63,6 @@ end)
 		while wait() do
 		       if shared.toggle1 then
 game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","HandleTapActivation","Home")
-game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","HandleTapActivation","Winter")
-game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","HandleTapActivation","Candy")
-game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","HandleTapActivation","Atlantis")
-game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","HandleTapActivation","Magma")
-game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","HandleTapActivation","Space")
 end
 	if shared.toggle2 then
 	      wait(0.1)
@@ -112,29 +99,67 @@ game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Eve
     wait(0.1)
 end
 	if shared.toggle4 then
-
-game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","SellTaps","Home")
-end
-	if shared.toggle42 then
-
-game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","SellTaps","Winter")
-end
-	if shared.toggle43 then
-
-game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","SellTaps","Toy")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Home","3")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Home","2")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Home","1")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Winter","3")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Winter","2")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Winter","1")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Candy","3")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Candy","2")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Candy","1")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Atlantis","3")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Atlantis","2")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Atlantis","1")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Magma","3")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Magma","2")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Magma","1")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Space","3")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Space","2")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Space","1")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Ninja","3")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Ninja","2")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Ninja","1")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Magic","3")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Magic","2")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Magic","1")
 end
 	if shared.toggle44 then
-
-game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","SellTaps","Candy")
-end
-	if shared.toggle45 then
-
-game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","SellTaps","Atlantis")
-end
-	    
-	if shared.toggle5 then
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Home","3")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Home","2")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Home","1")
+wait(0.1)
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Winter","3")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Winter","2")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Winter","1")
+wait(0.1)
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Candy","3")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Candy","2")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Candy","1")
+wait(0.1)
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Atlantis","3")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Atlantis","2")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Atlantis","1")
+wait(0.1)
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Magma","3")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Magma","2")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Magma","1")
+wait(0.1)
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Space","3")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Space","2")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Space","1")
+wait(0.1)
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Ninja","3")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Ninja","2")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Ninja","1")
+wait(0.1)
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Magic","3")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Magic","2")
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","DamageCrystal","Magic","1")
+wait(0.1)
+	    	if shared.toggle5 then
 game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer("EvolveAllPets")
-
+end
 end
 end
 end)
@@ -181,7 +206,7 @@ game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Eve
 end)
 
 local w23 = w4:CreateFolder("Eggs FAST X3")
-	w23:Dropdown("Choose Eggs",{"250","5K","500K","50M","250M","2,5B","5B","20B","150B","1T","5T","20T","100T","1Qd"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	w23:Dropdown("Choose Eggs",{"250","5K","500K","50M","250M","2,5B","5B","20B","150B","1T","5T","20T","100T","1Qd","Magical","Ninja","Undead","Lava Dragon","Spirit","8-Bit","Ice Shard","Nebula","Frosting","Sea Weed"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
 	    _G.BossSelected = mob
 	end)
 
@@ -305,8 +330,123 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+	elseif _G.BossSelected == "Magical" then
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "Magical",
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+	elseif _G.BossSelected == "Ninja" then
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "Ninja",
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+	elseif _G.BossSelected == "Undead" then
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "Undead",
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+	elseif _G.BossSelected == "Lava Dragon" then
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "Lava Dragon",
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+	elseif _G.BossSelected == "Spirit" then
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "Spirit",
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+	elseif _G.BossSelected == "8-Bit" then
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "8-Bit",
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+	elseif _G.BossSelected == "Ice Shard" then
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "Ice Shard",
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+	elseif _G.BossSelected == "Nebula" then
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "Nebula",
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+	elseif _G.BossSelected == "Frosting" then
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "Frosting",
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+	elseif _G.BossSelected == "Sea Weed" then
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "Sea Weed",
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
 			end
 		end
+	end
+end)
+
+local w5 = w5:CreateFolder("Sell")
+	w5:Dropdown("Choose Sell",{"Sell X1","Sell X2","Sell Toy","Sell Candy","Sell Atlantis","Sell Magma","Sell Space","Sell Ninja","Sell Magic"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	    _G.SellSelected = mob
+	end)
+
+	w5:Toggle("Buy Rebirths",function(bool)
+	    shared.Sell = bool
+	end)
+
+spawn(function()
+	while wait(0) do
+		if shared.Sell then
+			if _G.SellSelected == "Sell X1" then
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","SellTaps","Home")
+			elseif _G.SellSelected == "Sell X2" then
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","SellTaps","Winter")
+			elseif _G.SellSelected == "Sell Toy" then
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","SellTaps","Toy")
+	elseif _G.SellSelected == "Sell Candy" then
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","SellTaps","Candy")
+			elseif _G.SellSelected == "Sell Atlantis" then
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","SellTaps","Atlantis")
+						elseif _G.SellSelected == "Sell Magma" then
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","SellTaps","Magma")
+	elseif _G.SellSelected == "Sell Space" then
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","SellTaps","Space")
+	elseif _G.SellSelected == "Sell Ninja" then
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","SellTaps","Ninja")
+	elseif _G.SellSelected == "Sell Magic" then
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer("Tap Capacity","SellTaps","Magic")
+				end
+			end
 	end
 end)
 --================== Player Settings =======================--
