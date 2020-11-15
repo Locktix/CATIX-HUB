@@ -137,7 +137,7 @@ end)
 
 
 local w5 = w5:CreateFolder("Eggs")
-	w5:Dropdown("Choose Eggs",{"Common","X5","X10"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	w5:Dropdown("Choose Eggs",{"Common","Rare","Crystal","Fairy","Jungle","Magic","Pirate","Scientific","Winter","Desert"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
 	    _G.Bruh2Selected = mob
 	end)
 
@@ -156,11 +156,79 @@ local args = {
 
 game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(470.402679, 114.438881, 17.8767281)
-elseif _G.Bruh2Selected == "X5" then
-game:GetService("ReplicatedStorage").Events.SuperRebirth:InvokeServer("SuperRebrith5")
-elseif _G.Bruh2Selected == "X10" then
-game:GetService("ReplicatedStorage").Events.SuperRebirth:InvokeServer("SuperRebrith10")
-			end
+elseif _G.Bruh2Selected == "Rare" then
+local args = {
+    [1] = "Rare",
+    [2] = "Buy1"
+}
+
+game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(500.606323, 114.438881, 19.3805962)
+elseif _G.Bruh2Selected == "Crystal" then
+local args = {
+    [1] = "Crystal",
+    [2] = "Buy1"
+}
+
+game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(501.513763, 114.438881, 51.4191589)
+elseif _G.Bruh2Selected == "Fairy" then
+local args = {
+    [1] = "Fairy",
+    [2] = "Buy1"
+}
+
+game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(376.937195, 738.619995, 66.8737183)
+elseif _G.Bruh2Selected == "Jungle" then
+local args = {
+    [1] = "Jungle",
+    [2] = "Buy1"
+}
+
+game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(373.837677, 1642.33728, 64.8525543)
+elseif _G.Bruh2Selected == "Magic" then
+local args = {
+    [1] = "Magic",
+    [2] = "Buy1"
+}
+
+game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(379.620789, 4759.11475, 22.2804585)
+elseif _G.Bruh2Selected == "Pirate" then
+local args = {
+    [1] = "Pirate",
+    [2] = "Buy1"
+}
+
+game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(377.253357, 3393.60889, 37.1960487)
+elseif _G.Bruh2Selected == "Scientific" then
+local args = {
+    [1] = "Scientific",
+    [2] = "Buy1"
+}
+
+game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(375.623779, 2457.35767, 55.5334358)
+elseif _G.Bruh2Selected == "Winter" then
+local args = {
+    [1] = "Winter",
+    [2] = "Buy1"
+}
+
+game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(381.14212, 5737.65283, 7.22265911)
+elseif _G.Bruh2Selected == "Desert" then
+local args = {
+    [1] = "Desert",
+    [2] = "Buy1"
+}
+
+game:GetService("ReplicatedStorage").Events.BuyEgg:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(382.036591, 6487.73291, -5.47761536)
+	end
 		end
 	end
 end)
