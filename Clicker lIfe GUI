@@ -10,7 +10,32 @@ local w = w3:CreateFolder("Things")
 
 w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
 
+w:Toggle("Auto Tp To Tokens",function(bool)
+		shared.toggle1 = bool
+end) 
 
+	spawn(function()
+		while wait() do
+		       if shared.toggle1 then
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(204.064301, 83.841301, 422.525635)
+wait(0)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-37.1365738, 16.3841667, 291.977844)
+wait(0)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-31.2621307, 51.0527039, 416.413086)
+wait(0)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(113.698898, 33.4847984, 237.669998)
+wait(0)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(115.841843, 23.1890469, 247.881973)
+wait(0)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(197.250443, 66.0663147, 236.784058)
+wait(0)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(117.249634, 24.0136318, 353.956543)
+wait(0)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(15.834034, 35.4709816, 420.835602)
+wait(0)
+end
+end
+end)
 
 local w2 = w2:CreateFolder("Eggs")
 	w2:Dropdown("Choose Eggs",{"Common","Rare","Uncommon","Evil","Frost","Gamer","Beach","Star Creator","Space","Hacker","Meme","Rainbow","Candy"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
