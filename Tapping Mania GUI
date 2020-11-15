@@ -21,6 +21,9 @@ end)
 w:Toggle("Auto Collect Gems",function(bool)
 		shared.toggle3 = bool
 end) 
+w:Toggle("Auto Equip Best",function(bool)
+		shared.toggle4 = bool
+end) 
 	spawn(function()
 		while wait() do
 		       if shared.toggle1 then
@@ -81,6 +84,9 @@ for i, v in next, Workspace:GetDescendants() do
   
         end
     end
+end
+	if shared.toggle4 then
+game:GetService("ReplicatedStorage").RemoteEvents.PetAction:InvokeServer("EquipBest")
 end
 end
 end)
