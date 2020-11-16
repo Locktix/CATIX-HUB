@@ -20,16 +20,16 @@ w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,Te
 		shared.toggle11 = bool
 	end)
 	
-		w:Toggle("Auto Sell X7",function(bool)
-		shared.toggle28 = bool
+		w:Toggle("Auto Sell X8",function(bool)
+		shared.toggle29 = bool
 end) 
 	spawn(function()
 		while wait() do
 		       if shared.toggle1 then
 game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
 end
-	if shared.toggle28 then
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(14.9257078, -30.861166, 5703.28271)
+	if shared.toggle29 then
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(12.8714371, -30.861166, 7144.13916)
 wait(0)
 end
 	if shared.toggle10 then
@@ -52,7 +52,7 @@ end
 end)
 
 local w2 = w2:CreateFolder("Eggs")
-	w2:Dropdown("Choose Eggs",{"Common","Rare","Party","Winter","Lego","Lava","Candy","Mushroom"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	w2:Dropdown("Choose Eggs",{"Common","Rare","Party","Winter","Lego","Lava","Candy","Mushroom","Robot"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
 	    _G.BossSelected = mob
 	end)
 
@@ -87,6 +87,9 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(57.75135
 	elseif _G.BossSelected == "Mushroom" then
 game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Mushroom","Buy1")
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(56.2021103, -28.861166, 5737.10938)
+	elseif _G.BossSelected == "Robot" then
+game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Robot","Buy1")
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(60.2214546, -27.9178886, 7184.71094)
 
 			end
 		end
@@ -111,6 +114,9 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(26.00953
 end)
 w4:Button("MushRoom",function()
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-9.72685432, -28.8611794, 5748.13867)
+end)
+w4:Button("Robot",function()
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1.01672149, -28.8611755, 7177.5293)
 end)
 --================== Player Settings =======================--
 
