@@ -176,7 +176,7 @@ end
 end)
 
 local w2 = w2:CreateFolder("Eggs X3")
-	w2:Dropdown("Choose Eggs",{"1K","100 Gems","3B","25T","5Qa","3Sx","Hell","Atlantis","500K(event)","Galaxy","Graveyard","Crystal","2.5M(event)","Wizard","Rainbow","Halloween","Energy","5M","Mine","Candy","Halloween","Radioactive","Blacksmith"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	w2:Dropdown("Choose Eggs",{"1K","100 Gems","3B","25T","5Qa","3Sx","Hell","Atlantis","500K(event)","Galaxy","Graveyard","Crystal","2.5M(event)","Wizard","Rainbow","Halloween","Energy","5M","Mine","Candy","Halloween","Radioactive","Blacksmith","Ninja"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
 	    _G.BossSelected = mob
 	end)
 
@@ -322,6 +322,12 @@ local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Eggs.Blacksmith.UIanchor
 
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+elseif _G.BossSelected == "Ninja" then
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Ninja","Triple")
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Eggs.Ninja.UIanchor
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 			end
 		end
 	end
@@ -330,7 +336,7 @@ end)
 --================== Rebirths =======================--
 
 local w22 = w4:CreateFolder("Rebirths")
-	w22:Dropdown("Choose Rebirths",{"x1","x5","x10","x25","x50","x100","x250","x500","x1K","x2,5K","x5K","x10K","x50K","x250K","x1M","x5M","x15M","x30M","x100M","x250M","x500M","x1B","x10B","x50B","x250B","x750B","x5T","x30T","x100T","x300T","x900T","x2Qa","x17,5Qa","x70Qa","x300Qa","x1Qi","x1Sx","x10Sx","x49Sx","x99Sx","x250Sx","x750Sx"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	w22:Dropdown("Choose Rebirths",{"x1","x5","x10","x25","x50","x100","x250","x500","x1K","x2,5K","x5K","x10K","x50K","x250K","x1M","x5M","x15M","x30M","x100M","x250M","x500M","x1B","x10B","x50B","x250B","x750B","x5T","x30T","x100T","x300T","x900T","x2Qa","x17,5Qa","x70Qa","x300Qa","x1Qi","x1Sx","x10Sx","x49Sx","x99Sx","x250Sx","x750Sx","x1,5Sp","x20Sp","x75Sp"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
 	    _G.RebSelected = mob
 	end)
 
@@ -604,8 +610,28 @@ game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))
 [1] =    750000000000000000000000,
 }
 
-game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))    	    	    	    
-	    	    	    	    	    	    	    	    	    
+game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))   
+			elseif _G.RebSelected == "x1,5Sp" then
+	    	    	    	    
+    	    	    	local args = {
+[1] =    1500000000000000000000000,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))   	    	    	    
+	    			elseif _G.RebSelected == "x20Sp" then
+	    	    	    	    
+    	    	    	local args = {
+[1] =    20000000000000000000000000,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))   
+	    			elseif _G.RebSelected == "x75Sp" then
+	    	    	    	    
+    	    	    	local args = {
+[1] =    75000000000000000000000000,
+}
+
+game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(unpack(args))   	    	    	    	    	    	    	    	    
                   
 			end
 		end
