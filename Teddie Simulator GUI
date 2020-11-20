@@ -27,11 +27,12 @@ credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "a
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("bsoleil31FR#7202", function() --you dont need "arg" for a button
+credits:CreateButton("Im A Cat#7202", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
-credits:CreateButton("https://discord.gg/m9Nn3qd", function() --you dont need "arg" for a button
+
+credits:CreateButton("https://discord.gg/PKWXQae", function() --you dont need "arg" for a button
 game:GetService("CoreGui").uiui:nothing()
 end)
 
@@ -49,7 +50,7 @@ local children = game.Workspace:GetChildren()
         for _, child in pairs(child:GetChildren()) do
             table.insert(children, child)
          end
-         if child:IsA("BasePart") and child.Name == "MainPart" then
+         if child:IsA("BasePart") and child.Name == "Gem" then
             child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame            
         end
     end
@@ -161,6 +162,18 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-57.9921
 end)
 teleports:CreateButton("Volcano Land", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(600.895935, 41.4875221, 729.283691)
+end)
+teleports:CreateButton("Heaven Land", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-60.77108, 268.707886, 87.2637939)
+end)
+teleports:CreateButton("Hell Land", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-98.2548294, 497.659637, 189.768311)
+end)
+teleports:CreateButton("Island", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-10.4819069, 778.517334, 83.480835)
+end)
+teleports:CreateButton("Jungle", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(585.24115, 41.3875198, -512.849121)
 end)
 eggs:CreateToggle("Auto Buy  1 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
@@ -337,6 +350,47 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Events["Eggs Events"].OpenEgg:FireServer(unpack(args))
+
+        end
+    else
+        _G.k5 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Hell Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.k5 = true 
+        while wait(0) and _G.k5 do
+local args = {
+    [1] = "Tier 10",
+}
+
+game:GetService("ReplicatedStorage").Events["Eggs Events"].OpenEgg:FireServer(unpack(args))
+
+        end
+    else
+        _G.k5 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Island Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.k5 = true 
+        while wait(0) and _G.k5 do
+local args = {
+    [1] = "Tier 12",
+}
+
+game:GetService("ReplicatedStorage").Events["Eggs Events"].OpenEgg:FireServer(unpack(args))
+
+        end
+    else
+        _G.k5 = false
+    end
+end)
+eggs:CreateToggle("Auto Buy Jungle Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.k5 = true 
+        while wait(0) and _G.k5 do
+game:GetService("ReplicatedStorage").Events["Eggs Events"].OpenEgg:FireServer("Jungle Tier")
 
         end
     else
