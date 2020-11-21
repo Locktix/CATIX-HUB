@@ -11501,12 +11501,12 @@ game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
         _G.p23= false
     end
 end)
-AutoTab:CreateToggle("Auto SellX80", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateToggle("Auto SellX100", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.se = true 
         while wait(0) and _G.se do
 local string_1 = "SellPower";
-local userdata_1 = game:GetService("Workspace").Ignore.Rings["26Sell"].Collider;
+local userdata_1 = game:GetService("Workspace").Ignore.Rings["27Sell"].Collider;
 local Target = game:GetService("ReplicatedStorage").RF;
 Target:InvokeServer(string_1, userdata_1);
 
@@ -11662,7 +11662,7 @@ HIT:CreateButton("Tp To Boss Spawn", function() --you dont need "arg" for a butt
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(220.213577, -45.8314438, -772.90802)
 end)
 HIT:CreateButton("Tp To Boss 2", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(208.942551, 68384.2656, -747.827698)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(248.239883, 70446.1094, -790.245178)
 end)
 eggs:CreateToggle("Auto Buy Dirt Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
@@ -12154,33 +12154,15 @@ game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
         _G.zi = false
     end
 end)
+
 eggs2:CreateToggle("Auto Buy Money Egg", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.ziy = true 
-        while wait(0) and _G.ziy do
-
-local args = {
-    [1] = "BuyEgg",
-    [2] = "MoneyBag",
-}
-
-game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
-
-
-
-        end
-    else
-        _G.ziy = false
-    end
-end)
-eggs2:CreateToggle("Auto Buy Money Egg2", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.zio = true 
         while wait(0) and _G.zio do
 
 local args = {
     [1] = "BuyEgg",
-    [2] = "MoneyBag2",
+    [2] = "MoneyBageeEgg",
 }
 
 game:GetService("ReplicatedStorage").RF:InvokeServer(unpack(args))
@@ -12197,7 +12179,7 @@ eggs2:CreateToggle("Auto Buy Tree Egg", function(arg) --the (arg) is if the chec
         _G.zip = true 
         while wait(0) and _G.zip do
 
-game:GetService("ReplicatedStorage").RF:InvokeServer("BuyEgg","Tree")
+game:GetService("ReplicatedStorage").RF:InvokeServer("BuyEgg","TreeEgg")
 
 
 
@@ -12205,6 +12187,24 @@ game:GetService("ReplicatedStorage").RF:InvokeServer("BuyEgg","Tree")
     else
         _G.zip = false
     end
+end)
+eggs2:CreateToggle("Auto Buy Ice Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.zip = true 
+        while wait(0) and _G.zip do
+
+
+game:GetService("ReplicatedStorage").RF:InvokeServer("BuyEgg","IceEgg")
+
+
+
+        end
+    else
+        _G.zip = false
+    end
+end)
+teleports2:CreateButton("Zone 26", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(161.133774, 70453.8828, -552.661621)
 end)
 teleports2:CreateButton("Zone 25", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(211.957443, 68381.25, -479.738037)
