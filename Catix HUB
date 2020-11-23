@@ -423,5 +423,43 @@ elseif place == 3601201039 then -- GAME 172
 loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Farmlands"))()
 elseif place == 4893679160 then -- GAME 173
 loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Big%20Brain%20Simulator%20GUI"))()
+elseif place == 4919350725 then -- GAME 174
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Duckie%20Simulator%20GUI"))()
+elseif place == 2673595672 then -- GAME 175
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Dashing%20Simulator%20GUI"))()
+elseif place == 3376584594 then -- GAME 176
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Flight%20Simulator%20GUI"))()
+elseif place == 4963056405 then -- GAME 177
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Hatching%20Simulator%202%20GUI"))()
+elseif place == 4857069142 then -- GAME 178
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Clicking%20Simulator%202.0%20GUI"))()
+elseif place == 205224386 then -- GAME 179
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Hide%20And%20Seek%20Extreme%20GUI"))()
+elseif place == 4828705676 then -- GAME 180
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Reaper%20Simulator%202%20GUI"))()
+elseif place == 2302091358 then -- GAME 181
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Cookie%20Clicker%20GUI"))()
+elseif place == 5118093154 then -- GAME 182
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Super%20Clicker%20X%20GUI"))()
+elseif place == 4866225258 then -- GAME 183
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Wizard%20Champions%20GUI"))()
+elseif place == 4237861040 then -- GAME 184
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Treacherous%20Tower%20GUI"))()
+elseif place == 4646477729 then -- GAME 185
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Tower%20OF%20Heroes%20GUI"))()
+elseif place == 4565874973 then -- GAME 186
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Robot%20Simulator%20GUI"))()
+elseif place == 914010731 then -- GAME 187
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Ro%20Ghoul%20GUI"))()
+elseif place == 4652867186 then -- GAME 188
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Sword%20Simulator%202%20GUI"))()
+elseif place == 4815910662 then -- GAME 189
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Tower%20OF%20Dreads"))()
+elseif place == 379614936 then -- GAME 190
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Assassin!%20GUI"))()
+elseif place == 3233893879 then -- GAME 191
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Bad%20Businees%20GUI"))()
+elseif place == 4680735230 then -- GAME 192
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Sword%20Legends%20other%20game%202%20GUI"))()
 else
 end
