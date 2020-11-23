@@ -29,7 +29,7 @@ local TextButton_3 = Instance.new("TextButton")
 local DISCORDSERVER_2 = Instance.new("ImageLabel")
 local Main_3 = Instance.new("ImageLabel")
 local TextButton_4 = Instance.new("TextButton")
-
+--3
 --Properties:
 
 CatixHub.Name = "Catix Hub"
