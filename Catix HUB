@@ -411,5 +411,17 @@ elseif place == 4746492207 then -- GAME 166
 loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Minion%20Simulator%20GUI"))()
 elseif place == 5083731857 then -- GAME 167
 loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Saitama%20Simulator%20GUI"))()
+elseif place == 4961974633 then -- GAME 168
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Ramen%20Simulator%20GUI"))()
+elseif place == 1478636977 then -- GAME 169
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Monster%20Battle%20GUI"))()
+elseif place == 1240123653 then -- GAME 170
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Zombie%20Attack%20GUI"))()
+elseif place == 2870343637 then -- GAME 171
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Titan%20God%20Simulator%20GUI"))()
+elseif place == 3601201039 then -- GAME 172
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Farmlands"))()
+elseif place == 4893679160 then -- GAME 173
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Big%20Brain%20Simulator%20GUI"))()
 else
 end
