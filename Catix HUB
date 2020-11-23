@@ -407,9 +407,7 @@ elseif place == 5940836435 then -- GAME 164
 loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Tapping%20Realms%20GUI"))()
 elseif place == 5025324461 then -- GAME 165
 loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Smacking%20Simulator%20GUI"))()
+elseif place == 4746492207 then -- GAME 166
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Minion%20Simulator%20GUI"))()
 else
 end
-
-
-
-
